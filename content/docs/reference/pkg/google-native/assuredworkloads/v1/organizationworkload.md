@@ -20,19 +20,37 @@ Creates Assured Workload.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">compliance_regime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kms_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_assuredworkloads_v1.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">provisioned_resources_parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">workloads_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">compliance_regime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">kms_settings</span><span class="p">:</span> <span class="nx">Optional[_assuredworkloads_v1.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                         <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">provisioned_resources_parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_assuredworkloads_v1.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">workloads_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationWorkload</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationWorkload</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationWorkload</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationWorkload</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationWorkload</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationWorkloadArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates Assured Workload.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationWorkloadArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +280,15 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_csharp">
+<a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettings">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Assured<wbr>Workloads.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -344,7 +380,15 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_go">
+<a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettings">[]Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -354,7 +398,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +406,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +414,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#workloadsid_nodejs" style="color: inherit; text-decoration: inherit;">workloads<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +422,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +430,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#complianceregime_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +438,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +446,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +454,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#kmssettings_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadkmssettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>KMSSettings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadkmssettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>KMSSettings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +462,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Labels applied to the workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +470,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,9 +478,17 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#provisionedresourcesparent_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Resources<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcesettings_nodejs">
+<a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -446,7 +498,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +506,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +514,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#workloads_id_python" style="color: inherit; text-decoration: inherit;">workloads_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +522,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +530,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#compliance_regime_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>regime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. Compliance Regime associated with this workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +538,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +546,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +554,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#kms_settings_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadkmssettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>KMSSettings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadkmssettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>KMSSettings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +562,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Labels applied to the workload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +570,7 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,9 +578,17 @@ The OrganizationWorkload resource accepts the following [input]({{< relref "/doc
 <a href="#provisioned_resources_parent_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>resources_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id} organizations/{organization_id}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_settings_python">
+<a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudassuredworkloadsv1workloadresourcesettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -709,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nextrotationtime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Rotation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_rotation_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>rotation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nextrotationtime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Rotation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_rotation_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>rotation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource identifier. For a project this represents project_number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -881,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource identifier. For a project this represents project_number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,9 +961,173 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudassuredworkloadsv1workloadresourcesettings">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudassuredworkloadsv1workloadresourcesettingsresponse">Google<wbr>Cloud<wbr>Assuredworkloads<wbr>V1Workload<wbr>Resource<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

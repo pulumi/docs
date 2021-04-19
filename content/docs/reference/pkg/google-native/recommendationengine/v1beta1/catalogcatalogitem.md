@@ -20,19 +20,37 @@ Creates a catalog item.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_items_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">catalogs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">category_hierarchies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">item_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1FeatureMapArgs]]</span> = None<span class="p">, </span><span class="nx">item_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">product_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">catalog_items_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">catalogs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">category_hierarchies</span><span class="p">:</span> <span class="nx">Optional[Sequence[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">item_attributes</span><span class="p">:</span> <span class="nx">Optional[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1FeatureMapArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">item_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">product_metadata</span><span class="p">:</span> <span class="nx">Optional[_recommendationengine_v1beta1.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogCatalogItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogCatalogItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogCatalogItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogCatalogItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogCatalogItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CatalogCatalogItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a catalog item.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CatalogCatalogItemArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#catalogitemsid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Items<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#catalogsid_nodejs" style="color: inherit; text-decoration: inherit;">catalogs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +422,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#categoryhierarchies_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1catalogitemcategoryhierarchy">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Catalog<wbr>Item<wbr>Category<wbr>Hierarchy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1catalogitemcategoryhierarchy">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Catalog<wbr>Item<wbr>Category<wbr>Hierarchy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#itemattributes_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1featuremap">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Feature<wbr>Map<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1featuremap">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Feature<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#itemgroupid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#productmetadata_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitem">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitem">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata specific to retail products.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#catalog_items_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>items_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#catalogs_id_python" style="color: inherit; text-decoration: inherit;">catalogs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +522,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#category_hierarchies_python" style="color: inherit; text-decoration: inherit;">category_<wbr>hierarchies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1catalogitemcategoryhierarchy">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Catalog<wbr>Item<wbr>Category<wbr>Hierarchy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1catalogitemcategoryhierarchy">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Catalog<wbr>Item<wbr>Category<wbr>Hierarchy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#item_attributes_python" style="color: inherit; text-decoration: inherit;">item_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1featuremap">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Feature<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1featuremap">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Feature<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#item_group_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#product_metadata_python" style="color: inherit; text-decoration: inherit;">product_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitem">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitem">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata specific to retail products.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The CatalogCatalogItem resource accepts the following [input]({{< relref "/docs/
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -673,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalfeatures_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numericalfeatures_nodejs" style="color: inherit; text-decoration: inherit;">numerical<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_features_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerical_features_python" style="color: inherit; text-decoration: inherit;">numerical_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalfeatures_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -867,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numericalfeatures_nodejs" style="color: inherit; text-decoration: inherit;">numerical<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -879,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_features_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerical_features_python" style="color: inherit; text-decoration: inherit;">numerical_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Numerical features. Some examples would be the height/weight of a product, or age of a customer. Feature names must be UTF-8 encoded strings. For example: `{ "lengths_cm": {"value":[2.3, 15.4]}, "heights_cm": {"value":[8.1, 6.4]} }`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -957,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Height of the image in number of pixels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URL of the image with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Width of the image in number of pixels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Height of the image in number of pixels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URL of the image with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Width of the image in number of pixels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Height of the image in number of pixels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URL of the image with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Width of the image in number of pixels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Height of the image in number of pixels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URL of the image with a length limit of 5 KiB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Width of the image in number of pixels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablequantity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The available quantity of the item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalproducturi_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Product<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_nodejs" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exactprice_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactprice">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactprice">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The exact product price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1image">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1image">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Product images for the catalog item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricerange_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerange">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerange">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The product price range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stockstate_nodejs" style="color: inherit; text-decoration: inherit;">stock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_quantity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The available quantity of the item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_product_uri_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>product_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_python" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exact_price_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactprice">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactprice">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The exact product price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1image">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1image">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Product images for the catalog item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_range_python" style="color: inherit; text-decoration: inherit;">price_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerange">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerange">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The product price range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stock_state_python" style="color: inherit; text-decoration: inherit;">stock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayprice_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Display price of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1463,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_price_python" style="color: inherit; text-decoration: inherit;">display_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Display price of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1471,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1525,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayprice_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Display price of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1533,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1545,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_price_python" style="color: inherit; text-decoration: inherit;">display_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Display price of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1553,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1607,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The maximum product price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The minimum product price.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1627,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The maximum product price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The minimum product price.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1689,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The maximum product price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1697,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The minimum product price.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The maximum product price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1717,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The minimum product price.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablequantity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalproducturi_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Product<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1883,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_nodejs" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1891,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1899,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exactprice_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactpriceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactpriceresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The exact product price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1907,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1imageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1imageresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Product images for the catalog item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricerange_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerangeresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerangeresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The product price range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1923,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stockstate_nodejs" style="color: inherit; text-decoration: inherit;">stock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1935,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_quantity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The available quantity of the item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_product_uri_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>product_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_python" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1959,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exact_price_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactpriceresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitemexactpriceresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Exact<wbr>Price<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The exact product price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1975,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1imageresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1imageresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Product images for the catalog item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1983,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_range_python" style="color: inherit; text-decoration: inherit;">price_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerangeresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudrecommendationenginev1beta1productcatalogitempricerangeresponse">Google<wbr>Cloud<wbr>Recommendationengine<wbr>V1beta1Product<wbr>Catalog<wbr>Item<wbr>Price<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The product price range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1991,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stock_state_python" style="color: inherit; text-decoration: inherit;">stock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Online stock state of the catalog item. Default is `IN_STOCK`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

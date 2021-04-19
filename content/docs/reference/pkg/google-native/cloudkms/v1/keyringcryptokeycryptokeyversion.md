@@ -20,19 +20,32 @@ Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next se
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">crypto_key_versions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">crypto_keys_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">external_protection_level_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudkms_v1.ExternalProtectionLevelOptionsArgs]]</span> = None<span class="p">, </span><span class="nx">key_rings_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                     <span class="nx">crypto_key_versions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">crypto_keys_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">external_protection_level_options</span><span class="p">:</span> <span class="nx">Optional[_cloudkms_v1.ExternalProtectionLevelOptionsArgs]</span> = None<span class="p">,</span>
+                                     <span class="nx">key_rings_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyRingCryptoKeyCryptoKeyVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next se
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KeyRingCryptoKeyCryptoKeyVersionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#cryptokeyversionsid_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key<wbr>Versions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#cryptokeysid_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Keys<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#keyringsid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Rings<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +337,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +345,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#externalprotectionleveloptions_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Protection<wbr>Level<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalprotectionleveloptions">pulumi.<wbr>Input<External<wbr>Protection<wbr>Level<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#externalprotectionleveloptions">External<wbr>Protection<wbr>Level<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#crypto_key_versions_id_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key_<wbr>versions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#crypto_keys_id_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>keys_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#key_rings_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>rings_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -374,7 +397,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +405,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#external_protection_level_options_python" style="color: inherit; text-decoration: inherit;">external_<wbr>protection_<wbr>level_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalprotectionleveloptions">External<wbr>Protection<wbr>Level<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#externalprotectionleveloptions">External<wbr>Protection<wbr>Level<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The KeyRingCryptoKeyCryptoKeyVersion resource accepts the following [input]({{< 
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caviumcerts_nodejs" style="color: inherit; text-decoration: inherit;">cavium<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Cavium certificate chain corresponding to the attestation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -893,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlecardcerts_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Card<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google card certificate chain corresponding to the attestation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlepartitioncerts_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Partition<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google partition certificate chain corresponding to the attestation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -913,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cavium_certs_python" style="color: inherit; text-decoration: inherit;">cavium_<wbr>certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Cavium certificate chain corresponding to the attestation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -921,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_card_certs_python" style="color: inherit; text-decoration: inherit;">google_<wbr>card_<wbr>certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google card certificate chain corresponding to the attestation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_partition_certs_python" style="color: inherit; text-decoration: inherit;">google_<wbr>partition_<wbr>certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google partition certificate chain corresponding to the attestation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for an external resource that this CryptoKeyVersion represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_key_uri_python" style="color: inherit; text-decoration: inherit;">external_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for an external resource that this CryptoKeyVersion represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for an external resource that this CryptoKeyVersion represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1029,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_key_uri_python" style="color: inherit; text-decoration: inherit;">external_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for an external resource that this CryptoKeyVersion represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchains_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatechainsresponse">pulumi.<wbr>Input<Certificate<wbr>Chains<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatechainsresponse">Certificate<wbr>Chains<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate chains needed to validate the attestation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attestation data provided by the HSM when the key operation was performed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the attestation data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_chains_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>chains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatechainsresponse">Certificate<wbr>Chains<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatechainsresponse">Certificate<wbr>Chains<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate chains needed to validate the attestation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The attestation data provided by the HSM when the key operation was performed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the attestation data.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,36 @@ Creates a new Annotation record. It is valid to create Annotation objects for th
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotation_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.AnnotationSourceArgs]]</span> = None<span class="p">, </span><span class="nx">annotation_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">annotations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">image_annotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.ImageAnnotationArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resource_annotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.ResourceAnnotationArgs]]</span> = None<span class="p">, </span><span class="nx">text_annotation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.SensitiveTextAnnotationArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                     <span class="nx">annotation_source</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.AnnotationSourceArgs]</span> = None<span class="p">,</span>
+                                     <span class="nx">annotation_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">annotations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                     <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">image_annotation</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.ImageAnnotationArgs]</span> = None<span class="p">,</span>
+                                     <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                     <span class="nx">resource_annotation</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.ResourceAnnotationArgs]</span> = None<span class="p">,</span>
+                                     <span class="nx">text_annotation</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.SensitiveTextAnnotationArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p">,</span>
+                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetAnnotationStoreAnnotation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetAnnotationStoreAnnotation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetAnnotationStoreAnnotation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a new Annotation record. It is valid to create Annotation objects for th
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetAnnotationStoreAnnotationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotationstoresid_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotationsid_nodejs" style="color: inherit; text-decoration: inherit;">annotations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +397,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +405,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +413,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotationsource_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#annotationsource">pulumi.<wbr>Input<Annotation<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#annotationsource">Annotation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Additional information for this annotation record, such as annotator and verifier information or study campaign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#imageannotation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageannotation">pulumi.<wbr>Input<Image<wbr>Annotation<wbr>Args></a></span>
+        <span class="property-type"><a href="#imageannotation">Image<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for images. For example, bounding polygons.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#resourceannotation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceannotation">pulumi.<wbr>Input<Resource<wbr>Annotation<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceannotation">Resource<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for resource. For example, classification tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#textannotation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sensitivetextannotation">pulumi.<wbr>Input<Sensitive<wbr>Text<wbr>Annotation<wbr>Args></a></span>
+        <span class="property-type"><a href="#sensitivetextannotation">Sensitive<wbr>Text<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for sensitive texts. For example, a range that describes the location of sensitive text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotation_stores_id_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotations_id_python" style="color: inherit; text-decoration: inherit;">annotations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +489,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -470,7 +497,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +505,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#annotation_source_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#annotationsource">Annotation<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#annotationsource">Annotation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional information for this annotation record, such as annotator and verifier information or study campaign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#image_annotation_python" style="color: inherit; text-decoration: inherit;">image_<wbr>annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageannotation">Image<wbr>Annotation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageannotation">Image<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for images. For example, bounding polygons.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#resource_annotation_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceannotation">Resource<wbr>Annotation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceannotation">Resource<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for resource. For example, classification tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The DatasetAnnotationStoreAnnotation resource accepts the following [input]({{< 
 <a href="#text_annotation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>annotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sensitivetextannotation">Sensitive<wbr>Text<wbr>Annotation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sensitivetextannotation">Sensitive<wbr>Text<wbr>Annotation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annotations for sensitive texts. For example, a range that describes the location of sensitive text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -629,7 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudhealthcaresource_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Healthcare<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudhealthcaresource">pulumi.<wbr>Input<Cloud<wbr>Healthcare<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudhealthcaresource">Cloud<wbr>Healthcare<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_healthcare_source_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>healthcare_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudhealthcaresource">Cloud<wbr>Healthcare<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudhealthcaresource">Cloud<wbr>Healthcare<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -679,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudhealthcaresource_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Healthcare<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudhealthcaresourceresponse">pulumi.<wbr>Input<Cloud<wbr>Healthcare<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudhealthcaresourceresponse">Cloud<wbr>Healthcare<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -691,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_healthcare_source_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>healthcare_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudhealthcaresourceresponse">Cloud<wbr>Healthcare<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudhealthcaresourceresponse">Cloud<wbr>Healthcare<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this polygon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_nodejs" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertex">pulumi.<wbr>Input<pulumi.<wbr>Input<Vertex<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vertex">Vertex<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the vertices of this polygon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this polygon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_python" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertex">Vertex<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vertex">Vertex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the vertices of this polygon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this polygon.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_nodejs" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertexresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vertex<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of the vertices of this polygon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this polygon.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_python" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the vertices of this polygon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path of a Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path of a Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path of a Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path of a Cloud Healthcare API resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1009,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingpolys_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpoly">pulumi.<wbr>Input<pulumi.<wbr>Input<Bounding<wbr>Poly<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of polygons outlining the sensitive regions in the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frameindex_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}0-based index of the image frame. For example, an image frame in a DICOM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1029,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_polys_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of polygons outlining the sensitive regions in the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_index_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0-based index of the image frame. For example, an image frame in a DICOM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingpolys_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpolyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Bounding<wbr>Poly<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#boundingpolyresponse">Bounding<wbr>Poly<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of polygons outlining the sensitive regions in the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frameindex_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}0-based index of the image frame. For example, an image frame in a DICOM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1111,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_polys_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpolyresponse">Bounding<wbr>Poly<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#boundingpolyresponse">Bounding<wbr>Poly<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of polygons outlining the sensitive regions in the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1119,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_index_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0-based index of the image frame. For example, an image frame in a DICOM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the annotation record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the annotation record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1207,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the annotation record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the annotation record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1269,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1307,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1319,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}

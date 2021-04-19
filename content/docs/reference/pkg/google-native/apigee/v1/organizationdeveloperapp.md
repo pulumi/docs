@@ -20,19 +20,38 @@ Creates an app associated with a developer. This API associates the developer ap
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_products</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">app_family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1AttributeArgs]]]]</span> = None<span class="p">, </span><span class="nx">callback_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">developer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">developers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">key_expires_in</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">api_products</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">app_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1AttributeArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">callback_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">developer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">developers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">key_expires_in</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationDeveloperApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationDeveloperApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationDeveloperApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationDeveloperApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationDeveloperApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationDeveloperAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates an app associated with a developer. This API associates the developer ap
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationDeveloperAppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#appsid_nodejs" style="color: inherit; text-decoration: inherit;">apps<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#developersid_nodejs" style="color: inherit; text-decoration: inherit;">developers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +439,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#apiproducts_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of API products associated with the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +447,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#appfamily_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Developer app family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of attributes for the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#developerid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the developer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#keyexpiresin_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Expires<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the credential. Valid values include `approved` or `revoked`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#apps_id_python" style="color: inherit; text-decoration: inherit;">apps_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#developers_id_python" style="color: inherit; text-decoration: inherit;">developers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +547,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#api_products_python" style="color: inherit; text-decoration: inherit;">api_<wbr>products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of API products associated with the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +555,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#app_family_python" style="color: inherit; text-decoration: inherit;">app_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Developer app family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of attributes for the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#developer_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the developer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#key_expires_in_python" style="color: inherit; text-decoration: inherit;">key_<wbr>expires_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The OrganizationDeveloperApp resource accepts the following [input]({{< relref "
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the credential. Valid values include `approved` or `revoked`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproduct_nodejs" style="color: inherit; text-decoration: inherit;">apiproduct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproduct_python" style="color: inherit; text-decoration: inherit;">apiproduct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -977,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -997,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiproducts_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1apiproductrefresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Api<wbr>Product<wbr>Ref<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1apiproductrefresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Api<wbr>Product<wbr>Ref<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of API products this credential can be used for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of attributes associated with this credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumerkey_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consumer key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumersecret_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the credential will expire in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuedat_nodejs" style="color: inherit; text-decoration: inherit;">issued<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the credential was issued in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_products_python" style="color: inherit; text-decoration: inherit;">api_<wbr>products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1apiproductrefresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Api<wbr>Product<wbr>Ref<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1apiproductrefresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Api<wbr>Product<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of API products this credential can be used for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of attributes associated with this credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1231,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consumer key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1239,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1247,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the credential will expire in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issued_at_python" style="color: inherit; text-decoration: inherit;">issued_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the credential was issued in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}

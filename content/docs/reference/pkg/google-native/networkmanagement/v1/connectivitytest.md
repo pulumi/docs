@@ -20,19 +20,34 @@ Creates a new Connectivity Test. After you create a test, the reachability analy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connectivity_tests_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_networkmanagement_v1.EndpointArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">related_projects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_networkmanagement_v1.EndpointArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">connectivity_tests_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[_networkmanagement_v1.EndpointArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">related_projects</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[_networkmanagement_v1.EndpointArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectivityTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectivityTest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectivityTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectivityTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectivityTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectivityTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a new Connectivity Test. After you create a test, the reachability analy
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectivityTestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectivitytestsid_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Tests<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">pulumi.<wbr>Input<Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specification of the Connectivity Test. You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test_id}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#relatedprojects_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">pulumi.<wbr>Input<Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Source specification of the Connectivity Test. You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. If the source of the test is within an on-premises network, then you must provide the destination VPC network. If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#connectivity_tests_id_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>tests_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specification of the Connectivity Test. You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test_id}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#related_projects_python" style="color: inherit; text-decoration: inherit;">related_<wbr>projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpoint">Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Source specification of the Connectivity Test. You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. If the source of the test is within an on-premises network, then you must provide the destination VPC network. If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Causes that the analysis is aborted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -717,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the resource that caused the abort.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Causes that the analysis is aborted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,9 +762,219 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the resource that caused the abort.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="cloudsqlinstanceinforesponse">Cloud<wbr>SQLInstance<wbr>Info<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_csharp">
+<a href="#externalip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_csharp">
+<a href="#internalip_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkuri_csharp">
+<a href="#networkuri_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance network or empty string if instance does not have one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region in which the Cloud SQL instance is running.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_go">
+<a href="#externalip_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_go">
+<a href="#internalip_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkuri_go">
+<a href="#networkuri_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance network or empty string if instance does not have one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region in which the Cloud SQL instance is running.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_nodejs">
+<a href="#externalip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_nodejs">
+<a href="#internalip_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkuri_nodejs">
+<a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance network or empty string if instance does not have one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region in which the Cloud SQL instance is running.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="external_ip_python">
+<a href="#external_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}External IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internal_ip_python">
+<a href="#internal_ip_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_uri_python">
+<a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance network or empty string if instance does not have one.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region in which the Cloud SQL instance is running.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI of a Cloud SQL instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deliverinforesponse">Deliver<wbr>Info<wbr>Response</h4>
@@ -791,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the resource that the packet is delivered to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target type where the packet is delivered to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the resource that the packet is delivered to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target type where the packet is delivered to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cause that the packet is dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -881,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the resource that caused the drop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cause that the packet is dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the resource that caused the drop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationip_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1253,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationnetworkuri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the network where this packet is sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1261,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Destination port. Only valid when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1269,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP protocol in string format, for example: "TCP", "UDP", "ICMP".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1277,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1285,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcenetworkuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the network where this packet originates from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1293,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Source port. Only valid when protocol is TCP or UDP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ip_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1313,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_network_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the network where this packet is sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1321,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Destination port. Only valid when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1329,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP protocol in string format, for example: "TCP", "UDP", "ICMP".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1337,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1345,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_network_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the network where this packet originates from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1353,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Source port. Only valid when protocol is TCP or UDP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1479,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: ALLOW, DENY{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1753,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: INGRESS, EGRESS{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1761,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallruletype_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firewall rule's type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1777,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1793,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1801,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The target service accounts specified by the firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1809,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1817,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values: ALLOW, DENY{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1837,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values: INGRESS, EGRESS{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1845,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1853,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rule_type_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The firewall rule's type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1861,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1869,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1877,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1885,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The target service accounts specified by the firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1893,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1901,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the resource that the packet is forwarded to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target type where this packet is forwarded to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1975,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the resource that the packet is forwarded to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1983,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target type where this packet is forwarded to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2117,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2125,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchedportrange_nodejs" style="color: inherit; text-decoration: inherit;">matched<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port range defined in the forwarding rule that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2133,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchedprotocol_nodejs" style="color: inherit; text-decoration: inherit;">matched<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol defined in the forwarding rule that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2141,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network URI. Only valid for Internal Load Balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2149,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target type of the forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2157,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2165,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vip_nodejs" style="color: inherit; text-decoration: inherit;">vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VIP of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2185,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matched_port_range_python" style="color: inherit; text-decoration: inherit;">matched_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port range defined in the forwarding rule that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2193,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matched_protocol_python" style="color: inherit; text-decoration: inherit;">matched_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol defined in the forwarding rule that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network URI. Only valid for Internal Load Balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2209,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target type of the forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2217,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2225,9 +2460,155 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vip_python" style="color: inherit; text-decoration: inherit;">vip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VIP of the forwarding rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gkemasterinforesponse">GKEMaster<wbr>Info<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusternetworkuri_csharp">
+<a href="#clusternetworkuri_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster network.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusteruri_csharp">
+<a href="#clusteruri_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_csharp">
+<a href="#externalip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_csharp">
+<a href="#internalip_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusternetworkuri_go">
+<a href="#clusternetworkuri_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster network.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusteruri_go">
+<a href="#clusteruri_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_go">
+<a href="#externalip_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_go">
+<a href="#internalip_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clusternetworkuri_nodejs">
+<a href="#clusternetworkuri_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Network<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster network.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="clusteruri_nodejs">
+<a href="#clusteruri_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="externalip_nodejs">
+<a href="#externalip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internalip_nodejs">
+<a href="#internalip_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_network_uri_python">
+<a href="#cluster_network_uri_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>network_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster network.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cluster_uri_python">
+<a href="#cluster_uri_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URI of a Google Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="external_ip_python">
+<a href="#external_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}External IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="internal_ip_python">
+<a href="#internal_ip_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Internal IP address of a Google Kubernetes Engine cluster master.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceinforesponse">Instance<wbr>Info<wbr>Response</h4>
@@ -2375,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2383,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External IP address of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2391,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network interface of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2399,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internalip_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal IP address of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2407,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networktags_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Network tags configured on the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2415,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2423,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account authorized for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2431,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External IP address of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the network interface of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_ip_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal IP address of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_tags_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Network tags configured on the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2491,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account authorized for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2499,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2601,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine instance or network endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2609,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthcheckallowingfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Allowing<wbr>Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of firewall rule URIs allowing probes from health check IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2617,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthcheckblockingfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Blocking<wbr>Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of firewall rule URIs blocking probes from health check IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2625,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthcheckfirewallstate_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Firewall<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the health check firewall configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2633,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine instance or network endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2645,7 +3026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine instance or network endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2653,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_check_allowing_firewall_rules_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>allowing_<wbr>firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of firewall rule URIs allowing probes from health check IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2661,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_check_blocking_firewall_rules_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>blocking_<wbr>firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of firewall rule URIs blocking probes from health check IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2669,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_check_firewall_state_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>firewall_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the health check firewall configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2677,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine instance or network endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2779,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendtype_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of load balancer's backend configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backenduri_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backend configuration URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Backend<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancerbackendresponse">Load<wbr>Balancer<wbr>Backend<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Information for the loadbalancer backends.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthcheckuri_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the health check for the load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2823,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_type_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of load balancer's backend configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2831,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_uri_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backend configuration URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2839,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendresponse">Load<wbr>Balancer<wbr>Backend<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendresponse">Load<wbr>Balancer<wbr>Backend<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information for the loadbalancer backends.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2847,7 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_check_uri_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the health check for the load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2855,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2925,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2933,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchediprange_nodejs" style="color: inherit; text-decoration: inherit;">matched<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2941,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2953,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2961,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matched_ip_range_python" style="color: inherit; text-decoration: inherit;">matched_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range that matches the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2969,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3055,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">pulumi.<wbr>Input<Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation of reachability analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overall result of the test's configuration analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traces_nodejs" style="color: inherit; text-decoration: inherit;">traces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Trace<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#traceresponse">Trace<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verifytime_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the configuration analysis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3091,7 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation of reachability analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3099,7 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The overall result of the test's configuration analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3107,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traces_python" style="color: inherit; text-decoration: inherit;">traces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traceresponse">Trace<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#traceresponse">Trace<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3115,7 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_time_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the configuration analysis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3281,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destiprange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP range of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3289,7 +3670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3297,7 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancetags_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance tags of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3305,7 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3313,7 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Next hop of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3321,7 +3702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthoptype_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3329,7 +3710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3337,7 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routetype_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3345,7 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dest_ip_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination IP range of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3365,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Compute Engine route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3373,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instance tags of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3381,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3389,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Next hop of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3397,7 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3405,7 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3413,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3421,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3491,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3499,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3507,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3519,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3527,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3535,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,6 +3941,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is a step that leads to the final state Drop.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cloudsqlinstance_csharp">
+<a href="#cloudsqlinstance_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudsqlinstanceinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Management.<wbr>V1.<wbr>Inputs.<wbr>Cloud<wbr>SQLInstance<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliver_csharp">
 <a href="#deliver_csharp" style="color: inherit; text-decoration: inherit;">Deliver</a>
@@ -3616,6 +4005,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#forwardingruleinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Management.<wbr>V1.<wbr>Inputs.<wbr>Forwarding<wbr>Rule<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gkemaster_csharp">
+<a href="#gkemaster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gkemasterinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Management.<wbr>V1.<wbr>Inputs.<wbr>GKEMaster<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -3701,6 +4098,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}This is a step that leads to the final state Drop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="cloudsqlinstance_go">
+<a href="#cloudsqlinstance_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudsqlinstanceinforesponse">Cloud<wbr>SQLInstance<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="deliver_go">
 <a href="#deliver_go" style="color: inherit; text-decoration: inherit;">Deliver</a>
 </span>
@@ -3756,6 +4161,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#forwardingruleinforesponse">Forwarding<wbr>Rule<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gkemaster_go">
+<a href="#gkemaster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gkemasterinforesponse">GKEMaster<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -3829,7 +4242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#abortinforesponse">pulumi.<wbr>Input<Abort<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#abortinforesponse">Abort<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "abort" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3837,15 +4250,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#causesdrop_nodejs" style="color: inherit; text-decoration: inherit;">causes<wbr>Drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This is a step that leads to the final state Drop.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cloudsqlinstance_nodejs">
+<a href="#cloudsqlinstance_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudsqlinstanceinforesponse">Cloud<wbr>SQLInstance<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliver_nodejs">
 <a href="#deliver_nodejs" style="color: inherit; text-decoration: inherit;">deliver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverinforesponse">pulumi.<wbr>Input<Deliver<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#deliverinforesponse">Deliver<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "deliver" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3853,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the step. Usually this is a summary of the state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3861,7 +4282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dropinforesponse">pulumi.<wbr>Input<Drop<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dropinforesponse">Drop<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "drop" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3869,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointinforesponse">pulumi.<wbr>Input<Endpoint<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the source and destination under analysis. The endpoint info in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3877,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_nodejs" style="color: inherit; text-decoration: inherit;">firewall</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinforesponse">pulumi.<wbr>Input<Firewall<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#firewallinforesponse">Firewall<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3885,7 +4306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardinforesponse">pulumi.<wbr>Input<Forward<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#forwardinforesponse">Forward<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "forward" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3893,15 +4314,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleinforesponse">pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#forwardingruleinforesponse">Forwarding<wbr>Rule<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gkemaster_nodejs">
+<a href="#gkemaster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gkemasterinforesponse">GKEMaster<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceinforesponse">pulumi.<wbr>Input<Instance<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceinforesponse">Instance<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3909,7 +4338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerinforesponse">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancerinforesponse">Load<wbr>Balancer<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the load balancers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3917,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinforesponse">pulumi.<wbr>Input<Network<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkinforesponse">Network<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a GCP network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3925,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID that contains the configuration this step is validating.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3933,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeinforesponse">pulumi.<wbr>Input<Route<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#routeinforesponse">Route<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3941,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Each step is in one of the pre-defined states.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3949,7 +4378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpngateway_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayinforesponse">pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpngatewayinforesponse">Vpn<wbr>Gateway<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3957,7 +4386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpntunnelinforesponse">pulumi.<wbr>Input<Vpn<wbr>Tunnel<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpntunnelinforesponse">Vpn<wbr>Tunnel<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3969,7 +4398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#abortinforesponse">Abort<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#abortinforesponse">Abort<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "abort" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3977,15 +4406,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#causes_drop_python" style="color: inherit; text-decoration: inherit;">causes_<wbr>drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is a step that leads to the final state Drop.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="cloud_sql_instance_python">
+<a href="#cloud_sql_instance_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>instance</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudsqlinstanceinforesponse">Cloud<wbr>SQLInstance<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliver_python">
 <a href="#deliver_python" style="color: inherit; text-decoration: inherit;">deliver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverinforesponse">Deliver<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deliverinforesponse">Deliver<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "deliver" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3993,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the step. Usually this is a summary of the state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4001,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dropinforesponse">Drop<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dropinforesponse">Drop<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "drop" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4009,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the source and destination under analysis. The endpoint info in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4017,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_python" style="color: inherit; text-decoration: inherit;">firewall</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinforesponse">Firewall<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallinforesponse">Firewall<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine firewall rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4025,7 +4462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardinforesponse">Forward<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardinforesponse">Forward<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the final state "forward" and reason.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4033,15 +4470,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleinforesponse">Forwarding<wbr>Rule<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#forwardingruleinforesponse">Forwarding<wbr>Rule<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="gke_master_python">
+<a href="#gke_master_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>master</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gkemasterinforesponse">GKEMaster<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Display info of a Google Kubernetes Engine cluster master.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceinforesponse">Instance<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceinforesponse">Instance<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4049,7 +4494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerinforesponse">Load<wbr>Balancer<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerinforesponse">Load<wbr>Balancer<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of the load balancers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4057,7 +4502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinforesponse">Network<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinforesponse">Network<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a GCP network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4065,7 +4510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID that contains the configuration this step is validating.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4073,7 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeinforesponse">Route<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routeinforesponse">Route<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4081,7 +4526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Each step is in one of the pre-defined states.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4089,7 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_gateway_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayinforesponse">Vpn<wbr>Gateway<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpngatewayinforesponse">Vpn<wbr>Gateway<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4097,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpntunnelinforesponse">Vpn<wbr>Tunnel<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpntunnelinforesponse">Vpn<wbr>Tunnel<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display info of a Compute Engine VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4151,7 +4596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointinfo_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointinforesponse">pulumi.<wbr>Input<Endpoint<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Derived from the source and destination endpoints definition, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4159,7 +4604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Step<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stepresponse">Step<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4171,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_info_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointinforesponse">Endpoint<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Derived from the source and destination endpoints definition, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4179,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepresponse">Step<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stepresponse">Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4297,7 +4742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4305,7 +4750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4313,7 +4758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network where the VPN gateway is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4321,7 +4766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a GCP region where this VPN gateway is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4329,7 +4774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4337,7 +4782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpntunneluri_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Tunnel<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4349,7 +4794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4357,7 +4802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4365,7 +4810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network where the VPN gateway is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4373,7 +4818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a GCP region where this VPN gateway is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4381,7 +4826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a VPN gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4389,7 +4834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_tunnel_uri_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>tunnel_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4555,7 +5000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4563,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network where the VPN tunnel is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4571,7 +5016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a GCP region where this VPN tunnel is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4579,7 +5024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotegateway_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a VPN gateway at remote end of the tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4587,7 +5032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotegatewayip_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Gateway<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Remote VPN gateway's IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4595,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the routing policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4603,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcegateway_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the VPN gateway at local end of the tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4611,7 +5056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcegatewayip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Gateway<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local VPN gateway's IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4619,7 +5064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of a VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4631,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4639,7 +5084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a Compute Engine network where the VPN tunnel is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4647,7 +5092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a GCP region where this VPN tunnel is configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4655,7 +5100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_gateway_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a VPN gateway at remote end of the tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4663,7 +5108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_gateway_ip_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>gateway_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Remote VPN gateway's IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4671,7 +5116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the routing policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4679,7 +5124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_gateway_python" style="color: inherit; text-decoration: inherit;">source_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the VPN gateway at local end of the tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4687,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_gateway_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>gateway_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local VPN gateway's IP address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4695,7 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of a VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}

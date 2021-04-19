@@ -20,19 +20,55 @@ Creates a new bucket.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_storage_v1.BucketAccessControlArgs]]]]</span> = None<span class="p">, </span><span class="nx">billing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">, </span><span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">default_object_acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_storage_v1.ObjectAccessControlArgs]]]]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">iam_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">lifecycle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">metageneration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">zone_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.BucketAccessControlArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">billing</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketBillingArgs]</span> = None<span class="p">,</span>
+           <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.BucketCorsItemArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">default_object_acl</span><span class="p">:</span> <span class="nx">Optional[Sequence[_storage_v1.ObjectAccessControlArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketEncryptionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">iam_configuration</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketIamConfigurationArgs]</span> = None<span class="p">,</span>
+           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">lifecycle</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketLifecycleArgs]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketLoggingArgs]</span> = None<span class="p">,</span>
+           <span class="nx">metageneration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketOwnerArgs]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">project_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketRetentionPolicyArgs]</span> = None<span class="p">,</span>
+           <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">time_created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketVersioningArgs]</span> = None<span class="p">,</span>
+           <span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketWebsiteArgs]</span> = None<span class="p">,</span>
+           <span class="nx">zone_affinity</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +103,32 @@ Creates a new bucket.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -194,7 +240,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billing_csharp" style="color: inherit; text-decoration: inherit;">Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketbilling">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Billing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's billing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +248,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#bucketcorsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Cors<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -226,7 +272,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketencryption">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for a bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -242,7 +288,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#iamconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketiamconfiguration">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Iam<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's IAM configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -274,7 +320,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketlifecycle">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's lifecycle configuration. See lifecycle management for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +344,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketlogging">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +368,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketowner">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +384,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +432,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketversioning">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's versioning configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +440,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketwebsite">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +484,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billing_go" style="color: inherit; text-decoration: inherit;">Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketbilling">Bucket<wbr>Billing</a></span>
     </dt>
     <dd>{{% md %}}The bucket's billing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +492,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#bucketcorsitem">[]Bucket<wbr>Cors<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +516,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for a bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +532,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#iamconfiguration_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketiamconfiguration">Bucket<wbr>Iam<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The bucket's IAM configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +564,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_go" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketlifecycle">Bucket<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The bucket's lifecycle configuration. See lifecycle management for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +588,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +612,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketowner">Bucket<wbr>Owner</a></span>
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +628,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +676,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}The bucket's versioning configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +684,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_go" style="color: inherit; text-decoration: inherit;">Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +704,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -666,7 +712,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +720,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaccesscontrol">pulumi.<wbr>Input<pulumi.<wbr>Input<Bucket<wbr>Access<wbr>Control<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Access controls on the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +728,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billing_nodejs" style="color: inherit; text-decoration: inherit;">billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketbilling">Bucket<wbr>Billing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's billing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +736,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#bucketcorsitem">Bucket<wbr>Cors<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +744,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +752,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#defaultobjectacl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrol">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Access<wbr>Control<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectaccesscontrol">Object<wbr>Access<wbr>Control<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Default access controls to apply to new objects when no ACL is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +760,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for a bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +768,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +776,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#iamconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketiamconfiguration">Bucket<wbr>Iam<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's IAM configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +784,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bucket. For buckets, the id and name properties are the same.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +792,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For buckets, this is always storage#bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +800,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-provided labels, in key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +808,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketlifecycle">Bucket<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's lifecycle configuration. See lifecycle management for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +816,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +824,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bucket location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +832,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +840,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#metageneration_nodejs" style="color: inherit; text-decoration: inherit;">metageneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata generation of this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +848,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +856,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketowner">Bucket<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +864,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +872,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +880,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>PZS</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +888,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +896,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +904,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +912,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +920,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's versioning configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +928,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +936,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#zoneaffinity_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -902,7 +948,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -910,7 +956,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +964,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bucketaccesscontrol">Bucket<wbr>Access<wbr>Control<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access controls on the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +972,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billing_python" style="color: inherit; text-decoration: inherit;">billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketbilling">Bucket<wbr>Billing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's billing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +980,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#bucketcorsitem">Bucket<wbr>Cors<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's Cross-Origin Resource Sharing (CORS) configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +988,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +996,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_object_acl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectaccesscontrol">Object<wbr>Access<wbr>Control<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectaccesscontrol">Object<wbr>Access<wbr>Control<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default access controls to apply to new objects when no ACL is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1004,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for a bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1012,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1020,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#iam_configuration_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketiamconfiguration">Bucket<wbr>Iam<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's IAM configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1028,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the bucket. For buckets, the id and name properties are the same.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1036,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For buckets, this is always storage#bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1044,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-provided labels, in key/value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1052,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketlifecycle">Bucket<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's lifecycle configuration. See lifecycle management for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1060,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1068,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the bucket location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1076,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1084,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#metageneration_python" style="color: inherit; text-decoration: inherit;">metageneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metadata generation of this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1092,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1100,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketowner">Bucket<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owner of the bucket. This is always the project team's owner group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1108,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project number of the project the bucket belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1116,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1124,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1132,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of this bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1140,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1148,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1156,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The modification time of the bucket in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1164,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's versioning configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1172,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1180,7 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#zone_affinity_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zone or zones from which the bucket is intended to use zonal quota. Requests for data from outside the specified affinities are still allowed but won't be able to use zonal quota. The zone or zones need to be within the bucket location otherwise the requests will fail with a 400 Bad Request response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1288,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1391,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -1462,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1486,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1494,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1502,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1510,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1522,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -1565,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1597,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1694,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1789,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1817,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1825,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1833,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1841,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -1860,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1876,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1884,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1892,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1900,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1912,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1920,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1928,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1936,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -1955,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1979,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1995,9 +2041,3145 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaction">Bucket<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_csharp">
+<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_go">
+<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storageclass_nodejs">
+<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="storage_class_python">
+<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketactionresponse">Bucket<wbr>Action<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_csharp">
+<a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_go">
+<a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageclass_nodejs">
+<a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storage_class_python">
+<a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Target storage class. Required iff the type of the action is SetStorageClass.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the action. Currently, only Delete and SetStorageClass are supported.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketbilling">Bucket<wbr>Billing</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpays_csharp">
+<a href="#requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpays_go">
+<a href="#requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpays_nodejs">
+<a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="requester_pays_python">
+<a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketbillingresponse">Bucket<wbr>Billing<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requesterpays_csharp">
+<a href="#requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requesterpays_go">
+<a href="#requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requesterpays_nodejs">
+<a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="requester_pays_python">
+<a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When set to true, Requester Pays is enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketcondition">Bucket<wbr>Condition</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_csharp">
+<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_csharp">
+<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_csharp">
+<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_csharp">
+<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_csharp">
+<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_csharp">
+<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_csharp">
+<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_csharp">
+<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_csharp">
+<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_csharp">
+<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_go">
+<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_go">
+<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_go">
+<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_go">
+<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_go">
+<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_go">
+<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_go">
+<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_go">
+<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_go">
+<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_go">
+<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_nodejs">
+<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbefore_nodejs">
+<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_nodejs">
+<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_nodejs">
+<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_nodejs">
+<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islive_nodejs">
+<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchespattern_nodejs">
+<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matchesstorageclass_nodejs">
+<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_nodejs">
+<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numnewerversions_nodejs">
+<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="age_python">
+<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_before_python">
+<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_time_before_python">
+<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_since_custom_time_python">
+<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="days_since_noncurrent_time_python">
+<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_live_python">
+<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matches_pattern_python">
+<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="matches_storage_class_python">
+<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noncurrent_time_before_python">
+<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="num_newer_versions_python">
+<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketconditionresponse">Bucket<wbr>Condition<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_csharp">
+<a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_csharp">
+<a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_csharp">
+<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_csharp">
+<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_csharp">
+<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_csharp">
+<a href="#islive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_csharp">
+<a href="#matchespattern_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_csharp">
+<a href="#matchesstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_csharp">
+<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_csharp">
+<a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_go">
+<a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_go">
+<a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_go">
+<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_go">
+<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_go">
+<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_go">
+<a href="#islive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_go">
+<a href="#matchespattern_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_go">
+<a href="#matchesstorageclass_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_go">
+<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_go">
+<a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_nodejs">
+<a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="createdbefore_nodejs">
+<a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="customtimebefore_nodejs">
+<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincecustomtime_nodejs">
+<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dayssincenoncurrenttime_nodejs">
+<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islive_nodejs">
+<a href="#islive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchespattern_nodejs">
+<a href="#matchespattern_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matchesstorageclass_nodejs">
+<a href="#matchesstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrenttimebefore_nodejs">
+<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="numnewerversions_nodejs">
+<a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="age_python">
+<a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Age of an object (in days). This condition is satisfied when an object reaches the specified age.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="created_before_python">
+<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="custom_time_before_python">
+<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="days_since_custom_time_python">
+<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="days_since_noncurrent_time_python">
+<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_live_python">
+<a href="#is_live_python" style="color: inherit; text-decoration: inherit;">is_<wbr>live</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matches_pattern_python">
+<a href="#matches_pattern_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="matches_storage_class_python">
+<a href="#matches_storage_class_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>class</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="noncurrent_time_before_python">
+<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="num_newer_versions_python">
+<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketcorsitem">Bucket<wbr>Cors<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxageseconds_csharp">
+<a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_csharp">
+<a href="#origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheader_csharp">
+<a href="#responseheader_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxageseconds_go">
+<a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_go">
+<a href="#origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheader_go">
+<a href="#responseheader_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxageseconds_nodejs">
+<a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_nodejs">
+<a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responseheader_nodejs">
+<a href="#responseheader_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="origin_python">
+<a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_header_python">
+<a href="#response_header_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketcorsitemresponse">Bucket<wbr>Cors<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxageseconds_csharp">
+<a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="origin_csharp">
+<a href="#origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="responseheader_csharp">
+<a href="#responseheader_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxageseconds_go">
+<a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="origin_go">
+<a href="#origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="responseheader_go">
+<a href="#responseheader_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="maxageseconds_nodejs">
+<a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="origin_nodejs">
+<a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="responseheader_nodejs">
+<a href="#responseheader_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="origin_python">
+<a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="response_header_python">
+<a href="#response_header_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketencryption">Bucket<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultkmskeyname_csharp">
+<a href="#defaultkmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultkmskeyname_go">
+<a href="#defaultkmskeyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultkmskeyname_nodejs">
+<a href="#defaultkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_kms_key_name_python">
+<a href="#default_kms_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketencryptionresponse">Bucket<wbr>Encryption<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultkmskeyname_csharp">
+<a href="#defaultkmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultkmskeyname_go">
+<a href="#defaultkmskeyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultkmskeyname_nodejs">
+<a href="#defaultkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="default_kms_key_name_python">
+<a href="#default_kms_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfiguration">Bucket<wbr>Iam<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketpolicyonly_csharp">
+<a href="#bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonly">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccessprevention_csharp">
+<a href="#publicaccessprevention_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_csharp">
+<a href="#uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketpolicyonly_go">
+<a href="#bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccessprevention_go">
+<a href="#publicaccessprevention_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_go">
+<a href="#uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucketpolicyonly_nodejs">
+<a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicaccessprevention_nodejs">
+<a href="#publicaccessprevention_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_nodejs">
+<a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_policy_only_python">
+<a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonly">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_access_prevention_python">
+<a href="#public_access_prevention_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uniform_bucket_level_access_python">
+<a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketiamconfigurationresponse">Bucket<wbr>Iam<wbr>Configuration<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucketpolicyonly_csharp">
+<a href="#bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicaccessprevention_csharp">
+<a href="#publicaccessprevention_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uniformbucketlevelaccess_csharp">
+<a href="#uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucketpolicyonly_go">
+<a href="#bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicaccessprevention_go">
+<a href="#publicaccessprevention_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uniformbucketlevelaccess_go">
+<a href="#uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucketpolicyonly_nodejs">
+<a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publicaccessprevention_nodejs">
+<a href="#publicaccessprevention_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uniformbucketlevelaccess_nodejs">
+<a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bucket_policy_only_python">
+<a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketbucketpolicyonlyresponse">Bucket<wbr>Bucket<wbr>Policy<wbr>Only<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="public_access_prevention_python">
+<a href="#public_access_prevention_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>prevention</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uniform_bucket_level_access_python">
+<a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucket's uniform bucket-level access configuration.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycle">Bucket<wbr>Lifecycle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_csharp">
+<a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Rule<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_go">
+<a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitem">[]Bucket<wbr>Rule<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_nodejs">
+<a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitem">Bucket<wbr>Rule<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="rule_python">
+<a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitem">Bucket<wbr>Rule<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlifecycleresponse">Bucket<wbr>Lifecycle<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_csharp">
+<a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_go">
+<a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitemresponse">[]Bucket<wbr>Rule<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_nodejs">
+<a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="rule_python">
+<a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketlogging">Bucket<wbr>Logging</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logbucket_csharp">
+<a href="#logbucket_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logobjectprefix_csharp">
+<a href="#logobjectprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logbucket_go">
+<a href="#logbucket_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logobjectprefix_go">
+<a href="#logobjectprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="logbucket_nodejs">
+<a href="#logbucket_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="logobjectprefix_nodejs">
+<a href="#logobjectprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="log_bucket_python">
+<a href="#log_bucket_python" style="color: inherit; text-decoration: inherit;">log_<wbr>bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="log_object_prefix_python">
+<a href="#log_object_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>object_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketloggingresponse">Bucket<wbr>Logging<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logbucket_csharp">
+<a href="#logbucket_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logobjectprefix_csharp">
+<a href="#logobjectprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logbucket_go">
+<a href="#logbucket_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logobjectprefix_go">
+<a href="#logobjectprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="logbucket_nodejs">
+<a href="#logbucket_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="logobjectprefix_nodejs">
+<a href="#logobjectprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Object<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="log_bucket_python">
+<a href="#log_bucket_python" style="color: inherit; text-decoration: inherit;">log_<wbr>bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The destination bucket where the current bucket's logs should be placed.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="log_object_prefix_python">
+<a href="#log_object_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>object_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A prefix for log object names.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketowner">Bucket<wbr>Owner</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="entity_csharp">
+<a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="entity_go">
+<a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="entity_nodejs">
+<a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="entity_python">
+<a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketownerresponse">Bucket<wbr>Owner<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="entity_csharp">
+<a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_csharp">
+<a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="entity_go">
+<a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_go">
+<a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="entity_nodejs">
+<a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entityid_nodejs">
+<a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="entity_python">
+<a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entity, in the form project-owner-projectId.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="entity_id_python">
+<a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID for the entity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketprojectteam">Bucket<wbr>Project<wbr>Team</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="effectivetime_csharp">
+<a href="#effectivetime_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islocked_csharp">
+<a href="#islocked_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_csharp">
+<a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="effectivetime_go">
+<a href="#effectivetime_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islocked_go">
+<a href="#islocked_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_go">
+<a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="effectivetime_nodejs">
+<a href="#effectivetime_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="islocked_nodejs">
+<a href="#islocked_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionperiod_nodejs">
+<a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="effective_time_python">
+<a href="#effective_time_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_locked_python">
+<a href="#is_locked_python" style="color: inherit; text-decoration: inherit;">is_<wbr>locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketretentionpolicyresponse">Bucket<wbr>Retention<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivetime_csharp">
+<a href="#effectivetime_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islocked_csharp">
+<a href="#islocked_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionperiod_csharp">
+<a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivetime_go">
+<a href="#effectivetime_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islocked_go">
+<a href="#islocked_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionperiod_go">
+<a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effectivetime_nodejs">
+<a href="#effectivetime_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="islocked_nodejs">
+<a href="#islocked_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retentionperiod_nodejs">
+<a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="effective_time_python">
+<a href="#effective_time_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="is_locked_python">
+<a href="#is_locked_python" style="color: inherit; text-decoration: inherit;">is_<wbr>locked</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Once locked, an object retention policy cannot be modified.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketruleitem">Bucket<wbr>Rule<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcondition">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketaction">Bucket<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketcondition">Bucket<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketruleitemresponse">Bucket<wbr>Rule<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_csharp">
+<a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketconditionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_go">
+<a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_nodejs">
+<a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketactionresponse">Bucket<wbr>Action<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="condition_python">
+<a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketconditionresponse">Bucket<wbr>Condition<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The condition(s) under which the action will be taken.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketuniformbucketlevelaccess">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketuniformbucketlevelaccessresponse">Bucket<wbr>Uniform<wbr>Bucket<wbr>Level<wbr>Access<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_csharp">
+<a href="#lockedtime_csharp" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_go">
+<a href="#lockedtime_go" style="color: inherit; text-decoration: inherit;">Locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="lockedtime_nodejs">
+<a href="#lockedtime_nodejs" style="color: inherit; text-decoration: inherit;">locked<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set, access is controlled only by bucket-level or above IAM policies.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locked_time_python">
+<a href="#locked_time_python" style="color: inherit; text-decoration: inherit;">locked_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true to false until the locked time, after which the field is immutable.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketversioning">Bucket<wbr>Versioning</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketversioningresponse">Bucket<wbr>Versioning<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}While set to true, versioning is fully enabled for this bucket.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketwebsite">Bucket<wbr>Website</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mainpagesuffix_csharp">
+<a href="#mainpagesuffix_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notfoundpage_csharp">
+<a href="#notfoundpage_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mainpagesuffix_go">
+<a href="#mainpagesuffix_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notfoundpage_go">
+<a href="#notfoundpage_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="mainpagesuffix_nodejs">
+<a href="#mainpagesuffix_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notfoundpage_nodejs">
+<a href="#notfoundpage_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="main_page_suffix_python">
+<a href="#main_page_suffix_python" style="color: inherit; text-decoration: inherit;">main_<wbr>page_<wbr>suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_found_page_python">
+<a href="#not_found_page_python" style="color: inherit; text-decoration: inherit;">not_<wbr>found_<wbr>page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketwebsiteresponse">Bucket<wbr>Website<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mainpagesuffix_csharp">
+<a href="#mainpagesuffix_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notfoundpage_csharp">
+<a href="#notfoundpage_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mainpagesuffix_go">
+<a href="#mainpagesuffix_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notfoundpage_go">
+<a href="#notfoundpage_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mainpagesuffix_nodejs">
+<a href="#mainpagesuffix_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Page<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="notfoundpage_nodejs">
+<a href="#notfoundpage_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Found<wbr>Page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="main_page_suffix_python">
+<a href="#main_page_suffix_python" style="color: inherit; text-decoration: inherit;">main_<wbr>page_<wbr>suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="not_found_page_python">
+<a href="#not_found_page_python" style="color: inherit; text-decoration: inherit;">not_<wbr>found_<wbr>page</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectaccesscontrol">Object<wbr>Access<wbr>Control</h4>
@@ -2100,7 +5282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +5401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +5429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +5437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +5445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +5453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -2290,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +5480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2306,7 +5488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +5496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2322,7 +5504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For object access control entries, this is always storage#objectAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2330,7 +5512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2346,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +5536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2366,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +5556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -2409,7 +5591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +5599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2425,7 +5607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2433,7 +5615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +5623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For object access control entries, this is always storage#objectAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +5631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +5639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketprojectteam">Bucket<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +5655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2570,7 +5752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2681,7 +5863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2709,7 +5891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2717,7 +5899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2725,7 +5907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2733,7 +5915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -2752,7 +5934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2760,7 +5942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2768,7 +5950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2776,7 +5958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For object access control entries, this is always storage#objectAccessControl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2784,7 +5966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2792,7 +5974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2800,7 +5982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2808,7 +5990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2820,7 +6002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2828,7 +6010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2836,7 +6018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2844,7 +6026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -2863,7 +6045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2871,7 +6053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2879,7 +6061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2887,7 +6069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For object access control entries, this is always storage#objectAccessControl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2895,7 +6077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2903,7 +6085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketprojectteamresponse">Bucket<wbr>Project<wbr>Team<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2911,7 +6093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +6101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}

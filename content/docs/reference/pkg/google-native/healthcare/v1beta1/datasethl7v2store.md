@@ -20,19 +20,35 @@ Creates a new HL7v2 store within the parent dataset.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">hl7_v2_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.NotificationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_healthcare_v1beta1.Hl7V2NotificationConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.ParserConfigArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reject_duplicate_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">hl7_v2_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.NotificationConfigArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.Hl7V2NotificationConfigArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.ParserConfigArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">reject_duplicate_message</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetHl7V2Store</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetHl7V2Store</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetHl7V2Store</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetHl7V2Store</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetHl7V2Store</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a new HL7v2 store within the parent dataset.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetHl7V2StoreArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#hl7v2storesid_nodejs" style="color: inherit; text-decoration: inherit;">hl7V2Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +388,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the HL7v2 store, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">pulumi.<wbr>Input<Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#notificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7v2notificationconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7V2Notification<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7v2notificationconfig">Hl7V2Notification<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#parserconfig_nodejs" style="color: inherit; text-decoration: inherit;">parser<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parserconfig">pulumi.<wbr>Input<Parser<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#parserconfig">Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the parser. It determines how the server parses the messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#rejectduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">reject<wbr>Duplicate<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether to reject duplicate messages. A duplicate message is a message with the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The default value is false, meaning that the store accepts the duplicate messages and it also returns the same ACK message in the IngestMessageResponse as has been returned previously. Note that only one resource is created in the store. When this field is set to true, CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store, and IngestMessageErrorDetail returns a NACK message upon rejection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#hl7_v2_stores_id_python" style="color: inherit; text-decoration: inherit;">hl7_<wbr>v2_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -446,7 +472,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the HL7v2 store, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification destination all messages (both Ingest & Create) are published on. Only the message name is sent as part of the notification. If this is unset, no notifications are sent. Supplied by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#notification_configs_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7v2notificationconfig">Hl7V2Notification<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7v2notificationconfig">Hl7V2Notification<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a message (both Ingest & Create) on the corresponding notification destination. Only the message name is sent as part of the notification. Supplied by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#parser_config_python" style="color: inherit; text-decoration: inherit;">parser_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parserconfig">Parser<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parserconfig">Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the parser. It determines how the server parses the messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The DatasetHl7V2Store resource accepts the following [input]({{< relref "/docs/i
 <a href="#reject_duplicate_message_python" style="color: inherit; text-decoration: inherit;">reject_<wbr>duplicate_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to reject duplicate messages. A duplicate message is a message with the same raw bytes as a message that has already been ingested/created in this HL7v2 store. The default value is false, meaning that the store accepts the duplicate messages and it also returns the same ACK message in the IngestMessageResponse as has been returned previously. Note that only one resource is created in the store. When this field is set to true, CreateMessage/IngestMessage requests with a duplicate message will be rejected by the store, and IngestMessageErrorDetail returns a NACK message upon rejection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxoccurs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times this field can be repeated. 0 or -1 means unbounded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minoccurs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of times this field must be present/repeated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the field. For example, "PID-1" or just "1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this field. A Type with this name must be defined in an Hl7TypesConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_occurs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times this field can be repeated. 0 or -1 means unbounded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_occurs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of times this field must be present/repeated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the field. For example, "PID-1" or just "1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this field. A Type with this name must be defined in an Hl7TypesConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxoccurs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times this field can be repeated. 0 or -1 means unbounded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minoccurs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of times this field must be present/repeated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the field. For example, "PID-1" or just "1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this field. A Type with this name must be defined in an Hl7TypesConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -883,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_occurs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times this field can be repeated. 0 or -1 means unbounded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -891,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_occurs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of times this field must be present/repeated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the field. For example, "PID-1" or just "1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this field. A Type with this name must be defined in an Hl7TypesConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageschemaconfigs_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Schema<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Version<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each VersionSource is tested and only if they all match is the schema used for the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_schema_configs_python" style="color: inherit; text-decoration: inherit;">message_<wbr>schema_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each VersionSource is tested and only if they all match is the schema used for the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageschemaconfigs_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Schema<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Version<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Each VersionSource is tested and only if they all match is the schema used for the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_schema_configs_python" style="color: inherit; text-decoration: inherit;">message_<wbr>schema_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each VersionSource is tested and only if they all match is the schema used for the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#type">pulumi.<wbr>Input<pulumi.<wbr>Input<Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#type">Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The HL7v2 type definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Version<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The version selectors that this config applies to. A message must match ALL version sources to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#type">Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#type">Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HL7v2 type definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#versionsource">Version<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The version selectors that this config applies to. A message must match ALL version sources to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#typeresponse">Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The HL7v2 type definitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Version<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The version selectors that this config applies to. A message must match ALL version sources to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typeresponse">Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#typeresponse">Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The HL7v2 type definitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#versionsourceresponse">Version<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The version selectors that this config applies to. A message must match ALL version sources to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages are matched. The following syntax is available: * A string field value can be written as text inside quotation marks, for example `"query text"`. The only valid relational operation for text fields is equality (`=`), where text is searched within the field, rather than having the field be equal to the text. For example, `"Comment = great"` returns messages with `great` in the comment field. * A number field value can be written as an integer, a decimal, or an exponential. The valid relational operators for number fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit months and days. The valid relational operators for date fields are the equality operator (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators between the expressions. If a boolean operator appears within a quoted string, it is not treated as special, it's just another part of the character string to be matched. You can prepend the `NOT` operator to an expression to negate it. Fields/functions available for filtering are: * `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the care center that the message came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For example, `labels."priority":*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. The notification is a `PubsubMessage` with the following fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages are matched. The following syntax is available: * A string field value can be written as text inside quotation marks, for example `"query text"`. The only valid relational operation for text fields is equality (`=`), where text is searched within the field, rather than having the field be equal to the text. For example, `"Comment = great"` returns messages with `great` in the comment field. * A number field value can be written as an integer, a decimal, or an exponential. The valid relational operators for number fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit months and days. The valid relational operators for date fields are the equality operator (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators between the expressions. If a boolean operator appears within a quoted string, it is not treated as special, it's just another part of the character string to be matched. You can prepend the `NOT` operator to an expression to negate it. Fields/functions available for filtering are: * `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the care center that the message came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For example, `labels."priority":*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. The notification is a `PubsubMessage` with the following fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages are matched. The following syntax is available: * A string field value can be written as text inside quotation marks, for example `"query text"`. The only valid relational operation for text fields is equality (`=`), where text is searched within the field, rather than having the field be equal to the text. For example, `"Comment = great"` returns messages with `great` in the comment field. * A number field value can be written as an integer, a decimal, or an exponential. The valid relational operators for number fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit months and days. The valid relational operators for date fields are the equality operator (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators between the expressions. If a boolean operator appears within a quoted string, it is not treated as special, it's just another part of the character string to be matched. You can prepend the `NOT` operator to an expression to negate it. Fields/functions available for filtering are: * `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the care center that the message came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For example, `labels."priority":*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1387,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. The notification is a `PubsubMessage` with the following fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages are matched. The following syntax is available: * A string field value can be written as text inside quotation marks, for example `"query text"`. The only valid relational operation for text fields is equality (`=`), where text is searched within the field, rather than having the field be equal to the text. For example, `"Comment = great"` returns messages with `great` in the comment field. * A number field value can be written as an integer, a decimal, or an exponential. The valid relational operators for number fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit months and days. The valid relational operators for date fields are the equality operator (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators between the expressions. If a boolean operator appears within a quoted string, it is not treated as special, it's just another part of the character string to be matched. You can prepend the `NOT` operator to an expression to negate it. Fields/functions available for filtering are: * `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when the message was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the care center that the message came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For example, `labels."priority":*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1407,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. The notification is a `PubsubMessage` with the following fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allownullheader_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Null<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapackage">pulumi.<wbr>Input<Schema<wbr>Package<wbr>Args></a></span>
+        <span class="property-type"><a href="#schemapackage">Schema<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schemas used to parse messages in this store, if schematized parsing is desired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_null_header_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>null_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapackage">Schema<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schemapackage">Schema<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schemas used to parse messages in this store, if schematized parsing is desired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1739,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allownullheader_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Null<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1747,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapackageresponse">pulumi.<wbr>Input<Schema<wbr>Package<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#schemapackageresponse">Schema<wbr>Package<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schemas used to parse messages in this store, if schematized parsing is desired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1775,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_null_header_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>null_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapackageresponse">Schema<wbr>Package<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schemapackageresponse">Schema<wbr>Package<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schemas used to parse messages in this store, if schematized parsing is desired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Determines the version of the unschematized parser to be used when `schema` is not given. This field is immutable after store creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1901,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreminoccurs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Min<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7schemaconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Schema<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7schemaconfig">Hl7Schema<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_nodejs" style="color: inherit; text-decoration: inherit;">schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7typesconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Types<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7typesconfig">Hl7Types<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpectedsegmenthandling_nodejs" style="color: inherit; text-decoration: inherit;">unexpected<wbr>Segment<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_min_occurs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>min_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7schemaconfig">Hl7Schema<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7schemaconfig">Hl7Schema<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematized_parsing_type_python" style="color: inherit; text-decoration: inherit;">schematized_<wbr>parsing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7typesconfig">Hl7Types<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7typesconfig">Hl7Types<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpected_segment_handling_python" style="color: inherit; text-decoration: inherit;">unexpected_<wbr>segment_<wbr>handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2079,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreminoccurs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Min<wbr>Occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7schemaconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Schema<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7schemaconfigresponse">Hl7Schema<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematizedparsingtype_nodejs" style="color: inherit; text-decoration: inherit;">schematized<wbr>Parsing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7typesconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Types<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7typesconfigresponse">Hl7Types<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpectedsegmenthandling_nodejs" style="color: inherit; text-decoration: inherit;">unexpected<wbr>Segment<wbr>Handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_min_occurs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>min_<wbr>occurs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7schemaconfigresponse">Hl7Schema<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7schemaconfigresponse">Hl7Schema<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematized_parsing_type_python" style="color: inherit; text-decoration: inherit;">schematized_<wbr>parsing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how messages that fail to parse are handled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7typesconfigresponse">Hl7Types<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7typesconfigresponse">Hl7Types<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unexpected_segment_handling_python" style="color: inherit; text-decoration: inherit;">unexpected_<wbr>segment_<wbr>handling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how unexpected segments (segments not matched to the schema) are handled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#field">pulumi.<wbr>Input<pulumi.<wbr>Input<Field<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#field">Field<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The (sub) fields this type has (if not primitive).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_nodejs" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#field">Field<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#field">Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (sub) fields this type has (if not primitive).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_python" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2339,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fieldresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Field<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fieldresponse">Field<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The (sub) fields this type has (if not primitive).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2347,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2355,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_nodejs" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2367,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fieldresponse">Field<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fieldresponse">Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The (sub) fields this type has (if not primitive).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2375,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2383,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primitive_python" style="color: inherit; text-decoration: inherit;">primitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2437,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mshfield_nodejs" style="color: inherit; text-decoration: inherit;">msh<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field to extract from the MSH segment. For example, "3.1" or "18[1].1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match with the field. For example, "My Application Name" or "2.3".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msh_field_python" style="color: inherit; text-decoration: inherit;">msh_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field to extract from the MSH segment. For example, "3.1" or "18[1].1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to match with the field. For example, "My Application Name" or "2.3".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mshfield_nodejs" style="color: inherit; text-decoration: inherit;">msh<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field to extract from the MSH segment. For example, "3.1" or "18[1].1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match with the field. For example, "My Application Name" or "2.3".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2539,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msh_field_python" style="color: inherit; text-decoration: inherit;">msh_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field to extract from the MSH segment. For example, "3.1" or "18[1].1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2547,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to match with the field. For example, "My Application Name" or "2.3".{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,34 @@ Creates a new custom dashboard. For examples on how you can use this API to crea
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_layout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v1.ColumnLayoutArgs]]</span> = None<span class="p">, </span><span class="nx">dashboards_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">grid_layout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v1.GridLayoutArgs]]</span> = None<span class="p">, </span><span class="nx">mosaic_layout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v1.MosaicLayoutArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">row_layout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v1.RowLayoutArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">column_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.ColumnLayoutArgs]</span> = None<span class="p">,</span>
+              <span class="nx">dashboards_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">grid_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.GridLayoutArgs]</span> = None<span class="p">,</span>
+              <span class="nx">mosaic_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.MosaicLayoutArgs]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">row_layout</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v1.RowLayoutArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a new custom dashboard. For examples on how you can use this API to crea
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardsid_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#columnlayout_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnlayout">pulumi.<wbr>Input<Column<wbr>Layout<wbr>Args></a></span>
+        <span class="property-type"><a href="#columnlayout">Column<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is divided into equally spaced columns and the widgets are arranged vertically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The mutable, human-readable name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#gridlayout_nodejs" style="color: inherit; text-decoration: inherit;">grid<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gridlayout">pulumi.<wbr>Input<Grid<wbr>Layout<wbr>Args></a></span>
+        <span class="property-type"><a href="#gridlayout">Grid<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mosaiclayout_nodejs" style="color: inherit; text-decoration: inherit;">mosaic<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mosaiclayout">pulumi.<wbr>Input<Mosaic<wbr>Layout<wbr>Args></a></span>
+        <span class="property-type"><a href="#mosaiclayout">Mosaic<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The resource name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rowlayout_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rowlayout">pulumi.<wbr>Input<Row<wbr>Layout<wbr>Args></a></span>
+        <span class="property-type"><a href="#rowlayout">Row<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is divided into equally spaced rows and the widgets are arranged horizontally.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboards_id_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#column_layout_python" style="color: inherit; text-decoration: inherit;">column_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnlayout">Column<wbr>Layout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#columnlayout">Column<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is divided into equally spaced columns and the widgets are arranged vertically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The mutable, human-readable name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grid_layout_python" style="color: inherit; text-decoration: inherit;">grid_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gridlayout">Grid<wbr>Layout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gridlayout">Grid<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mosaic_layout_python" style="color: inherit; text-decoration: inherit;">mosaic_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mosaiclayout">Mosaic<wbr>Layout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mosaiclayout">Mosaic<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The resource name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#row_layout_python" style="color: inherit; text-decoration: inherit;">row_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rowlayout">Row<wbr>Layout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rowlayout">Row<wbr>Layout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content is divided into equally spaced rows and the widgets are arranged horizontally.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 2 years, or 104 weeks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -649,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 2 years, or 104 weeks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 2 years, or 104 weeks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -775,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -783,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 2 years, or 104 weeks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label of the axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label of the axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -983,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The axis scale. By default, a linear scale is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The chart mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged vertically in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">Widget<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged vertically in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">pulumi.<wbr>Input<pulumi.<wbr>Input<Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#column">Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#column">Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Column<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#columnresponse">Column<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">Column<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#columnresponse">Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1319,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1327,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged vertically in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged vertically in this column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1433,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legendtemplate_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesquery">pulumi.<wbr>Input<Time<wbr>Series<wbr>Query<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legend_template_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legendtemplate_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1603,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesqueryresponse">pulumi.<wbr>Input<Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legend_template_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1631,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this data should be plotted on the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1639,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerbound_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_bound_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1775,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerbound_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_bound_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The informational elements that are arranged into the columns row-first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">Widget<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The informational elements that are arranged into the columns row-first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1947,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The informational elements that are arranged into the columns row-first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The informational elements that are arranged into the columns row-first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2021,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiles_nodejs" style="color: inherit; text-decoration: inherit;">tiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tile">pulumi.<wbr>Input<pulumi.<wbr>Input<Tile<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tile">Tile<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The tiles to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiles_python" style="color: inherit; text-decoration: inherit;">tiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tile">Tile<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tile">Tile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tiles to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2103,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiles_nodejs" style="color: inherit; text-decoration: inherit;">tiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Tile<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tileresponse">Tile<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The tiles to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiles_python" style="color: inherit; text-decoration: inherit;">tiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tileresponse">Tile<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tileresponse">Tile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tiles to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2201,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many time series to allow to pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2229,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2237,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many time series to allow to pass through the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2315,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2323,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many time series to allow to pass through the filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2331,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2343,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to use the ranking to select time series that pass through the filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2351,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many time series to allow to pass through the filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2359,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2413,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<Aggregation<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2433,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2495,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2515,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2577,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged horizontally in this row.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2597,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">Widget<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged horizontally in this row.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2643,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#row">pulumi.<wbr>Input<pulumi.<wbr>Input<Row<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#row">Row<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The rows of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2655,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#row">Row<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#row">Row<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rows of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2693,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rowresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Row<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rowresponse">Row<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The rows of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rowresponse">Row<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rowresponse">Row<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rows of content to display.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2767,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Widget<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged horizontally in this row.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2779,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The display widgets arranged horizontally in this row.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2873,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gaugeview_nodejs" style="color: inherit; text-decoration: inherit;">gauge<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gaugeview">pulumi.<wbr>Input<Gauge<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#gaugeview">Gauge<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a gauge chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkchartview_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Chart<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkchartview">pulumi.<wbr>Input<Spark<wbr>Chart<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkchartview">Spark<wbr>Chart<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a spark chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threshold">pulumi.<wbr>Input<pulumi.<wbr>Input<Threshold<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#threshold">Threshold<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The thresholds used to determine the state of the scorecard given the time series' current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger: 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category: 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesquery">pulumi.<wbr>Input<Time<wbr>Series<wbr>Query<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2909,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gauge_view_python" style="color: inherit; text-decoration: inherit;">gauge_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gaugeview">Gauge<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gaugeview">Gauge<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a gauge chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_chart_view_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>chart_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkchartview">Spark<wbr>Chart<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkchartview">Spark<wbr>Chart<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a spark chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threshold">Threshold<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#threshold">Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The thresholds used to determine the state of the scorecard given the time series' current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger: 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category: 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesquery">Time<wbr>Series<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3019,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gaugeview_nodejs" style="color: inherit; text-decoration: inherit;">gauge<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gaugeviewresponse">pulumi.<wbr>Input<Gauge<wbr>View<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gaugeviewresponse">Gauge<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a gauge chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3027,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkchartview_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Chart<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkchartviewresponse">pulumi.<wbr>Input<Spark<wbr>Chart<wbr>View<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkchartviewresponse">Spark<wbr>Chart<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a spark chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3035,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Threshold<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The thresholds used to determine the state of the scorecard given the time series' current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger: 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category: 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3043,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquery_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesqueryresponse">pulumi.<wbr>Input<Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3055,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gauge_view_python" style="color: inherit; text-decoration: inherit;">gauge_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gaugeviewresponse">Gauge<wbr>View<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gaugeviewresponse">Gauge<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a gauge chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_chart_view_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>chart_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkchartviewresponse">Spark<wbr>Chart<wbr>View<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkchartviewresponse">Spark<wbr>Chart<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Will cause the scorecard to show a spark chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The thresholds used to determine the state of the scorecard given the time series' current value. For an actual value x, the scorecard is in a danger state if x is less than or equal to a danger threshold that triggers below, or greater than or equal to a danger threshold that triggers above. Similarly, if x is above/below a warning threshold that triggers above/below, then the scorecard is in a warning state - unless x also puts it in a danger state. (Danger trumps warning.)As an example, consider a scorecard with the following four thresholds: { value: 90, category: 'DANGER', trigger: 'ABOVE', }, { value: 70, category: 'WARNING', trigger: 'ABOVE', }, { value: 10, category: 'DANGER', trigger: 'BELOW', }, { value: 20, category: 'WARNING', trigger: 'BELOW', }Then: values less than or equal to 10 would put the scorecard in a DANGER state, values greater than 10 but less than or equal to 20 a WARNING state, values strictly between 20 and 70 an OK state, values greater than or equal to 70 but less than 90 a WARNING state, and values greater than or equal to 90 a DANGER state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesqueryresponse">Time<wbr>Series<wbr>Query<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Fields for querying time series data from the Stackdriver metrics API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkcharttype_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3153,7 +3178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_chart_type_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>chart_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3215,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minalignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3223,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkcharttype_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3235,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_alignment_period_python" style="color: inherit; text-decoration: inherit;">min_<wbr>alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3243,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_chart_type_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>chart_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of sparkchart to show in this chartView.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3317,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3325,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3379,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numtimeseries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3387,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rankingmethod_nodejs" style="color: inherit; text-decoration: inherit;">ranking<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3399,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_time_series_python" style="color: inherit; text-decoration: inherit;">num_<wbr>time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many time series to output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3407,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ranking_method_python" style="color: inherit; text-decoration: inherit;">ranking_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rankingMethod is applied to a set of time series, and then the produced value for each individual time series is used to compare a given time series to others. These are methods that cannot be applied stream-by-stream, but rather require the full context of a request to evaluate time series.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3461,7 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text content to be displayed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3469,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3481,7 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text content to be displayed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3543,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text content to be displayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3551,7 +3576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3563,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text content to be displayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3571,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the text content is formatted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3657,7 +3682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3693,7 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3803,7 +3828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3811,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3819,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3827,7 +3852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3839,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state color for this threshold. Color is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3847,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction for the current threshold. Direction is not allowed in a XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3855,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label for the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3863,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value of the threshold. The value should be defined in the native scale of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3965,7 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widget_nodejs" style="color: inherit; text-decoration: inherit;">widget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">pulumi.<wbr>Input<Widget<wbr>Args></a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The informational widget contained in the tile. For example an XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3989,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xpos_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3997,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ypos_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4009,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widget_python" style="color: inherit; text-decoration: inherit;">widget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widget">Widget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#widget">Widget<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The informational widget contained in the tile. For example an XyChart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4025,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4033,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_pos_python" style="color: inherit; text-decoration: inherit;">x_<wbr>pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4041,7 +4066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_pos_python" style="color: inherit; text-decoration: inherit;">y_<wbr>pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4143,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4151,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widget_nodejs" style="color: inherit; text-decoration: inherit;">widget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">pulumi.<wbr>Input<Widget<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The informational widget contained in the tile. For example an XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4159,7 +4184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4167,7 +4192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xpos_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4175,7 +4200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ypos_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4187,7 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4195,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widget_python" style="color: inherit; text-decoration: inherit;">widget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#widgetresponse">Widget<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The informational widget contained in the tile. For example an XyChart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4203,7 +4228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4211,7 +4236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_pos_python" style="color: inherit; text-decoration: inherit;">x_<wbr>pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4219,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_pos_python" style="color: inherit; text-decoration: inherit;">y_<wbr>pos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4321,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<Aggregation<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4329,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4337,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#picktimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilter">pulumi.<wbr>Input<Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4345,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryaggregation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<Aggregation<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4353,7 +4378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">pulumi.<wbr>Input<Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4365,7 +4390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4373,7 +4398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4381,7 +4406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pick_time_series_filter_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4389,7 +4414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_aggregation_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4499,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_nodejs" style="color: inherit; text-decoration: inherit;">denominator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopart">pulumi.<wbr>Input<Ratio<wbr>Part<wbr>Args></a></span>
+        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The denominator of the ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4507,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerator_nodejs" style="color: inherit; text-decoration: inherit;">numerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopart">pulumi.<wbr>Input<Ratio<wbr>Part<wbr>Args></a></span>
+        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The numerator of the ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4515,7 +4540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#picktimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilter">pulumi.<wbr>Input<Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4523,7 +4548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryaggregation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<Aggregation<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4531,7 +4556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">pulumi.<wbr>Input<Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4543,7 +4568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_python" style="color: inherit; text-decoration: inherit;">denominator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The denominator of the ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4551,7 +4576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerator_python" style="color: inherit; text-decoration: inherit;">numerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratiopart">Ratio<wbr>Part<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The numerator of the ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4559,7 +4584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pick_time_series_filter_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#picktimeseriesfilter">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4567,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_aggregation_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4575,7 +4600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilter">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4677,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_nodejs" style="color: inherit; text-decoration: inherit;">denominator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopartresponse">pulumi.<wbr>Input<Ratio<wbr>Part<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The denominator of the ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4685,7 +4710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerator_nodejs" style="color: inherit; text-decoration: inherit;">numerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopartresponse">pulumi.<wbr>Input<Ratio<wbr>Part<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The numerator of the ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4693,7 +4718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#picktimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilterresponse">pulumi.<wbr>Input<Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4701,7 +4726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryaggregation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4709,7 +4734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">pulumi.<wbr>Input<Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4721,7 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_python" style="color: inherit; text-decoration: inherit;">denominator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The denominator of the ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4729,7 +4754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numerator_python" style="color: inherit; text-decoration: inherit;">numerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratiopartresponse">Ratio<wbr>Part<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The numerator of the ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4737,7 +4762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pick_time_series_filter_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4745,7 +4770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_aggregation_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after the ratio is computed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4753,7 +4778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4855,7 +4880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4863,7 +4888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4871,7 +4896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#picktimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">pick<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilterresponse">pulumi.<wbr>Input<Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4879,7 +4904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryaggregation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4887,7 +4912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statisticaltimeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">statistical<wbr>Time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">pulumi.<wbr>Input<Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4899,7 +4924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4907,7 +4932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4915,7 +4940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pick_time_series_filter_python" style="color: inherit; text-decoration: inherit;">pick_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#picktimeseriesfilterresponse">Pick<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ranking based time series filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4923,7 +4948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_aggregation_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apply a second aggregation after aggregation is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4931,7 +4956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistical_time_series_filter_python" style="color: inherit; text-decoration: inherit;">statistical_<wbr>time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statisticaltimeseriesfilterresponse">Statistical<wbr>Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5017,7 +5042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilter">pulumi.<wbr>Input<Time<wbr>Series<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesfilter">Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter parameters to fetch time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5025,7 +5050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesfilterratio_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Filter<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterratio">pulumi.<wbr>Input<Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesfilterratio">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to fetch a ratio between two time series filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5033,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A query used to fetch time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5041,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unitoverride_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5053,7 +5078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_filter_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilter">Time<wbr>Series<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesfilter">Time<wbr>Series<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter parameters to fetch time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5061,7 +5086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_filter_ratio_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>filter_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterratio">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesfilterratio">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to fetch a ratio between two time series filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5069,7 +5094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_language_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A query used to fetch time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5077,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_override_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5163,7 +5188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesfilter_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterresponse">pulumi.<wbr>Input<Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesfilterresponse">Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter parameters to fetch time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5171,7 +5196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesfilterratio_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Filter<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterratioresponse">pulumi.<wbr>Input<Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesfilterratioresponse">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to fetch a ratio between two time series filters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5179,7 +5204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseriesquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A query used to fetch time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5187,7 +5212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unitoverride_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5199,7 +5224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_filter_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterresponse">Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesfilterresponse">Time<wbr>Series<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter parameters to fetch time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5207,7 +5232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_filter_ratio_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>filter_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesfilterratioresponse">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesfilterratioresponse">Time<wbr>Series<wbr>Filter<wbr>Ratio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to fetch a ratio between two time series filters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5215,7 +5240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_query_language_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A query used to fetch time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5223,7 +5248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_override_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5325,7 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blank_nodejs" style="color: inherit; text-decoration: inherit;">blank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#empty">pulumi.<wbr>Input<Empty<wbr>Args></a></span>
+        <span class="property-type"><a href="#empty">Empty<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A blank space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5333,7 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scorecard_nodejs" style="color: inherit; text-decoration: inherit;">scorecard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scorecard">pulumi.<wbr>Input<Scorecard<wbr>Args></a></span>
+        <span class="property-type"><a href="#scorecard">Scorecard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A scorecard summarizing time series data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5341,7 +5366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#text">pulumi.<wbr>Input<Text<wbr>Args></a></span>
+        <span class="property-type"><a href="#text">Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5349,7 +5374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The title of the widget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5357,7 +5382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xychart_nodejs" style="color: inherit; text-decoration: inherit;">xy<wbr>Chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xychart">pulumi.<wbr>Input<Xy<wbr>Chart<wbr>Args></a></span>
+        <span class="property-type"><a href="#xychart">Xy<wbr>Chart<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A chart of time series data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5369,7 +5394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blank_python" style="color: inherit; text-decoration: inherit;">blank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#empty">Empty<wbr>Args]</a></span>
+        <span class="property-type"><a href="#empty">Empty<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A blank space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5377,7 +5402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scorecard_python" style="color: inherit; text-decoration: inherit;">scorecard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scorecard">Scorecard<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scorecard">Scorecard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A scorecard summarizing time series data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5385,7 +5410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#text">Text<wbr>Args]</a></span>
+        <span class="property-type"><a href="#text">Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5393,7 +5418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The title of the widget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5401,7 +5426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_chart_python" style="color: inherit; text-decoration: inherit;">xy_<wbr>chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xychart">Xy<wbr>Chart<wbr>Args]</a></span>
+        <span class="property-type"><a href="#xychart">Xy<wbr>Chart<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A chart of time series data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5503,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blank_nodejs" style="color: inherit; text-decoration: inherit;">blank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptyresponse">pulumi.<wbr>Input<Empty<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#emptyresponse">Empty<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A blank space.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5511,7 +5536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scorecard_nodejs" style="color: inherit; text-decoration: inherit;">scorecard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scorecardresponse">pulumi.<wbr>Input<Scorecard<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#scorecardresponse">Scorecard<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A scorecard summarizing time series data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5519,7 +5544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textresponse">pulumi.<wbr>Input<Text<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#textresponse">Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5527,7 +5552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The title of the widget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5535,7 +5560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xychart_nodejs" style="color: inherit; text-decoration: inherit;">xy<wbr>Chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xychartresponse">pulumi.<wbr>Input<Xy<wbr>Chart<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#xychartresponse">Xy<wbr>Chart<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A chart of time series data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5547,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blank_python" style="color: inherit; text-decoration: inherit;">blank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptyresponse">Empty<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#emptyresponse">Empty<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A blank space.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5555,7 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scorecard_python" style="color: inherit; text-decoration: inherit;">scorecard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scorecardresponse">Scorecard<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scorecardresponse">Scorecard<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A scorecard summarizing time series data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5563,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textresponse">Text<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#textresponse">Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw string or markdown displaying textual content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5571,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The title of the widget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5579,7 +5604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_chart_python" style="color: inherit; text-decoration: inherit;">xy_<wbr>chart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xychartresponse">Xy<wbr>Chart<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#xychartresponse">Xy<wbr>Chart<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A chart of time series data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5697,7 +5722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartoptions_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chartoptions">pulumi.<wbr>Input<Chart<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#chartoptions">Chart<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display options for the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5705,7 +5730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataset">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Set<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dataset">Data<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The data displayed in this chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5713,7 +5738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threshold">pulumi.<wbr>Input<pulumi.<wbr>Input<Threshold<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#threshold">Threshold<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Threshold lines drawn horizontally across the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5721,7 +5746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeshiftduration_nodejs" style="color: inherit; text-decoration: inherit;">timeshift<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5729,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xaxis_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axis">pulumi.<wbr>Input<Axis<wbr>Args></a></span>
+        <span class="property-type"><a href="#axis">Axis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5737,7 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yaxis_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axis">pulumi.<wbr>Input<Axis<wbr>Args></a></span>
+        <span class="property-type"><a href="#axis">Axis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the Y axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5749,7 +5774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_options_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chartoptions">Chart<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#chartoptions">Chart<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display options for the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5757,7 +5782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_sets_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataset">Data<wbr>Set<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dataset">Data<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The data displayed in this chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5765,7 +5790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threshold">Threshold<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#threshold">Threshold<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threshold lines drawn horizontally across the chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5773,7 +5798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeshift_duration_python" style="color: inherit; text-decoration: inherit;">timeshift_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5781,7 +5806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_axis_python" style="color: inherit; text-decoration: inherit;">x_<wbr>axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axis">Axis<wbr>Args]</a></span>
+        <span class="property-type"><a href="#axis">Axis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5789,7 +5814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_axis_python" style="color: inherit; text-decoration: inherit;">y_<wbr>axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axis">Axis<wbr>Args]</a></span>
+        <span class="property-type"><a href="#axis">Axis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the Y axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5907,7 +5932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartoptions_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chartoptionsresponse">pulumi.<wbr>Input<Chart<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#chartoptionsresponse">Chart<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display options for the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5915,7 +5940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Set<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datasetresponse">Data<wbr>Set<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The data displayed in this chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5923,7 +5948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Threshold<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Threshold lines drawn horizontally across the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5931,7 +5956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeshiftduration_nodejs" style="color: inherit; text-decoration: inherit;">timeshift<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5939,7 +5964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xaxis_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axisresponse">pulumi.<wbr>Input<Axis<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5947,7 +5972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yaxis_nodejs" style="color: inherit; text-decoration: inherit;">y<wbr>Axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axisresponse">pulumi.<wbr>Input<Axis<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the Y axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5959,7 +5984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_options_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chartoptionsresponse">Chart<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#chartoptionsresponse">Chart<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display options for the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5967,7 +5992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_sets_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponse">Data<wbr>Set<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datasetresponse">Data<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The data displayed in this chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5975,7 +6000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#thresholdresponse">Threshold<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Threshold lines drawn horizontally across the chart.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5983,7 +6008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeshift_duration_python" style="color: inherit; text-decoration: inherit;">timeshift_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5991,7 +6016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_axis_python" style="color: inherit; text-decoration: inherit;">x_<wbr>axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the X axis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5999,7 +6024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_axis_python" style="color: inherit; text-decoration: inherit;">y_<wbr>axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#axisresponse">Axis<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties applied to the Y axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}

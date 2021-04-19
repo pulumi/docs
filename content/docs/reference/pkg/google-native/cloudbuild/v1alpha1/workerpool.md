@@ -20,19 +20,37 @@ Creates a `WorkerPool` to run the builds, and returns the new worker pool.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">delete_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudbuild_v1alpha1.WorkerConfigArgs]]</span> = None<span class="p">, </span><span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">worker_pools_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">delete_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1alpha1.WorkerConfigArgs]</span> = None<span class="p">,</span>
+               <span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">worker_pools_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkerPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkerPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkerPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkerPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a `WorkerPool` to run the builds, and returns the new worker pool.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkerPoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#workerpoolsid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +414,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deletetime_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the request to delete the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined name of the `WorkerPool`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID of the GCP project for which the `WorkerPool` is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the request to update the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerconfig">pulumi.<wbr>Input<Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#workerconfig">Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Total number of workers to be created across all requested regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#worker_pools_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +514,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#delete_time_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the request to delete the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-defined name of the `WorkerPool`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID of the GCP project for which the `WorkerPool` is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}WorkerPool Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the request to update the `WorkerPool` was received.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerconfig">Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workerconfig">Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to be used for a creating workers in the `WorkerPool`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Total number of workers to be created across all requested regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network on which the workers are created. "default" network is used if empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnetwork on which the workers are created. "default" subnetwork is used if empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -721,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network on which the workers are created. "default" network is used if empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnetwork on which the workers are created. "default" subnetwork is used if empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network on which the workers are created. "default" network is used if empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnetwork on which the workers are created. "default" subnetwork is used if empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network on which the workers are created. "default" network is used if empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnetwork on which the workers are created. "default" subnetwork is used if empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#network">pulumi.<wbr>Input<Network<wbr>Args></a></span>
+        <span class="property-type"><a href="#network">Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#network">Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#network">Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1091,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkresponse">pulumi.<wbr>Input<Network<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkresponse">Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool. `machine_type` is overridden if you specify a different machine type in `build_options`. In this case, the VM specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/speeding-up-builds#using_custom_virtual_machine_sizes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkresponse">Network<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkresponse">Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network definition used to create the worker. If this section is left empty, the workers will be created in WorkerPool.project_id on the default network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag applied to the worker, and the same tag used by the firewall rule. It is used to identify the Cloud Build workers among other VMs. The default value for tag is `worker`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

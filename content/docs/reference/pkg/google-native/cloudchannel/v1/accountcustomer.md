@@ -20,19 +20,34 @@ Creates a new Customer resource under the reseller or distributor account. Possi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">alternate_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">channel_partner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">customers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">org_display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">org_postal_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudchannel_v1.GoogleTypePostalAddressArgs]]</span> = None<span class="p">, </span><span class="nx">primary_contact_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudchannel_v1.GoogleCloudChannelV1ContactInfoArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">alternate_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">channel_partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">customers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">org_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">org_postal_address</span><span class="p">:</span> <span class="nx">Optional[_cloudchannel_v1.GoogleTypePostalAddressArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">primary_contact_info</span><span class="p">:</span> <span class="nx">Optional[_cloudchannel_v1.GoogleCloudChannelV1ContactInfoArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountCustomer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountCustomer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountCustomer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountCustomer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountCustomer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountCustomerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a new Customer resource under the reseller or distributor account. Possi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountCustomerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">accounts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#customersid_nodejs" style="color: inherit; text-decoration: inherit;">customers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#alternateemail_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary contact email. Alternate email and primary contact email are required to have different domains if primary contact email is present. When creating admin.google.com accounts, users get notified credentials at this email. This email address is also used as a recovery email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#channelpartnerid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Partner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Primary domain used by the customer. Domain of primary contact email is required to be same as the provided domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#orgdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the organization that the customer entity represents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#orgpostaladdress_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypepostaladdress">pulumi.<wbr>Input<Google<wbr>Type<wbr>Postal<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypepostaladdress">Google<wbr>Type<wbr>Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Address of the organization of the customer entity. Region and zip codes are required to enforce US laws and embargoes. Valid address lines are required for all customers. Language code is discarded. Use the Customer-level language code to set the customer's language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#primarycontactinfo_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Contact<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1contactinfo">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Contact<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1contactinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Contact<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Primary contact info.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#accounts_id_python" style="color: inherit; text-decoration: inherit;">accounts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#customers_id_python" style="color: inherit; text-decoration: inherit;">customers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#alternate_email_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary contact email. Alternate email and primary contact email are required to have different domains if primary contact email is present. When creating admin.google.com accounts, users get notified credentials at this email. This email address is also used as a recovery email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#channel_partner_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>partner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Primary domain used by the customer. Domain of primary contact email is required to be same as the provided domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#org_display_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the organization that the customer entity represents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#org_postal_address_python" style="color: inherit; text-decoration: inherit;">org_<wbr>postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypepostaladdress">Google<wbr>Type<wbr>Postal<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypepostaladdress">Google<wbr>Type<wbr>Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Address of the organization of the customer entity. Region and zip codes are required to enforce US laws and embargoes. Valid address lines are required for all customers. Language code is discarded. Use the Customer-level language code to set the customer's language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The AccountCustomer resource accepts the following [input]({{< relref "/docs/int
 <a href="#primary_contact_info_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>contact_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1contactinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Contact<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1contactinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Contact<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Primary contact info.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminconsoleuri_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Console<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of Customer's Admin console dashboard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -845,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateemail_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -853,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customertype_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CustomerType indicates verification type needed for using services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edudata_nodejs" style="color: inherit; text-decoration: inherit;">edu<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edu information about the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -869,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdomainverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Domain<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -877,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Language code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -885,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number associated with the Cloud Identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -893,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydomain_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_console_uri_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>console_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of Customer's Admin console dashboard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -913,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternate_email_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alternate email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -921,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_type_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CustomerType indicates verification type needed for using services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edu_data_python" style="color: inherit; text-decoration: inherit;">edu_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edu information about the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -937,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_domain_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>domain_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -945,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Language code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -953,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number associated with the Cloud Identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -961,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_domain_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the contact in the customer account. Email is required for entitlements that need creation of admin.google.com accounts. The email will be the username used in credentials to access the admin.google.com account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1071,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}First name of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last name of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Job title of the contact in the customer account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1107,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the contact in the customer account. Email is required for entitlements that need creation of admin.google.com accounts. The email will be the username used in credentials to access the admin.google.com account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}First name of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last name of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact in the customer account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Job title of the contact in the customer account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the contact in the customer account. Populated by combining customer first name and last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1265,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the contact in the customer account. Email is required for entitlements that need creation of admin.google.com accounts. The email will be the username used in credentials to access the admin.google.com account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1273,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}First name of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last name of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1297,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Job title of the contact in the customer account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the contact in the customer account. Populated by combining customer first name and last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1317,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the contact in the customer account. Email is required for entitlements that need creation of admin.google.com accounts. The email will be the username used in credentials to access the admin.google.com account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}First name of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last name of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact in the customer account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Job title of the contact in the customer account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1419,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institutesize_nodejs" style="color: inherit; text-decoration: inherit;">institute<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the institute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1427,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institutetype_nodejs" style="color: inherit; text-decoration: inherit;">institute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Designated institute type of customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1435,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web address for the edu customer's institution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institute_size_python" style="color: inherit; text-decoration: inherit;">institute_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the institute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1455,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institute_type_python" style="color: inherit; text-decoration: inherit;">institute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Designated institute type of customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Web address for the edu customer's institution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1661,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1753,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2031,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2039,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2047,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2055,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}

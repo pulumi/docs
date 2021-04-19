@@ -20,19 +20,57 @@ Creates a new, empty table in the dataset.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clustering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.ClusteringArgs]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.EncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.ExternalDataConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.MaterializedViewDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">model</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.ModelDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">num_physical_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.RangePartitioningArgs]]</span> = None<span class="p">, </span><span class="nx">require_partition_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.TableSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_definition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.SnapshotDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">streaming_buffer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.StreamingbufferArgs]]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">table_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.TableReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.TimePartitioningArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.ViewDefinitionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">clustering</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.ClusteringArgs]</span> = None<span class="p">,</span>
+          <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.EncryptionConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.ExternalDataConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.MaterializedViewDefinitionArgs]</span> = None<span class="p">,</span>
+          <span class="nx">model</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.ModelDefinitionArgs]</span> = None<span class="p">,</span>
+          <span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">num_physical_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RangePartitioningArgs]</span> = None<span class="p">,</span>
+          <span class="nx">require_partition_filter</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.TableSchemaArgs]</span> = None<span class="p">,</span>
+          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">snapshot_definition</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.SnapshotDefinitionArgs]</span> = None<span class="p">,</span>
+          <span class="nx">streaming_buffer</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.StreamingbufferArgs]</span> = None<span class="p">,</span>
+          <span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">table_reference</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.TableReferenceArgs]</span> = None<span class="p">,</span>
+          <span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.TimePartitioningArgs]</span> = None<span class="p">,</span>
+          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.ViewDefinitionArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +105,32 @@ Creates a new, empty table in the dataset.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TableArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -690,7 +738,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -698,7 +746,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -706,7 +754,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +762,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clustering_nodejs" style="color: inherit; text-decoration: inherit;">clustering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustering">pulumi.<wbr>Input<Clustering<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustering">Clustering<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +770,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +778,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A user-friendly description of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +786,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">pulumi.<wbr>Input<Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +794,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A hash of the table metadata. Used to ensure there were no concurrent modifications to the resource when attempting an update. Not guaranteed to change when the table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +802,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +810,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#externaldataconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Data<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldataconfiguration">pulumi.<wbr>Input<External<wbr>Data<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#externaldataconfiguration">External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +818,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +826,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] An opaque ID uniquely identifying the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +834,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +842,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +850,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this table was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +858,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The geographic location where the table resides. This value is inherited from the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +866,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#materializedview_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#materializedviewdefinition">pulumi.<wbr>Input<Materialized<wbr>View<wbr>Definition<wbr>Args></a></span>
+        <span class="property-type"><a href="#materializedviewdefinition">Materialized<wbr>View<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Materialized view definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +874,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldefinition">pulumi.<wbr>Input<Model<wbr>Definition<wbr>Args></a></span>
+        <span class="property-type"><a href="#modeldefinition">Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +882,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#numbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The size of this table in bytes, excluding any data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +890,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#numlongtermbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Long<wbr>Term<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The number of bytes in the table that are considered "long-term storage".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +898,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#numphysicalbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Physical<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +906,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#numrows_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The number of rows of data in this table, excluding any data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +914,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rangepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rangepartitioning">pulumi.<wbr>Input<Range<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#rangepartitioning">Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +922,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +930,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschema">pulumi.<wbr>Input<Table<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the schema of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +938,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A URL that can be used to access this resource again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +946,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#snapshotdefinition_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotdefinition">pulumi.<wbr>Input<Snapshot<wbr>Definition<wbr>Args></a></span>
+        <span class="property-type"><a href="#snapshotdefinition">Snapshot<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Snapshot definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +954,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#streamingbuffer_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Buffer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingbuffer">pulumi.<wbr>Input<Streamingbuffer<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingbuffer">Streamingbuffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +962,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereference">pulumi.<wbr>Input<Table<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +970,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timepartitioning">pulumi.<wbr>Input<Time<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#timepartitioning">Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +978,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] Describes the table type. The following values are supported: TABLE: A normal BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +986,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#viewdefinition">pulumi.<wbr>Input<View<wbr>Definition<wbr>Args></a></span>
+        <span class="property-type"><a href="#viewdefinition">View<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The view definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -950,7 +998,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -958,7 +1006,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -966,7 +1014,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1022,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clustering_python" style="color: inherit; text-decoration: inherit;">clustering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustering">Clustering<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustering">Clustering<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1030,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this table was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1038,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] A user-friendly description of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1046,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1054,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A hash of the table metadata. Used to ensure there were no concurrent modifications to the resource when attempting an update. Not guaranteed to change when the table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1062,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1070,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#external_data_configuration_python" style="color: inherit; text-decoration: inherit;">external_<wbr>data_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldataconfiguration">External<wbr>Data<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#externaldataconfiguration">External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1078,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1086,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] An opaque ID uniquely identifying the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1094,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1102,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1110,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this table was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1118,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The geographic location where the table resides. This value is inherited from the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1126,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#materialized_view_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#materializedviewdefinition">Materialized<wbr>View<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#materializedviewdefinition">Materialized<wbr>View<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Materialized view definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1134,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldefinition">Model<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#modeldefinition">Model<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1142,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#num_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The size of this table in bytes, excluding any data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1150,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#num_long_term_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>long_<wbr>term_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The number of bytes in the table that are considered "long-term storage".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1158,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#num_physical_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>physical_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1166,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#num_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The number of rows of data in this table, excluding any data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1174,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#range_partitioning_python" style="color: inherit; text-decoration: inherit;">range_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rangepartitioning">Range<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rangepartitioning">Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1182,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1190,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the schema of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1198,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A URL that can be used to access this resource again.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1206,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#snapshot_definition_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotdefinition">Snapshot<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#snapshotdefinition">Snapshot<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Snapshot definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1214,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#streaming_buffer_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>buffer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingbuffer">Streamingbuffer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingbuffer">Streamingbuffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1222,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#table_reference_python" style="color: inherit; text-decoration: inherit;">table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1230,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timepartitioning">Time<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timepartitioning">Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1238,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] Describes the table type. The following values are supported: TABLE: A normal BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1246,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#viewdefinition">View<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#viewdefinition">View<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The view definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyreadlatest_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Read<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifierencoded_nodejs" style="color: inherit; text-decoration: inherit;">qualifier<wbr>Encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifierstring_nodejs" style="color: inherit; text-decoration: inherit;">qualifier<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1433,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_read_latest_python" style="color: inherit; text-decoration: inherit;">only_<wbr>read_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_encoded_python" style="color: inherit; text-decoration: inherit;">qualifier_<wbr>encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_string_python" style="color: inherit; text-decoration: inherit;">qualifier_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Bigtable<wbr>Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtablecolumn">Bigtable<wbr>Column<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#familyid_nodejs" style="color: inherit; text-decoration: inherit;">family<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the column family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyreadlatest_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Read<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1619,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumn">Bigtable<wbr>Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtablecolumn">Bigtable<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_id_python" style="color: inherit; text-decoration: inherit;">family_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the column family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_read_latest_python" style="color: inherit; text-decoration: inherit;">only_<wbr>read_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1753,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Bigtable<wbr>Column<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtablecolumnresponse">Bigtable<wbr>Column<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1761,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#familyid_nodejs" style="color: inherit; text-decoration: inherit;">family<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the column family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1777,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyreadlatest_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Read<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnresponse">Bigtable<wbr>Column<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtablecolumnresponse">Bigtable<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1805,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1813,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_id_python" style="color: inherit; text-decoration: inherit;">family_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the column family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1821,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_read_latest_python" style="color: inherit; text-decoration: inherit;">only_<wbr>read_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1829,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1955,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyreadlatest_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Read<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifierencoded_nodejs" style="color: inherit; text-decoration: inherit;">qualifier<wbr>Encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1979,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifierstring_nodejs" style="color: inherit; text-decoration: inherit;">qualifier<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1999,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2007,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2015,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_read_latest_python" style="color: inherit; text-decoration: inherit;">only_<wbr>read_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2023,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_encoded_python" style="color: inherit; text-decoration: inherit;">qualifier_<wbr>encoded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_string_python" style="color: inherit; text-decoration: inherit;">qualifier_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2039,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnfamily">pulumi.<wbr>Input<pulumi.<wbr>Input<Bigtable<wbr>Column<wbr>Family<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtablecolumnfamily">Bigtable<wbr>Column<wbr>Family<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreunspecifiedcolumnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unspecified<wbr>Column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readrowkeyasstring_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Rowkey<wbr>As<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnfamily">Bigtable<wbr>Column<wbr>Family<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtablecolumnfamily">Bigtable<wbr>Column<wbr>Family<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_unspecified_column_families_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unspecified_<wbr>column_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_rowkey_as_string_python" style="color: inherit; text-decoration: inherit;">read_<wbr>rowkey_<wbr>as_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnfamilyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Bigtable<wbr>Column<wbr>Family<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtablecolumnfamilyresponse">Bigtable<wbr>Column<wbr>Family<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreunspecifiedcolumnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unspecified<wbr>Column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readrowkeyasstring_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Rowkey<wbr>As<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2251,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtablecolumnfamilyresponse">Bigtable<wbr>Column<wbr>Family<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtablecolumnfamilyresponse">Bigtable<wbr>Column<wbr>Family<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2259,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_unspecified_column_families_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unspecified_<wbr>column_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2267,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_rowkey_as_string_python" style="color: inherit; text-decoration: inherit;">read_<wbr>rowkey_<wbr>as_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#durationms_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Time taken to run the training iteration in milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2377,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evalloss_nodejs" style="color: inherit; text-decoration: inherit;">eval<wbr>Loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingloss_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2413,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_ms_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Time taken to run the training iteration in milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eval_loss_python" style="color: inherit; text-decoration: inherit;">eval_<wbr>loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_loss_python" style="color: inherit; text-decoration: inherit;">training_<wbr>loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#durationms_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Time taken to run the training iteration in milliseconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evalloss_nodejs" style="color: inherit; text-decoration: inherit;">eval<wbr>Loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2563,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2571,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2579,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingloss_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_ms_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Time taken to run the training iteration in milliseconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eval_loss_python" style="color: inherit; text-decoration: inherit;">eval_<wbr>loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_loss_python" style="color: inherit; text-decoration: inherit;">training_<wbr>loss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2661,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#tabletrainingoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2697,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2709,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iterationresults_nodejs" style="color: inherit; text-decoration: inherit;">iteration<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmliterationresult">pulumi.<wbr>Input<pulumi.<wbr>Input<Bqml<wbr>Iteration<wbr>Result<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bqmliterationresult">Bqml<wbr>Iteration<wbr>Result<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] List of each iteration results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training run start time in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2745,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iteration_results_python" style="color: inherit; text-decoration: inherit;">iteration_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmliterationresult">Bqml<wbr>Iteration<wbr>Result<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bqmliterationresult">Bqml<wbr>Iteration<wbr>Result<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] List of each iteration results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training run start time in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_options_python" style="color: inherit; text-decoration: inherit;">training_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#tabletrainingoptions">Table<wbr>Training<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2807,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#tabletrainingoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2843,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2855,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iterationresults_nodejs" style="color: inherit; text-decoration: inherit;">iteration<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmliterationresultresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Bqml<wbr>Iteration<wbr>Result<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bqmliterationresultresponse">Bqml<wbr>Iteration<wbr>Result<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] List of each iteration results.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2863,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training run start time in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2871,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2879,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingoptions_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2891,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iteration_results_python" style="color: inherit; text-decoration: inherit;">iteration_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmliterationresultresponse">Bqml<wbr>Iteration<wbr>Result<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bqmliterationresultresponse">Bqml<wbr>Iteration<wbr>Result<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] List of each iteration results.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2899,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training run start time in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2907,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2915,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_options_python" style="color: inherit; text-decoration: inherit;">training_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2953,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2965,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3003,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3015,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowjaggedrows_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowquotednewlines_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3173,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3185,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3209,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3225,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3343,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowjaggedrows_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3351,7 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowquotednewlines_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3359,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3367,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3375,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3383,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3395,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3403,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3411,7 +3459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3419,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a comma (',').{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3427,7 +3475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3435,7 +3483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows in the file that should be skipped. When autodetect is on, the behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3473,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3485,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3523,7 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3535,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3765,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtableoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigtable<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableoptions">pulumi.<wbr>Input<Bigtable<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#bigtableoptions">Bigtable<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to BIGTABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3781,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3789,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional, Trusted Tester] Connection for external data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#csvoptions_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csvoptions">pulumi.<wbr>Input<Csv<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#csvoptions">Csv<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to CSV.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlesheetsoptions_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Sheets<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlesheetsoptions">pulumi.<wbr>Input<Google<wbr>Sheets<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlesheetsoptions">Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hivepartitioningoptions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivepartitioningoptions">pulumi.<wbr>Input<Hive<wbr>Partitioning<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#hivepartitioningoptions">Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Options to configure hive partitioning support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3829,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbadrecords_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parquetoptions_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetoptions">pulumi.<wbr>Input<Parquet<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#parquetoptions">Parquet<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to Parquet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3845,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschema">pulumi.<wbr>Input<Table<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceformat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The data format. For CSV files, specify "CSV". For Google sheets, specify "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3861,7 +3909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuris_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the '*' wildcard character is not allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3873,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3881,7 +3929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtable_options_python" style="color: inherit; text-decoration: inherit;">bigtable_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableoptions">Bigtable<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bigtableoptions">Bigtable<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to BIGTABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3889,7 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3897,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional, Trusted Tester] Connection for external data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3905,7 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#csv_options_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csvoptions">Csv<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#csvoptions">Csv<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to CSV.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +3961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_sheets_options_python" style="color: inherit; text-decoration: inherit;">google_<wbr>sheets_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlesheetsoptions">Google<wbr>Sheets<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlesheetsoptions">Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3921,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hive_partitioning_options_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>partitioning_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivepartitioningoptions">Hive<wbr>Partitioning<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hivepartitioningoptions">Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Options to configure hive partitioning support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3929,7 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3937,7 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3945,7 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parquet_options_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetoptions">Parquet<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parquetoptions">Parquet<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to Parquet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3953,7 +4001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableschema">Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3961,7 +4009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The data format. For CSV files, specify "CSV". For Google sheets, specify "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3969,7 +4017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the '*' wildcard character is not allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4199,7 +4247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4207,7 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtableoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigtable<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableoptionsresponse">pulumi.<wbr>Input<Bigtable<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#bigtableoptionsresponse">Bigtable<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to BIGTABLE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4215,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4223,7 +4271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional, Trusted Tester] Connection for external data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4231,7 +4279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#csvoptions_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csvoptionsresponse">pulumi.<wbr>Input<Csv<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#csvoptionsresponse">Csv<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to CSV.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4239,7 +4287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlesheetsoptions_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Sheets<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlesheetsoptionsresponse">pulumi.<wbr>Input<Google<wbr>Sheets<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlesheetsoptionsresponse">Google<wbr>Sheets<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4247,7 +4295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hivepartitioningoptions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivepartitioningoptionsresponse">pulumi.<wbr>Input<Hive<wbr>Partitioning<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#hivepartitioningoptionsresponse">Hive<wbr>Partitioning<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Options to configure hive partitioning support.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4255,7 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4263,7 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbadrecords_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4271,7 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parquetoptions_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetoptionsresponse">pulumi.<wbr>Input<Parquet<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#parquetoptionsresponse">Parquet<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to Parquet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4279,7 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschemaresponse">pulumi.<wbr>Input<Table<wbr>Schema<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableschemaresponse">Table<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4287,7 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceformat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The data format. For CSV files, specify "CSV". For Google sheets, specify "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4295,7 +4343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuris_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the '*' wildcard character is not allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4307,7 +4355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Try to detect schema and format options automatically. Any option specified explicitly will be honored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4315,7 +4363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtable_options_python" style="color: inherit; text-decoration: inherit;">bigtable_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableoptionsresponse">Bigtable<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bigtableoptionsresponse">Bigtable<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to BIGTABLE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4323,7 +4371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4331,7 +4379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional, Trusted Tester] Connection for external data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4339,7 +4387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#csv_options_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csvoptionsresponse">Csv<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#csvoptionsresponse">Csv<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to CSV.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4347,7 +4395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_sheets_options_python" style="color: inherit; text-decoration: inherit;">google_<wbr>sheets_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlesheetsoptionsresponse">Google<wbr>Sheets<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlesheetsoptionsresponse">Google<wbr>Sheets<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4355,7 +4403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hive_partitioning_options_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>partitioning_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivepartitioningoptionsresponse">Hive<wbr>Partitioning<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hivepartitioningoptionsresponse">Hive<wbr>Partitioning<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Options to configure hive partitioning support.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4363,7 +4411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don't match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4371,7 +4419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4379,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parquet_options_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetoptionsresponse">Parquet<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parquetoptionsresponse">Parquet<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if sourceFormat is set to Parquet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4387,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableschemaresponse">Table<wbr>Schema<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableschemaresponse">Table<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4395,7 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The data format. For CSV files, specify "CSV". For Google sheets, specify "GOOGLE_SHEETS". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro files, specify "AVRO". For Google Cloud Datastore backups, specify "DATASTORE_BACKUP". [Beta] For Google Cloud Bigtable, specify "BIGTABLE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character and it must come after the 'bucket' name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the '*' wildcard character is not allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4457,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Range of a sheet to query from. Only used when non-empty. Typical format: sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows that should be skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4477,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Range of a sheet to query from. Only used when non-empty. Typical format: sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows that should be skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4539,7 +4587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Range of a sheet to query from. Only used when non-empty. Typical format: sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4547,7 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows that should be skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4559,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Range of a sheet to query from. Only used when non-empty. Typical format: sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4567,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The number of rows at the top of a sheet that BigQuery will skip when reading the data. The default value is 0. This property is useful if you have header rows that should be skipped. When autodetect is on, behavior is the following: * skipLeadingRows unspecified - Autodetect tries to detect headers in the first row. If they are not detected, the row is read as data. Otherwise data is read starting from the second row. * skipLeadingRows is 0 - Instructs autodetect that there are no headers and data should be read starting from the first row. * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected, row N is just skipped. Otherwise row N is used to extract column names for the detected schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4637,7 +4685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4645,7 +4693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. Note that this field should only be true when creating a permanent external table or querying a temporary external table. Hive-partitioned loads with requirePartitionFilter explicitly set to true will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuriprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4665,7 +4713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. Note that this field should only be true when creating a permanent external table or querying a temporary external table. Hive-partitioned loads with requirePartitionFilter explicitly set to true will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4681,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4751,7 +4799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4759,7 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. Note that this field should only be true when creating a permanent external table or querying a temporary external table. Hive-partitioned loads with requirePartitionFilter explicitly set to true will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4767,7 +4815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuriprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4779,7 +4827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4787,7 +4835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. Note that this field should only be true when creating a permanent external table or querying a temporary external table. Hive-partitioned loads with requirePartitionFilter explicitly set to true will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4795,9 +4843,437 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] When hive partition detection is requested, a common prefix for all source uris should be supplied. The prefix must end immediately before the partition key encoding begins. For example, consider files following this data layout. gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is requested with either AUTO or STRINGS detection, the common prefix can be either of gs://bucket/path_to_table or gs://bucket/path_to_table/ (trailing slash does not matter).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobcategories">Job<wbr>Categories</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobcategoriesresponse">Job<wbr>Categories<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobpolicytags">Job<wbr>Policy<wbr>Tags</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobrange">Job<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="jobrangeresponse">Job<wbr>Range<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The end of range partitioning, exclusive.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The width of each interval.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[TrustedTester] [Required] The start of range partitioning, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="materializedviewdefinition">Materialized<wbr>View<wbr>Definition</h4>
@@ -4881,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4889,7 +5365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The time when this materialized view was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4897,7 +5373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A query whose result is persisted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4905,7 +5381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshintervalms_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4917,7 +5393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4925,7 +5401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refresh_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The time when this materialized view was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4933,7 +5409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A query whose result is persisted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4941,7 +5417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_interval_ms_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5027,7 +5503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5035,7 +5511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The time when this materialized view was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5043,7 +5519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A query whose result is persisted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5051,7 +5527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshintervalms_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5063,7 +5539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5071,7 +5547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refresh_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] [TrustedTester] The time when this materialized view was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5079,7 +5555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A query whose result is persisted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5087,7 +5563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_interval_ms_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5101,7 +5577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#tablemodeloptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5121,7 +5597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5141,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5149,7 +5625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingruns_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Runs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmltrainingrun">pulumi.<wbr>Input<pulumi.<wbr>Input<Bqml<wbr>Training<wbr>Run<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bqmltrainingrun">Bqml<wbr>Training<wbr>Run<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5161,7 +5637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_options_python" style="color: inherit; text-decoration: inherit;">model_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#tablemodeloptions">Table<wbr>Model<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5169,7 +5645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_runs_python" style="color: inherit; text-decoration: inherit;">training_<wbr>runs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmltrainingrun">Bqml<wbr>Training<wbr>Run<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bqmltrainingrun">Bqml<wbr>Training<wbr>Run<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5183,7 +5659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#tablemodeloptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5203,7 +5679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5223,7 +5699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modeloptions_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5231,7 +5707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingruns_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Runs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmltrainingrunresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Bqml<wbr>Training<wbr>Run<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bqmltrainingrunresponse">Bqml<wbr>Training<wbr>Run<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5243,7 +5719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_options_python" style="color: inherit; text-decoration: inherit;">model_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5251,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_runs_python" style="color: inherit; text-decoration: inherit;">training_<wbr>runs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bqmltrainingrunresponse">Bqml<wbr>Training<wbr>Run<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bqmltrainingrunresponse">Bqml<wbr>Training<wbr>Run<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5305,7 +5781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablelistinference_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>List<wbr>Inference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5313,7 +5789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumasstring_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>As<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5325,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_list_inference_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>list_<wbr>inference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5333,7 +5809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_as_string_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>as_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5387,7 +5863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablelistinference_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>List<wbr>Inference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5395,7 +5871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumasstring_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>As<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5407,7 +5883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_list_inference_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>list_<wbr>inference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5415,7 +5891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_as_string_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>as_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5437,7 +5913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobrange">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5457,7 +5933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobrange">Job<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5469,7 +5945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5477,7 +5953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5489,7 +5965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5497,7 +5973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobrange">Job<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5519,7 +5995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobrangeresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5539,7 +6015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5551,7 +6027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5559,7 +6035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5571,7 +6047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5579,7 +6055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobrangeresponse">Job<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[TrustedTester] [Required] Defines the ranges for range partitioning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5633,7 +6109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basetablereference_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereference">pulumi.<wbr>Input<Table<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of the table that is snapshotted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5641,7 +6117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshottime_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The time at which the base table was snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5653,7 +6129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_table_reference_python" style="color: inherit; text-decoration: inherit;">base_<wbr>table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of the table that is snapshotted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5661,7 +6137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_time_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The time at which the base table was snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5715,7 +6191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basetablereference_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereferenceresponse">pulumi.<wbr>Input<Table<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of the table that is snapshotted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5723,7 +6199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshottime_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The time at which the base table was snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5735,7 +6211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_table_reference_python" style="color: inherit; text-decoration: inherit;">base_<wbr>table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] Reference describing the ID of the table that is snapshotted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5743,7 +6219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_time_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The time at which the base table was snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5813,7 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimatedbytes_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5821,7 +6297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimatedrows_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5829,7 +6305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestentrytime_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Entry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5841,7 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimated_bytes_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimated_rows_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5857,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_entry_time_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>entry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5927,7 +6403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimatedbytes_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5935,7 +6411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimatedrows_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5943,7 +6419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestentrytime_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Entry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5955,7 +6431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimated_bytes_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of bytes currently in the streaming buffer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5963,7 +6439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#estimated_rows_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A lower-bound estimate of the number of rows currently in the streaming buffer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5971,7 +6447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_entry_time_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>entry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5985,7 +6461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobcategories">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6027,13 +6503,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytags_csharp">
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobpolicytags">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6069,7 +6545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6111,13 +6587,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytags_go">
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6153,7 +6629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6161,7 +6637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The field description. The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6169,7 +6645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschema">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Field<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the nested schema fields if the type property is set to RECORD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6177,7 +6653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6185,7 +6661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6193,15 +6669,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytags_nodejs">
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6209,7 +6685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6217,7 +6693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] See documentation for precision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6225,7 +6701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6237,7 +6713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobcategories">Job<wbr>Categories<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6245,7 +6721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The field description. The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6253,7 +6729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the nested schema fields if the type property is set to RECORD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6261,7 +6737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6269,7 +6745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6277,15 +6753,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_tags_python">
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobpolicytags">Job<wbr>Policy<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6293,7 +6769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6301,7 +6777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] See documentation for precision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6309,7 +6785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6323,7 +6799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobcategoriesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6365,13 +6841,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytags_csharp">
 <a href="#policytags_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#jobpolicytagsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6407,7 +6883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6449,13 +6925,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytags_go">
 <a href="#policytags_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6491,7 +6967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6499,7 +6975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The field description. The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6507,7 +6983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschemaresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the nested schema fields if the type property is set to RECORD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6515,7 +6991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6523,7 +6999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6531,15 +7007,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytags_nodejs">
 <a href="#policytags_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6547,7 +7023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6555,7 +7031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] See documentation for precision.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6563,7 +7039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6575,7 +7051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobcategoriesresponse">Job<wbr>Categories<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Optional] The categories attached to this field, used for field-level access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6583,7 +7059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The field description. The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6591,7 +7067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the nested schema fields if the type property is set to RECORD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6599,7 +7075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6607,7 +7083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6615,15 +7091,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 128 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}[Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_tags_python">
 <a href="#policy_tags_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#jobpolicytagsresponse">Job<wbr>Policy<wbr>Tags<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6631,7 +7107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6639,7 +7115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] See documentation for precision.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6647,9 +7123,237 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablemodeloptions">Table<wbr>Model<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_csharp">
+<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_csharp">
+<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_go">
+<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_go">
+<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="losstype_nodejs">
+<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modeltype_nodejs">
+<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loss_type_python">
+<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="model_type_python">
+<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablemodeloptionsresponse">Table<wbr>Model<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_csharp">
+<a href="#losstype_csharp" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_csharp">
+<a href="#modeltype_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_go">
+<a href="#losstype_go" style="color: inherit; text-decoration: inherit;">Loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_go">
+<a href="#modeltype_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="losstype_nodejs">
+<a href="#losstype_nodejs" style="color: inherit; text-decoration: inherit;">loss<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="modeltype_nodejs">
+<a href="#modeltype_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="loss_type_python">
+<a href="#loss_type_python" style="color: inherit; text-decoration: inherit;">loss_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="model_type_python">
+<a href="#model_type_python" style="color: inherit; text-decoration: inherit;">model_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tablereference">Table<wbr>Reference</h4>
@@ -6717,7 +7421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6725,7 +7429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6733,7 +7437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6745,7 +7449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6753,7 +7457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6761,7 +7465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6831,7 +7535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6839,7 +7543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6847,7 +7551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6859,7 +7563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6867,7 +7571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6875,7 +7579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6913,7 +7617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschema">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Field<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the fields in a table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6925,7 +7629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablefieldschema">Table<wbr>Field<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the fields in a table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6963,7 +7667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschemaresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the fields in a table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6975,9 +7679,621 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablefieldschemaresponse">Table<wbr>Field<wbr>Schema<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the fields in a table.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabletrainingoptions">Table<wbr>Training<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_csharp">
+<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_csharp">
+<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_csharp">
+<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_csharp">
+<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_csharp">
+<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_csharp">
+<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_csharp">
+<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_csharp">
+<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_csharp">
+<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_go">
+<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_go">
+<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_go">
+<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_go">
+<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_go">
+<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_go">
+<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_go">
+<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_go">
+<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_go">
+<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="earlystop_nodejs">
+<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1reg_nodejs">
+<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2reg_nodejs">
+<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnrate_nodejs">
+<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learnratestrategy_nodejs">
+<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linesearchinitlearnrate_nodejs">
+<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxiteration_nodejs">
+<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minrelprogress_nodejs">
+<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warmstart_nodejs">
+<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="early_stop_python">
+<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l1_reg_python">
+<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="l2_reg_python">
+<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learn_rate_python">
+<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="learn_rate_strategy_python">
+<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="line_search_init_learn_rate_python">
+<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_iteration_python">
+<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_rel_progress_python">
+<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="warm_start_python">
+<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tabletrainingoptionsresponse">Table<wbr>Training<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_csharp">
+<a href="#earlystop_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_csharp">
+<a href="#l1reg_csharp" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_csharp">
+<a href="#l2reg_csharp" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_csharp">
+<a href="#learnrate_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_csharp">
+<a href="#learnratestrategy_csharp" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_csharp">
+<a href="#linesearchinitlearnrate_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_csharp">
+<a href="#maxiteration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_csharp">
+<a href="#minrelprogress_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_csharp">
+<a href="#warmstart_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_go">
+<a href="#earlystop_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_go">
+<a href="#l1reg_go" style="color: inherit; text-decoration: inherit;">L1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_go">
+<a href="#l2reg_go" style="color: inherit; text-decoration: inherit;">L2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_go">
+<a href="#learnrate_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_go">
+<a href="#learnratestrategy_go" style="color: inherit; text-decoration: inherit;">Learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_go">
+<a href="#linesearchinitlearnrate_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_go">
+<a href="#maxiteration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_go">
+<a href="#minrelprogress_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_go">
+<a href="#warmstart_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="earlystop_nodejs">
+<a href="#earlystop_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1reg_nodejs">
+<a href="#l1reg_nodejs" style="color: inherit; text-decoration: inherit;">l1Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2reg_nodejs">
+<a href="#l2reg_nodejs" style="color: inherit; text-decoration: inherit;">l2Reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnrate_nodejs">
+<a href="#learnrate_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learnratestrategy_nodejs">
+<a href="#learnratestrategy_nodejs" style="color: inherit; text-decoration: inherit;">learn<wbr>Rate<wbr>Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="linesearchinitlearnrate_nodejs">
+<a href="#linesearchinitlearnrate_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Search<wbr>Init<wbr>Learn<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxiteration_nodejs">
+<a href="#maxiteration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="minrelprogress_nodejs">
+<a href="#minrelprogress_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Rel<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warmstart_nodejs">
+<a href="#warmstart_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="early_stop_python">
+<a href="#early_stop_python" style="color: inherit; text-decoration: inherit;">early_<wbr>stop</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l1_reg_python">
+<a href="#l1_reg_python" style="color: inherit; text-decoration: inherit;">l1_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="l2_reg_python">
+<a href="#l2_reg_python" style="color: inherit; text-decoration: inherit;">l2_<wbr>reg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learn_rate_python">
+<a href="#learn_rate_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="learn_rate_strategy_python">
+<a href="#learn_rate_strategy_python" style="color: inherit; text-decoration: inherit;">learn_<wbr>rate_<wbr>strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="line_search_init_learn_rate_python">
+<a href="#line_search_init_learn_rate_python" style="color: inherit; text-decoration: inherit;">line_<wbr>search_<wbr>init_<wbr>learn_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_iteration_python">
+<a href="#max_iteration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iteration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="min_rel_progress_python">
+<a href="#min_rel_progress_python" style="color: inherit; text-decoration: inherit;">min_<wbr>rel_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="warm_start_python">
+<a href="#warm_start_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timepartitioning">Time<wbr>Partitioning</h4>
@@ -7061,7 +8377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationms_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7069,7 +8385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7077,7 +8393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7085,7 +8401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7097,7 +8413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7105,7 +8421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7113,7 +8429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7121,7 +8437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7207,7 +8523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationms_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7215,7 +8531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7223,7 +8539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7231,7 +8547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7243,7 +8559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7251,7 +8567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7259,7 +8575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7267,7 +8583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one partition per day, hour, month, and year, respectively. When the type is not specified, the default behavior is DAY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7321,7 +8637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inlinecode_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7329,7 +8645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7341,7 +8657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_code_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7349,7 +8665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7403,7 +8719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inlinecode_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7411,7 +8727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7423,7 +8739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_code_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7431,7 +8747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7501,7 +8817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A query that BigQuery executes when the view is referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7509,7 +8825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselegacysql_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7517,7 +8833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdefinedfunctionresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresource">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresource">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7529,7 +8845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A query that BigQuery executes when the view is referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7537,7 +8853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7545,7 +8861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresource">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresource">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7615,7 +8931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A query that BigQuery executes when the view is referenced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7623,7 +8939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselegacysql_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7631,7 +8947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userdefinedfunctionresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresourceresponse">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7643,7 +8959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A query that BigQuery executes when the view is referenced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7651,7 +8967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7659,7 +8975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedfunctionresourceresponse">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userdefinedfunctionresourceresponse">User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.{{% /md %}}</dd></dl>
 {{% /choosable %}}

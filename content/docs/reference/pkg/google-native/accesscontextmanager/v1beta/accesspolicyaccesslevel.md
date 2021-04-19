@@ -20,19 +20,32 @@ Create an Access Level. The longrunning operation from this RPC will have a succ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_levels_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">basic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_accesscontextmanager_v1beta.BasicLevelArgs]]</span> = None<span class="p">, </span><span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_accesscontextmanager_v1beta.CustomLevelArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">access_levels_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">basic</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1beta.BasicLevelArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1beta.CustomLevelArgs]</span> = None<span class="p">,</span>
+                            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyAccessLevel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyAccessLevel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyAccessLevel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Create an Access Level. The longrunning operation from this RPC will have a succ
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessPolicyAccessLevelArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#accesslevelsid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#accesspoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +329,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#basic_nodejs" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclevel">pulumi.<wbr>Input<Basic<wbr>Level<wbr>Args></a></span>
+        <span class="property-type"><a href="#basiclevel">Basic<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `BasicLevel` composed of `Conditions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#custom_nodejs" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customlevel">pulumi.<wbr>Input<Custom<wbr>Level<wbr>Args></a></span>
+        <span class="property-type"><a href="#customlevel">Custom<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `CustomLevel` written in the Common Expression Language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the `AccessLevel` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name` component is 50 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#access_levels_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#access_policies_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +389,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#basic_python" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclevel">Basic<wbr>Level<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basiclevel">Basic<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `BasicLevel` composed of `Conditions`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customlevel">Custom<wbr>Level<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customlevel">Custom<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `CustomLevel` written in the Common Expression Language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the `AccessLevel` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name` component is 50 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The AccessPolicyAccessLevel resource accepts the following [input]({{< relref "/
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combiningfunction_nodejs" style="color: inherit; text-decoration: inherit;">combining<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of requirements for the `AccessLevel` to be granted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combining_function_python" style="color: inherit; text-decoration: inherit;">combining_<wbr>function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of requirements for the `AccessLevel` to be granted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combiningfunction_nodejs" style="color: inherit; text-decoration: inherit;">combining<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of requirements for the `AccessLevel` to be granted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combining_function_python" style="color: inherit; text-decoration: inherit;">combining_<wbr>function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of requirements for the `AccessLevel` to be granted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicepolicy_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepolicy">pulumi.<wbr>Input<Device<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicepolicy">Device<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_nodejs" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredaccesslevels_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepolicy">Device<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicepolicy">Device<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_python" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicepolicy_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepolicyresponse">pulumi.<wbr>Input<Device<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicepolicyresponse">Device<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -971,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_nodejs" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -995,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredaccesslevels_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepolicyresponse">Device<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicepolicyresponse">Device<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_python" style="color: inherit; text-decoration: inherit;">negate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">pulumi.<wbr>Input<Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A Cloud CEL expression evaluating to a boolean.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1097,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A Cloud CEL expression evaluating to a boolean.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">pulumi.<wbr>Input<Expr<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A Cloud CEL expression evaluating to a boolean.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A Cloud CEL expression evaluating to a boolean.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alloweddevicemanagementlevels_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Device<wbr>Management<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedencryptionstatuses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Encryption<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osconstraints_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Os<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#osconstraint">Os<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Allowed OS versions, an empty list allows all types and all versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireadminapproval_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Admin<wbr>Approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirecorpowned_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Corp<wbr>Owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirescreenlock_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Screenlock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osconstraint">Os<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#osconstraint">Os<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allowed OS versions, an empty list allows all types and all versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_admin_approval_python" style="color: inherit; text-decoration: inherit;">require_<wbr>admin_<wbr>approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_corp_owned_python" style="color: inherit; text-decoration: inherit;">require_<wbr>corp_<wbr>owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_screenlock_python" style="color: inherit; text-decoration: inherit;">require_<wbr>screenlock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alloweddevicemanagementlevels_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Device<wbr>Management<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedencryptionstatuses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Encryption<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osconstraints_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osconstraintresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Os<wbr>Constraint<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#osconstraintresponse">Os<wbr>Constraint<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Allowed OS versions, an empty list allows all types and all versions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireadminapproval_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Admin<wbr>Approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirecorpowned_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Corp<wbr>Owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirescreenlock_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Screenlock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed device management levels, an empty list allows all management levels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed encryptions statuses, an empty list allows all statuses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osconstraintresponse">Os<wbr>Constraint<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#osconstraintresponse">Os<wbr>Constraint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allowed OS versions, an empty list allows all types and all versions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_admin_approval_python" style="color: inherit; text-decoration: inherit;">require_<wbr>admin_<wbr>approval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_corp_owned_python" style="color: inherit; text-decoration: inherit;">require_<wbr>corp_<wbr>owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_screenlock_python" style="color: inherit; text-decoration: inherit;">require_<wbr>screenlock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1689,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1807,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1835,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireverifiedchromeos_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Verified<wbr>Chrome<wbr>Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_verified_chrome_os_python" style="color: inherit; text-decoration: inherit;">require_<wbr>verified_<wbr>chrome_<wbr>os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireverifiedchromeos_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Verified<wbr>Chrome<wbr>Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The allowed OS type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_verified_chrome_os_python" style="color: inherit; text-decoration: inherit;">require_<wbr>verified_<wbr>chrome_<wbr>os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}

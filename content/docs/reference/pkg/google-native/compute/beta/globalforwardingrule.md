@@ -20,19 +20,56 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">forwarding_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.MetadataFilterArgs]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">psc_connection_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_directory_registrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.ForwardingRuleServiceDirectoryRegistrationArgs]]]]</span> = None<span class="p">, </span><span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">forwarding_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                         <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.MetadataFilterArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">psc_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">service_directory_registrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ForwardingRuleServiceDirectoryRegistrationArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +104,32 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -844,7 +891,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -852,7 +899,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +907,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule.
 
@@ -882,7 +929,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">IPProtocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -899,7 +946,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. This field cannot be used with port or portRange fields.
 
@@ -909,7 +956,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#allowglobalaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Global<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +964,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +972,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +980,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +988,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the fingerprint in patch request to ensure that you do not overwrite changes that were applied from another concurrent request.
 
@@ -951,7 +998,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +1006,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +1014,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#ismirroringcollector_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mirroring<wbr>Collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops, instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +1022,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#forwardingRule for Forwarding Rule resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +1030,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this resource, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -993,7 +1040,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1048,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -1024,7 +1071,7 @@ For more information about forwarding rules, refer to Forwarding rule concepts.{
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -1035,7 +1082,7 @@ metadataFilters only applies to Loadbalancers that have their loadBalancingSchem
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1090,7 @@ metadataFilters only applies to Loadbalancers that have their loadBalancingSchem
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is not used for external load balancing.
 
@@ -1055,7 +1102,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -1067,7 +1114,7 @@ If this field is not specified, it is assumed to be PREMIUM. If IPAddress is spe
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field can be used only if: * Load balancing scheme is one of EXTERNAL,  INTERNAL_SELF_MANAGED or INTERNAL_MANAGED, and * IPProtocol is one of TCP, UDP, or SCTP.
 
@@ -1085,7 +1132,7 @@ Some types of forwarding target have constraints on the acceptable ports:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends.
 
@@ -1101,7 +1148,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1156,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional forwarding rule resides. This field is not applicable to global forwarding rules. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1164,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1172,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#servicedirectoryregistrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">pulumi.<wbr>Input<pulumi.<wbr>Input<Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource.
 
@@ -1135,7 +1182,7 @@ It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Lo
 <a href="#servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name.
 
@@ -1147,7 +1194,7 @@ This field is only used for internal load balancing.{{% /md %}}</dd><dt class="p
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule.
 
@@ -1157,7 +1204,7 @@ This field is only used for internal load balancing.{{% /md %}}</dd><dt class="p
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is only used for internal load balancing.
 
@@ -1169,7 +1216,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1228,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1189,7 +1236,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1244,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. This field cannot be used with port or portRange fields.
 
@@ -1207,7 +1254,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#allow_global_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>global_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1262,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1270,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1278,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1286,7 @@ When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the fingerprint in patch request to ensure that you do not overwrite changes that were applied from another concurrent request.
 
@@ -1249,7 +1296,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1304,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule.
 
@@ -1279,7 +1326,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 
@@ -1296,7 +1343,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6. This can only be specified for an external global forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1351,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#is_mirroring_collector_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mirroring_<wbr>collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used as a collector for packet mirroring. To prevent mirroring loops, instances behind this load balancer will not have their traffic mirrored even if a PacketMirroring rule applies to them. This can only be set to true for load balancers that have their loadBalancingScheme set to INTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1359,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#forwardingRule for Forwarding Rule resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1367,7 @@ The valid IP protocols are different for different load balancing products:
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this resource, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1330,7 +1377,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1385,7 @@ To see the latest fingerprint, make a get() request to retrieve a ForwardingRule
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the forwarding rule type.
 
@@ -1361,7 +1408,7 @@ For more information about forwarding rules, refer to Forwarding rule concepts.{
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -1372,7 +1419,7 @@ metadataFilters only applies to Loadbalancers that have their loadBalancingSchem
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1427,7 @@ metadataFilters only applies to Loadbalancers that have their loadBalancingSchem
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is not used for external load balancing.
 
@@ -1392,7 +1439,7 @@ For Private Service Connect forwarding rules that forward traffic to Google APIs
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD.
 
@@ -1404,7 +1451,7 @@ If this field is not specified, it is assumed to be PREMIUM. If IPAddress is spe
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field can be used only if: * Load balancing scheme is one of EXTERNAL,  INTERNAL_SELF_MANAGED or INTERNAL_MANAGED, and * IPProtocol is one of TCP, UDP, or SCTP.
 
@@ -1422,7 +1469,7 @@ Some types of forwarding target have constraints on the acceptable ports:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends.
 
@@ -1438,7 +1485,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1493,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional forwarding rule resides. This field is not applicable to global forwarding rules. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1501,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1509,7 @@ For more information, see [Port specifications](/load-balancing/docs/forwarding-
 <a href="#service_directory_registrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource.
 
@@ -1472,7 +1519,7 @@ It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Lo
 <a href="#service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is the first label of the fully qualified service name.
 
@@ -1484,7 +1531,7 @@ This field is only used for internal load balancing.{{% /md %}}</dd><dt class="p
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The internal fully qualified service name for this Forwarding Rule.
 
@@ -1494,7 +1541,7 @@ This field is only used for internal load balancing.{{% /md %}}</dd><dt class="p
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is only used for internal load balancing.
 
@@ -1506,7 +1553,7 @@ If the network specified is in auto subnet mode, this field is optional. However
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1641,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Directory namespace to register the forwarding rule under.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Directory service to register the forwarding rule under.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedirectoryregion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Directory namespace to register the forwarding rule under.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Directory service to register the forwarding rule under.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_directory_region_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1755,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Directory namespace to register the forwarding rule under.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Directory service to register the forwarding rule under.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedirectoryregion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Directory namespace to register the forwarding rule under.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Directory service to register the forwarding rule under.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_directory_region_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1908,7 @@ Supported values are:
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatch">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1917,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -1885,7 +1932,7 @@ Supported values are:
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1941,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -1955,7 +2002,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-optional"
@@ -1964,7 +2011,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -1977,7 +2024,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +2033,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -2045,7 +2092,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-required"
@@ -2054,7 +2101,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -2067,7 +2114,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-required"
@@ -2076,7 +2123,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -2139,7 +2186,7 @@ Supported values are:
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-required"
@@ -2148,7 +2195,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -2163,7 +2210,7 @@ Supported values are:
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-required"
@@ -2172,7 +2219,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  

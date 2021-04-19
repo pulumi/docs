@@ -20,19 +20,32 @@ Creates an alias from a key/certificate pair. The structure of the request is co
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">, </span><span class="nx">keystores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                         <span class="nx">aliases_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">,</span>
+                                         <span class="nx">keystores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationEnvironmentKeystoreAlias</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationEnvironmentKeystoreAlias</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationEnvironmentKeystoreAlias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Creates an alias from a key/certificate pair. The structure of the request is co
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationEnvironmentKeystoreAliasArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#aliasesid_nodejs" style="color: inherit; text-decoration: inherit;">aliases<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#environmentsid_nodejs" style="color: inherit; text-decoration: inherit;">environments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#keystoresid_nodejs" style="color: inherit; text-decoration: inherit;">keystores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +337,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Content-Type header value specifying the content type of the body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request/response body as raw binary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#aliases_id_python" style="color: inherit; text-decoration: inherit;">aliases_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#environments_id_python" style="color: inherit; text-decoration: inherit;">environments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#keystores_id_python" style="color: inherit; text-decoration: inherit;">keystores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -374,7 +397,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Content-Type header value specifying the content type of the body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP request/response body as raw binary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The OrganizationEnvironmentKeystoreAlias resource accepts the following [input](
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Application specific response metadata. Must be set in the first response for streaming APIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basicconstraints_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 basic constraints extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -765,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirydate_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 `notAfter` validity period in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -773,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvalid_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -781,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -789,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public key component of the X.509 subject public key info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -797,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 serial number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -805,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sigalgname_nodejs" style="color: inherit; text-decoration: inherit;">sig<wbr>Alg<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 signatureAlgorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}X.509 subject alternative names (SANs) extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -829,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 `notBefore` validity period in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -837,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X.509 version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_constraints_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 basic constraints extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -857,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_date_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 `notAfter` validity period in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -865,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_valid_python" style="color: inherit; text-decoration: inherit;">is_<wbr>valid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -873,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -881,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public key component of the X.509 subject public key info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -889,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 serial number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -897,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sig_alg_name_python" style="color: inherit; text-decoration: inherit;">sig_<wbr>alg_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 signatureAlgorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -905,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -913,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}X.509 subject alternative names (SANs) extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -921,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 `notBefore` validity period in milliseconds since epoch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}X.509 version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certinfo_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1certinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Cert<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1certinforesponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Cert<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Chain of certificates under this name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_info_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1certinforesponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Cert<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1certinforesponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Cert<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Chain of certificates under this name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

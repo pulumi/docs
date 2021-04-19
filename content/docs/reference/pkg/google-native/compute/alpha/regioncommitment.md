@@ -20,19 +20,45 @@ Creates a commitment in the specified project using the data included in the req
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">commitment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">end_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">license_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.LicenseResourceCommitmentArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reservations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.ReservationArgs]]]]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.ResourceCommitmentArgs]]]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">start_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">commitment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">end_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">license_resource</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.LicenseResourceCommitmentArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">reservations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.ReservationArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.ResourceCommitmentArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">start_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionCommitment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionCommitment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionCommitment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionCommitment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionCommitment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegionCommitmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +93,32 @@ Creates a commitment in the specified project using the data included in the req
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegionCommitmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -498,7 +534,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +542,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -514,7 +550,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where this commitment may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +558,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +566,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +574,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +582,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Commitment end time in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +590,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +598,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#commitment for commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +606,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#licenseresource_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#licenseresourcecommitment">pulumi.<wbr>Input<License<wbr>Resource<wbr>Commitment<wbr>Args></a></span>
+        <span class="property-type"><a href="#licenseresourcecommitment">License<wbr>Resource<wbr>Commitment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license specification required as part of a license commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +614,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +622,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +630,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#reservations_nodejs" style="color: inherit; text-decoration: inherit;">reservations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservation">pulumi.<wbr>Input<pulumi.<wbr>Input<Reservation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#reservation">Reservation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of reservations in this commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +638,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecommitment">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Commitment<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcecommitment">Resource<wbr>Commitment<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +646,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +654,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +662,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Commitment start time in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +670,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +678,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +686,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -662,7 +698,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -670,7 +706,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -678,7 +714,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where this commitment may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +722,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +730,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +738,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +746,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Commitment end time in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +754,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +762,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#commitment for commitments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +770,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#license_resource_python" style="color: inherit; text-decoration: inherit;">license_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#licenseresourcecommitment">License<wbr>Resource<wbr>Commitment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#licenseresourcecommitment">License<wbr>Resource<wbr>Commitment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license specification required as part of a license commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +778,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +786,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +794,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#reservations_python" style="color: inherit; text-decoration: inherit;">reservations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservation">Reservation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#reservation">Reservation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of reservations in this commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +802,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcecommitment">Resource<wbr>Commitment<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcecommitment">Resource<wbr>Commitment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +810,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +818,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +826,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Commitment start time in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +834,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +842,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +850,7 @@ The RegionCommitment resource accepts the following [input]({{< relref "/docs/in
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1097,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1117,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1281,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1351,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1545,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies accelerator type and count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1553,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#localssds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddisk">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1561,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1569,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1577,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#maintenancefreezedurationhours_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Freeze<wbr>Duration<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1585,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#maintenanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this VM as a Stable Fleet VM.
 
@@ -1559,7 +1595,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum cpu platform the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1607,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies accelerator type and count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1615,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddisk">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddisk">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1623,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1631,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1639,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#maintenance_freeze_duration_hours_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>freeze_<wbr>duration_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1647,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#maintenance_interval_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this VM as a Stable Fleet VM.
 
@@ -1621,7 +1657,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-opti
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum cpu platform the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1795,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies accelerator type and count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1803,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#localssds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1811,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1819,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1827,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#maintenancefreezedurationhours_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Freeze<wbr>Duration<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1835,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#maintenanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this VM as a Stable Fleet VM.
 
@@ -1809,7 +1845,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum cpu platform the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1857,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies accelerator type and count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1829,7 +1865,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationallocatedinstancepropertiesreserveddiskresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Allocated<wbr>Instance<wbr>Properties<wbr>Reserved<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1837,7 +1873,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1845,7 +1881,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1853,7 +1889,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#maintenance_freeze_duration_hours_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>freeze_<wbr>duration_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1861,7 +1897,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#maintenance_interval_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this VM as a Stable Fleet VM.
 
@@ -1871,7 +1907,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum cpu platform the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1977,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the number of resources that are allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1985,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#inusecount_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Indicates how many instances are in use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1993,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#instanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstanceproperties">pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstanceproperties">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +2005,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the number of resources that are allocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2013,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Indicates how many instances are in use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2021,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstanceproperties">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstanceproperties">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2055,7 +2091,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the number of resources that are allocated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2099,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#inusecount_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Indicates how many instances are in use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2107,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#instanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2119,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the number of resources that are allocated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2127,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Indicates how many instances are in use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2135,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2169,7 +2205,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of licenses purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2213,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#coresperlicense_nodejs" style="color: inherit; text-decoration: inherit;">cores<wbr>Per<wbr>License</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the core range of the instance for which this license applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2221,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2197,7 +2233,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of licenses purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2241,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#cores_per_license_python" style="color: inherit; text-decoration: inherit;">cores_<wbr>per_<wbr>license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the core range of the instance for which this license applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2249,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +2319,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of licenses purchased.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2291,7 +2327,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#coresperlicense_nodejs" style="color: inherit; text-decoration: inherit;">cores<wbr>Per<wbr>License</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the core range of the instance for which this license applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2335,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2347,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of licenses purchased.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2355,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#cores_per_license_python" style="color: inherit; text-decoration: inherit;">cores_<wbr>per_<wbr>license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the core range of the instance for which this license applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2327,7 +2363,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2573,7 +2609,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2617,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2625,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2633,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2641,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#reservations for reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2649,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2657,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2665,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2673,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2681,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#sharesettings_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationsharesettings">pulumi.<wbr>Input<Allocation<wbr>Share<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationsharesettings">Allocation<wbr>Share<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2689,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskureservation">pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUReservation<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationspecificskureservation">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2697,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2705,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2713,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2689,7 +2725,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2733,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2741,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2749,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2757,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#reservations for reservations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2765,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2773,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2781,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2789,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2797,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#share_settings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationsharesettings">Allocation<wbr>Share<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationsharesettings">Allocation<wbr>Share<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2805,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskureservation">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationspecificskureservation">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2813,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2821,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2793,7 +2829,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3023,7 +3059,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3067,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3075,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3083,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#reservations for reservations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3055,7 +3091,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3099,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3107,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3115,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3087,7 +3123,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#sharesettings_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationsharesettingsresponse">pulumi.<wbr>Input<Allocation<wbr>Share<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationsharesettingsresponse">Allocation<wbr>Share<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3095,7 +3131,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskureservationresponse">pulumi.<wbr>Input<Allocation<wbr>Specific<wbr>SKUReservation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#allocationspecificskureservationresponse">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3103,7 +3139,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3111,7 +3147,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3119,7 +3155,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3131,7 +3167,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3139,7 +3175,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3147,7 +3183,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3155,7 +3191,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#reservations for reservations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3163,7 +3199,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3171,7 +3207,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3179,7 +3215,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3223,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3231,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#share_settings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationsharesettingsresponse">Allocation<wbr>Share<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationsharesettingsresponse">Allocation<wbr>Share<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3203,7 +3239,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allocationspecificskureservationresponse">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allocationspecificskureservationresponse">Allocation<wbr>Specific<wbr>SKUReservation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3247,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3219,7 +3255,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3227,7 +3263,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3333,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3341,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3349,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3325,7 +3361,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3369,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3341,7 +3377,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3411,7 +3447,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3419,7 +3455,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3427,7 +3463,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3439,7 +3475,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3447,7 +3483,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3455,7 +3491,7 @@ See go/stable-fleet-ug for more details.{{% /md %}}</dd><dt class="property-requ
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
 {{% /choosable %}}

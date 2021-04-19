@@ -20,19 +20,32 @@ Creates new autoscaling policy.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataproc_v1.BasicAutoscalingAlgorithmArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataproc_v1.InstanceGroupAutoscalingPolicyConfigArgs]]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataproc_v1.InstanceGroupAutoscalingPolicyConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">autoscaling_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[_dataproc_v1.BasicAutoscalingAlgorithmArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[_dataproc_v1.InstanceGroupAutoscalingPolicyConfigArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_dataproc_v1.InstanceGroupAutoscalingPolicyConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscalingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscalingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Creates new autoscaling policy.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutoscalingPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#autoscalingpoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicautoscalingalgorithm">pulumi.<wbr>Input<Basic<wbr>Autoscaling<wbr>Algorithm<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicautoscalingalgorithm">Basic<wbr>Autoscaling<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes how the autoscaler will operate for secondary workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how the autoscaler will operate for primary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#autoscaling_policies_id_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicautoscalingalgorithm">Basic<wbr>Autoscaling<wbr>Algorithm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicautoscalingalgorithm">Basic<wbr>Autoscaling<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes how the autoscaler will operate for secondary workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupautoscalingpolicyconfig">Instance<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how the autoscaler will operate for primary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -549,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicyarnautoscalingconfig">pulumi.<wbr>Input<Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicyarnautoscalingconfig">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. YARN autoscaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -569,7 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicyarnautoscalingconfig">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicyarnautoscalingconfig">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. YARN autoscaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -631,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -639,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicyarnautoscalingconfigresponse">pulumi.<wbr>Input<Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicyarnautoscalingconfigresponse">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. YARN autoscaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -651,7 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicyarnautoscalingconfigresponse">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicyarnautoscalingconfigresponse">Basic<wbr>Yarn<wbr>Autoscaling<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. YARN autoscaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to remove workers. A scale-down factor of 1 will result in scaling down so that there is no available memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables removing workers, which can be beneficial for autoscaling a single job. See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to add workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling). See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to remove workers. A scale-down factor of 1 will result in scaling down so that there is no available memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables removing workers, which can be beneficial for autoscaling a single job. See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to add workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling). See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to remove workers. A scale-down factor of 1 will result in scaling down so that there is no available memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables removing workers, which can be beneficial for autoscaling a single job. See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to add workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling). See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -971,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -991,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to remove workers. A scale-down factor of 1 will result in scaling down so that there is no available memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables removing workers, which can be beneficial for autoscaling a single job. See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -999,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of average YARN pending memory in the last cooldown period for which to add workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling). See How autoscaling works (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works) for more information.Bounds: 0.0, 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1215,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,33 @@ Adds a user provided trial to a study.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">final_measurement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__MeasurementArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">measurements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_ml_v1.GoogleCloudMlV1__MeasurementArgs]]]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_ml_v1.GoogleCloudMlV1_Trial_ParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">studies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">trials_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">final_measurement</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__MeasurementArgs]</span> = None<span class="p">,</span>
+               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">measurements</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleCloudMlV1__MeasurementArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_ml_v1.GoogleCloudMlV1_Trial_ParameterArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">studies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">trials_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStudyTrial</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StudyTrial</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStudyTrial</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StudyTrial</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StudyTrial</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StudyTrialArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Adds a user provided trial to a study.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StudyTrialArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#studiesid_nodejs" style="color: inherit; text-decoration: inherit;">studies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +354,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#trialsid_nodejs" style="color: inherit; text-decoration: inherit;">trials<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#finalmeasurement_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Measurement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__measurement">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final measurement containing the objective value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#measurements_nodejs" style="color: inherit; text-decoration: inherit;">measurements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__measurement">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_trial_parameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Trial_Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_trial_parameter">Google<wbr>Cloud<wbr>Ml<wbr>V1_Trial_Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#studies_id_python" style="color: inherit; text-decoration: inherit;">studies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -398,7 +422,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#trials_id_python" style="color: inherit; text-decoration: inherit;">trials_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#final_measurement_python" style="color: inherit; text-decoration: inherit;">final_<wbr>measurement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final measurement containing the objective value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#measurements_python" style="color: inherit; text-decoration: inherit;">measurements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__measurement">Google<wbr>Cloud<wbr>Ml<wbr>V1__Measurement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_trial_parameter">Google<wbr>Cloud<wbr>Ml<wbr>V1_Trial_Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_trial_parameter">Google<wbr>Cloud<wbr>Ml<wbr>V1_Trial_Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The StudyTrial resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detailed state of a trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The value for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The value for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The value for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. The value for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is DOUBLE or DISCRETE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intvalue_nodejs" style="color: inherit; text-decoration: inherit;">int<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is INTEGER{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterTypeis CATEGORICAL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is DOUBLE or DISCRETE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int_value_python" style="color: inherit; text-decoration: inherit;">int_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is INTEGER{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterTypeis CATEGORICAL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is DOUBLE or DISCRETE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1091,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intvalue_nodejs" style="color: inherit; text-decoration: inherit;">int<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is INTEGER{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterTypeis CATEGORICAL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is DOUBLE or DISCRETE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int_value_python" style="color: inherit; text-decoration: inherit;">int_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterType is INTEGER{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be set if ParameterTypeis CATEGORICAL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time that the trial has been running at the point of this measurement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_measurement_metric">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_measurement_metric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Provides a list of metrics that act as inputs into the objective function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepcount_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of steps a machine learning model has been trained for. Must be non-negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time that the trial has been running at the point of this measurement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_measurement_metric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_measurement_metric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides a list of metrics that act as inputs into the objective function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_count_python" style="color: inherit; text-decoration: inherit;">step_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of steps a machine learning model has been trained for. Must be non-negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time that the trial has been running at the point of this measurement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_measurement_metricresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_measurement_metricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Provides a list of metrics that act as inputs into the objective function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepcount_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of steps a machine learning model has been trained for. Must be non-negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time that the trial has been running at the point of this measurement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_measurement_metricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_measurement_metricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Measurement_Metric<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides a list of metrics that act as inputs into the objective function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_count_python" style="color: inherit; text-decoration: inherit;">step_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of steps a machine learning model has been trained for. Must be non-negative.{{% /md %}}</dd></dl>
 {{% /choosable %}}

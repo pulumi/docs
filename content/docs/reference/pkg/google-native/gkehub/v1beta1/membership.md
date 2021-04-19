@@ -20,19 +20,34 @@ Adds a new Membership.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_gkehub_v1beta1.AuthorityArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_gkehub_v1beta1.MembershipEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">infrastructure_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">memberships_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">authority</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1beta1.AuthorityArgs]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1beta1.MembershipEndpointArgs]</span> = None<span class="p">,</span>
+               <span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">infrastructure_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">memberships_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Membership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Membership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Membership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Adds a new Membership.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MembershipArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#membershipsid_nodejs" style="color: inherit; text-decoration: inherit;">memberships<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authority">pulumi.<wbr>Input<Authority<wbr>Args></a></span>
+        <span class="property-type"><a href="#authority">Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of this membership, limited to 63 characters. Must match the regex: `a-zA-Z0-9*`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpoint">pulumi.<wbr>Input<Membership<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Endpoint information to reach this member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructuretype_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#memberships_id_python" style="color: inherit; text-decoration: inherit;">memberships_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authority">Authority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authority">Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of this membership, limited to 63 characters. Must match the regex: `a-zA-Z0-9*`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Endpoint information to reach this member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#infrastructure_type_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The infrastructure type this Membership is running on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oidcjwks_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oidc_jwks_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityprovider_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identity provider that reflects the `issuer` in the workload identity pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -927,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -935,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oidcjwks_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -943,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadidentitypool_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workload identity pool in which `issuer` will be recognized. There is a single Workload Identity Pool per Hub that is shared between all Memberships that belong to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is `{PROJECT_ID}.hub.id.goog`, although this is subject to change in newer versions of this API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identity provider that reflects the `issuer` in the workload identity pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -971,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oidc_jwks_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>jwks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_identity_pool_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workload identity pool in which `issuer` will be recognized. There is a single Workload Identity Pool per Hub that is shared between all Memberships that belong to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is `{PROJECT_ID}.hub.id.goog`, although this is subject to change in newer versions of this API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1029,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetesapiserverversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Api<wbr>Server<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes API server version string as reported by '/version'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1205,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memorymb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Node count as reported by Kubernetes nodes resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1221,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeproviderid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1237,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpucount_nodejs" style="color: inherit; text-decoration: inherit;">vcpu<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}vCPU count as reported by Kubernetes nodes resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1249,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetes_api_server_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>api_<wbr>server_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kubernetes API server version string as reported by '/version'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1257,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_mb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1265,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Node count as reported by Kubernetes nodes resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1273,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_provider_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpu_count_python" style="color: inherit; text-decoration: inherit;">vcpu_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}vCPU count as reported by Kubernetes nodes resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershipcrmanifest_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Cr<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceoptions_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoptions">pulumi.<wbr>Input<Resource<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceoptions">Resource<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for Kubernetes resource generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_cr_manifest_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>cr_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_options_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoptions">Resource<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceoptions">Resource<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for Kubernetes resource generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectresources_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemanifestresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Manifest<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1465,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershipcrmanifest_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Cr<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1473,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershipresources_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemanifestresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Manifest<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional Kubernetes resources that need to be applied to the cluster after Membership creation, and after every update. This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1481,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceoptions_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoptionsresponse">pulumi.<wbr>Input<Resource<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceoptionsresponse">Resource<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for Kubernetes resource generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_resources_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1501,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_cr_manifest_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>cr_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1509,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_resources_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcemanifestresponse">Resource<wbr>Manifest<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional Kubernetes resources that need to be applied to the cluster after Membership creation, and after every update. This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_options_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoptionsresponse">Resource<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceoptionsresponse">Resource<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for Kubernetes resource generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkecluster">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkecluster">Gke<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetesresource_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesresource">pulumi.<wbr>Input<Kubernetes<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#kubernetesresource">Kubernetes<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkecluster">Gke<wbr>Cluster<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkecluster">Gke<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetes_resource_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesresource">Kubernetes<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesresource">Kubernetes<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterresponse">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1677,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetesmetadata_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesmetadataresponse">pulumi.<wbr>Input<Kubernetes<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kubernetesmetadataresponse">Kubernetes<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Useful Kubernetes-specific metadata.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1685,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetesresource_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesresourceresponse">pulumi.<wbr>Input<Kubernetes<wbr>Resource<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1697,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkeclusterresponse">Gke<wbr>Cluster<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. GKE-specific information. Only present if this Membership is a GKE cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1705,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetes_metadata_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesmetadataresponse">Kubernetes<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesmetadataresponse">Kubernetes<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Useful Kubernetes-specific metadata.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1713,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubernetes_resource_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesresourceresponse">Kubernetes<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Membership resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is never set by the Hub Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is never set by the Hub Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1811,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the Membership resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is never set by the Hub Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is never set by the Hub Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1881,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterscoped_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Scoped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1889,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}YAML manifest of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1901,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_scoped_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>scoped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1909,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}YAML manifest of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1963,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectversion_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v1beta1crd_nodejs" style="color: inherit; text-decoration: inherit;">v1beta1Crd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_version_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v1beta1_crd_python" style="color: inherit; text-decoration: inherit;">v1beta1_<wbr>crd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2045,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectversion_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2053,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v1beta1crd_nodejs" style="color: inherit; text-decoration: inherit;">v1beta1Crd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_version_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2073,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v1beta1_crd_python" style="color: inherit; text-decoration: inherit;">v1beta1_<wbr>crd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.{{% /md %}}</dd></dl>
 {{% /choosable %}}

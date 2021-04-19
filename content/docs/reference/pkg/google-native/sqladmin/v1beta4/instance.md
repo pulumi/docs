@@ -20,19 +20,57 @@ Creates a new Cloud SQL instance.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">current_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.DiskEncryptionStatusArgs]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">failover_replica</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">gce_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_sqladmin_v1beta4.IpMappingArgs]]]]</span> = None<span class="p">, </span><span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">max_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">on_premises_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.OnPremisesConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.ReplicaConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">replica_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">scheduled_maintenance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.SqlScheduledMaintenanceArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_gce_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.SslCertArgs]]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.SettingsArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">suspension_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">backend_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">current_disk_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionStatusArgs]</span> = None<span class="p">,</span>
+             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">failover_replica</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceFailoverReplicaArgs]</span> = None<span class="p">,</span>
+             <span class="nx">gce_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[_sqladmin_v1beta4.IpMappingArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">max_disk_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">on_premises_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.OnPremisesConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.ReplicaConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">replica_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">scheduled_maintenance</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SqlScheduledMaintenanceArgs]</span> = None<span class="p">,</span>
+             <span class="nx">secondary_gce_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SslCertArgs]</span> = None<span class="p">,</span>
+             <span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.SettingsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">suspension_reason</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +105,32 @@ Creates a new Cloud SQL instance.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +290,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#failoverreplica_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#instancefailoverreplica">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +550,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#failoverreplica_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica</a></span>
     </dt>
     <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +738,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -698,7 +746,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +754,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backendtype_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +762,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection name of the Cloud SQL instance used in connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +770,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#currentdisksize_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +778,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +786,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#diskencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +794,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#diskencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionstatus">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +802,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +810,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#failoverreplica_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +818,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#gcezone_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +826,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +834,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipmapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Mapping<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipmapping">Ip<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +842,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +850,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +858,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#masterinstancename_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance which will act as primary in the replication setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +866,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxdisksize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum disk size of the instance in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +874,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud SQL instance. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +882,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#onpremisesconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premises<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisesconfiguration">pulumi.<wbr>Input<On<wbr>Premises<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#onpremisesconfiguration">On<wbr>Premises<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +890,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +898,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaconfiguration">pulumi.<wbr>Input<Replica<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#replicaconfiguration">Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to failover replicas and read replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +906,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#replicanames_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The replicas of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +914,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Use only on creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +922,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status indicating if instance satisfiesPzs. Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +930,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scheduledmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlscheduledmaintenance">pulumi.<wbr>Input<Sql<wbr>Scheduled<wbr>Maintenance<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlscheduledmaintenance">Sql<wbr>Scheduled<wbr>Maintenance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +938,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#secondarygcezone_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Gce<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +946,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +954,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#servercacert_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslcert">pulumi.<wbr>Input<Ssl<wbr>Cert<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslcert">Ssl<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +962,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#serviceaccountemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +970,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">pulumi.<wbr>Input<Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#settings">Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +978,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +986,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspensionreason_nodejs" style="color: inherit; text-decoration: inherit;">suspension<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -950,7 +998,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -958,7 +1006,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1014,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backend_type_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by Google. This property is read-only; use the *tier* property in the *settings* object to determine the database type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1022,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection name of the Cloud SQL instance used in connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1030,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#current_disk_size_python" style="color: inherit; text-decoration: inherit;">current_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see this announcement for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1038,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine type and version. The *databaseVersion* field cannot be changed after instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1046,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption configuration specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1054,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disk_encryption_status_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1062,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1070,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#failover_replica_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#instancefailoverreplica">Instance<wbr>Failover<wbr>Replica<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and status of the failover replica. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1078,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#gce_zone_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1086,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1094,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipmapping">Ip<wbr>Mapping<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipmapping">Ip<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1102,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1110,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#instance*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1118,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#master_instance_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance which will act as primary in the replication setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1126,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_disk_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum disk size of the instance in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1134,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud SQL instance. This does not include the project ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1142,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#on_premises_configuration_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premises_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisesconfiguration">On<wbr>Premises<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onpremisesconfiguration">On<wbr>Premises<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to on-premises instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1150,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1* (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-central1* depending on the instance type. The region cannot be changed after instance creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1158,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaconfiguration">Replica<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicaconfiguration">Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration specific to failover replicas and read replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1166,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#replica_names_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The replicas of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1174,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Initial root password. Use only on creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1182,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status indicating if instance satisfiesPzs. Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1190,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scheduled_maintenance_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlscheduledmaintenance">Sql<wbr>Scheduled<wbr>Maintenance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlscheduledmaintenance">Sql<wbr>Scheduled<wbr>Maintenance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1198,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#secondary_gce_zone_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>gce_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1206,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1214,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#server_ca_cert_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslcert">Ssl<wbr>Cert<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslcert">Ssl<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1222,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#service_account_email_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account email address assigned to the instance. This property is applicable only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1230,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settings">Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1238,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current serving state of the Cloud SQL instance. This can be one of the following. *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available, for example due to problems with billing. *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1246,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#suspension_reason_python" style="color: inherit; text-decoration: inherit;">suspension_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If the instance state is SUSPENDED, the reason for the suspension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1349,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A label to identify this entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1385,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A label to identify this entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A label to identify this entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#aclEntry*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A label to identify this entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1721,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentionsettings_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupretentionsettings">pulumi.<wbr>Input<Backup<wbr>Retention<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupretentionsettings">Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1729,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarylogenabled_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this configuration is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pointintimerecoveryenabled_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationlogarchivingenabled_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionlogretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Log<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days of transaction logs we retain for point in time restore, from 1-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_settings_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupretentionsettings">Backup<wbr>Retention<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupretentionsettings">Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this configuration is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#point_in_time_recovery_enabled_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_log_archiving_enabled_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>log_<wbr>archiving_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1861,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_log_retention_days_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>log_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days of transaction logs we retain for point in time restore, from 1-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2027,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentionsettings_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupretentionsettingsresponse">pulumi.<wbr>Input<Backup<wbr>Retention<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupretentionsettingsresponse">Backup<wbr>Retention<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2035,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarylogenabled_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this configuration is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2067,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pointintimerecoveryenabled_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2075,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationlogarchivingenabled_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2083,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionlogretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Log<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days of transaction logs we retain for point in time restore, from 1-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2103,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_settings_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupretentionsettingsresponse">Backup<wbr>Retention<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupretentionsettingsresponse">Backup<wbr>Retention<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this configuration is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#point_in_time_recovery_enabled_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_log_archiving_enabled_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>log_<wbr>archiving_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time for the daily backup configuration in UTC timezone in the 24 hour format - *HH:MM*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_log_retention_days_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>log_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days of transaction logs we retain for point in time restore, from 1-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2221,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retainedbackups_nodejs" style="color: inherit; text-decoration: inherit;">retained<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2241,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retained_backups_python" style="color: inherit; text-decoration: inherit;">retained_<wbr>backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2249,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2303,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retainedbackups_nodejs" style="color: inherit; text-decoration: inherit;">retained<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2311,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2323,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retained_backups_python" style="color: inherit; text-decoration: inherit;">retained_<wbr>backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2331,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit that 'retained_backups' represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2385,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2405,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2467,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2487,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flag. These flags are passed at instance startup, so include both server options and system variables for MySQL. Flags are specified with underscores, not hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the flag. Booleans are set to *on* for true and *off* for false. This field must be omitted if the flag doesn't take a value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2565,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2593,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2679,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2707,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2715,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2723,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2797,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2805,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2859,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2879,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2887,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2941,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2961,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3023,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3043,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3051,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3137,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Insights<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3145,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3153,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record application tags from query when enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record client address when enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3173,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_insights_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>insights_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3189,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record application tags from query when enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record client address when enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3283,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Insights<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights feature is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3291,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3299,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record application tags from query when enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3307,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record client address when enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3319,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_insights_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>insights_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights feature is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3327,7 +3375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3335,7 +3383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record application tags from query when enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3343,9 +3391,173 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Query Insights will record client address when enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancefailoverreplica">Instance<wbr>Failover<wbr>Replica</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="available_csharp">
+<a href="#available_csharp" style="color: inherit; text-decoration: inherit;">Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="available_go">
+<a href="#available_go" style="color: inherit; text-decoration: inherit;">Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="available_nodejs">
+<a href="#available_nodejs" style="color: inherit; text-decoration: inherit;">available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="available_python">
+<a href="#available_python" style="color: inherit; text-decoration: inherit;">available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancefailoverreplicaresponse">Instance<wbr>Failover<wbr>Replica<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_csharp">
+<a href="#available_csharp" style="color: inherit; text-decoration: inherit;">Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_go">
+<a href="#available_go" style="color: inherit; text-decoration: inherit;">Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_nodejs">
+<a href="#available_nodejs" style="color: inherit; text-decoration: inherit;">available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="available_python">
+<a href="#available_python" style="color: inherit; text-decoration: inherit;">available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID. This property is applicable only to Second Generation instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipconfiguration">Ip<wbr>Configuration</h4>
@@ -3429,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Acl<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aclentry">Acl<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3437,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance is assigned a public IP address or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3445,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3465,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclentry">Acl<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aclentry">Acl<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3473,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is assigned a public IP address or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3481,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3575,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclentryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Acl<wbr>Entry<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aclentryresponse">Acl<wbr>Entry<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3583,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance is assigned a public IP address or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3591,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3599,7 +3811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclentryresponse">Acl<wbr>Entry<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aclentryresponse">Acl<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3619,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is assigned a public IP address or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3627,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, */projects/myProject/global/networks/default*. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3635,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3705,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3713,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoretire_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Retire</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3721,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3733,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3741,7 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_retire_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>retire</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3819,7 +4031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address assigned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3827,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetoretire_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Retire</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3835,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3847,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address assigned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3855,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_retire_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>retire</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The due time for this IP to be retired in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*. This field is only available when the IP is scheduled to be retired.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3863,7 +4075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this IP address. A *PRIMARY* address is a public address that can accept incoming connections. A *PRIVATE* address is a private address that can accept incoming connections. An *OUTGOING* address is the source address of connections originating from the instance, if supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3949,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#followgaeapplication_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Gae<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App Engine application to follow, it must be in the same region as the Cloud SQL instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3957,7 +4169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3965,7 +4177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryzone_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +4185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3985,7 +4197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#follow_gae_application_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>gae_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App Engine application to follow, it must be in the same region as the Cloud SQL instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3993,7 +4205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4001,7 +4213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_zone_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +4221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4095,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#followgaeapplication_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Gae<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App Engine application to follow, it must be in the same region as the Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4103,7 +4315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4111,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryzone_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4119,7 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4131,7 +4343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#follow_gae_application_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>gae_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App Engine application to follow, it must be in the same region as the Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4139,7 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#locationPreference*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4147,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_zone_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4155,7 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4241,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}day of week (1-7), starting on Monday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4249,7 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}hour of day - 0 to 23.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4257,7 +4469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4265,7 +4477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4277,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}day of week (1-7), starting on Monday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4285,7 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}hour of day - 0 to 23.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4293,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4301,7 +4513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4387,7 +4599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}day of week (1-7), starting on Monday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4395,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}hour of day - 0 to 23.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4411,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4423,7 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}day of week (1-7), starting on Monday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4431,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}hour of day - 0 to 23.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4439,7 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#maintenanceWindow*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4447,7 +4659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4645,7 +4857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4661,7 +4873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4669,7 +4881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectretryinterval_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Retry<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to wait between connect retries. MySQL's default is 60 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4677,7 +4889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4685,7 +4897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval in milliseconds between replication heartbeats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4701,7 +4913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the replication connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4709,7 +4921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of permissible ciphers to use for SSL encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for the replication connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4725,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verifyservercertificate_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Server<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4737,7 +4949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to wait between connect retries. MySQL's default is 60 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4769,7 +4981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4777,7 +4989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4785,7 +4997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval in milliseconds between replication heartbeats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4793,7 +5005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the replication connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4801,7 +5013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of permissible ciphers to use for SSL encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4809,7 +5021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for the replication connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4817,7 +5029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_server_certificate_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>server_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5015,7 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5023,7 +5235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5031,7 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5039,7 +5251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectretryinterval_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Retry<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to wait between connect retries. MySQL's default is 60 seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5047,7 +5259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5055,7 +5267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5063,7 +5275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval in milliseconds between replication heartbeats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5071,7 +5283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the replication connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5079,7 +5291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of permissible ciphers to use for SSL encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5087,7 +5299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for the replication connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5095,7 +5307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verifyservercertificate_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Server<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5107,7 +5319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5115,7 +5327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5123,7 +5335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5131,7 +5343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to wait between connect retries. MySQL's default is 60 seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5139,7 +5351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5147,7 +5359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#mysqlReplicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5155,7 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval in milliseconds between replication heartbeats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5163,7 +5375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the replication connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5171,7 +5383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of permissible ciphers to use for SSL encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5179,7 +5391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for the replication connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5187,7 +5399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#verify_server_certificate_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>server_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5337,7 +5549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5345,7 +5557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5353,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5361,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dump file to create the Cloud SQL replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5369,7 +5581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostport_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host and port of the on-premises instance in host:port format{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5377,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5385,7 +5597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5393,7 +5605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for connecting to on-premises instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5405,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5413,7 +5625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5421,7 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5429,7 +5641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dump file to create the Cloud SQL replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5437,7 +5649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_port_python" style="color: inherit; text-decoration: inherit;">host_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host and port of the on-premises instance in host:port format{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5445,7 +5657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5453,7 +5665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5461,7 +5673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for connecting to on-premises instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5611,7 +5823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5619,7 +5831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5627,7 +5839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5635,7 +5847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dump file to create the Cloud SQL replica.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5643,7 +5855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostport_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host and port of the on-premises instance in host:port format{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5651,7 +5863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5659,7 +5871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5667,7 +5879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for connecting to on-premises instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5679,7 +5891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5687,7 +5899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5695,7 +5907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5703,7 +5915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dump file to create the Cloud SQL replica.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5711,7 +5923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_port_python" style="color: inherit; text-decoration: inherit;">host_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host and port of the on-premises instance in host:port format{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5719,7 +5931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#onPremisesConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5727,7 +5939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for connecting to on-premises instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5735,7 +5947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for connecting to on-premises instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5805,7 +6017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertarget_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5813,7 +6025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5821,7 +6033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mysqlreplicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlreplicaconfiguration">pulumi.<wbr>Input<My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5833,7 +6045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_target_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5841,7 +6053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +6061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mysql_replica_configuration_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>replica_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlreplicaconfiguration">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5919,7 +6131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertarget_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5927,7 +6139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5935,7 +6147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mysqlreplicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">pulumi.<wbr>Input<My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5947,7 +6159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_target_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replica is the failover target. If the field is set to *true* the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5955,7 +6167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#replicaConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5963,7 +6175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mysql_replica_configuration_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>replica_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlreplicaconfigurationresponse">My<wbr>Sql<wbr>Replica<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named *master.info* in the data directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6369,7 +6581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6377,7 +6589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlactivedirectoryconfig">pulumi.<wbr>Input<Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6385,7 +6597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6393,7 +6605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6401,7 +6613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupconfiguration">pulumi.<wbr>Input<Backup<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupconfiguration">Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily backup configuration for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6409,7 +6621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of server Instance collation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6417,7 +6629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashsafereplicationenabled_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6425,7 +6637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. The data disk size minimum is 10GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6441,7 +6653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseflags">pulumi.<wbr>Input<pulumi.<wbr>Input<Database<wbr>Flags<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#databaseflags">Database<wbr>Flags<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The database flags passed to the instance at startup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6449,7 +6661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasereplicationenabled_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Replication<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether replication is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denymaintenanceperiods_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Maintenance<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denymaintenanceperiod">pulumi.<wbr>Input<pulumi.<wbr>Input<Deny<wbr>Maintenance<wbr>Period<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#denymaintenanceperiod">Deny<wbr>Maintenance<wbr>Period<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Deny maintenance periods{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6465,7 +6677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insightsconfig_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightsconfig">pulumi.<wbr>Input<Insights<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#insightsconfig">Insights<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Insights configuration, for now relevant only for Postgres.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6473,7 +6685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfiguration">pulumi.<wbr>Input<Ip<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipconfiguration">Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6481,7 +6693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6489,7 +6701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationpreference">pulumi.<wbr>Input<Location<wbr>Preference<wbr>Args></a></span>
+        <span class="property-type"><a href="#locationpreference">Location<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6497,7 +6709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">pulumi.<wbr>Input<Maintenance<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6505,7 +6717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6513,7 +6725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6521,7 +6733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6529,7 +6741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresize_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically. The default value is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6537,7 +6749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6545,7 +6757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6553,7 +6765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-provided labels, represented as a dictionary where each label is a single key value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6565,7 +6777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6573,7 +6785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_config_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6581,7 +6793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6589,7 +6801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6597,7 +6809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupconfiguration">Backup<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupconfiguration">Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily backup configuration for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6605,7 +6817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of server Instance collation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6613,7 +6825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_safe_replication_enabled_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6621,7 +6833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. The data disk size minimum is 10GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6629,7 +6841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6637,7 +6849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseflags">Database<wbr>Flags<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#databaseflags">Database<wbr>Flags<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The database flags passed to the instance at startup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6645,7 +6857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_replication_enabled_python" style="color: inherit; text-decoration: inherit;">database_<wbr>replication_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether replication is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6653,7 +6865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_maintenance_periods_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>maintenance_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denymaintenanceperiod">Deny<wbr>Maintenance<wbr>Period<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#denymaintenanceperiod">Deny<wbr>Maintenance<wbr>Period<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Deny maintenance periods{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6661,7 +6873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insights_config_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightsconfig">Insights<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#insightsconfig">Insights<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Insights configuration, for now relevant only for Postgres.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6669,7 +6881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfiguration">Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfiguration">Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6677,7 +6889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6685,7 +6897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationpreference">Location<wbr>Preference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#locationpreference">Location<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6693,7 +6905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6701,7 +6913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6709,7 +6921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6717,7 +6929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6725,7 +6937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically. The default value is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6733,7 +6945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_limit_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6741,7 +6953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6749,7 +6961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-provided labels, represented as a dictionary where each label is a single key value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7155,7 +7367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7163,7 +7375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">pulumi.<wbr>Input<Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7171,7 +7383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7179,7 +7391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7187,7 +7399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupconfigurationresponse">pulumi.<wbr>Input<Backup<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupconfigurationresponse">Backup<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily backup configuration for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7195,7 +7407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of server Instance collation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7203,7 +7415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashsafereplicationenabled_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7211,7 +7423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. The data disk size minimum is 10GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7219,7 +7431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7227,7 +7439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseflagsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Database<wbr>Flags<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#databaseflagsresponse">Database<wbr>Flags<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The database flags passed to the instance at startup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7235,7 +7447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasereplicationenabled_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Replication<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether replication is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7243,7 +7455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denymaintenanceperiods_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Maintenance<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denymaintenanceperiodresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Deny<wbr>Maintenance<wbr>Period<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#denymaintenanceperiodresponse">Deny<wbr>Maintenance<wbr>Period<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Deny maintenance periods{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7251,7 +7463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insightsconfig_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightsconfigresponse">pulumi.<wbr>Input<Insights<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#insightsconfigresponse">Insights<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Insights configuration, for now relevant only for Postgres.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7259,7 +7471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">pulumi.<wbr>Input<Ip<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">Ip<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7267,7 +7479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7275,7 +7487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationpreferenceresponse">pulumi.<wbr>Input<Location<wbr>Preference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#locationpreferenceresponse">Location<wbr>Preference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7283,7 +7495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowresponse">pulumi.<wbr>Input<Maintenance<wbr>Window<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7291,7 +7503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7299,7 +7511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7307,7 +7519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7315,7 +7527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresize_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically. The default value is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7323,7 +7535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7331,7 +7543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7339,7 +7551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-provided labels, represented as a dictionary where each label is a single key value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7351,7 +7563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7359,7 +7571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_config_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7367,7 +7579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7375,7 +7587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Availability type. Potential values: *ZONAL*: The instance serves data from only one zone. Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from more than one zone in a region (it is highly available). For more information, see Overview of the High Availability Configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7383,7 +7595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupconfigurationresponse">Backup<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupconfigurationresponse">Backup<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily backup configuration for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7391,7 +7603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of server Instance collation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7399,7 +7611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_safe_replication_enabled_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7407,7 +7619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. The data disk size minimum is 10GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7415,7 +7627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7423,7 +7635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseflagsresponse">Database<wbr>Flags<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#databaseflagsresponse">Database<wbr>Flags<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The database flags passed to the instance at startup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7431,7 +7643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_replication_enabled_python" style="color: inherit; text-decoration: inherit;">database_<wbr>replication_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration specific to read replica instances. Indicates whether replication is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7439,7 +7651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_maintenance_periods_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>maintenance_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denymaintenanceperiodresponse">Deny<wbr>Maintenance<wbr>Period<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#denymaintenanceperiodresponse">Deny<wbr>Maintenance<wbr>Period<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Deny maintenance periods{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7447,7 +7659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insights_config_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#insightsconfigresponse">Insights<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#insightsconfigresponse">Insights<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Insights configuration, for now relevant only for Postgres.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7455,7 +7667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationresponse">Ip<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationresponse">Ip<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7463,7 +7675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#settings*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7471,7 +7683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationpreferenceresponse">Location<wbr>Preference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#locationpreferenceresponse">Location<wbr>Preference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7479,7 +7691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7487,7 +7699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7495,7 +7707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7503,7 +7715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7511,7 +7723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically. The default value is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7519,7 +7731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_limit_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7527,7 +7739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example *db-custom-1-3840* .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7535,7 +7747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-provided labels, represented as a dictionary where each label is a single key value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7589,7 +7801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain (e.g., mydomain.com).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7597,7 +7809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always sql#activeDirectoryConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7609,7 +7821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain (e.g., mydomain.com).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7617,7 +7829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always sql#activeDirectoryConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7671,7 +7883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain (e.g., mydomain.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7679,7 +7891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always sql#activeDirectoryConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7691,7 +7903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain (e.g., mydomain.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7699,7 +7911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always sql#activeDirectoryConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7769,7 +7981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#candefer_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Defer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7777,7 +7989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canreschedule_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Reschedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7785,7 +7997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7797,7 +8009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_defer_python" style="color: inherit; text-decoration: inherit;">can_<wbr>defer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7805,7 +8017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_reschedule_python" style="color: inherit; text-decoration: inherit;">can_<wbr>reschedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7813,7 +8025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7883,7 +8095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#candefer_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Defer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7891,7 +8103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canreschedule_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Reschedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7899,7 +8111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7911,7 +8123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_defer_python" style="color: inherit; text-decoration: inherit;">can_<wbr>defer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7919,7 +8131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_reschedule_python" style="color: inherit; text-decoration: inherit;">can_<wbr>reschedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7927,7 +8139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of any upcoming scheduled maintenance for this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8093,7 +8305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8101,7 +8313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number, as extracted from the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8109,7 +8321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User supplied name. Constrained to [a-zA-Z.-_ ]+.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8117,7 +8329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8125,7 +8337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8133,7 +8345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8141,7 +8353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8149,7 +8361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8157,7 +8369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sha1 Fingerprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8169,7 +8381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8177,7 +8389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_serial_number_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number, as extracted from the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8185,7 +8397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User supplied name. Constrained to [a-zA-Z.-_ ]+.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8193,7 +8405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8201,7 +8413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8209,7 +8421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8217,7 +8429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8225,7 +8437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8233,7 +8445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sha1 Fingerprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8399,7 +8611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM representation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8407,7 +8619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number, as extracted from the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8415,7 +8627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User supplied name. Constrained to [a-zA-Z.-_ ]+.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8423,7 +8635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8431,7 +8643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8439,7 +8651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8447,7 +8659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8455,7 +8667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8463,7 +8675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sha1 Fingerprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8475,7 +8687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM representation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8483,7 +8695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_serial_number_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number, as extracted from the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8491,7 +8703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User supplied name. Constrained to [a-zA-Z.-_ ]+.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8499,7 +8711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8507,7 +8719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8515,7 +8727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8523,7 +8735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#sslCert*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8531,7 +8743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8539,7 +8751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sha1 Fingerprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}

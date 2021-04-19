@@ -20,19 +20,32 @@ Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">glossaries_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">input_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_translate_v3.GlossaryInputConfigArgs]]</span> = None<span class="p">, </span><span class="nx">language_codes_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_translate_v3.LanguageCodesSetArgs]]</span> = None<span class="p">, </span><span class="nx">language_pair</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_translate_v3.LanguageCodePairArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">glossaries_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">input_config</span><span class="p">:</span> <span class="nx">Optional[_translate_v3.GlossaryInputConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">language_codes_set</span><span class="p">:</span> <span class="nx">Optional[_translate_v3.LanguageCodesSetArgs]</span> = None<span class="p">,</span>
+             <span class="nx">language_pair</span><span class="p">:</span> <span class="nx">Optional[_translate_v3.LanguageCodePairArgs]</span> = None<span class="p">,</span>
+             <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlossary</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Glossary</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlossary</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Glossary</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Glossary</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlossaryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlossaryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#glossariesid_nodejs" style="color: inherit; text-decoration: inherit;">glossaries<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inputconfig_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glossaryinputconfig">pulumi.<wbr>Input<Glossary<wbr>Input<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#glossaryinputconfig">Glossary<wbr>Input<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#languagecodesset_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Codes<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languagecodesset">pulumi.<wbr>Input<Language<wbr>Codes<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#languagecodesset">Language<wbr>Codes<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used with equivalent term set glossaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#languagepair_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languagecodepair">pulumi.<wbr>Input<Language<wbr>Code<wbr>Pair<wbr>Args></a></span>
+        <span class="property-type"><a href="#languagecodepair">Language<wbr>Code<wbr>Pair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used with unidirectional glossaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#glossaries_id_python" style="color: inherit; text-decoration: inherit;">glossaries_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#input_config_python" style="color: inherit; text-decoration: inherit;">input_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glossaryinputconfig">Glossary<wbr>Input<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#glossaryinputconfig">Glossary<wbr>Input<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#language_codes_set_python" style="color: inherit; text-decoration: inherit;">language_<wbr>codes_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languagecodesset">Language<wbr>Codes<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#languagecodesset">Language<wbr>Codes<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used with equivalent term set glossaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#language_pair_python" style="color: inherit; text-decoration: inherit;">language_<wbr>pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languagecodepair">Language<wbr>Code<wbr>Pair<wbr>Args]</a></span>
+        <span class="property-type"><a href="#languagecodepair">Language<wbr>Code<wbr>Pair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used with unidirectional glossaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The Glossary resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -597,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Source data URI. For example, `gs://my_bucket/my_object`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -609,7 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Source data URI. For example, `gs://my_bucket/my_object`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Source data URI. For example, `gs://my_bucket/my_object`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Source data URI. For example, `gs://my_bucket/my_object`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcssource">pulumi.<wbr>Input<Gcs<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcssource">Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcssource">Gcs<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcssource">Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcssourceresponse">pulumi.<wbr>Input<Gcs<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcssourceresponse">Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcssourceresponse">Gcs<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcssourceresponse">Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Google Cloud Storage location of glossary data. File format is determined based on the filename extension. API returns [google.rpc.Code.INVALID_ARGUMENT] for unsupported URI-s and file formats. Wildcards are not allowed. This must be a single file in one of the following formats: For unidirectional glossaries: - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated. The first column is source text. The second column is target text. The file must not contain headers. That is, the first row is data, not column names. - TMX (`.tmx`): TMX file with parallel data defining source/target term pairs. For equivalent term sets glossaries: - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms in multiple languages. See documentation for more information - [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcelanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_language_code_python" style="color: inherit; text-decoration: inherit;">source_<wbr>language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_language_code_python" style="color: inherit; text-decoration: inherit;">target_<wbr>language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcelanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_language_code_python" style="color: inherit; text-decoration: inherit;">source_<wbr>language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_language_code_python" style="color: inherit; text-decoration: inherit;">target_<wbr>language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecodes_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_codes_python" style="color: inherit; text-decoration: inherit;">language_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecodes_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_codes_python" style="color: inherit; text-decoration: inherit;">language_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.{{% /md %}}</dd></dl>
 {{% /choosable %}}

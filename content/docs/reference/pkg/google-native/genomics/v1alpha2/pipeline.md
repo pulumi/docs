@@ -20,19 +20,33 @@ Creates a pipeline that can be run later. Create takes a Pipeline that has all f
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">docker</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_genomics_v1alpha2.DockerExecutorArgs]]</span> = None<span class="p">, </span><span class="nx">input_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_genomics_v1alpha2.PipelineParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">output_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_genomics_v1alpha2.PipelineParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">pipeline_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_genomics_v1alpha2.PipelineResourcesArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">docker</span><span class="p">:</span> <span class="nx">Optional[_genomics_v1alpha2.DockerExecutorArgs]</span> = None<span class="p">,</span>
+             <span class="nx">input_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_genomics_v1alpha2.PipelineParameterArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">output_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_genomics_v1alpha2.PipelineParameterArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">pipeline_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[_genomics_v1alpha2.PipelineResourcesArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a pipeline that can be run later. Create takes a Pipeline that has all f
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PipelineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipelineid_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique pipeline id that is generated by the service when CreatePipeline is called. Cannot be specified in the Pipeline used in the CreatePipelineRequest, and will be populated in the response to CreatePipeline and all subsequent Get and List calls. Indicates that the service has registered this pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +338,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +346,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#docker_nodejs" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerexecutor">pulumi.<wbr>Input<Docker<wbr>Executor<wbr>Args></a></span>
+        <span class="property-type"><a href="#dockerexecutor">Docker<wbr>Executor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the docker run information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#inputparameters_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Input parameters of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A user specified pipeline name that does not have to be unique. This name can be used for filtering Pipelines in ListPipelines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#outputparameters_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Pipeline<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Output parameters of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The project in which to create the pipeline. The caller must have WRITE access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineresources">pulumi.<wbr>Input<Pipeline<wbr>Resources<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelineresources">Pipeline<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies resource requirements for the pipeline run. Required fields: * minimumCpuCores * minimumRamGb{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipeline_id_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique pipeline id that is generated by the service when CreatePipeline is called. Cannot be specified in the Pipeline used in the CreatePipelineRequest, and will be populated in the response to CreatePipeline and all subsequent Get and List calls. Indicates that the service has registered this pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +406,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +414,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerexecutor">Docker<wbr>Executor<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dockerexecutor">Docker<wbr>Executor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the docker run information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#input_parameters_python" style="color: inherit; text-decoration: inherit;">input_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Input parameters of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A user specified pipeline name that does not have to be unique. This name can be used for filtering Pipelines in ListPipelines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#output_parameters_python" style="color: inherit; text-decoration: inherit;">output_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pipelineparameter">Pipeline<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Output parameters of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The project in which to create the pipeline. The caller must have WRITE access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineresources">Pipeline<wbr>Resources<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelineresources">Pipeline<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies resource requirements for the pipeline run. Required fields: * minimumCpuCores * minimumRamGb{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -891,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the disk to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmd_nodejs" style="color: inherit; text-decoration: inherit;">cmd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmd_python" style="color: inherit; text-decoration: inherit;">cmd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmd_nodejs" style="color: inherit; text-decoration: inherit;">cmd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cmd_python" style="color: inherit; text-decoration: inherit;">cmd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localcopy_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localcopy">pulumi.<wbr>Input<Local<wbr>Copy<wbr>Args></a></span>
+        <span class="property-type"><a href="#localcopy">Local<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1365,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_copy_python" style="color: inherit; text-decoration: inherit;">local_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localcopy">Local<wbr>Copy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localcopy">Local<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localcopy_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localcopyresponse">pulumi.<wbr>Input<Local<wbr>Copy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localcopyresponse">Local<wbr>Copy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_copy_python" style="color: inherit; text-decoration: inherit;">local_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localcopyresponse">Local<wbr>Copy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localcopyresponse">Local<wbr>Copy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the boot disk. Defaults to 10 (GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#disk">Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumcpucores_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Cpu<wbr>Cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of cores to use. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumramgb_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ram<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of RAM to use. Defaults to 3.75 (GB){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#noaddress_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the boot disk. Defaults to 10 (GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#disk">Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_cpu_cores_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>cpu_<wbr>cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of cores to use. Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ram_gb_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ram_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum amount of RAM to use. Defaults to 3.75 (GB){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#no_address_python" style="color: inherit; text-decoration: inherit;">no_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2007,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2015,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2023,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the boot disk. Defaults to 10 (GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2039,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumcpucores_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Cpu<wbr>Cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of cores to use. Defaults to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2047,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumramgb_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ram<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of RAM to use. Defaults to 3.75 (GB){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2055,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#noaddress_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine defined accelerator type. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit. Please see https://cloud.google.com/compute/docs/gpus/ for a list of available accelerator types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the boot disk. Defaults to 10 (GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2115,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_cpu_cores_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>cpu_<wbr>cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of cores to use. Defaults to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2123,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ram_gb_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ram_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum amount of RAM to use. Defaults to 3.75 (GB){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#no_address_python" style="color: inherit; text-decoration: inherit;">no_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to assign an external IP to the instance. This is an experimental feature that may go away. Defaults to false. Corresponds to `--no_address` flag for [gcloud compute instances create] (https://cloud.google.com/sdk/gcloud/reference/compute/instances/create). In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time. If you need to ssh into a private IP VM for debugging, you can ssh to a public VM and then ssh into the private VM's Internal IP. If noAddress is set, this pipeline run may only load docker images from Google Container Registry and not Docker Hub. Before using this, you must [configure access to Google services from internal IPs](https://cloud.google.com/compute/docs/configure-private-google-access#configuring_access_to_google_services_from_internal_ips).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use preemptible VMs. Defaults to `false`. In order to use this, must be true for both create time and run time. Cannot be true at run time if false at create time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Google Compute Engine availability zones to which resource creation will restricted. If empty, any zone may be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}

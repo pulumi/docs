@@ -20,19 +20,48 @@ Creates a HealthCheck resource in the specified project using the data included 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.GRPCHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.HTTP2HealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.HTTPHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.HTTPSHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.HealthCheckLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.SSLHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.TCPHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">udp_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.UDPHealthCheckArgs]]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.GRPCHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">health_check</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.HTTP2HealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.HTTPHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.HTTPSHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.HealthCheckLogConfigArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SSLHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.TCPHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">udp_health_check</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.UDPHealthCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionHealthCheck</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionHealthCheck</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionHealthCheck</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionHealthCheck</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionHealthCheck</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegionHealthCheckArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +96,32 @@ Creates a HealthCheck resource in the specified project using the data included 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegionHealthCheckArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -546,7 +585,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -554,7 +593,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -562,7 +601,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Region where the health check resides. Not applicable to global health checks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +609,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#checkintervalsec_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +617,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in 3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +625,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +633,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpchealthcheck">pulumi.<wbr>Input<GRPCHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#grpchealthcheck">GRPCHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +641,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +649,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#http2healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http2Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#http2healthcheck">pulumi.<wbr>Input<HTTP2Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#http2healthcheck">HTTP2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +657,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#httphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphealthcheck">pulumi.<wbr>Input<HTTPHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#httphealthcheck">HTTPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +665,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#httpshealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpshealthcheck">pulumi.<wbr>Input<HTTPSHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpshealthcheck">HTTPSHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +673,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +681,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +689,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">pulumi.<wbr>Input<Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +697,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +705,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +713,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +721,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#sslhealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslhealthcheck">pulumi.<wbr>Input<SSLHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslhealthcheck">SSLHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +729,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#tcphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcphealthcheck">pulumi.<wbr>Input<TCPHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcphealthcheck">TCPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +737,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +745,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +753,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#udphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#udphealthcheck">pulumi.<wbr>Input<UDPHealth<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#udphealthcheck">UDPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +761,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -734,7 +773,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -742,7 +781,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -750,7 +789,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Region where the health check resides. Not applicable to global health checks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +797,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +805,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in 3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +813,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +821,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpchealthcheck">GRPCHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grpchealthcheck">GRPCHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +829,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +837,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#http2healthcheck">HTTP2Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#http2healthcheck">HTTP2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +845,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphealthcheck">HTTPHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httphealthcheck">HTTPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +853,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpshealthcheck">HTTPSHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpshealthcheck">HTTPSHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +861,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +869,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +877,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +885,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +893,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +901,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +909,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslhealthcheck">SSLHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslhealthcheck">SSLHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +917,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcphealthcheck">TCPHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcphealthcheck">TCPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +925,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +933,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. If not specified, the default is TCP. Exactly one of the protocol-specific health check field must be specified, which must match type field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +941,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#udp_health_check_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#udphealthcheck">UDPHealth<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#udphealthcheck">UDPHealth<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +949,7 @@ The RegionHealthCheck resource accepts the following [input]({{< relref "/docs/i
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1118,7 @@ If not specified, gRPC health check follows behavior specified in port and portN
 <a href="#grpcservicename_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention:
 - Empty service_name means the overall status of all services at the backend.
@@ -1090,7 +1129,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1137,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1145,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1124,7 +1163,7 @@ If not specified, gRPC health check follows behavior specified in port and portN
 <a href="#grpc_service_name_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention:
 - Empty service_name means the overall status of all services at the backend.
@@ -1135,7 +1174,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1182,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1190,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-opti
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1261,7 +1300,7 @@ If not specified, gRPC health check follows behavior specified in port and portN
 <a href="#grpcservicename_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention:
 - Empty service_name means the overall status of all services at the backend.
@@ -1272,7 +1311,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1280,7 +1319,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1288,7 +1327,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1306,7 +1345,7 @@ If not specified, gRPC health check follows behavior specified in port and portN
 <a href="#grpc_service_name_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention:
 - Empty service_name means the overall status of all services at the backend.
@@ -1317,7 +1356,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request. Must be specified if port_name and port_specification are not set or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1364,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence. The port_name should conform to RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1372,7 @@ The grpc_service_name can only be ASCII.{{% /md %}}</dd><dt class="property-requ
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1501,7 +1540,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1548,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1556,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1564,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1539,7 +1578,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1586,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP/2 health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1594,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1602,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1614,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1622,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1630,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1638,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1613,7 +1652,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1660,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP/2 health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1668,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1676,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1838,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1807,7 +1846,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1854,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1862,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1837,7 +1876,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1845,7 +1884,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP/2 health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1853,7 +1892,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1861,7 +1900,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1873,7 +1912,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1881,7 +1920,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1889,7 +1928,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1897,7 +1936,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -1911,7 +1950,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1958,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP/2 health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1966,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1974,7 @@ If not specified, HTTP2 health check follows behavior specified in port and port
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2097,7 +2136,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2144,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2152,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2160,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2135,7 +2174,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2182,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2190,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2198,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2210,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2218,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2226,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2234,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2209,7 +2248,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2256,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2264,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2272,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2434,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2442,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2450,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2458,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2433,7 +2472,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2441,7 +2480,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2449,7 +2488,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2457,7 +2496,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2469,7 +2508,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2477,7 +2516,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2485,7 +2524,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2493,7 +2532,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2507,7 +2546,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2515,7 +2554,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2562,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2531,7 +2570,7 @@ If not specified, HTTP health check follows behavior specified in port and portN
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2693,7 +2732,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2740,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2748,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2756,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2731,7 +2770,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2739,7 +2778,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2786,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2755,7 +2794,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2806,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2814,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2783,7 +2822,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2791,7 +2830,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -2805,7 +2844,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2852,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2860,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2868,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2991,7 +3030,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2999,7 +3038,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3007,7 +3046,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3015,7 +3054,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3029,7 +3068,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3037,7 +3076,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3045,7 +3084,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3053,7 +3092,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#weightreportmode_nodejs" style="color: inherit; text-decoration: inherit;">weight<wbr>Report<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3104,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3073,7 +3112,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3081,7 +3120,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3089,7 +3128,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3103,7 +3142,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3111,7 +3150,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTPS health check request. The default value is /.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3119,7 +3158,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3127,7 +3166,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#weight_report_mode_python" style="color: inherit; text-decoration: inherit;">weight_<wbr>report_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Weight report mode. used for weighted Load Balancing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3165,7 +3204,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3216,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3215,7 +3254,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3227,7 +3266,7 @@ If not specified, HTTPS health check follows behavior specified in port and port
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3396,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3404,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3412,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3387,7 +3426,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3434,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3442,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3415,7 +3454,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3462,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3470,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3445,7 +3484,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3492,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3461,7 +3500,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3591,7 +3630,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3599,7 +3638,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3607,7 +3646,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3621,7 +3660,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3629,7 +3668,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3637,7 +3676,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3649,7 +3688,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3657,7 +3696,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3665,7 +3704,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3679,7 +3718,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3687,7 +3726,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3695,7 +3734,7 @@ If not specified, SSL health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3825,7 +3864,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3833,7 +3872,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3841,7 +3880,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3855,7 +3894,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3863,7 +3902,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3871,7 +3910,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3883,7 +3922,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3930,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3938,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -3913,7 +3952,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3921,7 +3960,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3929,7 +3968,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4059,7 +4098,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4067,7 +4106,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4075,7 +4114,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -4089,7 +4128,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4097,7 +4136,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4105,7 +4144,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4117,7 +4156,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the health check request. The default value is 80. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4125,7 +4164,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4133,7 +4172,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of following values:
 USE_FIXED_PORT: The port number in port is used for health checking.
@@ -4147,7 +4186,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4155,7 +4194,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4163,7 +4202,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4249,7 +4288,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The UDP port number for the health check request. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4257,7 +4296,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4265,7 +4304,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4273,7 +4312,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4285,7 +4324,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The UDP port number for the health check request. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4293,7 +4332,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4301,7 +4340,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4309,7 +4348,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4395,7 +4434,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The UDP port number for the health check request. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4442,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4411,7 +4450,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4419,7 +4458,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4431,7 +4470,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The UDP port number for the health check request. Valid values are 1 through 65535.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4439,7 +4478,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4447,7 +4486,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4455,7 +4494,7 @@ If not specified, TCP health check follows behavior specified in port and portNa
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.{{% /md %}}</dd></dl>
 {{% /choosable %}}

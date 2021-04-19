@@ -20,19 +20,38 @@ Submit a query at host level to be processed in the background. If the submissio
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csv_delimiter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">envgroup_hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">group_by_time_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">host_queries_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1QueryMetricArgs]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">output_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">report_definition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">csv_delimiter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">envgroup_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">group_by_time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">host_queries_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                          <span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1QueryMetricArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">output_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">report_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationHostQuery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationHostQuery</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationHostQuery</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationHostQuery</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationHostQuery</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationHostQueryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Submit a query at host level to be processed in the background. If the submissio
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationHostQueryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#hostqueriesid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Queries<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +431,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#csvdelimiter_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +439,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +447,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#envgrouphostname_nodejs" style="color: inherit; text-decoration: inherit;">envgroup<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#groupbytimeunit_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of rows that can be returned in the result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1querymetric">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Query<wbr>Metric<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1querymetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Query<wbr>Metric<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asynchronous Query Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#reportdefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asynchronous Report ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +523,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#host_queries_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>queries_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +539,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#csv_delimiter_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +547,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +555,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#envgroup_hostname_python" style="color: inherit; text-decoration: inherit;">envgroup_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#group_by_time_unit_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of rows that can be returned in the result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1querymetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Query<wbr>Metric<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1querymetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Query<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asynchronous Query Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The OrganizationHostQuery resource accepts the following [input]({{< relref "/do
 <a href="#report_definition_id_python" style="color: inherit; text-decoration: inherit;">report_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asynchronous Report ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query result will be unaccessable after this time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1037,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query result will be unaccessable after this time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1057,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_python" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Dimensions of the AsyncQuery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End timestamp of the query range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1191,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1199,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start timestamp of the query range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1215,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query GroupBy time unit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Dimensions of the AsyncQuery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End timestamp of the query range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1251,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1259,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start timestamp of the query range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1267,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query GroupBy time unit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1369,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias for the metric. Alias will be used to replace metric name in query results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aggregation function: avg, min, max, or sum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of `+`, `-`, `/`, `%`, `*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operand value should be provided when operator is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias for the metric. Alias will be used to replace metric name in query results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aggregation function: avg, min, max, or sum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of `+`, `-`, `/`, `%`, `*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operand value should be provided when operator is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,38 @@ Creates a new Consent in the parent consent store.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">consent_artifact</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">consent_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">consents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_healthcare_v1beta1.GoogleCloudHealthcareV1beta1ConsentPolicyArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">consent_artifact</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">consent_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">consents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.GoogleCloudHealthcareV1beta1ConsentPolicyArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetConsentStoreConsent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetConsentStoreConsent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetConsentStoreConsent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates a new Consent in the parent consent store.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetConsentStoreConsentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consentstoresid_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consentsid_nodejs" style="color: inherit; text-decoration: inherit;">consents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +439,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +447,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consentartifact_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a letter - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be associated with a given consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The time to live for this Consent from when it is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consent_stores_id_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consents_id_python" style="color: inherit; text-decoration: inherit;">consents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -518,7 +547,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +555,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#consent_artifact_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a letter - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be associated with a given consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Indicates the current state of this Consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The time to live for this Consent from when it is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The DatasetConsentStoreConsent resource accepts the following [input]({{< relref
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributedefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the name of an attribute defined in the consent store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_definition_id_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the name of an attribute defined in the consent store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributedefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the name of an attribute defined in the consent store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_definition_id_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the name of an attribute defined in the consent store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1167,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1229,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationrule_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">pulumi.<wbr>Input<Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceattributes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#attribute">Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1249,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_rule_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_attributes_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attribute">Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#attribute">Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationrule_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">pulumi.<wbr>Input<Expr<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1319,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceattributes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Attribute<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#attributeresponse">Attribute<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_rule_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_attributes_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributeresponse">Attribute<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#attributeresponse">Attribute<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.{{% /md %}}</dd></dl>
 {{% /choosable %}}

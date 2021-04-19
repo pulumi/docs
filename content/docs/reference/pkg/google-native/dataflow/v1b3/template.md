@@ -20,19 +20,31 @@ Creates a Cloud Dataflow job from a template.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Template</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Template</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Template</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataflow_v1b3.RuntimeEnvironmentArgs]]</span> = None<span class="p">, </span><span class="nx">gcs_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Template</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.RuntimeEnvironmentArgs]</span> = None<span class="p">,</span>
+             <span class="nx">gcs_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Template</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Template</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Template</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Template</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Template</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Creates a Cloud Dataflow job from a template.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +304,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeenvironment">pulumi.<wbr>Input<Runtime<wbr>Environment<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeenvironment">Runtime<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The runtime environment for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +312,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#gcspath_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The job name to use for the created job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The runtime parameters to pass to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +356,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeenvironment">Runtime<wbr>Environment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeenvironment">Runtime<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The runtime environment for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -342,7 +364,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#gcs_path_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The job name to use for the created job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The runtime parameters to pass to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -677,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#helptext_nodejs" style="color: inherit; text-decoration: inherit;">help<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The help text to display for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -685,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isoptional_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether the parameter is optional. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -693,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The label to display for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -701,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -709,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramtype_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of the parameter. Used for selecting input picker.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -717,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_nodejs" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Regexes that the parameter must match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#help_text_python" style="color: inherit; text-decoration: inherit;">help_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The help text to display for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether the parameter is optional. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -745,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The label to display for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -753,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -761,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#param_type_python" style="color: inherit; text-decoration: inherit;">param_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of the parameter. Used for selecting input picker.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -769,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_python" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Regexes that the parameter must match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1047,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalexperiments_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaluserlabels_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>User<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1kg", "count": "3" }.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1063,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstempdirvalidation_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Temp<wbr>Dir<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to bypass the safety checks for the job's temporary directory. Use with caution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1071,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablestreamingengine_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Streaming<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Streaming Engine for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the Cloud KMS key for the job. Key format is: projects//locations//keyRings//cryptoKeys/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job. Defaults to the value from the template if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of Google Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numworkers_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial number of Google Compute Engine instnaces for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the service account to run the job as.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templocation_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerregion_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerzone_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_experiments_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Additional experiment flags for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_user_labels_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1kg", "count": "3" }.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_temp_dir_validation_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>temp_<wbr>dir_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to bypass the safety checks for the job's temporary directory. Use with caution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_streaming_engine_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>streaming_<wbr>engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Streaming Engine for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the Cloud KMS key for the job. Key format is: projects//locations//keyRings//cryptoKeys/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job. Defaults to the value from the template if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of Google Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_workers_python" style="color: inherit; text-decoration: inherit;">num_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of Google Compute Engine instnaces for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the service account to run the job as.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_location_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_region_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_zone_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametermetadataresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Parameter<wbr>Metadata<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1361,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkinfo_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkinforesponse">pulumi.<wbr>Input<SDKInfo<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdkinforesponse">SDKInfo<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SDK Info for the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1381,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_info_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkinforesponse">SDKInfo<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdkinforesponse">SDKInfo<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SDK Info for the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The SDK Language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1443,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The SDK version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The SDK Language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The SDK version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1533,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1541,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1549,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1569,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1577,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1647,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A description of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1655,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametermetadataresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Parameter<wbr>Metadata<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1675,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A description of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#parametermetadataresponse">Parameter<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}

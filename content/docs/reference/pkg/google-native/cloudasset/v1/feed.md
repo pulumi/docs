@@ -20,19 +20,35 @@ Creates a feed in a parent project/folder/organization to listen to its asset up
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudasset_v1.ExprArgs]]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudasset_v1.FeedOutputConfigArgs]]</span> = None<span class="p">, </span><span class="nx">feeds_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">v1_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">v1_id1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">asset_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">asset_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.ExprArgs]</span> = None<span class="p">,</span>
+         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.FeedOutputConfigArgs]</span> = None<span class="p">,</span>
+         <span class="nx">feeds_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">v1_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">v1_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeed</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feed</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeed</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feed</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feed</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeedArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a feed in a parent project/folder/organization to listen to its asset up
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FeedArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feedsid_nodejs" style="color: inherit; text-decoration: inherit;">feeds<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#v1id_nodejs" style="color: inherit; text-decoration: inherit;">v1Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#v1id1_nodejs" style="color: inherit; text-decoration: inherit;">v1Id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#assetnames_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#assettypes_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">pulumi.<wbr>Input<Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, `expression` field in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a TemporalAsset with name `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr` are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes#feed_with_condition) for detailed instructions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feedid_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. This is the client-assigned asset feed identifier and it needs to be unique under a specific parent project/folder/organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feedoutputconfig_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedoutputconfig">pulumi.<wbr>Input<Feed<wbr>Output<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#feedoutputconfig">Feed<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Feed output configuration defining where the asset updates are published to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned feed identifier must be unique within the parent project/folder/organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feeds_id_python" style="color: inherit; text-decoration: inherit;">feeds_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#v1_id_python" style="color: inherit; text-decoration: inherit;">v1_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#v1_id1_python" style="color: inherit; text-decoration: inherit;">v1_<wbr>id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#asset_names_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#asset_types_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, `expression` field in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a TemporalAsset with name `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr` are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes#feed_with_condition) for detailed instructions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feed_id_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. This is the client-assigned asset feed identifier and it needs to be unique under a specific parent project/folder/organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#feed_output_config_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>output_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedoutputconfig">Feed<wbr>Output<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#feedoutputconfig">Feed<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Feed output configuration defining where the asset updates are published to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned feed identifier must be unique within the parent project/folder/organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -681,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -807,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestination">pulumi.<wbr>Input<Pubsub<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestinationresponse">pulumi.<wbr>Input<Pubsub<wbr>Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

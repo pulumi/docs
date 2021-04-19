@@ -20,19 +20,33 @@ Creates a new table in the specified instance. The table can be created with a f
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">granularity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">initial_splits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_bigtableadmin_v2.SplitArgs]]]]</span> = None<span class="p">, </span><span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tables_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">column_families</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">granularity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">initial_splits</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigtableadmin_v2.SplitArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">tables_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a new table in the specified instance. The table can be created with a f
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceTableArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instancesid_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tablesid_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#columnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#initialsplits_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Splits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#split">pulumi.<wbr>Input<pulumi.<wbr>Input<Split<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#split">Split<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The optional list of row keys that will be used to initially split the table into several tablets (tablets are similar to HBase regions). Given two split keys, `s1` and `s2`, three tablets will be created, spanning the key ranges: `[, s1), [s1, s2), [s2, )`. Example: * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",` `"other", "zz"]` * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]` * Key assignment: - Tablet 1 `[, apple) => {"a"}.` - Tablet 2 `[apple, customer_1) => {"apple", "custom"}.` - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.` - Tablet 4 `[customer_2, other) => {"customer_2"}.` - Tablet 5 `[other, ) => {"other", "zz"}.`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name by which the new table should be referred to within the parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`. Maximum 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instances_id_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tables_id_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#initial_splits_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>splits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#split">Split<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#split">Split<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The optional list of row keys that will be used to initially split the table into several tablets (tablets are similar to HBase regions). Given two split keys, `s1` and `s2`, three tablets will be created, spanning the key ranges: `[, s1), [s1, s2), [s2, )`. Example: * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",` `"other", "zz"]` * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]` * Key assignment: - Tablet 1 `[, apple) => {"a"}.` - Tablet 2 `[apple, customer_1) => {"apple", "custom"}.` - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.` - Tablet 4 `[customer_2, other) => {"customer_2"}.` - Tablet 5 `[other, ) => {"other", "zz"}.`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The InstanceTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name by which the new table should be referred to within the parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`. Maximum 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -653,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This time that the backup was finished. Row data in the backup will be no newer than this timestamp.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -661,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetable_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table the backup was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -669,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the backup was started. Row data in the backup will be no older than this timestamp.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -681,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -689,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This time that the backup was finished. Row data in the backup will be no newer than this timestamp.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -697,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_table_python" style="color: inherit; text-decoration: inherit;">source_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table the backup was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the backup was started. Row data in the backup will be no older than this timestamp.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupinfo_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinforesponse">pulumi.<wbr>Input<Backup<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupinforesponse">Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the backup used to restore the table. The backup may no longer exist.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the restore source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_info_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinforesponse">Backup<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupinforesponse">Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the backup used to restore the table. The backup may no longer exist.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the restore source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Row key to use as an initial tablet boundary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Row key to use as an initial tablet boundary.{{% /md %}}</dd></dl>
 {{% /choosable %}}

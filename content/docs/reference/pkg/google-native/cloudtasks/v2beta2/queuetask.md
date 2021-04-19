@@ -20,19 +20,37 @@ Creates a task and adds it to a queue. Tasks cannot be updated after creation; t
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_http_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.AppEngineHttpRequestArgs]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pull_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.PullMessageArgs]]</span> = None<span class="p">, </span><span class="nx">queues_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">response_view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schedule_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.TaskStatusArgs]]</span> = None<span class="p">, </span><span class="nx">tasks_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">app_engine_http_request</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.AppEngineHttpRequestArgs]</span> = None<span class="p">,</span>
+              <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">pull_message</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.PullMessageArgs]</span> = None<span class="p">,</span>
+              <span class="nx">queues_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">response_view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">schedule_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.TaskStatusArgs]</span> = None<span class="p">,</span>
+              <span class="nx">tasks_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueTask</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueTask</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueueTask</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">QueueTask</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">QueueTask</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">QueueTaskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a task and adds it to a queue. Tasks cannot be updated after creation; t
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">QueueTaskArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#queuesid_nodejs" style="color: inherit; text-decoration: inherit;">queues<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +422,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tasksid_nodejs" style="color: inherit; text-decoration: inherit;">tasks<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#appenginehttprequest_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Http<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginehttprequest">pulumi.<wbr>Input<App<wbr>Engine<wbr>Http<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#appenginehttprequest">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP request that is sent to the task's target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the task was created. `create_time` will be truncated to the nearest second.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#pullmessage_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pullmessage">pulumi.<wbr>Input<Pull<wbr>Message<wbr>Args></a></span>
+        <span class="property-type"><a href="#pullmessage">Pull<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#responseview_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstatus">pulumi.<wbr>Input<Task<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskstatus">Task<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The task status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#queues_id_python" style="color: inherit; text-decoration: inherit;">queues_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +522,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tasks_id_python" style="color: inherit; text-decoration: inherit;">tasks_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#app_engine_http_request_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>http_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginehttprequest">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appenginehttprequest">App<wbr>Engine<wbr>Http<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP request that is sent to the task's target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the task was created. `create_time` will be truncated to the nearest second.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#pull_message_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pullmessage">Pull<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pullmessage">Pull<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#response_view_python" style="color: inherit; text-decoration: inherit;">response_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskstatus">Task<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskstatus">Task<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The task status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The QueueTask resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The view specifies which subset of the Task has been returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appenginerouting_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginerouting">pulumi.<wbr>Input<App<wbr>Engine<wbr>Routing<wbr>Args></a></span>
+        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This header can be modified, but Cloud Tasks will append `"AppEngine-Google; (+http://code.google.com/appengine)"` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `"application/json"`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativeurl_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative URL. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_engine_routing_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This header can be modified, but Cloud Tasks will append `"AppEngine-Google; (+http://code.google.com/appengine)"` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `"application/json"`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_url_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URL. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appenginerouting_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineroutingresponse">pulumi.<wbr>Input<App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This header can be modified, but Cloud Tasks will append `"AppEngine-Google; (+http://code.google.com/appengine)"` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `"application/json"`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -927,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -935,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativeurl_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative URL. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -947,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_engine_routing_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Task-level setting for App Engine routing. If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. Repeated headers are not supported but a header value can contain commas. Cloud Tasks sets some headers to default values: * `User-Agent`: By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This header can be modified, but Cloud Tasks will append `"AppEngine-Google; (+http://code.google.com/appengine)"` to the modified `User-Agent`. If the task has a payload, Cloud Tasks sets the following headers: * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`. The default can be overridden by explicitly setting `Content-Type` to a particular media type when the task is created. For example, `Content-Type` can be set to `"application/json"`. * `Content-Length`: This is computed by Cloud Tasks. This value is output only. It cannot be changed. The headers below cannot be set or overridden: * `Host` * `X-Google-*` * `X-AppEngine-*` In addition, Cloud Tasks sets some headers when the task is dispatched, such as headers containing information about the task; see [request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers). These headers are set only when the task is dispatched, so they are not visible when the task is returned in a Cloud Tasks response. Although there is no specific limit for the maximum number of headers or the size, there is a limit on the maximum size of the Task. For more information, see the CreateTask documentation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request. The default is POST. The app's request handler for the task's target URL must be able to handle HTTP requests with this http_method, otherwise the task attempt fails with error code 405 (Method Not Allowed). See [Writing a push task request handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler) and the App Engine documentation for your runtime on [How Requests are Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -971,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Payload. The payload will be sent as the HTTP message body. A message body, and thus a payload, is allowed only if the HTTP method is POST or PUT. It is an error to set a data payload on a task with an incompatible HttpMethod.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_url_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URL. The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a path and query string arguments. If the relative URL is empty, then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1211,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispatchtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsestatus_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">pulumi.<wbr>Input<Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetime_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispatch_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_status_python" style="color: inherit; text-decoration: inherit;">response_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_time_python" style="color: inherit; text-decoration: inherit;">response_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispatchtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsestatus_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">pulumi.<wbr>Input<Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsetime_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1539,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispatch_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_status_python" style="color: inherit; text-decoration: inherit;">response_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statusresponse">Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The response from the target for this attempt. If the task has not been attempted or the task is currently running then the response status is unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_time_python" style="color: inherit; text-decoration: inherit;">response_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A data payload consumed by the worker to execute the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker can lease tasks with the same tag using filter. For example, if you want to aggregate the events associated with a specific user once a day, you could tag tasks with the user ID. The task's tag can only be set when the task is created. The tag must be less than 500 characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1637,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A data payload consumed by the worker to execute the task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker can lease tasks with the same tag using filter. For example, if you want to aggregate the events associated with a specific user once a day, you could tag tasks with the user ID. The task's tag can only be set when the task is created. The tag must be less than 500 characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A data payload consumed by the worker to execute the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker can lease tasks with the same tag using filter. For example, if you want to aggregate the events associated with a specific user once a day, you could tag tasks with the user ID. The task's tag can only be set when the task is created. The tag must be less than 500 characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A data payload consumed by the worker to execute the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker can lease tasks with the same tag using filter. For example, if you want to aggregate the events associated with a specific user once a day, you could tag tasks with the user ID. The task's tag can only be set when the task is created. The tag must be less than 500 characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1825,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1911,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1947,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1955,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attemptdispatchcount_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Dispatch<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attemptresponsecount_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Response<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of attempts which have received a response. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstattemptstatus_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Attempt<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatus">pulumi.<wbr>Input<Attempt<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastattemptstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attempt<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatus">pulumi.<wbr>Input<Attempt<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's last attempt. This field is not calculated for pull tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_dispatch_count_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>dispatch_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_response_count_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>response_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of attempts which have received a response. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_attempt_status_python" style="color: inherit; text-decoration: inherit;">first_<wbr>attempt_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_attempt_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attempt_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attemptstatus">Attempt<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's last attempt. This field is not calculated for pull tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attemptdispatchcount_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Dispatch<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attemptresponsecount_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Response<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of attempts which have received a response. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstattemptstatus_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Attempt<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatusresponse">pulumi.<wbr>Input<Attempt<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastattemptstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attempt<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatusresponse">pulumi.<wbr>Input<Attempt<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's last attempt. This field is not calculated for pull tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_dispatch_count_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>dispatch_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_response_count_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>response_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of attempts which have received a response. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_attempt_status_python" style="color: inherit; text-decoration: inherit;">first_<wbr>attempt_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_attempt_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attempt_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attemptstatusresponse">Attempt<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the task's last attempt. This field is not calculated for pull tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}

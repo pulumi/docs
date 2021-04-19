@@ -20,19 +20,36 @@ Creates a new WorkloadIdentityPoolProvider in a WorkloadIdentityPool. You cannot
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attribute_condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">attribute_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">aws</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_iam_v1.AwsArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">oidc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_iam_v1.OidcArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">providers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">workload_identity_pools_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">attribute_condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">attribute_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">aws</span><span class="p">:</span> <span class="nx">Optional[_iam_v1.AwsArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">oidc</span><span class="p">:</span> <span class="nx">Optional[_iam_v1.OidcArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">providers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">workload_identity_pools_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadIdentityPoolProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkloadIdentityPoolProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkloadIdentityPoolProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a new WorkloadIdentityPoolProvider in a WorkloadIdentityPool. You cannot
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkloadIdentityPoolProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +397,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#providersid_nodejs" style="color: inherit; text-decoration: inherit;">providers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +405,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#workloadidentitypoolsid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +413,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#attributecondition_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#attributemapping_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Maps attributes from authentication credentials issued by an external identity provider to Google Cloud attributes, such as `subject` and `segment`. Each key must be a string specifying the Google Cloud IAM attribute to map to. The following keys are supported: * `google.subject`: The principal IAM is authenticating. You can reference this value in IAM bindings. This is also the subject that appears in Cloud Logging logs. Cannot exceed 127 characters. * `google.groups`: Groups the external identity belongs to. You can grant groups access to resources using an IAM `principalSet` binding; access applies to all members of the group. You can also provide custom attributes by specifying `attribute.{custom_attribute}`, where `{custom_attribute}` is the name of the custom attribute to be mapped. You can define a maximum of 50 custom attributes. The maximum length of a mapped attribute key is 100 characters, and the key may only contain the characters [a-z0-9_]. You can reference these attributes in IAM policies to define fine-grained access for a workload to Google Cloud resources. For example: * `google.subject`: `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}` * `google.groups`: `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}` * `attribute.{custom_attribute}`: `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}` Each value must be a [Common Expression Language] (https://opensource.google/projects/cel) function that maps an identity provider credential to the normalized attribute specified by the corresponding map key. You can use the `assertion` keyword in the expression to access a JSON representation of the authentication credential issued by the provider. The maximum length of an attribute mapping expression is 2048 characters. When evaluated, the total size of all mapped attributes must not exceed 8KB. For AWS providers, if no attribute mapping is defined, the following default mapping applies: ``` { "google.subject":"assertion.arn", "attribute.aws_role": "assertion.arn.contains('assumed-role')" " ? assertion.arn.extract('{account_arn}assumed-role/')" " + 'assumed-role/'" " + assertion.arn.extract('assumed-role/{role_name}/')" " : assertion.arn", } ``` If any custom attribute mappings are defined, they must include a mapping to the `google.subject` attribute. For OIDC providers, you must supply a custom mapping, which must include the `google.subject` attribute. For example, the following maps the `sub` claim of the incoming credential to the `subject` attribute on a Google token: ``` {"google.subject": "assertion.sub"} ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aws">pulumi.<wbr>Input<Aws<wbr>Args></a></span>
+        <span class="property-type"><a href="#aws">Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens. However, existing tokens still grant access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#oidc_nodejs" style="color: inherit; text-decoration: inherit;">oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oidc">pulumi.<wbr>Input<Oidc<wbr>Args></a></span>
+        <span class="property-type"><a href="#oidc">Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +489,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#providers_id_python" style="color: inherit; text-decoration: inherit;">providers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -470,7 +497,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#workload_identity_pools_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pools_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +505,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#attribute_condition_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#attribute_mapping_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Maps attributes from authentication credentials issued by an external identity provider to Google Cloud attributes, such as `subject` and `segment`. Each key must be a string specifying the Google Cloud IAM attribute to map to. The following keys are supported: * `google.subject`: The principal IAM is authenticating. You can reference this value in IAM bindings. This is also the subject that appears in Cloud Logging logs. Cannot exceed 127 characters. * `google.groups`: Groups the external identity belongs to. You can grant groups access to resources using an IAM `principalSet` binding; access applies to all members of the group. You can also provide custom attributes by specifying `attribute.{custom_attribute}`, where `{custom_attribute}` is the name of the custom attribute to be mapped. You can define a maximum of 50 custom attributes. The maximum length of a mapped attribute key is 100 characters, and the key may only contain the characters [a-z0-9_]. You can reference these attributes in IAM policies to define fine-grained access for a workload to Google Cloud resources. For example: * `google.subject`: `principal://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/subject/{value}` * `google.groups`: `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/group/{value}` * `attribute.{custom_attribute}`: `principalSet://iam.googleapis.com/projects/{project}/locations/{location}/workloadIdentityPools/{pool}/attribute.{custom_attribute}/{value}` Each value must be a [Common Expression Language] (https://opensource.google/projects/cel) function that maps an identity provider credential to the normalized attribute specified by the corresponding map key. You can use the `assertion` keyword in the expression to access a JSON representation of the authentication credential issued by the provider. The maximum length of an attribute mapping expression is 2048 characters. When evaluated, the total size of all mapped attributes must not exceed 8KB. For AWS providers, if no attribute mapping is defined, the following default mapping applies: ``` { "google.subject":"assertion.arn", "attribute.aws_role": "assertion.arn.contains('assumed-role')" " ? assertion.arn.extract('{account_arn}assumed-role/')" " + 'assumed-role/'" " + assertion.arn.extract('assumed-role/{role_name}/')" " : assertion.arn", } ``` If any custom attribute mappings are defined, they must include a mapping to the `google.subject` attribute. For OIDC providers, you must supply a custom mapping, which must include the `google.subject` attribute. For example, the following maps the `sub` claim of the incoming credential to the `subject` attribute on a Google token: ``` {"google.subject": "assertion.sub"} ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aws">Aws<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aws">Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens. However, existing tokens still grant access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 <a href="#oidc_python" style="color: inherit; text-decoration: inherit;">oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oidc">Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oidc">Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The AWS account ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The AWS account ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -743,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The AWS account ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The AWS account ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issueruri_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The OIDC issuer URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_uri_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The OIDC issuer URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issueruri_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The OIDC issuer URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_uri_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The OIDC issuer URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}

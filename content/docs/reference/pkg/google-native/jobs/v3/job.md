@@ -20,19 +20,56 @@ Creates a new job. Typically, the job becomes searchable within 10 seconds, but 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">application_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_jobs_v3.ApplicationInfoArgs]]</span> = None<span class="p">, </span><span class="nx">company_display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">compensation_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_jobs_v3.CompensationInfoArgs]]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">degree_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">derived_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_jobs_v3.JobDerivedInfoArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">employment_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">incentives</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_benefits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">job_end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">jobs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">posting_create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">posting_expire_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">posting_publish_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">posting_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">posting_update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">processing_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_jobs_v3.ProcessingOptionsArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">promotion_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">qualifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">requisition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">responsibilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">application_info</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.ApplicationInfoArgs]</span> = None<span class="p">,</span>
+        <span class="nx">company_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">company_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">compensation_info</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.CompensationInfoArgs]</span> = None<span class="p">,</span>
+        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">degree_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">department</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">derived_info</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.JobDerivedInfoArgs]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">employment_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">incentives</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_benefits</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">job_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_publish_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">posting_update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">processing_options</span><span class="p">:</span> <span class="nx">Optional[_jobs_v3.ProcessingOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">promotion_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">qualifications</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">requisition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">responsibilities</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +104,32 @@ Creates a new job. Typically, the job becomes searchable within 10 seconds, but 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -674,7 +721,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobsid_nodejs" style="color: inherit; text-decoration: inherit;">jobs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -682,7 +729,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +737,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional but strongly recommended for the best service experience. Location(s) where the employer is looking to hire for this job posting. Specifying the full street address(es) of the hiring location enables better API results, especially job searches by commute time. At most 50 locations are allowed for best search performance. If a job has more locations, it is suggested to split it into multiple jobs with unique requisition_ids (e.g. 'ReqA' becomes 'ReqA-1', 'ReqA-2', etc.) as multiple jobs with the same company_name, language_code and requisition_id are not allowed. If the original requisition_id must be preserved, a custom field should be used for storage. It is also suggested to group the locations that close to each other in the same job for better search experience. The maximum number of allowed characters is 500.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +745,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#applicationinfo_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinfo">pulumi.<wbr>Input<Application<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationinfo">Application<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. At least one field within ApplicationInfo must be specified. Job application information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +753,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#companydisplayname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the company listing the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +761,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the company listing the job, such as "projects/api-test-project/companies/foo".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +769,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#compensationinfo_nodejs" style="color: inherit; text-decoration: inherit;">compensation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationinfo">pulumi.<wbr>Input<Compensation<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationinfo">Compensation<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +777,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A map of fields to hold both filterable and non-filterable custom job attributes that are not covered by the provided structured fields. The keys of the map are strings up to 64 bytes and must match the pattern: a-zA-Z*. For example, key0LikeThis or KEY_1_LIKE_THIS. At most 100 filterable and at most 100 unfilterable keys are supported. For filterable `string_values`, across all keys at most 200 values are allowed, with each string no more than 255 characters. For unfilterable `string_values`, the maximum total size of `string_values` across all keys is 50KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +785,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degreetypes_nodejs" style="color: inherit; text-decoration: inherit;">degree<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +793,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#department_nodejs" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The department or functional area within the company with the open position. The maximum number of allowed characters is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +801,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#derivedinfo_nodejs" style="color: inherit; text-decoration: inherit;">derived<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobderivedinfo">pulumi.<wbr>Input<Job<wbr>Derived<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobderivedinfo">Job<wbr>Derived<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Derived details about the job posting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +809,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The description of the job, which typically includes a multi-paragraph description of the company and related information. Separate fields are provided on the job object for responsibilities, qualifications, and other job characteristics. Use of these separate job fields is recommended. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 100,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +817,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employmenttypes_nodejs" style="color: inherit; text-decoration: inherit;">employment<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +825,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#incentives_nodejs" style="color: inherit; text-decoration: inherit;">incentives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A description of bonus, commission, and other compensation incentives associated with the job not including salary or pay. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +833,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobbenefits_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +841,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobendtime_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The end timestamp of the job. Typically this field is used for contracting engagements. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +849,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#joblevel_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +857,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobstarttime_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The start timestamp of the job in UTC time zone. Typically this field is used for contracting engagements. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +865,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The language of the posting. This field is distinct from any requirements for fluency that are associated with the job. Language codes must be in BCP-47 format, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external" target="_blank" }. If this field is unspecified and Job.description is present, detected language code based on Job.description is assigned, otherwise defaults to 'en_US'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +873,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required during job update. The resource name for the job. This is generated by the service when a job is created. The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234". Use of this field in job queries and API calls is preferred over the use of requisition_id since this value is unique.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +881,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingcreatetime_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when this job posting was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +889,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingexpiretime_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional but strongly recommended for the best service experience. The expiration timestamp of the job. After this timestamp, the job is marked as expired, and it no longer appears in search results. The expired job can't be deleted or listed by the DeleteJob and ListJobs APIs, but it can be retrieved with the GetJob API or updated with the UpdateJob API. An expired job can be updated and opened again by using a future expiration timestamp. Updating an expired job fails if there is another existing open job with same company_name, language_code and requisition_id. The expired jobs are retained in our system for 90 days. However, the overall expired job count cannot exceed 3 times the maximum of open jobs count over the past week, otherwise jobs with earlier expire time are cleaned first. Expired jobs are no longer accessible after they are cleaned out. Invalid timestamps are ignored, and treated as expire time not provided. Timestamp before the instant request is made is considered valid, the job will be treated as expired immediately. If this value is not provided at the time of job creation or is invalid, the job posting expires after 30 days from the job's creation time. For example, if the job was created on 2017/01/01 13:00AM UTC with an unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC. If this value is not provided on job update, it depends on the field masks set by UpdateJobRequest.update_mask. If the field masks include expiry_time, or the masks are empty meaning that every field is updated, the job posting expires after 30 days from the job's last update time. Otherwise the expiration date isn't updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +897,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingpublishtime_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Publish<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The timestamp this job posting was most recently published. The default value is the time the request arrives at the server. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +905,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingregion_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +913,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#postingupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">posting<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when this job posting was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +921,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#processingoptions_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processingoptions">pulumi.<wbr>Input<Processing<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#processingoptions">Processing<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for job processing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +929,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#promotionvalue_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. A promotion value of the job, as determined by the client. The value determines the sort order of the jobs returned when searching for jobs using the featured jobs search call, with higher promotional values being returned first and ties being resolved by relevance sort. Only the jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH. Default value is 0, and negative values are treated as 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +937,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#qualifications_nodejs" style="color: inherit; text-decoration: inherit;">qualifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A description of the qualifications required to perform the job. The use of this field is recommended as an alternative to using the more general description field. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +945,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requisitionid_nodejs" style="color: inherit; text-decoration: inherit;">requisition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The requisition ID, also referred to as the posting ID, assigned by the client to identify a job. This field is intended to be used by clients for client identification and tracking of postings. A job is not allowed to be created if there is another job with the same [company_name], language_code and requisition_id. The maximum number of allowed characters is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +953,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#responsibilities_nodejs" style="color: inherit; text-decoration: inherit;">responsibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A description of job responsibilities. The use of this field is recommended as an alternative to using the more general description field. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +961,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The title of the job, such as "Software Engineer" The maximum number of allowed characters is 500.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -926,7 +973,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobs_id_python" style="color: inherit; text-decoration: inherit;">jobs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -934,7 +981,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +989,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional but strongly recommended for the best service experience. Location(s) where the employer is looking to hire for this job posting. Specifying the full street address(es) of the hiring location enables better API results, especially job searches by commute time. At most 50 locations are allowed for best search performance. If a job has more locations, it is suggested to split it into multiple jobs with unique requisition_ids (e.g. 'ReqA' becomes 'ReqA-1', 'ReqA-2', etc.) as multiple jobs with the same company_name, language_code and requisition_id are not allowed. If the original requisition_id must be preserved, a custom field should be used for storage. It is also suggested to group the locations that close to each other in the same job for better search experience. The maximum number of allowed characters is 500.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +997,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#application_info_python" style="color: inherit; text-decoration: inherit;">application_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinfo">Application<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationinfo">Application<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. At least one field within ApplicationInfo must be specified. Job application information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1005,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#company_display_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the company listing the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1013,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the company listing the job, such as "projects/api-test-project/companies/foo".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1021,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#compensation_info_python" style="color: inherit; text-decoration: inherit;">compensation_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationinfo">Compensation<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationinfo">Compensation<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1029,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A map of fields to hold both filterable and non-filterable custom job attributes that are not covered by the provided structured fields. The keys of the map are strings up to 64 bytes and must match the pattern: a-zA-Z*. For example, key0LikeThis or KEY_1_LIKE_THIS. At most 100 filterable and at most 100 unfilterable keys are supported. For filterable `string_values`, across all keys at most 200 values are allowed, with each string no more than 255 characters. For unfilterable `string_values`, the maximum total size of `string_values` across all keys is 50KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1037,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#degree_types_python" style="color: inherit; text-decoration: inherit;">degree_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The desired education degrees for the job, such as Bachelors, Masters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1045,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#department_python" style="color: inherit; text-decoration: inherit;">department</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The department or functional area within the company with the open position. The maximum number of allowed characters is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1053,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#derived_info_python" style="color: inherit; text-decoration: inherit;">derived_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobderivedinfo">Job<wbr>Derived<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobderivedinfo">Job<wbr>Derived<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Derived details about the job posting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1061,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The description of the job, which typically includes a multi-paragraph description of the company and related information. Separate fields are provided on the job object for responsibilities, qualifications, and other job characteristics. Use of these separate job fields is recommended. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 100,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1069,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#employment_types_python" style="color: inherit; text-decoration: inherit;">employment_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The employment type(s) of a job, for example, full time or part time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1077,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#incentives_python" style="color: inherit; text-decoration: inherit;">incentives</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A description of bonus, commission, and other compensation incentives associated with the job not including salary or pay. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1085,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_benefits_python" style="color: inherit; text-decoration: inherit;">job_<wbr>benefits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The benefits included with the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1093,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_end_time_python" style="color: inherit; text-decoration: inherit;">job_<wbr>end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The end timestamp of the job. Typically this field is used for contracting engagements. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1101,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_level_python" style="color: inherit; text-decoration: inherit;">job_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The experience level associated with the job, such as "Entry Level".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1109,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_start_time_python" style="color: inherit; text-decoration: inherit;">job_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The start timestamp of the job in UTC time zone. Typically this field is used for contracting engagements. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1117,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The language of the posting. This field is distinct from any requirements for fluency that are associated with the job. Language codes must be in BCP-47 format, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external" target="_blank" }. If this field is unspecified and Job.description is present, detected language code based on Job.description is assigned, otherwise defaults to 'en_US'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1125,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required during job update. The resource name for the job. This is generated by the service when a job is created. The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234". Use of this field in job queries and API calls is preferred over the use of requisition_id since this value is unique.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1133,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_create_time_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when this job posting was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1141,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_expire_time_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional but strongly recommended for the best service experience. The expiration timestamp of the job. After this timestamp, the job is marked as expired, and it no longer appears in search results. The expired job can't be deleted or listed by the DeleteJob and ListJobs APIs, but it can be retrieved with the GetJob API or updated with the UpdateJob API. An expired job can be updated and opened again by using a future expiration timestamp. Updating an expired job fails if there is another existing open job with same company_name, language_code and requisition_id. The expired jobs are retained in our system for 90 days. However, the overall expired job count cannot exceed 3 times the maximum of open jobs count over the past week, otherwise jobs with earlier expire time are cleaned first. Expired jobs are no longer accessible after they are cleaned out. Invalid timestamps are ignored, and treated as expire time not provided. Timestamp before the instant request is made is considered valid, the job will be treated as expired immediately. If this value is not provided at the time of job creation or is invalid, the job posting expires after 30 days from the job's creation time. For example, if the job was created on 2017/01/01 13:00AM UTC with an unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC. If this value is not provided on job update, it depends on the field masks set by UpdateJobRequest.update_mask. If the field masks include expiry_time, or the masks are empty meaning that every field is updated, the job posting expires after 30 days from the job's last update time. Otherwise the expiration date isn't updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1149,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_publish_time_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>publish_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The timestamp this job posting was most recently published. The default value is the time the request arrives at the server. Invalid timestamps are ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1157,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_region_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The job PostingRegion (for example, state, country) throughout which the job is available. If this field is set, a LocationFilter in a search query within the job region finds this job posting if an exact location match isn't specified. If this field is set to PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the same location level as this field is strongly recommended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1165,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#posting_update_time_python" style="color: inherit; text-decoration: inherit;">posting_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when this job posting was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1173,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#processing_options_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processingoptions">Processing<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#processingoptions">Processing<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for job processing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1181,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#promotion_value_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. A promotion value of the job, as determined by the client. The value determines the sort order of the jobs returned when searching for jobs using the featured jobs search call, with higher promotional values being returned first and ties being resolved by relevance sort. Only the jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH. Default value is 0, and negative values are treated as 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1189,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#qualifications_python" style="color: inherit; text-decoration: inherit;">qualifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A description of the qualifications required to perform the job. The use of this field is recommended as an alternative to using the more general description field. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1197,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requisition_id_python" style="color: inherit; text-decoration: inherit;">requisition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The requisition ID, also referred to as the posting ID, assigned by the client to identify a job. This field is intended to be used by clients for client identification and tracking of postings. A job is not allowed to be created if there is another job with the same [company_name], language_code and requisition_id. The maximum number of allowed characters is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1205,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#responsibilities_python" style="color: inherit; text-decoration: inherit;">responsibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A description of job responsibilities. The use of this field is recommended as an alternative to using the more general description field. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 10,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1213,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The title of the job, such as "Software Engineer" The maximum number of allowed characters is 500.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_nodejs" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_python" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1423,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_nodejs" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_python" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">pulumi.<wbr>Input<Money<wbr>Args></a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation amount.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedunitsperyear_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Units<wbr>Per<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">Money<wbr>Args]</a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation amount.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_units_per_year_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>units_<wbr>per_<wbr>year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">pulumi.<wbr>Input<Money<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation amount.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedunitsperyear_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Units<wbr>Per<wbr>Year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1811,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1839,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation amount.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1847,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1855,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_units_per_year_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>units_<wbr>per_<wbr>year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1863,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Compensation range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1871,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1879,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1949,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualizedbasecompensationrange_nodejs" style="color: inherit; text-decoration: inherit;">annualized<wbr>Base<wbr>Compensation<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualizedtotalcompensationrange_nodejs" style="color: inherit; text-decoration: inherit;">annualized<wbr>Total<wbr>Compensation<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entries_nodejs" style="color: inherit; text-decoration: inherit;">entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Compensation<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#compensationentry">Compensation<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1977,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualized_base_compensation_range_python" style="color: inherit; text-decoration: inherit;">annualized_<wbr>base_<wbr>compensation_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualized_total_compensation_range_python" style="color: inherit; text-decoration: inherit;">annualized_<wbr>total_<wbr>compensation_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrange">Compensation<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationentry">Compensation<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#compensationentry">Compensation<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2063,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualizedbasecompensationrange_nodejs" style="color: inherit; text-decoration: inherit;">annualized<wbr>Base<wbr>Compensation<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualizedtotalcompensationrange_nodejs" style="color: inherit; text-decoration: inherit;">annualized<wbr>Total<wbr>Compensation<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">pulumi.<wbr>Input<Compensation<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entries_nodejs" style="color: inherit; text-decoration: inherit;">entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationentryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Compensation<wbr>Entry<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#compensationentryresponse">Compensation<wbr>Entry<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualized_base_compensation_range_python" style="color: inherit; text-decoration: inherit;">annualized_<wbr>base_<wbr>compensation_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annualized_total_compensation_range_python" style="color: inherit; text-decoration: inherit;">annualized_<wbr>total_<wbr>compensation_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compensationrangeresponse">Compensation<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entries_python" style="color: inherit; text-decoration: inherit;">entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compensationentryresponse">Compensation<wbr>Entry<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#compensationentryresponse">Compensation<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2161,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcompensation_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">pulumi.<wbr>Input<Money<wbr>Args></a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincompensation_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">pulumi.<wbr>Input<Money<wbr>Args></a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2181,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_compensation_python" style="color: inherit; text-decoration: inherit;">max_<wbr>compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">Money<wbr>Args]</a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_compensation_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">Money<wbr>Args]</a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2243,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcompensation_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">pulumi.<wbr>Input<Money<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2251,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincompensation_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">pulumi.<wbr>Input<Money<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2263,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_compensation_python" style="color: inherit; text-decoration: inherit;">max_<wbr>compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2271,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_compensation_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compensation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moneyresponse">Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobcategories_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">pulumi.<wbr>Input<pulumi.<wbr>Input<Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#location">Location<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_categories_python" style="color: inherit; text-decoration: inherit;">job_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#location">Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobcategories_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2415,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Location<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#locationresponse">Location<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_categories_python" style="color: inherit; text-decoration: inherit;">job_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Job categories derived from Job.title and Job.description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationresponse">Location<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#locationresponse">Location<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2489,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latitude_nodejs" style="color: inherit; text-decoration: inherit;">latitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The latitude in degrees. It must be in the range [-90.0, +90.0].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#longitude_nodejs" style="color: inherit; text-decoration: inherit;">longitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The longitude in degrees. It must be in the range [-180.0, +180.0].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2509,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latitude_python" style="color: inherit; text-decoration: inherit;">latitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The latitude in degrees. It must be in the range [-90.0, +90.0].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#longitude_python" style="color: inherit; text-decoration: inherit;">longitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The longitude in degrees. It must be in the range [-180.0, +180.0].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2571,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latitude_nodejs" style="color: inherit; text-decoration: inherit;">latitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The latitude in degrees. It must be in the range [-90.0, +90.0].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2579,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#longitude_nodejs" style="color: inherit; text-decoration: inherit;">longitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The longitude in degrees. It must be in the range [-180.0, +180.0].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latitude_python" style="color: inherit; text-decoration: inherit;">latitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The latitude in degrees. It must be in the range [-90.0, +90.0].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#longitude_python" style="color: inherit; text-decoration: inherit;">longitude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The longitude in degrees. It must be in the range [-180.0, +180.0].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latlng_nodejs" style="color: inherit; text-decoration: inherit;">lat<wbr>Lng</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latlng">pulumi.<wbr>Input<Lat<wbr>Lng<wbr>Args></a></span>
+        <span class="property-type"><a href="#latlng">Lat<wbr>Lng<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object representing a latitude/longitude pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdress">pulumi.<wbr>Input<Postal<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusinmiles_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>In<wbr>Miles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2721,7 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lat_lng_python" style="color: inherit; text-decoration: inherit;">lat_<wbr>lng</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latlng">Lat<wbr>Lng<wbr>Args]</a></span>
+        <span class="property-type"><a href="#latlng">Lat<wbr>Lng<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object representing a latitude/longitude pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_in_miles_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>in_<wbr>miles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2831,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latlng_nodejs" style="color: inherit; text-decoration: inherit;">lat<wbr>Lng</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latlngresponse">pulumi.<wbr>Input<Lat<wbr>Lng<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#latlngresponse">Lat<wbr>Lng<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object representing a latitude/longitude pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2839,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2847,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdressresponse">pulumi.<wbr>Input<Postal<wbr>Address<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2855,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusinmiles_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>In<wbr>Miles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2867,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lat_lng_python" style="color: inherit; text-decoration: inherit;">lat_<wbr>lng</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latlngresponse">Lat<wbr>Lng<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#latlngresponse">Lat<wbr>Lng<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object representing a latitude/longitude pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2875,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_in_miles_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>in_<wbr>miles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2961,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3075,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3083,7 +3130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3091,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3103,7 +3150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3111,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3119,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3317,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3325,7 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3341,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3349,7 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3357,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3409,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3417,7 +3464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,7 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3433,7 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3441,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3449,7 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3457,7 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3465,7 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3473,7 +3520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3481,7 +3528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3687,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3695,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3703,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3711,7 +3758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3719,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3727,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3735,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3743,7 +3790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3751,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3759,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3767,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3779,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3787,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3795,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3803,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3811,7 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3819,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3827,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3835,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3843,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3851,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3859,7 +3906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3913,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablestreetaddressresolution_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Street<wbr>Address<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3921,7 +3968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#htmlsanitization_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3933,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_street_address_resolution_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>street_<wbr>address_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#html_sanitization_python" style="color: inherit; text-decoration: inherit;">html_<wbr>sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3995,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablestreetaddressresolution_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Street<wbr>Address<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4003,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#htmlsanitization_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4015,7 +4062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_street_address_resolution_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>street_<wbr>address_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4023,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#html_sanitization_python" style="color: inherit; text-decoration: inherit;">html_<wbr>sanitization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.{{% /md %}}</dd></dl>
 {{% /choosable %}}

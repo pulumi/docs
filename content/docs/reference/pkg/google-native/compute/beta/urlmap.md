@@ -20,19 +20,42 @@ Creates a UrlMap resource in the specified project using the data included in th
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.HttpRouteActionArgs]]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.HttpRedirectActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.HttpHeaderActionArgs]]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.HostRuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.PathMatcherArgs]]]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.UrlMapTestArgs]]]]</span> = None<span class="p">, </span><span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.HttpRouteActionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.HttpRedirectActionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.HttpHeaderActionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.HostRuleArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.PathMatcherArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.UrlMapTestArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUrlMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UrlMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUrlMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UrlMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UrlMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UrlMapArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates a UrlMap resource in the specified project using the data included in th
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UrlMapArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,7 +509,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -484,7 +517,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#urlmap_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +525,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +533,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -511,7 +544,7 @@ defaultRouteAction has no effect when the URL map is bound to target gRPC proxy 
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the defaultService resource to which traffic is directed if none of the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified.
 Only one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set.
@@ -521,7 +554,7 @@ defaultService has no effect when the URL map is bound to target gRPC proxy that
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -531,7 +564,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +572,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date fingerprint must be provided in order to update the UrlMap, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -549,7 +582,7 @@ To see the latest fingerprint, make a get() request to retrieve a UrlMap.{{% /md
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here take effect after headerAction specified under pathMatcher.
@@ -560,7 +593,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Host<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hostrule">Host<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +601,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +609,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#urlMaps for url maps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +617,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +625,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<Path<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pathmatcher">Path<wbr>Matcher<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +633,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional URL map resides. This field is not applicable to global URL maps. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +641,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +649,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Map<wbr>Test<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaptest">Url<wbr>Map<wbr>Test<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass. You can specify a maximum of 100 tests per UrlMap.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd></dl>
@@ -629,7 +662,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -637,7 +670,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#url_map_python" style="color: inherit; text-decoration: inherit;">url_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +678,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +686,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -664,7 +697,7 @@ defaultRouteAction has no effect when the URL map is bound to target gRPC proxy 
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the defaultService resource to which traffic is directed if none of the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified.
 Only one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set.
@@ -674,7 +707,7 @@ defaultService has no effect when the URL map is bound to target gRPC proxy that
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -684,7 +717,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +725,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date fingerprint must be provided in order to update the UrlMap, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -702,7 +735,7 @@ To see the latest fingerprint, make a get() request to retrieve a UrlMap.{{% /md
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here take effect after headerAction specified under pathMatcher.
@@ -713,7 +746,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostrule">Host<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hostrule">Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +754,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +762,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#urlMaps for url maps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +770,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +778,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathmatcher">Path<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pathmatcher">Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +786,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional URL map resides. This field is not applicable to global URL maps. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +794,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +802,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">Url<wbr>Map<wbr>Test<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaptest">Url<wbr>Map<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass. You can specify a maximum of 100 tests per UrlMap.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd></dl>
@@ -991,7 +1024,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header.
 Default is false.{{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +1033,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1041,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1049,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1058,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1067,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1075,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1083,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1062,7 +1095,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header.
 Default is false.{{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1104,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1112,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1120,7 @@ Default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1129,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1138,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1146,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1154,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1310,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header.
 Default is false.{{% /md %}}</dd><dt class="property-required"
@@ -1286,7 +1319,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1294,7 +1327,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1302,7 +1335,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-required"
@@ -1311,7 +1344,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-required"
@@ -1320,7 +1353,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1328,7 +1361,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1336,7 +1369,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1348,7 +1381,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header.
 Default is false.{{% /md %}}</dd><dt class="property-required"
@@ -1357,7 +1390,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1365,7 +1398,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1373,7 +1406,7 @@ Default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regualar expression patterns that match allowed origins. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-required"
@@ -1382,7 +1415,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.{{% /md %}}</dd><dt class="property-required"
@@ -1391,7 +1424,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1432,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1407,7 +1440,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds. This translates to the Access-Control-Max-Age header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1494,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1502,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1481,7 +1514,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1522,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1543,7 +1576,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1584,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1596,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1604,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1643,7 +1676,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1684,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..
 * based matching is not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1693,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#pathmatcher_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1672,7 +1705,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1680,7 +1713,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..
 * based matching is not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1722,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#path_matcher_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1761,7 +1794,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +1802,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..
 * based matching is not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -1778,7 +1811,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#pathmatcher_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1790,7 +1823,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1798,7 +1831,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..
 * based matching is not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -1807,7 +1840,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#path_matcher_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1898,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1907,7 @@ The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="prope
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -1887,7 +1920,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1929,7 @@ The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="prope
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -1955,7 +1988,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="property-required"
@@ -1964,7 +1997,7 @@ The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="prope
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -1977,7 +2010,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="property-required"
@@ -1986,7 +2019,7 @@ The value must be between 200 and 599 inclusive.{{% /md %}}</dd><dt class="prope
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -2043,7 +2076,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2084,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -2064,7 +2097,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2072,7 +2105,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -2129,7 +2162,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2170,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -2150,7 +2183,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2158,7 +2191,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
@@ -2213,7 +2246,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultabort">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Abort<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultabort">Http<wbr>Fault<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2254,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultdelay">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultdelay">Http<wbr>Fault<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2233,7 +2266,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultabort">Http<wbr>Fault<wbr>Abort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultabort">Http<wbr>Fault<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2274,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultdelay">Http<wbr>Fault<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultdelay">Http<wbr>Fault<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2295,7 +2328,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultabortresponse">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Abort<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultabortresponse">Http<wbr>Fault<wbr>Abort<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2303,7 +2336,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultdelayresponse">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Delay<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultdelayresponse">Http<wbr>Fault<wbr>Delay<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2315,7 +2348,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultabortresponse">Http<wbr>Fault<wbr>Abort<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultabortresponse">Http<wbr>Fault<wbr>Abort<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2323,7 +2356,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultdelayresponse">Http<wbr>Fault<wbr>Delay<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultdelayresponse">Http<wbr>Fault<wbr>Delay<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2426,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2434,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#configtypeurl_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Type<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2442,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2454,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2462,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_type_url_python" style="color: inherit; text-decoration: inherit;">config_<wbr>type_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2470,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2540,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2515,7 +2548,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#configtypeurl_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Type<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2556,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2535,7 +2568,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2576,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#config_type_url_python" style="color: inherit; text-decoration: inherit;">config_<wbr>type_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2551,7 +2584,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2670,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#requestheaderstoadd_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Option<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2678,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#requestheaderstoremove_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2686,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#responseheaderstoadd_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Option<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2694,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#responseheaderstoremove_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the response back to the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2673,7 +2706,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#request_headers_to_add_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2714,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#request_headers_to_remove_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2722,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#response_headers_to_add_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheaderoption">Http<wbr>Header<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2730,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#response_headers_to_remove_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the response back to the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2783,7 +2816,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#requestheaderstoadd_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoptionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +2824,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#requestheaderstoremove_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2799,7 +2832,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#responseheaderstoadd_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoptionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2807,7 +2840,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#responseheaderstoremove_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the response back to the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2819,7 +2852,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#request_headers_to_add_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +2860,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#request_headers_to_remove_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2868,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#response_headers_to_add_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheaderoptionresponse">Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2876,7 @@ The value must be between 0.0 and 100.0 inclusive.{{% /md %}}</dd></dl>
 <a href="#response_headers_to_remove_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the response back to the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3029,7 +3062,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value should exactly match contents of exactMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +3071,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header to match.
 For matching against the HTTP request's authority, use a headerMatch with the header name ":authority".
@@ -3049,7 +3082,7 @@ When the URL map is bound to target gRPC proxy that has validateForProxyless fie
 <a href="#invertmatch_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria above are met. If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
 The default setting is false.{{% /md %}}</dd><dt class="property-optional"
@@ -3058,7 +3091,7 @@ The default setting is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3067,7 +3100,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +3109,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#int64rangematch">pulumi.<wbr>Input<Int64Range<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#int64rangematch">Int64Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.
 For example for a range [-5, 0]  
@@ -3091,7 +3124,7 @@ Note that rangeMatch is not supported for Loadbalancers that have their loadBala
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  github.com/google/re2/wiki/Syntax 
 For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
@@ -3102,7 +3135,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#suffixmatch_nodejs" style="color: inherit; text-decoration: inherit;">suffix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd></dl>
@@ -3115,7 +3148,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value should exactly match contents of exactMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3124,7 +3157,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header to match.
 For matching against the HTTP request's authority, use a headerMatch with the header name ":authority".
@@ -3135,7 +3168,7 @@ When the URL map is bound to target gRPC proxy that has validateForProxyless fie
 <a href="#invert_match_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria above are met. If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
 The default setting is false.{{% /md %}}</dd><dt class="property-optional"
@@ -3144,7 +3177,7 @@ The default setting is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3153,7 +3186,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3162,7 +3195,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#int64rangematch">Int64Range<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#int64rangematch">Int64Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.
 For example for a range [-5, 0]  
@@ -3177,7 +3210,7 @@ Note that rangeMatch is not supported for Loadbalancers that have their loadBala
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  github.com/google/re2/wiki/Syntax 
 For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
@@ -3188,7 +3221,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#suffix_match_python" style="color: inherit; text-decoration: inherit;">suffix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd></dl>
@@ -3375,7 +3408,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value should exactly match contents of exactMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3384,7 +3417,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header to match.
 For matching against the HTTP request's authority, use a headerMatch with the header name ":authority".
@@ -3395,7 +3428,7 @@ When the URL map is bound to target gRPC proxy that has validateForProxyless fie
 <a href="#invertmatch_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria above are met. If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
 The default setting is false.{{% /md %}}</dd><dt class="property-required"
@@ -3404,7 +3437,7 @@ The default setting is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3413,7 +3446,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3422,7 +3455,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#int64rangematchresponse">pulumi.<wbr>Input<Int64Range<wbr>Match<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#int64rangematchresponse">Int64Range<wbr>Match<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.
 For example for a range [-5, 0]  
@@ -3437,7 +3470,7 @@ Note that rangeMatch is not supported for Loadbalancers that have their loadBala
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  github.com/google/re2/wiki/Syntax 
 For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
@@ -3448,7 +3481,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#suffixmatch_nodejs" style="color: inherit; text-decoration: inherit;">suffix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd></dl>
@@ -3461,7 +3494,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value should exactly match contents of exactMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3470,7 +3503,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header to match.
 For matching against the HTTP request's authority, use a headerMatch with the header name ":authority".
@@ -3481,7 +3514,7 @@ When the URL map is bound to target gRPC proxy that has validateForProxyless fie
 <a href="#invert_match_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria above are met. If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
 The default setting is false.{{% /md %}}</dd><dt class="property-required"
@@ -3490,7 +3523,7 @@ The default setting is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3499,7 +3532,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -3508,7 +3541,7 @@ Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or ra
 <a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#int64rangematchresponse">Int64Range<wbr>Match<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#int64rangematchresponse">Int64Range<wbr>Match<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails.
 For example for a range [-5, 0]  
@@ -3523,7 +3556,7 @@ Note that rangeMatch is not supported for Loadbalancers that have their loadBala
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see:  github.com/google/re2/wiki/Syntax 
 For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier.
@@ -3534,7 +3567,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#suffix_match_python" style="color: inherit; text-decoration: inherit;">suffix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.{{% /md %}}</dd></dl>
@@ -3607,7 +3640,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3648,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3656,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.{{% /md %}}</dd></dl>
@@ -3636,7 +3669,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3677,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3685,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.{{% /md %}}</dd></dl>
@@ -3725,7 +3758,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3733,7 +3766,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3741,7 +3774,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.{{% /md %}}</dd></dl>
@@ -3754,7 +3787,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3762,7 +3795,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3770,7 +3803,7 @@ The default value is false.{{% /md %}}</dd></dl>
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.{{% /md %}}</dd></dl>
@@ -3865,7 +3898,7 @@ Note that regexMatch only applies when the loadBalancingScheme is set to INTERNA
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3874,7 +3907,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3882,7 +3915,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3891,7 +3924,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see github.com/google/re2/wiki/Syntax 
 Only one of presentMatch, exactMatch or regexMatch must be set.
@@ -3905,7 +3938,7 @@ Note that regexMatch only applies when the loadBalancingScheme is set to INTERNA
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3914,7 +3947,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3955,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -3931,7 +3964,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see github.com/google/re2/wiki/Syntax 
 Only one of presentMatch, exactMatch or regexMatch must be set.
@@ -4027,7 +4060,7 @@ Note that regexMatch only applies when the loadBalancingScheme is set to INTERNA
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -4036,7 +4069,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4044,7 +4077,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -4053,7 +4086,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see github.com/google/re2/wiki/Syntax 
 Only one of presentMatch, exactMatch or regexMatch must be set.
@@ -4067,7 +4100,7 @@ Note that regexMatch only applies when the loadBalancingScheme is set to INTERNA
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -4076,7 +4109,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4084,7 +4117,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
 Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><dt class="property-required"
@@ -4093,7 +4126,7 @@ Only one of presentMatch, exactMatch or regexMatch must be set.{{% /md %}}</dd><
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For the regular expression grammar, please see github.com/google/re2/wiki/Syntax 
 Only one of presentMatch, exactMatch or regexMatch must be set.
@@ -4241,7 +4274,7 @@ The default is set to false.{{% /md %}}</dd></dl>
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was supplied in the request.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -4250,7 +4283,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
 This must only be set for UrlMaps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not permitted.
@@ -4260,7 +4293,7 @@ The default is set to false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was supplied in the request.
 pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4270,7 +4303,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4280,7 +4313,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4294,7 +4327,7 @@ Supported values are:
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
 The default is set to false.{{% /md %}}</dd></dl>
@@ -4307,7 +4340,7 @@ The default is set to false.{{% /md %}}</dd></dl>
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was supplied in the request.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -4316,7 +4349,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
 This must only be set for UrlMaps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not permitted.
@@ -4326,7 +4359,7 @@ The default is set to false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was supplied in the request.
 pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4336,7 +4369,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4346,7 +4379,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4360,7 +4393,7 @@ Supported values are:
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
 The default is set to false.{{% /md %}}</dd></dl>
@@ -4507,7 +4540,7 @@ The default is set to false.{{% /md %}}</dd></dl>
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was supplied in the request.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-required"
@@ -4516,7 +4549,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
 This must only be set for UrlMaps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not permitted.
@@ -4526,7 +4559,7 @@ The default is set to false.{{% /md %}}</dd><dt class="property-required"
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was supplied in the request.
 pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4536,7 +4569,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4546,7 +4579,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4560,7 +4593,7 @@ Supported values are:
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
 The default is set to false.{{% /md %}}</dd></dl>
@@ -4573,7 +4606,7 @@ The default is set to false.{{% /md %}}</dd></dl>
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was supplied in the request.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-required"
@@ -4582,7 +4615,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
 This must only be set for UrlMaps used in TargetHttpProxys. Setting this true for TargetHttpsProxy is not permitted.
@@ -4592,7 +4625,7 @@ The default is set to false.{{% /md %}}</dd><dt class="property-required"
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was supplied in the request.
 pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4602,7 +4635,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch, retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
@@ -4612,7 +4645,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd><dt class="prope
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction.
 Supported values are:  
@@ -4626,7 +4659,7 @@ Supported values are:
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
 The default is set to false.{{% /md %}}</dd></dl>
@@ -4719,7 +4752,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4727,7 +4760,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.{{% /md %}}</dd><dt class="property-optional"
@@ -4736,7 +4769,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:  
 - 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code, or if the backend service does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams. 
@@ -4758,7 +4791,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4766,7 +4799,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.{{% /md %}}</dd><dt class="property-optional"
@@ -4775,7 +4808,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:  
 - 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code, or if the backend service does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams. 
@@ -4877,7 +4910,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4885,7 +4918,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.{{% /md %}}</dd><dt class="property-required"
@@ -4894,7 +4927,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:  
 - 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code, or if the backend service does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams. 
@@ -4916,7 +4949,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4924,7 +4957,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.{{% /md %}}</dd><dt class="property-required"
@@ -4933,7 +4966,7 @@ If not specified, will use the timeout set in HttpRouteAction. If timeout in Htt
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:  
 - 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code, or if the backend service does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams. 
@@ -5117,7 +5150,7 @@ Once a backendService is identified and before forwarding the request to the bac
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">pulumi.<wbr>Input<Cors<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing 
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-optional"
@@ -5126,7 +5159,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultinjection">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Injection<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultinjection">Http<wbr>Fault<wbr>Injection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.
 timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.
@@ -5136,7 +5169,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#maxstreamduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stream<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, will use the largest maxStreamDuration among all backend services associated with the route.
@@ -5146,7 +5179,7 @@ This field is only allowed if the Url map is used with backend services with loa
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmirrorpolicy">pulumi.<wbr>Input<Request<wbr>Mirror<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestmirrorpolicy">Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5155,7 +5188,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpretrypolicy">pulumi.<wbr>Input<Http<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpretrypolicy">Http<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5164,7 +5197,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
@@ -5174,7 +5207,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewrite">pulumi.<wbr>Input<Url<wbr>Rewrite<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlrewrite">Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers.
@@ -5184,7 +5217,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedbackendservice">pulumi.<wbr>Input<pulumi.<wbr>Input<Weighted<wbr>Backend<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#weightedbackendservice">Weighted<wbr>Backend<wbr>Service<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non-zero number.
 Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.{{% /md %}}</dd></dl>
@@ -5197,7 +5230,7 @@ Once a backendService is identified and before forwarding the request to the bac
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing 
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-optional"
@@ -5206,7 +5239,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultinjection">Http<wbr>Fault<wbr>Injection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultinjection">Http<wbr>Fault<wbr>Injection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.
 timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.
@@ -5216,7 +5249,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#max_stream_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stream_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, will use the largest maxStreamDuration among all backend services associated with the route.
@@ -5226,7 +5259,7 @@ This field is only allowed if the Url map is used with backend services with loa
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmirrorpolicy">Request<wbr>Mirror<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestmirrorpolicy">Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5235,7 +5268,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpretrypolicy">Http<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpretrypolicy">Http<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5244,7 +5277,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
@@ -5254,7 +5287,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewrite">Url<wbr>Rewrite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlrewrite">Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers.
@@ -5264,7 +5297,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedbackendservice">Weighted<wbr>Backend<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#weightedbackendservice">Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non-zero number.
 Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.{{% /md %}}</dd></dl>
@@ -5439,7 +5472,7 @@ Once a backendService is identified and before forwarding the request to the bac
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicyresponse">pulumi.<wbr>Input<Cors<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#corspolicyresponse">Cors<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing 
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-required"
@@ -5448,7 +5481,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultinjectionresponse">pulumi.<wbr>Input<Http<wbr>Fault<wbr>Injection<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpfaultinjectionresponse">Http<wbr>Fault<wbr>Injection<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.
 timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.
@@ -5458,7 +5491,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#maxstreamduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stream<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, will use the largest maxStreamDuration among all backend services associated with the route.
@@ -5468,7 +5501,7 @@ This field is only allowed if the Url map is used with backend services with loa
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmirrorpolicyresponse">pulumi.<wbr>Input<Request<wbr>Mirror<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestmirrorpolicyresponse">Request<wbr>Mirror<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -5477,7 +5510,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpretrypolicyresponse">pulumi.<wbr>Input<Http<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpretrypolicyresponse">Http<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -5486,7 +5519,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
@@ -5496,7 +5529,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteresponse">pulumi.<wbr>Input<Url<wbr>Rewrite<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlrewriteresponse">Url<wbr>Rewrite<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers.
@@ -5506,7 +5539,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedbackendserviceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Weighted<wbr>Backend<wbr>Service<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#weightedbackendserviceresponse">Weighted<wbr>Backend<wbr>Service<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non-zero number.
 Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.{{% /md %}}</dd></dl>
@@ -5519,7 +5552,7 @@ Once a backendService is identified and before forwarding the request to the bac
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicyresponse">Cors<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corspolicyresponse">Cors<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing 
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-required"
@@ -5528,7 +5561,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfaultinjectionresponse">Http<wbr>Fault<wbr>Injection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpfaultinjectionresponse">Http<wbr>Fault<wbr>Injection<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.
 timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.
@@ -5538,7 +5571,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#max_stream_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stream_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, will use the largest maxStreamDuration among all backend services associated with the route.
@@ -5548,7 +5581,7 @@ This field is only allowed if the Url map is used with backend services with loa
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmirrorpolicyresponse">Request<wbr>Mirror<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestmirrorpolicyresponse">Request<wbr>Mirror<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -5557,7 +5590,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpretrypolicyresponse">Http<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpretrypolicyresponse">Http<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -5566,7 +5599,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
@@ -5576,7 +5609,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteresponse">Url<wbr>Rewrite<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlrewriteresponse">Url<wbr>Rewrite<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers.
@@ -5586,7 +5619,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedbackendserviceresponse">Weighted<wbr>Backend<wbr>Service<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#weightedbackendserviceresponse">Weighted<wbr>Backend<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non-zero number.
 Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.{{% /md %}}</dd></dl>
@@ -5781,7 +5814,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short description conveying the intent of this routeRule.
 The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -5790,7 +5823,7 @@ The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction 
@@ -5801,7 +5834,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#httpfilterconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Filter<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Filter<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific configuration for networkservices.HttpFilter resources enabled by Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5810,7 +5843,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#httpfiltermetadata_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Filter<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Filter<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 The only configTypeUrl supported is type.googleapis.com/google.protobuf.Struct 
@@ -5820,7 +5853,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterulematch">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouterulematch">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5828,7 +5861,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.
 You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.
@@ -5838,7 +5871,7 @@ Priority numbers can have gaps, which enable you to add or remove rules in the f
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
@@ -5848,7 +5881,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -5857,7 +5890,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -5871,7 +5904,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short description conveying the intent of this routeRule.
 The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -5880,7 +5913,7 @@ The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction 
@@ -5891,7 +5924,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#http_filter_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>filter_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific configuration for networkservices.HttpFilter resources enabled by Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
@@ -5900,7 +5933,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#http_filter_metadata_python" style="color: inherit; text-decoration: inherit;">http_<wbr>filter_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpfilterconfig">Http<wbr>Filter<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 The only configTypeUrl supported is type.googleapis.com/google.protobuf.Struct 
@@ -5910,7 +5943,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterulematch">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouterulematch">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5918,7 +5951,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.
 You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.
@@ -5928,7 +5961,7 @@ Priority numbers can have gaps, which enable you to add or remove rules in the f
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
@@ -5938,7 +5971,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -5947,7 +5980,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -6111,7 +6144,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#fullpathmatch_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
 fullPathMatch must be between 1 and 1024 characters.
@@ -6121,7 +6154,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadermatch">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheadermatch">Http<wbr>Header<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding headers in the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6129,7 +6162,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 The default value is false.
@@ -6140,7 +6173,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -6152,7 +6185,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.
 The value must be between 1 and 1024 characters.
@@ -6162,7 +6195,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpqueryparametermatch">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpqueryparametermatch">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-optional"
@@ -6171,7 +6204,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
@@ -6185,7 +6218,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#full_path_match_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
 fullPathMatch must be between 1 and 1024 characters.
@@ -6195,7 +6228,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadermatch">Http<wbr>Header<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheadermatch">Http<wbr>Header<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding headers in the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6203,7 +6236,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 The default value is false.
@@ -6214,7 +6247,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -6226,7 +6259,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.
 The value must be between 1 and 1024 characters.
@@ -6236,7 +6269,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpqueryparametermatch">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpqueryparametermatch">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-optional"
@@ -6245,7 +6278,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
@@ -6409,7 +6442,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#fullpathmatch_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
 fullPathMatch must be between 1 and 1024 characters.
@@ -6419,7 +6452,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadermatchresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Header<wbr>Match<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheadermatchresponse">Http<wbr>Header<wbr>Match<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding headers in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6427,7 +6460,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 The default value is false.
@@ -6438,7 +6471,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilterresponse">Metadata<wbr>Filter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -6450,7 +6483,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.
 The value must be between 1 and 1024 characters.
@@ -6460,7 +6493,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpqueryparametermatchresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpqueryparametermatchresponse">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-required"
@@ -6469,7 +6502,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
@@ -6483,7 +6516,7 @@ Note that regexMatch only applies to Loadbalancers that have their loadBalancing
 <a href="#full_path_match_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
 fullPathMatch must be between 1 and 1024 characters.
@@ -6493,7 +6526,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheadermatchresponse">Http<wbr>Header<wbr>Match<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheadermatchresponse">Http<wbr>Header<wbr>Match<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding headers in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6501,7 +6534,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 The default value is false.
@@ -6512,7 +6545,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterresponse">Metadata<wbr>Filter<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilterresponse">Metadata<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies.
 For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.
@@ -6524,7 +6557,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /.
 The value must be between 1 and 1024 characters.
@@ -6534,7 +6567,7 @@ Only one of prefixMatch, fullPathMatch or regexMatch must be specified.{{% /md %
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpqueryparametermatchresponse">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpqueryparametermatchresponse">Http<wbr>Query<wbr>Parameter<wbr>Match<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
 Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt class="property-required"
@@ -6543,7 +6576,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax 
 Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
@@ -6739,7 +6772,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short description conveying the intent of this routeRule.
 The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt class="property-required"
@@ -6748,7 +6781,7 @@ The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction 
@@ -6759,7 +6792,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#httpfilterconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Filter<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific configuration for networkservices.HttpFilter resources enabled by Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -6768,7 +6801,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#httpfiltermetadata_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Filter<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 The only configTypeUrl supported is type.googleapis.com/google.protobuf.Struct 
@@ -6778,7 +6811,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterulematchresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouterulematchresponse">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6786,7 +6819,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.
 You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.
@@ -6796,7 +6829,7 @@ Priority numbers can have gaps, which enable you to add or remove rules in the f
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
@@ -6806,7 +6839,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-required"
@@ -6815,7 +6848,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -6829,7 +6862,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short description conveying the intent of this routeRule.
 The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt class="property-required"
@@ -6838,7 +6871,7 @@ The description can have a maximum length of 1024 characters.{{% /md %}}</dd><dt
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendService.backendServiceWeightAction[].headerAction 
@@ -6849,7 +6882,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#http_filter_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>filter_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific configuration for networkservices.HttpFilter resources enabled by Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 Not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-required"
@@ -6858,7 +6891,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#http_filter_metadata_python" style="color: inherit; text-decoration: inherit;">http_<wbr>filter_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpfilterconfigresponse">Http<wbr>Filter<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
 The only configTypeUrl supported is type.googleapis.com/google.protobuf.Struct 
@@ -6868,7 +6901,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterulematchresponse">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouterulematchresponse">Http<wbr>Route<wbr>Rule<wbr>Match<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6876,7 +6909,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.
 You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.
@@ -6886,7 +6919,7 @@ Priority numbers can have gaps, which enable you to add or remove rules in the f
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.
@@ -6896,7 +6929,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-required"
@@ -6905,7 +6938,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -6961,7 +6994,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive) in signed long integer format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6969,7 +7002,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive) in signed long integer format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6981,7 +7014,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive) in signed long integer format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6989,7 +7022,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive) in signed long integer format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7043,7 +7076,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive) in signed long integer format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7051,7 +7084,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive) in signed long integer format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7063,7 +7096,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive) in signed long integer format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7071,7 +7104,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive) in signed long integer format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7133,7 +7166,7 @@ Supported values are:
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatch">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-optional"
@@ -7142,7 +7175,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7157,7 +7190,7 @@ Supported values are:
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatch">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-optional"
@@ -7166,7 +7199,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7227,7 +7260,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-optional"
@@ -7236,7 +7269,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -7249,7 +7282,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-optional"
@@ -7258,7 +7291,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -7317,7 +7350,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-required"
@@ -7326,7 +7359,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -7339,7 +7372,7 @@ value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of metadata label.
 The name can have a maximum length of 1024 characters and must be at least 1 character long.{{% /md %}}</dd><dt class="property-required"
@@ -7348,7 +7381,7 @@ The name can have a maximum length of 1024 characters and must be at least 1 cha
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value.
 value can have a maximum length of 1024 characters.{{% /md %}}</dd></dl>
@@ -7411,7 +7444,7 @@ Supported values are:
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-required"
@@ -7420,7 +7453,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7435,7 +7468,7 @@ Supported values are:
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadatafilterlabelmatchresponse">Metadata<wbr>Filter<wbr>Label<wbr>Match<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria 
 This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd><dt class="property-required"
@@ -7444,7 +7477,7 @@ This list must not be empty and can have at the most 64 entries.{{% /md %}}</dd>
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 Supported values are:  
@@ -7631,7 +7664,7 @@ Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% 
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -7641,7 +7674,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  
 - https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService 
@@ -7656,7 +7689,7 @@ Authorization requires one or more of the following Google IAM permissions on th
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -7666,7 +7699,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7674,7 +7707,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap 
@@ -7685,7 +7718,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to which this PathMatcher is referred by the HostRule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7693,7 +7726,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Path<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pathrule">Path<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.
 For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.
@@ -7703,7 +7736,7 @@ Within a given pathMatcher, only one of pathRules or routeRules must be set.{{% 
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterule">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouterule">Http<wbr>Route<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.
 Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% /md %}}</dd></dl>
@@ -7716,7 +7749,7 @@ Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% 
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -7726,7 +7759,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  
 - https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService 
@@ -7741,7 +7774,7 @@ Authorization requires one or more of the following Google IAM permissions on th
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -7751,7 +7784,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7759,7 +7792,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap 
@@ -7770,7 +7803,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to which this PathMatcher is referred by the HostRule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7778,7 +7811,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrule">Path<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pathrule">Path<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.
 For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.
@@ -7788,7 +7821,7 @@ Within a given pathMatcher, only one of pathRules or routeRules must be set.{{% 
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouterule">Http<wbr>Route<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouterule">Http<wbr>Route<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.
 Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% /md %}}</dd></dl>
@@ -7973,7 +8006,7 @@ Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% 
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -7983,7 +8016,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  
 - https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService 
@@ -7998,7 +8031,7 @@ Authorization requires one or more of the following Google IAM permissions on th
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -8008,7 +8041,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8016,7 +8049,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap 
@@ -8027,7 +8060,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to which this PathMatcher is referred by the HostRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8035,7 +8068,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Path<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pathruleresponse">Path<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.
 For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.
@@ -8045,7 +8078,7 @@ Within a given pathMatcher, only one of pathRules or routeRules must be set.{{% 
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouteruleresponse">Http<wbr>Route<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.
 Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% /md %}}</dd></dl>
@@ -8058,7 +8091,7 @@ Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% 
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
@@ -8068,7 +8101,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  
 - https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService 
@@ -8083,7 +8116,7 @@ Authorization requires one or more of the following Google IAM permissions on th
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.
 If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.
@@ -8093,7 +8126,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8101,7 +8134,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd><dt
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap 
@@ -8112,7 +8145,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to which this PathMatcher is referred by the HostRule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8120,7 +8153,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathruleresponse">Path<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pathruleresponse">Path<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.
 For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.
@@ -8130,7 +8163,7 @@ Within a given pathMatcher, only one of pathRules or routeRules must be set.{{% 
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteruleresponse">Http<wbr>Route<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouteruleresponse">Http<wbr>Route<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.
 Within a given pathMatcher, you can set only one of pathRules or routeRules.{{% /md %}}</dd></dl>
@@ -8227,7 +8260,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8235,7 +8268,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of routeAction or urlRedirect must be set.
@@ -8245,7 +8278,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -8254,7 +8287,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -8268,7 +8301,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8276,7 +8309,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteaction">Http<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of routeAction or urlRedirect must be set.
@@ -8286,7 +8319,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-optional"
@@ -8295,7 +8328,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectaction">Http<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -8393,7 +8426,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8401,7 +8434,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">pulumi.<wbr>Input<Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of routeAction or urlRedirect must be set.
@@ -8411,7 +8444,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-required"
@@ -8420,7 +8453,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">pulumi.<wbr>Input<Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -8434,7 +8467,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8442,7 +8475,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteactionresponse">Http<wbr>Route<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices.
 Only one of routeAction or urlRedirect must be set.
@@ -8452,7 +8485,7 @@ UrlMaps for external HTTP(S) load balancers support only the urlRewrite action w
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any  weightedBackendServices, service must not be specified.
 Only one of urlRedirect, service or routeAction.weightedBackendService must be set.{{% /md %}}</dd><dt class="property-required"
@@ -8461,7 +8494,7 @@ Only one of urlRedirect, service or routeAction.weightedBackendService must be s
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpredirectactionresponse">Http<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified by urlRedirect.
 If urlRedirect is specified, service or routeAction must not be set.
@@ -8501,7 +8534,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8513,7 +8546,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8551,7 +8584,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8563,7 +8596,7 @@ Not supported when the URL map is bound to target gRPC proxy.{{% /md %}}</dd></d
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8707,7 +8740,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8715,7 +8748,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#expectedoutputurl_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Output<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expected output URL evaluated by load balancer containing the scheme, host, path and query parameters.
 For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored.
@@ -8726,7 +8759,7 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
 <a href="#expectedredirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
@@ -8735,7 +8768,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptestheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Map<wbr>Test<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaptestheader">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers for this request. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8743,7 +8776,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8751,7 +8784,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8759,7 +8792,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected BackendService or BackendBucket resource the given URL should be mapped to.
 service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></dl>
@@ -8772,7 +8805,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8780,7 +8813,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#expected_output_url_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>output_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expected output URL evaluated by load balancer containing the scheme, host, path and query parameters.
 For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored.
@@ -8791,7 +8824,7 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
 <a href="#expected_redirect_response_code_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-optional"
@@ -8800,7 +8833,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptestheader">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaptestheader">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers for this request. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8808,7 +8841,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8816,7 +8849,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8824,7 +8857,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected BackendService or BackendBucket resource the given URL should be mapped to.
 service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></dl>
@@ -8879,7 +8912,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8887,7 +8920,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8899,7 +8932,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8907,7 +8940,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8961,7 +8994,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8969,7 +9002,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8981,7 +9014,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8989,7 +9022,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9133,7 +9166,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9141,7 +9174,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#expectedoutputurl_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Output<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expected output URL evaluated by load balancer containing the scheme, host, path and query parameters.
 For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored.
@@ -9152,7 +9185,7 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
 <a href="#expectedredirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
@@ -9161,7 +9194,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptestheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Map<wbr>Test<wbr>Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaptestheaderresponse">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers for this request. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9169,7 +9202,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9177,7 +9210,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9185,7 +9218,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected BackendService or BackendBucket resource the given URL should be mapped to.
 service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></dl>
@@ -9198,7 +9231,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9206,7 +9239,7 @@ service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></d
 <a href="#expected_output_url_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>output_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expected output URL evaluated by load balancer containing the scheme, host, path and query parameters.
 For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored.
@@ -9217,7 +9250,7 @@ expectedOutputUrl is optional when service is specified.{{% /md %}}</dd><dt clas
 <a href="#expected_redirect_response_code_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response.
 expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><dt class="property-required"
@@ -9226,7 +9259,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptestheaderresponse">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaptestheaderresponse">Url<wbr>Map<wbr>Test<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers for this request. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9234,7 +9267,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL. If headers contains a host header, then host must also match the header value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9242,7 +9275,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9250,7 +9283,7 @@ expectedRedirectResponseCode cannot be set when service is set.{{% /md %}}</dd><
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected BackendService or BackendBucket resource the given URL should be mapped to.
 service cannot be set if expectedRedirectResponseCode is set.{{% /md %}}</dd></dl>
@@ -9309,7 +9342,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -9318,7 +9351,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
@@ -9331,7 +9364,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -9340,7 +9373,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
@@ -9399,7 +9432,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-required"
@@ -9408,7 +9441,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
@@ -9421,7 +9454,7 @@ The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
 The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="property-required"
@@ -9430,7 +9463,7 @@ The value must be between 1 and 255 characters.{{% /md %}}</dd><dt class="proper
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.{{% /md %}}</dd></dl>
@@ -9511,7 +9544,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9519,7 +9552,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
@@ -9530,7 +9563,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) .
 The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy.
@@ -9544,7 +9577,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9552,7 +9585,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderaction">Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
@@ -9563,7 +9596,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) .
 The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy.
@@ -9645,7 +9678,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9653,7 +9686,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">pulumi.<wbr>Input<Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
@@ -9664,7 +9697,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) .
 The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy.
@@ -9678,7 +9711,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9686,7 +9719,7 @@ The value must be between 0 and 1000{{% /md %}}</dd></dl>
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderactionresponse">Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
@@ -9697,7 +9730,7 @@ Not supported when the URL map is bound to target gRPC proxy that has validateFo
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) .
 The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy.

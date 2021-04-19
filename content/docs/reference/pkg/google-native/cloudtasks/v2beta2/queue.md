@@ -20,19 +20,37 @@ Creates a queue. Queues created with this method allow tasks to live for a maxim
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.AppEngineHttpTargetArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pull_target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.PullTargetArgs]]</span> = None<span class="p">, </span><span class="nx">purge_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">queues_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.RateLimitsArgs]]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudtasks_v2beta2.RetryConfigArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">task_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tombstone_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">app_engine_http_target</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.AppEngineHttpTargetArgs]</span> = None<span class="p">,</span>
+          <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">pull_target</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.PullTargetArgs]</span> = None<span class="p">,</span>
+          <span class="nx">purge_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">queues_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.RateLimitsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[_cloudtasks_v2beta2.RetryConfigArgs]</span> = None<span class="p">,</span>
+          <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">task_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">tombstone_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueue</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueue</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a queue. Queues created with this method allow tasks to live for a maxim
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">QueueArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queuesid_nodejs" style="color: inherit; text-decoration: inherit;">queues<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#appenginehttptarget_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Http<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginehttptarget">pulumi.<wbr>Input<App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#appenginehttptarget">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caller-specified and required in CreateQueue, after which it becomes output only. The queue name. The queue name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#pulltarget_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pulltarget">pulumi.<wbr>Input<Pull<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#pulltarget">Pull<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pull target. A pull queue is a queue that has a PullTarget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#purgetime_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time this queue was purged. All tasks that were created before this time were purged. A queue can be purged using PurgeQueue, the [App Engine Task Queue SDK, or the Cloud Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue). Purge time will be truncated to the nearest microsecond. Purge time will be unset if the queue has never been purged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimits">pulumi.<wbr>Input<Rate<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#ratelimits">Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches. rate_limits and retry_config are related because they both control task attempts however they control how tasks are attempted in different ways: * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched from the queue, regardless of whether the dispatch is from a first attempt or a retry). * retry_config controls what happens to particular a task after its first attempt fails. That is, retry_config controls task retries (the second attempt, third attempt, etc).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retryconfig">pulumi.<wbr>Input<Retry<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#retryconfig">Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior. * For tasks created using Cloud Tasks: the queue-level retry settings apply to all tasks in the queue that were created using Cloud Tasks. Retry settings cannot be set on individual tasks. * For tasks created using the App Engine SDK: the queue-level retry settings apply to all tasks in the queue which do not have retry settings explicitly set on the task and were created by the App Engine SDK. See [App Engine documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#taskttl_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time that a task will be retained in this queue. Queues created by Cloud Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues created via queue.yaml/xml is equal to the maximum duration because there is a [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the maximum valid duration, see the documentation for Duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tombstonettl_nodejs" style="color: inherit; text-decoration: inherit;">tombstone<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task tombstone time to live (TTL). After a task is deleted or completed, the task's tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is used by task de-duplication; another task with the same name can't be created until the tombstone has expired. For more information about task de-duplication, see the documentation for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queues_id_python" style="color: inherit; text-decoration: inherit;">queues_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#app_engine_http_target_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>http_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginehttptarget">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appenginehttptarget">App<wbr>Engine<wbr>Http<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caller-specified and required in CreateQueue, after which it becomes output only. The queue name. The queue name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#pull_target_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pulltarget">Pull<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pulltarget">Pull<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pull target. A pull queue is a queue that has a PullTarget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#purge_time_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time this queue was purged. All tasks that were created before this time were purged. A queue can be purged using PurgeQueue, the [App Engine Task Queue SDK, or the Cloud Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue). Purge time will be truncated to the nearest microsecond. Purge time will be unset if the queue has never been purged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimits">Rate<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratelimits">Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches. rate_limits and retry_config are related because they both control task attempts however they control how tasks are attempted in different ways: * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched from the queue, regardless of whether the dispatch is from a first attempt or a retry). * retry_config controls what happens to particular a task after its first attempt fails. That is, retry_config controls task retries (the second attempt, third attempt, etc).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retryconfig">Retry<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retryconfig">Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior. * For tasks created using Cloud Tasks: the queue-level retry settings apply to all tasks in the queue that were created using Cloud Tasks. Retry settings cannot be set on individual tasks. * For tasks created using the App Engine SDK: the queue-level retry settings apply to all tasks in the queue which do not have retry settings explicitly set on the task and were created by the App Engine SDK. See [App Engine documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the queue. `state` can only be changed by called PauseQueue, ResumeQueue, or uploading [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue cannot be used to change `state`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#task_ttl_python" style="color: inherit; text-decoration: inherit;">task_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time that a task will be retained in this queue. Queues created by Cloud Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues created via queue.yaml/xml is equal to the maximum duration because there is a [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the maximum valid duration, see the documentation for Duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tombstone_ttl_python" style="color: inherit; text-decoration: inherit;">tombstone_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task tombstone time to live (TTL). After a task is deleted or completed, the task's tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is used by task de-duplication; another task with the same name can't be created until the tombstone has expired. For more information about task de-duplication, see the documentation for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginerouting">pulumi.<wbr>Input<App<wbr>Engine<wbr>Routing<wbr>Args></a></span>
+        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appenginerouting">App<wbr>Engine<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -743,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineroutingresponse">pulumi.<wbr>Input<App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appengineroutingresponse">App<wbr>Engine<wbr>Routing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -841,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -877,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -995,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1003,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1011,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1149,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#concurrentdispatchescount_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Dispatches<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of requests that the queue has dispatched but has not received a reply for yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1157,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveexecutionrate_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Execution<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1165,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executedlastminutecount_nodejs" style="color: inherit; text-decoration: inherit;">executed<wbr>Last<wbr>Minute<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1173,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestestimatedarrivaltime_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Estimated<wbr>Arrival<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1181,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskscount_nodejs" style="color: inherit; text-decoration: inherit;">tasks<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#concurrent_dispatches_count_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>dispatches_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of requests that the queue has dispatched but has not received a reply for yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1201,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_execution_rate_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>execution_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1209,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executed_last_minute_count_python" style="color: inherit; text-decoration: inherit;">executed_<wbr>last_<wbr>minute_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1217,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_estimated_arrival_time_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>estimated_<wbr>arrival_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1225,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tasks_count_python" style="color: inherit; text-decoration: inherit;">tasks_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxburstsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time. The [token bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously refilled with new tokens based on max_dispatches_per_second. The default value of `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get updated if UpdateQueue is updating max_dispatches_per_second. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrenttasks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field is output only for pull queues and always -1, which indicates no limit. No other queue types can have `max_concurrent_tasks` set to -1. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtasksdispatchedpersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Dispatched<wbr>Per<wbr>Second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed value is 500. * This field is output only for pull queues. In addition to the `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of LeaseTasks requests are allowed per pull queue. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time. The [token bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously refilled with new tokens based on max_dispatches_per_second. The default value of `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get updated if UpdateQueue is updating max_dispatches_per_second. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrent_tasks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field is output only for pull queues and always -1, which indicates no limit. No other queue types can have `max_concurrent_tasks` set to -1. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_tasks_dispatched_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>dispatched_<wbr>per_<wbr>second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed value is 500. * This field is output only for pull queues. In addition to the `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of LeaseTasks requests are allowed per pull queue. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxburstsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time. The [token bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously refilled with new tokens based on max_dispatches_per_second. The default value of `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get updated if UpdateQueue is updating max_dispatches_per_second. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1417,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrenttasks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field is output only for pull queues and always -1, which indicates no limit. No other queue types can have `max_concurrent_tasks` set to -1. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1425,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtasksdispatchedpersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Dispatched<wbr>Per<wbr>Second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed value is 500. * This field is output only for pull queues. In addition to the `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of LeaseTasks requests are allowed per pull queue. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1437,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time. The [token bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously refilled with new tokens based on max_dispatches_per_second. The default value of `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get updated if UpdateQueue is updating max_dispatches_per_second. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1445,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrent_tasks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field is output only for pull queues and always -1, which indicates no limit. No other queue types can have `max_concurrent_tasks` set to -1. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1453,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_tasks_dispatched_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>dispatched_<wbr>per_<wbr>second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed value is 500. * This field is output only for pull queues. In addition to the `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of LeaseTasks requests are allowed per pull queue. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of attempts for a task. Cloud Tasks will attempt the task `max_attempts` times (that is, if the first attempt fails, then there will be `max_attempts - 1` retries). Must be > 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_backoff` will be truncated to the nearest second. This field has the same meaning as [max_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time between retries will double `max_doublings` times. A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then increases linearly, and finally retries at intervals of max_backoff up to max_attempts times. For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a task will first be retried in 10s. The retry interval will double three times, and then increase linearly by 2^3 * 10s. Finally, the task will retry at intervals of max_backoff until the task has been attempted max_attempts times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, .... If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. This field has the same meaning as [max_doublings in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, `max_retry_duration` specifies the time limit for retrying a failed task, measured from when the task was first attempted. Once `max_retry_duration` time has passed *and* the task has been attempted max_attempts times, no further attempts will be made and the task will be deleted. If zero, then the task age is unlimited. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_retry_duration` will be truncated to the nearest second. This field has the same meaning as [task_age_limit in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `min_backoff` will be truncated to the nearest second. This field has the same meaning as [min_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unlimitedattempts_nodejs" style="color: inherit; text-decoration: inherit;">unlimited<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the number of attempts is unlimited.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1623,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of attempts for a task. Cloud Tasks will attempt the task `max_attempts` times (that is, if the first attempt fails, then there will be `max_attempts - 1` retries). Must be > 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_backoff` will be truncated to the nearest second. This field has the same meaning as [max_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double `max_doublings` times. A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then increases linearly, and finally retries at intervals of max_backoff up to max_attempts times. For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a task will first be retried in 10s. The retry interval will double three times, and then increase linearly by 2^3 * 10s. Finally, the task will retry at intervals of max_backoff until the task has been attempted max_attempts times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, .... If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. This field has the same meaning as [max_doublings in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If positive, `max_retry_duration` specifies the time limit for retrying a failed task, measured from when the task was first attempted. Once `max_retry_duration` time has passed *and* the task has been attempted max_attempts times, no further attempts will be made and the task will be deleted. If zero, then the task age is unlimited. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_retry_duration` will be truncated to the nearest second. This field has the same meaning as [task_age_limit in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `min_backoff` will be truncated to the nearest second. This field has the same meaning as [min_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1663,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unlimited_attempts_python" style="color: inherit; text-decoration: inherit;">unlimited_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the number of attempts is unlimited.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1781,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of attempts for a task. Cloud Tasks will attempt the task `max_attempts` times (that is, if the first attempt fails, then there will be `max_attempts - 1` retries). Must be > 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1789,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_backoff` will be truncated to the nearest second. This field has the same meaning as [max_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1797,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time between retries will double `max_doublings` times. A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then increases linearly, and finally retries at intervals of max_backoff up to max_attempts times. For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a task will first be retried in 10s. The retry interval will double three times, and then increase linearly by 2^3 * 10s. Finally, the task will retry at intervals of max_backoff until the task has been attempted max_attempts times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, .... If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. This field has the same meaning as [max_doublings in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1805,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, `max_retry_duration` specifies the time limit for retrying a failed task, measured from when the task was first attempted. Once `max_retry_duration` time has passed *and* the task has been attempted max_attempts times, no further attempts will be made and the task will be deleted. If zero, then the task age is unlimited. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_retry_duration` will be truncated to the nearest second. This field has the same meaning as [task_age_limit in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1813,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `min_backoff` will be truncated to the nearest second. This field has the same meaning as [min_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1821,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unlimitedattempts_nodejs" style="color: inherit; text-decoration: inherit;">unlimited<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the number of attempts is unlimited.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1833,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of attempts for a task. Cloud Tasks will attempt the task `max_attempts` times (that is, if the first attempt fails, then there will be `max_attempts - 1` retries). Must be > 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1841,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_backoff` will be truncated to the nearest second. This field has the same meaning as [max_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1849,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double `max_doublings` times. A task's retry interval starts at min_backoff, then doubles `max_doublings` times, then increases linearly, and finally retries at intervals of max_backoff up to max_attempts times. For example, if min_backoff is 10s, max_backoff is 300s, and `max_doublings` is 3, then the a task will first be retried in 10s. The retry interval will double three times, and then increase linearly by 2^3 * 10s. Finally, the task will retry at intervals of max_backoff until the task has been attempted max_attempts times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, .... If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. This field has the same meaning as [max_doublings in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1857,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If positive, `max_retry_duration` specifies the time limit for retrying a failed task, measured from when the task was first attempted. Once `max_retry_duration` time has passed *and* the task has been attempted max_attempts times, no further attempts will be made and the task will be deleted. If zero, then the task age is unlimited. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `max_retry_duration` will be truncated to the nearest second. This field has the same meaning as [task_age_limit in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1865,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between min_backoff and max_backoff duration after it fails, if the queue's RetryConfig specifies that the task should be retried. If unspecified when the queue is created, Cloud Tasks will pick the default. This field is output only for pull queues. `min_backoff` will be truncated to the nearest second. This field has the same meaning as [min_backoff_seconds in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1873,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unlimited_attempts_python" style="color: inherit; text-decoration: inherit;">unlimited_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the number of attempts is unlimited.{{% /md %}}</dd></dl>
 {{% /choosable %}}

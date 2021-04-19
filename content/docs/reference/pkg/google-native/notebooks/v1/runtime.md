@@ -20,19 +20,31 @@ Creates a new Runtime in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.RuntimeAccessConfigArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">runtimes_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">software_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.RuntimeSoftwareConfigArgs]]</span> = None<span class="p">, </span><span class="nx">virtual_machine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.VirtualMachineArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">access_config</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.RuntimeAccessConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">runtimes_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">software_config</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.RuntimeSoftwareConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_machine</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.VirtualMachineArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Runtime</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Runtime</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Runtime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Creates a new Runtime in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RuntimeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -290,7 +312,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runtimesid_nodejs" style="color: inherit; text-decoration: inherit;">runtimes<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#accessconfig_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeaccessconfig">pulumi.<wbr>Input<Runtime<wbr>Access<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeaccessconfig">Runtime<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for accessing runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimesoftwareconfig">pulumi.<wbr>Input<Runtime<wbr>Software<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimesoftwareconfig">Runtime<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachine">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the managed notebook instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -342,7 +364,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runtimes_id_python" style="color: inherit; text-decoration: inherit;">runtimes_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#access_config_python" style="color: inherit; text-decoration: inherit;">access_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeaccessconfig">Runtime<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeaccessconfig">Runtime<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for accessing runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimesoftwareconfig">Runtime<wbr>Software<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimesoftwareconfig">Runtime<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The Runtime resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_machine_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the managed notebook instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -677,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskinitializeparams">pulumi.<wbr>Input<Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args></a></span>
+        <span class="property-type"><a href="#localdiskinitializeparams">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: NVME SCSI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: READ_ONLY READ_WRITE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: PERSISTENT SCRATCH{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskinitializeparams">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localdiskinitializeparams">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: NVME SCSI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: READ_ONLY READ_WRITE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: PERSISTENT SCRATCH{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1211,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1353,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1361,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1369,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1377,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1397,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1405,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1413,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1421,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1643,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1659,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeguestosfeatureresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Runtime<wbr>Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#runtimeguestosfeatureresponse">Runtime<wbr>Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskinitializeparamsresponse">pulumi.<wbr>Input<Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localdiskinitializeparamsresponse">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: NVME SCSI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1699,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: READ_ONLY READ_WRITE{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: PERSISTENT SCRATCH{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeguestosfeatureresponse">Runtime<wbr>Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#runtimeguestosfeatureresponse">Runtime<wbr>Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskinitializeparamsresponse">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localdiskinitializeparamsresponse">Local<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: NVME SCSI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1807,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: READ_ONLY READ_WRITE{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: PERSISTENT SCRATCH{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1897,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Accelerator model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeowner_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2061,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_owner_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxyuri_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeowner_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2167,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of access mode this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxy_uri_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_owner_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2221,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read Enabling guest operating system features to see a list of available options. Valid values: FEATURE_TYPE_UNSPECIFIED MULTI_IP_SUBNET SECURE_BOOT UEFI_COMPATIBLE VIRTIO_SCSI_MULTIQUEUE WINDOWS{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2233,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read Enabling guest operating system features to see a list of available options. Valid values: FEATURE_TYPE_UNSPECIFIED MULTI_IP_SUBNET SECURE_BOOT UEFI_COMPATIBLE VIRTIO_SCSI_MULTIQUEUE WINDOWS{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2271,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemmetrics_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The system metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_metrics_python" style="color: inherit; text-decoration: inherit;">system_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The system metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2353,7 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2381,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2397,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2467,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2495,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails. Disabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2645,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customgpudriverpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehealthmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Health<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Verifies core internal services are running. Default: True{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idleshutdown_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idleshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installgpudriver_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Gpu<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Install Nvidia Driver automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookupgradeschedule_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Upgrade<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (gs://path-to-file/file-name).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_gpu_driver_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>gpu_<wbr>driver_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_health_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>health_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verifies core internal services are running. Default: True{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_shutdown_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#install_gpu_driver_python" style="color: inherit; text-decoration: inherit;">install_<wbr>gpu_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Install Nvidia Driver automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebook_upgrade_schedule_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>upgrade_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (gs://path-to-file/file-name).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2887,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customgpudriverpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2895,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehealthmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Health<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Verifies core internal services are running. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2903,7 +2925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idleshutdown_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2911,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idleshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installgpudriver_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Gpu<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Install Nvidia Driver automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2927,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookupgradeschedule_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Upgrade<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2935,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (gs://path-to-file/file-name).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2947,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_gpu_driver_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>gpu_<wbr>driver_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2955,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_health_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>health_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verifies core internal services are running. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2963,7 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_shutdown_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2971,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2979,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#install_gpu_driver_python" style="color: inherit; text-decoration: inherit;">install_<wbr>gpu_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Install Nvidia Driver automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2987,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebook_upgrade_schedule_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>upgrade_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (gs://path-to-file/file-name).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3033,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfig_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfig">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineconfig">Virtual<wbr>Machine<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine configuration settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3045,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_config_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfig">Virtual<wbr>Machine<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfig">Virtual<wbr>Machine<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine configuration settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3126,6 +3148,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceconfig_csharp">
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -3227,6 +3257,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="shieldedinstanceconfig_go">
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
@@ -3259,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeacceleratorconfig">pulumi.<wbr>Input<Runtime<wbr>Accelerator<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeacceleratorconfig">Runtime<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for this runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3267,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimages_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Use a list of container images to start the notebook instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisk_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdisk">pulumi.<wbr>Input<Local<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Data disk option configuration settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for virtual machine data disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3291,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3299,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3307,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3315,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3323,15 +3361,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceconfig_nodejs">
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeshieldedinstanceconfig">pulumi.<wbr>Input<Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeshieldedinstanceconfig">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded VM Instance configuration settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3339,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3347,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3359,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeacceleratorconfig">Runtime<wbr>Accelerator<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeacceleratorconfig">Runtime<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for this runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3367,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_images_python" style="color: inherit; text-decoration: inherit;">container_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Use a list of container images to start the notebook instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3375,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Data disk option configuration settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3383,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for virtual machine data disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3399,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3407,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,15 +3469,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shielded_instance_config_python">
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeshieldedinstanceconfig">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeshieldedinstanceconfig">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded VM Instance configuration settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3439,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3536,6 +3590,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shieldedinstanceconfig_csharp">
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -3653,6 +3715,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="shieldedinstanceconfig_go">
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
@@ -3693,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeacceleratorconfigresponse">pulumi.<wbr>Input<Runtime<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigresponse">Runtime<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for this runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3701,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimages_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Image<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerimageresponse">Container<wbr>Image<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Use a list of container images to start the notebook instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3709,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisk_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskresponse">pulumi.<wbr>Input<Local<wbr>Disk<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localdiskresponse">Local<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Data disk option configuration settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3717,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for virtual machine data disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3725,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestattributes_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Compute Engine guest attributes. (see [Project and instance guest attributes](https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3733,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3741,7 +3811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3749,7 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3757,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3765,15 +3835,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shieldedinstanceconfig_nodejs">
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeshieldedinstanceconfigresponse">pulumi.<wbr>Input<Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeshieldedinstanceconfigresponse">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded VM Instance configuration settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3781,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3789,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3797,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the virtual machine is located. If using regional request, the notebooks service will pick a location in the corresponding runtime region. On a get request, zone will always be present. Example: * `us-central1-b`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3809,7 +3887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeacceleratorconfigresponse">Runtime<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeacceleratorconfigresponse">Runtime<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for this runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3817,7 +3895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_images_python" style="color: inherit; text-decoration: inherit;">container_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimageresponse">Container<wbr>Image<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerimageresponse">Container<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Use a list of container images to start the notebook instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3825,7 +3903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdiskresponse">Local<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localdiskresponse">Local<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Data disk option configuration settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3833,7 +3911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for virtual machine data disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3841,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_attributes_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine guest attributes. (see [Project and instance guest attributes](https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3849,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3857,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this runtime. Label **keys** must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be empty, but, if present, must contain 1 to 63 characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3865,7 +3943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Compute Engine machine type used for runtimes. Short name is valid. Examples: * `n1-standard-2` * `e2-standard-8`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3873,7 +3951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3881,15 +3959,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither `network` nor `subnet` is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` Runtimes are managed resources inside Google Infrastructure. Runtimes support the following network configurations: * Google Managed Network (Network & subnet are empty) * Consumer Project VPC (network & subnet are required). Requires configuring Private Service Access. * Shared VPC (network & subnet are required). Requires configuring Private Service Access.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shielded_instance_config_python">
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeshieldedinstanceconfigresponse">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeshieldedinstanceconfigresponse">Runtime<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded VM Instance configuration settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3897,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network. A full URL or partial URI are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3905,7 +3991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3913,7 +3999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the virtual machine is located. If using regional request, the notebooks service will pick a location in the corresponding runtime region. On a get request, zone will always be present. Example: * `us-central1-b`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3983,7 +4069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the Managed Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3991,7 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of the Managed Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3999,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineconfig_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigresponse">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineconfigresponse">Virtual<wbr>Machine<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine configuration settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4011,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the Managed Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4019,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of the Managed Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4027,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_config_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfigresponse">Virtual<wbr>Machine<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineconfigresponse">Virtual<wbr>Machine<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine configuration settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}

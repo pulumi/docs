@@ -20,19 +20,43 @@ Creates a NodeGroup resource in the specified project using the data included in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.NodeGroupAutoscalingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location_hint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.NodeGroupMaintenanceWindowArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NodeGroupAutoscalingPolicyArgs]</span> = None<span class="p">,</span>
+              <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">location_hint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NodeGroupMaintenanceWindowArgs]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">node_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +91,32 @@ Creates a NodeGroup resource in the specified project using the data included in
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +500,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +508,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#nodegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -482,7 +516,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +524,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the zone where the node group resides, such as us-central1-a.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +532,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">pulumi.<wbr>Input<Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how autoscaling should behave.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +540,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +548,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +556,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +564,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +572,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of the resource. Always compute#nodeGroup for node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +580,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +588,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +596,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupmaintenancewindow">pulumi.<wbr>Input<Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +604,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +612,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#nodetemplate_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the node template to create the node group from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +620,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +628,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +636,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +648,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +656,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#node_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -630,7 +664,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -638,7 +672,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the zone where the node group resides, such as us-central1-a.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +680,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how autoscaling should behave.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +688,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +696,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +704,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +712,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +720,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of the resource. Always compute#nodeGroup for node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +728,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +736,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenance_policy_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +744,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodegroupmaintenancewindow">Node<wbr>Group<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +752,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +760,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#node_template_python" style="color: inherit; text-decoration: inherit;">node_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the node template to create the node group from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +768,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +776,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of nodes in the node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +784,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes that the group should have.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1077,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes that the group should have.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes that the group should have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1199,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes that the group should have.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenanceduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1281,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenanceduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1351,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}

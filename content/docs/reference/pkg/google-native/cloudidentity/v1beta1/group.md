@@ -20,19 +20,33 @@ Creates a `Group`.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_group_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudidentity_v1beta1.EntityKeyArgs]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dynamic_group_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudidentity_v1beta1.DynamicGroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">group_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudidentity_v1beta1.EntityKeyArgs]]</span> = None<span class="p">, </span><span class="nx">groups_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">additional_group_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudidentity_v1beta1.EntityKeyArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">dynamic_group_metadata</span><span class="p">:</span> <span class="nx">Optional[_cloudidentity_v1beta1.DynamicGroupMetadataArgs]</span> = None<span class="p">,</span>
+          <span class="nx">group_key</span><span class="p">:</span> <span class="nx">Optional[_cloudidentity_v1beta1.EntityKeyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">groups_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a `Group`.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#groupsid_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +338,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#additionalgroupkeys_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Group<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">pulumi.<wbr>Input<pulumi.<wbr>Input<Entity<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional entity key aliases for a Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +346,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the `Group`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dynamicgroupmetadata_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Group<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupmetadata">pulumi.<wbr>Input<Dynamic<wbr>Group<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#dynamicgroupmetadata">Dynamic<wbr>Group<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Dynamic group metadata like queries and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#groupkey_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">pulumi.<wbr>Input<Entity<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The `EntityKey` of the `Group`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value. Examples: {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#groups_id_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +406,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#additional_group_keys_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>group_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional entity key aliases for a Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +414,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the `Group`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dynamic_group_metadata_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>group_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupmetadata">Dynamic<wbr>Group<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dynamicgroupmetadata">Dynamic<wbr>Group<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Dynamic group metadata like queries and status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#group_key_python" style="color: inherit; text-decoration: inherit;">group_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The `EntityKey` of the `Group`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value. Examples: {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -629,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupquery">pulumi.<wbr>Input<pulumi.<wbr>Input<Dynamic<wbr>Group<wbr>Query<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dynamicgroupquery">Dynamic<wbr>Group<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupquery">Dynamic<wbr>Group<wbr>Query<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dynamicgroupquery">Dynamic<wbr>Group<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupqueryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Dynamic<wbr>Group<wbr>Query<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dynamicgroupqueryresponse">Dynamic<wbr>Group<wbr>Query<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupstatusresponse">pulumi.<wbr>Input<Dynamic<wbr>Group<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dynamicgroupstatusresponse">Dynamic<wbr>Group<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the dynamic group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupqueryresponse">Dynamic<wbr>Group<wbr>Query<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dynamicgroupqueryresponse">Dynamic<wbr>Group<wbr>Query<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -723,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicgroupstatusresponse">Dynamic<wbr>Group<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dynamicgroupstatusresponse">Dynamic<wbr>Group<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the dynamic group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -867,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -879,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -941,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the dynamic group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -949,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statustime_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the dynamic group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -969,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_time_python" style="color: inherit; text-decoration: inherit;">status_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1031,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1043,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}

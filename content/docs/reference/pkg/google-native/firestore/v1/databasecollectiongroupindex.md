@@ -20,19 +20,33 @@ Creates a composite index. This returns a google.longrunning.Operation which may
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collection_groups_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">databases_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_firestore_v1.GoogleFirestoreAdminV1IndexFieldArgs]]]]</span> = None<span class="p">, </span><span class="nx">indexes_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">collection_groups_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">databases_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[_firestore_v1.GoogleFirestoreAdminV1IndexFieldArgs]]</span> = None<span class="p">,</span>
+                                 <span class="nx">indexes_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">query_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCollectionGroupIndex</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseCollectionGroupIndex</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseCollectionGroupIndex</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a composite index. This returns a google.longrunning.Operation which may
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseCollectionGroupIndexArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#collectiongroupsid_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Groups<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#databasesid_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#indexesid_nodejs" style="color: inherit; text-decoration: inherit;">indexes<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +354,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlefirestoreadminv1indexfield">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Firestore<wbr>Admin<wbr>V1Index<wbr>Field<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlefirestoreadminv1indexfield">Google<wbr>Firestore<wbr>Admin<wbr>V1Index<wbr>Field<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. The form of this name for composite indexes will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{composite_index_id}` For single field indexes, this field will be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#queryscope_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#collection_groups_id_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>groups_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#databases_id_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#indexes_id_python" style="color: inherit; text-decoration: inherit;">indexes_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -398,7 +422,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlefirestoreadminv1indexfield">Google<wbr>Firestore<wbr>Admin<wbr>V1Index<wbr>Field<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlefirestoreadminv1indexfield">Google<wbr>Firestore<wbr>Admin<wbr>V1Index<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. The form of this name for composite indexes will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{composite_index_id}` For single field indexes, this field will be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#query_scope_python" style="color: inherit; text-decoration: inherit;">query_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The DatabaseCollectionGroupIndex resource accepts the following [input]({{< relr
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serving state of the index.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -565,7 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayconfig_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldpath_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be __name__. For single field indexes, this must match the name of the field or may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -593,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_config_python" style="color: inherit; text-decoration: inherit;">array_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be __name__. For single field indexes, this must match the name of the field or may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -679,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayconfig_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -687,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldpath_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be __name__. For single field indexes, this must match the name of the field or may be omitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -707,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_config_python" style="color: inherit; text-decoration: inherit;">array_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports operations on `array_value`s.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -715,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be __name__. For single field indexes, this must match the name of the field or may be omitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -723,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,37 @@ Creates a new FHIR store within the parent dataset.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">fhir_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1.NotificationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_healthcare_v1.StreamConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">fhir_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1.NotificationConfigArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1.StreamConfigArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetFhirStore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetFhirStore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetFhirStore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetFhirStore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetFhirStore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetFhirStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a new FHIR store within the parent dataset.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetFhirStoreArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#fhirstoresid_nodejs" style="color: inherit; text-decoration: inherit;">fhir<wbr>Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +422,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#disablereferentialintegrity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Referential<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#disableresourceversioning_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Resource<wbr>Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#enableupdatecreate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the FHIR store, of the form `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">pulumi.<wbr>Input<Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, "action":"CreateResource".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Stream<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#streamconfig">Stream<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#fhir_stores_id_python" style="color: inherit; text-decoration: inherit;">fhir_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +522,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#disable_referential_integrity_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>referential_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#disable_resource_versioning_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>resource_<wbr>versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#enable_update_create_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the FHIR store, of the form `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, "action":"CreateResource".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamconfig">Stream<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#streamconfig">Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The DatasetFhirStore resource accepts the following [input]({{< relref "/docs/in
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataseturi_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaconfig">pulumi.<wbr>Input<Schema<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#schemaconfig">Schema<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether existing tables in the destination dataset are overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_uri_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaconfig">Schema<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schemaconfig">Schema<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether existing tables in the destination dataset are overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataseturi_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaconfigresponse">pulumi.<wbr>Input<Schema<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#schemaconfigresponse">Schema<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -879,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether existing tables in the destination dataset are overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_uri_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this flag is `TRUE`, all tables are deleted from the dataset before the new exported tables are written. If the flag is not set and the destination dataset contains tables, the export call returns an error. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaconfigresponse">Schema<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schemaconfigresponse">Schema<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether existing tables in the destination dataset are overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -965,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data contains the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. [Topic names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes the calls that send notifications to fail. If a notification can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recursivestructuredepth_nodejs" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recursive_structure_depth_python" style="color: inherit; text-decoration: inherit;">recursive_<wbr>structure_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recursivestructuredepth_nodejs" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recursive_structure_depth_python" style="color: inherit; text-decoration: inherit;">recursive_<wbr>structure_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Schema type is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestination">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestination">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types. For example, "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. When a table schema doesn't align with the schema config, either because of existing incompatible schema or out of band incompatible modification, the server does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed. One resolution in this case is to delete the incompatible table and let the server recreate one, though the newly created table only contains data after the table recreation. Results are appended to the corresponding BigQuery tables. Different versions of the same resource are distinguishable by the meta.versionId and meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version is recorded in the meta.tag. The tables contain all historical resource versions since streaming was enabled. For query convenience, the server also creates one view per table of the same name containing only the current resource version. The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The combination of the id and meta.versionId columns should ideally identify a single unique row. But in rare cases, duplicates may exist. At query time, users may use the SQL select statement to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the server created view mentioned above also filters out duplicates. If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestination">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestination">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types. For example, "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. When a table schema doesn't align with the schema config, either because of existing incompatible schema or out of band incompatible modification, the server does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed. One resolution in this case is to delete the incompatible table and let the server recreate one, though the newly created table only contains data after the table recreation. Results are appended to the corresponding BigQuery tables. Different versions of the same resource are distinguishable by the meta.versionId and meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version is recorded in the meta.tag. The tables contain all historical resource versions since streaming was enabled. For query convenience, the server also creates one view per table of the same name containing only the current resource version. The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The combination of the id and meta.versionId columns should ideally identify a single unique row. But in rare cases, duplicates may exist. At query time, users may use the SQL select statement to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the server created view mentioned above also filters out duplicates. If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestinationresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestinationresponse">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types. For example, "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. When a table schema doesn't align with the schema config, either because of existing incompatible schema or out of band incompatible modification, the server does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed. One resolution in this case is to delete the incompatible table and let the server recreate one, though the newly created table only contains data after the table recreation. Results are appended to the corresponding BigQuery tables. Different versions of the same resource are distinguishable by the meta.versionId and meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version is recorded in the meta.tag. The tables contain all historical resource versions since streaming was enabled. For query convenience, the server also creates one view per table of the same name containing only the current resource version. The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The combination of the id and meta.versionId columns should ideally identify a single unique row. But in rare cases, duplicates may exist. At query time, users may use the SQL select statement to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the server created view mentioned above also filters out duplicates. If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestinationresponse">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudhealthcarev1fhirbigquerydestinationresponse">Google<wbr>Cloud<wbr>Healthcare<wbr>V1Fhir<wbr>Big<wbr>Query<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types. For example, "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. When a table schema doesn't align with the schema config, either because of existing incompatible schema or out of band incompatible modification, the server does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed. One resolution in this case is to delete the incompatible table and let the server recreate one, though the newly created table only contains data after the table recreation. Results are appended to the corresponding BigQuery tables. Different versions of the same resource are distinguishable by the meta.versionId and meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version is recorded in the meta.tag. The tables contain all historical resource versions since streaming was enabled. For query convenience, the server also creates one view per table of the same name containing only the current resource version. The streamed data in the BigQuery dataset is not guaranteed to be completely unique. The combination of the id and meta.versionId columns should ideally identify a single unique row. But in rare cases, duplicates may exist. At query time, users may use the SQL select statement to keep only one of the duplicate rows given an id and meta.versionId pair. Alternatively, the server created view mentioned above also filters out duplicates. If a resource mutation cannot be streamed to BigQuery, errors are logged to Cloud Logging. For more information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty list as an intent to stream all the supported resource types in this FHIR store.{{% /md %}}</dd></dl>
 {{% /choosable %}}

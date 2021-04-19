@@ -20,19 +20,40 @@ Creates a Router resource in the specified project and region using the data inc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Router</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Router</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.RouterBgpArgs]]</span> = None<span class="p">, </span><span class="nx">bgp_peers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.RouterBgpPeerArgs]]]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">encrypted_interconnect_router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.RouterInterfaceArgs]]]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">nats</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.RouterNatArgs]]]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">bgp</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.RouterBgpArgs]</span> = None<span class="p">,</span>
+           <span class="nx">bgp_peers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.RouterBgpPeerArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">encrypted_interconnect_router</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.RouterInterfaceArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">nats</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.RouterNatArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Router</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Router</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Router</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Router</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +88,32 @@ Creates a Router resource in the specified project and region using the data inc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RouterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -420,7 +451,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -428,7 +459,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -436,7 +467,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +475,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bgp_nodejs" style="color: inherit; text-decoration: inherit;">bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgp">pulumi.<wbr>Input<Router<wbr>Bgp<wbr>Args></a></span>
+        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BGP information specific to this router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -452,7 +483,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bgppeers_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeer">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Bgp<wbr>Peer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routerbgppeer">Router<wbr>Bgp<wbr>Peer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +491,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +499,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,7 +507,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#encryptedinterconnectrouter_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Interconnect<wbr>Router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
 Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class="property-optional"
@@ -485,7 +516,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +524,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#interfaces_nodejs" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routerinterface">Router<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -501,7 +532,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of resource. Always compute#router for routers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +540,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +548,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#nats_nodejs" style="color: inherit; text-decoration: inherit;">nats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernat">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Nat<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routernat">Router<wbr>Nat<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of NAT services created in this router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +556,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the network to which this router belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +564,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -545,7 +576,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -553,7 +584,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -561,7 +592,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +600,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bgp_python" style="color: inherit; text-decoration: inherit;">bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BGP information specific to this router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +608,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#bgp_peers_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeer">Router<wbr>Bgp<wbr>Peer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routerbgppeer">Router<wbr>Bgp<wbr>Peer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +616,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +624,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +632,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#encrypted_interconnect_router_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>interconnect_<wbr>router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
 Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class="property-optional"
@@ -610,7 +641,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +649,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#interfaces_python" style="color: inherit; text-decoration: inherit;">interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerinterface">Router<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routerinterface">Router<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +657,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of resource. Always compute#router for routers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +665,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +673,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#nats_python" style="color: inherit; text-decoration: inherit;">nats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernat">Router<wbr>Nat<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routernat">Router<wbr>Nat<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of NAT services created in this router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +681,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the network to which this router belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +689,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a CIDR-formatted string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a CIDR-formatted string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -867,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a CIDR-formatted string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -879,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a CIDR-formatted string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1028,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1036,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1044,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1052,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1060,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#keepaliveinterval_nodejs" style="color: inherit; text-decoration: inherit;">keepalive<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval in seconds between BGP keepalive messages that are sent to the peer.
 Not currently available publicly.
@@ -1045,7 +1076,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1084,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1092,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1100,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1108,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#keepalive_interval_python" style="color: inherit; text-decoration: inherit;">keepalive_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval in seconds between BGP keepalive messages that are sent to the peer.
 Not currently available publicly.
@@ -1325,7 +1356,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1364,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1343,7 +1374,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1382,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedroutepriority_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Route<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1359,7 +1390,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#bfd_nodejs" style="color: inherit; text-decoration: inherit;">bfd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeerbfd">pulumi.<wbr>Input<Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Args></a></span>
+        <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BFD configuration for the BGP peering.
 Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1399,7 @@ Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the BGP peer connection.
 Not currently available publicly.
@@ -1378,7 +1409,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#interfacename_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1417,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1425,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1404,7 +1435,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1443,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1451,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peeripaddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1459,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#routerapplianceinstance_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Appliance<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1471,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1479,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -1458,7 +1489,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routeradvertisediprange">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1497,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_route_priority_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>route_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1505,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#bfd_python" style="color: inherit; text-decoration: inherit;">bfd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerbgppeerbfd">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BFD configuration for the BGP peering.
 Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1514,7 @@ Not currently available publicly.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the BGP peer connection.
 Not currently available publicly.
@@ -1493,7 +1524,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1532,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1540,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -1519,7 +1550,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1558,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1566,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peer_ip_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1574,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#router_appliance_instance_python" style="color: inherit; text-decoration: inherit;">router_<wbr>appliance_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1651,7 +1682,7 @@ If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP pe
 <a href="#minreceiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Receive<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router.
 Not currently available publicly.
@@ -1662,7 +1693,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-optional"
 <a href="#mintransmitinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Transmit<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router.
 Not currently available publicly.
@@ -1673,7 +1704,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-optional"
 <a href="#multiplier_nodejs" style="color: inherit; text-decoration: inherit;">multiplier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable.
 Not currently available publicly.
@@ -1684,7 +1715,7 @@ The default is 3.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sessioninitializationmode_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Initialization<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BFD session initialization mode for this BGP peer.
 Not currently available publicly.
@@ -1698,7 +1729,7 @@ If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP pe
 <a href="#min_receive_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>receive_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router.
 Not currently available publicly.
@@ -1709,7 +1740,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-optional"
 <a href="#min_transmit_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>transmit_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router.
 Not currently available publicly.
@@ -1720,7 +1751,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-optional"
 <a href="#multiplier_python" style="color: inherit; text-decoration: inherit;">multiplier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable.
 Not currently available publicly.
@@ -1731,7 +1762,7 @@ The default is 3.{{% /md %}}</dd><dt class="property-optional"
 <a href="#session_initialization_mode_python" style="color: inherit; text-decoration: inherit;">session_<wbr>initialization_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BFD session initialization mode for this BGP peer.
 Not currently available publicly.
@@ -1841,7 +1872,7 @@ If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP pe
 <a href="#minreceiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Receive<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router.
 Not currently available publicly.
@@ -1852,7 +1883,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-required"
 <a href="#mintransmitinterval_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Transmit<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router.
 Not currently available publicly.
@@ -1863,7 +1894,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-required"
 <a href="#multiplier_nodejs" style="color: inherit; text-decoration: inherit;">multiplier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable.
 Not currently available publicly.
@@ -1874,7 +1905,7 @@ The default is 3.{{% /md %}}</dd><dt class="property-required"
 <a href="#sessioninitializationmode_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Initialization<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BFD session initialization mode for this BGP peer.
 Not currently available publicly.
@@ -1888,7 +1919,7 @@ If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP pe
 <a href="#min_receive_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>receive_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router.
 Not currently available publicly.
@@ -1899,7 +1930,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-required"
 <a href="#min_transmit_interval_python" style="color: inherit; text-decoration: inherit;">min_<wbr>transmit_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router.
 Not currently available publicly.
@@ -1910,7 +1941,7 @@ The default is 300.{{% /md %}}</dd><dt class="property-required"
 <a href="#multiplier_python" style="color: inherit; text-decoration: inherit;">multiplier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable.
 Not currently available publicly.
@@ -1921,7 +1952,7 @@ The default is 3.{{% /md %}}</dd><dt class="property-required"
 <a href="#session_initialization_mode_python" style="color: inherit; text-decoration: inherit;">session_<wbr>initialization_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BFD session initialization mode for this BGP peer.
 Not currently available publicly.
@@ -2167,7 +2198,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2206,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -2185,7 +2216,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprangeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2193,7 +2224,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertisedroutepriority_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Route<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2232,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#bfd_nodejs" style="color: inherit; text-decoration: inherit;">bfd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeerbfdresponse">pulumi.<wbr>Input<Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BFD configuration for the BGP peering.
 Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
@@ -2210,7 +2241,7 @@ Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the BGP peer connection.
 Not currently available publicly.
@@ -2220,7 +2251,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#interfacename_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2228,7 +2259,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2236,7 +2267,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -2246,7 +2277,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2254,7 +2285,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2262,7 +2293,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peeripaddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2270,7 +2301,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#routerapplianceinstance_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Appliance<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2282,7 +2313,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2290,7 +2321,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: 
 - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. 
@@ -2300,7 +2331,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2308,7 +2339,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#advertised_route_priority_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>route_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2316,7 +2347,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#bfd_python" style="color: inherit; text-decoration: inherit;">bfd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerbgppeerbfdresponse">Router<wbr>Bgp<wbr>Peer<wbr>Bfd<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BFD configuration for the BGP peering.
 Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
@@ -2325,7 +2356,7 @@ Not currently available publicly.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the BGP peer connection.
 Not currently available publicly.
@@ -2335,7 +2366,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2343,7 +2374,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2351,7 +2382,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this BGP peer. 
 - MANAGED_BY_USER is the default value and can be managed by you or other users 
@@ -2361,7 +2392,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2369,7 +2400,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2377,7 +2408,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#peer_ip_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2385,7 +2416,7 @@ If set to FALSE, any active session with the peer is terminated and all associat
 <a href="#router_appliance_instance_python" style="color: inherit; text-decoration: inherit;">router_<wbr>appliance_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2495,7 +2526,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2534,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2542,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprangeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2550,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2558,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#keepaliveinterval_nodejs" style="color: inherit; text-decoration: inherit;">keepalive<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval in seconds between BGP keepalive messages that are sent to the peer.
 Not currently available publicly.
@@ -2543,7 +2574,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2551,7 +2582,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2559,7 +2590,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routeradvertisediprangeresponse">Router<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2567,7 +2598,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2575,7 +2606,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#keepalive_interval_python" style="color: inherit; text-decoration: inherit;">keepalive_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval in seconds between BGP keepalive messages that are sent to the peer.
 Not currently available publicly.
@@ -2733,7 +2764,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2772,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linkedinterconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Interconnect<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2780,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linkedvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Vpn<wbr>Tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2788,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -2767,7 +2798,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2806,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance, such as a Next Gen Firewall, a Virtual Router, or an SD-WAN VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2783,7 +2814,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#redundantinterface_nodejs" style="color: inherit; text-decoration: inherit;">redundant<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface that will be redundant with the current interface you are creating. The redundantInterface must belong to the same Cloud Router as the interface here. To establish the BGP session to a Router Appliance VM, you must create two BGP peers. The two BGP peers must be attached to two separate interfaces that are redundant with each other. The redundant_interface must be 1-63 characters long, and comply with RFC1035. Specifically, the redundant_interface must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2791,7 +2822,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. When you establish a BGP session to a VM instance using this interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2803,7 +2834,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2811,7 +2842,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linked_interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>interconnect_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2850,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linked_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>vpn_<wbr>tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2827,7 +2858,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -2837,7 +2868,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2876,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance, such as a Next Gen Firewall, a Virtual Router, or an SD-WAN VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2884,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#redundant_interface_python" style="color: inherit; text-decoration: inherit;">redundant_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface that will be redundant with the current interface you are creating. The redundantInterface must belong to the same Cloud Router as the interface here. To establish the BGP session to a Router Appliance VM, you must create two BGP peers. The two BGP peers must be attached to two separate interfaces that are redundant with each other. The redundant_interface must be 1-63 characters long, and comply with RFC1035. Specifically, the redundant_interface must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2861,7 +2892,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. When you establish a BGP session to a VM instance using this interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3015,7 +3046,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3023,7 +3054,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linkedinterconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Interconnect<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3062,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linkedvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Vpn<wbr>Tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3070,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -3049,7 +3080,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3057,7 +3088,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance, such as a Next Gen Firewall, a Virtual Router, or an SD-WAN VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3065,7 +3096,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#redundantinterface_nodejs" style="color: inherit; text-decoration: inherit;">redundant<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface that will be redundant with the current interface you are creating. The redundantInterface must belong to the same Cloud Router as the interface here. To establish the BGP session to a Router Appliance VM, you must create two BGP peers. The two BGP peers must be attached to two separate interfaces that are redundant with each other. The redundant_interface must be 1-63 characters long, and comply with RFC1035. Specifically, the redundant_interface must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3073,7 +3104,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. When you establish a BGP session to a VM instance using this interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3085,7 +3116,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3093,7 +3124,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linked_interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>interconnect_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3101,7 +3132,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#linked_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>vpn_<wbr>tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a virtual machine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3109,7 +3140,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource that configures and manages this interface. 
 - MANAGED_BY_USER is the default value and can be managed directly by users. 
@@ -3119,7 +3150,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3127,7 +3158,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance, such as a Next Gen Firewall, a Virtual Router, or an SD-WAN VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3135,7 +3166,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#redundant_interface_python" style="color: inherit; text-decoration: inherit;">redundant_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface that will be redundant with the current interface you are creating. The redundantInterface must belong to the same Cloud Router as the interface here. To establish the BGP session to a Router Appliance VM, you must create two BGP peers. The two BGP peers must be attached to two separate interfaces that are redundant with each other. The redundant_interface must be 1-63 characters long, and comply with RFC1035. Specifically, the redundant_interface must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3143,7 +3174,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. When you establish a BGP session to a VM instance using this interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3383,7 +3414,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,7 +3422,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3399,7 +3430,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3407,7 +3438,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">pulumi.<wbr>Input<Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3446,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3454,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3462,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -3441,7 +3472,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3449,7 +3480,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -3460,7 +3491,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetworktonat">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routernatsubnetworktonat">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3468,7 +3499,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3476,7 +3507,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3484,7 +3515,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3496,7 +3527,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3535,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3512,7 +3543,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3520,7 +3551,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3528,7 +3559,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3536,7 +3567,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3544,7 +3575,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -3554,7 +3585,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3562,7 +3593,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -3573,7 +3604,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetworktonat">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routernatsubnetworktonat">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3612,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3620,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3628,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3657,7 +3688,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3696,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -3680,7 +3711,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3688,7 +3719,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -3751,7 +3782,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3759,7 +3790,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -3774,7 +3805,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3782,7 +3813,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: 
 - ERRORS_ONLY: Export logs only for connection failures. 
@@ -4025,7 +4056,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4033,7 +4064,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4041,7 +4072,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4049,7 +4080,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfigresponse">pulumi.<wbr>Input<Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#routernatlogconfigresponse">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4057,7 +4088,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4065,7 +4096,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4073,7 +4104,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -4083,7 +4114,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4091,7 +4122,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -4102,7 +4133,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetworktonatresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routernatsubnetworktonatresponse">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4110,7 +4141,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4118,7 +4149,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4126,7 +4157,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4138,7 +4169,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4146,7 +4177,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4154,7 +4185,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4162,7 +4193,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfigresponse">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatlogconfigresponse">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4170,7 +4201,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4178,7 +4209,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4186,7 +4217,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the NatIpAllocateOption, which can take one of the following values: 
 - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. 
@@ -4196,7 +4227,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4204,7 +4235,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the Nat option, which can take one of the following values: 
 - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. 
@@ -4215,7 +4246,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetworktonatresponse">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routernatsubnetworktonatresponse">Router<wbr>Nat<wbr>Subnetwork<wbr>To<wbr>Nat<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4223,7 +4254,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4231,7 +4262,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4239,7 +4270,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4309,7 +4340,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for the subnetwork resource that will use NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4317,7 +4348,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#secondaryiprangenames_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4325,7 +4356,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#sourceiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4337,7 +4368,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL for the subnetwork resource that will use NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4345,7 +4376,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#secondary_ip_range_names_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>range_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4353,7 +4384,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#source_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4423,7 +4454,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for the subnetwork resource that will use NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4431,7 +4462,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#secondaryiprangenames_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4439,7 +4470,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#sourceiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4451,7 +4482,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL for the subnetwork resource that will use NAT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4459,7 +4490,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#secondary_ip_range_names_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>range_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4467,7 +4498,7 @@ If set, this value must be between 20 and 60. The default is 20.{{% /md %}}</dd>
 <a href="#source_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,41 @@ Starts a build with the specified configuration. This method returns a long-runn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Build</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Build</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Build</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudbuild_v1.ArtifactsArgs]]</span> = None<span class="p">, </span><span class="nx">available_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudbuild_v1.SecretsArgs]]</span> = None<span class="p">, </span><span class="nx">builds_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">logs_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudbuild_v1.BuildOptionsArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">queue_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudbuild_v1.SecretArgs]]]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudbuild_v1.SourceArgs]]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudbuild_v1.BuildStepArgs]]]]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Build</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.ArtifactsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">available_secrets</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.SecretsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">builds_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">logs_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.BuildOptionsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">queue_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudbuild_v1.SecretArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1.SourceArgs]</span> = None<span class="p">,</span>
+          <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudbuild_v1.BuildStepArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Build</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuild</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Build</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBuild</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Build</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Build</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Build</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BuildArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +89,32 @@ Starts a build with the specified configuration. This method returns a long-runn
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BuildArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +284,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. This field is in beta.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -384,7 +416,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. This field is in beta.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -434,7 +466,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#buildsid_nodejs" style="color: inherit; text-decoration: inherit;">builds<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -442,7 +474,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -450,7 +482,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +490,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifacts">pulumi.<wbr>Input<Artifacts<wbr>Args></a></span>
+        <span class="property-type"><a href="#artifacts">Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +498,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#availablesecrets_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secrets">pulumi.<wbr>Input<Secrets<wbr>Args></a></span>
+        <span class="property-type"><a href="#secrets">Secrets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets and secret environment variables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +506,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +514,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#logsbucket_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +522,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildoptions">pulumi.<wbr>Input<Build<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#buildoptions">Build<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +530,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queuettl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +538,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secret">pulumi.<wbr>Input<pulumi.<wbr>Input<Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#secret">Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,15 +546,15 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. This field is in beta.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">pulumi.<wbr>Input<Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +562,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildstep">pulumi.<wbr>Input<pulumi.<wbr>Input<Build<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#buildstep">Build<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The operations to be performed on the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +570,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions data for `Build` resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +578,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a `Build`. These are not docker tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +586,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -566,7 +598,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#builds_id_python" style="color: inherit; text-decoration: inherit;">builds_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -574,7 +606,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -582,7 +614,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +622,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifacts">Artifacts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifacts">Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +630,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#available_secrets_python" style="color: inherit; text-decoration: inherit;">available_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secrets">Secrets<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secrets">Secrets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets and secret environment variables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +638,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +646,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#logs_bucket_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +654,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildoptions">Build<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#buildoptions">Build<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +662,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#queue_ttl_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +670,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secret">Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#secret">Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,15 +678,15 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. This field is in beta.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +694,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#buildstep">Build<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#buildstep">Build<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The operations to be performed on the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +702,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions data for `Build` resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +710,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a `Build`. These are not docker tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +718,7 @@ The Build resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timing_nodejs" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">pulumi.<wbr>Input<Time<wbr>Span<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pushing all artifact objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timing_python" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pushing all artifact objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1385,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactobjects">pulumi.<wbr>Input<Artifact<wbr>Objects<wbr>Args></a></span>
+        <span class="property-type"><a href="#artifactobjects">Artifact<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactobjects">Artifact<wbr>Objects<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactobjects">Artifact<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1467,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1475,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactobjectsresponse">pulumi.<wbr>Input<Artifact<wbr>Objects<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#artifactobjectsresponse">Artifact<wbr>Objects<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactobjectsresponse">Artifact<wbr>Objects<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactobjectsresponse">Artifact<wbr>Objects<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamicsubstitutions_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logstreamingoption_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceprovenancehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Provenance<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutionoption_nodejs" style="color: inherit; text-decoration: inherit;">substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1789,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerpool_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1809,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamic_substitutions_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_streaming_option_python" style="color: inherit; text-decoration: inherit;">log_<wbr>streaming_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_provenance_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>provenance_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitution_option_python" style="color: inherit; text-decoration: inherit;">substitution_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_pool_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamicsubstitutions_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logstreamingoption_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceprovenancehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Provenance<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutionoption_nodejs" style="color: inherit; text-decoration: inherit;">substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerpool_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamic_substitutions_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2227,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2235,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_streaming_option_python" style="color: inherit; text-decoration: inherit;">log_<wbr>streaming_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2243,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2251,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2259,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2267,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2275,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_provenance_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>provenance_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2283,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitution_option_python" style="color: inherit; text-decoration: inherit;">substitution_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2291,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_pool_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify a `WorkerPool` for the build. Format: projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is available only to restricted users.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2481,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container. If this value is a relative path, it is relative to the build's working directory. If this value is absolute, it may be outside the build's working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step's execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's default entrypoint. If unset, the image's default entrypoint is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the container image that will run this particular build step. If the image is available in the host's Docker daemon's cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account's credentials if necessary. The Docker daemon's cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like "ubuntu", "debian", but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host's Docker daemon's cache and is available to use as the name for a later build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitfor_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2565,7 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container. If this value is a relative path, it is relative to the build's working directory. If this value is absolute, it may be outside the build's working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step's execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's default entrypoint. If unset, the image's default entrypoint is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to reference this build step as a dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the container image that will run this particular build step. If the image is available in the host's Docker daemon's cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account's credentials if necessary. The Docker daemon's cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like "ubuntu", "debian", but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host's Docker daemon's cache and is available to use as the name for a later build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wait_for_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2851,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container. If this value is a relative path, it is relative to the build's working directory. If this value is absolute, it may be outside the build's working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step's execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's default entrypoint. If unset, the image's default entrypoint is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2875,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the container image that will run this particular build step. If the image is available in the host's Docker daemon's cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account's credentials if necessary. The Docker daemon's cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like "ubuntu", "debian", but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host's Docker daemon's cache and is available to use as the name for a later build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pulltiming_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">pulumi.<wbr>Input<Time<wbr>Span<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2899,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2907,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2915,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2923,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timing_nodejs" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">pulumi.<wbr>Input<Time<wbr>Span<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for executing this build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2931,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2939,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitfor_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2951,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2959,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container. If this value is a relative path, it is relative to the build's working directory. If this value is absolute, it may be outside the build's working directory, in which case the contents of the path may not be persisted across build step executions, unless a `volume` for that path is specified. If the build specifies a `RepoSource` with `dir` and a step with a `dir`, which specifies an absolute path, the `RepoSource` `dir` is ignored for the step's execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2967,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's default entrypoint. If unset, the image's default entrypoint is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2975,7 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the container image that will run this particular build step. If the image is available in the host's Docker daemon's cache, it will be run directly. If not, the host will attempt to pull the image first, using the builder service account's credentials if necessary. The Docker daemon's cache will already have the latest versions of all of the officially supported build steps ([https://github.com/GoogleCloudPlatform/cloud-builders](https://github.com/GoogleCloudPlatform/cloud-builders)). The Docker daemon will also have cached many of the layers for some popular images, like "ubuntu", "debian", but they will be refreshed at the time you attempt to use them. If you built an image in a previous build step, it will be stored in the host's Docker daemon's cache and is available to use as the name for a later build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2991,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pull_timing_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pulling this build step's builder image only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2999,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3007,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the build step. At this time, build step status is only updated on build completion; step status is not updated in real-time as the build progresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3015,7 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined, the step has no time limit and will be allowed to continue to run until either it completes or the build itself times out.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3023,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timing_python" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for executing this build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wait_for_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on. This build step will not start until all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this build step will start when all previous build steps in the `Build.Steps` list have completed successfully.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3109,7 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Registry 2.0 digest.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3117,7 +3149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used to push the container image to Google Container Registry, as presented to `docker push`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3125,7 +3157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pushtiming_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">pulumi.<wbr>Input<Time<wbr>Span<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pushing the specified image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3137,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker Registry 2.0 digest.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3145,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used to push the container image to Google Container Registry, as presented to `docker push`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3153,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#push_timing_python" style="color: inherit; text-decoration: inherit;">push_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pushing the specified image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envmap_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3215,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*/locations/*/keyRings/*/cryptoKeys/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3227,7 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_map_python" style="color: inherit; text-decoration: inherit;">env_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*/locations/*/keyRings/*/cryptoKeys/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3289,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envmap_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3297,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*/locations/*/keyRings/*/cryptoKeys/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3309,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_map_python" style="color: inherit; text-decoration: inherit;">env_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3317,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*/locations/*/keyRings/*/cryptoKeys/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,7 +3499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3491,7 +3523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3499,7 +3531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3507,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3515,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with RunBuildTrigger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3523,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3535,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3551,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3575,7 +3607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3583,7 +3615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with RunBuildTrigger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3591,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3741,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3749,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3757,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3765,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3773,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3781,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3789,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with RunBuildTrigger{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3797,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3809,7 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3817,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3825,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3833,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3841,7 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3849,7 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3857,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with RunBuildTrigger{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3865,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3983,7 +4015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactmanifest_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the artifact manifest. Only populated when artifacts are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3991,7 +4023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacttiming_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">pulumi.<wbr>Input<Time<wbr>Span<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time to push all non-container artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3999,7 +4031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buildstepimages_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Step<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of build step digests, in the order corresponding to build step indices.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4007,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buildstepoutputs_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Step<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4015,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builtimageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Built<wbr>Image<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#builtimageresponse">Built<wbr>Image<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Container images that were built as a part of the build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4023,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numartifacts_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of artifacts uploaded. Only populated when artifacts are uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4035,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_manifest_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the artifact manifest. Only populated when artifacts are uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4043,7 +4075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_timing_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time to push all non-container artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4051,7 +4083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#build_step_images_python" style="color: inherit; text-decoration: inherit;">build_<wbr>step_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of build step digests, in the order corresponding to build step indices.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4059,7 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#build_step_outputs_python" style="color: inherit; text-decoration: inherit;">build_<wbr>step_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4067,7 +4099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builtimageresponse">Built<wbr>Image<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#builtimageresponse">Built<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container images that were built as a part of the build.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4075,7 +4107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_artifacts_python" style="color: inherit; text-decoration: inherit;">num_<wbr>artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of artifacts uploaded. Only populated when artifacts are uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4129,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4149,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4211,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4231,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4239,7 +4271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4293,7 +4325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4301,7 +4333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4313,7 +4345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4321,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the SecretVersion. In format: projects/*/secrets/*/versions/*{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4375,7 +4407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4383,7 +4415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4395,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4457,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inlinesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Inline<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#inlinesecret">Inline<wbr>Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets encrypted with KMS key and the associated secret environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretmanager_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretmanagersecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Secret<wbr>Manager<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#secretmanagersecret">Secret<wbr>Manager<wbr>Secret<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets in Secret Manager and associated secret environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4477,7 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inlinesecret">Inline<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#inlinesecret">Inline<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets encrypted with KMS key and the associated secret environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_manager_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretmanagersecret">Secret<wbr>Manager<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#secretmanagersecret">Secret<wbr>Manager<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets in Secret Manager and associated secret environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4539,7 +4571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inlinesecretresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Inline<wbr>Secret<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#inlinesecretresponse">Inline<wbr>Secret<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets encrypted with KMS key and the associated secret environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4547,7 +4579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretmanager_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretmanagersecretresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Secret<wbr>Manager<wbr>Secret<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#secretmanagersecretresponse">Secret<wbr>Manager<wbr>Secret<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets in Secret Manager and associated secret environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4559,7 +4591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inlinesecretresponse">Inline<wbr>Secret<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#inlinesecretresponse">Inline<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets encrypted with KMS key and the associated secret environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4567,7 +4599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_manager_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretmanagersecretresponse">Secret<wbr>Manager<wbr>Secret<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#secretmanagersecretresponse">Secret<wbr>Manager<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets in Secret Manager and associated secret environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4637,7 +4669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reposource_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposource">pulumi.<wbr>Input<Repo<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#reposource">Repo<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in a Cloud Source Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4645,7 +4677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesource_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesource">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesource">Storage<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesourcemanifest_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifest">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Manifest<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesourcemanifest">Storage<wbr>Source<wbr>Manifest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4665,7 +4697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_source_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposource">Repo<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reposource">Repo<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in a Cloud Source Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_source_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesource">Storage<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesource">Storage<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in Google Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4681,7 +4713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_source_manifest_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifest">Storage<wbr>Source<wbr>Manifest<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesourcemanifest">Storage<wbr>Source<wbr>Manifest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4767,7 +4799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filehashes_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4775,7 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolvedreposource_nodejs" style="color: inherit; text-decoration: inherit;">resolved<wbr>Repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposourceresponse">pulumi.<wbr>Input<Repo<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.repo_source`, if exists, with any revisions resolved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4783,7 +4815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolvedstoragesource_nodejs" style="color: inherit; text-decoration: inherit;">resolved<wbr>Storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourceresponse">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.storage_source`, if exists, with any generations resolved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4791,7 +4823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolvedstoragesourcemanifest_nodejs" style="color: inherit; text-decoration: inherit;">resolved<wbr>Storage<wbr>Source<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifestresponse">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4803,7 +4835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_hashes_python" style="color: inherit; text-decoration: inherit;">file_<wbr>hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4811,7 +4843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolved_repo_source_python" style="color: inherit; text-decoration: inherit;">resolved_<wbr>repo_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.repo_source`, if exists, with any revisions resolved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4819,7 +4851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolved_storage_source_python" style="color: inherit; text-decoration: inherit;">resolved_<wbr>storage_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.storage_source`, if exists, with any generations resolved.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4827,7 +4859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolved_storage_source_manifest_python" style="color: inherit; text-decoration: inherit;">resolved_<wbr>storage_<wbr>source_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4897,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reposource_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposourceresponse">pulumi.<wbr>Input<Repo<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in a Cloud Source Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4905,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesource_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourceresponse">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in Google Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4913,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesourcemanifest_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source<wbr>Manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifestresponse">pulumi.<wbr>Input<Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4925,7 +4957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repo_source_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reposourceresponse">Repo<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in a Cloud Source Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4933,7 +4965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_source_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesourceresponse">Storage<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this location in Google Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4941,7 +4973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_source_manifest_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source_<wbr>manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesourcemanifestresponse">Storage<wbr>Source<wbr>Manifest<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5011,7 +5043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5019,7 +5051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5027,7 +5059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5039,7 +5071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5047,7 +5079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5055,7 +5087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5125,7 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5133,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5141,7 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source manifest. This object must be a JSON file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5153,7 +5185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5161,7 +5193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5169,7 +5201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source manifest. This object must be a JSON file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5239,7 +5271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5247,7 +5279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5255,7 +5287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source manifest. This object must be a JSON file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5267,7 +5299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5275,7 +5307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5283,7 +5315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source manifest. This object must be a JSON file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5353,7 +5385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5361,7 +5393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5369,7 +5401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5381,7 +5413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5389,7 +5421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5397,7 +5429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5451,7 +5483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of time span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5459,7 +5491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of time span.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5471,7 +5503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End of time span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5479,7 +5511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start of time span.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5533,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5541,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5553,7 +5585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5561,7 +5593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5615,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5623,7 +5655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5635,7 +5667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5643,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,42 @@ Creates a new backup run on demand. This method is applicable only to Second Gen
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.DiskEncryptionStatusArgs]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enqueued_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_sqladmin_v1beta4.OperationErrorArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">window_start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">backup_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
+              <span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionStatusArgs]</span> = None<span class="p">,</span>
+              <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">enqueued_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.OperationErrorArgs]</span> = None<span class="p">,</span>
+              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">window_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupRun</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupRun</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackupRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates a new backup run on demand. This method is applicable only to Second Gen
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BackupRunArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -450,7 +483,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this backup run. Unique only for a specific Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -458,7 +491,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -466,7 +499,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +507,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backupkind_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +515,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this run, only applicable to on-demand backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +523,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#diskencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +531,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#diskencryptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionstatus">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +539,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +547,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enqueuedtime_nodejs" style="color: inherit; text-decoration: inherit;">enqueued<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +555,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationerror">pulumi.<wbr>Input<Operation<wbr>Error<wbr>Args></a></span>
+        <span class="property-type"><a href="#operationerror">Operation<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about why the backup operation failed. This is only present if the run has the FAILED status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +563,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +571,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +579,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +587,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +595,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +603,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +611,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#windowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -590,7 +623,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this backup run. Unique only for a specific Cloud SQL instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -598,7 +631,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the database instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -606,7 +639,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +647,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backup_kind_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +655,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this run, only applicable to on-demand backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +663,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#disk_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskencryptionconfiguration">Disk<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +671,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#disk_encryption_status_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskencryptionstatus">Disk<wbr>Encryption<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption status specific to a backup. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +679,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the backup operation completed in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +687,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enqueued_time_python" style="color: inherit; text-decoration: inherit;">enqueued_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the run was enqueued in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +695,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationerror">Operation<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#operationerror">Operation<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about why the backup operation failed. This is only present if the run has the FAILED status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +703,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#backupRun*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +711,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the backups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +719,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +727,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the backup operation actually started in UTC timezone in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +735,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +743,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +751,7 @@ The BackupRun resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#window_start_time_python" style="color: inherit; text-decoration: inherit;">window_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the backup window during which this the backup was attempted in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -927,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionConfiguration*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of KMS key for disk encryption{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1091,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyversionname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1103,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#diskEncryptionStatus*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_version_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}KMS key version used to encrypt the Cloud SQL instance resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the specific error that occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the error encountered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the specific error that occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional information about the error encountered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the specific error that occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the error encountered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the specific error that occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is always *sql#operationError*.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional information about the error encountered.{{% /md %}}</dd></dl>
 {{% /choosable %}}

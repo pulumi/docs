@@ -20,19 +20,40 @@ Creates a PublicAdvertisedPrefix in the specified project using the parameters t
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dns_verification_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">public_advertised_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">public_delegated_prefixs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.PublicAdvertisedPrefixPublicDelegatedPrefixArgs]]]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">shared_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">dns_verification_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">public_advertised_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">public_delegated_prefixs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.PublicAdvertisedPrefixPublicDelegatedPrefixArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">shared_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublicAdvertisedPrefix</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PublicAdvertisedPrefix</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PublicAdvertisedPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +88,32 @@ Creates a PublicAdvertisedPrefix in the specified project using the parameters t
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PublicAdvertisedPrefixArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -422,7 +453,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +461,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#publicadvertisedprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Advertised<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +469,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +477,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +485,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#dnsverificationip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Verification<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address to be used for reverse DNS verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +493,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix. An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -472,7 +503,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +511,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR format, represented by this public advertised prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +519,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +527,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +535,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#publicdelegatedprefixs_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Delegated<wbr>Prefixs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicadvertisedprefixpublicdelegatedprefix">pulumi.<wbr>Input<pulumi.<wbr>Input<Public<wbr>Advertised<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#publicadvertisedprefixpublicdelegatedprefix">Public<wbr>Advertised<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of public delegated prefixes that exist for this public advertised prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +543,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +551,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL with id for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +559,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#sharedsecret_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The shared secret to be used for reverse DNS verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +567,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -548,7 +579,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -556,7 +587,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#public_advertised_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>advertised_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +595,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +603,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +611,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#dns_verification_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>verification_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address to be used for reverse DNS verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -588,7 +619,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix. An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -598,7 +629,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +637,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR format, represented by this public advertised prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +645,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +653,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +661,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#public_delegated_prefixs_python" style="color: inherit; text-decoration: inherit;">public_<wbr>delegated_<wbr>prefixs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicadvertisedprefixpublicdelegatedprefix">Public<wbr>Advertised<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#publicadvertisedprefixpublicdelegatedprefix">Public<wbr>Advertised<wbr>Prefix<wbr>Public<wbr>Delegated<wbr>Prefix<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of public delegated prefixes that exist for this public advertised prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +669,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +677,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL with id for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +685,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#shared_secret_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The shared secret to be used for reverse DNS verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +693,7 @@ To see the latest fingerprint, make a get() request to retrieve a PublicAdvertis
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the public advertised prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the public delegated prefix if it is regional. If absent, the prefix is global.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project number of the public delegated prefix{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the public delegated prefix if it is regional. If absent, the prefix is global.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project number of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the public delegated prefix if it is regional. If absent, the prefix is global.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1067,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project number of the public delegated prefix{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the public delegated prefix if it is regional. If absent, the prefix is global.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.{{% /md %}}</dd></dl>
 {{% /choosable %}}

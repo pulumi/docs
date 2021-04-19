@@ -20,19 +20,39 @@ Creates a training or a batch prediction job.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">jobs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">prediction_input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__PredictionInputArgs]]</span> = None<span class="p">, </span><span class="nx">prediction_output</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__PredictionOutputArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">training_input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__TrainingInputArgs]]</span> = None<span class="p">, </span><span class="nx">training_output</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__TrainingOutputArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">prediction_input</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__PredictionInputArgs]</span> = None<span class="p">,</span>
+        <span class="nx">prediction_output</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__PredictionOutputArgs]</span> = None<span class="p">,</span>
+        <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">training_input</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__TrainingInputArgs]</span> = None<span class="p">,</span>
+        <span class="nx">training_output</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__TrainingOutputArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a training or a batch prediction job.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobsid_nodejs" style="color: inherit; text-decoration: inherit;">jobs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +448,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the job was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the job processing was completed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user-specified id of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#predictioninput_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__predictioninput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input parameters to create a prediction job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#predictionoutput_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__predictionoutput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictionoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current prediction job result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the job processing was started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#traininginput_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__traininginput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input parameters to create a training job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#trainingoutput_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__trainingoutput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__trainingoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current training job result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobs_id_python" style="color: inherit; text-decoration: inherit;">jobs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +564,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the job was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the job processing was completed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user-specified id of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#prediction_input_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__predictioninput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictioninput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input parameters to create a prediction job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#prediction_output_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__predictionoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__predictionoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Prediction<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current prediction job result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the job processing was started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detailed state of a job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#training_input_python" style="color: inherit; text-decoration: inherit;">training_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__traininginput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__traininginput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input parameters to create a training job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#training_output_python" style="color: inherit; text-decoration: inherit;">training_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__trainingoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__trainingoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Training<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current training job result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectivevalue_nodejs" style="color: inherit; text-decoration: inherit;">objective<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The objective value at this training step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingstep_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global training step for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objective_value_python" style="color: inherit; text-decoration: inherit;">objective_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The objective value at this training step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_step_python" style="color: inherit; text-decoration: inherit;">training_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global training step for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectivevalue_nodejs" style="color: inherit; text-decoration: inherit;">objective<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The objective value at this training step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingstep_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The global training step for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objective_value_python" style="color: inherit; text-decoration: inherit;">objective_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The objective value at this training step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_step_python" style="color: inherit; text-decoration: inherit;">training_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The global training step for this metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -995,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framework_nodejs" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Framework on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelpath_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python version on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AI Platform runtime version on which the built-in algorithm was trained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framework_python" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Framework on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_path_python" style="color: inherit; text-decoration: inherit;">model_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python version on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AI Platform runtime version on which the built-in algorithm was trained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framework_nodejs" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Framework on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelpath_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python version on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AI Platform runtime version on which the built-in algorithm was trained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framework_python" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Framework on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1291,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_path_python" style="color: inherit; text-decoration: inherit;">model_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python version on which the built-in algorithm was trained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AI Platform runtime version on which the built-in algorithm was trained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1361,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size in GB of the boot disk (default is 100GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in GB of the boot disk (default is 100GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size in GB of the boot disk (default is 100GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1463,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in GB of the boot disk (default is 100GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1471,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1559,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1737,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allmetrics_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}All recorded object metrics for this trial. This field is not currently populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#builtinalgorithmoutput_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>In<wbr>Algorithm<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time for the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalmetric_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final objective metric seen for this trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The hyperparameters given to this trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#istrialstoppedearly_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Trial<wbr>Stopped<wbr>Early</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the trial is stopped early.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time for the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trialid_nodejs" style="color: inherit; text-decoration: inherit;">trial<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trial id for these results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_metrics_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All recorded object metrics for this trial. This field is not currently populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#built_in_algorithm_output_python" style="color: inherit; text-decoration: inherit;">built_<wbr>in_<wbr>algorithm_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time for the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#final_metric_python" style="color: inherit; text-decoration: inherit;">final_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetric">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final objective metric seen for this trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_python" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The hyperparameters given to this trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_trial_stopped_early_python" style="color: inherit; text-decoration: inherit;">is_<wbr>trial_<wbr>stopped_<wbr>early</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the trial is stopped early.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1861,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time for the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trial_id_python" style="color: inherit; text-decoration: inherit;">trial_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The trial id for these results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allmetrics_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}All recorded object metrics for this trial. This field is not currently populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#builtinalgorithmoutput_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>In<wbr>Algorithm<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time for the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2067,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalmetric_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final objective metric seen for this trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2075,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The hyperparameters given to this trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2083,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#istrialstoppedearly_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Trial<wbr>Stopped<wbr>Early</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the trial is stopped early.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time for the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trialid_nodejs" style="color: inherit; text-decoration: inherit;">trial<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trial id for these results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2119,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_metrics_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All recorded object metrics for this trial. This field is not currently populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#built_in_algorithm_output_python" style="color: inherit; text-decoration: inherit;">built_<wbr>in_<wbr>algorithm_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time for the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#final_metric_python" style="color: inherit; text-decoration: inherit;">final_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_hyperparameteroutput_hyperparametermetricresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Hyperparameter<wbr>Output_Hyperparameter<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The final objective metric seen for this trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_python" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The hyperparameters given to this trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_trial_stopped_early_python" style="color: inherit; text-decoration: inherit;">is_<wbr>trial_<wbr>stopped_<wbr>early</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the trial is stopped early.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time for the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detailed state of the trial.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trial_id_python" style="color: inherit; text-decoration: inherit;">trial_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The trial id for these results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2349,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabletrialearlystopping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Trial<wbr>Early<wbr>Stopping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates if the hyperparameter tuning job enables auto trial early stopping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2373,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparametermetrictag_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameter<wbr>Metric<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailedtrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failed<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of failed trials that need to be seen before failing the hyperparameter tuning job. You can specify this field to override the default failing criteria for AI Platform hyperparameter tuning jobs. Defaults to zero, which means the service decides when a hyperparameter job should fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparalleltrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of training trials to run concurrently. You can reduce the time it takes to perform hyperparameter tuning by adding trials in parallel. However, each trail only benefits from the information gained in completed trials. That means that a trial does not get access to the results of trials running at the same time, which could reduce the quality of the overall optimization. Each trial will use the same scale tier and machine types. Defaults to one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2397,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. How many training trials should be attempted to optimize the specified hyperparameters. Defaults to one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2405,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__parameterspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resumepreviousjobid_nodejs" style="color: inherit; text-decoration: inherit;">resume<wbr>Previous<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2425,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2433,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_trial_early_stopping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>trial_<wbr>early_<wbr>stopping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates if the hyperparameter tuning job enables auto trial early stopping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameter_metric_tag_python" style="color: inherit; text-decoration: inherit;">hyperparameter_<wbr>metric_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failed_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failed_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of failed trials that need to be seen before failing the hyperparameter tuning job. You can specify this field to override the default failing criteria for AI Platform hyperparameter tuning jobs. Defaults to zero, which means the service decides when a hyperparameter job should fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_parallel_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of training trials to run concurrently. You can reduce the time it takes to perform hyperparameter tuning by adding trials in parallel. However, each trail only benefits from the information gained in completed trials. That means that a trial does not get access to the results of trials running at the same time, which could reduce the quality of the overall optimization. Each trial will use the same scale tier and machine types. Defaults to one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. How many training trials should be attempted to optimize the specified hyperparameters. Defaults to one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resume_previous_job_id_python" style="color: inherit; text-decoration: inherit;">resume_<wbr>previous_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2655,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2663,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabletrialearlystopping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Trial<wbr>Early<wbr>Stopping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates if the hyperparameter tuning job enables auto trial early stopping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2671,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2679,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparametermetrictag_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameter<wbr>Metric<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailedtrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failed<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of failed trials that need to be seen before failing the hyperparameter tuning job. You can specify this field to override the default failing criteria for AI Platform hyperparameter tuning jobs. Defaults to zero, which means the service decides when a hyperparameter job should fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparalleltrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of training trials to run concurrently. You can reduce the time it takes to perform hyperparameter tuning by adding trials in parallel. However, each trail only benefits from the information gained in completed trials. That means that a trial does not get access to the results of trials running at the same time, which could reduce the quality of the overall optimization. Each trial will use the same scale tier and machine types. Defaults to one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2703,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. How many training trials should be attempted to optimize the specified hyperparameters. Defaults to one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2711,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__parameterspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2719,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resumepreviousjobid_nodejs" style="color: inherit; text-decoration: inherit;">resume<wbr>Previous<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2731,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2739,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_trial_early_stopping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>trial_<wbr>early_<wbr>stopping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates if the hyperparameter tuning job enables auto trial early stopping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2747,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`. Defaults to `MAXIMIZE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameter_metric_tag_python" style="color: inherit; text-decoration: inherit;">hyperparameter_<wbr>metric_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2763,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failed_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failed_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of failed trials that need to be seen before failing the hyperparameter tuning job. You can specify this field to override the default failing criteria for AI Platform hyperparameter tuning jobs. Defaults to zero, which means the service decides when a hyperparameter job should fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_parallel_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of training trials to run concurrently. You can reduce the time it takes to perform hyperparameter tuning by adding trials in parallel. However, each trail only benefits from the information gained in completed trials. That means that a trial does not get access to the results of trials running at the same time, which could reduce the quality of the overall optimization. Each trial will use the same scale tier and machine types. Defaults to one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. How many training trials should be attempted to optimize the specified hyperparameters. Defaults to one.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Parameter<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resume_previous_job_id_python" style="color: inherit; text-decoration: inherit;">resume_<wbr>previous_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id will be used to find the corresponding vizier study guid and resume the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2929,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalvalues_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2937,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discretevalues_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2945,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_values_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discrete_values_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3013,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3029,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3037,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3171,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalvalues_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3179,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discretevalues_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3203,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametername_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3219,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3231,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_values_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3239,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discrete_values_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3247,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3255,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3263,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3271,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3279,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3493,7 +3523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3501,7 +3531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3509,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputpaths_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The Cloud Storage location of the input data files. May contain wildcards.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxworkercount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputdataformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The output Google Cloud Storage location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3557,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturename_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3573,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a Google Cloud Storage path for the model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3593,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_paths_python" style="color: inherit; text-decoration: inherit;">input_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The Cloud Storage location of the input data files. May contain wildcards.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_worker_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_data_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The output Google Cloud Storage location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_name_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a Google Cloud Storage path for the model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3895,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3903,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3911,7 +3941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputpaths_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The Cloud Storage location of the input data files. May contain wildcards.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3919,7 +3949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxworkercount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3927,7 +3957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelname_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3935,7 +3965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputdataformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +3973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The output Google Cloud Storage location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3951,7 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3959,7 +3989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3967,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturename_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3975,7 +4005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a Google Cloud Storage path for the model to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3983,7 +4013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3995,7 +4025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4003,7 +4033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the input data files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4011,7 +4041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_paths_python" style="color: inherit; text-decoration: inherit;">input_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The Cloud Storage location of the input data files. May contain wildcards.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4019,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_worker_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4027,7 +4057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_name_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4035,7 +4065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_data_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Format of the output data files, defaults to JSON.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4043,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The output Google Cloud Storage location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4051,7 +4081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4059,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4067,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_name_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4075,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a Google Cloud Storage path for the model to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4083,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4169,7 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of data instances which resulted in errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4177,7 +4207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodehours_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Node hours used by the batch prediction job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4185,7 +4215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output Google Cloud Storage location provided at the job creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4193,7 +4223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predictioncount_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of generated predictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4205,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of data instances which resulted in errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4213,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_hours_python" style="color: inherit; text-decoration: inherit;">node_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Node hours used by the batch prediction job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4221,7 +4251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output Google Cloud Storage location provided at the job creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4229,7 +4259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prediction_count_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of generated predictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4315,7 +4345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of data instances which resulted in errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4323,7 +4353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodehours_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Node hours used by the batch prediction job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4331,7 +4361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output Google Cloud Storage location provided at the job creation time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4339,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predictioncount_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of generated predictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4351,7 +4381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of data instances which resulted in errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4359,7 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_hours_python" style="color: inherit; text-decoration: inherit;">node_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Node hours used by the batch prediction job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4367,7 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output Google Cloud Storage location provided at the job creation time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4375,7 +4405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prediction_count_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of generated predictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4493,7 +4523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type and number of accelerators used by the replica. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4501,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerargs_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint command. The following rules apply for container_command and container_args: - If you do not supply command or args: The defaults defined in the Docker image are used. - If you supply a command but no args: The default EntryPoint and the default Cmd defined in the Docker image are ignored. Your command is run without any arguments. - If you supply only args: The default Entrypoint defined in the Docker image is run with the args that you supplied. - If you supply a command and args: The default Entrypoint and the default Cmd defined in the Docker image are ignored. Your command is run with your args. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4509,7 +4539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containercommand_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command with which the replica's custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__diskconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__diskconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the configuration of disk options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4525,7 +4555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker image to run on the replica. This image must be in Container Registry. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tputfversion_nodejs" style="color: inherit; text-decoration: inherit;">tpu<wbr>Tf<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AI Platform runtime version that includes a TensorFlow version matching the one used in the custom container. This field is required if the replica is a TPU worker that uses a custom container. Otherwise, do not specify this field. This must be a [runtime version that currently supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support). Note that the version of TensorFlow included in a runtime version may differ from the numbering of the runtime version itself, because it may have a different [patch version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this field, you must specify the runtime version (TensorFlow minor version). For example, if your custom container runs TensorFlow `1.x.y`, specify `1.x`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4545,7 +4575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type and number of accelerators used by the replica. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4553,7 +4583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_args_python" style="color: inherit; text-decoration: inherit;">container_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint command. The following rules apply for container_command and container_args: - If you do not supply command or args: The defaults defined in the Docker image are used. - If you supply a command but no args: The default EntryPoint and the default Cmd defined in the Docker image are ignored. Your command is run without any arguments. - If you supply only args: The default Entrypoint defined in the Docker image is run with the args that you supplied. - If you supply a command and args: The default Entrypoint and the default Cmd defined in the Docker image are ignored. Your command is run with your args. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4561,7 +4591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_command_python" style="color: inherit; text-decoration: inherit;">container_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command with which the replica's custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4569,7 +4599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__diskconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__diskconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the configuration of disk options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4577,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker image to run on the replica. This image must be in Container Registry. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4585,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tpu_tf_version_python" style="color: inherit; text-decoration: inherit;">tpu_<wbr>tf_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AI Platform runtime version that includes a TensorFlow version matching the one used in the custom container. This field is required if the replica is a TPU worker that uses a custom container. Otherwise, do not specify this field. This must be a [runtime version that currently supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support). Note that the version of TensorFlow included in a runtime version may differ from the numbering of the runtime version itself, because it may have a different [patch version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this field, you must specify the runtime version (TensorFlow minor version). For example, if your custom container runs TensorFlow `1.x.y`, specify `1.x`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4703,7 +4733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type and number of accelerators used by the replica. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4711,7 +4741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerargs_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint command. The following rules apply for container_command and container_args: - If you do not supply command or args: The defaults defined in the Docker image are used. - If you supply a command but no args: The default EntryPoint and the default Cmd defined in the Docker image are ignored. Your command is run without any arguments. - If you supply only args: The default Entrypoint defined in the Docker image is run with the args that you supplied. - If you supply a command and args: The default Entrypoint and the default Cmd defined in the Docker image are ignored. Your command is run with your args. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4719,7 +4749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containercommand_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The command with which the replica's custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4727,7 +4757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__diskconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__diskconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the configuration of disk options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4735,7 +4765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Docker image to run on the replica. This image must be in Container Registry. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4743,7 +4773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tputfversion_nodejs" style="color: inherit; text-decoration: inherit;">tpu<wbr>Tf<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AI Platform runtime version that includes a TensorFlow version matching the one used in the custom container. This field is required if the replica is a TPU worker that uses a custom container. Otherwise, do not specify this field. This must be a [runtime version that currently supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support). Note that the version of TensorFlow included in a runtime version may differ from the numbering of the runtime version itself, because it may have a different [patch version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this field, you must specify the runtime version (TensorFlow minor version). For example, if your custom container runs TensorFlow `1.x.y`, specify `1.x`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4755,7 +4785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type and number of accelerators used by the replica. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4763,7 +4793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_args_python" style="color: inherit; text-decoration: inherit;">container_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint command. The following rules apply for container_command and container_args: - If you do not supply command or args: The defaults defined in the Docker image are used. - If you supply a command but no args: The default EntryPoint and the default Cmd defined in the Docker image are ignored. Your command is run without any arguments. - If you supply only args: The default Entrypoint defined in the Docker image is run with the args that you supplied. - If you supply a command and args: The default Entrypoint and the default Cmd defined in the Docker image are ignored. Your command is run with your args. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4771,7 +4801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_command_python" style="color: inherit; text-decoration: inherit;">container_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The command with which the replica's custom container is run. If provided, it will override default ENTRYPOINT of the docker image. If not provided, the docker image's ENTRYPOINT is used. It cannot be set if custom container image is not provided. Note that this field and [TrainingInput.args] are mutually exclusive, i.e., both cannot be set at the same time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4779,7 +4809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__diskconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__diskconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Disk<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the configuration of disk options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4787,7 +4817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Docker image to run on the replica. This image must be in Container Registry. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4795,7 +4825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tpu_tf_version_python" style="color: inherit; text-decoration: inherit;">tpu_<wbr>tf_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AI Platform runtime version that includes a TensorFlow version matching the one used in the custom container. This field is required if the replica is a TPU worker that uses a custom container. Otherwise, do not specify this field. This must be a [runtime version that currently supports training with TPUs](/ml-engine/docs/tensorflow/runtime-version-list#tpu-support). Note that the version of TensorFlow included in a runtime version may differ from the numbering of the runtime version itself, because it may have a different [patch version](https://www.tensorflow.org/guide/version_compat#semantic_versioning_20). In this field, you must specify the runtime version (TensorFlow minor version). For example, if your custom container runs TensorFlow `1.x.y`, specify `1.x`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4849,7 +4879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrunningtime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Running<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job running time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven days). If the training job is still running after this duration, AI Platform Training cancels it. The duration is measured from when the job enters the `RUNNING` state; therefore it does not overlap with the duration limited by Scheduling.max_wait_time. For example, if you want to ensure your job runs for no more than 2 hours, set this field to `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute). If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxRunningTime: 7200s ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4857,7 +4887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxwaittime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wait<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job wait time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, there is no limit to the wait time. The minimum for this field is `1800s` (30 minutes). If the training job has not entered the `RUNNING` state after this duration, AI Platform Training cancels it. After the job begins running, it can no longer be cancelled due to the maximum wait time. Therefore the duration limited by this field does not overlap with the duration limited by Scheduling.max_running_time. For example, if the job temporarily stops running and retries due to a [VM restart](/ai-platform/training/docs/overview#restarts), this cannot lead to a maximum wait time cancellation. However, independently of this constraint, AI Platform Training might stop a job if there are too many retries due to exhausted resources in a region. The following example describes how you might use this field: To cancel your job if it doesn't start running within 1 hour, set this field to `3600s` (1 hour * 60 minutes / hour * 60 seconds / minute). If the job is still in the `QUEUED` or `PREPARING` state after an hour of waiting, AI Platform Training cancels the job. If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxWaitTime: 3600s ```{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4869,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_running_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>running_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job running time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven days). If the training job is still running after this duration, AI Platform Training cancels it. The duration is measured from when the job enters the `RUNNING` state; therefore it does not overlap with the duration limited by Scheduling.max_wait_time. For example, if you want to ensure your job runs for no more than 2 hours, set this field to `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute). If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxRunningTime: 7200s ```{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4877,7 +4907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_wait_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wait_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job wait time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, there is no limit to the wait time. The minimum for this field is `1800s` (30 minutes). If the training job has not entered the `RUNNING` state after this duration, AI Platform Training cancels it. After the job begins running, it can no longer be cancelled due to the maximum wait time. Therefore the duration limited by this field does not overlap with the duration limited by Scheduling.max_running_time. For example, if the job temporarily stops running and retries due to a [VM restart](/ai-platform/training/docs/overview#restarts), this cannot lead to a maximum wait time cancellation. However, independently of this constraint, AI Platform Training might stop a job if there are too many retries due to exhausted resources in a region. The following example describes how you might use this field: To cancel your job if it doesn't start running within 1 hour, set this field to `3600s` (1 hour * 60 minutes / hour * 60 seconds / minute). If the job is still in the `QUEUED` or `PREPARING` state after an hour of waiting, AI Platform Training cancels the job. If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxWaitTime: 3600s ```{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4931,7 +4961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrunningtime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Running<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job running time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven days). If the training job is still running after this duration, AI Platform Training cancels it. The duration is measured from when the job enters the `RUNNING` state; therefore it does not overlap with the duration limited by Scheduling.max_wait_time. For example, if you want to ensure your job runs for no more than 2 hours, set this field to `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute). If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxRunningTime: 7200s ```{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4939,7 +4969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxwaittime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wait<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job wait time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, there is no limit to the wait time. The minimum for this field is `1800s` (30 minutes). If the training job has not entered the `RUNNING` state after this duration, AI Platform Training cancels it. After the job begins running, it can no longer be cancelled due to the maximum wait time. Therefore the duration limited by this field does not overlap with the duration limited by Scheduling.max_running_time. For example, if the job temporarily stops running and retries due to a [VM restart](/ai-platform/training/docs/overview#restarts), this cannot lead to a maximum wait time cancellation. However, independently of this constraint, AI Platform Training might stop a job if there are too many retries due to exhausted resources in a region. The following example describes how you might use this field: To cancel your job if it doesn't start running within 1 hour, set this field to `3600s` (1 hour * 60 minutes / hour * 60 seconds / minute). If the job is still in the `QUEUED` or `PREPARING` state after an hour of waiting, AI Platform Training cancels the job. If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxWaitTime: 3600s ```{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4951,7 +4981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_running_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>running_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job running time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven days). If the training job is still running after this duration, AI Platform Training cancels it. The duration is measured from when the job enters the `RUNNING` state; therefore it does not overlap with the duration limited by Scheduling.max_wait_time. For example, if you want to ensure your job runs for no more than 2 hours, set this field to `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute). If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxRunningTime: 7200s ```{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4959,7 +4989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_wait_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wait_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum job wait time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, there is no limit to the wait time. The minimum for this field is `1800s` (30 minutes). If the training job has not entered the `RUNNING` state after this duration, AI Platform Training cancels it. After the job begins running, it can no longer be cancelled due to the maximum wait time. Therefore the duration limited by this field does not overlap with the duration limited by Scheduling.max_running_time. For example, if the job temporarily stops running and retries due to a [VM restart](/ai-platform/training/docs/overview#restarts), this cannot lead to a maximum wait time cancellation. However, independently of this constraint, AI Platform Training might stop a job if there are too many retries due to exhausted resources in a region. The following example describes how you might use this field: To cancel your job if it doesn't start running within 1 hour, set this field to `3600s` (1 hour * 60 minutes / hour * 60 seconds / minute). If the job is still in the `QUEUED` or `PREPARING` state after an hour of waiting, AI Platform Training cancels the job. If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ```yaml trainingInput: scheduling: maxWaitTime: 3600s ```{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5381,7 +5411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5389,7 +5419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google's default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5397,7 +5427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatorconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5405,7 +5435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatorcount_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5413,7 +5443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatortype_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5421,7 +5451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of Hyperparameters to tune.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5429,7 +5459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobdir_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the '--job-dir' command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5437,7 +5467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5445,7 +5475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5453,7 +5483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5461,7 +5491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packageuris_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5469,7 +5499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5477,7 +5507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercount_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5485,7 +5515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservertype_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5493,7 +5523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonmodule_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Module</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Python module name to run after installing the packages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5501,7 +5531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5509,7 +5539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5517,7 +5547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5525,7 +5555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5533,7 +5563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__scheduling">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__scheduling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Scheduling options for a training job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5541,7 +5571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5549,7 +5579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usechiefintfconfig_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Chief<wbr>In<wbr>Tf<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don't use a custom container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5557,7 +5587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5565,7 +5595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5573,7 +5603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5585,7 +5615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5593,7 +5623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google's default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5601,7 +5631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_config_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5609,7 +5639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_count_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5617,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_type_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5625,7 +5655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_python" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of Hyperparameters to tune.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5633,7 +5663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_dir_python" style="color: inherit; text-decoration: inherit;">job_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the '--job-dir' command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5641,7 +5671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5649,7 +5679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5657,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5665,7 +5695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_uris_python" style="color: inherit; text-decoration: inherit;">package_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5673,7 +5703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_config_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5681,7 +5711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5689,7 +5719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5697,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_module_python" style="color: inherit; text-decoration: inherit;">python_<wbr>module</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Python module name to run after installing the packages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5705,7 +5735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5713,7 +5743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5721,7 +5751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5729,7 +5759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5737,7 +5767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__scheduling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__scheduling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Scheduling options for a training job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5753,7 +5783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_chief_in_tf_config_python" style="color: inherit; text-decoration: inherit;">use_<wbr>chief_<wbr>in_<wbr>tf_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don't use a custom container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5761,7 +5791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5769,7 +5799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5777,7 +5807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6199,7 +6229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6207,7 +6237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google's default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6215,7 +6245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatorconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6223,7 +6253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatorcount_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6231,7 +6261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluatortype_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6239,7 +6269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of Hyperparameters to tune.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6247,7 +6277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobdir_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the '--job-dir' command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6255,7 +6285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6263,7 +6293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6271,7 +6301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6279,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packageuris_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6287,7 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6295,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercount_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6303,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservertype_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6311,7 +6341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonmodule_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Module</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Python module name to run after installing the packages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6319,7 +6349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6327,7 +6357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6335,7 +6365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6343,7 +6373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6351,7 +6381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__schedulingresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__schedulingresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Scheduling options for a training job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6359,7 +6389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6367,7 +6397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usechiefintfconfig_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Chief<wbr>In<wbr>Tf<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don't use a custom container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6375,7 +6405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6383,7 +6413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6391,7 +6421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6403,7 +6433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Command-line arguments passed to the training application when it starts. If your job uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6411,7 +6441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__encryptionconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Options for using customer-managed encryption keys (CMEK) to protect resources created by a training job, instead of using Google's default encryption. If this is set, then all resources created by the training job will be encrypted with the customer-managed encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6419,7 +6449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_config_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for evaluators. You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6427,7 +6457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_count_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of evaluator replicas to use for the training job. Each replica in the cluster will be of the type specified in `evaluator_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6435,7 +6465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluator_type_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6443,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameters_python" style="color: inherit; text-decoration: inherit;">hyperparameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The set of Hyperparameters to tune.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6451,7 +6481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_dir_python" style="color: inherit; text-decoration: inherit;">job_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Google Cloud Storage path in which to store training outputs and other data needed for training. This path is passed to your TensorFlow program as the '--job-dir' command-line argument. The benefit of specifying this field is that Cloud ML validates the path for use in training.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6459,7 +6489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for your master worker. You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn about [restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6467,7 +6497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. See the [list of compatible Compute Engine machine types](/ai-platform/training/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the certain legacy machine types in this field. See the [list of legacy machine types](/ai-platform/training/docs/machine-types#legacy-machine-types). Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPUs](/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6475,7 +6505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is `projects/{project}/global/networks/{network}`, where {project} is a project number (like `12345`) and {network} is network name. Private services access must already be configured for the network. If left unspecified, the Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-platform/training/docs/vpc-peering).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6483,7 +6513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_uris_python" style="color: inherit; text-decoration: inherit;">package_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage location of the packages with the training program and any additional dependencies. The maximum number of package URIs is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6491,7 +6521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_config_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for parameter servers. You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6499,7 +6529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of parameter server replicas to use for the training job. Each replica in the cluster will be of the type specified in `parameter_server_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `parameter_server_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6507,7 +6537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's parameter server. The supported values are the same as those described in the entry for `master_type`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6515,7 +6545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_module_python" style="color: inherit; text-decoration: inherit;">python_<wbr>module</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Python module name to run after installing the packages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6523,7 +6553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The version of Python used in training. You must either specify this field or specify `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6531,7 +6561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The region to run the training job in. See the [available regions](/ai-platform/training/docs/regions) for AI Platform Training.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6539,7 +6569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The AI Platform runtime version to use for training. You must either specify this field or specify `masterConfig.imageUri`. For more information, see the [runtime version list](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions](/ai-platform/training/docs/versioning).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6547,7 +6577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Specifies the machine types, the number of replicas for workers and parameter servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6555,7 +6585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__schedulingresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__schedulingresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Scheduling<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Scheduling options for a training job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6563,7 +6593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The email address of a service account to use when running the training appplication. You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In addition, the AI Platform Training Google-managed service account must have the `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about configuring a service account.](/ai-platform/training/docs/custom-service-account) If not specified, the AI Platform Training Google-managed service account is used by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6571,7 +6601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_chief_in_tf_config_python" style="color: inherit; text-decoration: inherit;">use_<wbr>chief_<wbr>in_<wbr>tf_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training with a custom container. Defaults to `false`. [Learn more about this field.](/ai-platform/training/docs/distributed-training-details#chief-versus-master) This field has no effect for training jobs that don't use a custom container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6579,7 +6609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__replicaconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Replica<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-training-containers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6587,7 +6617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The number of worker replicas to use for the training job. Each replica in the cluster will be of the type specified in `worker_type`. This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The default value is zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6595,7 +6625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the type of virtual machine to use for your training job's worker nodes. The supported values are the same as those described in the entry for `masterType`. This value must be consistent with the category of machine type that `masterType` uses. In other words, both must be Compute Engine machine types or both must be legacy machine types. If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6729,7 +6759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#builtinalgorithmoutput_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>In<wbr>Algorithm<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6737,7 +6767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completedtrialcount_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>Trial<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6745,7 +6775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumedmlunits_nodejs" style="color: inherit; text-decoration: inherit;">consumed<wbr>MLUnits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of ML units consumed by the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6753,7 +6783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparametermetrictag_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameter<wbr>Metric<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6761,7 +6791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isbuiltinalgorithmjob_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Built<wbr>In<wbr>Algorithm<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this job is a built-in Algorithm job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6769,7 +6799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ishyperparametertuningjob_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hyperparameter<wbr>Tuning<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this job is a hyperparameter tuning job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trials_nodejs" style="color: inherit; text-decoration: inherit;">trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6789,7 +6819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#built_in_algorithm_output_python" style="color: inherit; text-decoration: inherit;">built_<wbr>in_<wbr>algorithm_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6797,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completed_trial_count_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>trial_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6805,7 +6835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumed_ml_units_python" style="color: inherit; text-decoration: inherit;">consumed_<wbr>ml_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of ML units consumed by the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6813,7 +6843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameter_metric_tag_python" style="color: inherit; text-decoration: inherit;">hyperparameter_<wbr>metric_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6821,7 +6851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_built_in_algorithm_job_python" style="color: inherit; text-decoration: inherit;">is_<wbr>built_<wbr>in_<wbr>algorithm_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this job is a built-in Algorithm job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6829,7 +6859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_hyperparameter_tuning_job_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hyperparameter_<wbr>tuning_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this job is a hyperparameter tuning job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6837,7 +6867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trials_python" style="color: inherit; text-decoration: inherit;">trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutput">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6971,7 +7001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#builtinalgorithmoutput_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>In<wbr>Algorithm<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6979,7 +7009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completedtrialcount_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>Trial<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6987,7 +7017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumedmlunits_nodejs" style="color: inherit; text-decoration: inherit;">consumed<wbr>MLUnits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of ML units consumed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6995,7 +7025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparametermetrictag_nodejs" style="color: inherit; text-decoration: inherit;">hyperparameter<wbr>Metric<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7003,7 +7033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isbuiltinalgorithmjob_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Built<wbr>In<wbr>Algorithm<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this job is a built-in Algorithm job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7011,7 +7041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ishyperparametertuningjob_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hyperparameter<wbr>Tuning<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this job is a hyperparameter tuning job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7019,7 +7049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trials_nodejs" style="color: inherit; text-decoration: inherit;">trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7031,7 +7061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#built_in_algorithm_output_python" style="color: inherit; text-decoration: inherit;">built_<wbr>in_<wbr>algorithm_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__builtinalgorithmoutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Built<wbr>In<wbr>Algorithm<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7039,7 +7069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completed_trial_count_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>trial_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7047,7 +7077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumed_ml_units_python" style="color: inherit; text-decoration: inherit;">consumed_<wbr>ml_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of ML units consumed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7055,7 +7085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hyperparameter_metric_tag_python" style="color: inherit; text-decoration: inherit;">hyperparameter_<wbr>metric_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7063,7 +7093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_built_in_algorithm_job_python" style="color: inherit; text-decoration: inherit;">is_<wbr>built_<wbr>in_<wbr>algorithm_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this job is a built-in Algorithm job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7071,7 +7101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_hyperparameter_tuning_job_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hyperparameter_<wbr>tuning_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this job is a hyperparameter tuning job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7079,7 +7109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trials_python" style="color: inherit; text-decoration: inherit;">trials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__hyperparameteroutputresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Hyperparameter<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

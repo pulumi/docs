@@ -20,19 +20,30 @@ Creates a `Membership`.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">groups_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudidentity_v1beta1.EntityKeyArgs]]</span> = None<span class="p">, </span><span class="nx">memberships_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudidentity_v1beta1.EntityKeyArgs]]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudidentity_v1beta1.MembershipRoleArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">groups_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">member_key</span><span class="p">:</span> <span class="nx">Optional[_cloudidentity_v1beta1.EntityKeyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">memberships_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">preferred_member_key</span><span class="p">:</span> <span class="nx">Optional[_cloudidentity_v1beta1.EntityKeyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudidentity_v1beta1.MembershipRoleArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMembership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMembership</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +78,32 @@ Creates a `Membership`.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GroupMembershipArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +279,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#groupsid_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -266,7 +287,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#membershipsid_nodejs" style="color: inherit; text-decoration: inherit;">memberships<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -274,7 +295,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#memberkey_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">pulumi.<wbr>Input<Entity<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +303,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#preferredmemberkey_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">pulumi.<wbr>Input<Entity<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +311,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershiprole">pulumi.<wbr>Input<pulumi.<wbr>Input<Membership<wbr>Role<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#membershiprole">Membership<wbr>Role<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +323,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#groups_id_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -310,7 +331,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#memberships_id_python" style="color: inherit; text-decoration: inherit;">memberships_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -318,7 +339,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#member_key_python" style="color: inherit; text-decoration: inherit;">member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -326,7 +347,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#preferred_member_key_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entitykey">Entity<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +355,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershiprole">Membership<wbr>Role<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#membershiprole">Membership<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -581,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -601,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the `MembershipRole` will expire.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the `MembershipRole` will expire.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the `MembershipRole` will expire.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the `MembershipRole` will expire.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirydetail_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expirydetail">pulumi.<wbr>Input<Expiry<wbr>Detail<wbr>Args></a></span>
+        <span class="property-type"><a href="#expirydetail">Expiry<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_detail_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expirydetail">Expiry<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expirydetail">Expiry<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirydetail_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expirydetailresponse">pulumi.<wbr>Input<Expiry<wbr>Detail<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#expirydetailresponse">Expiry<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_detail_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expirydetailresponse">Expiry<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expirydetailresponse">Expiry<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

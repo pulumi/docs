@@ -20,19 +20,44 @@ Creates a Custom Report for an Organization. A Custom Report provides Apigee Cus
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">chart_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">comments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1CustomReportMetricArgs]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">offset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1ReportPropertyArgs]]]]</span> = None<span class="p">, </span><span class="nx">reports_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">sort_by_cols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">sort_order</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">topk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">chart_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">comments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1CustomReportMetricArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">offset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1ReportPropertyArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">reports_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">sort_by_cols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">sort_order</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">topk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationReport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationReport</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationReport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationReport</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationReport</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationReportArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +92,32 @@ Creates a Custom Report for an Organization. A Custom Report provides Apigee Cus
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationReportArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +517,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +525,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#reportsid_nodejs" style="color: inherit; text-decoration: inherit;">reports<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +533,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#charttype_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field contains the chart type for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +541,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains a list of comments associated with custom report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +549,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This contains the list of dimensions for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +557,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the display name for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +565,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field contains the filter expression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +573,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#fromtime_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. Contains the from time for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +581,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used This field contains the limit for the result retrieved{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +589,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1customreportmetric">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Custom<wbr>Report<wbr>Metric<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1customreportmetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Custom<wbr>Report<wbr>Metric<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. This contains the list of metrics{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +597,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the report T his is a legacy field used to encode custom report unique id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +605,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains the offset for the data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +613,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1reportproperty">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Report<wbr>Property<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1reportproperty">Google<wbr>Cloud<wbr>Apigee<wbr>V1Report<wbr>Property<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This field contains report properties such as ui metadata etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +621,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#sortbycols_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By<wbr>Cols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used much. Contains the list of sort by columns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +629,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used much. Contains the sort order for the sort columns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +637,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains a list of tags associated with custom report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +645,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field contains the time unit of aggregation for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +653,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#totime_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. Contains the end time for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +661,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#topk_nodejs" style="color: inherit; text-decoration: inherit;">topk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains the top k parameter value for restricting the result{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -638,7 +673,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -646,7 +681,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#reports_id_python" style="color: inherit; text-decoration: inherit;">reports_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +689,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#chart_type_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field contains the chart type for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +697,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains a list of comments associated with custom report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +705,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This contains the list of dimensions for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +713,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the display name for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +721,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field contains the filter expression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +729,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#from_time_python" style="color: inherit; text-decoration: inherit;">from_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. Contains the from time for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +737,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used This field contains the limit for the result retrieved{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +745,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1customreportmetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Custom<wbr>Report<wbr>Metric<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1customreportmetric">Google<wbr>Cloud<wbr>Apigee<wbr>V1Custom<wbr>Report<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. This contains the list of metrics{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +753,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the report T his is a legacy field used to encode custom report unique id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +761,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains the offset for the data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +769,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1reportproperty">Google<wbr>Cloud<wbr>Apigee<wbr>V1Report<wbr>Property<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1reportproperty">Google<wbr>Cloud<wbr>Apigee<wbr>V1Report<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This field contains report properties such as ui metadata etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +777,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#sort_by_cols_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by_<wbr>cols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used much. Contains the list of sort by columns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +785,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used much. Contains the sort order for the sort columns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +793,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains a list of tags associated with custom report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +801,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field contains the time unit of aggregation for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +809,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#to_time_python" style="color: inherit; text-decoration: inherit;">to_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. Contains the end time for the report{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +817,7 @@ The OrganizationReport resource accepts the following [input]({{< relref "/docs/
 <a href="#topk_python" style="color: inherit; text-decoration: inherit;">topk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legacy field: not used. This field contains the top k parameter value for restricting the result{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1081,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}aggregate function{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}aggregate function{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1307,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}aggregate function{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1315,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}aggregate function{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}property values{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}property values{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the property{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1479,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}property values{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1491,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the property{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}property values{{% /md %}}</dd></dl>
 {{% /choosable %}}

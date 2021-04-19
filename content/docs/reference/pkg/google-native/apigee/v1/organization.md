@@ -20,19 +20,38 @@ Creates an Apigee organization. See [Create an Apigee organization](https://clou
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">analytics_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">customer_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1PropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">runtime_database_encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">runtime_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1AddonsConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">analytics_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">billing_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">customer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1PropertiesArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">runtime_database_encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">runtime_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates an Apigee organization. See [Create an Apigee organization](https://clou
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -173,6 +202,14 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addonsconfig_csharp">
+<a href="#addonsconfig_csharp" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1addonsconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Addon configurations of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsregion_csharp">
 <a href="#analyticsregion_csharp" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
@@ -274,6 +311,14 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="addonsconfig_go">
+<a href="#addonsconfig_go" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1addonsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Addon configurations of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="analyticsregion_go">
 <a href="#analyticsregion_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
 </span>
@@ -370,15 +415,23 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addonsconfig_nodejs">
+<a href="#addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1addonsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Addon configurations of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsregion_nodejs">
 <a href="#analyticsregion_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +439,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +447,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +455,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +463,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#customername_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +471,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +479,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +487,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1properties">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1properties">Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties defined in the Apigee organization profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +495,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimedatabaseencryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +503,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimetype_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +511,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,15 +523,23 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="addons_config_python">
+<a href="#addons_config_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1addonsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Addon configurations of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analytics_region_python">
 <a href="#analytics_region_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +547,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +555,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +563,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +571,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#customer_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +579,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +587,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +595,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1properties">Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1properties">Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties defined in the Apigee organization profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +603,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtime_database_encryption_key_name_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>database_<wbr>encryption_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +611,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtime_type_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Runtime type of the Apigee organization based on the Apigee subscription purchased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +619,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not used by Apigee.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -916,6 +977,534 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="googlecloudapigeev1addonsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="advancedapiopsconfig_csharp">
+<a href="#advancedapiopsconfig_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationconfig_csharp">
+<a href="#integrationconfig_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monetizationconfig_csharp">
+<a href="#monetizationconfig_csharp" style="color: inherit; text-decoration: inherit;">Monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="advancedapiopsconfig_go">
+<a href="#advancedapiopsconfig_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationconfig_go">
+<a href="#integrationconfig_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monetizationconfig_go">
+<a href="#monetizationconfig_go" style="color: inherit; text-decoration: inherit;">Monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="advancedapiopsconfig_nodejs">
+<a href="#advancedapiopsconfig_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationconfig_nodejs">
+<a href="#integrationconfig_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monetizationconfig_nodejs">
+<a href="#monetizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="advanced_api_ops_config_python">
+<a href="#advanced_api_ops_config_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>api_<wbr>ops_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integration_config_python">
+<a href="#integration_config_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monetization_config_python">
+<a href="#monetization_config_python" style="color: inherit; text-decoration: inherit;">monetization_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1addonsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Addons<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="advancedapiopsconfig_csharp">
+<a href="#advancedapiopsconfig_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="integrationconfig_csharp">
+<a href="#integrationconfig_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="monetizationconfig_csharp">
+<a href="#monetizationconfig_csharp" style="color: inherit; text-decoration: inherit;">Monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Apigee.<wbr>V1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="advancedapiopsconfig_go">
+<a href="#advancedapiopsconfig_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="integrationconfig_go">
+<a href="#integrationconfig_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="monetizationconfig_go">
+<a href="#monetizationconfig_go" style="color: inherit; text-decoration: inherit;">Monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="advancedapiopsconfig_nodejs">
+<a href="#advancedapiopsconfig_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Api<wbr>Ops<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="integrationconfig_nodejs">
+<a href="#integrationconfig_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="monetizationconfig_nodejs">
+<a href="#monetizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">monetization<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="advanced_api_ops_config_python">
+<a href="#advanced_api_ops_config_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>api_<wbr>ops_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Advanced API Ops add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="integration_config_python">
+<a href="#integration_config_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1integrationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Integration add-on.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="monetization_config_python">
+<a href="#monetization_config_python" style="color: inherit; text-decoration: inherit;">monetization_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#googlecloudapigeev1monetizationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the Monetization add-on.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1advancedapiopsconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1advancedapiopsconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Advanced<wbr>Api<wbr>Ops<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Advanced API Ops add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1integrationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1integrationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Integration<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Integration add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1monetizationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="googlecloudapigeev1monetizationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Monetization<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that specifies whether the Monetization add-on is enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="googlecloudapigeev1properties">Google<wbr>Cloud<wbr>Apigee<wbr>V1Properties</h4>
 
 {{% choosable language csharp %}}
@@ -949,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1property">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1property">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all properties in the object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1property">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1property">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all properties in the object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1propertyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1propertyresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of all properties in the object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1propertyresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1propertyresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of all properties in the object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value{{% /md %}}</dd></dl>
 {{% /choosable %}}

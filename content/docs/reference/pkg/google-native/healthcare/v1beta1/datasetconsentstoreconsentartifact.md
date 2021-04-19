@@ -20,19 +20,38 @@ Creates a new Consent artifact in the parent consent store.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">consent_artifacts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">consent_content_screenshots</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_healthcare_v1beta1.ImageArgs]]]]</span> = None<span class="p">, </span><span class="nx">consent_content_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">consent_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">guardian_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.SignatureArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.SignatureArgs]]</span> = None<span class="p">, </span><span class="nx">witness_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.SignatureArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                       <span class="nx">consent_artifacts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">consent_content_screenshots</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.ImageArgs]]</span> = None<span class="p">,</span>
+                                       <span class="nx">consent_content_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">consent_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">guardian_signature</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.SignatureArgs]</span> = None<span class="p">,</span>
+                                       <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">user_signature</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.SignatureArgs]</span> = None<span class="p">,</span>
+                                       <span class="nx">witness_signature</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.SignatureArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p">,</span>
+                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetConsentStoreConsentArtifact</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetConsentStoreConsentArtifact</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetConsentStoreConsentArtifact</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates a new Consent artifact in the parent consent store.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetConsentStoreConsentArtifactArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consentartifactsid_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Artifacts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consentstoresid_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +439,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +447,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consentcontentscreenshots_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Content<wbr>Screenshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Screenshots, PDFs, or other binary information documenting the user's consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consentcontentversion_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Content<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. An string indicating the version of the consent information shown to the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#guardiansignature_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">pulumi.<wbr>Input<Signature<wbr>Args></a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A signature from a guardian.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#usersignature_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">pulumi.<wbr>Input<Signature<wbr>Args></a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. User's signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#witnesssignature_nodejs" style="color: inherit; text-decoration: inherit;">witness<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">pulumi.<wbr>Input<Signature<wbr>Args></a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A signature from a witness.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consent_artifacts_id_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>artifacts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consent_stores_id_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -518,7 +547,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +555,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consent_content_screenshots_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>content_<wbr>screenshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Screenshots, PDFs, or other binary information documenting the user's consent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#consent_content_version_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>content_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. An string indicating the version of the consent information shown to the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#guardian_signature_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">Signature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A signature from a guardian.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#user_signature_python" style="color: inherit; text-decoration: inherit;">user_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">Signature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. User's signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The DatasetConsentStoreConsentArtifact resource accepts the following [input]({{
 <a href="#witness_signature_python" style="color: inherit; text-decoration: inherit;">witness_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signature">Signature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signature">Signature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A signature from a witness.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The consent artifact content at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact content in raw_bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawbytes_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consent artifact content represented as a stream of bytes. This field is populated when returned in GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The consent artifact content at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact content in raw_bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_bytes_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consent artifact content represented as a stream of bytes. This field is populated when returned in GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The consent artifact content at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact content in raw_bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawbytes_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consent artifact content represented as a stream of bytes. This field is populated when returned in GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The consent artifact content at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact content in raw_bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_bytes_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consent artifact content represented as a stream of bytes. This field is populated when returned in GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">pulumi.<wbr>Input<Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An image of the user's signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturetime_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Timestamp of the signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -941,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An image of the user's signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_time_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Timestamp of the signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageresponse">pulumi.<wbr>Input<Image<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An image of the user's signature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1067,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturetime_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Timestamp of the signature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1087,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An image of the user's signature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_time_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Timestamp of the signature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. User's UUID provided by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

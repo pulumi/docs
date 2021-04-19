@@ -20,19 +20,44 @@ Creates a node pool for a cluster.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_container_v1.NodePoolAutoscalingArgs]]</span> = None<span class="p">, </span><span class="nx">clusters_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_container_v1.StatusConditionArgs]]]]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_container_v1.NodeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_container_v1.NodeManagementArgs]]</span> = None<span class="p">, </span><span class="nx">max_pods_constraint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_container_v1.MaxPodsConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_pools_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pod_ipv4_cidr_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_container_v1.UpgradeSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">autoscaling</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NodePoolAutoscalingArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">clusters_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_container_v1.StatusConditionArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NodeConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[_container_v1.NodeManagementArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">max_pods_constraint</span><span class="p">:</span> <span class="nx">Optional[_container_v1.MaxPodsConstraintArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">node_pools_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">pod_ipv4_cidr_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[_container_v1.UpgradeSettingsArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterNodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterNodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterNodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterNodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +92,32 @@ Creates a node pool for a cluster.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterNodePoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +517,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#clustersid_nodejs" style="color: inherit; text-decoration: inherit;">clusters<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +525,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +533,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#nodepoolsid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +541,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +549,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">pulumi.<wbr>Input<Node<wbr>Pool<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +557,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statuscondition">Status<wbr>Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Which conditions caused the current node pool state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +565,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">pulumi.<wbr>Input<Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +573,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +581,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#instancegroupurls_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +589,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +597,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodemanagement">pulumi.<wbr>Input<Node<wbr>Management<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodemanagement">Node<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NodeManagement configuration for this NodePool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +605,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#maxpodsconstraint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maxpodsconstraint">pulumi.<wbr>Input<Max<wbr>Pods<wbr>Constraint<wbr>Args></a></span>
+        <span class="property-type"><a href="#maxpodsconstraint">Max<wbr>Pods<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +613,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +621,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +629,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#podipv4cidrsize_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Ipv4Cidr<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output only] The pod CIDR block size per node in this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +637,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +645,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +653,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradesettings">pulumi.<wbr>Input<Upgrade<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#upgradesettings">Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade settings control disruption and speed of the upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +661,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Kubernetes of this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -638,7 +673,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#clusters_id_python" style="color: inherit; text-decoration: inherit;">clusters_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -646,7 +681,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -654,7 +689,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#node_pools_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -662,7 +697,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +705,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +713,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscondition">Status<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statuscondition">Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Which conditions caused the current node pool state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +721,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +729,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +737,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +745,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +753,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodemanagement">Node<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodemanagement">Node<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NodeManagement configuration for this NodePool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +761,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#max_pods_constraint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maxpodsconstraint">Max<wbr>Pods<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maxpodsconstraint">Max<wbr>Pods<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +769,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +777,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +785,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#pod_ipv4_cidr_size_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ipv4_<wbr>cidr_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output only] The pod CIDR block size per node in this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +793,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +801,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The status of the nodes in this pool instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +809,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradesettings">Upgrade<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#upgradesettings">Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade settings control disruption and speed of the upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +817,7 @@ The ClusterNodePool resource accepts the following [input]({{< relref "/docs/int
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Kubernetes of this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards exposed to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards exposed to an instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards exposed to an instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -991,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards exposed to an instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1011,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgradestarttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the description of the upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_start_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the description of the upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgradestarttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the description of the upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_start_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] This field is set when upgrades are about to commence with the description of the upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1275,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Constraint enforced on the max num of pods per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Constraint enforced on the max num of pods per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Constraint enforced on the max num of pods per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Constraint enforced on the max num of pods per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiskkmskey_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that for a given image type, the latest version of it will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1789,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodekubeletconfig">pulumi.<wbr>Input<Node<wbr>Kubelet<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodekubeletconfig">Node<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node kubelet configs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxnodeconfig">pulumi.<wbr>Input<Linux<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxnodeconfig">Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that can be configured on Linux nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine type is `e2-medium`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-os-login" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1861,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">pulumi.<wbr>Input<Reservation<wbr>Affinity<wbr>Args></a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sandboxconfig">pulumi.<wbr>Input<Sandbox<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sandboxconfig">Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sandbox configuration for this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetaint">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Taint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodetaint">Node<wbr>Taint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadmetadataconfig">pulumi.<wbr>Input<Workload<wbr>Metadata<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#workloadmetadataconfig">Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workload metadata configuration for this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that for a given image type, the latest version of it will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodekubeletconfig">Node<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodekubeletconfig">Node<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node kubelet configs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxnodeconfig">Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxnodeconfig">Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that can be configured on Linux nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine type is `e2-medium`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-os-login" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sandboxconfig">Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sandboxconfig">Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sandbox configuration for this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetaint">Node<wbr>Taint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodetaint">Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadmetadataconfig">Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadmetadataconfig">Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workload metadata configuration for this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2471,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiskkmskey_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2487,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that for a given image type, the latest version of it will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodekubeletconfigresponse">pulumi.<wbr>Input<Node<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodekubeletconfigresponse">Node<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node kubelet configs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxnodeconfigresponse">pulumi.<wbr>Input<Linux<wbr>Node<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxnodeconfigresponse">Linux<wbr>Node<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that can be configured on Linux nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine type is `e2-medium`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2551,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-os-login" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2559,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2567,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2575,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2583,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinityresponse">pulumi.<wbr>Input<Reservation<wbr>Affinity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sandboxconfigresponse">pulumi.<wbr>Input<Sandbox<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sandboxconfigresponse">Sandbox<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sandbox configuration for this node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfigresponse">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetaintresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Taint<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodetaintresponse">Node<wbr>Taint<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2639,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadmetadataconfigresponse">pulumi.<wbr>Input<Workload<wbr>Metadata<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#workloadmetadataconfigresponse">Workload<wbr>Metadata<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workload metadata configuration for this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2651,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2659,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2667,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2675,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2683,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that for a given image type, the latest version of it will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2691,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodekubeletconfigresponse">Node<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodekubeletconfigresponse">Node<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node kubelet configs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2699,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys, the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is undefined and conflicts should be avoided. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2707,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxnodeconfigresponse">Linux<wbr>Node<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxnodeconfigresponse">Linux<wbr>Node<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that can be configured on Linux nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2715,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of local SSD disks to be attached to the node. The limit for this value is dependent upon the maximum number of disks available on a machine per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2723,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine type is `e2-medium`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2731,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project or be one of the reserved keys: - "cluster-location" - "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-os-login" - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template" - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1" The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on them is that each value's size must be less than or equal to 32 KB. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2739,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2747,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2763,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the nodes are created as preemptible VM instances. See: https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this node pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sandboxconfigresponse">Sandbox<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sandboxconfigresponse">Sandbox<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sandbox configuration for this node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetaintresponse">Node<wbr>Taint<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodetaintresponse">Node<wbr>Taint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of kubernetes taints to be applied to each node. For more information, including usage and the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2819,7 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadmetadataconfigresponse">Workload<wbr>Metadata<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadmetadataconfigresponse">Workload<wbr>Metadata<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workload metadata configuration for this node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2889,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2905,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which represents the existing scheduling behavior. - "static": allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is 'none' if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2917,7 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which represents the existing scheduling behavior. - "static": allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is 'none' if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3003,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3011,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3019,7 +3054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which represents the existing scheduling behavior. - "static": allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is 'none' if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3031,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which represents the existing scheduling behavior. - "static": allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is 'none' if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autorepair_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradeoptions_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoupgradeoptions">pulumi.<wbr>Input<Auto<wbr>Upgrade<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoupgradeoptions">Auto<wbr>Upgrade<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Auto Upgrade knobs for the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3145,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3153,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_options_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoupgradeoptions">Auto<wbr>Upgrade<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoupgradeoptions">Auto<wbr>Upgrade<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Auto Upgrade knobs for the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3231,7 +3266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autorepair_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3239,7 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3247,7 +3282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradeoptions_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoupgradeoptionsresponse">pulumi.<wbr>Input<Auto<wbr>Upgrade<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoupgradeoptionsresponse">Auto<wbr>Upgrade<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Auto Upgrade knobs for the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3259,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3267,7 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3275,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_options_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoupgradeoptionsresponse">Auto<wbr>Upgrade<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoupgradeoptionsresponse">Auto<wbr>Upgrade<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Auto Upgrade knobs for the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3361,7 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">autoprovisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can this node pool be deleted automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is autoscaling enabled for this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3397,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovisioned_python" style="color: inherit; text-decoration: inherit;">autoprovisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can this node pool be deleted automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is autoscaling enabled for this node pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3413,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3421,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3507,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">autoprovisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can this node pool be deleted automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3515,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is autoscaling enabled for this node pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3523,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3531,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3543,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovisioned_python" style="color: inherit; text-decoration: inherit;">autoprovisioned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can this node pool be deleted automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3551,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is autoscaling enabled for this node pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3559,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3567,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3637,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3653,7 +3688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3665,7 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for taint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3751,7 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3759,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3767,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3779,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Effect for taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3787,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for taint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3795,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3865,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3873,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3881,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3893,7 +3928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3979,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3987,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3995,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4007,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the type of reservation consumption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4015,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4023,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label value(s) of reservation resource(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4061,7 +4096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4073,7 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4111,7 +4146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4123,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the sandbox to use for the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4177,7 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4185,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4197,7 +4232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4205,7 +4240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4259,7 +4294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4267,7 +4302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4279,7 +4314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4287,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4341,7 +4376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4349,7 +4384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4361,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_code_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4369,7 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4423,7 +4458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalcode_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4431,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,7 +4478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_code_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canonical code of the condition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4451,7 +4486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly representation of the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4505,7 +4540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4513,7 +4548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4525,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4587,7 +4622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4595,7 +4630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4607,7 +4642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4615,7 +4650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4653,7 +4688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4665,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4703,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4715,7 +4750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode is the configuration for how to expose metadata to workloads running on the node pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}

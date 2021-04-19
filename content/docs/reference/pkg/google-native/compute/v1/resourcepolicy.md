@@ -20,19 +20,39 @@ Creates a new resource policy.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.ResourcePolicyGroupPlacementPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.ResourcePolicyInstanceSchedulePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resource_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resource_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.ResourcePolicyResourceStatusArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.ResourcePolicySnapshotSchedulePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ResourcePolicyInstanceSchedulePolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_status</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ResourcePolicyResourceStatusArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResourcePolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourcePolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResourcePolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourcePolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a new resource policy.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ResourcePolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +448,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcepolicy_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances for placement configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#instanceschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for scheduling instance operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#resource_policies for resource policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcestatus_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatus">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The system status of the resource policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for persistent disks for creating snapshots.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,7 +564,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances for placement configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#instance_schedule_policy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for scheduling instance operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#resource_policies for resource policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The system status of the resource policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for persistent disks for creating snapshots.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of resource policy creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysincycle_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -785,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysincycle_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -879,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -899,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitydomaincount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1013,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availabilitydomaincount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies network collocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursincycle_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursincycle_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmstartschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Start<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmstopschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Stop<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1517,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_start_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>start_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_stop_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>stop_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1651,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1659,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmstartschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Start<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmstopschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Stop<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1695,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the schedule. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_start_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>start_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_stop_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>stop_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1765,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatus">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_schedule_policy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatus">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrunstarttime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nextrunstarttime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1951,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_run_start_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_run_start_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrunstarttime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2021,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nextrunstarttime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Run<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2033,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_run_start_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2041,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_run_start_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>run_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2079,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatusresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatusresponse">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_schedule_policy_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatusresponse">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyresourcestatusinstanceschedulepolicystatusresponse">Resource<wbr>Policy<wbr>Resource<wbr>Status<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2161,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties with which snapshots are created such as labels, encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties with which snapshots are created such as labels, encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2275,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2283,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2291,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotpropertiesresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotpropertiesresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties with which snapshots are created such as labels, encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2303,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicyresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2311,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotpropertiesresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotpropertiesresponse">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties with which snapshots are created such as labels, encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2455,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2463,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2475,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2553,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicydailycycle">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicydailycycle">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyhourlycycle">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyhourlycycle">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycle">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycle">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicydailycycle">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicydailycycle">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyhourlycycle">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyhourlycycle">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycle">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycle">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2667,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicydailycycleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicydailycycleresponse">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2675,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyhourlycycleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyhourlycycleresponse">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2683,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycleresponse">pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycleresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2695,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicydailycycleresponse">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicydailycycleresponse">Resource<wbr>Policy<wbr>Daily<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2703,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyhourlycycleresponse">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyhourlycycleresponse">Resource<wbr>Policy<wbr>Hourly<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2711,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycleresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycleresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2797,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chainname_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Chain name that the snapshot is created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2805,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indication to perform a 'guest aware' snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2833,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chain_name_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Chain name that the snapshot is created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indication to perform a 'guest aware' snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2849,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2857,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2943,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chainname_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Chain name that the snapshot is created in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2951,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indication to perform a 'guest aware' snapshot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2959,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2967,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2979,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chain_name_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Chain name that the snapshot is created in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2987,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indication to perform a 'guest aware' snapshot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3003,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3041,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweek">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Up to 7 intervals/windows, one for each day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3053,7 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweek">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweek">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to 7 intervals/windows, one for each day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3123,7 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3151,7 +3181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3159,7 +3189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3237,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3245,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3253,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3265,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3273,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3281,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3319,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Up to 7 intervals/windows, one for each day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3331,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcepolicyweeklycycledayofweekresponse">Resource<wbr>Policy<wbr>Weekly<wbr>Cycle<wbr>Day<wbr>Of<wbr>Week<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to 7 intervals/windows, one for each day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}

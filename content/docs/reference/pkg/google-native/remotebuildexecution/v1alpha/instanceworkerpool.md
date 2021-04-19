@@ -20,19 +20,36 @@ Creates a new worker pool with a specified size and configuration. Returns a lon
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs]]</span> = None<span class="p">, </span><span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs]]</span> = None<span class="p">, </span><span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">workerpools_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">autoscale</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">worker_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">workerpools_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceWorkerpool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceWorkerpool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceWorkerpool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceWorkerpool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceWorkerpool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceWorkerpoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a new worker pool with a specified size and configuration. Returns a lon
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceWorkerpoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#instancesid_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +397,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#workerpoolsid_nodejs" style="color: inherit; text-decoration: inherit;">workerpools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +405,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaautoscale">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Autoscale<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaautoscale">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale policy to apply on a pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +413,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#channel_nodejs" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Channel specifies the release channel of the pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaworkerconfig">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaworkerconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of workers in the worker pool. Must be a value between 0 and 15000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#instances_id_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +489,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#workerpools_id_python" style="color: inherit; text-decoration: inherit;">workerpools_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +497,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscale_python" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaautoscale">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Autoscale<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaautoscale">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscale policy to apply on a pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +505,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Channel specifies the release channel of the pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaworkerconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaworkerconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The InstanceWorkerpool resource accepts the following [input]({{< relref "/docs/
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired number of workers in the worker pool. Must be a value between 0 and 15000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of guest accelerator cards exposed to each VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of guest accelerator cards exposed to each VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of guest accelerator cards exposed to each VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -735,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of guest accelerator cards exposed to each VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of workers. Must be equal to or greater than min_size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of workers. Must be greater than 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximal number of workers. Must be equal to or greater than min_size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal number of workers. Must be greater than 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of workers. Must be equal to or greater than min_size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of workers. Must be greater than 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximal number of workers. Must be equal to or greater than min_size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal number of workers. Must be greater than 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1117,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_nodejs" style="color: inherit; text-decoration: inherit;">accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The accelerator card attached to each VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrentactions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of actions a worker can execute concurrently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkaccess_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soletenantnodetype_nodejs" style="color: inherit; text-decoration: inherit;">sole<wbr>Tenant<wbr>Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node type name to be used for sole-tenant nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image used by each VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_python" style="color: inherit; text-decoration: inherit;">accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfig">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The accelerator card attached to each VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrent_actions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number of actions a worker can execute concurrently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_access_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sole_tenant_node_type_python" style="color: inherit; text-decoration: inherit;">sole_<wbr>tenant_<wbr>node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node type name to be used for sole-tenant nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image used by each VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_nodejs" style="color: inherit; text-decoration: inherit;">accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfigresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfigresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The accelerator card attached to each VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxconcurrentactions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of actions a worker can execute concurrently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkaccess_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soletenantnodetype_nodejs" style="color: inherit; text-decoration: inherit;">sole<wbr>Tenant<wbr>Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node type name to be used for sole-tenant nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image used by each VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_python" style="color: inherit; text-decoration: inherit;">accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfigresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphaacceleratorconfigresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The accelerator card attached to each VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1603,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_concurrent_actions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number of actions a worker can execute concurrently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1635,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_access_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1643,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sole_tenant_node_type_python" style="color: inherit; text-decoration: inherit;">sole_<wbr>tenant_<wbr>node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node type name to be used for sole-tenant nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1659,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image used by each VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}

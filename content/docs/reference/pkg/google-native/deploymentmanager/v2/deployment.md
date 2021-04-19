@@ -20,19 +20,39 @@ Creates a deployment and all of the resources described by the deployment manife
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">insert_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_deploymentmanager_v2.DeploymentLabelEntryArgs]]]]</span> = None<span class="p">, </span><span class="nx">manifest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_deploymentmanager_v2.OperationArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_deploymentmanager_v2.TargetConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_deploymentmanager_v2.DeploymentUpdateArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">insert_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[_deploymentmanager_v2.DeploymentLabelEntryArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">manifest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[_deploymentmanager_v2.OperationArgs]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[_deploymentmanager_v2.TargetConfigurationArgs]</span> = None<span class="p">,</span>
+               <span class="nx">update</span><span class="p">:</span> <span class="nx">Optional[_deploymentmanager_v2.DeploymentUpdateArgs]</span> = None<span class="p">,</span>
+               <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a deployment and all of the resources described by the deployment manife
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deployment_nodejs" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +448,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides a fingerprint to use in requests to modify a deployment, such as `update()`, `stop()`, and `cancelPreview()` requests. A fingerprint is a randomly generated value that must be provided with `update()`, `stop()`, and `cancelPreview()` requests to perform optimistic locking. This ensures optimistic concurrency so that only one request happens at a time. The fingerprint is initially generated by Deployment Manager and changes after every request to modify data. To get the latest fingerprint value, perform a `get()` request to a deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#inserttime_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabelentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Label<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentlabelentry">Deployment<wbr>Label<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the last manifest that was successfully deployed. If no manifest has been successfully deployed, this field will be absent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">pulumi.<wbr>Input<Operation<wbr>Args></a></span>
+        <span class="property-type"><a href="#operation">Operation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Operation that most recently ran, or is currently running, on this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetconfiguration">pulumi.<wbr>Input<Target<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#targetconfiguration">Target<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The parameters that define your deployment, including the deployment configuration and relevant templates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdate">pulumi.<wbr>Input<Deployment<wbr>Update<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentupdate">Deployment<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If Deployment Manager is currently updating or previewing an update to this deployment, the updated configuration appears here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update timestamp in RFC3339 text format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +564,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provides a fingerprint to use in requests to modify a deployment, such as `update()`, `stop()`, and `cancelPreview()` requests. A fingerprint is a randomly generated value that must be provided with `update()`, `stop()`, and `cancelPreview()` requests to perform optimistic locking. This ensures optimistic concurrency so that only one request happens at a time. The fingerprint is initially generated by Deployment Manager and changes after every request to modify data. To get the latest fingerprint value, perform a `get()` request to a deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#insert_time_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabelentry">Deployment<wbr>Label<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentlabelentry">Deployment<wbr>Label<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the last manifest that was successfully deployed. If no manifest has been successfully deployed, this field will be absent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operation">Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#operation">Operation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Operation that most recently ran, or is currently running, on this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetconfiguration">Target<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetconfiguration">Target<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] The parameters that define your deployment, including the deployment configuration and relevant templates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdate">Deployment<wbr>Update<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentupdate">Deployment<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If Deployment Manager is currently updating or previewing an update to this deployment, the updated configuration appears here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Update timestamp in RFC3339 text format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -737,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -775,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -787,9 +817,501 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymentdataitem">Deployment<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymenterror">Deployment<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Errors<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitem">[]Deployment<wbr>Errors<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymenterrorresponse">Deployment<wbr>Error<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_csharp">
+<a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_go">
+<a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitemresponse">[]Deployment<wbr>Errors<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_nodejs">
+<a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="errors_python">
+<a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The array of errors encountered while processing this operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymenterrorsitem">Deployment<wbr>Errors<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymenterrorsitemresponse">Deployment<wbr>Errors<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] The error type identifier for this error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Indicates the field in the request that caused the error. This property is optional.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An optional, human-readable error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentlabelentry">Deployment<wbr>Label<wbr>Entry</h4>
@@ -841,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -951,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment after the current update has been applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdatelabelentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentupdatelabelentry">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the update configuration of this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment after the current update has been applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdatelabelentry">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentupdatelabelentry">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the update configuration of this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1209,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment after the current update has been applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdatelabelentryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentupdatelabelentryresponse">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1315,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the update configuration of this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional user-provided description of the deployment after the current update has been applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentupdatelabelentryresponse">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentupdatelabelentryresponse">Deployment<wbr>Update<wbr>Label<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,9 +1865,237 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the manifest representing the update configuration of this deployment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitem">[]Deployment<wbr>Data<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitem">Deployment<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitem">Deployment<wbr>Data<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitemresponse">[]Deployment<wbr>Data<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentdataitemresponse">Deployment<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="importfile">Import<wbr>File</h4>
@@ -1397,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1479,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#deploymenterror">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#deploymentwarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#deploymentwarningsitem">[]Deployment<wbr>Warnings<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientoperationid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] A textual description of the operation, which is set when the operation is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was completed. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrormessage_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorstatuscode_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the operation. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inserttime_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was requested. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always `compute#operation` for Operation resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the operation resides. Only applicable when performing regional operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was started by the server. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional textual description of the current status of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique target ID, which identifies a specific incarnation of the target resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlink_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] User who requested the operation, for example: `user@example.com`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_operation_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] A textual description of the operation, which is set when the operation is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was completed. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2141,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#deploymenterror">Deployment<wbr>Error<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_message_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_status_code_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the operation. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insert_time_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was requested. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always `compute#operation` for Operation resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_group_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the operation resides. Only applicable when performing regional operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2237,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was started by the server. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional textual description of the current status of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique target ID, which identifies a specific incarnation of the target resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_link_python" style="color: inherit; text-decoration: inherit;">target_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] User who requested the operation, for example: `user@example.com`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#deploymentwarningsitem">Deployment<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2339,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#deploymenterrorresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#deploymentwarningsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>V2.<wbr>Inputs.<wbr>Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2663,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#deploymentwarningsitemresponse">[]Deployment<wbr>Warnings<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2683,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientoperationid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2691,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2699,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] A textual description of the operation, which is set when the operation is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2707,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was completed. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2715,7 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2723,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrormessage_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2731,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorstatuscode_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2739,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inserttime_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was requested. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2747,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always `compute#operation` for Operation resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2763,7 +3513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the operation resides. Only applicable when performing regional operations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was started by the server. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2819,7 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional textual description of the current status of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique target ID, which identifies a specific incarnation of the target resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetlink_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] User who requested the operation, for example: `user@example.com`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2851,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2871,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_operation_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2879,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2887,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] A textual description of the operation, which is set when the operation is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2895,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was completed. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2903,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#deploymenterrorresponse">Deployment<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If errors are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2911,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_message_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_status_code_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2927,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insert_time_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was requested. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2935,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always `compute#operation` for Operation resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2943,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2951,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_group_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2959,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2967,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2975,7 +3725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the operation resides. Only applicable when performing regional operations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,7 +3733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2991,7 +3741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The time that this operation was started by the server. This value is in RFC3339 text format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2999,7 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3007,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional textual description of the current status of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3015,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique target ID, which identifies a specific incarnation of the target resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3023,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_link_python" style="color: inherit; text-decoration: inherit;">target_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] User who requested the operation, for example: `user@example.com`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#deploymentwarningsitemresponse">Deployment<wbr>Warnings<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If warning messages are generated during processing of the operation, this field will be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3101,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configfile">pulumi.<wbr>Input<Config<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#configfile">Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to use for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3109,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imports_nodejs" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Import<wbr>File<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#importfile">Import<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3121,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configfile">Config<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configfile">Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to use for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3129,7 +3879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importfile">Import<wbr>File<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#importfile">Import<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3183,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configfileresponse">pulumi.<wbr>Input<Config<wbr>File<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#configfileresponse">Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to use for this deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3191,7 +3941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imports_nodejs" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importfileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Import<wbr>File<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#importfileresponse">Import<wbr>File<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3203,7 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configfileresponse">Config<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configfileresponse">Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to use for this deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importfileresponse">Import<wbr>File<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#importfileresponse">Import<wbr>File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.{{% /md %}}</dd></dl>
 {{% /choosable %}}

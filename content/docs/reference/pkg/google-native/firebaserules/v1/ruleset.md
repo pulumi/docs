@@ -20,19 +20,31 @@ Create a `Ruleset` from `Source`. The `Ruleset` is given a unique generated name
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_firebaserules_v1.MetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rulesets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_firebaserules_v1.SourceArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_firebaserules_v1.MetadataArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">rulesets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[_firebaserules_v1.SourceArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ruleset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ruleset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ruleset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RulesetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Create a `Ruleset` from `Source`. The `Ruleset` is given a unique generated name
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RulesetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rulesetsid_nodejs" style="color: inherit; text-decoration: inherit;">rulesets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +312,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the `Ruleset` was created. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadata">pulumi.<wbr>Input<Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadata">Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata for this ruleset. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the `Ruleset`. The ruleset_id is auto generated by the service. Format: `projects/{project_id}/rulesets/{ruleset_id}` Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">pulumi.<wbr>Input<Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}`Source` for the `Ruleset`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rulesets_id_python" style="color: inherit; text-decoration: inherit;">rulesets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -342,7 +364,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the `Ruleset` was created. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadata">Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadata">Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata for this ruleset. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the `Ruleset`. The ruleset_id is auto generated by the service. Format: `projects/{project_id}/rulesets/{ruleset_id}` Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The Ruleset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}`Source` for the `Ruleset`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -501,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual Content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint (e.g. github sha) associated with the `File`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -529,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual Content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -537,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint (e.g. github sha) associated with the `File`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual Content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint (e.g. github sha) associated with the `File`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -631,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -643,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual Content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -651,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint (e.g. github sha) associated with the `File`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#file">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#file">File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}`File` set constituting the `Source` bundle.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#file">File<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#file">File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`File` set constituting the `Source` bundle.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileresponse">File<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}`File` set constituting the `Source` bundle.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileresponse">File<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileresponse">File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}`File` set constituting the `Source` bundle.{{% /md %}}</dd></dl>
 {{% /choosable %}}

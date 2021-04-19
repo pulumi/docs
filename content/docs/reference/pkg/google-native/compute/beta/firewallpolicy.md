@@ -20,19 +20,40 @@ Creates a new policy in the specified project using the data included in the req
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.FirewallPolicyAssociationArgs]]]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rule_tuple_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.FirewallPolicyRuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">associations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.FirewallPolicyAssociationArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">rule_tuple_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.FirewallPolicyRuleArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +88,32 @@ Creates a new policy in the specified project using the data included in the req
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -422,7 +453,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +461,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyassociation">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Association<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallpolicyassociation">Firewall<wbr>Policy<wbr>Association<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of associations that belong to this firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +469,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +477,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +485,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Depreacted, please use short name instead. User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +493,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -472,7 +503,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +511,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyfor firewall policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +519,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +527,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The parent of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +535,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +543,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallpolicyrule">Firewall<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a firewall policy, a default rule with action "allow" will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +551,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +559,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +567,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -548,7 +579,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +587,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyassociation">Firewall<wbr>Policy<wbr>Association<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallpolicyassociation">Firewall<wbr>Policy<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of associations that belong to this firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +595,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +603,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +611,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Depreacted, please use short name instead. User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -588,7 +619,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -598,7 +629,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +637,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyfor firewall policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +645,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +653,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The parent of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +661,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +669,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrule">Firewall<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrule">Firewall<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a firewall policy, a default rule with action "allow" will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +677,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +685,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +693,7 @@ To see the latest fingerprint, make get() request to the firewall policy.{{% /md
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachmenttarget_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target that the firewall policy is attached to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The firewall policy ID of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The short name of the firewall policy of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachment_target_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target that the firewall policy is attached to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The firewall policy ID of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The short name of the firewall policy of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachmenttarget_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target that the firewall policy is attached to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The firewall policy ID of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The short name of the firewall policy of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachment_target_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target that the firewall policy is attached to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1067,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The firewall policy ID of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The short name of the firewall policy of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyRule for firewall policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcher">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args></a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcher">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall policy rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetsecurelabels_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Secure<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of secure labels that controls which instances the firewall rule applies to. If targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC network that have one of those secure labels. targetSecureLabel may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label values allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyRule for firewall policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcher">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcher">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall policy rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_secure_labels_python" style="color: inherit; text-decoration: inherit;">target_<wbr>secure_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of secure labels that controls which instances the firewall rule applies to. If targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC network that have one of those secure labels. targetSecureLabel may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label values allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4config">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4config">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#srcsecurelabels_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Secure<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of firewall label values, which should be matched at the source of the traffic. Maximum number of source label values allowed is 256.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1607,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4config">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4config">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#src_secure_labels_python" style="color: inherit; text-decoration: inherit;">src_<wbr>secure_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of firewall label values, which should be matched at the source of the traffic. Maximum number of source label values allowed is 256.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1689,7 +1720,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1728,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -1711,7 +1742,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1750,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -1779,7 +1810,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1818,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -1801,7 +1832,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1809,7 +1840,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -1897,7 +1928,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1905,7 +1936,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4configresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4configresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1913,7 +1944,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1921,7 +1952,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#srcsecurelabels_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Secure<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of firewall label values, which should be matched at the source of the traffic. Maximum number of source label values allowed is 256.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1933,7 +1964,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1941,7 +1972,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4configresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherlayer4configresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Layer4Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1949,7 +1980,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1957,7 +1988,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#src_secure_labels_python" style="color: inherit; text-decoration: inherit;">src_<wbr>secure_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of firewall label values, which should be matched at the source of the traffic. Maximum number of source label values allowed is 256.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2202,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2210,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2218,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2226,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2234,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2242,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyRule for firewall policy rules{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2250,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherresponse">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2227,7 +2258,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2235,7 +2266,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2243,7 +2274,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2251,7 +2282,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#targetsecurelabels_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Secure<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of secure labels that controls which instances the firewall rule applies to. If targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC network that have one of those secure labels. targetSecureLabel may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label values allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2259,7 +2290,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2271,7 +2302,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2310,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2287,7 +2318,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2295,7 +2326,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2303,7 +2334,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2311,7 +2342,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#firewallPolicyRule for firewall policy rules{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2350,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulematcherresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulematcherresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2327,7 +2358,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2335,7 +2366,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2343,7 +2374,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2351,7 +2382,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#target_secure_labels_python" style="color: inherit; text-decoration: inherit;">target_<wbr>secure_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of secure labels that controls which instances the firewall rule applies to. If targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC network that have one of those secure labels. targetSecureLabel may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label values allowed is 256.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2359,7 +2390,7 @@ Example inputs include: ["22"], ["80","443"], and ["12345-12349"].{{% /md %}}</d
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

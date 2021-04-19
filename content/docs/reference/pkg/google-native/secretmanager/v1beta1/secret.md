@@ -20,19 +20,29 @@ Creates a new Secret containing no SecretVersions.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_secretmanager_v1beta1.ReplicationArgs]]</span> = None<span class="p">, </span><span class="nx">secrets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[_secretmanager_v1beta1.ReplicationArgs]</span> = None<span class="p">,</span>
+           <span class="nx">secrets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Creates a new Secret containing no SecretVersions.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#secretsid_nodejs" style="color: inherit; text-decoration: inherit;">secrets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -258,7 +278,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replication">pulumi.<wbr>Input<Replication<wbr>Args></a></span>
+        <span class="property-type"><a href="#replication">Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#secrets_id_python" style="color: inherit; text-decoration: inherit;">secrets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +314,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replication">Replication<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replication">Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -469,7 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: `"us-east1"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -481,7 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: `"us-east1"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -519,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: `"us-east1"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -531,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: `"us-east1"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -585,7 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_nodejs" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automatic">pulumi.<wbr>Input<Automatic<wbr>Args></a></span>
+        <span class="property-type"><a href="#automatic">Automatic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usermanaged_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usermanaged">pulumi.<wbr>Input<User<wbr>Managed<wbr>Args></a></span>
+        <span class="property-type"><a href="#usermanaged">User<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will only be replicated into the locations specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -605,7 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_python" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automatic">Automatic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automatic">Automatic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_managed_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usermanaged">User<wbr>Managed<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usermanaged">User<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will only be replicated into the locations specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -667,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_nodejs" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresponse">pulumi.<wbr>Input<Automatic<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#automaticresponse">Automatic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -675,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usermanaged_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usermanagedresponse">pulumi.<wbr>Input<User<wbr>Managed<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#usermanagedresponse">User<wbr>Managed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will only be replicated into the locations specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -687,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_python" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresponse">Automatic<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automaticresponse">Automatic<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_managed_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usermanagedresponse">User<wbr>Managed<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usermanagedresponse">User<wbr>Managed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret will only be replicated into the locations specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -733,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replica">pulumi.<wbr>Input<pulumi.<wbr>Input<Replica<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#replica">Replica<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The list of Replicas for this Secret. Cannot be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replica">Replica<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#replica">Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The list of Replicas for this Secret. Cannot be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -783,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Replica<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#replicaresponse">Replica<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The list of Replicas for this Secret. Cannot be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaresponse">Replica<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#replicaresponse">Replica<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The list of Replicas for this Secret. Cannot be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}

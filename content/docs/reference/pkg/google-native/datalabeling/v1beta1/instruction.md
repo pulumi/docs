@@ -20,19 +20,36 @@ Creates an instruction for how data should be labeled.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">csv_instruction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1CsvInstructionArgs]]</span> = None<span class="p">, </span><span class="nx">data_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instructions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pdf_instruction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1PdfInstructionArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">csv_instruction</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1CsvInstructionArgs]</span> = None<span class="p">,</span>
+                <span class="nx">data_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">instructions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">pdf_instruction</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1PdfInstructionArgs]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstruction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instruction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstruction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instruction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instruction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstructionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates an instruction for how data should be labeled.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstructionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#instructionsid_nodejs" style="color: inherit; text-decoration: inherit;">instructions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +397,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#blockingresources_nodejs" style="color: inherit; text-decoration: inherit;">blocking<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of any related resources that are blocking changes to the instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +405,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +413,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#csvinstruction_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description of the instruction. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The display name of the instruction. Maximum of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pdfinstruction_nodejs" style="color: inherit; text-decoration: inherit;">pdf<wbr>Instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1pdfinstruction">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Pdf<wbr>Instruction<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1pdfinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Pdf<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last update time of instruction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#instructions_id_python" style="color: inherit; text-decoration: inherit;">instructions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +489,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#blocking_resources_python" style="color: inherit; text-decoration: inherit;">blocking_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of any related resources that are blocking changes to the instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +497,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation time of instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +505,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#csv_instruction_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1csvinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Csv<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The data type of this instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description of the instruction. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The display name of the instruction. Maximum of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#pdf_instruction_python" style="color: inherit; text-decoration: inherit;">pdf_<wbr>instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1pdfinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Pdf<wbr>Instruction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1pdfinstruction">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Pdf<wbr>Instruction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The Instruction resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last update time of instruction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -629,7 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -679,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -691,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CSV file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PDF file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PDF file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsfileuri_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PDF file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_file_uri_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PDF file for the instruction. Only gcs path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}

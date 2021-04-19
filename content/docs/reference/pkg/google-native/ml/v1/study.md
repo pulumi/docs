@@ -20,19 +20,29 @@ Creates a study.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Study</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Study</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Study</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">studies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">study_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__StudyConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Study</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">studies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">study_config</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__StudyConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Study</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStudy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Study</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStudy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Study</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Study</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Study</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StudyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Creates a study.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StudyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -258,7 +278,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#studiesid_nodejs" style="color: inherit; text-decoration: inherit;">studies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#studyconfig_nodejs" style="color: inherit; text-decoration: inherit;">study<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__studyconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration of the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -294,7 +314,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#studies_id_python" style="color: inherit; text-decoration: inherit;">studies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The Study resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#study_config_python" style="color: inherit; text-decoration: inherit;">study_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__studyconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__studyconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Study<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration of the study.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -533,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useelapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -545,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_elapsed_time_python" style="color: inherit; text-decoration: inherit;">use_<wbr>elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -583,7 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useelapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -595,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_elapsed_time_python" style="color: inherit; text-decoration: inherit;">use_<wbr>elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useelapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_elapsed_time_python" style="color: inherit; text-decoration: inherit;">use_<wbr>elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useelapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_elapsed_time_python" style="color: inherit; text-decoration: inherit;">use_<wbr>elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -733,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -783,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `CATEGORICAL`. The list of possible categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -883,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1031,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `DOUBLE`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Maximum value of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be specified if type is `INTEGER`. Minimum value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1361,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1411,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The optimization goal of the metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1885,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalvaluespec_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'CATEGORICAL' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#childparameterspecs_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Parameter<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discretevaluespec_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DISCRETE' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevaluespec_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DOUBLE' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integervaluespec_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for an 'INTEGER' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterSpecs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentcategoricalvalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Categorical<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentdiscretevalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Discrete<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentintvalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Int<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1977,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_value_spec_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'CATEGORICAL' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#child_parameter_specs_python" style="color: inherit; text-decoration: inherit;">child_<wbr>parameter_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discrete_value_spec_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DISCRETE' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_spec_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DOUBLE' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integer_value_spec_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for an 'INTEGER' parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterSpecs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_categorical_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>categorical_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_discrete_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>discrete_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_int_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>int_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2255,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categoricalvaluespec_nodejs" style="color: inherit; text-decoration: inherit;">categorical<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'CATEGORICAL' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2263,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#childparameterspecs_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Parameter<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2271,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discretevaluespec_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DISCRETE' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevaluespec_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DOUBLE' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2287,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integervaluespec_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for an 'INTEGER' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2295,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterSpecs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2303,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentcategoricalvalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Categorical<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2311,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentdiscretevalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Discrete<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentintvalues_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Int<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2327,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2335,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2347,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categorical_value_spec_python" style="color: inherit; text-decoration: inherit;">categorical_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_categoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'CATEGORICAL' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2355,7 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#child_parameter_specs_python" style="color: inherit; text-decoration: inherit;">child_<wbr>parameter_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2363,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discrete_value_spec_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_discretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DISCRETE' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2371,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_spec_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_doublevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Double<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for a 'DOUBLE' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2379,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integer_value_spec_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_integervaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Integer<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value spec for an 'INTEGER' parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2387,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The parameter name must be unique amongst all ParameterSpecs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2395,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_categorical_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>categorical_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentcategoricalvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Categorical<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_discrete_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>discrete_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentdiscretevaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Discrete<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_int_values_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>int_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfigparameterspec_matchingparentintvaluespecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config<wbr>Parameter<wbr>Spec_Matching<wbr>Parent<wbr>Int<wbr>Value<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the parameter should be scaled. Leave unset for categorical parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2481,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decaycurvestoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">decay<wbr>Curve<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#medianautomatedstoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">median<wbr>Automated<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decay_curve_stopping_config_python" style="color: inherit; text-decoration: inherit;">decay_<wbr>curve_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#median_automated_stopping_config_python" style="color: inherit; text-decoration: inherit;">median_<wbr>automated_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2563,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decaycurvestoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">decay<wbr>Curve<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2571,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#medianautomatedstoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">median<wbr>Automated<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2583,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decay_curve_stopping_config_python" style="color: inherit; text-decoration: inherit;">decay_<wbr>curve_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_decaycurveautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Decay<wbr>Curve<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#median_automated_stopping_config_python" style="color: inherit; text-decoration: inherit;">median_<wbr>automated_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_automatedstoppingconfig_medianautomatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Automated<wbr>Stopping<wbr>Config_Median<wbr>Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2677,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatedstoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for automated stopping of unpromising Trials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Metric specs for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2713,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automated_stopping_config_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for automated stopping of unpromising Trials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metric specs for the study.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspec">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2823,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2831,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatedstoppingconfig_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Stopping<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for automated stopping of unpromising Trials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2839,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Metric specs for the study.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2847,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2859,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search algorithm specified for the study.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automated_stopping_config_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>stopping_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__automatedstoppingconfigresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Automated<wbr>Stopping<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for automated stopping of unpromising Trials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2875,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Metric<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metric specs for the study.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1_studyconfig_parameterspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1_Study<wbr>Config_Parameter<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The set of parameters to tune.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,35 @@ Sets the access control policy on the specified resource. Replaces any existing 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_gameservices_v1beta.AuditConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_gameservices_v1beta.BindingArgs]]]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">game_server_deployments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">iam_owned</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_gameservices_v1beta.RuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                  <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.AuditConfigArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.BindingArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">game_server_deployments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">iam_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.RuleArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerDeploymentIamPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerDeploymentIamPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerDeploymentIamPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Sets the access control policy on the specified resource. Replaces any existing 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GameServerDeploymentIamPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#gameserverdeploymentsid_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Deployments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#auditconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Audit<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#auditconfig">Audit<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies cloud audit logging configuration for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binding">pulumi.<wbr>Input<pulumi.<wbr>Input<Binding<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#binding">Binding<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#iamowned_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rule">pulumi.<wbr>Input<pulumi.<wbr>Input<Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rule">Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If more than one rule is specified, the rules are applied in the following manner: - All matching LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is denied. Logging will be applied if one or more matching rule requires logging. - Otherwise, if any ALLOW/ALLOW_WITH_LOG rule matches, permission is granted. Logging will be applied if one or more matching rule requires logging. - Otherwise, if no rule applies, permission is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#updatemask_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: "bindings, etag"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#game_server_deployments_id_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>deployments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditconfig">Audit<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#auditconfig">Audit<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies cloud audit logging configuration for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binding">Binding<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#binding">Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#iam_owned_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>owned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rule">Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rule">Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If more than one rule is specified, the rules are applied in the following manner: - All matching LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is denied. Logging will be applied if one or more matching rule requires logging. - Otherwise, if any ALLOW/ALLOW_WITH_LOG rule matches, permission is granted. Logging will be applied if one or more matching rule requires logging. - Otherwise, if no rule applies, permission is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#update_mask_python" style="color: inherit; text-decoration: inherit;">update_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: "bindings, etag"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -629,7 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditlogconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Audit<wbr>Log<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#auditlogconfig">Audit<wbr>Log<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -657,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditlogconfig">Audit<wbr>Log<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#auditlogconfig">Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -743,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditlogconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Audit<wbr>Log<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -751,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -759,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -771,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#auditlogconfigresponse">Audit<wbr>Log<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -779,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorechildexemptions_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Child<wbr>Exemptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_child_exemptions_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>child_<wbr>exemptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorechildexemptions_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Child<wbr>Exemptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_child_exemptions_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>child_<wbr>exemptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log type that this config enables.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_type_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1103,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissiontype_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_type_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the permission that was checked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingid_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">pulumi.<wbr>Input<Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1237,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_id_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindingid_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">pulumi.<wbr>Input<Expr<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_id_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1407,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationloggingoptions">pulumi.<wbr>Input<Authorization<wbr>Logging<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#authorizationloggingoptions">Authorization<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used by the Cloud Audit Logging pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1481,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_logging_options_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationloggingoptions">Authorization<wbr>Logging<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationloggingoptions">Authorization<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used by the Cloud Audit Logging pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1543,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationloggingoptions_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationloggingoptionsresponse">pulumi.<wbr>Input<Authorization<wbr>Logging<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#authorizationloggingoptionsresponse">Authorization<wbr>Logging<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used by the Cloud Audit Logging pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_logging_options_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>logging_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationloggingoptionsresponse">Authorization<wbr>Logging<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationloggingoptionsresponse">Authorization<wbr>Logging<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used by the Cloud Audit Logging pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log_name to populate in the Cloud Audit Record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_nodejs" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#svc_nodejs" style="color: inherit; text-decoration: inherit;">svc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes discharged by the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_nodejs" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_python" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#svc_python" style="color: inherit; text-decoration: inherit;">svc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes discharged by the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_python" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_nodejs" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1867,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#svc_nodejs" style="color: inherit; text-decoration: inherit;">svc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes discharged by the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_nodejs" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1883,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iam_python" style="color: inherit; text-decoration: inherit;">iam</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by the IAM system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1903,7 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An operator to apply the subject with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#svc_python" style="color: inherit; text-decoration: inherit;">svc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes discharged by the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_python" style="color: inherit; text-decoration: inherit;">sys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The objects of the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customfields_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customfield">pulumi.<wbr>Input<pulumi.<wbr>Input<Custom<wbr>Field<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#customfield">Custom<wbr>Field<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field value to attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_fields_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customfield">Custom<wbr>Field<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#customfield">Custom<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field value to attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customfields_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customfieldresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Custom<wbr>Field<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#customfieldresponse">Custom<wbr>Field<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field value to attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_fields_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customfieldresponse">Custom<wbr>Field<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#customfieldresponse">Custom<wbr>Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field value to attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name is the field name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2229,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name is the field name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2237,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2291,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name is the field name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name is the field name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logmode_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_mode_python" style="color: inherit; text-decoration: inherit;">log_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logmode_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2419,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_mode_python" style="color: inherit; text-decoration: inherit;">log_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2505,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2541,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2651,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2659,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2667,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2675,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2687,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2703,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2711,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2781,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudaudit_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudauditoptions">pulumi.<wbr>Input<Cloud<wbr>Audit<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudauditoptions">Cloud<wbr>Audit<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud audit options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2789,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_nodejs" style="color: inherit; text-decoration: inherit;">counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#counteroptions">pulumi.<wbr>Input<Counter<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#counteroptions">Counter<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counter options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2797,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataaccess_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataaccessoptions">pulumi.<wbr>Input<Data<wbr>Access<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#dataaccessoptions">Data<wbr>Access<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data access options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2809,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_audit_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudauditoptions">Cloud<wbr>Audit<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudauditoptions">Cloud<wbr>Audit<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud audit options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2817,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_python" style="color: inherit; text-decoration: inherit;">counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#counteroptions">Counter<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#counteroptions">Counter<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counter options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_access_python" style="color: inherit; text-decoration: inherit;">data_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataaccessoptions">Data<wbr>Access<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataaccessoptions">Data<wbr>Access<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data access options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2895,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudaudit_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudauditoptionsresponse">pulumi.<wbr>Input<Cloud<wbr>Audit<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudauditoptionsresponse">Cloud<wbr>Audit<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud audit options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2903,7 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_nodejs" style="color: inherit; text-decoration: inherit;">counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#counteroptionsresponse">pulumi.<wbr>Input<Counter<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#counteroptionsresponse">Counter<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counter options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2911,7 +2937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataaccess_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataaccessoptionsresponse">pulumi.<wbr>Input<Data<wbr>Access<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dataaccessoptionsresponse">Data<wbr>Access<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data access options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2923,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_audit_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudauditoptionsresponse">Cloud<wbr>Audit<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudauditoptionsresponse">Cloud<wbr>Audit<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud audit options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2931,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_python" style="color: inherit; text-decoration: inherit;">counter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#counteroptionsresponse">Counter<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#counteroptionsresponse">Counter<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Counter options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2939,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_access_python" style="color: inherit; text-decoration: inherit;">data_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataaccessoptionsresponse">Data<wbr>Access<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataaccessoptionsresponse">Data<wbr>Access<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data access options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3073,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional restrictions that must be met. All conditions must pass for the rule to match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3089,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3105,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Log<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#logconfig">Log<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notin_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3121,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional restrictions that must be met. All conditions must pass for the rule to match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logconfig">Log<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#logconfig">Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3173,7 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_in_python" style="color: inherit; text-decoration: inherit;">not_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3315,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3323,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Additional restrictions that must be met. All conditions must pass for the rule to match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3331,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3339,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3347,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Log<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#logconfigresponse">Log<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3355,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notin_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3363,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3375,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3383,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional restrictions that must be met. All conditions must pass for the rule to match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3391,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3399,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3407,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logconfigresponse">Log<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#logconfigresponse">Log<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3415,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_in_python" style="color: inherit; text-decoration: inherit;">not_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3423,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

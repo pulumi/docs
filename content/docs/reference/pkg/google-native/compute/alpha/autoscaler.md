@@ -20,19 +20,42 @@ Creates an autoscaler in the specified project using the data included in the re
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.AutoscalingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">recommended_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scaling_schedule_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.AutoscalerStatusDetailsArgs]]]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">autoscaler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.AutoscalingPolicyArgs]</span> = None<span class="p">,</span>
+               <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">recommended_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">scaling_schedule_status</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.AutoscalerStatusDetailsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaler</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Autoscaler</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaler</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Autoscaler</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Autoscaler</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates an autoscaler in the specified project using the data included in the re
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutoscalerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -462,7 +495,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -470,7 +503,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +511,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal scope).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +519,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
 
@@ -496,7 +529,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +537,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +545,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +553,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#autoscaler for autoscalers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +561,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +569,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#recommendedsize_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Target recommended MIG size (number of instances) computed by autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is different from ON. This field is empty when autoscaler is not connected to an existing managed instance group or autoscaler did not generate its prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -544,7 +577,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the instance group resides (for autoscalers living in regional scope).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +585,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#scalingschedulestatus_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedule<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}[Output Only] Status information of existing scaling schedules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +593,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +601,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +609,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -588,7 +621,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#statusdetails_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerstatusdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Autoscaler<wbr>Status<wbr>Details<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#autoscalerstatusdetails">Autoscaler<wbr>Status<wbr>Details<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Human-readable details about the current state of the autoscaler. Read the documentation for Commonly returned status messages for examples of status messages you might encounter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +629,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale. This field is required when creating an autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -608,7 +641,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -616,7 +649,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -624,7 +657,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal scope).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +665,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">Autoscaling<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
 
@@ -642,7 +675,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +683,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +691,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +699,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#autoscaler for autoscalers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +707,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +715,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#recommended_size_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Target recommended MIG size (number of instances) computed by autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is different from ON. This field is empty when autoscaler is not connected to an existing managed instance group or autoscaler did not generate its prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +723,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the instance group resides (for autoscalers living in regional scope).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +731,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#scaling_schedule_status_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedule_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Status information of existing scaling schedules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +739,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +747,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +755,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the autoscaler configuration. Current set of possible values:  
 - PENDING: Autoscaler backend hasn't read new/updated configuration. 
@@ -734,7 +767,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#status_details_python" style="color: inherit; text-decoration: inherit;">status_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalerstatusdetails">Autoscaler<wbr>Status<wbr>Details<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#autoscalerstatusdetails">Autoscaler<wbr>Status<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Human-readable details about the current state of the autoscaler. Read the documentation for Commonly returned status messages for examples of status messages you might encounter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +775,7 @@ If none of these are specified, the default will be to autoscale based on cpuUti
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the managed instance group that this autoscaler will scale. This field is required when creating an autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -929,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -1039,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -1075,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of error, warning, or notice returned. Current set of possible values:  
 - ALL_INSTANCES_UNHEALTHY (WARNING): All instances in the instance group are unhealthy (not in RUNNING state). 
@@ -1285,7 +1318,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cooldownperiodsec_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Period<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.
 
@@ -1295,7 +1328,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycpuutilization">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilization">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1336,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#custommetricutilizations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metric<wbr>Utilizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycustommetricutilization">pulumi.<wbr>Input<pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilization">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1344,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#loadbalancingutilization_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilization">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilization">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1352,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxnumreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1360,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#minnumreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Num<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1335,7 +1368,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1376,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrol">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1384,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaleincontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaleincontrol">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaleincontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1359,7 +1392,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1371,7 +1404,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cool_down_period_sec_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>period_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.
 
@@ -1381,7 +1414,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycpuutilization">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilization">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1422,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#custom_metric_utilizations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metric_<wbr>utilizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycustommetricutilization">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilization">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1430,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#load_balancing_utilization_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilization">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilization">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1438,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_num_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1446,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#min_num_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>num_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1454,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1462,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scale_down_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1470,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scale_in_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaleincontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaleincontrol">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1478,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1544,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictivemethod_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1521,7 +1554,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target CPU utilization that the autoscaler maintains. Must be a float value in the range (0, 1]. If not specified, the default is 0.6.
 
@@ -1537,7 +1570,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictive_method_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1547,7 +1580,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target CPU utilization that the autoscaler maintains. Must be a float value in the range (0, 1]. If not specified, the default is 0.6.
 
@@ -1617,7 +1650,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictivemethod_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1627,7 +1660,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target CPU utilization that the autoscaler maintains. Must be a float value in the range (0, 1]. If not specified, the default is 0.6.
 
@@ -1643,7 +1676,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#predictive_method_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
 
@@ -1653,7 +1686,7 @@ If the average CPU is above the target utilization, the autoscaler scales out un
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target CPU utilization that the autoscaler maintains. Must be a float value in the range (0, 1]. If not specified, the default is 0.6.
 
@@ -1797,7 +1830,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter string, compatible with a Stackdriver Monitoring filter string for TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.
 
@@ -1816,7 +1849,7 @@ Try to provide a filter that is selective enough to pick just one TimeSeries for
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric. The metric cannot have negative values.
 
@@ -1826,7 +1859,7 @@ The metric must have a value type of INT64 or DOUBLE.{{% /md %}}</dd><dt class="
 <a href="#singleinstanceassignment_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Instance<wbr>Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If scaling is based on a per-group metric value that represents the total amount of work to be done or resource usage, set this value to an amount assigned for a single instance of the scaled group. Autoscaler keeps the number of instances proportional to the value of this metric. The metric itself does not change value due to group resizing.
 
@@ -1838,7 +1871,7 @@ A bad example would be a metric exporting an average or median latency, since th
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value of the metric that autoscaler maintains. This must be a positive value. A utilization metric scales number of virtual machines handling requests to increase or decrease proportionally to the metric.
 
@@ -1848,7 +1881,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtargettype_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1860,7 +1893,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter string, compatible with a Stackdriver Monitoring filter string for TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.
 
@@ -1879,7 +1912,7 @@ Try to provide a filter that is selective enough to pick just one TimeSeries for
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric. The metric cannot have negative values.
 
@@ -1889,7 +1922,7 @@ The metric must have a value type of INT64 or DOUBLE.{{% /md %}}</dd><dt class="
 <a href="#single_instance_assignment_python" style="color: inherit; text-decoration: inherit;">single_<wbr>instance_<wbr>assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If scaling is based on a per-group metric value that represents the total amount of work to be done or resource usage, set this value to an amount assigned for a single instance of the scaled group. Autoscaler keeps the number of instances proportional to the value of this metric. The metric itself does not change value due to group resizing.
 
@@ -1901,7 +1934,7 @@ A bad example would be a metric exporting an average or median latency, since th
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value of the metric that autoscaler maintains. This must be a positive value. A utilization metric scales number of virtual machines handling requests to increase or decrease proportionally to the metric.
 
@@ -1911,7 +1944,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilization_target_type_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2051,7 +2084,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter string, compatible with a Stackdriver Monitoring filter string for TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.
 
@@ -2070,7 +2103,7 @@ Try to provide a filter that is selective enough to pick just one TimeSeries for
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric. The metric cannot have negative values.
 
@@ -2080,7 +2113,7 @@ The metric must have a value type of INT64 or DOUBLE.{{% /md %}}</dd><dt class="
 <a href="#singleinstanceassignment_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Instance<wbr>Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If scaling is based on a per-group metric value that represents the total amount of work to be done or resource usage, set this value to an amount assigned for a single instance of the scaled group. Autoscaler keeps the number of instances proportional to the value of this metric. The metric itself does not change value due to group resizing.
 
@@ -2092,7 +2125,7 @@ A bad example would be a metric exporting an average or median latency, since th
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value of the metric that autoscaler maintains. This must be a positive value. A utilization metric scales number of virtual machines handling requests to increase or decrease proportionally to the metric.
 
@@ -2102,7 +2135,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtargettype_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2114,7 +2147,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter string, compatible with a Stackdriver Monitoring filter string for TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.
 
@@ -2133,7 +2166,7 @@ Try to provide a filter that is selective enough to pick just one TimeSeries for
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric. The metric cannot have negative values.
 
@@ -2143,7 +2176,7 @@ The metric must have a value type of INT64 or DOUBLE.{{% /md %}}</dd><dt class="
 <a href="#single_instance_assignment_python" style="color: inherit; text-decoration: inherit;">single_<wbr>instance_<wbr>assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If scaling is based on a per-group metric value that represents the total amount of work to be done or resource usage, set this value to an amount assigned for a single instance of the scaled group. Autoscaler keeps the number of instances proportional to the value of this metric. The metric itself does not change value due to group resizing.
 
@@ -2155,7 +2188,7 @@ A bad example would be a metric exporting an average or median latency, since th
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value of the metric that autoscaler maintains. This must be a positive value. A utilization metric scales number of virtual machines handling requests to increase or decrease proportionally to the metric.
 
@@ -2165,7 +2198,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilization_target_type_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2236,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2215,7 +2248,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2286,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilizationtarget_nodejs" style="color: inherit; text-decoration: inherit;">utilization<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2265,7 +2298,7 @@ For example, a good metric to use as a utilization_target is https://www.googlea
 <a href="#utilization_target_python" style="color: inherit; text-decoration: inherit;">utilization_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2451,7 +2484,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cooldownperiodsec_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Period<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.
 
@@ -2461,7 +2494,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycpuutilizationresponse">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationresponse">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2469,7 +2502,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#custommetricutilizations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metric<wbr>Utilizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationresponse">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2477,7 +2510,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#loadbalancingutilization_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilizationresponse">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilizationresponse">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2485,7 +2518,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxnumreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2493,7 +2526,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#minnumreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Num<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2501,7 +2534,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2509,7 +2542,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrolresponse">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2517,7 +2550,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaleincontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaleincontrolresponse">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaleincontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2525,7 +2558,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2537,7 +2570,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cool_down_period_sec_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>period_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.
 
@@ -2547,7 +2580,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycpuutilizationresponse">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicycpuutilizationresponse">Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2588,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#custom_metric_utilizations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metric_<wbr>utilizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationresponse">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicycustommetricutilizationresponse">Autoscaling<wbr>Policy<wbr>Custom<wbr>Metric<wbr>Utilization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2563,7 +2596,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#load_balancing_utilization_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilizationresponse">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyloadbalancingutilizationresponse">Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2571,7 +2604,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_num_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2579,7 +2612,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#min_num_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>num_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2587,7 +2620,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines operating mode for this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2595,7 +2628,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scale_down_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaledowncontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2603,7 +2636,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scale_in_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyscaleincontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyscaleincontrolresponse">Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2611,7 +2644,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2665,7 +2698,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2706,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2718,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_scaled_down_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>down_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2726,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2747,7 +2780,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +2788,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2800,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_scaled_down_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>down_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +2808,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2829,7 +2862,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxscaledinreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>In<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2870,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2849,7 +2882,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_scaled_in_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>in_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2857,7 +2890,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2944,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#maxscaledinreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>In<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +2952,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2931,7 +2964,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#max_scaled_in_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>in_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2939,7 +2972,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3017,7 +3050,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#calculated_nodejs" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -3029,7 +3062,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3037,7 +3070,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3049,7 +3082,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#calculated_python" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -3061,7 +3094,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3069,7 +3102,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3147,7 +3180,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#calculated_nodejs" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -3159,7 +3192,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3167,7 +3200,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3179,7 +3212,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#calculated_python" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -3191,7 +3224,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3199,7 +3232,7 @@ Virtual machine initialization times might vary because of numerous factors. We 
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}

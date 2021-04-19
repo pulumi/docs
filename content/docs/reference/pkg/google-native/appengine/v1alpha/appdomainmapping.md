@@ -20,19 +20,31 @@ Maps a domain to an application. A user must be authorized to administer a domai
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">domain_mappings_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resource_records</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_appengine_v1alpha.ResourceRecordArgs]]]]</span> = None<span class="p">, </span><span class="nx">ssl_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_appengine_v1alpha.SslSettingsArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">domain_mappings_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1alpha.ResourceRecordArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">ssl_settings</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1alpha.SslSettingsArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppDomainMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppDomainMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppDomainMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppDomainMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppDomainMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppDomainMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Maps a domain to an application. A user must be authorized to administer a domai
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AppDomainMappingArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#appsid_nodejs" style="color: inherit; text-decoration: inherit;">apps<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#domainmappingsid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Mappings<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +312,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecord">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Record<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcerecord">Resource<wbr>Record<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#sslsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslsettings">pulumi.<wbr>Input<Ssl<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslsettings">Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#apps_id_python" style="color: inherit; text-decoration: inherit;">apps_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#domain_mappings_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>mappings_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -342,7 +364,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecord">Resource<wbr>Record<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcerecord">Resource<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The AppDomainMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#ssl_settings_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslsettings">Ssl<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslsettings">Ssl<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -501,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdata_nodejs" style="color: inherit; text-decoration: inherit;">rrdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -529,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -537,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdata_python" style="color: inherit; text-decoration: inherit;">rrdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdata_nodejs" style="color: inherit; text-decoration: inherit;">rrdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -631,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -643,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -651,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdata_python" style="color: inherit; text-decoration: inherit;">rrdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource record type. Example: AAAA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -713,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismanagedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Managed<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -733,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_managed_certificate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>managed_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismanagedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Managed<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -815,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_managed_certificate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>managed_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}

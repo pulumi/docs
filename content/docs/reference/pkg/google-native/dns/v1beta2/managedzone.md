@@ -20,19 +20,43 @@ Creates a new ManagedZone.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZoneDnsSecConfigArgs]]</span> = None<span class="p">, </span><span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZoneForwardingConfigArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name_server_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZonePeeringConfigArgs]]</span> = None<span class="p">, </span><span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZonePrivateVisibilityConfigArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reverse_lookup_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZoneReverseLookupConfigArgs]]</span> = None<span class="p">, </span><span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ManagedZoneServiceDirectoryConfigArgs]]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">dnssec_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZoneDnsSecConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">forwarding_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZoneForwardingConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name_server_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">peering_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZonePeeringConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">private_visibility_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZonePrivateVisibilityConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">reverse_lookup_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZoneReverseLookupConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">service_directory_config</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ManagedZoneServiceDirectoryConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedZone</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedZone</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedZone</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +91,32 @@ Creates a new ManagedZone.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagedZoneArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +500,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +508,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +516,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +524,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +532,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +540,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dnssecconfig_nodejs" style="color: inherit; text-decoration: inherit;">dnssec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +548,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#forwardingconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +556,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server (output only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +564,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +572,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +580,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +588,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nameserverset_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Server<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +596,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server (output only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +604,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +612,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#privatevisibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +620,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#reverselookupconfig_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Lookup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonereverselookupconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Reverse<wbr>Lookup<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzonereverselookupconfig">Managed<wbr>Zone<wbr>Reverse<wbr>Lookup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +628,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#servicedirectoryconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +636,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +648,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +656,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +664,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +672,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +680,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +688,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dnssec_config_python" style="color: inherit; text-decoration: inherit;">dnssec_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dns<wbr>Sec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +696,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#forwarding_config_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +704,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server (output only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +712,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +720,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +728,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +736,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_server_set_python" style="color: inherit; text-decoration: inherit;">name_<wbr>server_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +744,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server (output only){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +752,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#peering_config_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +760,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#private_visibility_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>visibility_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +768,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#reverse_lookup_config_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>lookup_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonereverselookupconfig">Managed<wbr>Zone<wbr>Reverse<wbr>Lookup<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonereverselookupconfig">Managed<wbr>Zone<wbr>Reverse<wbr>Lookup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +776,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#service_directory_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>directory_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +784,7 @@ The ManagedZone resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1047,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1055,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1063,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1091,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the keys in bits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkeyspecs_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnskeyspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Dns<wbr>Key<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dnskeyspec">Dns<wbr>Key<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonexistence_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1229,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnskeyspec">Dns<wbr>Key<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dnskeyspec">Dns<wbr>Key<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_existence_python" style="color: inherit; text-decoration: inherit;">non_<wbr>existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkeyspecs_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnskeyspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Dns<wbr>Key<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dnskeyspecresponse">Dns<wbr>Key<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonexistence_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnskeyspecresponse">Dns<wbr>Key<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dnskeyspecresponse">Dns<wbr>Key<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_existence_python" style="color: inherit; text-decoration: inherit;">non_<wbr>existence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether DNSSEC is enabled, and what mode it is in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1453,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfignameservertarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertarget">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfignameservertarget">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertarget">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1603,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1721,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1729,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1737,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1757,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address of a target name server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1773,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetresponse">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1847,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1855,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetresponse">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfignameservertargetresponse">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Name<wbr>Server<wbr>Target<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1909,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnetwork_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_network_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1991,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1999,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnetwork_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetworkresponse">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetworkresponse">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2011,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2019,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_network_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetworkresponse">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetworkresponse">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deactivatetime_nodejs" style="color: inherit; text-decoration: inherit;">deactivate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2117,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deactivate_time_python" style="color: inherit; text-decoration: inherit;">deactivate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deactivatetime_nodejs" style="color: inherit; text-decoration: inherit;">deactivate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deactivate_time_python" style="color: inherit; text-decoration: inherit;">deactivate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2301,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2321,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2383,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2465,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2473,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2485,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2493,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetworkresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetworkresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2575,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetworkresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetworkresponse">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2613,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2625,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2663,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2675,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2729,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the namespace associated with the zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2749,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the namespace associated with the zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2835,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2843,7 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaceurl_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2855,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2863,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2871,7 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_url_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2941,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2949,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2957,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaceurl_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2969,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2977,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2985,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_url_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespaceresponse">pulumi.<wbr>Input<Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespaceresponse">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the namespace associated with the zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3059,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3067,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespaceresponse">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespaceresponse">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the namespace associated with the zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}

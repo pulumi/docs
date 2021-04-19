@@ -20,19 +20,45 @@ Creates a Product.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">availability</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">available_quantity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">available_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">branches_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">catalogs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">categories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_retail_v2alpha.GoogleCloudRetailV2alphaImageArgs]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">price_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_retail_v2alpha.GoogleCloudRetailV2alphaPriceInfoArgs]]</span> = None<span class="p">, </span><span class="nx">primary_product_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">products_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                         <span class="nx">availability</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">available_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                         <span class="nx">available_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">branches_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">catalogs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">categories</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">images</span><span class="p">:</span> <span class="nx">Optional[Sequence[_retail_v2alpha.GoogleCloudRetailV2alphaImageArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">price_info</span><span class="p">:</span> <span class="nx">Optional[_retail_v2alpha.GoogleCloudRetailV2alphaPriceInfoArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">primary_product_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">products_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogBranchProduct</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogBranchProduct</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCatalogBranchProduct</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CatalogBranchProduct</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CatalogBranchProduct</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CatalogBranchProductArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +93,32 @@ Creates a Product.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CatalogBranchProductArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -498,7 +534,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#branchesid_nodejs" style="color: inherit; text-decoration: inherit;">branches<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +542,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#catalogsid_nodejs" style="color: inherit; text-decoration: inherit;">catalogs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -514,7 +550,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -522,7 +558,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#productsid_nodejs" style="color: inherit; text-decoration: inherit;">products<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -530,7 +566,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +574,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +582,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +590,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#availablequantity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +598,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#availabletime_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +606,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +614,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +622,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Product identifier, which is the final component of name. For example, this field is "id_1", if name is `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [id](https://support.google.com/merchants/answer/6324405). Schema.org Property [Product.sku](https://schema.org/sku).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +630,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudretailv2alphaimage">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudretailv2alphaimage">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +638,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +646,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#priceinfo_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudretailv2alphapriceinfo">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Price<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudretailv2alphapriceinfo">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Price<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +654,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#primaryproductid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Product<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +662,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +670,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +678,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +686,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -662,7 +698,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#branches_id_python" style="color: inherit; text-decoration: inherit;">branches_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -670,7 +706,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#catalogs_id_python" style="color: inherit; text-decoration: inherit;">catalogs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -678,7 +714,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -686,7 +722,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#products_id_python" style="color: inherit; text-decoration: inherit;">products_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -694,7 +730,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +738,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of 128 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +746,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant Center Property [availability](https://support.google.com/merchants/answer/6324448). Schema.org Property [Offer.availability](https://schema.org/availability).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +754,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#available_quantity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>quantity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The available quantity of the item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +762,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#available_time_python" style="color: inherit; text-decoration: inherit;">available_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when this Product becomes available for recommendation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +770,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Product categories. This field is repeated for supporting one product belonging to several parallel categories. Strongly recommended using the full path for better search / recommendation quality. To represent full path of category, use '>' sign to separate different hierarchies. If '>' is part of the category name, please replace it with other character(s). For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are allowed per Product. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property google_product_category. Schema.org property [Product.category] (https://schema.org/category). [mc_google_product_category]: https://support.google.com/merchants/answer/6324436{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +778,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Product description. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [description](https://support.google.com/merchants/answer/6324468). schema.org property [Product.description](https://schema.org/description).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +786,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Product identifier, which is the final component of name. For example, this field is "id_1", if name is `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [id](https://support.google.com/merchants/answer/6324405). Schema.org Property [Product.sku](https://schema.org/sku).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +794,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudretailv2alphaimage">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudretailv2alphaimage">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +802,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Full resource name of the product, such as `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`. The branch ID must be "default_branch".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +810,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#price_info_python" style="color: inherit; text-decoration: inherit;">price_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudretailv2alphapriceinfo">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Price<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudretailv2alphapriceinfo">Google<wbr>Cloud<wbr>Retail<wbr>V2alpha<wbr>Price<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Product price and cost information. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +818,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#primary_product_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>product_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variant group identifier. Must be an id, with the same parent branch with this product. Otherwise, an error is thrown. For Type.PRIMARY Products, this field can only be empty or set to the same value as id. For VARIANT Products, this field cannot be empty. A maximum of 2,000 products are allowed to share the same Type.PRIMARY Product. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center Property [item_group_id](https://support.google.com/merchants/answer/6324507). Schema.org Property [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID). This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +826,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Custom tags associated with the product. At most 250 values are allowed per Product. This value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results by passing the tag as part of the PredictRequest.filter. Google Merchant Center property [custom_label_0–4](https://support.google.com/merchants/answer/6324473).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +834,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [title](https://support.google.com/merchants/answer/6324415). Schema.org property [Product.name](https://schema.org/name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +842,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The type of the product. This field is output-only. Default to Catalog.product_level_config.ingestion_product_type if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +850,7 @@ The CatalogBranchProduct resource accepts the following [input]({{< relref "/doc
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canonical URL directly linking to the product detail page. It is strongly recommended to provide a valid uri for the product, otherwise the service performance could be significantly degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [link](https://support.google.com/merchants/answer/6324416). Schema.org property [Offer.url](https://schema.org/url).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -977,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cost_nodejs" style="color: inherit; text-decoration: inherit;">cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Price of the product without any discount. If zero, by default set to be the price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_nodejs" style="color: inherit; text-decoration: inherit;">price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1229,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cost_python" style="color: inherit; text-decoration: inherit;">cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Price of the product without any discount. If zero, by default set to be the price.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_python" style="color: inherit; text-decoration: inherit;">price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cost_nodejs" style="color: inherit; text-decoration: inherit;">cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalprice_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Price of the product without any discount. If zero, by default set to be the price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_nodejs" style="color: inherit; text-decoration: inherit;">price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cost_python" style="color: inherit; text-decoration: inherit;">cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_price_python" style="color: inherit; text-decoration: inherit;">original_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Price of the product without any discount. If zero, by default set to be the price.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#price_python" style="color: inherit; text-decoration: inherit;">price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.priceSpecification](https://schema.org/priceSpecification).{{% /md %}}</dd></dl>
 {{% /choosable %}}

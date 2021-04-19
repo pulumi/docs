@@ -20,19 +20,39 @@ Creates a node.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Node</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Node</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Node</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">nodes_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_tpu_v1.SchedulingConfigArgs]]</span> = None<span class="p">, </span><span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">use_service_networking</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Node</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">accelerator_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">health</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+         <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">nodes_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">scheduling_config</span><span class="p">:</span> <span class="nx">Optional[_tpu_v1.SchedulingConfigArgs]</span> = None<span class="p">,</span>
+         <span class="nx">tensorflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">use_service_networking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Node</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNode</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Node</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNode</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Node</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Node</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Node</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a node.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nodesid_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +448,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of hardware accelerators associated with this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedulingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingconfig">pulumi.<wbr>Input<Scheduling<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#schedulingconfig">Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling options for this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tensorflowversion_nodejs" style="color: inherit; text-decoration: inherit;">tensorflow<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The version of Tensorflow running in the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#useservicenetworking_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Service<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nodes_id_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,7 +564,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of hardware accelerators associated with this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health status of the TPU node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingconfig">Scheduling<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulingconfig">Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling options for this node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tensorflow_version_python" style="color: inherit; text-decoration: inherit;">tensorflow_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The version of Tensorflow running in the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#use_service_networking_python" style="color: inherit; text-decoration: inherit;">use_<wbr>service_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of this network endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1005,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of this network endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of this network endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1025,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of this network endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the node is preemptible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the node is created under a reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the node is preemptible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the node is created under a reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1161,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the node is preemptible.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1169,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the node is created under a reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the node is preemptible.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1189,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the node is created under a reservation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1275,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the Symptom is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1283,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed information of the current Symptom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1291,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symptomtype_nodejs" style="color: inherit; text-decoration: inherit;">symptom<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Symptom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string used to uniquely distinguish a worker within a TPU node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the Symptom is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1319,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Detailed information of the current Symptom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1327,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symptom_type_python" style="color: inherit; text-decoration: inherit;">symptom_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Symptom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string used to uniquely distinguish a worker within a TPU node.{{% /md %}}</dd></dl>
 {{% /choosable %}}

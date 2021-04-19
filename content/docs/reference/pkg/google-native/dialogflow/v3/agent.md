@@ -20,19 +20,39 @@ Creates an agent in the specified location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">avatar_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_language_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enable_spell_correction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">speech_to_text_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v3.GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">start_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">avatar_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">default_language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">enable_spell_correction</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">speech_to_text_settings</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3.GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs]</span> = None<span class="p">,</span>
+          <span class="nx">start_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Agent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Agent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Agent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AgentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates an agent in the specified location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AgentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#agentsid_nodejs" style="color: inherit; text-decoration: inherit;">agents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +448,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#avataruri_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#defaultlanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the agent, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enablespellcorrection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Spell<wbr>Correction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if automatic spell correction is enabled in detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#speechtotextsettings_nodejs" style="color: inherit; text-decoration: inherit;">speech<wbr>To<wbr>Text<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3speechtotextsettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3speechtotextsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Speech recognition related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#startflow_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#agents_id_python" style="color: inherit; text-decoration: inherit;">agents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,7 +564,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#avatar_uri_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#default_language_code_python" style="color: inherit; text-decoration: inherit;">default_<wbr>language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the agent, unique within the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enable_spell_correction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>spell_<wbr>correction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if automatic spell correction is enabled in detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if stackdriver logging is enabled for the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#speech_to_text_settings_python" style="color: inherit; text-decoration: inherit;">speech_<wbr>to_<wbr>text_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3speechtotextsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3speechtotextsettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Speech<wbr>To<wbr>Text<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Speech recognition related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#start_flow_python" style="color: inherit; text-decoration: inherit;">start_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablespeechadaptation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Speech<wbr>Adaptation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use speech adaptation for speech recognition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -737,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_speech_adaptation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>speech_<wbr>adaptation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use speech adaptation for speech recognition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -775,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablespeechadaptation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Speech<wbr>Adaptation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use speech adaptation for speech recognition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -787,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_speech_adaptation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>speech_<wbr>adaptation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use speech adaptation for speech recognition.{{% /md %}}</dd></dl>
 {{% /choosable %}}

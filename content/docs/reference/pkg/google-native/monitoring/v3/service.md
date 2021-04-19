@@ -20,19 +20,37 @@ Create a Service.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.AppEngineArgs]]</span> = None<span class="p">, </span><span class="nx">cloud_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.CloudEndpointsArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_istio</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.ClusterIstioArgs]]</span> = None<span class="p">, </span><span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.CustomArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">istio_canonical_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.IstioCanonicalServiceArgs]]</span> = None<span class="p">, </span><span class="nx">mesh_istio</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.MeshIstioArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">telemetry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.TelemetryArgs]]</span> = None<span class="p">, </span><span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">v3_id1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">app_engine</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.AppEngineArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cloud_endpoints</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.CloudEndpointsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_istio</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ClusterIstioArgs]</span> = None<span class="p">,</span>
+            <span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.CustomArgs]</span> = None<span class="p">,</span>
+            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">istio_canonical_service</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.IstioCanonicalServiceArgs]</span> = None<span class="p">,</span>
+            <span class="nx">mesh_istio</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MeshIstioArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">telemetry</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.TelemetryArgs]</span> = None<span class="p">,</span>
+            <span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">v3_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Create a Service.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#v3id_nodejs" style="color: inherit; text-decoration: inherit;">v3Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#v3id1_nodejs" style="color: inherit; text-decoration: inherit;">v3Id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengine">pulumi.<wbr>Input<App<wbr>Engine<wbr>Args></a></span>
+        <span class="property-type"><a href="#appengine">App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for App Engine services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cloudendpoints_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudendpoints">pulumi.<wbr>Input<Cloud<wbr>Endpoints<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudendpoints">Cloud<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Cloud Endpoints services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clusteristio_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Istio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteristio">pulumi.<wbr>Input<Cluster<wbr>Istio<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteristio">Cluster<wbr>Istio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Istio services that live in a Kubernetes cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#custom_nodejs" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custom">pulumi.<wbr>Input<Custom<wbr>Args></a></span>
+        <span class="property-type"><a href="#custom">Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#istiocanonicalservice_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Canonical<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#istiocanonicalservice">pulumi.<wbr>Input<Istio<wbr>Canonical<wbr>Service<wbr>Args></a></span>
+        <span class="property-type"><a href="#istiocanonicalservice">Istio<wbr>Canonical<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#meshistio_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Istio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshistio">pulumi.<wbr>Input<Mesh<wbr>Istio<wbr>Args></a></span>
+        <span class="property-type"><a href="#meshistio">Mesh<wbr>Istio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Istio services scoped to an Istio mesh.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#telemetry_nodejs" style="color: inherit; text-decoration: inherit;">telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telemetry">pulumi.<wbr>Input<Telemetry<wbr>Args></a></span>
+        <span class="property-type"><a href="#telemetry">Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for how to query telemetry on a Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#v3_id_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#v3_id1_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengine">App<wbr>Engine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appengine">App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for App Engine services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cloud_endpoints_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudendpoints">Cloud<wbr>Endpoints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudendpoints">Cloud<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Cloud Endpoints services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_istio_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>istio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteristio">Cluster<wbr>Istio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteristio">Cluster<wbr>Istio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Istio services that live in a Kubernetes cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custom">Custom<wbr>Args]</a></span>
+        <span class="property-type"><a href="#custom">Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#istio_canonical_service_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>canonical_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#istiocanonicalservice">Istio<wbr>Canonical<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#istiocanonicalservice">Istio<wbr>Canonical<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mesh_istio_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>istio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshistio">Mesh<wbr>Istio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#meshistio">Mesh<wbr>Istio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type used for Istio services scoped to an Istio mesh.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#telemetry_python" style="color: inherit; text-decoration: inherit;">telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telemetry">Telemetry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#telemetry">Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for how to query telemetry on a Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#moduleid_nodejs" style="color: inherit; text-decoration: inherit;">module<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -673,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#module_id_python" style="color: inherit; text-decoration: inherit;">module_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#moduleid_nodejs" style="color: inherit; text-decoration: inherit;">module<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#module_id_python" style="color: inherit; text-decoration: inherit;">module_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -945,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1055,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1063,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1185,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalservice_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalservicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meshuid_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_service_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_service_namespace_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_uid_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalservice_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalservicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1315,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meshuid_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_service_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_service_namespace_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_uid_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meshuid_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_uid_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#meshuid_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_uid_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1609,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1671,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.{{% /md %}}</dd></dl>
 {{% /choosable %}}

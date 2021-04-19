@@ -20,19 +20,31 @@ Creates a new Scheduled Notebook in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">execution_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.ExecutionTemplateArgs]]</span> = None<span class="p">, </span><span class="nx">executions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">output_notebook_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">execution_template</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.ExecutionTemplateArgs]</span> = None<span class="p">,</span>
+              <span class="nx">executions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">output_notebook_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExecution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Execution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExecution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Execution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Execution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExecutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Creates a new Scheduled Notebook in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ExecutionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#executionsid_nodejs" style="color: inherit; text-decoration: inherit;">executions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -290,7 +312,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#executiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplate">pulumi.<wbr>Input<Execution<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#executiontemplate">Execution<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputnotebookfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output notebook file generated by this execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#executions_id_python" style="color: inherit; text-decoration: inherit;">executions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -342,7 +364,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#execution_template_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplate">Execution<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#executiontemplate">Execution<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The Execution resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#output_notebook_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>notebook_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output notebook file generated by this execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -671,7 +693,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -747,7 +777,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -757,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleracceleratorconfig">pulumi.<wbr>Input<Scheduler<wbr>Accelerator<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration (count and accelerator type) for hardware running notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimageuri_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputnotebookfile_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'. Otherwise, it is an immediate execution, and an included field will be 'nbs-immediate'. Use fields to efficiently index between various types of executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputnotebookfolder_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Notebook<wbr>Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters used within the 'input_notebook_file' notebook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramsyamlfile_nodejs" style="color: inherit; text-decoration: inherit;">params<wbr>Yaml<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,9 +859,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -833,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration (count and accelerator type) for hardware running notebook execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_uri_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_notebook_file_python" style="color: inherit; text-decoration: inherit;">input_<wbr>notebook_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'. Otherwise, it is an immediate execution, and an included field will be 'nbs-immediate'. Use fields to efficiently index between various types of executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_notebook_folder_python" style="color: inherit; text-decoration: inherit;">output_<wbr>notebook_<wbr>folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters used within the 'input_notebook_file' notebook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_yaml_file_python" style="color: inherit; text-decoration: inherit;">params_<wbr>yaml_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,9 +943,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="executiontemplateresponse">Execution<wbr>Template<wbr>Response</h4>
@@ -977,7 +1031,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1053,7 +1115,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1063,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleracceleratorconfigresponse">pulumi.<wbr>Input<Scheduler<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigresponse">Scheduler<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration (count and accelerator type) for hardware running notebook execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimageuri_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputnotebookfile_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Notebook<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'. Otherwise, it is an immediate execution, and an included field will be 'nbs-immediate'. Use fields to efficiently index between various types of executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputnotebookfolder_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Notebook<wbr>Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters used within the 'input_notebook_file' notebook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1119,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramsyamlfile_nodejs" style="color: inherit; text-decoration: inherit;">params<wbr>Yaml<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,9 +1197,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1139,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleracceleratorconfigresponse">Scheduler<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduleracceleratorconfigresponse">Scheduler<wbr>Accelerator<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration (count and accelerator type) for hardware running notebook execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_uri_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_notebook_file_python" style="color: inherit; text-decoration: inherit;">input_<wbr>notebook_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: gs://{project_id}/{folder}/{notebook_file_name} Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'. Otherwise, it is an immediate execution, and an included field will be 'nbs-immediate'. Use fields to efficiently index between various types of executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_notebook_folder_python" style="color: inherit; text-decoration: inherit;">output_<wbr>notebook_<wbr>folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters used within the 'input_notebook_file' notebook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#params_yaml_file_python" style="color: inherit; text-decoration: inherit;">params_<wbr>yaml_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,9 +1281,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required. Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config</h4>
@@ -1257,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.{{% /md %}}</dd></dl>
 {{% /choosable %}}

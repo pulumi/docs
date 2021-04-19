@@ -20,19 +20,36 @@ Creates a test case for the given agent.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_test_result</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v3.GoogleCloudDialogflowCxV3TestCaseResultArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">test_case_conversation_turns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dialogflow_v3.GoogleCloudDialogflowCxV3ConversationTurnArgs]]]]</span> = None<span class="p">, </span><span class="nx">test_cases_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">test_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v3.GoogleCloudDialogflowCxV3TestConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">last_test_result</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3.GoogleCloudDialogflowCxV3TestCaseResultArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">test_case_conversation_turns</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3.GoogleCloudDialogflowCxV3ConversationTurnArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">test_cases_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">test_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3.GoogleCloudDialogflowCxV3TestConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentTestCase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentTestCase</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentTestCase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentTestCase</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentTestCase</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AgentTestCaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a test case for the given agent.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AgentTestCaseArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#agentsid_nodejs" style="color: inherit; text-decoration: inherit;">agents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +397,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +405,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#testcasesid_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Cases<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +413,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the test case, unique within the agent. Limit of 200 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#lasttestresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresult">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The latest test result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional freeform notes about the test case. Limit of 400 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#testcaseconversationturns_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Case<wbr>Conversation<wbr>Turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#testconfig_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config for the test case.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#agents_id_python" style="color: inherit; text-decoration: inherit;">agents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +489,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -470,7 +497,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#test_cases_id_python" style="color: inherit; text-decoration: inherit;">test_<wbr>cases_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +505,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the test case, unique within the agent. Limit of 200 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#last_test_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>test_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testcaseresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Case<wbr>Result<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The latest test result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional freeform notes about the test case. Limit of 400 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#test_case_conversation_turns_python" style="color: inherit; text-decoration: inherit;">test_<wbr>case_<wbr>conversation_<wbr>turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The AgentTestCase resource accepts the following [input]({{< relref "/docs/intro
 <a href="#test_config_python" style="color: inherit; text-decoration: inherit;">test_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Config for the test case.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -677,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Instructs the speech recognizer how to process the speech audio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Instructs the speech recognizer how to process the speech audio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Instructs the speech recognizer how to process the speech audio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3inputaudioconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Input<wbr>Audio<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Instructs the speech recognizer how to process the speech audio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -841,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinput_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualagentoutput_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Agent<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual agent output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_input_python" style="color: inherit; text-decoration: inherit;">user_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_agent_output_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>agent_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual agent output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinput_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualagentoutput_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Agent<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual agent output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_input_python" style="color: inherit; text-decoration: inherit;">user_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnuserinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>User<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -951,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_agent_output_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>agent_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnvirtualagentoutputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Virtual<wbr>Agent<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual agent output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#injectedparameters_nodejs" style="color: inherit; text-decoration: inherit;">injected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Parameters that need to be injected into the conversation during intent detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Supports text input, event input, dtmf input in the test case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iswebhookenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Webhook<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#injected_parameters_python" style="color: inherit; text-decoration: inherit;">injected_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Parameters that need to be injected into the conversation during intent detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Supports text input, event input, dtmf input in the test case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_webhook_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>webhook_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#injectedparameters_nodejs" style="color: inherit; text-decoration: inherit;">injected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Parameters that need to be injected into the conversation during intent detection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Supports text input, event input, dtmf input in the test case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iswebhookenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Webhook<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#injected_parameters_python" style="color: inherit; text-decoration: inherit;">injected_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Parameters that need to be injected into the conversation during intent detection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3queryinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Query<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Supports text input, event input, dtmf input in the test case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_webhook_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>webhook_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentpage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3page">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3page">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Page on which the utterance was spoken. Only name and displayName will be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticinfo_nodejs" style="color: inherit; text-decoration: inherit;">diagnostic<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionparameters_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The session parameters available to the bot at this point.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatus">pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Response error from the agent in the test result. If set, other output is empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textresponses_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The text responses from the agent for the turn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeredintent_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intent">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Intent that triggered the response. Only name and displayName will be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1349,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_page_python" style="color: inherit; text-decoration: inherit;">current_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3page">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3page">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Page on which the utterance was spoken. Only name and displayName will be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostic_info_python" style="color: inherit; text-decoration: inherit;">diagnostic_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_parameters_python" style="color: inherit; text-decoration: inherit;">session_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The session parameters available to the bot at this point.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Response error from the agent in the test result. If set, other output is empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_responses_python" style="color: inherit; text-decoration: inherit;">text_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The text responses from the agent for the turn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggered_intent_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Intent that triggered the response. Only name and displayName will be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentpage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3pageresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3pageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Page on which the utterance was spoken. Only name and displayName will be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticinfo_nodejs" style="color: inherit; text-decoration: inherit;">diagnostic<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#differences_nodejs" style="color: inherit; text-decoration: inherit;">differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testrundifferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Run<wbr>Difference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testrundifferenceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Run<wbr>Difference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessionparameters_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The session parameters available to the bot at this point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Response error from the agent in the test result. If set, other output is empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textresponses_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The text responses from the agent for the turn.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggeredintent_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Intent that triggered the response. Only name and displayName will be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1583,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_page_python" style="color: inherit; text-decoration: inherit;">current_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3pageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3pageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Page<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Page on which the utterance was spoken. Only name and displayName will be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1591,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostic_info_python" style="color: inherit; text-decoration: inherit;">diagnostic_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The diagnostic info output for the turn.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#differences_python" style="color: inherit; text-decoration: inherit;">differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3testrundifferenceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Run<wbr>Difference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3testrundifferenceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Test<wbr>Run<wbr>Difference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If this is part of a result conversation turn, the list of differences between the original run and the replay for this output, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_parameters_python" style="color: inherit; text-decoration: inherit;">session_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The session parameters available to the bot at this point.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1615,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Response error from the agent in the test result. If set, other output is empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_responses_python" style="color: inherit; text-decoration: inherit;">text_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The text responses from the agent for the turn.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1631,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggered_intent_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Intent that triggered the response. Only name and displayName will be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digits_nodejs" style="color: inherit; text-decoration: inherit;">digits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dtmf digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finishdigit_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Digit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The finish digit (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1705,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digits_python" style="color: inherit; text-decoration: inherit;">digits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dtmf digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finish_digit_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>digit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The finish digit (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digits_nodejs" style="color: inherit; text-decoration: inherit;">digits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dtmf digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finishdigit_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Digit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The finish digit (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digits_python" style="color: inherit; text-decoration: inherit;">digits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dtmf digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finish_digit_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>digit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The finish digit (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1881,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the event to handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetflow_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpage_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1917,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the event to handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_flow_python" style="color: inherit; text-decoration: inherit;">target_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_page_python" style="color: inherit; text-decoration: inherit;">target_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_fulfillment_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the event to handle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this event handler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetflow_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2067,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpage_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2075,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the event to handle.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this event handler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_flow_python" style="color: inherit; text-decoration: inherit;">target_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_page_python" style="color: inherit; text-decoration: inherit;">target_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_fulfillment_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2169,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to collect from the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2269,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to collect from the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2411,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the parameter, unique within the form.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2419,7 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2427,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fillbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehavior">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehavior">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines fill behavior for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2443,7 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2471,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the parameter, unique within the form.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fill_behavior_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehavior">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehavior">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines fill behavior for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2495,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2565,7 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialpromptfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Prompt<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprompteventhandlers_nodejs" style="color: inherit; text-decoration: inherit;">reprompt<wbr>Event<wbr>Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the `sys.no-match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case where the parameter values have been `invalidated` by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, `initial_prompt_fulfillment` will be re-prompted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2585,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_prompt_fulfillment_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>prompt_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprompt_event_handlers_python" style="color: inherit; text-decoration: inherit;">reprompt_<wbr>event_<wbr>handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the `sys.no-match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case where the parameter values have been `invalidated` by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, `initial_prompt_fulfillment` will be re-prompted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialpromptfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Prompt<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2655,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprompteventhandlers_nodejs" style="color: inherit; text-decoration: inherit;">reprompt<wbr>Event<wbr>Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the `sys.no-match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case where the parameter values have been `invalidated` by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, `initial_prompt_fulfillment` will be re-prompted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2667,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_prompt_fulfillment_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>prompt_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2675,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprompt_event_handlers_python" style="color: inherit; text-decoration: inherit;">reprompt_<wbr>event_<wbr>handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The handlers for parameter-level events, used to provide reprompt for the parameter or transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the first prompt for the parameter. If the user's response does not fill the parameter, a no-match/no-input event will be triggered, and the fulfillment associated with the `sys.no-match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to handle all following no-match/no-input events after all numbered no-match/no-input handlers for the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case where the parameter values have been `invalidated` by webhook. For example, if the user's response fill the parameter, however the parameter was invalidated by webhook, the fulfillment associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a prompt. If the event handler for the corresponding event can't be found on the parameter, `initial_prompt_fulfillment` will be re-prompted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2817,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the parameter, unique within the form.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2825,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2833,7 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fillbehavior_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehaviorresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehaviorresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines fill behavior for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2841,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2849,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2857,7 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2877,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the parameter, unique within the form.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2885,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2893,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fill_behavior_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehaviorresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterfillbehaviorresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Fill<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines fill behavior for the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2901,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2909,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2917,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2955,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to collect from the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2967,7 +2994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to collect from the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3069,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionalcases_nodejs" style="color: inherit; text-decoration: inherit;">conditional<wbr>Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditional cases for this fulfillment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of rich message responses to present to the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3085,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setparameteractions_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Parameter<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteraction">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteraction">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set parameter values before executing the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3101,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook to call. Format: `projects//locations//agents//webhooks/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3113,7 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditional_cases_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditional cases for this fulfillment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3121,7 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of rich message responses to present to the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3129,7 +3156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#set_parameter_actions_python" style="color: inherit; text-decoration: inherit;">set_<wbr>parameter_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteraction">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteraction">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set parameter values before executing the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3137,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3145,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook to call. Format: `projects//locations//agents//webhooks/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3183,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cases_nodejs" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescase">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cascading if-else conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3195,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cases_python" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cascading if-else conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3249,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#casecontent_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontent">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of case content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3257,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3269,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#case_content_python" style="color: inherit; text-decoration: inherit;">case_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontent">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of case content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3331,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalcases_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional cases to be evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3339,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returned message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3351,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_cases_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcases">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional cases to be evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3359,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessage">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returned message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3413,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalcases_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional cases to be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3421,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returned message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3433,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_cases_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional cases to be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3441,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returned message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3495,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#casecontent_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontentresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of case content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3503,7 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3515,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#case_content_python" style="color: inherit; text-decoration: inherit;">case_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescasecasecontentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Case<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of case content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3523,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cases_nodejs" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescaseresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescaseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cascading if-else conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3573,7 +3600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cases_python" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescaseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasescaseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Case<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cascading if-else conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3675,7 +3702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionalcases_nodejs" style="color: inherit; text-decoration: inherit;">conditional<wbr>Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditional cases for this fulfillment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3683,7 +3710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of rich message responses to present to the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3691,7 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setparameteractions_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Parameter<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteractionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set parameter values before executing the webhook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3699,7 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3707,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook to call. Format: `projects//locations//agents//webhooks/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3719,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditional_cases_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentconditionalcasesresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Conditional<wbr>Cases<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditional cases for this fulfillment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3727,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of rich message responses to present to the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3735,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#set_parameter_actions_python" style="color: inherit; text-decoration: inherit;">set_<wbr>parameter_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentsetparameteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Set<wbr>Parameter<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set parameter values before executing the webhook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3743,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3751,7 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook to call. Format: `projects//locations//agents//webhooks/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3805,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3825,7 +3852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3887,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3907,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4049,7 +4076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audioencoding_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4057,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablewordinfo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Word<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelvariant_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4081,7 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrasehints_nodejs" style="color: inherit; text-decoration: inherit;">phrase<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleratehertz_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate<wbr>Hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleutterance_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Utterance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4109,7 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_encoding_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_word_info_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>word_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_variant_python" style="color: inherit; text-decoration: inherit;">model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4141,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrase_hints_python" style="color: inherit; text-decoration: inherit;">phrase_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_rate_hertz_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate_<wbr>hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_utterance_python" style="color: inherit; text-decoration: inherit;">single_<wbr>utterance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4291,7 +4318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audioencoding_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4299,7 +4326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablewordinfo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Word<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4307,7 +4334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4315,7 +4342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modelvariant_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4323,7 +4350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrasehints_nodejs" style="color: inherit; text-decoration: inherit;">phrase<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4331,7 +4358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleratehertz_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate<wbr>Hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4339,7 +4366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#singleutterance_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Utterance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4351,7 +4378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_encoding_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Audio encoding of the audio content to process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4359,7 +4386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_word_info_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>word_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4367,7 +4394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4375,7 +4402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_variant_python" style="color: inherit; text-decoration: inherit;">model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Which variant of the Speech model to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4383,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phrase_hints_python" style="color: inherit; text-decoration: inherit;">phrase_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4391,7 +4418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_rate_hertz_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate_<wbr>hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4399,7 +4426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#single_utterance_python" style="color: inherit; text-decoration: inherit;">single_<wbr>utterance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio's voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4415,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -4439,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4483,7 +4510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -4507,7 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4549,15 +4576,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4565,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4573,15 +4600,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4589,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4597,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4605,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingphrases_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrase">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4617,15 +4644,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4633,7 +4660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4641,15 +4668,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4657,7 +4684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4665,7 +4692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_phrases_python" style="color: inherit; text-decoration: inherit;">training_<wbr>phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4711,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4723,7 +4750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4761,7 +4788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4773,7 +4800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4859,7 +4886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4867,7 +4894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the parameter. This field is used by training phrases to annotate their parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4875,7 +4902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4883,7 +4910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4895,7 +4922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4903,7 +4930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the parameter. This field is used by training phrases to annotate their parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4911,7 +4938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4919,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4989,7 +5016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4997,7 +5024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5005,7 +5032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5017,7 +5044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5025,7 +5052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5033,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5049,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -5073,7 +5100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5117,7 +5144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -5141,7 +5168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5183,15 +5210,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5199,7 +5226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5207,15 +5234,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5223,7 +5250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameterresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5231,7 +5258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5239,7 +5266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trainingphrases_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphraseresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphraseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5251,15 +5278,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5267,7 +5294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5275,15 +5302,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys." is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys.head * sys.contextual The above labels do not require value. "sys.head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5291,7 +5318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentparameterresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5299,7 +5326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5307,7 +5334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#training_phrases_python" style="color: inherit; text-decoration: inherit;">training_<wbr>phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphraseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphraseresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5377,7 +5404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5385,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepart">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5393,7 +5420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatcount_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5405,7 +5432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5413,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5421,7 +5448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_count_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5475,7 +5502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterid_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5483,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5495,7 +5522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_id_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5503,7 +5530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5557,7 +5584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterid_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5565,7 +5592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5577,7 +5604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_id_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5585,7 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5639,7 +5666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepartresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5647,7 +5674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatcount_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5659,7 +5686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5667,7 +5694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_count_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5801,7 +5828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the page, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5809,7 +5836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entryfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the session is entering the page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5817,7 +5844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhandlers_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Handlers associated with the page to handle events such as webhook errors, no match or no input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5825,7 +5852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_nodejs" style="color: inherit; text-decoration: inherit;">form</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3form">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3form">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The form associated with the page, used for collecting parameters relevant to the page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5833,7 +5860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5841,7 +5868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transitionroutegroups_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>Route<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +5876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transitionroutes_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionroute">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5861,7 +5888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the page, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5869,7 +5896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entry_fulfillment_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the session is entering the page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5877,7 +5904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_handlers_python" style="color: inherit; text-decoration: inherit;">event_<wbr>handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandler">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Handlers associated with the page to handle events such as webhook errors, no match or no input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5885,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_python" style="color: inherit; text-decoration: inherit;">form</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3form">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3form">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The form associated with the page, used for collecting parameters relevant to the page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5893,7 +5920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5901,7 +5928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transition_route_groups_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>route_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5909,7 +5936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transition_routes_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionroute">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionroute">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6043,7 +6070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the page, unique within the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6051,7 +6078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entryfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the session is entering the page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6059,7 +6086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhandlers_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Handlers associated with the page to handle events such as webhook errors, no match or no input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6067,7 +6094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_nodejs" style="color: inherit; text-decoration: inherit;">form</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The form associated with the page, used for collecting parameters relevant to the page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6075,7 +6102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6083,7 +6110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transitionroutegroups_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>Route<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6091,7 +6118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transitionroutes_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionrouteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionrouteresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6103,7 +6130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the page, unique within the agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6111,7 +6138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entry_fulfillment_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the session is entering the page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6119,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_handlers_python" style="color: inherit; text-decoration: inherit;">event_<wbr>handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventhandlerresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Handler<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Handlers associated with the page to handle events such as webhook errors, no match or no input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6127,7 +6154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_python" style="color: inherit; text-decoration: inherit;">form</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3formresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3formresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Form<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The form associated with the page, used for collecting parameters relevant to the page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6135,7 +6162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6143,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transition_route_groups_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>route_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6151,7 +6178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transition_routes_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionrouteresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3transitionrouteresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Transition<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6269,7 +6296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6277,7 +6304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dtmf_nodejs" style="color: inherit; text-decoration: inherit;">dtmf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DTMF event to be handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6285,7 +6312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6293,7 +6320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The intent to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6301,7 +6328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6309,7 +6336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3textinput">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3textinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language text to be processed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6321,7 +6348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6329,7 +6356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dtmf_python" style="color: inherit; text-decoration: inherit;">dtmf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DTMF event to be handled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6337,7 +6364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6345,7 +6372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The intent to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6353,7 +6380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6361,7 +6388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3textinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3textinput">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language text to be processed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6479,7 +6506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6487,7 +6514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dtmf_nodejs" style="color: inherit; text-decoration: inherit;">dtmf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DTMF event to be handled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6495,7 +6522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6503,7 +6530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The intent to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6511,7 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6519,7 +6546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3textinputresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3textinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language text to be processed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6531,7 +6558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3audioinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Audio<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language speech audio to be processed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6539,7 +6566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dtmf_python" style="color: inherit; text-decoration: inherit;">dtmf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3dtmfinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Dtmf<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DTMF event to be handled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6547,7 +6574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3eventinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Event<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6555,7 +6582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3intentinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Intent<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The intent to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6563,7 +6590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6571,7 +6598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3textinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3textinputresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Text<wbr>Input<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The natural language text to be processed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6689,7 +6716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationsuccess_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccess">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccess">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the conversation succeeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6697,7 +6724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveagenthandoff_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Agent<wbr>Handoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoff">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoff">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hands off conversation to a human agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6705,7 +6732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputaudiotext_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Audio<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotext">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6713,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Returns a response containing a custom, platform-specific payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6721,7 +6748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playaudio_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudio">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudio">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6729,7 +6756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returns a text response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6741,7 +6768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_success_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccess">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccess">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the conversation succeeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6749,7 +6776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_agent_handoff_python" style="color: inherit; text-decoration: inherit;">live_<wbr>agent_<wbr>handoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoff">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoff">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hands off conversation to a human agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6757,7 +6784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_audio_text_python" style="color: inherit; text-decoration: inherit;">output_<wbr>audio_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6765,7 +6792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Returns a response containing a custom, platform-specific payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6773,7 +6800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_audio_python" style="color: inherit; text-decoration: inherit;">play_<wbr>audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudio">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudio">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6781,7 +6808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetext">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returns a text response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6819,7 +6846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Custom metadata. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6831,7 +6858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6869,7 +6896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Custom metadata. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6881,7 +6908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6919,7 +6946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6931,7 +6958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6969,7 +6996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6981,7 +7008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7019,7 +7046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudiosegmentresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Segment<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudiosegmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Segment<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Segments this audio response is composed of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7031,7 +7058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudiosegmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Segment<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudiosegmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Segment<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Segments this audio response is composed of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7101,7 +7128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowplaybackinterruption_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Playback<wbr>Interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7109,7 +7136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7117,7 +7144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7129,7 +7156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_playback_interruption_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>playback_<wbr>interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7137,7 +7164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7145,7 +7172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7199,7 +7226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssml_nodejs" style="color: inherit; text-decoration: inherit;">ssml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7207,7 +7234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw text to be synthesized.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7219,7 +7246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssml_python" style="color: inherit; text-decoration: inherit;">ssml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7227,7 +7254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw text to be synthesized.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7297,7 +7324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowplaybackinterruption_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Playback<wbr>Interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7305,7 +7332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssml_nodejs" style="color: inherit; text-decoration: inherit;">ssml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7313,7 +7340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw text to be synthesized.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7325,7 +7352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_playback_interruption_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>playback_<wbr>interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7333,7 +7360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssml_python" style="color: inherit; text-decoration: inherit;">ssml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7341,7 +7368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw text to be synthesized.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7379,7 +7406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiouri_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7391,7 +7418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_uri_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7445,7 +7472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowplaybackinterruption_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Playback<wbr>Interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7453,7 +7480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiouri_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7465,7 +7492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_playback_interruption_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>playback_<wbr>interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7473,7 +7500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_uri_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7623,7 +7650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationsuccess_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccessresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccessresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the conversation succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7631,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endinteraction_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageendinteractionresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>End<wbr>Interaction<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageendinteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>End<wbr>Interaction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A signal that indicates the interaction with the Dialogflow agent has ended. This message is generated by Dialogflow only when the conversation reaches `END_SESSION` page. It is not supposed to be defined by the user. It's guaranteed that there is at most one such message in each response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7639,7 +7666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveagenthandoff_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Agent<wbr>Handoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoffresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoffresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hands off conversation to a human agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7647,7 +7674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mixedaudio_nodejs" style="color: inherit; text-decoration: inherit;">mixed<wbr>Audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudioresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An audio response message composed of both the synthesized Dialogflow agent responses and responses defined via play_audio. This message is generated by Dialogflow only and not supposed to be defined by the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7655,7 +7682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputaudiotext_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Audio<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotextresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7663,7 +7690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Returns a response containing a custom, platform-specific payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7671,7 +7698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playaudio_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudioresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7679,7 +7706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returns a text response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7691,7 +7718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_success_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccessresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageconversationsuccessresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Conversation<wbr>Success<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the conversation succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7699,7 +7726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_interaction_python" style="color: inherit; text-decoration: inherit;">end_<wbr>interaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageendinteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>End<wbr>Interaction<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageendinteractionresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>End<wbr>Interaction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A signal that indicates the interaction with the Dialogflow agent has ended. This message is generated by Dialogflow only when the conversation reaches `END_SESSION` page. It is not supposed to be defined by the user. It's guaranteed that there is at most one such message in each response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7707,7 +7734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_agent_handoff_python" style="color: inherit; text-decoration: inherit;">live_<wbr>agent_<wbr>handoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoffresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageliveagenthandoffresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Live<wbr>Agent<wbr>Handoff<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hands off conversation to a human agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7715,7 +7742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mixed_audio_python" style="color: inherit; text-decoration: inherit;">mixed_<wbr>audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagemixedaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Mixed<wbr>Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An audio response message composed of both the synthesized Dialogflow agent responses and responses defined via play_audio. This message is generated by Dialogflow only and not supposed to be defined by the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7723,7 +7750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_audio_text_python" style="color: inherit; text-decoration: inherit;">output_<wbr>audio_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageoutputaudiotextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Output<wbr>Audio<wbr>Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7731,7 +7758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Returns a response containing a custom, platform-specific payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7739,7 +7766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_audio_python" style="color: inherit; text-decoration: inherit;">play_<wbr>audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessageplayaudioresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Play<wbr>Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7747,7 +7774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3responsemessagetextresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Response<wbr>Message<wbr>Text<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Returns a text response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7785,7 +7812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. A collection of text responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7797,7 +7824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. A collection of text responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7851,7 +7878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowplaybackinterruption_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Playback<wbr>Interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7859,7 +7886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. A collection of text responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7871,7 +7898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_playback_interruption_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>playback_<wbr>interruption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7879,7 +7906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. A collection of text responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7981,7 +8008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationturns_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered during the test case replay in chronological order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7989,7 +8016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment where the test was run. If not set, it indicates the draft environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7997,7 +8024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8005,7 +8032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testresult_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8013,7 +8040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testtime_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the test was run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8025,7 +8052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_turns_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturn">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered during the test case replay in chronological order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8033,7 +8060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment where the test was run. If not set, it indicates the draft environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8041,7 +8068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8049,7 +8076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_result_python" style="color: inherit; text-decoration: inherit;">test_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8057,7 +8084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_time_python" style="color: inherit; text-decoration: inherit;">test_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the test was run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8159,7 +8186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationturns_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered during the test case replay in chronological order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8167,7 +8194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment where the test was run. If not set, it indicates the draft environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8175,7 +8202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8183,7 +8210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testresult_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8191,7 +8218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testtime_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the test was run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8203,7 +8230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_turns_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>turns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3conversationturnresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Conversation<wbr>Turn<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conversation turns uttered during the test case replay in chronological order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8211,7 +8238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment where the test was run. If not set, it indicates the draft environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8219,7 +8246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8227,7 +8254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_result_python" style="color: inherit; text-decoration: inherit;">test_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the test case passed in the agent environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8235,7 +8262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_time_python" style="color: inherit; text-decoration: inherit;">test_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the test was run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8289,7 +8316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flow_nodejs" style="color: inherit; text-decoration: inherit;">flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8297,7 +8324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackingparameters_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Session parameters to be compared when calculating differences.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8309,7 +8336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flow_python" style="color: inherit; text-decoration: inherit;">flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8317,7 +8344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracking_parameters_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Session parameters to be compared when calculating differences.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8371,7 +8398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flow_nodejs" style="color: inherit; text-decoration: inherit;">flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8379,7 +8406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackingparameters_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Session parameters to be compared when calculating differences.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8391,7 +8418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flow_python" style="color: inherit; text-decoration: inherit;">flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8399,7 +8426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracking_parameters_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Session parameters to be compared when calculating differences.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8453,7 +8480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the diff, showing the actual output vs expected output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8461,7 +8488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of diff.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8473,7 +8500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the diff, showing the actual output vs expected output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8481,7 +8508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of diff.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8519,7 +8546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8531,7 +8558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8569,7 +8596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8581,7 +8608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8683,7 +8710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8691,7 +8718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8699,7 +8726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetflow_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8707,7 +8734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpage_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8715,7 +8742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8727,7 +8754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8735,7 +8762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8743,7 +8770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_flow_python" style="color: inherit; text-decoration: inherit;">target_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8751,7 +8778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_page_python" style="color: inherit; text-decoration: inherit;">target_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8759,7 +8786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_fulfillment_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillment">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8877,7 +8904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8885,7 +8912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_nodejs" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8893,7 +8920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this transition route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8901,7 +8928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetflow_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8909,7 +8936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpage_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8917,7 +8944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8929,7 +8956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8937,7 +8964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intent_python" style="color: inherit; text-decoration: inherit;">intent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8945,7 +8972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this transition route.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8953,7 +8980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_flow_python" style="color: inherit; text-decoration: inherit;">target_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target flow to transition to. Format: `projects//locations//agents//flows/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8961,7 +8988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_page_python" style="color: inherit; text-decoration: inherit;">target_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target page to transition to. Format: `projects//locations//agents//flows//pages/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8969,7 +8996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_fulfillment_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>fulfillment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3fulfillmentresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3Fulfillment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9039,7 +9066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9047,7 +9074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9055,7 +9082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9067,7 +9094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9075,7 +9102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9083,7 +9110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9153,7 +9180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9161,7 +9188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9169,7 +9196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9181,7 +9208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9189,7 +9216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9197,7 +9224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

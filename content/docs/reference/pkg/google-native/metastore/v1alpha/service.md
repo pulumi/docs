@@ -20,19 +20,37 @@ Creates a metastore service in a project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hive_metastore_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_metastore_v1alpha.HiveMetastoreConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_metastore_v1alpha.MaintenanceWindowArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_integration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_metastore_v1alpha.MetadataIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">hive_metastore_config</span><span class="p">:</span> <span class="nx">Optional[_metastore_v1alpha.HiveMetastoreConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[_metastore_v1alpha.MaintenanceWindowArgs]</span> = None<span class="p">,</span>
+            <span class="nx">metadata_integration</span><span class="p">:</span> <span class="nx">Optional[_metastore_v1alpha.MetadataIntegrationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates a metastore service in a project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hivemetastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivemetastoreconfig">pulumi.<wbr>Input<Hive<wbr>Metastore<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#hivemetastoreconfig">Hive<wbr>Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration information specific to running Hive metastore software as the metastore service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-defined labels for the metastore service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">pulumi.<wbr>Input<Maintenance<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadataintegration_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataintegration">pulumi.<wbr>Input<Metadata<wbr>Integration<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadataintegration">Metadata<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting that defines how metastore metadata should be integrated with external services and systems.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port at which the metastore service is reached. Default: 9083.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hive_metastore_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>metastore_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivemetastoreconfig">Hive<wbr>Metastore<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hivemetastoreconfig">Hive<wbr>Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration information specific to running Hive metastore software as the metastore service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined labels for the metastore service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#metadata_integration_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataintegration">Metadata<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadataintegration">Metadata<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The setting that defines how metastore metadata should be integrated with external services and systems.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port at which the metastore service is reached. Default: 9083.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#release_channel_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The release channel of the service. If unspecified, defaults to STABLE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -917,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -929,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configoverrides_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfig">pulumi.<wbr>Input<Kerberos<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The Hive metastore schema version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1077,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_overrides_python" style="color: inherit; text-decoration: inherit;">config_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The Hive metastore schema version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configoverrides_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfigresponse">pulumi.<wbr>Input<Kerberos<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The Hive metastore schema version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_overrides_python" style="color: inherit; text-decoration: inherit;">config_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1199,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The Hive metastore schema version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytab_nodejs" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secret">pulumi.<wbr>Input<Secret<wbr>Args></a></span>
+        <span class="property-type"><a href="#secret">Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#krb5configgcsuri_nodejs" style="color: inherit; text-decoration: inherit;">krb5Config<wbr>Gcs<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytab_python" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secret">Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secret">Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#krb5_config_gcs_uri_python" style="color: inherit; text-decoration: inherit;">krb5_<wbr>config_<wbr>gcs_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1391,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytab_nodejs" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">pulumi.<wbr>Input<Secret<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#krb5configgcsuri_nodejs" style="color: inherit; text-decoration: inherit;">krb5Config<wbr>Gcs<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1407,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1419,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytab_python" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1427,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#krb5_config_gcs_uri_python" style="color: inherit; text-decoration: inherit;">krb5_<wbr>config_<wbr>gcs_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1435,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourofday_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hour of day (0-23) when the window starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_of_day_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hour of day (0-23) when the window starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourofday_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hour of day (0-23) when the window starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of week, when the window starts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hour_of_day_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hour of day (0-23) when the window starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasedumptype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Dump<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the database dump.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1709,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationgcsuri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Gcs<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1717,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the export ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1725,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the export started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1733,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_dump_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>dump_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the database dump.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1753,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_gcs_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>gcs_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1761,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the export ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the export started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1777,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogconfig">pulumi.<wbr>Input<Data<wbr>Catalog<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datacatalogconfig">Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogconfigresponse">pulumi.<wbr>Input<Data<wbr>Catalog<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datacatalogconfigresponse">Data<wbr>Catalog<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration config for the Data Catalog service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadataexports_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataexportresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Metadata<wbr>Export<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metadataexportresponse">Metadata<wbr>Export<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The latest metadata exports of the metastore service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1939,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restores_nodejs" style="color: inherit; text-decoration: inherit;">restores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restoreresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Restore<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#restoreresponse">Restore<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The latest restores of the metastore service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1951,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_exports_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataexportresponse">Metadata<wbr>Export<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metadataexportresponse">Metadata<wbr>Export<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The latest metadata exports of the metastore service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1959,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restores_python" style="color: inherit; text-decoration: inherit;">restores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restoreresponse">Restore<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#restoreresponse">Restore<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The latest restores of the metastore service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2085,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restore details containing the revision of the service to be restored to, in format of JSON.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2093,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the restore ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2101,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the restore started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2109,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2117,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of restore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The restore details containing the revision of the service to be restored to, in format of JSON.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2145,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the restore ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2153,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the restore started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2161,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2169,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of restore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsecret_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_secret_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsecret_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2269,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_secret_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}

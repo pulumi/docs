@@ -20,19 +20,29 @@ Creates and starts a Replay using the given ReplayConfig.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_policysimulator_v1.GoogleCloudPolicysimulatorV1ReplayConfigArgs]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replays_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_policysimulator_v1.GoogleCloudPolicysimulatorV1ReplayConfigArgs]</span> = None<span class="p">,</span>
+           <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">replays_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplay</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Replay</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplay</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Replay</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Replay</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Creates and starts a Replay using the given ReplayConfig.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplayArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -258,7 +278,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#replaysid_nodejs" style="color: inherit; text-decoration: inherit;">replays<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudpolicysimulatorv1replayconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Policysimulator<wbr>V1Replay<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1replayconfig">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1Replay<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The configuration used for the `Replay`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -294,7 +314,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#replays_id_python" style="color: inherit; text-decoration: inherit;">replays_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The Replay resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudpolicysimulatorv1replayconfig">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1Replay<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudpolicysimulatorv1replayconfig">Google<wbr>Cloud<wbr>Policysimulator<wbr>V1Replay<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The configuration used for the `Replay`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logsource_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyoverlay_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Overlay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_source_python" style="color: inherit; text-decoration: inherit;">log_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_overlay_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>overlay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logsource_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyoverlay_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Overlay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_source_python" style="color: inherit; text-decoration: inherit;">log_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logs to use as input for the Replay.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_overlay_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>overlay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#differencecount_nodejs" style="color: inherit; text-decoration: inherit;">difference<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replayed log entries with a difference between baseline and simulated policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -753,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of log entries that could not be replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -761,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logcount_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of log entries replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -769,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#newestdate_nodejs" style="color: inherit; text-decoration: inherit;">newest<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The date of the newest log entry replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -777,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestdate_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The date of the oldest log entry replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -785,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unchangedcount_nodejs" style="color: inherit; text-decoration: inherit;">unchanged<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replayed log entries with no difference between baseline and simulated policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -797,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#difference_count_python" style="color: inherit; text-decoration: inherit;">difference_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replayed log entries with a difference between baseline and simulated policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -805,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of log entries that could not be replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_count_python" style="color: inherit; text-decoration: inherit;">log_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of log entries replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#newest_date_python" style="color: inherit; text-decoration: inherit;">newest_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The date of the newest log entry replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -829,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_date_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The date of the oldest log entry replayed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -837,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unchanged_count_python" style="color: inherit; text-decoration: inherit;">unchanged_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replayed log entries with no difference between baseline and simulated policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -943,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -951,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}

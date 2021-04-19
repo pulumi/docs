@@ -20,19 +20,41 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">custom_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enabled_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tls_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.ServerTlsSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">custom_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">enabled_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">tls_settings</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ServerTlsSettingsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.SslPolicyWarningsItemArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSslPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SslPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSslPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SslPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +89,32 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SslPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -293,7 +325,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -428,7 +460,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">[]Ssl<wbr>Policy<wbr>Warnings<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -440,7 +472,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -448,7 +480,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -456,7 +488,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +496,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#customfeatures_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of features enabled when the selected profile is CUSTOM. The
 - method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.{{% /md %}}</dd><dt class="property-optional"
@@ -473,7 +505,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +513,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#enabledfeatures_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of features enabled in the SSL policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +521,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -499,7 +531,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +539,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +547,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +555,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +563,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +571,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +579,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +587,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#tlssettings_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servertlssettings">pulumi.<wbr>Input<Server<wbr>Tls<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#servertlssettings">Server<wbr>Tls<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +595,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -575,7 +607,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -583,7 +615,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +623,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +631,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#custom_features_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of features enabled when the selected profile is CUSTOM. The
 - method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.{{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +640,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +648,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#enabled_features_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of features enabled in the SSL policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +656,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -634,7 +666,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +674,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +682,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +690,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +698,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +706,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +714,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +722,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#tls_settings_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servertlssettings">Server<wbr>Tls<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servertlssettings">Server<wbr>Tls<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +730,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -831,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fromplugin_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfromplugin">pulumi.<wbr>Input<Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#call_credential_type_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -853,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#from_plugin_python" style="color: inherit; text-decoration: inherit;">from_<wbr>plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -921,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fromplugin_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">pulumi.<wbr>Input<Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#call_credential_type_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -943,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#from_plugin_python" style="color: inherit; text-decoration: inherit;">from_<wbr>plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_credential_type_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_credential_type_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callcredentials_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentials">pulumi.<wbr>Input<Call<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcredentials_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentials">pulumi.<wbr>Input<Channel<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targeturi_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#call_credentials_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_credentials_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callcredentials_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentialsresponse">pulumi.<wbr>Input<Call<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcredentials_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentialsresponse">pulumi.<wbr>Input<Channel<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targeturi_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1319,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#call_credentials_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1327,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_credentials_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structconfig_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_config_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1479,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structconfig_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1491,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_config_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfig">pulumi.<wbr>Input<Grpc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1549,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grpc_service_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1587,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfigresponse">pulumi.<wbr>Input<Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1599,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grpc_service_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxytlscontext_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain security certificates and identity information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate presented by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsmode_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following:  
 - SIMPLE Secure connections with standard TLS semantics.  
@@ -1703,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxy_tls_context_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain security certificates and identity information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate presented by the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_mode_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following:  
 - SIMPLE Secure connections with standard TLS semantics.  
@@ -1795,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxytlscontext_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain security certificates and identity information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate presented by the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1811,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tlsmode_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following:  
 - SIMPLE Secure connections with standard TLS semantics.  
@@ -1825,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxy_tls_context_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain security certificates and identity information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1833,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate presented by the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1841,11 +1873,411 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_mode_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following:  
 - SIMPLE Secure connections with standard TLS semantics.  
 - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">[]Ssl<wbr>Policy<wbr>Data<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">[]Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tlscertificatecontext">Tls<wbr>Certificate<wbr>Context</h4>
@@ -1913,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepaths_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_paths_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2027,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepaths_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2035,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2055,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_paths_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2125,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekeypath_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2145,7 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekeypath_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2227,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2235,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2289,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatecontext_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontext">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationcontext_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontext">pulumi.<wbr>Input<Tls<wbr>Validation<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2309,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_context_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_context_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2371,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatecontext_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontextresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2379,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationcontext_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontextresponse">pulumi.<wbr>Input<Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_context_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2399,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_context_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2469,7 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsource_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2497,7 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_source_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2583,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsource_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2619,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2627,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_source_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}

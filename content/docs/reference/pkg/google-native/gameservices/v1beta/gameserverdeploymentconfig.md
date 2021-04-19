@@ -20,19 +20,34 @@ Creates a new game server config in a given project, location, and game server d
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_gameservices_v1beta.FleetConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">game_server_deployments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_gameservices_v1beta.ScalingConfigArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.FleetConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">game_server_deployments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.ScalingConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerDeploymentConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerDeploymentConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerDeploymentConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerDeploymentConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerDeploymentConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GameServerDeploymentConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a new game server config in a given project, location, and game server d
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GameServerDeploymentConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#configsid_nodejs" style="color: inherit; text-decoration: inherit;">configs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#gameserverdeploymentsid_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Deployments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +371,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Fleet<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fleetconfig">Fleet<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Scaling<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalingconfig">Scaling<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#configs_id_python" style="color: inherit; text-decoration: inherit;">configs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#game_server_deployments_id_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>deployments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -422,7 +447,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetconfig">Fleet<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fleetconfig">Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The GameServerDeploymentConfig resource accepts the following [input]({{< relref
 <a href="#scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingconfig">Scaling<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalingconfig">Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleetspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FleetConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the FleetConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleetspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -735,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FleetConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the FleetConfig.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels for this selector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels for this selector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels for this selector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels for this selector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -941,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleetautoscalerspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Scaling Config{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">pulumi.<wbr>Input<pulumi.<wbr>Input<Schedule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this Scaling Config applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Label<wbr>Selector<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -977,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Scaling Config{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this Scaling Config applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1087,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleetautoscalerspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Scaling Config{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Schedule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this Scaling Config applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Label<wbr>Selector<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#labelselectorresponse">Label<wbr>Selector<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Scaling Config{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this Scaling Config applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorresponse">Label<wbr>Selector<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#labelselectorresponse">Label<wbr>Selector<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cronjobduration_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective after the cron job's start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cronspec_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1269,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective after the cron job's start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cronjobduration_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective after the cron job's start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1387,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cronspec_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1395,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective after the cron job's start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1423,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the event.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1439,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the event.{{% /md %}}</dd></dl>
 {{% /choosable %}}

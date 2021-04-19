@@ -20,19 +20,34 @@ Creates a new instance in the specified region. Returns a long running operation
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">feature_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">logging_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">feature_policy</span><span class="p">:</span> <span class="nx">Optional[_remotebuildexecution_v1alpha.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">logging_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a new instance in the specified region. Returns a long running operation
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancesid_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#featurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy to define whether or not RBE features can be used or how they can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location is a GCP region. Currently only `us-central1` is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether stack driver logging is enabled for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instances_id_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#feature_policy_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicy">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy to define whether or not RBE features can be used or how they can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location is a GCP region. Currently only `us-central1` is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#logging_enabled_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether stack driver logging is enabled for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimagesources_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockeraddcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Add<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerAddCapabilities can be used or what capabilities are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerchrootpath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Chroot<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerChrootPath can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockernetwork_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerprivileged_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerPrivileged can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerrunasroot_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Run<wbr>As<wbr>Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRunAsRoot can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerruntime_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockersiblingcontainers_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Sibling<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerSiblingContainers can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxisolation_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_sources_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_add_capabilities_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>add_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerAddCapabilities can be used or what capabilities are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_chroot_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>chroot_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerChrootPath can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_network_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_privileged_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerPrivileged can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_run_as_root_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>run_<wbr>as_<wbr>root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRunAsRoot can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_runtime_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_sibling_containers_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>sibling_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeature">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerSiblingContainers can be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_isolation_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of acceptable values. Only effective when the policy is `RESTRICTED`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of acceptable values. Only effective when the policy is `RESTRICTED`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of acceptable values. Only effective when the policy is `RESTRICTED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -977,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of acceptable values. Only effective when the policy is `RESTRICTED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -997,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy of the feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimagesources_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockeraddcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Add<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerAddCapabilities can be used or what capabilities are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerchrootpath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Chroot<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerChrootPath can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockernetwork_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerprivileged_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerPrivileged can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerrunasroot_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Run<wbr>As<wbr>Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRunAsRoot can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockerruntime_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dockersiblingcontainers_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Sibling<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">pulumi.<wbr>Input<Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerSiblingContainers can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxisolation_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_sources_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1247,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_add_capabilities_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>add_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerAddCapabilities can be used or what capabilities are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_chroot_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>chroot_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerChrootPath can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_network_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_privileged_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerPrivileged can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_run_as_root_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>run_<wbr>as_<wbr>root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRunAsRoot can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_runtime_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#docker_sibling_containers_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>sibling_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledevtoolsremotebuildexecutionadminv1alphafeaturepolicyfeatureresponse">Google<wbr>Devtools<wbr>Remotebuildexecution<wbr>Admin<wbr>V1alpha<wbr>Feature<wbr>Policy<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether dockerSiblingContainers can be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_isolation_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}linux_isolation allows overriding the docker runtime used for containers started on Linux.{{% /md %}}</dd></dl>
 {{% /choosable %}}

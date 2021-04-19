@@ -20,19 +20,34 @@ Create a new trigger in a particular project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_eventarc_v1.DestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_eventarc_v1.EventFilterArgs]]]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">transport</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_eventarc_v1.TransportArgs]]</span> = None<span class="p">, </span><span class="nx">triggers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[_eventarc_v1.DestinationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">event_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_eventarc_v1.EventFilterArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">transport</span><span class="p">:</span> <span class="nx">Optional[_eventarc_v1.TransportArgs]</span> = None<span class="p">,</span>
+            <span class="nx">triggers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Create a new trigger in a particular project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#triggersid_nodejs" style="color: inherit; text-decoration: inherit;">triggers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">pulumi.<wbr>Input<Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specifies where the events should be sent to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#eventfilters_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventfilter">Event<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. User labels attached to the triggers that can be used to group resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the trigger. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transport">pulumi.<wbr>Input<Transport<wbr>Args></a></span>
+        <span class="property-type"><a href="#transport">Transport<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#triggers_id_python" style="color: inherit; text-decoration: inherit;">triggers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specifies where the events should be sent to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#event_filters_python" style="color: inherit; text-decoration: inherit;">event_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventfilter">Event<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventfilter">Event<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. null The list of filters that applies to event attributes. Only events that match all the provided filters will be sent to the destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. User labels attached to the triggers that can be used to group resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the trigger. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transport">Transport<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transport">Transport<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The region the Cloud Run service is deployed in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -753,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The region the Cloud Run service is deployed in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The region the Cloud Run service is deployed in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The region the Cloud Run service is deployed in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrun">pulumi.<wbr>Input<Cloud<wbr>Run<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudrun">Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrun">Cloud<wbr>Run<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudrun">Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrunresponse">pulumi.<wbr>Input<Cloud<wbr>Run<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudrunresponse">Cloud<wbr>Run<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrunresponse">Cloud<wbr>Run<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudrunresponse">Cloud<wbr>Run<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The value for the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The value for the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The value for the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The value for the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1185,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1259,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsub">pulumi.<wbr>Input<Pubsub<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsub">Pubsub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_python" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsub">Pubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsub">Pubsub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubresponse">pulumi.<wbr>Input<Pubsub<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsubresponse">Pubsub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_python" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubresponse">Pubsub<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsubresponse">Pubsub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.{{% /md %}}</dd></dl>
 {{% /choosable %}}

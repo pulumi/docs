@@ -20,19 +20,32 @@ Creates and returns a new ReferenceImage resource. The `bounding_poly` field is 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bounding_polys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_vision_v1.BoundingPolyArgs]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">products_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reference_images_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">bounding_polys</span><span class="p">:</span> <span class="nx">Optional[Sequence[_vision_v1.BoundingPolyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">products_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">reference_images_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                          <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProductReferenceImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProductReferenceImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProductReferenceImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProductReferenceImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProductReferenceImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProductReferenceImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Creates and returns a new ReferenceImage resource. The `bounding_poly` field is 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProductReferenceImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#productsid_nodejs" style="color: inherit; text-decoration: inherit;">products<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +337,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#referenceimagesid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Images<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#boundingpolys_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpoly">pulumi.<wbr>Input<pulumi.<wbr>Input<Bounding<wbr>Poly<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#products_id_python" style="color: inherit; text-decoration: inherit;">products_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -374,7 +397,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#reference_images_id_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>images_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#bounding_polys_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>polys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#boundingpoly">Bounding<wbr>Poly<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The ProductReferenceImage resource accepts the following [input]({{< relref "/do
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#normalizedvertices_nodejs" style="color: inherit; text-decoration: inherit;">normalized<wbr>Vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedvertex">pulumi.<wbr>Input<pulumi.<wbr>Input<Normalized<wbr>Vertex<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#normalizedvertex">Normalized<wbr>Vertex<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon normalized vertices.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_nodejs" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertex">pulumi.<wbr>Input<pulumi.<wbr>Input<Vertex<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vertex">Vertex<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon vertices.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#normalized_vertices_python" style="color: inherit; text-decoration: inherit;">normalized_<wbr>vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedvertex">Normalized<wbr>Vertex<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#normalizedvertex">Normalized<wbr>Vertex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon normalized vertices.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_python" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertex">Vertex<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vertex">Vertex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon vertices.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#normalizedvertices_nodejs" style="color: inherit; text-decoration: inherit;">normalized<wbr>Vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedvertexresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Normalized<wbr>Vertex<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#normalizedvertexresponse">Normalized<wbr>Vertex<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon normalized vertices.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_nodejs" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertexresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vertex<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon vertices.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#normalized_vertices_python" style="color: inherit; text-decoration: inherit;">normalized_<wbr>vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedvertexresponse">Normalized<wbr>Vertex<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#normalizedvertexresponse">Normalized<wbr>Vertex<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon normalized vertices.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vertices_python" style="color: inherit; text-decoration: inherit;">vertices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vertexresponse">Vertex<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bounding polygon vertices.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -681,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -701,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -783,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -791,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -865,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -927,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -935,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -947,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}X coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}

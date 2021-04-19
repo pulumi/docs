@@ -20,19 +20,44 @@ Creates a NodeTemplate resource in the specified project using the data included
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.AcceleratorConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.LocalDiskArgs]]]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_affinity_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">node_type_flexibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.NodeTemplateNodeTypeFlexibilityArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">server_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.ServerBindingArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.AcceleratorConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.LocalDiskArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">node_affinity_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">node_type_flexibility</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NodeTemplateNodeTypeFlexibilityArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">server_binding</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ServerBindingArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +92,32 @@ Creates a NodeTemplate resource in the specified project using the data included
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -494,7 +529,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#nodetemplate_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +537,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +545,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the region where the node template resides, such as us-central1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +553,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +561,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#cpuovercommittype_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Overcommit<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +569,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +577,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +585,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Local<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +593,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +601,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of the resource. Always compute#nodeTemplate for node templates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +609,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +617,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#nodeaffinitylabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinity<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +625,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node type to use for nodes group that are created from this template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +633,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#nodetypeflexibility_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type<wbr>Flexibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">pulumi.<wbr>Input<Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flexible properties of the desired node type. Node groups that use this node template will create nodes of a type that matches these properties.
 
@@ -608,7 +643,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +651,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +659,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#serverbinding_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverbinding">pulumi.<wbr>Input<Server<wbr>Binding<wbr>Args></a></span>
+        <span class="property-type"><a href="#serverbinding">Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the binding properties for the physical server. Valid values include:  
 - [Default] RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server 
@@ -636,7 +671,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +679,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +691,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#node_template_python" style="color: inherit; text-decoration: inherit;">node_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -664,7 +699,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +707,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the region where the node template resides, such as us-central1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +715,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +723,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#cpu_overcommit_type_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>overcommit_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CPU overcommit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +731,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +739,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +747,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#localdisk">Local<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +755,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +763,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The type of the resource. Always compute#nodeTemplate for node templates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +771,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +779,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#node_affinity_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +787,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node type to use for nodes group that are created from this template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +795,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#node_type_flexibility_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>flexibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flexible properties of the desired node type. Node groups that use this node template will create nodes of a type that matches these properties.
 
@@ -770,7 +805,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +813,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +821,7 @@ This field is mutually exclusive with the node_type property; you can only defin
 <a href="#server_binding_python" style="color: inherit; text-decoration: inherit;">server_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverbinding">Server<wbr>Binding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverbinding">Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the binding properties for the physical server. Valid values include:  
 - [Default] RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server 
@@ -798,7 +833,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the node template. One of the following values: CREATING, READY, and DELETING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +841,7 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -945,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1027,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1035,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1105,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of such disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of such disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of such disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of such disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpus_nodejs" style="color: inherit; text-decoration: inherit;">cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localssd_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1361,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpus_python" style="color: inherit; text-decoration: inherit;">cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ssd_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpus_nodejs" style="color: inherit; text-decoration: inherit;">cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1455,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localssd_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpus_python" style="color: inherit; text-decoration: inherit;">cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ssd_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1529,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

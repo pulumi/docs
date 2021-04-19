@@ -20,19 +20,34 @@ Creates a transfer job that runs periodically.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">latest_operation_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_storagetransfer_v1.NotificationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_storagetransfer_v1.ScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">transfer_jobs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">transfer_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_storagetransfer_v1.TransferSpecArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">latest_operation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.NotificationConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.ScheduleArgs]</span> = None<span class="p">,</span>
+                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">transfer_jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">transfer_spec</span><span class="p">:</span> <span class="nx">Optional[_storagetransfer_v1.TransferSpecArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransferJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TransferJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransferJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TransferJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TransferJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TransferJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a transfer job that runs periodically.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TransferJobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -196,7 +221,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -272,7 +297,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -322,7 +347,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#transferjobsid_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Jobs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +355,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#latestoperationname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Operation<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if and only if at least one TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,15 +371,15 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">pulumi.<wbr>Input<Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Google Cloud Platform Project that owns the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">pulumi.<wbr>Input<Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job will never execute a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#transferspec_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferspec">pulumi.<wbr>Input<Transfer<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferspec">Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#transfer_jobs_id_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>jobs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +431,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#latest_operation_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the most recently started TransferOperation of this JobConfig. Present if and only if at least one TransferOperation has been created for this JobConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,15 +447,15 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationconfig">Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Google Cloud Platform Project that owns the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job will never execute a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferspec">Transfer<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferspec">Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -677,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. AWS access key ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. AWS secret access key. This field is not returned in RPC responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. AWS access key ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. AWS secret access key. This field is not returned in RPC responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. AWS access key ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. AWS secret access key. This field is not returned in RPC responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. AWS access key ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. AWS secret access key. This field is not returned in RPC responses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awsaccesskey">pulumi.<wbr>Input<Aws<wbr>Access<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#awsaccesskey">Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awsaccesskey">Aws<wbr>Access<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#awsaccesskey">Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awsaccesskeyresponse">pulumi.<wbr>Input<Aws<wbr>Access<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#awsaccesskeyresponse">Aws<wbr>Access<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awsaccesskeyresponse">Aws<wbr>Access<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#awsaccesskeyresponse">Aws<wbr>Access<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. S3 Bucket name (see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurecredentials_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecredentials">pulumi.<wbr>Input<Azure<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurecredentials">Azure<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The container to transfer from the Azure Storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Azure Storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_credentials_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecredentials">Azure<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurecredentials">Azure<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The container to transfer from the Azure Storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Azure Storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurecredentials_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecredentialsresponse">pulumi.<wbr>Input<Azure<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurecredentialsresponse">Azure<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The container to transfer from the Azure Storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Azure Storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_credentials_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecredentialsresponse">Azure<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurecredentialsresponse">Azure<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1291,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The container to transfer from the Azure Storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Azure Storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1477,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1619,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1635,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1689,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage bucket name (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. (must meet Object Name Requirements](https://cloud.google.com/storage/docs/naming#objectnames)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage bucket name (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/naming#requirements)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. (must meet Object Name Requirements](https://cloud.google.com/storage/docs/naming#objectnames)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1771,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage bucket name (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. (must meet Object Name Requirements](https://cloud.google.com/storage/docs/naming#objectnames)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1791,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage bucket name (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/naming#requirements)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1799,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. (must meet Object Name Requirements](https://cloud.google.com/storage/docs/naming#objectnames)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1837,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listurl_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1849,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#list_url_python" style="color: inherit; text-decoration: inherit;">list_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1887,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listurl_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1899,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#list_url_python" style="color: inherit; text-decoration: inherit;">list_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloadformat_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_format_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payloadformat_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Event types for which a notification is desired. If empty, send notifications for all event types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_format_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The desired format of the notification message payloads.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you specify `exclude_prefixes`, Storage Transfer Service uses the items in the `exclude_prefixes` array to determine which objects to exclude from a transfer. Objects must not start with one of the matching `exclude_prefixes` for inclusion in a transfer. The following are requirements of `exclude_prefixes`: * Each exclude-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each exclude-prefix must omit the leading slash. For example, to exclude the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the exclude-prefix as `logs/y=2015/requests.gz`. * None of the exclude-prefix values can be empty, if specified. * Each exclude-prefix must exclude a distinct portion of the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If include_prefixes is specified, then each exclude-prefix must start with the value of a path explicitly included by `include_prefixes`. The max size of `exclude_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you specify `include_prefixes`, Storage Transfer Service uses the items in the `include_prefixes` array to determine which objects to include in a transfer. Objects must start with one of the matching `include_prefixes` for inclusion in the transfer. If exclude_prefixes is specified, objects must not start with any of the `exclude_prefixes` specified for inclusion in the transfer. The following are requirements of `include_prefixes`: * Each include-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each include-prefix must omit the leading slash. For example, to include the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values can be empty, if specified. * Each include-prefix must include a distinct portion of the object namespace. No include-prefix may be a prefix of another include-prefix. The max size of `include_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbefore_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" will be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after `NOW` - `max_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mintimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before `NOW` - `min_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_prefixes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you specify `exclude_prefixes`, Storage Transfer Service uses the items in the `exclude_prefixes` array to determine which objects to exclude from a transfer. Objects must not start with one of the matching `exclude_prefixes` for inclusion in a transfer. The following are requirements of `exclude_prefixes`: * Each exclude-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each exclude-prefix must omit the leading slash. For example, to exclude the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the exclude-prefix as `logs/y=2015/requests.gz`. * None of the exclude-prefix values can be empty, if specified. * Each exclude-prefix must exclude a distinct portion of the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If include_prefixes is specified, then each exclude-prefix must start with the value of a path explicitly included by `include_prefixes`. The max size of `exclude_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_prefixes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you specify `include_prefixes`, Storage Transfer Service uses the items in the `include_prefixes` array to determine which objects to include in a transfer. Objects must start with one of the matching `include_prefixes` for inclusion in the transfer. If exclude_prefixes is specified, objects must not start with any of the `exclude_prefixes` specified for inclusion in the transfer. The following are requirements of `include_prefixes`: * Each include-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each include-prefix must omit the leading slash. For example, to include the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values can be empty, if specified. * Each include-prefix must include a distinct portion of the object namespace. No include-prefix may be a prefix of another include-prefix. The max size of `include_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_before_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" will be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2321,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_since_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after `NOW` - `max_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2337,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">min_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before `NOW` - `min_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2455,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you specify `exclude_prefixes`, Storage Transfer Service uses the items in the `exclude_prefixes` array to determine which objects to exclude from a transfer. Objects must not start with one of the matching `exclude_prefixes` for inclusion in a transfer. The following are requirements of `exclude_prefixes`: * Each exclude-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each exclude-prefix must omit the leading slash. For example, to exclude the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the exclude-prefix as `logs/y=2015/requests.gz`. * None of the exclude-prefix values can be empty, if specified. * Each exclude-prefix must exclude a distinct portion of the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If include_prefixes is specified, then each exclude-prefix must start with the value of a path explicitly included by `include_prefixes`. The max size of `exclude_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2463,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you specify `include_prefixes`, Storage Transfer Service uses the items in the `include_prefixes` array to determine which objects to include in a transfer. Objects must start with one of the matching `include_prefixes` for inclusion in the transfer. If exclude_prefixes is specified, objects must not start with any of the `exclude_prefixes` specified for inclusion in the transfer. The following are requirements of `include_prefixes`: * Each include-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each include-prefix must omit the leading slash. For example, to include the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values can be empty, if specified. * Each include-prefix must include a distinct portion of the object namespace. No include-prefix may be a prefix of another include-prefix. The max size of `include_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2471,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbefore_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" will be transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2487,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxtimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after `NOW` - `max_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mintimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before `NOW` - `min_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_prefixes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you specify `exclude_prefixes`, Storage Transfer Service uses the items in the `exclude_prefixes` array to determine which objects to exclude from a transfer. Objects must not start with one of the matching `exclude_prefixes` for inclusion in a transfer. The following are requirements of `exclude_prefixes`: * Each exclude-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each exclude-prefix must omit the leading slash. For example, to exclude the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the exclude-prefix as `logs/y=2015/requests.gz`. * None of the exclude-prefix values can be empty, if specified. * Each exclude-prefix must exclude a distinct portion of the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If include_prefixes is specified, then each exclude-prefix must start with the value of a path explicitly included by `include_prefixes`. The max size of `exclude_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2515,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_prefixes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you specify `include_prefixes`, Storage Transfer Service uses the items in the `include_prefixes` array to determine which objects to include in a transfer. Objects must start with one of the matching `include_prefixes` for inclusion in the transfer. If exclude_prefixes is specified, objects must not start with any of the `exclude_prefixes` specified for inclusion in the transfer. The following are requirements of `include_prefixes`: * Each include-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each include-prefix must omit the leading slash. For example, to include the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values can be empty, if specified. * Each include-prefix must include a distinct portion of the object namespace. No include-prefix may be a prefix of another include-prefix. The max size of `include_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_before_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" will be transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2531,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_since_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. The `last_modified_since` and `last_modified_before` fields can be used together for chunked data processing. For example, consider a script that processes each day's worth of data at a time. For that you'd set each of the fields as follows: * `last_modified_since` to the start of the day * `last_modified_before` to the end of the day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2539,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" on or after `NOW` - `max_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2547,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">min_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, only objects with a "last modification time" before `NOW` - `min_time_elapsed_since_last_modification` and objects that don't have a "last modification time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the `TransferOperation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeofday_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatinterval_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleenddate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">pulumi.<wbr>Input<Date<wbr>Args></a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will run once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job will run each day at start_time_of_day through `schedule_end_date`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulestartdate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">pulumi.<wbr>Input<Date<wbr>Args></a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job's creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job will start later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it will create a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeofday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2693,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_of_day_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_interval_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_end_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">Date<wbr>Args]</a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will run once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job will run each day at start_time_of_day through `schedule_end_date`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_start_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">Date<wbr>Args]</a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job's creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job will start later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it will create a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeofday_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatinterval_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleenddate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">pulumi.<wbr>Input<Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will run once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job will run each day at start_time_of_day through `schedule_end_date`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2851,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulestartdate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">pulumi.<wbr>Input<Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job's creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job will start later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it will create a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeofday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2871,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_of_day_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2879,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_interval_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2887,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_end_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will run once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job will run each day at start_time_of_day through `schedule_end_date`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2895,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_start_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job's creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job will start later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it will create a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2903,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3013,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3025,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3033,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3049,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3135,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3143,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3151,7 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3159,7 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3171,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3179,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3265,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteobjectsfromsourceaftertransfer_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteobjectsuniqueinsink_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3281,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteobjectsalreadyexistinginsink_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source will be overwritten with the source object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3293,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_objects_from_source_after_transfer_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>from_<wbr>source_<wbr>after_<wbr>transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_objects_unique_in_sink_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>unique_<wbr>in_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_objects_already_existing_in_sink_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>objects_<wbr>already_<wbr>existing_<wbr>in_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source will be overwritten with the source object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3379,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteobjectsfromsourceaftertransfer_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3387,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteobjectsuniqueinsink_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3395,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteobjectsalreadyexistinginsink_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source will be overwritten with the source object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3407,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_objects_from_source_after_transfer_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>from_<wbr>source_<wbr>after_<wbr>transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3415,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_objects_unique_in_sink_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>unique_<wbr>in_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3423,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_objects_already_existing_in_sink_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>objects_<wbr>already_<wbr>existing_<wbr>in_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source will be overwritten with the source object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3557,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awss3datasource_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awss3data">pulumi.<wbr>Input<Aws<wbr>S3Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#awss3data">Aws<wbr>S3Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstoragedatasource_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragedata">pulumi.<wbr>Input<Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#azureblobstoragedata">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3573,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdata">pulumi.<wbr>Input<Gcs<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsdatasource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdata">pulumi.<wbr>Input<Gcs<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpdatasource_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpdata">pulumi.<wbr>Input<Http<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpdata">Http<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectconditions_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectconditions">pulumi.<wbr>Input<Object<wbr>Conditions<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectconditions">Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3605,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferoptions">pulumi.<wbr>Input<Transfer<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferoptions">Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3617,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_s3_data_source_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>s3_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awss3data">Aws<wbr>S3Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#awss3data">Aws<wbr>S3Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_storage_data_source_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragedata">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureblobstoragedata">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_data_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsdata">Gcs<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_data_source_python" style="color: inherit; text-decoration: inherit;">http_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpdata">Http<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpdata">Http<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_conditions_python" style="color: inherit; text-decoration: inherit;">object_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectconditions">Object<wbr>Conditions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectconditions">Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferoptions">Transfer<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferoptions">Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3799,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awss3datasource_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awss3dataresponse">pulumi.<wbr>Input<Aws<wbr>S3Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#awss3dataresponse">Aws<wbr>S3Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3807,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstoragedatasource_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragedataresponse">pulumi.<wbr>Input<Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#azureblobstoragedataresponse">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3815,7 +3840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdataresponse">pulumi.<wbr>Input<Gcs<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3823,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsdatasource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdataresponse">pulumi.<wbr>Input<Gcs<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3831,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpdatasource_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpdataresponse">pulumi.<wbr>Input<Http<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpdataresponse">Http<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3839,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectconditions_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectconditionsresponse">pulumi.<wbr>Input<Object<wbr>Conditions<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectconditionsresponse">Object<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3847,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferoptionsresponse">pulumi.<wbr>Input<Transfer<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#transferoptionsresponse">Transfer<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3859,7 +3884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_s3_data_source_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>s3_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awss3dataresponse">Aws<wbr>S3Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#awss3dataresponse">Aws<wbr>S3Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3867,7 +3892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_storage_data_source_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragedataresponse">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureblobstoragedataresponse">Azure<wbr>Blob<wbr>Storage<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3875,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3883,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_data_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsdataresponse">Gcs<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3891,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_data_source_python" style="color: inherit; text-decoration: inherit;">http_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpdataresponse">Http<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpdataresponse">Http<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3899,7 +3924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_conditions_python" style="color: inherit; text-decoration: inherit;">object_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectconditionsresponse">Object<wbr>Conditions<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectconditionsresponse">Object<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3907,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferoptionsresponse">Transfer<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transferoptionsresponse">Transfer<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.{{% /md %}}</dd></dl>
 {{% /choosable %}}

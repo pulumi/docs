@@ -20,19 +20,46 @@ Creates a device in a device registry.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.DeviceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudiot_v1.DeviceCredentialArgs]]]]</span> = None<span class="p">, </span><span class="nx">devices_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.GatewayConfigArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_error_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.StatusArgs]]</span> = None<span class="p">, </span><span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">registries_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.DeviceStateArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.DeviceConfigArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudiot_v1.DeviceCredentialArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">devices_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.GatewayConfigArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_error_status</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.StatusArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">registries_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.DeviceStateArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistryDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryDevice</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistryDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryDevice</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistryDevice</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistryDeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +94,32 @@ Creates a device in a device registry.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegistryDeviceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -514,7 +551,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#devicesid_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -522,7 +559,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -530,7 +567,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -538,7 +575,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#registriesid_nodejs" style="color: inherit; text-decoration: inherit;">registries<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +583,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +591,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">pulumi.<wbr>Input<Device<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +599,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicecredential">Device<wbr>Credential<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +607,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayconfig">pulumi.<wbr>Input<Gateway<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewayconfig">Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +615,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-defined device identifier. The device ID must be unique within a device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +623,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lastconfigacktime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Ack<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a cloud-to-device config version acknowledgment was received from the device. This field is only for configurations sent through MQTT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +631,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lastconfigsendtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Send<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a cloud-to-device config version was sent to the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +639,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lasterrorstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">pulumi.<wbr>Input<Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub. 'last_error_time' is the timestamp of this field. If no errors have occurred, this field has an empty message and the status code 0 == OK. Otherwise, this field is expected to have a status code other than OK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +647,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lasterrortime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub. This field is the timestamp of 'last_error_status'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +655,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lasteventtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a telemetry event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +663,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#lastheartbeattime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time an MQTT `PINGREQ` was received. This field applies only to devices connecting through MQTT. MQTT clients usually only send `PINGREQ` messages if the connection is idle, and no other messages have been sent. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +671,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#laststatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>State<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a state event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +679,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +687,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +695,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +703,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#numid_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally unique.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +711,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">pulumi.<wbr>Input<Device<wbr>State<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The state most recently received from the device. If no state has been reported, this field is not present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -686,7 +723,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#devices_id_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -694,7 +731,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -702,7 +739,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -710,7 +747,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#registries_id_python" style="color: inherit; text-decoration: inherit;">registries_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +755,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +763,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +771,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">Device<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicecredential">Device<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +779,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayconfig">Gateway<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewayconfig">Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +787,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-defined device identifier. The device ID must be unique within a device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +795,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_config_ack_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>ack_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a cloud-to-device config version acknowledgment was received from the device. This field is only for configurations sent through MQTT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +803,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_config_send_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>send_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a cloud-to-device config version was sent to the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +811,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_error_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub. 'last_error_time' is the timestamp of this field. If no errors have occurred, this field has an empty message and the status code 0 == OK. Otherwise, this field is expected to have a status code other than OK.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +819,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_error_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub. This field is the timestamp of 'last_error_status'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +827,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a telemetry event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +835,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_heartbeat_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time an MQTT `PINGREQ` was received. This field applies only to devices connecting through MQTT. MQTT clients usually only send `PINGREQ` messages if the connection is idle, and no other messages have been sent. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +843,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#last_state_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>state_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The last time a state event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +851,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +859,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +867,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +875,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#num_id_python" style="color: inherit; text-decoration: inherit;">num_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally unique.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +883,7 @@ The RegistryDevice resource accepts the following [input]({{< relref "/docs/intr
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicestate">Device<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The state most recently received from the device. If no state has been reported, this field is not present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device configuration data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this configuration version was updated in Cloud IoT Core. This timestamp is set by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deviceacktime_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ack<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which Cloud IoT Core received the acknowledgment from the device, indicating that the device has received this configuration version. If this field is not present, the device has not yet acknowledged that it received this version. Note that when the config was sent to the device, many config versions may have been available in Cloud IoT Core while the device was disconnected, and on connection, only the latest version is sent to the device. Some versions may never be sent to the device, and therefore are never acknowledged. This timestamp is set by Cloud IoT Core.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The version of this update. The version number is assigned by the server, and is always greater than 0 after device creation. The version must be 0 on the `CreateDevice` request if a `config` is specified; the response of `CreateDevice` will always have a value of 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device configuration data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_update_time_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this configuration version was updated in Cloud IoT Core. This timestamp is set by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_ack_time_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ack_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which Cloud IoT Core received the acknowledgment from the device, indicating that the device has received this configuration version. If this field is not present, the device has not yet acknowledged that it received this version. Note that when the config was sent to the device, many config versions may have been available in Cloud IoT Core while the device was disconnected, and on connection, only the latest version is sent to the device. Some versions may never be sent to the device, and therefore are never acknowledged. This timestamp is set by Cloud IoT Core.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The version of this update. The version number is assigned by the server, and is always greater than 0 after device creation. The version must be 0 on the `CreateDevice` request if a `config` is specified; the response of `CreateDevice` will always have a value of 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device configuration data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this configuration version was updated in Cloud IoT Core. This timestamp is set by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deviceacktime_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ack<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which Cloud IoT Core received the acknowledgment from the device, indicating that the device has received this configuration version. If this field is not present, the device has not yet acknowledged that it received this version. Note that when the config was sent to the device, many config versions may have been available in Cloud IoT Core while the device was disconnected, and on connection, only the latest version is sent to the device. Some versions may never be sent to the device, and therefore are never acknowledged. This timestamp is set by Cloud IoT Core.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1167,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The version of this update. The version number is assigned by the server, and is always greater than 0 after device creation. The version must be 0 on the `CreateDevice` request if a `config` is specified; the response of `CreateDevice` will always have a value of 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device configuration data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_update_time_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this configuration version was updated in Cloud IoT Core. This timestamp is set by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_ack_time_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ack_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which Cloud IoT Core received the acknowledgment from the device, indicating that the device has received this configuration version. If this field is not present, the device has not yet acknowledged that it received this version. Note that when the config was sent to the device, many config versions may have been available in Cloud IoT Core while the device was disconnected, and on connection, only the latest version is sent to the device. Some versions may never be sent to the device, and therefore are never acknowledged. This timestamp is set by Cloud IoT Core.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The version of this update. The version number is assigned by the server, and is always greater than 0 after device creation. The version must be 0 on the `CreateDevice` request if a `config` is specified; the response of `CreateDevice` will always have a value of 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The time at which this credential becomes invalid. This credential will be ignored for new client authentication requests after this timestamp; however, it will not be automatically deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycredential">pulumi.<wbr>Input<Public<wbr>Key<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeycredential">Public<wbr>Key<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs). When adding a new device credential, either via device creation or via modifications, this public key credential may be required to be signed by one of the registry level certificates. More specifically, if the registry contains at least one certificate, any new device credential must be signed by one of the registry certificates. As a result, when the registry contains certificates, only X.509 certificates are accepted as device credentials. However, if the registry does not contain a certificate, self-signed certificates and public keys will be accepted. New device credentials must be different from every registry-level certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The time at which this credential becomes invalid. This credential will be ignored for new client authentication requests after this timestamp; however, it will not be automatically deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycredential">Public<wbr>Key<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeycredential">Public<wbr>Key<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs). When adding a new device credential, either via device creation or via modifications, this public key credential may be required to be signed by one of the registry level certificates. More specifically, if the registry contains at least one certificate, any new device credential must be signed by one of the registry certificates. As a result, when the registry contains certificates, only X.509 certificates are accepted as device credentials. However, if the registry does not contain a certificate, self-signed certificates and public keys will be accepted. New device credentials must be different from every registry-level certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The time at which this credential becomes invalid. This credential will be ignored for new client authentication requests after this timestamp; however, it will not be automatically deleted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycredentialresponse">pulumi.<wbr>Input<Public<wbr>Key<wbr>Credential<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeycredentialresponse">Public<wbr>Key<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs). When adding a new device credential, either via device creation or via modifications, this public key credential may be required to be signed by one of the registry level certificates. More specifically, if the registry contains at least one certificate, any new device credential must be signed by one of the registry certificates. As a result, when the registry contains certificates, only X.509 certificates are accepted as device credentials. However, if the registry does not contain a certificate, self-signed certificates and public keys will be accepted. New device credentials must be different from every registry-level certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The time at which this credential becomes invalid. This credential will be ignored for new client authentication requests after this timestamp; however, it will not be automatically deleted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycredentialresponse">Public<wbr>Key<wbr>Credential<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeycredentialresponse">Public<wbr>Key<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs). When adding a new device credential, either via device creation or via modifications, this public key credential may be required to be signed by one of the registry level certificates. More specifically, if the registry contains at least one certificate, any new device credential must be signed by one of the registry certificates. As a result, when the registry contains certificates, only X.509 certificates are accepted as device credentials. However, if the registry does not contain a certificate, self-signed certificates and public keys will be accepted. New device credentials must be different from every registry-level certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1421,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device state data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this state version was updated in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device state data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this state version was updated in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device state data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this state version was updated in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device state data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The time at which this state version was updated in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The ID of the gateway the device accessed most recently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedgatewaytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_auth_method_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_accessed_gateway_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The ID of the gateway the device accessed most recently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_accessed_gateway_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1763,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The ID of the gateway the device accessed most recently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedgatewaytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_auth_method_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how to authorize and/or authenticate devices to access the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1807,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_accessed_gateway_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The ID of the gateway the device accessed most recently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_accessed_gateway_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1897,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2057,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2207,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

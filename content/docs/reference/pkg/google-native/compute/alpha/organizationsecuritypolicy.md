@@ -20,19 +20,44 @@ Creates a new policy in the specified project using the data included in the req
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adaptive_protection_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.SecurityPolicyAdaptiveProtectionConfigArgs]]</span> = None<span class="p">, </span><span class="nx">associations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.SecurityPolicyAssociationArgs]]]]</span> = None<span class="p">, </span><span class="nx">cloud_armor_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.SecurityPolicyCloudArmorConfigArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rule_tuple_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.SecurityPolicyRuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">adaptive_protection_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SecurityPolicyAdaptiveProtectionConfigArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">associations</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.SecurityPolicyAssociationArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">cloud_armor_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SecurityPolicyCloudArmorConfigArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">rule_tuple_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                               <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.SecurityPolicyRuleArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationSecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +92,32 @@ Creates a new policy in the specified project using the data included in the req
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationSecurityPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -490,7 +525,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +533,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#adaptiveprotectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Protection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +541,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyassociation">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Association<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyassociation">Security<wbr>Policy<wbr>Association<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of associations that belong to this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +549,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#cloudarmorconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Armor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicycloudarmorconfig">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Cloud<wbr>Armor<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicycloudarmorconfig">Security<wbr>Policy<wbr>Cloud<wbr>Armor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +557,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +565,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +573,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +581,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -556,7 +591,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +599,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyfor security policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +607,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this security policy, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels.
 
@@ -582,7 +617,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +625,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +633,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The parent of the security policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +641,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Total count of all security policy rule tuples. A security policy can not exceed a set number of tuples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +649,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrule">Security<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a default rule with action "allow" will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +657,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +665,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +673,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -650,7 +685,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +693,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#adaptive_protection_config_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>protection_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +701,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyassociation">Security<wbr>Policy<wbr>Association<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyassociation">Security<wbr>Policy<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of associations that belong to this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +709,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#cloud_armor_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>armor_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicycloudarmorconfig">Security<wbr>Policy<wbr>Cloud<wbr>Armor<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicycloudarmorconfig">Security<wbr>Policy<wbr>Cloud<wbr>Armor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +717,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +725,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +733,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +741,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -716,7 +751,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +759,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyfor security policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +767,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this security policy, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels.
 
@@ -742,7 +777,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +785,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +793,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The parent of the security policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +801,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Total count of all security policy rule tuples. A security policy can not exceed a set number of tuples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +809,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrule">Security<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrule">Security<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a default rule with action "allow" will be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +817,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +825,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +833,7 @@ To see the latest fingerprint, make get() request to the security policy.{{% /md
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type indicates the intended use of the security policy. CLOUD_ARMOR policies apply to backend services. FIREWALL policies apply to organizations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1119,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1131,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer7ddosdefenseconfig_nodejs" style="color: inherit; text-decoration: inherit;">layer7Ddos<wbr>Defense<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer7_ddos_defense_config_python" style="color: inherit; text-decoration: inherit;">layer7_<wbr>ddos_<wbr>defense_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfig">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulevisibility_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_visibility_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1341,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulevisibility_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1361,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, enables CAAP for L7 DDoS detection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1369,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_visibility_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer7ddosdefenseconfig_nodejs" style="color: inherit; text-decoration: inherit;">layer7Ddos<wbr>Defense<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigresponse">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1419,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layer7_ddos_defense_config_python" style="color: inherit; text-decoration: inherit;">layer7_<wbr>ddos_<wbr>defense_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigresponse">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyadaptiveprotectionconfiglayer7ddosdefenseconfigresponse">Security<wbr>Policy<wbr>Adaptive<wbr>Protection<wbr>Config<wbr>Layer7Ddos<wbr>Defense<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachmentid_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource that the security policy is attached to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The display name of the security policy of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The security policy ID of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachment_id_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource that the security policy is attached to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The display name of the security policy of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_policy_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The security policy ID of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1651,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachmentid_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource that the security policy is attached to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1659,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The display name of the security policy of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitypolicyid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The security policy ID of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1687,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachment_id_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource that the security policy is attached to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The display name of the security policy of the association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for an association.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_policy_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The security policy ID of the association.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableml_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1761,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_ml_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableml_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1811,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_ml_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ml</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, enables Cloud Armor Machine Learning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2081,7 +2116,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2124,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2132,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2140,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
 
@@ -2115,7 +2150,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderaction">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderaction">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional, additional actions that are performed on headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2158,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2166,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcher">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcher">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2139,7 +2174,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2182,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2190,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#ratelimitoptions_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2163,7 +2198,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#redirecttarget_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be specified for redirect actions. Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2206,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2214,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall security policy rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2222,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
 
@@ -2197,7 +2232,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2244,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2252,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2260,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2268,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
 
@@ -2243,7 +2278,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderaction">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderaction">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional, additional actions that are performed on headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2286,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2259,7 +2294,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcher">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcher">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2302,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2310,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2283,7 +2318,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rate_limit_options_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2326,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#redirect_target_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be specified for redirect actions. Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2334,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2342,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall security policy rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2350,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
 
@@ -2325,7 +2360,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2363,7 +2398,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoption">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of request headers to add or overwrite if they?re already present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2375,7 +2410,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoption">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoption">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of request headers to add or overwrite if they?re already present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2429,7 +2464,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2472,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to set the named header to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2449,7 +2484,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2492,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to set the named header to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2511,7 +2546,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2554,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to set the named header to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2531,7 +2566,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2539,7 +2574,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to set the named header to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2577,7 +2612,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoptionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoptionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of request headers to add or overwrite if they?re already present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2589,7 +2624,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoptionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionhttpheaderoptionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Http<wbr>Header<wbr>Option<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of request headers to add or overwrite if they?re already present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2659,7 +2694,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfig">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfig">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2702,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">pulumi.<wbr>Input<Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2675,7 +2710,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2687,7 +2722,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfig">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfig">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2730,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expr">Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expr">Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2738,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2801,7 +2836,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range.
 
@@ -2811,7 +2846,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#destports_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationport">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationport">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -2821,7 +2856,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4config">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4config">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -2831,7 +2866,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2843,7 +2878,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range.
 
@@ -2853,7 +2888,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#dest_ports_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationport">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationport">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -2863,7 +2898,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4config">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4config">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -2873,7 +2908,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2935,7 +2970,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2943,7 +2978,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -2959,7 +2994,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +3002,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3033,7 +3068,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3041,7 +3076,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3057,7 +3092,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3065,7 +3100,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3131,7 +3166,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +3174,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3155,7 +3190,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3163,7 +3198,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3229,7 +3264,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3237,7 +3272,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3253,7 +3288,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3261,7 +3296,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.
 
@@ -3363,7 +3398,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range.
 
@@ -3373,7 +3408,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#destports_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationportresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationportresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -3383,7 +3418,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4configresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4configresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -3393,7 +3428,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3405,7 +3440,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range.
 
@@ -3415,7 +3450,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#dest_ports_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationportresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigdestinationportresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Destination<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -3425,7 +3460,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4configresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfiglayer4configresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Layer4Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 
@@ -3435,7 +3470,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3505,7 +3540,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3513,7 +3548,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">pulumi.<wbr>Input<Expr<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3521,7 +3556,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3533,7 +3568,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherconfigresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherconfigresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3541,7 +3576,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exprresponse">Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3549,7 +3584,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3667,7 +3702,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#bandurationsec_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Duration<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3675,7 +3710,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#banthreshold_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3683,7 +3718,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#conformaction_nodejs" style="color: inherit; text-decoration: inherit;">conform<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3691,7 +3726,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3699,7 +3734,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3742,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ratelimitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3719,7 +3754,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ban_duration_sec_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>duration_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3727,7 +3762,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ban_threshold_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3735,7 +3770,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#conform_action_python" style="color: inherit; text-decoration: inherit;">conform_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3743,7 +3778,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3751,7 +3786,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3759,7 +3794,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3877,7 +3912,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#bandurationsec_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Duration<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3885,7 +3920,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#banthreshold_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3893,7 +3928,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#conformaction_nodejs" style="color: inherit; text-decoration: inherit;">conform<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3901,7 +3936,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3909,7 +3944,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3917,7 +3952,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ratelimitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3929,7 +3964,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ban_duration_sec_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>duration_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3937,7 +3972,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#ban_threshold_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3945,7 +3980,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#conform_action_python" style="color: inherit; text-decoration: inherit;">conform_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3953,7 +3988,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3961,7 +3996,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3969,7 +4004,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4023,7 +4058,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4031,7 +4066,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#intervalsec_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4043,7 +4078,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4051,7 +4086,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#interval_sec_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4105,7 +4140,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4113,7 +4148,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#intervalsec_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4125,7 +4160,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4133,7 +4168,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#interval_sec_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4403,7 +4438,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4411,7 +4446,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4419,7 +4454,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4427,7 +4462,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
 
@@ -4437,7 +4472,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional, additional actions that are performed on headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4445,7 +4480,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4453,7 +4488,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4461,7 +4496,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4469,7 +4504,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4477,7 +4512,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#ratelimitoptions_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">pulumi.<wbr>Input<Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4485,7 +4520,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#redirecttarget_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be specified for redirect actions. Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4493,7 +4528,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4501,7 +4536,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#ruletuplecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Tuple<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall security policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4509,7 +4544,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
 
@@ -4519,7 +4554,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4531,7 +4566,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4539,7 +4574,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4547,7 +4582,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4555,7 +4590,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
 
@@ -4565,7 +4600,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulehttpheaderactionresponse">Security<wbr>Policy<wbr>Rule<wbr>Http<wbr>Header<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional, additional actions that are performed on headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4573,7 +4608,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4581,7 +4616,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyrulematcherresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyrulematcherresponse">Security<wbr>Policy<wbr>Rule<wbr>Matcher<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4589,7 +4624,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4597,7 +4632,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4605,7 +4640,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rate_limit_options_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4613,7 +4648,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#redirect_target_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be specified for redirect actions. Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4621,7 +4656,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4629,7 +4664,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#rule_tuple_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>tuple_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Calculation of the complexity of a single firewall security policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4637,7 +4672,7 @@ This field may only be specified when the versioned_expr is set to FIREWALL.{{% 
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
 
@@ -4647,7 +4682,7 @@ This field may only be specified when versioned_expr is set to FIREWALL.{{% /md 
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of instances that are applied with this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

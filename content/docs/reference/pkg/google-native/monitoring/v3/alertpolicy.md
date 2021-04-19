@@ -20,19 +20,38 @@ Creates a new alerting policy.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_monitoring_v3.ConditionArgs]]]]</span> = None<span class="p">, </span><span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.MutationRecordArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.DocumentationArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">mutation_record</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.MutationRecordArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">validity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.StatusArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">alert_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.ConditionArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MutationRecordArgs]</span> = None<span class="p">,</span>
+                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.DocumentationArgs]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">mutation_record</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MutationRecordArgs]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">validity</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.StatusArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates a new alerting policy.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#alertpoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +431,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +439,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions. If condition_time_series_query_language is present, it must be the only condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +447,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#creationrecord_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutationrecord">pulumi.<wbr>Input<Mutation<wbr>Record<wbr>Args></a></span>
+        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#documentation_nodejs" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentation">pulumi.<wbr>Input<Documentation<wbr>Args></a></span>
+        <span class="property-type"><a href="#documentation">Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. On write, the default interpretation if unset is that the policy is enabled. On read, clients should not make any assumption about the state if it has not been populated. The field should always be populated on List and Get operations, unless a field projection has been specified that strips it out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mutationrecord_nodejs" style="color: inherit; text-decoration: inherit;">mutation<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutationrecord">pulumi.<wbr>Input<Mutation<wbr>Record<wbr>Args></a></span>
+        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the most recent change to the alerting policy. If provided in a call to create or update, this field will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if the policy exists. The resource name for this policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create method, do not include the name field in the alerting policy passed as part of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#notificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of the NotificationChannel objects that are returned from the ListNotificationChannels method. The format of the entries in this field is: projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key/value data to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#validity_nodejs" style="color: inherit; text-decoration: inherit;">validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">pulumi.<wbr>Input<Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only description of how the alert policy is invalid. OK if the alert policy is valid. If not OK, the alert policy will not generate incidents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#alert_policies_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +539,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +547,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#condition">Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions. If condition_time_series_query_language is present, it must be the only condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +555,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#creation_record_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentation">Documentation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#documentation">Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. On write, the default interpretation if unset is that the policy is enabled. On read, clients should not make any assumption about the state if it has not been populated. The field should always be populated on List and Get operations, unless a field projection has been specified that strips it out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mutation_record_python" style="color: inherit; text-decoration: inherit;">mutation_<wbr>record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mutationrecord">Mutation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the most recent change to the alerting policy. If provided in a call to create or update, this field will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if the policy exists. The resource name for this policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by Stackdriver Monitoring when the policy is created. When calling the alertPolicies.create method, do not include the name field in the alerting policy passed as part of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of the NotificationChannel objects that are returned from the ListNotificationChannels method. The format of the entries in this field is: projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key/value data to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#validity_python" style="color: inherit; text-decoration: inherit;">validity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#status">Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#status">Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only description of how the alert policy is invalid. OK if the alert policy is valid. If not OK, the alert policy will not generate incidents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -895,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -939,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionabsent_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricabsence">pulumi.<wbr>Input<Metric<wbr>Absence<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricabsence">Metric<wbr>Absence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series continues to receive new data points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringquerylanguagecondition">pulumi.<wbr>Input<Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Args></a></span>
+        <span class="property-type"><a href="#monitoringquerylanguagecondition">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that uses the Monitoring Query Language to define alerts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricthreshold">pulumi.<wbr>Input<Metric<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricthreshold">Metric<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricabsence">Metric<wbr>Absence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricabsence">Metric<wbr>Absence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series continues to receive new data points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringquerylanguagecondition">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitoringquerylanguagecondition">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that uses the Monitoring Query Language to define alerts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricthreshold">Metric<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricthreshold">Metric<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionabsent_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricabsenceresponse">pulumi.<wbr>Input<Metric<wbr>Absence<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricabsenceresponse">Metric<wbr>Absence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series continues to receive new data points.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringquerylanguageconditionresponse">pulumi.<wbr>Input<Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#monitoringquerylanguageconditionresponse">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that uses the Monitoring Query Language to define alerts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricthresholdresponse">pulumi.<wbr>Input<Metric<wbr>Threshold<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricthresholdresponse">Metric<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1251,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1259,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricabsenceresponse">Metric<wbr>Absence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricabsenceresponse">Metric<wbr>Absence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series continues to receive new data points.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringquerylanguageconditionresponse">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitoringquerylanguageconditionresponse">Monitoring<wbr>Query<wbr>Language<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that uses the Monitoring Query Language to define alerts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricthresholdresponse">Metric<wbr>Threshold<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricthresholdresponse">Metric<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1377,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1439,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1447,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1459,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1467,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must fail to report new data to be considered failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be returned. The Duration.nanos field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">pulumi.<wbr>Input<Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1589,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1597,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must fail to report new data to be considered failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be returned. The Duration.nanos field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must fail to report new data to be considered failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be returned. The Duration.nanos field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">pulumi.<wbr>Input<Trigger<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must fail to report new data to be considered failing. The minimum value of this field is 120 seconds. Larger values that are a multiple of a minute--for example, 240 or 300 seconds--are supported. If an invalid value is given, an error will be returned. The Duration.nanos field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1909,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominatoraggregations_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominatorfilter_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">pulumi.<wbr>Input<Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1977,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregation">Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_filter_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time series.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2183,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominatoraggregations_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Aggregation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2207,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominatorfilter_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2223,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">pulumi.<wbr>Input<Trigger<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2251,7 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resrouces). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2259,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side.Only COMPARISON_LT and COMPARISON_GT are supported currently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2267,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aggregationresponse">Aggregation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2275,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denominator_filter_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2283,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2291,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time series.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">pulumi.<wbr>Input<Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2405,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trigger">Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trigger">Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2491,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2499,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2507,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">pulumi.<wbr>Input<Trigger<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerresponse">Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2589,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutatetime_nodejs" style="color: inherit; text-decoration: inherit;">mutate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the change occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutatedby_nodejs" style="color: inherit; text-decoration: inherit;">mutated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user making the change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2609,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutate_time_python" style="color: inherit; text-decoration: inherit;">mutate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the change occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutated_by_python" style="color: inherit; text-decoration: inherit;">mutated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the user making the change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2671,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutatetime_nodejs" style="color: inherit; text-decoration: inherit;">mutate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the change occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2679,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutatedby_nodejs" style="color: inherit; text-decoration: inherit;">mutated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user making the change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2691,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutate_time_python" style="color: inherit; text-decoration: inherit;">mutate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the change occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2699,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mutated_by_python" style="color: inherit; text-decoration: inherit;">mutated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the user making the change.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2769,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2797,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2805,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2883,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2899,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2927,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2981,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2989,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3001,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3063,7 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3091,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that must fail the predicate for the condition to be triggered.{{% /md %}}</dd></dl>
 {{% /choosable %}}

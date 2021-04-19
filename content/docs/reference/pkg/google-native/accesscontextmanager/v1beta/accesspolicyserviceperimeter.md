@@ -20,19 +20,32 @@ Create a Service Perimeter. The longrunning operation from this RPC will have a 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_perimeters_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_accesscontextmanager_v1beta.ServicePerimeterConfigArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">service_perimeters_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1beta.ServicePerimeterConfigArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyServicePerimeter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyServicePerimeter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Create a Service Perimeter. The longrunning operation from this RPC will have a 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#accesspoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#serviceperimetersid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Perimeters<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +329,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the `ServicePerimeter` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">pulumi.<wbr>Input<Service<wbr>Perimeter<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#access_policies_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#service_perimeters_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +389,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the `ServicePerimeter` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -549,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservices">pulumi.<wbr>Input<Vpc<wbr>Accessible<wbr>Services<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Beta. Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -585,7 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Beta. Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -711,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -719,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservicesresponse">pulumi.<wbr>Input<Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Beta. Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -731,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -739,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -747,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. Must contain a list of services. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Beta. Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -829,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

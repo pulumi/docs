@@ -20,19 +20,33 @@ Creates a new Environment.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.ContainerImageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_notebooks_v1.VmImageArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.ContainerImageArgs]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[_notebooks_v1.VmImageArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a new Environment.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EnvironmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environmentsid_nodejs" style="color: inherit; text-decoration: inherit;">environments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">pulumi.<wbr>Input<Container<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmimage">pulumi.<wbr>Input<Vm<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#vmimage">Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environments_id_python" style="color: inherit; text-decoration: inherit;">environments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmimage">Vm<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmimage">Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,7 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -723,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagefamily_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagefamily_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -943,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -951,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`{{% /md %}}</dd></dl>
 {{% /choosable %}}

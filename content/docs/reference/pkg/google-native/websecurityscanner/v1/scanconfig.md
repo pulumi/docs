@@ -20,19 +20,39 @@ Creates a new ScanConfig.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_websecurityscanner_v1.AuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">blacklist_patterns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">managed_scan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">max_qps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scan_configs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_websecurityscanner_v1.ScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">starting_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">static_ip_scan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.AuthenticationArgs]</span> = None<span class="p">,</span>
+               <span class="nx">blacklist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">export_to_security_command_center</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">managed_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">max_qps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">scan_configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[_websecurityscanner_v1.ScheduleArgs]</span> = None<span class="p">,</span>
+               <span class="nx">starting_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+               <span class="nx">static_ip_scan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">user_agent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScanConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScanConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScanConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScanConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScanConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScanConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a new ScanConfig.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ScanConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scanconfigsid_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Configs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +448,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authentication">pulumi.<wbr>Input<Authentication<wbr>Args></a></span>
+        <span class="property-type"><a href="#authentication">Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#blacklistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">blacklist<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs/how-to-use-web-security-scanner#excluding_urls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user provided display name of the ScanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#exporttosecuritycommandcenter_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>To<wbr>Security<wbr>Command<wbr>Center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managedscan_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the scan config is managed by Web Security Scanner, output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#maxqps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Qps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20] range will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risklevel_nodejs" style="color: inherit; text-decoration: inherit;">risk<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">pulumi.<wbr>Input<Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#startingurls_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The starting URLs from which the scanner finds site pages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#staticipscan_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ip<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the scan configuration has enabled static IP address scan feature. If enabled, the scanner will access applications from static IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scan_configs_id_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>configs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +564,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authentication">Authentication<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authentication">Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#blacklist_patterns_python" style="color: inherit; text-decoration: inherit;">blacklist_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs/how-to-use-web-security-scanner#excluding_urls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user provided display name of the ScanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#export_to_security_command_center_python" style="color: inherit; text-decoration: inherit;">export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Security Command Center.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#managed_scan_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the scan config is managed by Web Security Scanner, output only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#max_qps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>qps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20] range will be rejected with INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#risk_level_python" style="color: inherit; text-decoration: inherit;">risk_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The risk level selected for the scan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#starting_urls_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The starting URLs from which the scanner finds site pages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#static_ip_scan_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ip_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the scan configuration has enabled static IP address scan feature. If enabled, the scanner will access applications from static IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The ScanConfig resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user agent used during scanning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customaccount_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customaccount">pulumi.<wbr>Input<Custom<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#customaccount">Custom<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a custom account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googleaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleaccount">pulumi.<wbr>Input<Google<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleaccount">Google<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a Google account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iapcredential_nodejs" style="color: inherit; text-decoration: inherit;">iap<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapcredential">pulumi.<wbr>Input<Iap<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#iapcredential">Iap<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -785,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_account_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customaccount">Custom<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customaccount">Custom<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a custom account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleaccount">Google<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleaccount">Google<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a Google account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iap_credential_python" style="color: inherit; text-decoration: inherit;">iap_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapcredential">Iap<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapcredential">Iap<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customaccount_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customaccountresponse">pulumi.<wbr>Input<Custom<wbr>Account<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#customaccountresponse">Custom<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a custom account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -879,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googleaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleaccountresponse">pulumi.<wbr>Input<Google<wbr>Account<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleaccountresponse">Google<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a Google account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iapcredential_nodejs" style="color: inherit; text-decoration: inherit;">iap<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapcredentialresponse">pulumi.<wbr>Input<Iap<wbr>Credential<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#iapcredentialresponse">Iap<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -899,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_account_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customaccountresponse">Custom<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customaccountresponse">Custom<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a custom account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleaccountresponse">Google<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleaccountresponse">Google<wbr>Account<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using a Google account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iap_credential_python" style="color: inherit; text-decoration: inherit;">iap_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapcredentialresponse">Iap<wbr>Credential<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapcredentialresponse">Iap<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication using Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginurl_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The login form URL of the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the custom account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1013,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_url_python" style="color: inherit; text-decoration: inherit;">login_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The login form URL of the website.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the custom account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loginurl_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The login form URL of the website.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the custom account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_url_python" style="color: inherit; text-decoration: inherit;">login_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The login form URL of the website.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the custom account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the Google account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1217,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the Google account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the Google account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user name of the Google account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iaptestserviceaccountinfo_nodejs" style="color: inherit; text-decoration: inherit;">iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iaptestserviceaccountinfo">pulumi.<wbr>Input<Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#iaptestserviceaccountinfo">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iap_test_service_account_info_python" style="color: inherit; text-decoration: inherit;">iap_<wbr>test_<wbr>service_<wbr>account_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iaptestserviceaccountinfo">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iaptestserviceaccountinfo">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iaptestserviceaccountinfo_nodejs" style="color: inherit; text-decoration: inherit;">iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iaptestserviceaccountinforesponse">pulumi.<wbr>Input<Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#iaptestserviceaccountinforesponse">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iap_test_service_account_info_python" style="color: inherit; text-decoration: inherit;">iap_<wbr>test_<wbr>service_<wbr>account_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iaptestserviceaccountinforesponse">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iaptestserviceaccountinforesponse">Iap<wbr>Test<wbr>Service<wbr>Account<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetaudienceclientid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Audience<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_audience_client_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>audience_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetaudienceclientid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Audience<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_audience_client_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>audience_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervaldurationdays_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Duration<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The duration of time between executions in days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1581,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_duration_days_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>duration_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The duration of time between executions in days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1643,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#intervaldurationdays_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Duration<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The duration of time between executions in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduletime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_duration_days_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>duration_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The duration of time between executions in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1671,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.{{% /md %}}</dd></dl>
 {{% /choosable %}}

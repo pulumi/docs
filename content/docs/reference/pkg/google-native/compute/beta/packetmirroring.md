@@ -20,19 +20,40 @@ Creates a PacketMirroring resource in the specified project and region using the
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.PacketMirroringForwardingRuleInfoArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.PacketMirroringFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.PacketMirroringMirroredResourceInfoArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.PacketMirroringNetworkInfoArgs]]</span> = None<span class="p">, </span><span class="nx">packet_mirroring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.PacketMirroringForwardingRuleInfoArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.PacketMirroringFilterArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.PacketMirroringMirroredResourceInfoArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.PacketMirroringNetworkInfoArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">packet_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPacketMirroring</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketMirroring</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPacketMirroring</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketMirroring</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +88,32 @@ Creates a PacketMirroring resource in the specified project and region using the
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PacketMirroringArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -426,7 +457,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#packetmirroring_nodejs" style="color: inherit; text-decoration: inherit;">packet<wbr>Mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -434,7 +465,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -442,7 +473,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URI of the region where the packetMirroring resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +481,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#collectorilb_nodejs" style="color: inherit; text-decoration: inherit;">collector<wbr>Ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringforwardingruleinfo">pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Forwarding<wbr>Rule<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#packetmirroringforwardingruleinfo">Packet<wbr>Mirroring<wbr>Forwarding<wbr>Rule<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +489,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +497,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +505,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -484,7 +515,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for mirrored traffic. If unspecified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +523,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +531,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -508,7 +539,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#mirroredresources_nodejs" style="color: inherit; text-decoration: inherit;">mirrored<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfo">pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +547,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +555,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetworkinfo">pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Network<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#packetmirroringnetworkinfo">Packet<wbr>Mirroring<wbr>Network<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +563,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins.
 
@@ -542,7 +573,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -554,7 +585,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#packet_mirroring_python" style="color: inherit; text-decoration: inherit;">packet_<wbr>mirroring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -562,7 +593,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -570,7 +601,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URI of the region where the packetMirroring resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +609,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringforwardingruleinfo">Packet<wbr>Mirroring<wbr>Forwarding<wbr>Rule<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringforwardingruleinfo">Packet<wbr>Mirroring<wbr>Forwarding<wbr>Rule<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +617,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +625,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +633,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network.
 
@@ -612,7 +643,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter for mirrored traffic. If unspecified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +651,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +659,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +667,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +675,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +683,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetworkinfo">Packet<wbr>Mirroring<wbr>Network<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetmirroringnetworkinfo">Packet<wbr>Mirroring<wbr>Network<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +691,7 @@ The default is TRUE.{{% /md %}}</dd><dt class="property-optional"
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins.
 
@@ -670,7 +701,7 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">IPProtocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">IPProtocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -927,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -935,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -947,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the forwarding rule; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the forwarding rule; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the forwarding rule; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the forwarding rule; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1240,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring.
 
@@ -1221,7 +1252,7 @@ You may specify a maximum of 50 Instances.{{% /md %}}</dd><dt class="property-op
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring.
 
@@ -1231,7 +1262,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1274,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring.
 
@@ -1255,7 +1286,7 @@ You may specify a maximum of 50 Instances.{{% /md %}}</dd><dt class="property-op
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinfo">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring.
 
@@ -1265,7 +1296,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1319,7 +1350,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the instance; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1358,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the virtual machine instance which is being mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1370,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the instance; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1378,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the virtual machine instance which is being mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1401,7 +1432,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the instance; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1409,7 +1440,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the virtual machine instance which is being mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1421,7 +1452,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the instance; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1429,7 +1460,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-o
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the virtual machine instance which is being mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1542,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring.
 
@@ -1523,7 +1554,7 @@ You may specify a maximum of 50 Instances.{{% /md %}}</dd><dt class="property-re
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring.
 
@@ -1533,7 +1564,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1545,7 +1576,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfoinstanceinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Instance<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring.
 
@@ -1557,7 +1588,7 @@ You may specify a maximum of 50 Instances.{{% /md %}}</dd><dt class="property-re
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourceinfosubnetinforesponse">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resource<wbr>Info<wbr>Subnet<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring.
 
@@ -1567,7 +1598,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1652,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the subnetwork; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1660,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1641,7 +1672,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the subnetwork; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1680,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1703,7 +1734,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the subnetwork; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1742,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1723,7 +1754,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the subnetwork; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1731,7 +1762,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1816,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the network; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1824,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the network resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1805,7 +1836,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the network; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1844,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the network resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1898,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonicalurl_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the network; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1906,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the network resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1887,7 +1918,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#canonical_url_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the network; defined by the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1895,7 +1926,7 @@ You may specify a maximum of 5 subnetworks.{{% /md %}}</dd><dt class="property-r
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the network resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

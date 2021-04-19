@@ -20,19 +20,42 @@ Creates a ServiceAttachment in the specified project in the given scope using th
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_preference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">consumer_forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.ServiceAttachmentConsumerForwardingRuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">nat_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">producer_forwarding_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_attachment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">connected_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ServiceAttachmentConnectedEndpointArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">connection_preference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">consumer_forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ServiceAttachmentConsumerForwardingRuleArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">nat_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">producer_forwarding_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">psc_service_attachment_id</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.Uint128Args]</span> = None<span class="p">,</span>
+                      <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_attachment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">target_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates a ServiceAttachment in the specified project in the given scope using th
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceAttachmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -190,6 +223,14 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectedendpoints_csharp">
+<a href="#connectedendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connected<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="connectionpreference_csharp">
 <a href="#connectionpreference_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Preference</a>
 </span>
@@ -270,13 +311,29 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pscserviceattachmentid_csharp">
+<a href="#pscserviceattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Service<wbr>Attachment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uint128">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Uint128Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An 128-bit global unique ID of the PSC service attachment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetservice_csharp">
+<a href="#targetservice_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of a service serving the endpoint identified by this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -305,6 +362,14 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectedendpoints_go">
+<a href="#connectedendpoints_go" style="color: inherit; text-decoration: inherit;">Connected<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">[]Service<wbr>Attachment<wbr>Connected<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionpreference_go">
 <a href="#connectionpreference_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Preference</a>
@@ -386,13 +451,29 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pscserviceattachmentid_go">
+<a href="#pscserviceattachmentid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Service<wbr>Attachment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uint128">Uint128</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An 128-bit global unique ID of the PSC service attachment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetservice_go">
+<a href="#targetservice_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of a service serving the endpoint identified by this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -402,7 +483,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +491,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,15 +499,23 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#serviceattachment_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connectedendpoints_nodejs">
+<a href="#connectedendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connected<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionpreference_nodejs">
 <a href="#connectionpreference_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +523,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#consumerforwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Forwarding<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrule">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +531,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +539,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +547,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP connections that traverse proxies on their way to destination servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +555,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +563,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#serviceAttachment for service attachments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +571,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +579,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#natsubnets_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of URLs where each entry is the URL of a subnet provided by the service producer to use for NAT in this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,17 +587,33 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#producerforwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">producer<wbr>Forwarding<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscserviceattachmentid_nodejs">
+<a href="#pscserviceattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Service<wbr>Attachment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uint128">Uint128Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An 128-bit global unique ID of the PSC service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetservice_nodejs">
+<a href="#targetservice_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL of a service serving the endpoint identified by this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -518,7 +623,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +631,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,15 +639,23 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#service_attachment_python" style="color: inherit; text-decoration: inherit;">service_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="connected_endpoints_python">
+<a href="#connected_endpoints_python" style="color: inherit; text-decoration: inherit;">connected_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceattachmentconnectedendpoint">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An array of connections for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_preference_python">
 <a href="#connection_preference_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +663,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#consumer_forwarding_rules_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>forwarding_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrule">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceattachmentconsumerforwardingrule">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] An array of forwarding rules for all the consumers connected to this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +671,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +679,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +687,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP connections that traverse proxies on their way to destination servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +695,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +703,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#serviceAttachment for service attachments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +711,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +719,7 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#nat_subnets_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of URLs where each entry is the URL of a subnet provided by the service producer to use for NAT in this service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,17 +727,33 @@ The ServiceAttachment resource accepts the following [input]({{< relref "/docs/i
 <a href="#producer_forwarding_rule_python" style="color: inherit; text-decoration: inherit;">producer_<wbr>forwarding_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psc_service_attachment_id_python">
+<a href="#psc_service_attachment_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>service_<wbr>attachment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uint128">Uint128Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] An 128-bit global unique ID of the PSC service attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_service_python">
+<a href="#target_service_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL of a service serving the endpoint identified by this service attachment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,6 +821,298 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="serviceattachmentconnectedendpoint">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardingrule_csharp">
+<a href="#forwardingrule_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscconnectionid_csharp">
+<a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardingrule_go">
+<a href="#forwardingrule_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscconnectionid_go">
+<a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwardingrule_nodejs">
+<a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscconnectionid_nodejs">
+<a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forwarding_rule_python">
+<a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psc_connection_id_python">
+<a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="serviceattachmentconnectedendpointresponse">Service<wbr>Attachment<wbr>Connected<wbr>Endpoint<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoint_csharp">
+<a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardingrule_csharp">
+<a href="#forwardingrule_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pscconnectionid_csharp">
+<a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoint_go">
+<a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardingrule_go">
+<a href="#forwardingrule_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pscconnectionid_go">
+<a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoint_nodejs">
+<a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwardingrule_nodejs">
+<a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pscconnectionid_nodejs">
+<a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endpoint_python">
+<a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url of a connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forwarding_rule_python">
+<a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url of a consumer forwarding rule. [Deprecated] Do not use.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="psc_connection_id_python">
+<a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the connected endpoint.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status of a connected endpoint to this service attachment.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="serviceattachmentconsumerforwardingrule">Service<wbr>Attachment<wbr>Consumer<wbr>Forwarding<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
@@ -704,6 +1125,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscconnectionid_csharp">
+<a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -725,6 +1154,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pscconnectionid_go">
+<a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -741,15 +1178,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pscconnectionid_nodejs">
+<a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,15 +1206,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psc_connection_id_python">
+<a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -787,6 +1240,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="pscconnectionid_csharp">
+<a href="#pscconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -807,6 +1268,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="pscconnectionid_go">
+<a href="#pscconnectionid_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -823,15 +1292,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwardingrule_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pscconnectionid_nodejs">
+<a href="#pscconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,17 +1320,189 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forwarding_rule_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of a consumer forwarding rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="psc_connection_id_python">
+<a href="#psc_connection_id_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The PSC connection id of the PSC Forwarding Rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the forwarding rule.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="uint128">Uint128</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="high_csharp">
+<a href="#high_csharp" style="color: inherit; text-decoration: inherit;">High</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="low_csharp">
+<a href="#low_csharp" style="color: inherit; text-decoration: inherit;">Low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="high_go">
+<a href="#high_go" style="color: inherit; text-decoration: inherit;">High</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="low_go">
+<a href="#low_go" style="color: inherit; text-decoration: inherit;">Low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="high_nodejs">
+<a href="#high_nodejs" style="color: inherit; text-decoration: inherit;">high</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="low_nodejs">
+<a href="#low_nodejs" style="color: inherit; text-decoration: inherit;">low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="high_python">
+<a href="#high_python" style="color: inherit; text-decoration: inherit;">high</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="low_python">
+<a href="#low_python" style="color: inherit; text-decoration: inherit;">low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="uint128response">Uint128Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="high_csharp">
+<a href="#high_csharp" style="color: inherit; text-decoration: inherit;">High</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="low_csharp">
+<a href="#low_csharp" style="color: inherit; text-decoration: inherit;">Low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="high_go">
+<a href="#high_go" style="color: inherit; text-decoration: inherit;">High</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="low_go">
+<a href="#low_go" style="color: inherit; text-decoration: inherit;">Low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="high_nodejs">
+<a href="#high_nodejs" style="color: inherit; text-decoration: inherit;">high</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="low_nodejs">
+<a href="#low_nodejs" style="color: inherit; text-decoration: inherit;">low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="high_python">
+<a href="#high_python" style="color: inherit; text-decoration: inherit;">high</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="low_python">
+<a href="#low_python" style="color: inherit; text-decoration: inherit;">low</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

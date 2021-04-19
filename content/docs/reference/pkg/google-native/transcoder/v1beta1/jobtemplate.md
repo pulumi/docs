@@ -20,19 +20,30 @@ Creates a job template in the specified region.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_transcoder_v1beta1.JobConfigArgs]]</span> = None<span class="p">, </span><span class="nx">job_templates_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_transcoder_v1beta1.JobConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">job_templates_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +78,32 @@ Creates a job template in the specified region.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +279,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jobtemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Templates<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -266,7 +287,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -274,7 +295,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +303,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobconfig">pulumi.<wbr>Input<Job<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobconfig">Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for this template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +311,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the job template. Format: `projects/{project}/locations/{location}/jobTemplates/{job_template}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +323,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#job_templates_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>templates_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -310,7 +331,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -318,7 +339,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -326,7 +347,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobconfig">Job<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobconfig">Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for this template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +355,7 @@ The JobTemplate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the job template. Format: `projects/{project}/locations/{location}/jobTemplates/{job_template}`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -437,7 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -449,7 +470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -487,7 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -499,7 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -549,7 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -669,7 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationend_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationend">pulumi.<wbr>Input<Animation<wbr>End<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationend">Animation<wbr>End<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}End previous animation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationfade_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>Fade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationfade">pulumi.<wbr>Input<Animation<wbr>Fade<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationfade">Animation<wbr>Fade<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display overlay object with fade animation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationstatic_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>Static</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationstatic">pulumi.<wbr>Input<Animation<wbr>Static<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationstatic">Animation<wbr>Static<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display static overlay object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_end_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationend">Animation<wbr>End<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationend">Animation<wbr>End<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}End previous animation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_fade_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>fade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationfade">Animation<wbr>Fade<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationfade">Animation<wbr>Fade<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display overlay object with fade animation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_static_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>static</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationstatic">Animation<wbr>Static<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationstatic">Animation<wbr>Static<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display static overlay object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -751,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to end overlay object, in seconds. Default: 0{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to end overlay object, in seconds. Default: 0{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to end overlay object, in seconds. Default: 0{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to end overlay object, in seconds. Default: 0{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -899,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadetype_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to start the fade animation, in seconds. Default: 0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -923,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_nodejs" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_type_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to start the fade animation, in seconds. Default: 0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_python" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1045,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1053,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadetype_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1061,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to start the fade animation, in seconds. Default: 0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1069,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_nodejs" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1081,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1089,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_type_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1097,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to start the fade animation, in seconds. Default: 0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1105,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_python" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationend_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationendresponse">pulumi.<wbr>Input<Animation<wbr>End<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationendresponse">Animation<wbr>End<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}End previous animation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationfade_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>Fade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationfaderesponse">pulumi.<wbr>Input<Animation<wbr>Fade<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationfaderesponse">Animation<wbr>Fade<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display overlay object with fade animation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1191,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animationstatic_nodejs" style="color: inherit; text-decoration: inherit;">animation<wbr>Static</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationstaticresponse">pulumi.<wbr>Input<Animation<wbr>Static<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#animationstaticresponse">Animation<wbr>Static<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display static overlay object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_end_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationendresponse">Animation<wbr>End<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationendresponse">Animation<wbr>End<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}End previous animation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_fade_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>fade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationfaderesponse">Animation<wbr>Fade<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationfaderesponse">Animation<wbr>Fade<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display overlay object with fade animation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animation_static_python" style="color: inherit; text-decoration: inherit;">animation_<wbr>static</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationstaticresponse">Animation<wbr>Static<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#animationstaticresponse">Animation<wbr>Static<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Display static overlay object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to start displaying the overlay object, in seconds. Default: 0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_nodejs" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1293,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to start displaying the overlay object, in seconds. Default: 0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_python" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time to start displaying the overlay object, in seconds. Default: 0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_nodejs" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time to start displaying the overlay object, in seconds. Default: 0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xy_python" style="color: inherit; text-decoration: inherit;">xy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1453,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#highboost_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable boosting high frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowboost_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable boosting low frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lufs_nodejs" style="color: inherit; text-decoration: inherit;">lufs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1481,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#high_boost_python" style="color: inherit; text-decoration: inherit;">high_<wbr>boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable boosting high frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#low_boost_python" style="color: inherit; text-decoration: inherit;">low_<wbr>boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable boosting low frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lufs_python" style="color: inherit; text-decoration: inherit;">lufs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1551,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannel">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Channel<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audiochannel">Audio<wbr>Channel<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Channel`s for this audio stream. for in-depth explanation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannel">Audio<wbr>Channel<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audiochannel">Audio<wbr>Channel<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Channel`s for this audio stream. for in-depth explanation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Channel<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audiochannelresponse">Audio<wbr>Channel<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Channel`s for this audio stream. for in-depth explanation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1641,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelresponse">Audio<wbr>Channel<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audiochannelresponse">Audio<wbr>Channel<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Channel`s for this audio stream. for in-depth explanation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1661,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelinput">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Channel<wbr>Input<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audiochannelinput">Audio<wbr>Channel<wbr>Input<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` for this audio channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelinput">Audio<wbr>Channel<wbr>Input<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audiochannelinput">Audio<wbr>Channel<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` for this audio channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_nodejs" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the channel in the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gaindb_nodejs" style="color: inherit; text-decoration: inherit;">gain<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_nodejs" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1833,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the channel in the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gain_db_python" style="color: inherit; text-decoration: inherit;">gain_<wbr>db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_python" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_nodejs" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the channel in the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gaindb_nodejs" style="color: inherit; text-decoration: inherit;">gain<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1959,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_nodejs" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the channel in the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gain_db_python" style="color: inherit; text-decoration: inherit;">gain_<wbr>db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1995,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2003,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_python" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelinputresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Channel<wbr>Input<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audiochannelinputresponse">Audio<wbr>Channel<wbr>Input<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` for this audio channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2053,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiochannelinputresponse">Audio<wbr>Channel<wbr>Input<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audiochannelinputresponse">Audio<wbr>Channel<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` for this audio channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#highboost_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable boosting high frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowboost_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable boosting low frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lufs_nodejs" style="color: inherit; text-decoration: inherit;">lufs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2151,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#high_boost_python" style="color: inherit; text-decoration: inherit;">high_<wbr>boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable boosting high frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#low_boost_python" style="color: inherit; text-decoration: inherit;">low_<wbr>boost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable boosting low frequency components. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lufs_python" style="color: inherit; text-decoration: inherit;">lufs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitratebps_nodejs" style="color: inherit; text-decoration: inherit;">bitrate<wbr>Bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcount_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of audio channels. Must be between 1 and 6. The default is 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channellayout_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - 'fl' - Front left channel - 'fr' - Front right channel - 'sl' - Side left channel - 'sr' - Side right channel - 'fc' - Front center channel - 'lfe' - Low frequency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec for this audio stream. The default is `"aac"`. Supported audio codecs: - 'aac' - 'aac-he' - 'aac-he-v2' - 'mp3' - 'ac3' - 'eac3'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioatom">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Atom<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audioatom">Audio<wbr>Atom<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleratehertz_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate<wbr>Hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The audio sample rate in Hertz. The default is 48000 Hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2337,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_bps_python" style="color: inherit; text-decoration: inherit;">bitrate_<wbr>bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2345,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_count_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of audio channels. Must be between 1 and 6. The default is 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_layout_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - 'fl' - Front left channel - 'fr' - Front right channel - 'sl' - Side left channel - 'sr' - Side right channel - 'fc' - Front center channel - 'lfe' - Low frequency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec for this audio stream. The default is `"aac"`. Supported audio codecs: - 'aac' - 'aac-he' - 'aac-he-v2' - 'mp3' - 'ac3' - 'eac3'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioatom">Audio<wbr>Atom<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audioatom">Audio<wbr>Atom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2377,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_rate_hertz_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate_<wbr>hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The audio sample rate in Hertz. The default is 48000 Hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2495,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitratebps_nodejs" style="color: inherit; text-decoration: inherit;">bitrate<wbr>Bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channelcount_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of audio channels. Must be between 1 and 6. The default is 2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channellayout_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - 'fl' - Front left channel - 'fr' - Front right channel - 'sl' - Side left channel - 'sr' - Side right channel - 'fc' - Front center channel - 'lfe' - Low frequency{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec for this audio stream. The default is `"aac"`. Supported audio codecs: - 'aac' - 'aac-he' - 'aac-he-v2' - 'mp3' - 'ac3' - 'eac3'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioatomresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Atom<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#audioatomresponse">Audio<wbr>Atom<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleratehertz_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate<wbr>Hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The audio sample rate in Hertz. The default is 48000 Hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_bps_python" style="color: inherit; text-decoration: inherit;">bitrate_<wbr>bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_count_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of audio channels. Must be between 1 and 6. The default is 2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2563,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channel_layout_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>layout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - 'fl' - Front left channel - 'fr' - Front right channel - 'sl' - Side left channel - 'sr' - Side right channel - 'fc' - Front center channel - 'lfe' - Low frequency{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2571,7 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec for this audio stream. The default is `"aac"`. Supported audio codecs: - 'aac' - 'aac-he' - 'aac-he-v2' - 'mp3' - 'ac3' - 'eac3'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2579,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioatomresponse">Audio<wbr>Atom<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#audioatomresponse">Audio<wbr>Atom<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2587,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_rate_hertz_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate_<wbr>hertz</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The audio sample rate in Hertz. The default is 48000 Hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2657,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brightness_nodejs" style="color: inherit; text-decoration: inherit;">brightness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contrast_nodejs" style="color: inherit; text-decoration: inherit;">contrast</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saturation_nodejs" style="color: inherit; text-decoration: inherit;">saturation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brightness_python" style="color: inherit; text-decoration: inherit;">brightness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contrast_python" style="color: inherit; text-decoration: inherit;">contrast</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saturation_python" style="color: inherit; text-decoration: inherit;">saturation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brightness_nodejs" style="color: inherit; text-decoration: inherit;">brightness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contrast_nodejs" style="color: inherit; text-decoration: inherit;">contrast</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saturation_nodejs" style="color: inherit; text-decoration: inherit;">saturation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2799,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brightness_python" style="color: inherit; text-decoration: inherit;">brightness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2807,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contrast_python" style="color: inherit; text-decoration: inherit;">contrast</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2815,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saturation_python" style="color: inherit; text-decoration: inherit;">saturation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2901,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottompixels_nodejs" style="color: inherit; text-decoration: inherit;">bottom<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the bottom. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leftpixels_nodejs" style="color: inherit; text-decoration: inherit;">left<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the left. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rightpixels_nodejs" style="color: inherit; text-decoration: inherit;">right<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the right. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toppixels_nodejs" style="color: inherit; text-decoration: inherit;">top<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2937,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottom_pixels_python" style="color: inherit; text-decoration: inherit;">bottom_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the bottom. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2945,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_pixels_python" style="color: inherit; text-decoration: inherit;">left_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the left. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#right_pixels_python" style="color: inherit; text-decoration: inherit;">right_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the right. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_pixels_python" style="color: inherit; text-decoration: inherit;">top_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3047,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottompixels_nodejs" style="color: inherit; text-decoration: inherit;">bottom<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the bottom. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3055,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leftpixels_nodejs" style="color: inherit; text-decoration: inherit;">left<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the left. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rightpixels_nodejs" style="color: inherit; text-decoration: inherit;">right<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the right. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toppixels_nodejs" style="color: inherit; text-decoration: inherit;">top<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottom_pixels_python" style="color: inherit; text-decoration: inherit;">bottom_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the bottom. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3091,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_pixels_python" style="color: inherit; text-decoration: inherit;">left_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the left. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3099,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#right_pixels_python" style="color: inherit; text-decoration: inherit;">right_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the right. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3107,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_pixels_python" style="color: inherit; text-decoration: inherit;">top_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to crop from the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3161,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable deblocker. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3169,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_nodejs" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3181,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable deblocker. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3189,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_python" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3243,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable deblocker. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3251,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_nodejs" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3263,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable deblocker. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3271,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_python" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3325,7 +3346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_nodejs" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the denoiser mode. The default is `"standard"`. Supported denoiser modes: - 'standard' - 'grain'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3345,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_python" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the denoiser mode. The default is `"standard"`. Supported denoiser modes: - 'standard' - 'grain'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3407,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_nodejs" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3415,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the denoiser mode. The default is `"standard"`. Supported denoiser modes: - 'standard' - 'grain'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3427,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strength_python" style="color: inherit; text-decoration: inherit;">strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3435,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the denoiser mode. The default is `"standard"`. Supported denoiser modes: - 'standard' - 'grain'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3521,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3529,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this atom. Must be specified when using advanced mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3557,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3573,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this atom. Must be specified when using advanced mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3667,7 +3688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3675,7 +3696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3683,7 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this atom. Must be specified when using advanced mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3691,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3703,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3711,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3719,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this atom. Must be specified when using advanced mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3727,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3813,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiostream_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiostream">pulumi.<wbr>Input<Audio<wbr>Stream<wbr>Args></a></span>
+        <span class="property-type"><a href="#audiostream">Audio<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of an audio stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this elementary stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3829,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textstream_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textstream">pulumi.<wbr>Input<Text<wbr>Stream<wbr>Args></a></span>
+        <span class="property-type"><a href="#textstream">Text<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a text stream. For example, closed captions or subtitles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#videostream_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#videostream">pulumi.<wbr>Input<Video<wbr>Stream<wbr>Args></a></span>
+        <span class="property-type"><a href="#videostream">Video<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a video stream.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3849,7 +3870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_stream_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiostream">Audio<wbr>Stream<wbr>Args]</a></span>
+        <span class="property-type"><a href="#audiostream">Audio<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of an audio stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this elementary stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3865,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_stream_python" style="color: inherit; text-decoration: inherit;">text_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textstream">Text<wbr>Stream<wbr>Args]</a></span>
+        <span class="property-type"><a href="#textstream">Text<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a text stream. For example, closed captions or subtitles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3873,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#video_stream_python" style="color: inherit; text-decoration: inherit;">video_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#videostream">Video<wbr>Stream<wbr>Args]</a></span>
+        <span class="property-type"><a href="#videostream">Video<wbr>Stream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a video stream.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3959,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiostream_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiostreamresponse">pulumi.<wbr>Input<Audio<wbr>Stream<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#audiostreamresponse">Audio<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of an audio stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3967,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this elementary stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3975,7 +3996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textstream_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textstreamresponse">pulumi.<wbr>Input<Text<wbr>Stream<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#textstreamresponse">Text<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a text stream. For example, closed captions or subtitles.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3983,7 +4004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#videostream_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#videostreamresponse">pulumi.<wbr>Input<Video<wbr>Stream<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#videostreamresponse">Video<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a video stream.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3995,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_stream_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audiostreamresponse">Audio<wbr>Stream<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#audiostreamresponse">Audio<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of an audio stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4003,7 +4024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this elementary stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4011,7 +4032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_stream_python" style="color: inherit; text-decoration: inherit;">text_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textstreamresponse">Text<wbr>Stream<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#textstreamresponse">Text<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a text stream. For example, closed captions or subtitles.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4019,7 +4040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#video_stream_python" style="color: inherit; text-decoration: inherit;">video_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#videostreamresponse">Video<wbr>Stream<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#videostreamresponse">Video<wbr>Stream<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding of a video stream.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4121,7 +4142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes128_nodejs" style="color: inherit; text-decoration: inherit;">aes128</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aes128encryption">pulumi.<wbr>Input<Aes128Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#aes128encryption">Aes128Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for AES-128 encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4129,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iv_nodejs" style="color: inherit; text-decoration: inherit;">iv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Initialization Vector (IV) represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit encryption key represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpegcenc_nodejs" style="color: inherit; text-decoration: inherit;">mpeg<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpegcommonencryption">pulumi.<wbr>Input<Mpeg<wbr>Common<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#mpegcommonencryption">Mpeg<wbr>Common<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for MPEG Common Encryption (MPEG-CENC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleaes_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Aes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sampleaesencryption">pulumi.<wbr>Input<Sample<wbr>Aes<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#sampleaesencryption">Sample<wbr>Aes<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for SAMPLE-AES encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4165,7 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes128_python" style="color: inherit; text-decoration: inherit;">aes128</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aes128encryption">Aes128Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aes128encryption">Aes128Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for AES-128 encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4173,7 +4194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iv_python" style="color: inherit; text-decoration: inherit;">iv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Initialization Vector (IV) represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4181,7 +4202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit encryption key represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4189,7 +4210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpeg_cenc_python" style="color: inherit; text-decoration: inherit;">mpeg_<wbr>cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpegcommonencryption">Mpeg<wbr>Common<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mpegcommonencryption">Mpeg<wbr>Common<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for MPEG Common Encryption (MPEG-CENC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4197,7 +4218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_aes_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>aes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sampleaesencryption">Sample<wbr>Aes<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sampleaesencryption">Sample<wbr>Aes<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for SAMPLE-AES encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4299,7 +4320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes128_nodejs" style="color: inherit; text-decoration: inherit;">aes128</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aes128encryptionresponse">pulumi.<wbr>Input<Aes128Encryption<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aes128encryptionresponse">Aes128Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for AES-128 encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4307,7 +4328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iv_nodejs" style="color: inherit; text-decoration: inherit;">iv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Initialization Vector (IV) represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4315,7 +4336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit encryption key represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4323,7 +4344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpegcenc_nodejs" style="color: inherit; text-decoration: inherit;">mpeg<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpegcommonencryptionresponse">pulumi.<wbr>Input<Mpeg<wbr>Common<wbr>Encryption<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mpegcommonencryptionresponse">Mpeg<wbr>Common<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for MPEG Common Encryption (MPEG-CENC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4331,7 +4352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleaes_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Aes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sampleaesencryptionresponse">pulumi.<wbr>Input<Sample<wbr>Aes<wbr>Encryption<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sampleaesencryptionresponse">Sample<wbr>Aes<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for SAMPLE-AES encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4343,7 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes128_python" style="color: inherit; text-decoration: inherit;">aes128</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aes128encryptionresponse">Aes128Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aes128encryptionresponse">Aes128Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for AES-128 encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4351,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iv_python" style="color: inherit; text-decoration: inherit;">iv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Initialization Vector (IV) represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4359,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit encryption key represented as lowercase hexadecimal digits.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4367,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpeg_cenc_python" style="color: inherit; text-decoration: inherit;">mpeg_<wbr>cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpegcommonencryptionresponse">Mpeg<wbr>Common<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mpegcommonencryptionresponse">Mpeg<wbr>Common<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for MPEG Common Encryption (MPEG-CENC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4375,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_aes_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>aes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sampleaesencryptionresponse">Sample<wbr>Aes<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sampleaesencryptionresponse">Sample<wbr>Aes<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for SAMPLE-AES encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4445,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alpha_nodejs" style="color: inherit; text-decoration: inherit;">alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4453,7 +4474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4461,7 +4482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4473,7 +4494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alpha_python" style="color: inherit; text-decoration: inherit;">alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4481,7 +4502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinate">Normalized<wbr>Coordinate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4489,7 +4510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4559,7 +4580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alpha_nodejs" style="color: inherit; text-decoration: inherit;">alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4567,7 +4588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">pulumi.<wbr>Input<Normalized<wbr>Coordinate<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4575,7 +4596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4587,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alpha_python" style="color: inherit; text-decoration: inherit;">alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4595,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#normalizedcoordinateresponse">Normalized<wbr>Coordinate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4603,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4673,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this input. Must be specified when using advanced mapping and edit lists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4681,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preprocessingconfig_nodejs" style="color: inherit; text-decoration: inherit;">preprocessing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preprocessingconfig">pulumi.<wbr>Input<Preprocessing<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#preprocessingconfig">Preprocessing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preprocessing configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4689,7 +4710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4701,7 +4722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this input. Must be specified when using advanced mapping and edit lists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4709,7 +4730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preprocessing_config_python" style="color: inherit; text-decoration: inherit;">preprocessing_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preprocessingconfig">Preprocessing<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preprocessingconfig">Preprocessing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preprocessing configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4787,7 +4808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this input. Must be specified when using advanced mapping and edit lists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4795,7 +4816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preprocessingconfig_nodejs" style="color: inherit; text-decoration: inherit;">preprocessing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preprocessingconfigresponse">pulumi.<wbr>Input<Preprocessing<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#preprocessingconfigresponse">Preprocessing<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preprocessing configurations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4803,7 +4824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4815,7 +4836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this input. Must be specified when using advanced mapping and edit lists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4823,7 +4844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preprocessing_config_python" style="color: inherit; text-decoration: inherit;">preprocessing_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preprocessingconfigresponse">Preprocessing<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preprocessingconfigresponse">Preprocessing<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preprocessing configurations.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4831,7 +4852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5013,7 +5034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adbreaks_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Breaks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adbreak">pulumi.<wbr>Input<pulumi.<wbr>Input<Ad<wbr>Break<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#adbreak">Ad<wbr>Break<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ad breaks. Specifies where to insert ad break tags in the output manifests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5021,7 +5042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#editlist_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#editatom">pulumi.<wbr>Input<pulumi.<wbr>Input<Edit<wbr>Atom<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#editatom">Edit<wbr>Atom<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementarystreams_nodejs" style="color: inherit; text-decoration: inherit;">elementary<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elementarystream">pulumi.<wbr>Input<pulumi.<wbr>Input<Elementary<wbr>Stream<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#elementarystream">Elementary<wbr>Stream<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of elementary streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5037,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">pulumi.<wbr>Input<pulumi.<wbr>Input<Input<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#input">Input<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of input assets stored in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5045,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifests_nodejs" style="color: inherit; text-decoration: inherit;">manifests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manifest">pulumi.<wbr>Input<pulumi.<wbr>Input<Manifest<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#manifest">Manifest<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of output manifests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#muxstreams_nodejs" style="color: inherit; text-decoration: inherit;">mux<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#muxstream">pulumi.<wbr>Input<pulumi.<wbr>Input<Mux<wbr>Stream<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#muxstream">Mux<wbr>Stream<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of multiplexing settings for output streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5061,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">pulumi.<wbr>Input<Output<wbr>Args></a></span>
+        <span class="property-type"><a href="#output">Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5069,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overlay">pulumi.<wbr>Input<pulumi.<wbr>Input<Overlay<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#overlay">Overlay<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of overlays on the output video, in descending Z-order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5077,7 +5098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestination">pulumi.<wbr>Input<Pubsub<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5085,7 +5106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritesheets_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Sheets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spritesheet">pulumi.<wbr>Input<pulumi.<wbr>Input<Sprite<wbr>Sheet<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spritesheet">Sprite<wbr>Sheet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of output sprite sheets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5097,7 +5118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ad_breaks_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>breaks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adbreak">Ad<wbr>Break<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#adbreak">Ad<wbr>Break<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ad breaks. Specifies where to insert ad break tags in the output manifests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5105,7 +5126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edit_list_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#editatom">Edit<wbr>Atom<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#editatom">Edit<wbr>Atom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5113,7 +5134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementary_streams_python" style="color: inherit; text-decoration: inherit;">elementary_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elementarystream">Elementary<wbr>Stream<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#elementarystream">Elementary<wbr>Stream<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of elementary streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5121,7 +5142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">Input<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#input">Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of input assets stored in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5129,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifests_python" style="color: inherit; text-decoration: inherit;">manifests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manifest">Manifest<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#manifest">Manifest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of output manifests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5137,7 +5158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mux_streams_python" style="color: inherit; text-decoration: inherit;">mux_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#muxstream">Mux<wbr>Stream<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#muxstream">Mux<wbr>Stream<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of multiplexing settings for output streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5145,7 +5166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#output">Output<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5153,7 +5174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overlay">Overlay<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#overlay">Overlay<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of overlays on the output video, in descending Z-order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5161,7 +5182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsubdestination">Pubsub<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5169,7 +5190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_sheets_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>sheets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spritesheet">Sprite<wbr>Sheet<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spritesheet">Sprite<wbr>Sheet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of output sprite sheets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5351,7 +5372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adbreaks_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Breaks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adbreakresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ad<wbr>Break<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#adbreakresponse">Ad<wbr>Break<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of ad breaks. Specifies where to insert ad break tags in the output manifests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5359,7 +5380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#editlist_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#editatomresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edit<wbr>Atom<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#editatomresponse">Edit<wbr>Atom<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5367,7 +5388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementarystreams_nodejs" style="color: inherit; text-decoration: inherit;">elementary<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elementarystreamresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Elementary<wbr>Stream<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#elementarystreamresponse">Elementary<wbr>Stream<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of elementary streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5375,7 +5396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Input<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#inputresponse">Input<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of input assets stored in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5383,7 +5404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifests_nodejs" style="color: inherit; text-decoration: inherit;">manifests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manifestresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Manifest<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#manifestresponse">Manifest<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of output manifests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5391,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#muxstreams_nodejs" style="color: inherit; text-decoration: inherit;">mux<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#muxstreamresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Mux<wbr>Stream<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#muxstreamresponse">Mux<wbr>Stream<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of multiplexing settings for output streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5399,7 +5420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputresponse">pulumi.<wbr>Input<Output<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#outputresponse">Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5407,7 +5428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overlayresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Overlay<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#overlayresponse">Overlay<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of overlays on the output video, in descending Z-order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5415,7 +5436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestinationresponse">pulumi.<wbr>Input<Pubsub<wbr>Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5423,7 +5444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritesheets_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Sheets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spritesheetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sprite<wbr>Sheet<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spritesheetresponse">Sprite<wbr>Sheet<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of output sprite sheets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5435,7 +5456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ad_breaks_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>breaks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adbreakresponse">Ad<wbr>Break<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#adbreakresponse">Ad<wbr>Break<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ad breaks. Specifies where to insert ad break tags in the output manifests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5443,7 +5464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edit_list_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#editatomresponse">Edit<wbr>Atom<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#editatomresponse">Edit<wbr>Atom<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5451,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementary_streams_python" style="color: inherit; text-decoration: inherit;">elementary_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elementarystreamresponse">Elementary<wbr>Stream<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#elementarystreamresponse">Elementary<wbr>Stream<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of elementary streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5459,7 +5480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputresponse">Input<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#inputresponse">Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of input assets stored in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5467,7 +5488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manifests_python" style="color: inherit; text-decoration: inherit;">manifests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manifestresponse">Manifest<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#manifestresponse">Manifest<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of output manifests.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5475,7 +5496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mux_streams_python" style="color: inherit; text-decoration: inherit;">mux_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#muxstreamresponse">Mux<wbr>Stream<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#muxstreamresponse">Mux<wbr>Stream<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of multiplexing settings for output streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5483,7 +5504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputresponse">Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputresponse">Output<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5491,7 +5512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overlayresponse">Overlay<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#overlayresponse">Overlay<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of overlays on the output video, in descending Z-order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5499,7 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pubsubdestinationresponse">Pubsub<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Destination on Pub/Sub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5507,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_sheets_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>sheets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spritesheetresponse">Sprite<wbr>Sheet<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spritesheetresponse">Sprite<wbr>Sheet<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of output sprite sheets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5577,7 +5598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `"manifest"` with the extension suffix corresponding to the `Manifest.type`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5585,7 +5606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#muxstreams_nodejs" style="color: inherit; text-decoration: inherit;">mux<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5593,7 +5614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5605,7 +5626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `"manifest"` with the extension suffix corresponding to the `Manifest.type`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mux_streams_python" style="color: inherit; text-decoration: inherit;">mux_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5621,7 +5642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5691,7 +5712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `"manifest"` with the extension suffix corresponding to the `Manifest.type`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5699,7 +5720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#muxstreams_nodejs" style="color: inherit; text-decoration: inherit;">mux<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5707,7 +5728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5719,7 +5740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `"manifest"` with the extension suffix corresponding to the `Manifest.type`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5727,7 +5748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mux_streams_python" style="color: inherit; text-decoration: inherit;">mux_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5735,7 +5756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of the manifest, can be "HLS" or "DASH".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5789,7 +5810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Key ID represented as lowercase hexadecimal digits for use with common encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5797,7 +5818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Specify the encryption scheme. Supported encryption schemes: - 'cenc' - 'cbcs'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5809,7 +5830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Key ID represented as lowercase hexadecimal digits for use with common encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5817,7 +5838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Specify the encryption scheme. Supported encryption schemes: - 'cenc' - 'cbcs'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5871,7 +5892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Key ID represented as lowercase hexadecimal digits for use with common encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5879,7 +5900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Specify the encryption scheme. Supported encryption schemes: - 'cenc' - 'cbcs'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5891,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. 128 bit Key ID represented as lowercase hexadecimal digits for use with common encryption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5899,7 +5920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Specify the encryption scheme. Supported encryption schemes: - 'cenc' - 'cbcs'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6017,7 +6038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container format. The default is `"mp4"` Supported container formats: - 'ts' - 'fmp4'- the corresponding file extension is `".m4s"` - 'mp4' - 'vtt'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6025,7 +6046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementarystreams_nodejs" style="color: inherit; text-decoration: inherit;">elementary<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of `ElementaryStream.key`s multiplexed in this stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6033,7 +6054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">pulumi.<wbr>Input<Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6041,7 +6062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"mux_stream0000000123.ts"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6049,7 +6070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `".m3u8"` extension suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6057,7 +6078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentsettings_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentsettings">pulumi.<wbr>Input<Segment<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#segmentsettings">Segment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6069,7 +6090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container format. The default is `"mp4"` Supported container formats: - 'ts' - 'fmp4'- the corresponding file extension is `".m4s"` - 'mp4' - 'vtt'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6077,7 +6098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementary_streams_python" style="color: inherit; text-decoration: inherit;">elementary_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of `ElementaryStream.key`s multiplexed in this stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6085,7 +6106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6093,7 +6114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"mux_stream0000000123.ts"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6101,7 +6122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `".m3u8"` extension suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6109,7 +6130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_settings_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentsettings">Segment<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#segmentsettings">Segment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6227,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container format. The default is `"mp4"` Supported container formats: - 'ts' - 'fmp4'- the corresponding file extension is `".m4s"` - 'mp4' - 'vtt'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6235,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementarystreams_nodejs" style="color: inherit; text-decoration: inherit;">elementary<wbr>Streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of `ElementaryStream.key`s multiplexed in this stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6243,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">pulumi.<wbr>Input<Encryption<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6251,7 +6272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"mux_stream0000000123.ts"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6259,7 +6280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `".m3u8"` extension suffix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6267,7 +6288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentsettings_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentsettingsresponse">pulumi.<wbr>Input<Segment<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#segmentsettingsresponse">Segment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6279,7 +6300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container format. The default is `"mp4"` Supported container formats: - 'ts' - 'fmp4'- the corresponding file extension is `".m4s"` - 'mp4' - 'vtt'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6287,7 +6308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elementary_streams_python" style="color: inherit; text-decoration: inherit;">elementary_<wbr>streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of `ElementaryStream.key`s multiplexed in this stream.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6295,7 +6316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6303,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"mux_stream0000000123.ts"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6311,7 +6332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `".m3u8"` extension suffix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6319,7 +6340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_settings_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentsettingsresponse">Segment<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#segmentsettingsresponse">Segment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6373,7 +6394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Normalized x coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6381,7 +6402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Normalized y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6393,7 +6414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Normalized x coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6401,7 +6422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Normalized y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6455,7 +6476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Normalized x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6463,7 +6484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Normalized y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6475,7 +6496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Normalized x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6483,7 +6504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Normalized y coordinate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6521,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6533,7 +6554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6571,7 +6592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6583,7 +6604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6637,7 +6658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animations_nodejs" style="color: inherit; text-decoration: inherit;">animations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animation">pulumi.<wbr>Input<pulumi.<wbr>Input<Animation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#animation">Animation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Animations. The list should be chronological, without any time overlap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6645,7 +6666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">pulumi.<wbr>Input<Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6657,7 +6678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animations_python" style="color: inherit; text-decoration: inherit;">animations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animation">Animation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#animation">Animation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Animations. The list should be chronological, without any time overlap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6665,7 +6686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#image">Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#image">Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6719,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animations_nodejs" style="color: inherit; text-decoration: inherit;">animations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Animation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#animationresponse">Animation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Animations. The list should be chronological, without any time overlap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6727,7 +6748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageresponse">pulumi.<wbr>Input<Image<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6739,7 +6760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#animations_python" style="color: inherit; text-decoration: inherit;">animations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#animationresponse">Animation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#animationresponse">Animation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Animations. The list should be chronological, without any time overlap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6747,7 +6768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageresponse">Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image overlay.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6833,7 +6854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottompixels_nodejs" style="color: inherit; text-decoration: inherit;">bottom<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the bottom. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6841,7 +6862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leftpixels_nodejs" style="color: inherit; text-decoration: inherit;">left<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the left. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6849,7 +6870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rightpixels_nodejs" style="color: inherit; text-decoration: inherit;">right<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the right. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6857,7 +6878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toppixels_nodejs" style="color: inherit; text-decoration: inherit;">top<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6869,7 +6890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottom_pixels_python" style="color: inherit; text-decoration: inherit;">bottom_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the bottom. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6877,7 +6898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_pixels_python" style="color: inherit; text-decoration: inherit;">left_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the left. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6885,7 +6906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#right_pixels_python" style="color: inherit; text-decoration: inherit;">right_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the right. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6893,7 +6914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_pixels_python" style="color: inherit; text-decoration: inherit;">top_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6979,7 +7000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottompixels_nodejs" style="color: inherit; text-decoration: inherit;">bottom<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the bottom. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6987,7 +7008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#leftpixels_nodejs" style="color: inherit; text-decoration: inherit;">left<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the left. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6995,7 +7016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rightpixels_nodejs" style="color: inherit; text-decoration: inherit;">right<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the right. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7003,7 +7024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toppixels_nodejs" style="color: inherit; text-decoration: inherit;">top<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7015,7 +7036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bottom_pixels_python" style="color: inherit; text-decoration: inherit;">bottom_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the bottom. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7023,7 +7044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_pixels_python" style="color: inherit; text-decoration: inherit;">left_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the left. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7031,7 +7052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#right_pixels_python" style="color: inherit; text-decoration: inherit;">right_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the right. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7039,7 +7060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_pixels_python" style="color: inherit; text-decoration: inherit;">top_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pixels to add to the top. The default is 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7157,7 +7178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audio">pulumi.<wbr>Input<Audio<wbr>Args></a></span>
+        <span class="property-type"><a href="#audio">Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7165,7 +7186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#color">pulumi.<wbr>Input<Color<wbr>Args></a></span>
+        <span class="property-type"><a href="#color">Color<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Color preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7173,7 +7194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crop">pulumi.<wbr>Input<Crop<wbr>Args></a></span>
+        <span class="property-type"><a href="#crop">Crop<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video cropping configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7181,7 +7202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deblock_nodejs" style="color: inherit; text-decoration: inherit;">deblock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deblock">pulumi.<wbr>Input<Deblock<wbr>Args></a></span>
+        <span class="property-type"><a href="#deblock">Deblock<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deblock preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7189,7 +7210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denoise_nodejs" style="color: inherit; text-decoration: inherit;">denoise</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denoise">pulumi.<wbr>Input<Denoise<wbr>Args></a></span>
+        <span class="property-type"><a href="#denoise">Denoise<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denoise preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7197,7 +7218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pad_nodejs" style="color: inherit; text-decoration: inherit;">pad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pad">pulumi.<wbr>Input<Pad<wbr>Args></a></span>
+        <span class="property-type"><a href="#pad">Pad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video pad filter configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7209,7 +7230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audio">Audio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#audio">Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7217,7 +7238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#color">Color<wbr>Args]</a></span>
+        <span class="property-type"><a href="#color">Color<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Color preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7225,7 +7246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crop">Crop<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crop">Crop<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video cropping configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7233,7 +7254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deblock_python" style="color: inherit; text-decoration: inherit;">deblock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deblock">Deblock<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deblock">Deblock<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deblock preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7241,7 +7262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denoise_python" style="color: inherit; text-decoration: inherit;">denoise</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denoise">Denoise<wbr>Args]</a></span>
+        <span class="property-type"><a href="#denoise">Denoise<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denoise preprocessing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7249,7 +7270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pad_python" style="color: inherit; text-decoration: inherit;">pad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pad">Pad<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pad">Pad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video pad filter configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7367,7 +7388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioresponse">pulumi.<wbr>Input<Audio<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#audioresponse">Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7375,7 +7396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#colorresponse">pulumi.<wbr>Input<Color<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#colorresponse">Color<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Color preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7383,7 +7404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cropresponse">pulumi.<wbr>Input<Crop<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cropresponse">Crop<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video cropping configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7391,7 +7412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deblock_nodejs" style="color: inherit; text-decoration: inherit;">deblock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deblockresponse">pulumi.<wbr>Input<Deblock<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#deblockresponse">Deblock<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deblock preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7399,7 +7420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denoise_nodejs" style="color: inherit; text-decoration: inherit;">denoise</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denoiseresponse">pulumi.<wbr>Input<Denoise<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#denoiseresponse">Denoise<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denoise preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7407,7 +7428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pad_nodejs" style="color: inherit; text-decoration: inherit;">pad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#padresponse">pulumi.<wbr>Input<Pad<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#padresponse">Pad<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video pad filter configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7419,7 +7440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioresponse">Audio<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#audioresponse">Audio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7427,7 +7448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#colorresponse">Color<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#colorresponse">Color<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Color preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7435,7 +7456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cropresponse">Crop<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cropresponse">Crop<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video cropping configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7443,7 +7464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deblock_python" style="color: inherit; text-decoration: inherit;">deblock</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deblockresponse">Deblock<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deblockresponse">Deblock<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deblock preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7451,7 +7472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denoise_python" style="color: inherit; text-decoration: inherit;">denoise</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denoiseresponse">Denoise<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#denoiseresponse">Denoise<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denoise preprocessing configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7459,7 +7480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pad_python" style="color: inherit; text-decoration: inherit;">pad</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#padresponse">Pad<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#padresponse">Pad<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the video pad filter configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7497,7 +7518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7509,7 +7530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7547,7 +7568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7559,7 +7580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7597,7 +7618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7609,7 +7630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7647,7 +7668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7659,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI of the key delivery service. This URI is inserted into the M3U8 header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7713,7 +7734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individualsegments_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Create an individual segment file. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7721,7 +7742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentduration_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7733,7 +7754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individual_segments_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Create an individual segment file. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7741,7 +7762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_duration_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7795,7 +7816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individualsegments_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Create an individual segment file. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7803,7 +7824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentduration_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7815,7 +7836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individual_segments_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Create an individual segment file. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7823,7 +7844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_duration_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8021,7 +8042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columncount_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8029,7 +8050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8037,7 +8058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileprefix_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"sprite_sheet0000000123.jpeg"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8045,7 +8066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format type. The default is `"jpeg"`. Supported formats: - 'jpeg'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8053,7 +8074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8061,7 +8082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8069,7 +8090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowcount_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8077,7 +8098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spriteheightpixels_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Height<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8085,7 +8106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritewidthpixels_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Width<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8093,7 +8114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8101,7 +8122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8113,7 +8134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_count_python" style="color: inherit; text-decoration: inherit;">column_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8121,7 +8142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8129,7 +8150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"sprite_sheet0000000123.jpeg"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8137,7 +8158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Format type. The default is `"jpeg"`. Supported formats: - 'jpeg'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8145,7 +8166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8153,7 +8174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8161,7 +8182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_count_python" style="color: inherit; text-decoration: inherit;">row_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8169,7 +8190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_height_pixels_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>height_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8177,7 +8198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_width_pixels_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>width_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8185,7 +8206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8193,7 +8214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8391,7 +8412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columncount_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8399,7 +8420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8407,7 +8428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileprefix_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"sprite_sheet0000000123.jpeg"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8415,7 +8436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format type. The default is `"jpeg"`. Supported formats: - 'jpeg'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8423,7 +8444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8431,7 +8452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8439,7 +8460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowcount_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8447,7 +8468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spriteheightpixels_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Height<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8455,7 +8476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritewidthpixels_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Width<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8463,7 +8484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8471,7 +8492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8483,7 +8504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_count_python" style="color: inherit; text-decoration: inherit;">column_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8491,7 +8512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_offset_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8499,7 +8520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `"sprite_sheet0000000123.jpeg"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8507,7 +8528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Format type. The default is `"jpeg"`. Supported formats: - 'jpeg'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8515,7 +8536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8523,7 +8544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8531,7 +8552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_count_python" style="color: inherit; text-decoration: inherit;">row_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8539,7 +8560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_height_pixels_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>height_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8547,7 +8568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_width_pixels_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>width_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8555,7 +8576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_offset_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8563,7 +8584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8617,7 +8638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textinput">pulumi.<wbr>Input<pulumi.<wbr>Input<Text<wbr>Input<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#textinput">Text<wbr>Input<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` that should be embedded in this atom. Only one input is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8625,7 +8646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8637,7 +8658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textinput">Text<wbr>Input<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#textinput">Text<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` that should be embedded in this atom. Only one input is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8645,7 +8666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8699,7 +8720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textinputresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Text<wbr>Input<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#textinputresponse">Text<wbr>Input<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` that should be embedded in this atom. Only one input is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8707,7 +8728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8719,7 +8740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textinputresponse">Text<wbr>Input<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#textinputresponse">Text<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of `Job.inputs` that should be embedded in this atom. Only one input is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8727,7 +8748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8781,7 +8802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8789,7 +8810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_nodejs" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8801,7 +8822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8809,7 +8830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_python" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8863,7 +8884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8871,7 +8892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_nodejs" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8883,7 +8904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The `Input.key` that identifies the input file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8891,7 +8912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_python" style="color: inherit; text-decoration: inherit;">track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The zero-based index of the track in the input file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8961,7 +8982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec for this text stream. The default is `"webvtt"`. Supported text codecs: - 'srt' - 'ttml' - 'cea608' - 'cea708' - 'webvtt'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8969,7 +8990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code, such as `"en-US"` or `"sr-Latn"`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8977,7 +8998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textatom">pulumi.<wbr>Input<pulumi.<wbr>Input<Text<wbr>Atom<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#textatom">Text<wbr>Atom<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8989,7 +9010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec for this text stream. The default is `"webvtt"`. Supported text codecs: - 'srt' - 'ttml' - 'cea608' - 'cea708' - 'webvtt'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8997,7 +9018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code, such as `"en-US"` or `"sr-Latn"`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9005,7 +9026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textatom">Text<wbr>Atom<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#textatom">Text<wbr>Atom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9075,7 +9096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec for this text stream. The default is `"webvtt"`. Supported text codecs: - 'srt' - 'ttml' - 'cea608' - 'cea708' - 'webvtt'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9083,7 +9104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code, such as `"en-US"` or `"sr-Latn"`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9091,7 +9112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_nodejs" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textatomresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Text<wbr>Atom<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#textatomresponse">Text<wbr>Atom<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9103,7 +9124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec for this text stream. The default is `"webvtt"`. Supported text codecs: - 'srt' - 'ttml' - 'cea608' - 'cea708' - 'webvtt'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9111,7 +9132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The BCP-47 language code, such as `"en-US"` or `"sr-Latn"`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9119,7 +9140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapping_python" style="color: inherit; text-decoration: inherit;">mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#textatomresponse">Text<wbr>Atom<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#textatomresponse">Text<wbr>Atom<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9207,7 +9228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gopduration_csharp">
 <a href="#gopduration_csharp" style="color: inherit; text-decoration: inherit;">Gop<wbr>Duration</a>
@@ -9379,7 +9400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gopduration_go">
 <a href="#gopduration_go" style="color: inherit; text-decoration: inherit;">Gop<wbr>Duration</a>
@@ -9477,7 +9498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowopengop_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Open<wbr>Gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9485,7 +9506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aqstrength_nodejs" style="color: inherit; text-decoration: inherit;">aq<wbr>Strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9493,7 +9514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframecount_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frame<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9501,7 +9522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bpyramid_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Pyramid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9509,7 +9530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitratebps_nodejs" style="color: inherit; text-decoration: inherit;">bitrate<wbr>Bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9517,7 +9538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Codec type. The following codecs are supported: * `h264` (default) * `h265` * `vp9`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9525,7 +9546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crflevel_nodejs" style="color: inherit; text-decoration: inherit;">crf<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9533,7 +9554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabletwopass_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Two<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9541,7 +9562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropycoder_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Coder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entropy coder to use. The default is `"cabac"`. Supported entropy coders: - 'cavlc' - 'cabac'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9549,15 +9570,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gopduration_nodejs">
 <a href="#gopduration_nodejs" style="color: inherit; text-decoration: inherit;">gop<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified duration. The default is `"3s"`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9565,7 +9586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gopframecount_nodejs" style="color: inherit; text-decoration: inherit;">gop<wbr>Frame<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified frame count. Must be greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9573,7 +9594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#heightpixels_nodejs" style="color: inherit; text-decoration: inherit;">height<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9581,7 +9602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pixelformat_nodejs" style="color: inherit; text-decoration: inherit;">pixel<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pixel format to use. The default is `"yuv420p"`. Supported pixel formats: - 'yuv420p' pixel format. - 'yuv422p' pixel format. - 'yuv444p' pixel format. - 'yuv420p10' 10-bit HDR pixel format. - 'yuv422p10' 10-bit HDR pixel format. - 'yuv444p10' 10-bit HDR pixel format. - 'yuv420p12' 12-bit HDR pixel format. - 'yuv422p12' 12-bit HDR pixel format. - 'yuv444p12' 12-bit HDR pixel format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9589,7 +9610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec preset. The default is `veryfast`. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9597,7 +9618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9605,7 +9626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratecontrolmode_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Control<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the `rate_control_mode`. The default is `"vbr"`. Supported rate control modes: - 'vbr' - variable bitrate - 'crf' - constant rate factor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9613,7 +9634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec tune. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9621,7 +9642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbvfullnessbits_nodejs" style="color: inherit; text-decoration: inherit;">vbv<wbr>Fullness<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9629,7 +9650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbvsizebits_nodejs" style="color: inherit; text-decoration: inherit;">vbv<wbr>Size<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9637,7 +9658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widthpixels_nodejs" style="color: inherit; text-decoration: inherit;">width<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9649,7 +9670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_open_gop_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>open_<wbr>gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9657,7 +9678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aq_strength_python" style="color: inherit; text-decoration: inherit;">aq_<wbr>strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9665,7 +9686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frame_count_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frame_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9673,7 +9694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_pyramid_python" style="color: inherit; text-decoration: inherit;">b_<wbr>pyramid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9681,7 +9702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_bps_python" style="color: inherit; text-decoration: inherit;">bitrate_<wbr>bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9689,7 +9710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Codec type. The following codecs are supported: * `h264` (default) * `h265` * `vp9`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9697,7 +9718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crf_level_python" style="color: inherit; text-decoration: inherit;">crf_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9705,7 +9726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_two_pass_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>two_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9713,7 +9734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropy_coder_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>coder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entropy coder to use. The default is `"cabac"`. Supported entropy coders: - 'cavlc' - 'cabac'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9721,15 +9742,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gop_duration_python">
 <a href="#gop_duration_python" style="color: inherit; text-decoration: inherit;">gop_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified duration. The default is `"3s"`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9737,7 +9758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gop_frame_count_python" style="color: inherit; text-decoration: inherit;">gop_<wbr>frame_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified frame count. Must be greater than zero.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9745,7 +9766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_pixels_python" style="color: inherit; text-decoration: inherit;">height_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9753,7 +9774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pixel_format_python" style="color: inherit; text-decoration: inherit;">pixel_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pixel format to use. The default is `"yuv420p"`. Supported pixel formats: - 'yuv420p' pixel format. - 'yuv422p' pixel format. - 'yuv444p' pixel format. - 'yuv420p10' 10-bit HDR pixel format. - 'yuv422p10' 10-bit HDR pixel format. - 'yuv444p10' 10-bit HDR pixel format. - 'yuv420p12' 12-bit HDR pixel format. - 'yuv422p12' 12-bit HDR pixel format. - 'yuv444p12' 12-bit HDR pixel format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9761,7 +9782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec preset. The default is `veryfast`. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9769,7 +9790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9777,7 +9798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rate_control_mode_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>control_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the `rate_control_mode`. The default is `"vbr"`. Supported rate control modes: - 'vbr' - variable bitrate - 'crf' - constant rate factor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9785,7 +9806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec tune. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9793,7 +9814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbv_fullness_bits_python" style="color: inherit; text-decoration: inherit;">vbv_<wbr>fullness_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9801,7 +9822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbv_size_bits_python" style="color: inherit; text-decoration: inherit;">vbv_<wbr>size_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9809,7 +9830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_pixels_python" style="color: inherit; text-decoration: inherit;">width_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9897,7 +9918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gopduration_csharp">
 <a href="#gopduration_csharp" style="color: inherit; text-decoration: inherit;">Gop<wbr>Duration</a>
@@ -10069,7 +10090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gopduration_go">
 <a href="#gopduration_go" style="color: inherit; text-decoration: inherit;">Gop<wbr>Duration</a>
@@ -10167,7 +10188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowopengop_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Open<wbr>Gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10175,7 +10196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aqstrength_nodejs" style="color: inherit; text-decoration: inherit;">aq<wbr>Strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10183,7 +10204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframecount_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frame<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10191,7 +10212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bpyramid_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Pyramid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10199,7 +10220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitratebps_nodejs" style="color: inherit; text-decoration: inherit;">bitrate<wbr>Bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10207,7 +10228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Codec type. The following codecs are supported: * `h264` (default) * `h265` * `vp9`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10215,7 +10236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crflevel_nodejs" style="color: inherit; text-decoration: inherit;">crf<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10223,7 +10244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabletwopass_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Two<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10231,7 +10252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropycoder_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Coder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entropy coder to use. The default is `"cabac"`. Supported entropy coders: - 'cavlc' - 'cabac'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10239,15 +10260,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gopduration_nodejs">
 <a href="#gopduration_nodejs" style="color: inherit; text-decoration: inherit;">gop<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified duration. The default is `"3s"`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10255,7 +10276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gopframecount_nodejs" style="color: inherit; text-decoration: inherit;">gop<wbr>Frame<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified frame count. Must be greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10263,7 +10284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#heightpixels_nodejs" style="color: inherit; text-decoration: inherit;">height<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10271,7 +10292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pixelformat_nodejs" style="color: inherit; text-decoration: inherit;">pixel<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pixel format to use. The default is `"yuv420p"`. Supported pixel formats: - 'yuv420p' pixel format. - 'yuv422p' pixel format. - 'yuv444p' pixel format. - 'yuv420p10' 10-bit HDR pixel format. - 'yuv422p10' 10-bit HDR pixel format. - 'yuv444p10' 10-bit HDR pixel format. - 'yuv420p12' 12-bit HDR pixel format. - 'yuv422p12' 12-bit HDR pixel format. - 'yuv444p12' 12-bit HDR pixel format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10279,7 +10300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec preset. The default is `veryfast`. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10287,7 +10308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10295,7 +10316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratecontrolmode_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Control<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the `rate_control_mode`. The default is `"vbr"`. Supported rate control modes: - 'vbr' - variable bitrate - 'crf' - constant rate factor{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10303,7 +10324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec tune. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10311,7 +10332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbvfullnessbits_nodejs" style="color: inherit; text-decoration: inherit;">vbv<wbr>Fullness<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10319,7 +10340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbvsizebits_nodejs" style="color: inherit; text-decoration: inherit;">vbv<wbr>Size<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10327,7 +10348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widthpixels_nodejs" style="color: inherit; text-decoration: inherit;">width<wbr>Pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10339,7 +10360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_open_gop_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>open_<wbr>gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10347,7 +10368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aq_strength_python" style="color: inherit; text-decoration: inherit;">aq_<wbr>strength</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10355,7 +10376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frame_count_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frame_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10363,7 +10384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_pyramid_python" style="color: inherit; text-decoration: inherit;">b_<wbr>pyramid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10371,7 +10392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_bps_python" style="color: inherit; text-decoration: inherit;">bitrate_<wbr>bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10379,7 +10400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Codec type. The following codecs are supported: * `h264` (default) * `h265` * `vp9`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10387,7 +10408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crf_level_python" style="color: inherit; text-decoration: inherit;">crf_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10395,7 +10416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_two_pass_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>two_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10403,7 +10424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropy_coder_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>coder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entropy coder to use. The default is `"cabac"`. Supported entropy coders: - 'cavlc' - 'cabac'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10411,15 +10432,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) | |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60 | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | | 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 | 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15 | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Required. The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculate frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gop_duration_python">
 <a href="#gop_duration_python" style="color: inherit; text-decoration: inherit;">gop_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified duration. The default is `"3s"`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10427,7 +10448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gop_frame_count_python" style="color: inherit; text-decoration: inherit;">gop_<wbr>frame_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Select the GOP size based on the specified frame count. Must be greater than zero.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10435,7 +10456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_pixels_python" style="color: inherit; text-decoration: inherit;">height_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10443,7 +10464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pixel_format_python" style="color: inherit; text-decoration: inherit;">pixel_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pixel format to use. The default is `"yuv420p"`. Supported pixel formats: - 'yuv420p' pixel format. - 'yuv422p' pixel format. - 'yuv444p' pixel format. - 'yuv420p10' 10-bit HDR pixel format. - 'yuv422p10' 10-bit HDR pixel format. - 'yuv444p10' 10-bit HDR pixel format. - 'yuv420p12' 12-bit HDR pixel format. - 'yuv422p12' 12-bit HDR pixel format. - 'yuv444p12' 12-bit HDR pixel format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10451,7 +10472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec preset. The default is `veryfast`. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10459,7 +10480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10467,7 +10488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rate_control_mode_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>control_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the `rate_control_mode`. The default is `"vbr"`. Supported rate control modes: - 'vbr' - variable bitrate - 'crf' - constant rate factor{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10475,7 +10496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enforces the specified codec tune. The available options are FFmpeg-compatible. Note that certain values for this field may cause the transcoder to override other fields you set in the `VideoStream` message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10483,7 +10504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbv_fullness_bits_python" style="color: inherit; text-decoration: inherit;">vbv_<wbr>fullness_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10491,7 +10512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vbv_size_bits_python" style="color: inherit; text-decoration: inherit;">vbv_<wbr>size_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10499,7 +10520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_pixels_python" style="color: inherit; text-decoration: inherit;">width_<wbr>pixels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

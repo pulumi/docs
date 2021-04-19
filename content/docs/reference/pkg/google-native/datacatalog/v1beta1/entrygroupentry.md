@@ -20,19 +20,39 @@ Creates an entry. Only entries of 'FILESET' type or user-specified type can be c
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_date_sharded_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs]]</span> = None<span class="p">, </span><span class="nx">bigquery_table_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entries_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entry_groups_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs]]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1SchemaArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">bigquery_date_sharded_spec</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">bigquery_table_spec</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">entries_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">entry_groups_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[_datacatalog_v1beta1.GoogleCloudDatacatalogV1beta1SchemaArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEntryGroupEntry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EntryGroupEntry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEntryGroupEntry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EntryGroupEntry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EntryGroupEntry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EntryGroupEntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates an entry. Only entries of 'FILESET' type or user-specified type can be c
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EntryGroupEntryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#entriesid_nodejs" style="color: inherit; text-decoration: inherit;">entries<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#entrygroupsid_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Groups<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +448,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -426,7 +456,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#bigquerydateshardedspec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerydateshardedspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerydateshardedspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#bigquerytablespec_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerytablespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Table<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerytablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcsfilesetspec_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Fileset<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilesetspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>Fileset<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilesetspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#linkedresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1schema">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1schema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the entry. An entry might not have any schema attached to it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#userspecifiedsystem_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#userspecifiedtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#entries_id_python" style="color: inherit; text-decoration: inherit;">entries_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#entry_groups_id_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>groups_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -534,7 +564,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -542,7 +572,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#bigquery_date_sharded_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerydateshardedspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerydateshardedspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#bigquery_table_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerytablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Table<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1bigquerytablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Big<wbr>Query<wbr>Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilesetspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>Fileset<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilesetspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#linked_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1schema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1schema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the entry. An entry might not have any schema attached to it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#user_specified_system_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The EntryGroupEntry resource accepts the following [input]({{< relref "/docs/int
 <a href="#user_specified_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -853,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Total number of shards.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -869,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -889,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Total number of shards.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -897,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tablespec_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#viewspec_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_spec_python" style="color: inherit; text-decoration: inherit;">table_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#view_spec_python" style="color: inherit; text-decoration: inherit;">view_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspec">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tablesourcetype_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1057,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tablespec_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1065,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#viewspec_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspecresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1077,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_source_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1085,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_spec_python" style="color: inherit; text-decoration: inherit;">table_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1tablespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Table<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1093,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#view_spec_python" style="color: inherit; text-decoration: inherit;">view_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1viewspecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1View<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the column. Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subcolumns_nodejs" style="color: inherit; text-decoration: inherit;">subcolumns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Schema of sub-columns. A column can have zero or more sub-columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of the column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the column.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the column. Default value is an empty string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subcolumns_python" style="color: inherit; text-decoration: inherit;">subcolumns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Schema of sub-columns. A column can have zero or more sub-columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of the column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1381,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the column. Default value is an empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1389,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1397,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subcolumns_nodejs" style="color: inherit; text-decoration: inherit;">subcolumns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Schema of sub-columns. A column can have zero or more sub-columns.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1405,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Type of the column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1425,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the column. Default value is an empty string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1433,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1441,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subcolumns_python" style="color: inherit; text-decoration: inherit;">subcolumns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Schema of sub-columns. A column can have zero or more sub-columns.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1449,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Type of the column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The full file path. Example: `gs://bucket_name/a/b.txt`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcstimestamps_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1systemtimestampsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1System<wbr>Timestamps<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1systemtimestampsresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1System<wbr>Timestamps<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Timestamps about the Cloud Storage file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the file, in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The full file path. Example: `gs://bucket_name/a/b.txt`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_timestamps_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1systemtimestampsresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1System<wbr>Timestamps<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1systemtimestampsresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1System<wbr>Timestamps<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Timestamps about the Cloud Storage file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the file, in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepatterns_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*/b`: matches all files in `bucket_name` that match `a/*/b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*/b`: matches all files in `bucket_name` that match `a/*/b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepatterns_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*/b`: matches all files in `bucket_name` that match `a/*/b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplegcsfilespecs_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Gcs<wbr>File<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilespecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>File<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>File<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sample files contained in this fileset, not all files contained in this fileset are represented here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1687,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid file_patterns: * `gs://bucket_name/dir/*`: matches all files within `bucket_name/dir` directory. * `gs://bucket_name/dir/**`: matches all files in `bucket_name/dir` spanning all subdirectories. * `gs://bucket_name/file*`: matches files prefixed by `file` in `bucket_name` * `gs://bucket_name/??.txt`: matches files with two characters followed by `.txt` in `bucket_name` * `gs://bucket_name/[aeiou].txt`: matches files that contain a single vowel character followed by `.txt` in `bucket_name` * `gs://bucket_name/[a-m].txt`: matches files that contain `a`, `b`, ... or `m` followed by `.txt` in `bucket_name` * `gs://bucket_name/a/*/b`: matches all files in `bucket_name` that match `a/*/b` pattern, such as `a/c/b`, `a/d/b` * `gs://another_bucket/a.txt`: matches `gs://another_bucket/a.txt` You can combine wildcards to provide more powerful matches, for example: * `gs://bucket_name/[a-m]??.j*g`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>File<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1gcsfilespecresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Gcs<wbr>File<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sample files contained in this fileset, not all files contained in this fileset are represented here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1733,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschema">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatacatalogv1beta1columnschemaresponse">Google<wbr>Cloud<wbr>Datacatalog<wbr>V1beta1Column<wbr>Schema<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation time of the resource within the given system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1873,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1881,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified time of the resource within the given system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation time of the resource within the given system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1901,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1909,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last-modified time of the resource within the given system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupedentry_nodejs" style="color: inherit; text-decoration: inherit;">grouped<wbr>Entry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouped_entry_python" style="color: inherit; text-decoration: inherit;">grouped_<wbr>entry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#viewquery_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query that defines the table view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2009,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#view_query_python" style="color: inherit; text-decoration: inherit;">view_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query that defines the table view.{{% /md %}}</dd></dl>
 {{% /choosable %}}

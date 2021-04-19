@@ -20,19 +20,34 @@ Create a Service Perimeter. The longrunning operation from this RPC will have a 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_perimeters_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_accesscontextmanager_v1.ServicePerimeterConfigArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_accesscontextmanager_v1.ServicePerimeterConfigArgs]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">access_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">service_perimeters_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1.ServicePerimeterConfigArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_accesscontextmanager_v1.ServicePerimeterConfigArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyServicePerimeter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessPolicyServicePerimeter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessPolicyServicePerimeter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Create a Service Perimeter. The longrunning operation from this RPC will have a 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessPolicyServicePerimeterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#accesspoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#serviceperimetersid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Perimeters<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the `ServicePerimeter` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">pulumi.<wbr>Input<Service<wbr>Perimeter<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the "use_explicit_dry_run_spec" flag is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">pulumi.<wbr>Input<Service<wbr>Perimeter<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#useexplicitdryrunspec_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#access_policies_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#service_perimeters_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the `ServicePerimeter` and its use. Does not affect behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the "use_explicit_dry_run_spec" flag is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterconfig">Service<wbr>Perimeter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The AccessPolicyServicePerimeter resource accepts the following [input]({{< relr
 <a href="#use_explicit_dry_run_spec_python" style="color: inherit; text-decoration: inherit;">use_<wbr>explicit_<wbr>dry_<wbr>run_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -581,7 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Method<wbr>Selector<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#methodselector">Method<wbr>Selector<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -601,7 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodselector">Method<wbr>Selector<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#methodselector">Method<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -663,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodselectorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Method<wbr>Selector<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#methodselectorresponse">Method<wbr>Selector<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -671,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#methodselectorresponse">Method<wbr>Selector<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#methodselectorresponse">Method<wbr>Selector<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressfrom">pulumi.<wbr>Input<Egress<wbr>From<wbr>Args></a></span>
+        <span class="property-type"><a href="#egressfrom">Egress<wbr>From<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this EgressPolicy to apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressto">pulumi.<wbr>Input<Egress<wbr>To<wbr>Args></a></span>
+        <span class="property-type"><a href="#egressto">Egress<wbr>To<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -929,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressfrom">Egress<wbr>From<wbr>Args]</a></span>
+        <span class="property-type"><a href="#egressfrom">Egress<wbr>From<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this EgressPolicy to apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressto">Egress<wbr>To<wbr>Args]</a></span>
+        <span class="property-type"><a href="#egressto">Egress<wbr>To<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -991,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressfromresponse">pulumi.<wbr>Input<Egress<wbr>From<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#egressfromresponse">Egress<wbr>From<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this EgressPolicy to apply.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -999,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresstoresponse">pulumi.<wbr>Input<Egress<wbr>To<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#egresstoresponse">Egress<wbr>To<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egressfromresponse">Egress<wbr>From<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#egressfromresponse">Egress<wbr>From<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this EgressPolicy to apply.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1019,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresstoresponse">Egress<wbr>To<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#egresstoresponse">Egress<wbr>To<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1073,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations that this egress rule applies to. A request matches if it contains an operation/service in this list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, that match this to stanza. A request matches if it contains a resource in this list. If `*` is specified for resources, then this EgressTo rule will authorize access to all resources outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations that this egress rule applies to. A request matches if it contains an operation/service in this list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, that match this to stanza. A request matches if it contains a resource in this list. If `*` is specified for resources, then this EgressTo rule will authorize access to all resources outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations that this egress rule applies to. A request matches if it contains an operation/service in this list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, that match this to stanza. A request matches if it contains a resource in this list. If `*` is specified for resources, then this EgressTo rule will authorize access to all resources outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations that this egress rule applies to. A request matches if it contains an operation/service in this list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, that match this to stanza. A request matches if it contains a resource in this list. If `*` is specified for resources, then this EgressTo rule will authorize access to all resources outside the perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresssource">pulumi.<wbr>Input<pulumi.<wbr>Input<Ingress<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ingresssource">Ingress<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this IngressPolicy authorizes access from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1281,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresssource">Ingress<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ingresssource">Ingress<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this IngressPolicy authorizes access from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresssourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ingress<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ingresssourceresponse">Ingress<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this IngressPolicy authorizes access from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1411,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresssourceresponse">Ingress<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ingresssourceresponse">Ingress<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this IngressPolicy authorizes access from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1465,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressfrom">pulumi.<wbr>Input<Ingress<wbr>From<wbr>Args></a></span>
+        <span class="property-type"><a href="#ingressfrom">Ingress<wbr>From<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this IngressPolicy to apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressto">pulumi.<wbr>Input<Ingress<wbr>To<wbr>Args></a></span>
+        <span class="property-type"><a href="#ingressto">Ingress<wbr>To<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1485,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressfrom">Ingress<wbr>From<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingressfrom">Ingress<wbr>From<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this IngressPolicy to apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressto">Ingress<wbr>To<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingressto">Ingress<wbr>To<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressfromresponse">pulumi.<wbr>Input<Ingress<wbr>From<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ingressfromresponse">Ingress<wbr>From<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this IngressPolicy to apply.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresstoresponse">pulumi.<wbr>Input<Ingress<wbr>To<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ingresstoresponse">Ingress<wbr>To<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressfromresponse">Ingress<wbr>From<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingressfromresponse">Ingress<wbr>From<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this IngressPolicy to apply.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1575,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresstoresponse">Ingress<wbr>To<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ingresstoresponse">Ingress<wbr>To<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is specified, then all IngressSources will be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format: `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1649,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is specified, then all IngressSources will be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format: `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is specified, then all IngressSources will be allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format: `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1731,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is specified, then all IngressSources will be allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects are allowed. Format: `projects/{project_number}` The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. `*` is not allowed, the case of allowing all Google Cloud resources only is not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1793,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for resources, then this IngressTo rule will authorize access to all resources inside the perimeter, provided that the request also matches the `operations` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperation">Api<wbr>Operation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for resources, then this IngressTo rule will authorize access to all resources inside the perimeter, provided that the request also matches the `operations` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1875,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1883,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for resources, then this IngressTo rule will authorize access to all resources inside the perimeter, provided that the request also matches the `operations` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1903,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for resources, then this IngressTo rule will authorize access to all resources inside the perimeter, provided that the request also matches the `operations` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1977,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2039,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2047,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2059,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2067,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Egress<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#egresspolicy">Egress<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Ingress<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ingresspolicy">Ingress<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservices">pulumi.<wbr>Input<Vpc<wbr>Accessible<wbr>Services<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresspolicy">Egress<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#egresspolicy">Egress<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresspolicy">Ingress<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ingresspolicy">Ingress<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcaccessibleservices">Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresspolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Egress<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#egresspolicyresponse">Egress<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresspolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ingress<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ingresspolicyresponse">Ingress<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservicesresponse">pulumi.<wbr>Input<Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2447,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2455,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#egresspolicyresponse">Egress<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#egresspolicyresponse">Egress<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2463,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingresspolicyresponse">Ingress<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ingresspolicyresponse">Ingress<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2471,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2487,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcaccessibleservicesresponse">Vpc<wbr>Accessible<wbr>Services<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for APIs allowed within Perimeter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2541,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2561,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2623,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2643,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2651,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

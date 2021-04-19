@@ -20,19 +20,31 @@ Creates a new topic.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">partition_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_pubsublite_v1.PartitionConfigArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">retention_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_pubsublite_v1.RetentionConfigArgs]]</span> = None<span class="p">, </span><span class="nx">topics_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">partition_config</span><span class="p">:</span> <span class="nx">Optional[_pubsublite_v1.PartitionConfigArgs]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">retention_config</span><span class="p">:</span> <span class="nx">Optional[_pubsublite_v1.RetentionConfigArgs]</span> = None<span class="p">,</span>
+               <span class="nx">topics_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAdminTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AdminTopic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAdminTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AdminTopic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AdminTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AdminTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Creates a new topic.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AdminTopicArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -290,7 +312,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#topicsid_nodejs" style="color: inherit; text-decoration: inherit;">topics<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partitionconfig_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionconfig">pulumi.<wbr>Input<Partition<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#partitionconfig">Partition<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's partitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#retentionconfig_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionconfig">pulumi.<wbr>Input<Retention<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionconfig">Retention<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's message retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -342,7 +364,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#topics_id_python" style="color: inherit; text-decoration: inherit;">topics_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partition_config_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionconfig">Partition<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#partitionconfig">Partition<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's partitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The AdminTopic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#retention_config_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionconfig">Retention<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionconfig">Retention<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's message retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -485,7 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishmibpersec_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Mib<wbr>Per<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscribemibpersec_nodejs" style="color: inherit; text-decoration: inherit;">subscribe<wbr>Mib<wbr>Per<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -505,7 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_mib_per_sec_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>mib_<wbr>per_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscribe_mib_per_sec_python" style="color: inherit; text-decoration: inherit;">subscribe_<wbr>mib_<wbr>per_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -567,7 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishmibpersec_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Mib<wbr>Per<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -575,7 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscribemibpersec_nodejs" style="color: inherit; text-decoration: inherit;">subscribe<wbr>Mib<wbr>Per<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_mib_per_sec_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>mib_<wbr>per_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -595,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscribe_mib_per_sec_python" style="color: inherit; text-decoration: inherit;">subscribe_<wbr>mib_<wbr>per_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacity">pulumi.<wbr>Input<Capacity<wbr>Args></a></span>
+        <span class="property-type"><a href="#capacity">Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacity">Capacity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capacity">Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityresponse">pulumi.<wbr>Input<Capacity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#capacityresponse">Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -795,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityresponse">Capacity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capacityresponse">Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -877,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perpartitionbytes_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Partition<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -897,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_partition_bytes_python" style="color: inherit; text-decoration: inherit;">per_<wbr>partition_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -959,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perpartitionbytes_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Partition<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -967,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_partition_bytes_python" style="color: inherit; text-decoration: inherit;">per_<wbr>partition_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

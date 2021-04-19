@@ -22,19 +22,51 @@ A regional managed instance group can contain up to 2000 instances.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.InstanceGroupManagerAutoHealingPolicyArgs]]]]</span> = None<span class="p">, </span><span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">current_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.InstanceGroupManagerActionsSummaryArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">distribution_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.DistributionPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">failover_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_group_manager</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.NamedPortArgs]]]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">stateful_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.StatefulPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.InstanceGroupManagerStatusArgs]]</span> = None<span class="p">, </span><span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.InstanceGroupManagerUpdatePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.InstanceGroupManagerVersionArgs]]]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">auto_healing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.InstanceGroupManagerAutoHealingPolicyArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">base_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">current_actions</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InstanceGroupManagerActionsSummaryArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">distribution_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.DistributionPolicyArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">failover_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">instance_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">instance_group_manager</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">named_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.NamedPortArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">stateful_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.StatefulPolicyArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InstanceGroupManagerStatusArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">target_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">target_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                               <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InstanceGroupManagerUpdatePolicyArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.InstanceGroupManagerVersionArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionInstanceGroupManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionInstanceGroupManager</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionInstanceGroupManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionInstanceGroupManager</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionInstanceGroupManager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -69,22 +101,32 @@ A regional managed instance group can contain up to 2000 instances.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegionInstanceGroupManagerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -604,7 +646,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -612,7 +654,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +662,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the managed instance group resides (for regional resources).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +670,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicy">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policy for this managed instance group. You can specify only one value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +678,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#baseinstancename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +686,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The creation timestamp for this managed instance group in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +694,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#currentactions_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanageractionssummary">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Actions<wbr>Summary<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanageractionssummary">Instance<wbr>Group<wbr>Manager<wbr>Actions<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +702,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +710,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#distributionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicy">pulumi.<wbr>Input<Distribution<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionpolicy">Distribution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +718,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#failoveraction_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +726,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -694,7 +736,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] A unique identifier for this resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +744,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#instancegroup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Instance Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +752,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#instancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +760,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource type, which is always compute#instanceGroupManager for managed instance groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +768,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +776,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedport">pulumi.<wbr>Input<pulumi.<wbr>Input<Named<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#namedport">Named<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Named ports configured for the Instance Groups complementary to this Instance Group Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +784,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL for this managed instance group. The server defines this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +792,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +800,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#statefulpolicy_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicy">pulumi.<wbr>Input<Stateful<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#statefulpolicy">Stateful<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stateful configuration for this Instanced Group Manager{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +808,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatus">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatus">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +816,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +824,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +832,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +840,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the instance templates used by this managed instance group to create instances.
 
@@ -808,7 +850,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of a zone where the managed instance group is located (for zonal resources).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +862,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -828,7 +870,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -836,7 +878,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the managed instance group resides (for regional resources).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +886,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicy">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerautohealingpolicy">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The autohealing policy for this managed instance group. You can specify only one value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +894,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#base_instance_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +902,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The creation timestamp for this managed instance group in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +910,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#current_actions_python" style="color: inherit; text-decoration: inherit;">current_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanageractionssummary">Instance<wbr>Group<wbr>Manager<wbr>Actions<wbr>Summary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanageractionssummary">Instance<wbr>Group<wbr>Manager<wbr>Actions<wbr>Summary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +918,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +926,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#distribution_policy_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicy">Distribution<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionpolicy">Distribution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +934,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#failover_action_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +942,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -910,7 +952,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] A unique identifier for this resource type. The server generates this identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +960,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#instance_group_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Instance Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +968,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#instance_template_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +976,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource type, which is always compute#instanceGroupManager for managed instance groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +984,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +992,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedport">Named<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#namedport">Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Named ports configured for the Instance Groups complementary to this Instance Group Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1000,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL for this managed instance group. The server defines this URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1008,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1016,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#stateful_policy_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicy">Stateful<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statefulpolicy">Stateful<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stateful configuration for this Instanced Group Manager{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1024,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatus">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatus">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1032,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1040,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1048,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1056,7 @@ To see the latest fingerprint, make a get() request to retrieve an InstanceGroup
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the instance templates used by this managed instance group to create instances.
 
@@ -1024,7 +1066,7 @@ Each version is defined by an instanceTemplate and a name. Every version can app
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of a zone where the managed instance group is located (for zonal resources).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetshape_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicyzoneconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionpolicyzoneconfiguration">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Zones where the regional managed instance group will create and manage its instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_shape_python" style="color: inherit; text-decoration: inherit;">target_<wbr>shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicyzoneconfiguration">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionpolicyzoneconfiguration">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Zones where the regional managed instance group will create and manage its instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetshape_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1233,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicyzoneconfigurationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionpolicyzoneconfigurationresponse">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Zones where the regional managed instance group will create and manage its instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_shape_python" style="color: inherit; text-decoration: inherit;">target_<wbr>shape</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1253,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionpolicyzoneconfigurationresponse">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionpolicyzoneconfigurationresponse">Distribution<wbr>Policy<wbr>Zone<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Zones where the regional managed instance group will create and manage its instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the zone. The zone must exist in the region where the managed instance group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the zone. The zone must exist in the region where the managed instance group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1341,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the zone. The zone must exist in the region where the managed instance group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the zone. The zone must exist in the region where the managed instance group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calculated_nodejs" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -1443,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1463,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calculated_python" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -1475,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calculated_nodejs" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -1573,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1581,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calculated_python" style="color: inherit; text-decoration: inherit;">calculated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Absolute value of VM instances calculated based on the specific mode.
 
@@ -1605,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive integer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1613,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1825,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#abandoning_nodejs" style="color: inherit; text-decoration: inherit;">abandoning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1833,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_nodejs" style="color: inherit; text-decoration: inherit;">creating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully.
 
@@ -1801,7 +1843,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creatingwithoutretries_nodejs" style="color: inherit; text-decoration: inherit;">creating<wbr>Without<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1851,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#deleting_nodejs" style="color: inherit; text-decoration: inherit;">deleting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1859,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#none_nodejs" style="color: inherit; text-decoration: inherit;">none</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are running and have no scheduled actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1867,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#recreating_nodejs" style="color: inherit; text-decoration: inherit;">recreating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1875,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#refreshing_nodejs" style="color: inherit; text-decoration: inherit;">refreshing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1883,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#restarting_nodejs" style="color: inherit; text-decoration: inherit;">restarting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1891,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#verifying_nodejs" style="color: inherit; text-decoration: inherit;">verifying</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1903,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#abandoning_python" style="color: inherit; text-decoration: inherit;">abandoning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1911,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_python" style="color: inherit; text-decoration: inherit;">creating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully.
 
@@ -1879,7 +1921,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_without_retries_python" style="color: inherit; text-decoration: inherit;">creating_<wbr>without_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1929,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#deleting_python" style="color: inherit; text-decoration: inherit;">deleting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1937,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#none_python" style="color: inherit; text-decoration: inherit;">none</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are running and have no scheduled actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1945,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#recreating_python" style="color: inherit; text-decoration: inherit;">recreating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,7 +1953,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#refreshing_python" style="color: inherit; text-decoration: inherit;">refreshing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1961,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#restarting_python" style="color: inherit; text-decoration: inherit;">restarting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1969,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#verifying_python" style="color: inherit; text-decoration: inherit;">verifying</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2097,7 +2139,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#abandoning_nodejs" style="color: inherit; text-decoration: inherit;">abandoning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2105,7 +2147,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_nodejs" style="color: inherit; text-decoration: inherit;">creating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully.
 
@@ -2115,7 +2157,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creatingwithoutretries_nodejs" style="color: inherit; text-decoration: inherit;">creating<wbr>Without<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2123,7 +2165,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#deleting_nodejs" style="color: inherit; text-decoration: inherit;">deleting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2173,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#none_nodejs" style="color: inherit; text-decoration: inherit;">none</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are running and have no scheduled actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2181,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#recreating_nodejs" style="color: inherit; text-decoration: inherit;">recreating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2189,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#refreshing_nodejs" style="color: inherit; text-decoration: inherit;">refreshing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2197,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#restarting_nodejs" style="color: inherit; text-decoration: inherit;">restarting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2205,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#verifying_nodejs" style="color: inherit; text-decoration: inherit;">verifying</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2175,7 +2217,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#abandoning_python" style="color: inherit; text-decoration: inherit;">abandoning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2225,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_python" style="color: inherit; text-decoration: inherit;">creating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully.
 
@@ -2193,7 +2235,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#creating_without_retries_python" style="color: inherit; text-decoration: inherit;">creating_<wbr>without_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2243,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#deleting_python" style="color: inherit; text-decoration: inherit;">deleting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2209,7 +2251,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#none_python" style="color: inherit; text-decoration: inherit;">none</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are running and have no scheduled actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2217,7 +2259,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#recreating_python" style="color: inherit; text-decoration: inherit;">recreating</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2225,7 +2267,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#refreshing_python" style="color: inherit; text-decoration: inherit;">refreshing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2233,7 +2275,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#restarting_python" style="color: inherit; text-decoration: inherit;">restarting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2241,7 +2283,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#verifying_python" style="color: inherit; text-decoration: inherit;">verifying</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2295,7 +2337,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the health check that signals autohealing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2345,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2315,7 +2357,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the health check that signals autohealing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2323,7 +2365,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2419,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the health check that signals autohealing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2385,7 +2427,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2397,7 +2439,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the health check that signals autohealing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2405,7 +2447,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2491,7 +2533,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Autoscaler that targets this instance group manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2541,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isstable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2549,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#stateful_nodejs" style="color: inherit; text-decoration: inherit;">stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Stateful status of the given Instance Group Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2557,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#versiontarget_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2569,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Autoscaler that targets this instance group manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2577,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_stable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2543,7 +2585,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#stateful_python" style="color: inherit; text-decoration: inherit;">stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstateful">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Stateful status of the given Instance Group Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,7 +2593,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#version_target_python" style="color: inherit; text-decoration: inherit;">version_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontarget">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2679,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Autoscaler that targets this instance group manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2645,7 +2687,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isstable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2653,7 +2695,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#stateful_nodejs" style="color: inherit; text-decoration: inherit;">stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Stateful status of the given Instance Group Manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2661,7 +2703,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#versiontarget_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontargetresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontargetresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2673,7 +2715,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the Autoscaler that targets this instance group manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2681,7 +2723,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_stable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2689,7 +2731,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#stateful_python" style="color: inherit; text-decoration: inherit;">stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Stateful status of the given Instance Group Manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2697,7 +2739,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#version_target_python" style="color: inherit; text-decoration: inherit;">version_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusversiontargetresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusversiontargetresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Version<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2809,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#hasstatefulconfig_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Stateful<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2817,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isstateful_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2783,7 +2825,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigs">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigs">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of per-instance configs on the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2795,7 +2837,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#has_stateful_config_python" style="color: inherit; text-decoration: inherit;">has_<wbr>stateful_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2803,7 +2845,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_stateful_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2811,7 +2853,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigs">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigs">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of per-instance configs on the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2849,7 +2891,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#alleffective_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Effective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2861,7 +2903,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#all_effective_python" style="color: inherit; text-decoration: inherit;">all_<wbr>effective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2899,7 +2941,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#alleffective_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Effective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2953,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#all_effective_python" style="color: inherit; text-decoration: inherit;">all_<wbr>effective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2981,7 +3023,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#hasstatefulconfig_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Stateful<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2989,7 +3031,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isstateful_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2997,7 +3039,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#perinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Instance<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigsresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigsresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of per-instance configs on the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3009,7 +3051,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#has_stateful_config_python" style="color: inherit; text-decoration: inherit;">has_<wbr>stateful_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3017,7 +3059,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_stateful_python" style="color: inherit; text-decoration: inherit;">is_<wbr>stateful</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3025,7 +3067,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#per_instance_configs_python" style="color: inherit; text-decoration: inherit;">per_<wbr>instance_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigsresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupmanagerstatusstatefulperinstanceconfigsresponse">Instance<wbr>Group<wbr>Manager<wbr>Status<wbr>Stateful<wbr>Per<wbr>Instance<wbr>Configs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Status of per-instance configs on the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3063,7 +3105,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isreached_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Reached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3075,7 +3117,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_reached_python" style="color: inherit; text-decoration: inherit;">is_<wbr>reached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3113,7 +3155,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#isreached_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Reached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3125,7 +3167,7 @@ If you have disabled creation retries, this field will not be populated; instead
 <a href="#is_reached_python" style="color: inherit; text-decoration: inherit;">is_<wbr>reached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3185,6 +3227,14 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mostdisruptiveallowedaction_csharp">
+<a href="#mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replacementmethod_csharp">
 <a href="#replacementmethod_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
@@ -3255,6 +3305,14 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mostdisruptiveallowedaction_go">
+<a href="#mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replacementmethod_go">
 <a href="#replacementmethod_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
@@ -3279,7 +3337,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instanceredistributiontype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3289,7 +3347,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded up if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates.
 
@@ -3299,7 +3357,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied:
 
@@ -3313,7 +3371,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minreadysec_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,15 +3379,23 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mostdisruptiveallowedaction_nodejs">
+<a href="#mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_nodejs">
 <a href="#replacementmethod_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3403,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3349,7 +3415,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instance_redistribution_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>redistribution_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3359,7 +3425,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded up if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates.
 
@@ -3369,7 +3435,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied:
 
@@ -3383,7 +3449,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#min_ready_sec_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ready_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,15 +3457,23 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="most_disruptive_allowed_action_python">
+<a href="#most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacement_method_python">
 <a href="#replacement_method_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3407,7 +3481,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,6 +3541,14 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="mostdisruptiveallowedaction_csharp">
+<a href="#mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="replacementmethod_csharp">
 <a href="#replacementmethod_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
@@ -3537,6 +3619,14 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="mostdisruptiveallowedaction_go">
+<a href="#mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="replacementmethod_go">
 <a href="#replacementmethod_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
 </span>
@@ -3561,7 +3651,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instanceredistributiontype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Redistribution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3571,7 +3661,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded up if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates.
 
@@ -3581,7 +3671,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied:
 
@@ -3595,7 +3685,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minreadysec_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3603,15 +3693,23 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mostdisruptiveallowedaction_nodejs">
+<a href="#mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacementmethod_nodejs">
 <a href="#replacementmethod_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3619,7 +3717,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3631,7 +3729,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instance_redistribution_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>redistribution_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  instance redistribution policy for regional managed instance groups. Valid values are:  
 - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. 
@@ -3641,7 +3739,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded up if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates.
 
@@ -3651,7 +3749,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied:
 
@@ -3665,7 +3763,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#min_ready_sec_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ready_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3673,15 +3771,23 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="most_disruptive_allowed_action_python">
+<a href="#most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacement_method_python">
 <a href="#replacement_method_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What action should be used to replace instances. See minimal_action.REPLACE{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3689,7 +3795,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3763,7 +3869,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3877,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3779,7 +3885,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to:  
 - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. 
@@ -3793,7 +3899,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instance_template_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3907,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3915,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to:  
 - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. 
@@ -3885,7 +3991,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3893,7 +3999,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3901,7 +4007,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to:  
 - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. 
@@ -3915,7 +4021,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#instance_template_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3923,7 +4029,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the version. Unique among all versions in the scope of this managed instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3931,7 +4037,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to:  
 - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. 
@@ -3987,7 +4093,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3995,7 +4101,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number, which can be a value between 1 and 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4007,7 +4113,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4121,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number, which can be a value between 1 and 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4069,7 +4175,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4077,7 +4183,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number, which can be a value between 1 and 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4089,7 +4195,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4097,7 +4203,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number, which can be a value between 1 and 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4135,7 +4241,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicypreservedstate">pulumi.<wbr>Input<Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Args></a></span>
+        <span class="property-type"><a href="#statefulpolicypreservedstate">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4147,7 +4253,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicypreservedstate">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statefulpolicypreservedstate">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4185,7 +4291,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4197,7 +4303,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4235,7 +4341,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4247,7 +4353,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4285,7 +4391,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicypreservedstateresponse">pulumi.<wbr>Input<Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#statefulpolicypreservedstateresponse">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4297,7 +4403,7 @@ At least one of either maxSurge or maxUnavailable must be greater than 0. Learn 
 <a href="#preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statefulpolicypreservedstateresponse">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statefulpolicypreservedstateresponse">Stateful<wbr>Policy<wbr>Preserved<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

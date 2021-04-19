@@ -20,19 +20,35 @@ Creates a new game server cluster in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">connection_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_gameservices_v1beta.GameServerClusterConnectionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">game_server_clusters_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">realms_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">allocation_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">connection_info</span><span class="p">:</span> <span class="nx">Optional[_gameservices_v1beta.GameServerClusterConnectionInfoArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">game_server_clusters_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                           <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">realms_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRealmGameServerCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RealmGameServerCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRealmGameServerCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RealmGameServerCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RealmGameServerCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RealmGameServerClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a new game server cluster in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RealmGameServerClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#gameserverclustersid_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Clusters<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +388,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#realmsid_nodejs" style="color: inherit; text-decoration: inherit;">realms<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#allocationpriority_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">pulumi.<wbr>Input<Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The game server cluster connection information. This information is used to manage game server clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable description of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ETag of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#game_server_clusters_id_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>clusters_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -446,7 +472,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#realms_id_python" style="color: inherit; text-decoration: inherit;">realms_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#allocation_priority_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The allocation priority assigned to the game server cluster. Game server clusters receive new game server allocations based on the relative allocation priorites set for each cluster, if the realm is configured for multicluster allocation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The game server cluster connection information. This information is used to manage game server clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable description of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ETag of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server cluster. Each label is a key-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The RealmGameServerCluster resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkeclusterreference_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterreference">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkeclusterreference">Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the GKE cluster where the game servers are installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkehubclusterreference_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Hub<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkehubclusterreference">pulumi.<wbr>Input<Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkehubclusterreference">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a Kubernetes cluster registered through GKE Hub. See https://cloud.google.com/anthos/multicluster-management/ for more information about registering Kubernetes clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -721,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterreference">Gke<wbr>Cluster<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkeclusterreference">Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the GKE cluster where the game servers are installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_hub_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>hub_<wbr>cluster_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkehubclusterreference">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkehubclusterreference">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a Kubernetes cluster registered through GKE Hub. See https://cloud.google.com/anthos/multicluster-management/ for more information about registering Kubernetes clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkeclusterreference_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterreferenceresponse">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkeclusterreferenceresponse">Gke<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the GKE cluster where the game servers are installed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkehubclusterreference_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Hub<wbr>Cluster<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkehubclusterreferenceresponse">pulumi.<wbr>Input<Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkehubclusterreferenceresponse">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a Kubernetes cluster registered through GKE Hub. See https://cloud.google.com/anthos/multicluster-management/ for more information about registering Kubernetes clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterreferenceresponse">Gke<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkeclusterreferenceresponse">Gke<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the GKE cluster where the game servers are installed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_hub_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>hub_<wbr>cluster_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkehubclusterreferenceresponse">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkehubclusterreferenceresponse">Gke<wbr>Hub<wbr>Cluster<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to a Kubernetes cluster registered through GKE Hub. See https://cloud.google.com/anthos/multicluster-management/ for more information about registering Kubernetes clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_nodejs" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE Hub membership, using one of the following forms: * `https://gkehub.googleapis.com/v1beta1/projects/{project_id}/locations/global/memberships/{membership_id}` * `projects/{project_id}/locations/global/memberships/{membership_id}` * `{membership_id}` If project is not specified, the project of the GameServerCluster resource is used to generate the full name of the GKE Hub membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_python" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE Hub membership, using one of the following forms: * `https://gkehub.googleapis.com/v1beta1/projects/{project_id}/locations/global/memberships/{membership_id}` * `projects/{project_id}/locations/global/memberships/{membership_id}` * `{membership_id}` If project is not specified, the project of the GameServerCluster resource is used to generate the full name of the GKE Hub membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_nodejs" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE Hub membership, using one of the following forms: * `https://gkehub.googleapis.com/v1beta1/projects/{project_id}/locations/global/memberships/{membership_id}` * `projects/{project_id}/locations/global/memberships/{membership_id}` * `{membership_id}` If project is not specified, the project of the GameServerCluster resource is used to generate the full name of the GKE Hub membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_python" style="color: inherit; text-decoration: inherit;">membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE Hub membership, using one of the following forms: * `https://gkehub.googleapis.com/v1beta1/projects/{project_id}/locations/global/memberships/{membership_id}` * `projects/{project_id}/locations/global/memberships/{membership_id}` * `{membership_id}` If project is not specified, the project of the GameServerCluster resource is used to generate the full name of the GKE Hub membership.{{% /md %}}</dd></dl>
 {{% /choosable %}}

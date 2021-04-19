@@ -20,19 +20,30 @@ Creates a new execution using the latest revision of the given workflow.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">argument</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">executions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">workflows_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">argument</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">executions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">workflows_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflowExecution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkflowExecution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflowExecution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkflowExecution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkflowExecution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkflowExecutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +78,32 @@ Creates a new execution using the latest revision of the given workflow.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkflowExecutionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +279,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#executionsid_nodejs" style="color: inherit; text-decoration: inherit;">executions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -266,7 +287,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -274,7 +295,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +303,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#workflowsid_nodejs" style="color: inherit; text-decoration: inherit;">workflows<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +311,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#argument_nodejs" style="color: inherit; text-decoration: inherit;">argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +323,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#executions_id_python" style="color: inherit; text-decoration: inherit;">executions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -310,7 +331,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -318,7 +339,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -326,7 +347,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#workflows_id_python" style="color: inherit; text-decoration: inherit;">workflows_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +355,7 @@ The WorkflowExecution resource accepts the following [input]({{< relref "/docs/i
 <a href="#argument_python" style="color: inherit; text-decoration: inherit;">argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable stack trace string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -701,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message and data returned represented as a JSON string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -709,7 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stacktrace_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceresponse">pulumi.<wbr>Input<Stack<wbr>Trace<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stack trace with detailed information of where error was generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -721,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable stack trace string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -729,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message and data returned represented as a JSON string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stack_trace_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stack trace with detailed information of where error was generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source code column position (of the line) the current instruction was generated from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length in bytes of text in this character group, e.g. digits of a number, string length, or AST (abstract syntax tree) node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_nodejs" style="color: inherit; text-decoration: inherit;">line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source code line number the current instruction was generated from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source code column position (of the line) the current instruction was generated from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length in bytes of text in this character group, e.g. digits of a number, string length, or AST (abstract syntax tree) node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_python" style="color: inherit; text-decoration: inherit;">line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source code line number the current instruction was generated from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#positionresponse">pulumi.<wbr>Input<Position<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#positionresponse">Position<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source position information of the stacktrace element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routine_nodejs" style="color: inherit; text-decoration: inherit;">routine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routine where the error occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -937,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The step the error occurred at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#positionresponse">Position<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#positionresponse">Position<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source position information of the stacktrace element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -957,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routine_python" style="color: inherit; text-decoration: inherit;">routine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routine where the error occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -965,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The step the error occurred at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elements_nodejs" style="color: inherit; text-decoration: inherit;">elements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceelementresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Stack<wbr>Trace<wbr>Element<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stacktraceelementresponse">Stack<wbr>Trace<wbr>Element<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of Stack elements.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceelementresponse">Stack<wbr>Trace<wbr>Element<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stacktraceelementresponse">Stack<wbr>Trace<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of Stack elements.{{% /md %}}</dd></dl>
 {{% /choosable %}}

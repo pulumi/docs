@@ -20,19 +20,35 @@ Creates dataset. If success return a Dataset resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">data_item_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">input_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1InputConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">last_migrate_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">blocking_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">data_item_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">input_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1InputConfigArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">last_migrate_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates dataset. If success return a Dataset resource.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +380,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#blockingresources_nodejs" style="color: inherit; text-decoration: inherit;">blocking<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of any related resources that are blocking changes to the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the dataset is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dataitemcount_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of data items in the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The display name of the dataset. Maximum of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#inputconfigs_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lastmigratetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Migrate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +464,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#blocking_resources_python" style="color: inherit; text-decoration: inherit;">blocking_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of any related resources that are blocking changes to the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the dataset is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#data_item_count_python" style="color: inherit; text-decoration: inherit;">data_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of data items in the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The display name of the dataset. Maximum of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#input_configs_python" style="color: inherit; text-decoration: inherit;">input_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#last_migrate_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>migrate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -597,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -609,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismultilabel_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_multi_label_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismultilabel_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_multi_label_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -833,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerysource_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationmetadata_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textmetadata_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_source_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_metadata_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_metadata_python" style="color: inherit; text-decoration: inherit;">text_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1259,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerysource_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1267,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationmetadata_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1275,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1283,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1291,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textmetadata_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_source_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1319,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_metadata_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1327,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_metadata_python" style="color: inherit; text-decoration: inherit;">text_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}

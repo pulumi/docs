@@ -20,19 +20,34 @@ Creates a datasource. **Note:** This API requires an admin account to execute.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datasources_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disable_modifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">disable_serving</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">indexing_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">items_visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudsearch_v1.GSuitePrincipalArgs]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">operation_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">datasources_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">disable_modifications</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">disable_serving</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">indexing_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">items_visibility</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudsearch_v1.GSuitePrincipalArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">operation_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSettingDatasource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SettingDatasource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSettingDatasource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SettingDatasource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SettingDatasource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SettingDatasourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a datasource. **Note:** This API requires an admin account to execute.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SettingDatasourceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#datasourcesid_nodejs" style="color: inherit; text-decoration: inherit;">datasources<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +355,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#disablemodifications_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Modifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#disableserving_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Serving</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable serving any search or assist results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Display name of the datasource The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#indexingserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of service accounts that have indexing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#itemsvisibility_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gsuiteprincipal">pulumi.<wbr>Input<pulumi.<wbr>Input<GSuite<wbr>Principal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gsuiteprincipal">GSuite<wbr>Principal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#operationids_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#datasources_id_python" style="color: inherit; text-decoration: inherit;">datasources_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +431,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#disable_modifications_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>modifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#disable_serving_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>serving</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable serving any search or assist results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Display name of the datasource The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#indexing_service_accounts_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of service accounts that have indexing access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#items_visibility_python" style="color: inherit; text-decoration: inherit;">items_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gsuiteprincipal">GSuite<wbr>Principal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gsuiteprincipal">GSuite<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#operation_ids_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The SettingDatasource resource accepts the following [input]({{< relref "/docs/i
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -597,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuitedomain_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This principal represents all users of the G Suite domain of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuitegroupemail_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>Group<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite group account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuiteuseremail_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>User<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite user account{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -625,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_domain_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This principal represents all users of the G Suite domain of the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_group_email_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>group_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite group account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_user_email_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>user_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite user account{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuitedomain_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This principal represents all users of the G Suite domain of the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -719,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuitegroupemail_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>Group<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite group account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -727,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuiteuseremail_nodejs" style="color: inherit; text-decoration: inherit;">gsuite<wbr>User<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite user account{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_domain_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This principal represents all users of the G Suite domain of the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -747,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_group_email_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>group_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite group account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gsuite_user_email_python" style="color: inherit; text-decoration: inherit;">gsuite_<wbr>user_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This principal references a G Suite user account{{% /md %}}</dd></dl>
 {{% /choosable %}}

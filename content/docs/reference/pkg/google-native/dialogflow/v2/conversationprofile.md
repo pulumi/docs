@@ -20,19 +20,38 @@ Creates a conversation profile in the specified project. ConversationProfile.Cre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automated_agent_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2AutomatedAgentConfigArgs]]</span> = None<span class="p">, </span><span class="nx">conversation_profiles_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">human_agent_assistant_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs]]</span> = None<span class="p">, </span><span class="nx">human_agent_handoff_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs]]</span> = None<span class="p">, </span><span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2LoggingConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">new_message_event_notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2NotificationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2NotificationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">stt_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v2.GoogleCloudDialogflowV2SpeechToTextConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">automated_agent_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2AutomatedAgentConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">conversation_profiles_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">human_agent_assistant_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">human_agent_handoff_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">language_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2LoggingConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">new_message_event_notification_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2NotificationConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2NotificationConfigArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">stt_config</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v2.GoogleCloudDialogflowV2SpeechToTextConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConversationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConversationProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConversationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConversationProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConversationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConversationProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates a conversation profile in the specified project. ConversationProfile.Cre
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConversationProfileArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#conversationprofilesid_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Profiles<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +439,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#automatedagentconfig_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Agent<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2automatedagentconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Automated<wbr>Agent<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2automatedagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Automated<wbr>Agent<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for an automated agent to use with this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +447,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Human readable name for this profile. Max length 1024 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#humanagentassistantconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Agent<wbr>Assistant<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance to use with this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#humanagenthandoffconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Agent<wbr>Handoff<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Language which represents the conversationProfile. If unspecified, the default language code en-us applies. Users need to create a ConversationProfile for each language they want to support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2loggingconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2loggingconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging conversation lifecycle events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#newmessageeventnotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Message<wbr>Event<wbr>Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for publishing new message events. Event will be sent in format of ConversationEvent{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#sttconfig_nodejs" style="color: inherit; text-decoration: inherit;">stt<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#conversation_profiles_id_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>profiles_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +547,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#automated_agent_config_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>agent_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2automatedagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Automated<wbr>Agent<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2automatedagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Automated<wbr>Agent<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for an automated agent to use with this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +555,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Human readable name for this profile. Max length 1024 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#human_agent_assistant_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>agent_<wbr>assistant_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance to use with this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#human_agent_handoff_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>agent_<wbr>handoff_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Language which represents the conversationProfile. If unspecified, the default language code en-us applies. Users need to create a ConversationProfile for each language they want to support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2loggingconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2loggingconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging conversation lifecycle events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#new_message_event_notification_config_python" style="color: inherit; text-decoration: inherit;">new_<wbr>message_<wbr>event_<wbr>notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for publishing new message events. Event will be sent in format of ConversationEvent{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for publishing conversation lifecycle events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The ConversationProfile resource accepts the following [input]({{< relref "/docs
 <a href="#stt_config_python" style="color: inherit; text-decoration: inherit;">stt_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2speechtotextconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Speech<wbr>To<wbr>Text<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for speech transcription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_nodejs" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the Dialogflow agent environment to use. This project needs to either be the same project as the conversation or you need to grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. Format: `projects//locations//agent/environments/`. If environment is not specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_python" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. ID of the Dialogflow agent environment to use. This project needs to either be the same project as the conversation or you need to grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. Format: `projects//locations//agent/environments/`. If environment is not specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_nodejs" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. ID of the Dialogflow agent environment to use. This project needs to either be the same project as the conversation or you need to grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. Format: `projects//locations//agent/environments/`. If environment is not specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -819,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_python" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. ID of the Dialogflow agent environment to use. This project needs to either be the same project as the conversation or you need to grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. Format: `projects//locations//agent/environments/`. If environment is not specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endusersuggestionconfig_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Suggestion<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#humanagentsuggestionconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Agent<wbr>Suggestion<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of human agent participant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageanalysisconfig_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Analysis<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for message analysis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic on which to publish new agent assistant events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -941,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_user_suggestion_config_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>suggestion_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#human_agent_suggestion_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>agent_<wbr>suggestion_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of human agent participant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_analysis_config_python" style="color: inherit; text-decoration: inherit;">message_<wbr>analysis_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for message analysis.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic on which to publish new agent assistant events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Conversation model resource name. Format: `projects//conversationModels/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Conversation model resource name. Format: `projects//conversationModels/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Conversation model resource name. Format: `projects//conversationModels/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Conversation model resource name. Format: `projects//conversationModels/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableentityextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Entity<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesentimentanalysis_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Sentiment<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user's attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_entity_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>entity_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_sentiment_analysis_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>sentiment_<wbr>analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user's attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableentityextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Entity<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1209,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesentimentanalysis_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Sentiment<wbr>Analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user's attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_entity_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>entity_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_sentiment_analysis_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>sentiment_<wbr>analysis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user's attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endusersuggestionconfig_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Suggestion<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#humanagentsuggestionconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Agent<wbr>Suggestion<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of human agent participant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageanalysisconfig_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Analysis<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for message analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic on which to publish new agent assistant events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_user_suggestion_config_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>suggestion_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#human_agent_suggestion_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>agent_<wbr>suggestion_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for agent assistance of human agent participant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_analysis_config_python" style="color: inherit; text-decoration: inherit;">message_<wbr>analysis_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigmessageanalysisconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Message<wbr>Analysis<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for message analysis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2notificationconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Notification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic on which to publish new agent assistant events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1429,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#featureconfigs_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of different suggestion features. One feature can have only one config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupsuggestionresponses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Suggestion<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feature_configs_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of different suggestion features. One feature can have only one config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_suggestion_responses_python" style="color: inherit; text-decoration: inherit;">group_<wbr>suggestion_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#featureconfigs_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of different suggestion features. One feature can have only one config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupsuggestionresponses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Suggestion<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feature_configs_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionfeatureconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Feature<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of different suggestion features. One feature can have only one config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_suggestion_responses_python" style="color: inherit; text-decoration: inherit;">group_<wbr>suggestion_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1641,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationmodelconfig_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Model<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of custom conversation model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableeventbasedsuggestion_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Event<wbr>Based<wbr>Suggestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestionfeature_nodejs" style="color: inherit; text-decoration: inherit;">suggestion<wbr>Feature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeature">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeature">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suggestion feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestiontriggersettings_nodejs" style="color: inherit; text-decoration: inherit;">suggestion<wbr>Trigger<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_model_config_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>model_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of custom conversation model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_event_based_suggestion_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>event_<wbr>based_<wbr>suggestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestion_feature_python" style="color: inherit; text-decoration: inherit;">suggestion_<wbr>feature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeature">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeature">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suggestion feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestion_trigger_settings_python" style="color: inherit; text-decoration: inherit;">suggestion_<wbr>trigger_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1819,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversationmodelconfig_nodejs" style="color: inherit; text-decoration: inherit;">conversation<wbr>Model<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of custom conversation model.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableeventbasedsuggestion_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Event<wbr>Based<wbr>Suggestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestionfeature_nodejs" style="color: inherit; text-decoration: inherit;">suggestion<wbr>Feature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeatureresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeatureresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suggestion feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestiontriggersettings_nodejs" style="color: inherit; text-decoration: inherit;">suggestion<wbr>Trigger<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettingsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1863,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversation_model_config_python" style="color: inherit; text-decoration: inherit;">conversation_<wbr>model_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigconversationmodelconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Conversation<wbr>Model<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of custom conversation model.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1871,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_event_based_suggestion_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>event_<wbr>based_<wbr>suggestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1879,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configs of query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1887,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestion_feature_python" style="color: inherit; text-decoration: inherit;">suggestion_<wbr>feature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeatureresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2suggestionfeatureresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Suggestion<wbr>Feature<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suggestion feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1895,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suggestion_trigger_settings_python" style="color: inherit; text-decoration: inherit;">suggestion_<wbr>trigger_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestiontriggersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Trigger<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidencethreshold_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it defaults to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contextfiltersettings_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Filter<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how recent conversation context is filtered when generating suggestions. If unspecified, no messages will be dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dialogflowquerysource_nodejs" style="color: inherit; text-decoration: inherit;">dialogflow<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documentquerysource_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2045,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledgebasequerysource_nodejs" style="color: inherit; text-decoration: inherit;">knowledge<wbr>Base<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxresults_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is 20.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_threshold_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it defaults to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_filter_settings_python" style="color: inherit; text-decoration: inherit;">context_<wbr>filter_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettings">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how recent conversation context is filtered when generating suggestions. If unspecified, no messages will be dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dialogflow_query_source_python" style="color: inherit; text-decoration: inherit;">dialogflow_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_query_source_python" style="color: inherit; text-decoration: inherit;">document_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledge_base_query_source_python" style="color: inherit; text-decoration: inherit;">knowledge_<wbr>base_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysource">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_results_python" style="color: inherit; text-decoration: inherit;">max_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is 20.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2175,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drophandoffmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Handoff<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dropivrmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Ivr<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from ivr stage are dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dropvirtualagentmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Virtual<wbr>Agent<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from virtual agent are dropped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_handoff_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>handoff_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_ivr_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>ivr_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from ivr stage are dropped.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_virtual_agent_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>virtual_<wbr>agent_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from virtual agent are dropped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2289,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drophandoffmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Handoff<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2297,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dropivrmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Ivr<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from ivr stage are dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2305,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dropvirtualagentmessages_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Virtual<wbr>Agent<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from virtual agent are dropped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_handoff_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>handoff_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2325,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_ivr_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>ivr_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from ivr stage are dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2333,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_virtual_agent_messages_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>virtual_<wbr>agent_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, all messages from virtual agent are dropped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2371,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_nodejs" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2383,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_python" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_nodejs" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2433,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_python" style="color: inherit; text-decoration: inherit;">agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2471,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documents_nodejs" style="color: inherit; text-decoration: inherit;">documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2483,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documents_python" style="color: inherit; text-decoration: inherit;">documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2521,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documents_nodejs" style="color: inherit; text-decoration: inherit;">documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2533,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documents_python" style="color: inherit; text-decoration: inherit;">documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2571,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledgebases_nodejs" style="color: inherit; text-decoration: inherit;">knowledge<wbr>Bases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, at most 5 knowledge bases are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2583,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledge_bases_python" style="color: inherit; text-decoration: inherit;">knowledge_<wbr>bases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, at most 5 knowledge bases are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2621,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledgebases_nodejs" style="color: inherit; text-decoration: inherit;">knowledge<wbr>Bases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, at most 5 knowledge bases are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2633,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledge_bases_python" style="color: inherit; text-decoration: inherit;">knowledge_<wbr>bases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, at most 5 knowledge bases are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2751,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidencethreshold_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it defaults to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2759,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contextfiltersettings_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Filter<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettingsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how recent conversation context is filtered when generating suggestions. If unspecified, no messages will be dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2767,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dialogflowquerysource_nodejs" style="color: inherit; text-decoration: inherit;">dialogflow<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documentquerysource_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2783,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledgebasequerysource_nodejs" style="color: inherit; text-decoration: inherit;">knowledge<wbr>Base<wbr>Query<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxresults_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is 20.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2803,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_threshold_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it defaults to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#context_filter_settings_python" style="color: inherit; text-decoration: inherit;">context_<wbr>filter_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigcontextfiltersettingsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Context<wbr>Filter<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines how recent conversation context is filtered when generating suggestions. If unspecified, no messages will be dropped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2819,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dialogflow_query_source_python" style="color: inherit; text-decoration: inherit;">dialogflow_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdialogflowquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Dialogflow<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_query_source_python" style="color: inherit; text-decoration: inherit;">document_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigdocumentquerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Document<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#knowledge_base_query_source_python" style="color: inherit; text-decoration: inherit;">knowledge_<wbr>base_<wbr>query_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagentassistantconfigsuggestionqueryconfigknowledgebasequerysourceresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Assistant<wbr>Config<wbr>Suggestion<wbr>Query<wbr>Config<wbr>Knowledge<wbr>Base<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_results_python" style="color: inherit; text-decoration: inherit;">max_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is 20.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2897,7 +2926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nosmalltalk_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Smalltalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not trigger if last utterance is small talk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2905,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyenduser_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>End<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger suggestion if participant role of last utterance is END_USER.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2917,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#no_smalltalk_python" style="color: inherit; text-decoration: inherit;">no_<wbr>smalltalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not trigger if last utterance is small talk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_end_user_python" style="color: inherit; text-decoration: inherit;">only_<wbr>end_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger suggestion if participant role of last utterance is END_USER.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2979,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nosmalltalk_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Smalltalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not trigger if last utterance is small talk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2987,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlyenduser_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>End<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger suggestion if participant role of last utterance is END_USER.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2999,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#no_smalltalk_python" style="color: inherit; text-decoration: inherit;">no_<wbr>smalltalk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not trigger if last utterance is small talk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3007,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#only_end_user_python" style="color: inherit; text-decoration: inherit;">only_<wbr>end_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger suggestion if participant role of last utterance is END_USER.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livepersonconfig_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Person<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses LivePerson (https://www.liveperson.com).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3069,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salesforceliveagentconfig_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Live<wbr>Agent<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses Salesforce Live Agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3081,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_person_config_python" style="color: inherit; text-decoration: inherit;">live_<wbr>person_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses LivePerson (https://www.liveperson.com).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3089,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salesforce_live_agent_config_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>live_<wbr>agent_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfig">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses Salesforce Live Agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3127,7 +3156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountnumber_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Account number of the LivePerson account to connect. This is the account number you input at the login page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3139,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_number_python" style="color: inherit; text-decoration: inherit;">account_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Account number of the LivePerson account to connect. This is the account number you input at the login page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountnumber_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Account number of the LivePerson account to connect. This is the account number you input at the login page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3189,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_number_python" style="color: inherit; text-decoration: inherit;">account_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Account number of the LivePerson account to connect. This is the account number you input at the login page.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3243,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livepersonconfig_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Person<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses LivePerson (https://www.liveperson.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3251,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salesforceliveagentconfig_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Live<wbr>Agent<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses Salesforce Live Agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3263,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#live_person_config_python" style="color: inherit; text-decoration: inherit;">live_<wbr>person_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfiglivepersonconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Live<wbr>Person<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses LivePerson (https://www.liveperson.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3271,7 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salesforce_live_agent_config_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>live_<wbr>agent_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowv2humanagenthandoffconfigsalesforceliveagentconfigresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>V2Human<wbr>Agent<wbr>Handoff<wbr>Config<wbr>Salesforce<wbr>Live<wbr>Agent<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uses Salesforce Live Agent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buttonid_nodejs" style="color: inherit; text-decoration: inherit;">button<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent chat button ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent deployment ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointdomain_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The organization ID of the Salesforce account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3393,7 +3422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#button_id_python" style="color: inherit; text-decoration: inherit;">button_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent chat button ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3401,7 +3430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent deployment ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_domain_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3417,7 +3446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The organization ID of the Salesforce account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3503,7 +3532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buttonid_nodejs" style="color: inherit; text-decoration: inherit;">button<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent chat button ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3511,7 +3540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent deployment ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3519,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointdomain_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3527,7 +3556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The organization ID of the Salesforce account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3539,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#button_id_python" style="color: inherit; text-decoration: inherit;">button_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent chat button ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3547,7 +3576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Live Agent deployment ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3555,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_domain_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3563,7 +3592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The organization ID of the Salesforce account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3601,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3613,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3651,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3663,7 +3692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3717,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3725,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3737,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3799,7 +3828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3807,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3819,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Format of message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3827,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3865,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speechmodelvariant_nodejs" style="color: inherit; text-decoration: inherit;">speech<wbr>Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3877,7 +3906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speech_model_variant_python" style="color: inherit; text-decoration: inherit;">speech_<wbr>model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3915,7 +3944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speechmodelvariant_nodejs" style="color: inherit; text-decoration: inherit;">speech<wbr>Model<wbr>Variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3927,7 +3956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#speech_model_variant_python" style="color: inherit; text-decoration: inherit;">speech_<wbr>model_<wbr>variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3965,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3977,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4015,7 +4044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4027,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Human Agent Assistant API feature to request.{{% /md %}}</dd></dl>
 {{% /choosable %}}

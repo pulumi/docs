@@ -20,19 +20,39 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">custom_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enabled_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">custom_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">enabled_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.SslPolicyWarningsItemArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSslPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SslPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSslPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SslPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SslPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SslPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SslPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,7 +307,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -396,7 +426,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">[]Ssl<wbr>Policy<wbr>Warnings<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -408,7 +438,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -416,7 +446,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -424,7 +454,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,7 +462,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#customfeatures_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of features enabled when the selected profile is CUSTOM. The
 - method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.{{% /md %}}</dd><dt class="property-optional"
@@ -441,7 +471,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +479,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#enabledfeatures_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of features enabled in the SSL policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +487,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -467,7 +497,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +505,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +513,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +521,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +529,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +537,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +545,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -527,7 +557,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -535,7 +565,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +573,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +581,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#custom_features_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of features enabled when the selected profile is CUSTOM. The
 - method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.{{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +590,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +598,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#enabled_features_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] The list of features enabled in the SSL policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +606,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -586,7 +616,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +624,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +632,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +640,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +648,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +656,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +664,7 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,6 +729,410 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitem">Ssl<wbr>Policy<wbr>Warnings<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">[]Ssl<wbr>Policy<wbr>Data<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitem">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sslpolicywarningsitemresponse">Ssl<wbr>Policy<wbr>Warnings<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">[]Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sslpolicydataitemresponse">Ssl<wbr>Policy<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

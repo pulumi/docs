@@ -20,19 +20,43 @@ Creates a new empty dataset.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dataset_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.DatasetReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.EncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">access</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigquery_v2.DatasetAccessItemArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">dataset_reference</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.DatasetReferenceArgs]</span> = None<span class="p">,</span>
+            <span class="nx">default_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.EncryptionConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">default_partition_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">default_table_expiration_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +91,32 @@ Creates a new empty dataset.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -186,7 +220,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#datasetaccessitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Access<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +368,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#datasetaccessitem">[]Dataset<wbr>Access<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +500,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +508,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +516,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#datasetaccessitem">Dataset<wbr>Access<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +524,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +532,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasetreference_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">pulumi.<wbr>Input<Dataset<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +540,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">pulumi.<wbr>Input<Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +548,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultpartitionexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +556,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaulttableexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Table<wbr>Expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +564,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A user-friendly description of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +572,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A hash of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +580,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +588,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId. The dataset name without the project name is given in the datasetId field. When creating a new dataset, leave this field blank, and instead specify the datasetId field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +596,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +604,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +612,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +620,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +628,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>PZS</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output-only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +636,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output-only] A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +648,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +656,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +664,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#datasetaccessitem">Dataset<wbr>Access<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +672,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The time when this dataset was created, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +680,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dataset_reference_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Required] A reference that identifies the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +688,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +696,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +704,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +712,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] A user-friendly description of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +720,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A hash of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +728,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] A descriptive name for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +736,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The fully-qualified unique name of the dataset in the format projectId:datasetId. The dataset name without the project name is given in the datasetId field. When creating a new dataset, leave this field blank, and instead specify the datasetId field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +744,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +752,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +760,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +768,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +776,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output-only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +784,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output-only] A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,6 +854,782 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="datasetaccessentry">Dataset<wbr>Access<wbr>Entry</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_types_csharp">
+<a href="#target_types_csharp" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_types_go">
+<a href="#target_types_go" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitem">[]Dataset<wbr>Target_<wbr>types<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_types_nodejs">
+<a href="#target_types_nodejs" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_types_python">
+<a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetaccessentryresponse">Dataset<wbr>Access<wbr>Entry<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_types_csharp">
+<a href="#target_types_csharp" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_types_go">
+<a href="#target_types_go" style="color: inherit; text-decoration: inherit;">Target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitemresponse">[]Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_types_nodejs">
+<a href="#target_types_nodejs" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Required] The dataset this entry applies to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="target_types_python">
+<a href="#target_types_python" style="color: inherit; text-decoration: inherit;">target_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetaccessitem">Dataset<wbr>Access<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentry">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Access<wbr>Entry<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupbyemail_csharp">
+<a href="#groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iammember_csharp">
+<a href="#iammember_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routine_csharp">
+<a href="#routine_csharp" style="color: inherit; text-decoration: inherit;">Routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereference">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Routine<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specialgroup_csharp">
+<a href="#specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userbyemail_csharp">
+<a href="#userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_csharp">
+<a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereference">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentry">Dataset<wbr>Access<wbr>Entry</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupbyemail_go">
+<a href="#groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iammember_go">
+<a href="#iammember_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routine_go">
+<a href="#routine_go" style="color: inherit; text-decoration: inherit;">Routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specialgroup_go">
+<a href="#specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userbyemail_go">
+<a href="#userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_go">
+<a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentry">Dataset<wbr>Access<wbr>Entry<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupbyemail_nodejs">
+<a href="#groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iammember_nodejs">
+<a href="#iammember_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routine_nodejs">
+<a href="#routine_nodejs" style="color: inherit; text-decoration: inherit;">routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="specialgroup_nodejs">
+<a href="#specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userbyemail_nodejs">
+<a href="#userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_nodejs">
+<a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentry">Dataset<wbr>Access<wbr>Entry<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="group_by_email_python">
+<a href="#group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iam_member_python">
+<a href="#iam_member_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routine_python">
+<a href="#routine_python" style="color: inherit; text-decoration: inherit;">routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="special_group_python">
+<a href="#special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_by_email_python">
+<a href="#user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_python">
+<a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereference">Table<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasetaccessitemresponse">Dataset<wbr>Access<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentryresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Dataset<wbr>Access<wbr>Entry<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="groupbyemail_csharp">
+<a href="#groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iammember_csharp">
+<a href="#iammember_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_csharp">
+<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routine_csharp">
+<a href="#routine_csharp" style="color: inherit; text-decoration: inherit;">Routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereferenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Routine<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="specialgroup_csharp">
+<a href="#specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbyemail_csharp">
+<a href="#userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="view_csharp">
+<a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query.<wbr>V2.<wbr>Inputs.<wbr>Table<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentryresponse">Dataset<wbr>Access<wbr>Entry<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="groupbyemail_go">
+<a href="#groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iammember_go">
+<a href="#iammember_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_go">
+<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routine_go">
+<a href="#routine_go" style="color: inherit; text-decoration: inherit;">Routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereferenceresponse">Routine<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="specialgroup_go">
+<a href="#specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbyemail_go">
+<a href="#userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="view_go">
+<a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentryresponse">Dataset<wbr>Access<wbr>Entry<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="groupbyemail_nodejs">
+<a href="#groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iammember_nodejs">
+<a href="#iammember_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_nodejs">
+<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routine_nodejs">
+<a href="#routine_nodejs" style="color: inherit; text-decoration: inherit;">routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereferenceresponse">Routine<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="specialgroup_nodejs">
+<a href="#specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userbyemail_nodejs">
+<a href="#userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="view_nodejs">
+<a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetaccessentryresponse">Dataset<wbr>Access<wbr>Entry<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: "example.com". Maps to IAM policy member "domain:DOMAIN".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="group_by_email_python">
+<a href="#group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member "group:GROUP".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="iam_member_python">
+<a href="#iam_member_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>member</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="role_python">
+<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] An IAM role ID that should be granted to the user, group, or domain specified in this access entry. The following legacy mappings will be applied: OWNER  roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer This field will accept any of the above formats, but will return only the legacy format. For example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routine_python">
+<a href="#routine_python" style="color: inherit; text-decoration: inherit;">routine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routinereferenceresponse">Routine<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="special_group_python">
+<a href="#special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_by_email_python">
+<a href="#user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="view_python">
+<a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablereferenceresponse">Table<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="datasetreference">Dataset<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
@@ -869,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The ID of the project containing this dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The ID of the project containing this dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] The ID of the project containing this dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,9 +1789,109 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] The ID of the project containing this dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasettarget_typesitem">Dataset<wbr>Target_<wbr>types<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_csharp">
+<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_go">
+<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="targettype_nodejs">
+<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datasettarget_typesitemresponse">Dataset<wbr>Target_<wbr>types<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_csharp">
+<a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_go">
+<a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targettype_nodejs">
+<a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="target_type_python">
+<a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS: This entry applies to all views in the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionconfiguration">Encryption<wbr>Configuration</h4>
@@ -1017,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1029,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,9 +1989,465 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routinereference">Routine<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routineid_csharp">
+<a href="#routineid_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routineid_go">
+<a href="#routineid_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routineid_nodejs">
+<a href="#routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="routine_id_python">
+<a href="#routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routinereferenceresponse">Routine<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routineid_csharp">
+<a href="#routineid_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routineid_go">
+<a href="#routineid_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routineid_nodejs">
+<a href="#routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="routine_id_python">
+<a href="#routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablereference">Table<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tableid_csharp">
+<a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tableid_go">
+<a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tableid_nodejs">
+<a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="table_id_python">
+<a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablereferenceresponse">Table<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tableid_csharp">
+<a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tableid_go">
+<a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tableid_nodejs">
+<a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the dataset containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the project containing this table.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="table_id_python">
+<a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

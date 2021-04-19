@@ -20,19 +20,38 @@ Parses and stores an HL7v2 message. This method triggers an asynchronous notific
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">hl7_v2_stores_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">message_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">messages_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">patient_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_healthcare_v1beta1.PatientIdArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schematized_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_healthcare_v1beta1.SchematizedDataArgs]]</span> = None<span class="p">, </span><span class="nx">send_facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">send_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">hl7_v2_stores_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                             <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">message_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">messages_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">patient_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[_healthcare_v1beta1.PatientIdArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">schematized_data</span><span class="p">:</span> <span class="nx">Optional[_healthcare_v1beta1.SchematizedDataArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">send_facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">send_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetHl7V2StoreMessage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatasetHl7V2StoreMessage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatasetHl7V2StoreMessage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Parses and stores an HL7v2 message. This method triggers an asynchronous notific
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetHl7V2StoreMessageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#hl7v2storesid_nodejs" style="color: inherit; text-decoration: inherit;">hl7V2Stores<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +439,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#messagesid_nodejs" style="color: inherit; text-decoration: inherit;">messages<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -418,7 +447,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw message bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message type for this message. MSH-9.1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#patientids_nodejs" style="color: inherit; text-decoration: inherit;">patient<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patientid">pulumi.<wbr>Input<pulumi.<wbr>Input<Patient<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patientid">Patient<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#schematizeddata_nodejs" style="color: inherit; text-decoration: inherit;">schematized<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schematizeddata">pulumi.<wbr>Input<Schematized<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#schematizeddata">Schematized<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parsed version of the raw message data schematized according to this store's schemas and type definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#sendfacility_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hospital that this message came from. MSH-4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#sendtime_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datetime the sending application sent this message. MSH-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#hl7_v2_stores_id_python" style="color: inherit; text-decoration: inherit;">hl7_<wbr>v2_<wbr>stores_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -518,7 +547,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#messages_id_python" style="color: inherit; text-decoration: inherit;">messages_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +555,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raw message bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The message type for this message. MSH-9.1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#patient_ids_python" style="color: inherit; text-decoration: inherit;">patient_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patientid">Patient<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patientid">Patient<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#schematized_data_python" style="color: inherit; text-decoration: inherit;">schematized_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schematizeddata">Schematized<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schematizeddata">Schematized<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parsed version of the raw message data schematized according to this store's schemas and type definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#send_facility_python" style="color: inherit; text-decoration: inherit;">send_<wbr>facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hospital that this message came from. MSH-4.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The DatasetHl7V2StoreMessage resource accepts the following [input]({{< relref "
 <a href="#send_time_python" style="color: inherit; text-decoration: inherit;">send_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datetime the sending application sent this message. MSH-7.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Segment<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#segmentresponse">Segment<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentresponse">Segment<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#segmentresponse">Segment<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID type. For example, MRN or NHS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The patient's unique identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID type. For example, MRN or NHS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The patient's unique identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID type. For example, MRN or NHS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -913,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The patient's unique identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID type. For example, MRN or NHS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -933,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The patient's unique identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON output of the parser.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error output of the parser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON output of the parser.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error output of the parser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON output of the parser.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1077,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error output of the parser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON output of the parser.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1097,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error output of the parser.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, "hemoglobin") denotes that the first component of Field 0 has the value "hemoglobin". * (1.1.2, "CBC") denotes that the second sub-component of the first component of Field 1 has the value "CBC". * (1[0].1, "HbA1c") denotes that the first component of the first Instance of Field 1, which is repeated, has the value "HbA1c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentid_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that indicates the type of segment. For example, EVN or PID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setid_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set ID for segments that can be in a set. This can be empty if it's missing or isn't applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, "hemoglobin") denotes that the first component of Field 0 has the value "hemoglobin". * (1.1.2, "CBC") denotes that the second sub-component of the first component of Field 1 has the value "CBC". * (1[0].1, "HbA1c") denotes that the first component of the first Instance of Field 1, which is repeated, has the value "HbA1c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_id_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that indicates the type of segment. For example, EVN or PID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#set_id_python" style="color: inherit; text-decoration: inherit;">set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set ID for segments that can be in a set. This can be empty if it's missing or isn't applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}

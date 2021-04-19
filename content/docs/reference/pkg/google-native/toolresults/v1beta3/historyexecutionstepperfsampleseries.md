@@ -20,19 +20,31 @@ Creates a PerfSampleSeries. May return any of the following error code(s): - ALR
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_perf_sample_series</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.BasicPerfSampleSeriesArgs]]</span> = None<span class="p">, </span><span class="nx">execution_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">history_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">sample_series_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                         <span class="nx">basic_perf_sample_series</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.BasicPerfSampleSeriesArgs]</span> = None<span class="p">,</span>
+                                         <span class="nx">execution_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">history_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">sample_series_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                         <span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HistoryExecutionStepPerfSampleSeries</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HistoryExecutionStepPerfSampleSeries</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HistoryExecutionStepPerfSampleSeries</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +79,32 @@ Creates a PerfSampleSeries. May return any of the following error code(s): - ALR
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HistoryExecutionStepPerfSampleSeriesArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +296,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#executionid_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A tool results execution ID. @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -282,7 +304,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#historyid_nodejs" style="color: inherit; text-decoration: inherit;">history<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A tool results history ID. @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -290,7 +312,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cloud project @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +320,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#sampleseriesid_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Series<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A sample series id @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +328,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A tool results step ID. @OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#basicperfsampleseries_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Perf<wbr>Sample<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicperfsampleseries">pulumi.<wbr>Input<Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicperfsampleseries">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic series represented by a line chart{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -326,7 +348,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#execution_id_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A tool results execution ID. @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -334,7 +356,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#history_id_python" style="color: inherit; text-decoration: inherit;">history_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A tool results history ID. @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -342,7 +364,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cloud project @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -350,7 +372,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#sample_series_id_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>series_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A sample series id @OutputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +380,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A tool results step ID. @OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The HistoryExecutionStepPerfSampleSeries resource accepts the following [input](
 <a href="#basic_perf_sample_series_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>perf_<wbr>sample_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicperfsampleseries">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicperfsampleseries">Basic<wbr>Perf<wbr>Sample<wbr>Series<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic series represented by a line chart{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -501,7 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfunit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -517,7 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleserieslabel_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Series<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -529,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_metric_type_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>metric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -537,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_unit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_series_label_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>series_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Metric<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfunit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -631,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampleserieslabel_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Series<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -643,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_metric_type_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>metric_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -651,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_unit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_series_label_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>series_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,73 @@ Creates a persistent disk in the specified project using the data in the request
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.GuestOsFeatureArgs]]]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">last_attach_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_detach_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">license_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">location_hint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">multi_writer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">provisioned_iops</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replica_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_in_place_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_in_place_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_instant_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_instant_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_storage_object</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_licenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+         <span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+         <span class="nx">last_attach_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">last_detach_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">license_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">location_hint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">multi_writer</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">provisioned_iops</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">replica_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">size_gb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+         <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_in_place_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_in_place_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_instant_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_instant_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+         <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">source_storage_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">user_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +121,32 @@ Creates a persistent disk in the specified project using the data in the request
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DiskArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1038,7 +1102,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1046,7 +1110,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1054,7 +1118,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the disk resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1126,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1134,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1142,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 
@@ -1092,7 +1156,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#erasewindowsvsssignature_nodejs" style="color: inherit; text-decoration: inherit;">erase<wbr>Windows<wbr>Vss<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1164,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1172,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1180,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1188,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#disk for disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1196,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this disk, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1142,7 +1206,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1214,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#lastattachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attach<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last attach timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1222,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#lastdetachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detach<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last detach timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1230,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#licensecodes_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1238,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1246,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the disk close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1254,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1262,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1270,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal use only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1278,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#physicalblocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Block<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1286,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#provisionediops_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1294,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the disk resides. Only applicable for regional resources. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1302,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#replicazones_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to. Only applicable for regional resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1310,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1318,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1326,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1334,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource's resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1342,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk.
 
@@ -1288,7 +1352,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  
@@ -1302,7 +1366,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#sourcediskid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the disk used to create this disk. This value identifies the exact disk that was used to create this persistent disk. For example, if you created the persistent disk from a disk that was later deleted and recreated under the same name, the source disk ID would identify the exact version of the disk that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1374,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source image used to create this disk. If the source image is deleted, this field will not be set.
 
@@ -1333,7 +1397,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1405,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1413,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceinplacesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>In<wbr>Place<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
@@ -1360,7 +1424,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceinplacesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>In<wbr>Place<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1432,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceinstantsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instant<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot 
@@ -1379,7 +1443,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourceinstantsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instant<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the instant snapshot used to create this disk. This value identifies the exact instant snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an instant snapshot that was later deleted and recreated under the same name, the source instant snapshot ID would identify the exact version of the instant snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1451,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot 
@@ -1398,7 +1462,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1470,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1478,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#sourcestorageobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Storage<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1486,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1435,7 +1499,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1507,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or pd-ssd{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1515,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#userlicenses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license:
 https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch{{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1524,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Links to the users of the disk (attached instances) in form: projects/project/zones/zone/instances/instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,7 +1536,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1480,7 +1544,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1488,7 +1552,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the disk resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1560,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1568,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1576,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 
@@ -1526,7 +1590,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#erase_windows_vss_signature_python" style="color: inherit; text-decoration: inherit;">erase_<wbr>windows_<wbr>vss_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1598,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1606,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1614,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1558,7 +1622,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#disk for disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1630,7 @@ If you do not provide an encryption key when creating the disk, then the disk wi
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this disk, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1576,7 +1640,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1584,7 +1648,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#last_attach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attach_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last attach timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1592,7 +1656,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#last_detach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detach_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last detach timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1600,7 +1664,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#license_codes_python" style="color: inherit; text-decoration: inherit;">license_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Integer license codes indicating which licenses are attached to this disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1608,7 +1672,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of publicly visible licenses. Reserved for Google's use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1616,7 +1680,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the disk close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1624,7 +1688,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1696,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1704,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal use only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1712,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#physical_block_size_bytes_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>block_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. The currently supported size is 4096, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1656,7 +1720,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#provisioned_iops_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1664,7 +1728,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the disk resides. Only applicable for regional resources. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1736,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#replica_zones_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to. Only applicable for regional resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1680,7 +1744,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1752,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1760,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1768,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource's resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1776,7 @@ To see the latest fingerprint, make a get() request to retrieve a disk.{{% /md %
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk.
 
@@ -1722,7 +1786,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  
@@ -1736,7 +1800,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#source_disk_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the disk used to create this disk. This value identifies the exact disk that was used to create this persistent disk. For example, if you created the persistent disk from a disk that was later deleted and recreated under the same name, the source disk ID would identify the exact version of the disk that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1808,7 @@ If you specify this field along with a source, the value of sizeGb must not be l
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source image used to create this disk. If the source image is deleted, this field will not be set.
 
@@ -1767,7 +1831,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1839,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1847,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_in_place_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>in_<wbr>place_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
@@ -1794,7 +1858,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_in_place_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>in_<wbr>place_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1866,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_instant_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instant_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot 
@@ -1813,7 +1877,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_instant_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instant_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the instant snapshot used to create this disk. This value identifies the exact instant snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an instant snapshot that was later deleted and recreated under the same name, the source instant snapshot ID would identify the exact version of the instant snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1885,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot 
@@ -1832,7 +1896,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1904,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1912,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#source_storage_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>storage_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1920,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of disk creation.  
 - CREATING: Disk is provisioning. 
@@ -1869,7 +1933,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1941,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard  or pd-ssd{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1949,7 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 <a href="#user_licenses_python" style="color: inherit; text-decoration: inherit;">user_<wbr>licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license:
 https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch{{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1958,7 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Links to the users of the disk (attached instances) in form: projects/project/zones/zone/instances/instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2135,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2079,7 +2143,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2151,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2159,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -2108,7 +2172,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2120,7 +2184,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +2192,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2200,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2208,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -2157,7 +2221,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2269,7 +2333,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2277,7 +2341,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2285,7 +2349,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2293,7 +2357,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -2306,7 +2370,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2318,7 +2382,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2326,7 +2390,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2334,7 +2398,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2342,7 +2406,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -2355,7 +2419,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2457,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2405,7 +2469,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2507,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2455,7 +2519,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}

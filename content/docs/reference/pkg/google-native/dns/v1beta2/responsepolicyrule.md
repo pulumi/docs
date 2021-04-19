@@ -20,19 +20,33 @@ Creates a new Response Policy Rule.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">local_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dns_v1beta2.ResponsePolicyRuleLocalDataArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">response_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">response_policy_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">local_data</span><span class="p">:</span> <span class="nx">Optional[_dns_v1beta2.ResponsePolicyRuleLocalDataArgs]</span> = None<span class="p">,</span>
+                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">response_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">response_policy_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResponsePolicyRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResponsePolicyRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResponsePolicyRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResponsePolicyRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResponsePolicyRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ResponsePolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a new Response Policy Rule.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ResponsePolicyRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#responsepolicy_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#responsepolicyrule_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Policy<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#localdata_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsepolicyrulelocaldata">pulumi.<wbr>Input<Response<wbr>Policy<wbr>Rule<wbr>Local<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#responsepolicyrulelocaldata">Response<wbr>Policy<wbr>Rule<wbr>Local<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for this rule. Must be unique with the ResponsePolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#response_policy_python" style="color: inherit; text-decoration: inherit;">response_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#response_policy_rule_python" style="color: inherit; text-decoration: inherit;">response_<wbr>policy_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Answer this query with a behavior rather than DNS data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#local_data_python" style="color: inherit; text-decoration: inherit;">local_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsepolicyrulelocaldata">Response<wbr>Policy<wbr>Rule<wbr>Local<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responsepolicyrulelocaldata">Response<wbr>Policy<wbr>Rule<wbr>Local<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The ResponsePolicyRule resource accepts the following [input]({{< relref "/docs/
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for this rule. Must be unique with the ResponsePolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturerrdatas_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 4034 (section 3.2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds that this ResourceRecordSet can be cached by resolvers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of a supported record type. See the list of Supported DNS record types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_rrdatas_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 4034 (section 3.2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds that this ResourceRecordSet can be cached by resolvers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of a supported record type. See the list of Supported DNS record types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturerrdatas_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 4034 (section 3.2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds that this ResourceRecordSet can be cached by resolvers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of a supported record type. See the list of Supported DNS record types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For example, www.example.com.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -891,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_rrdatas_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>rrdatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}As defined in RFC 4034 (section 3.2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds that this ResourceRecordSet can be cached by resolvers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of a supported record type. See the list of Supported DNS record types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localdatas_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecordset">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Record<wbr>Set<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcerecordset">Resource<wbr>Record<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}All resource record sets for this selector, one per resource record type. The name must match the dns_name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -965,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_datas_python" style="color: inherit; text-decoration: inherit;">local_<wbr>datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecordset">Resource<wbr>Record<wbr>Set<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcerecordset">Resource<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All resource record sets for this selector, one per resource record type. The name must match the dns_name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localdatas_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecordsetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Record<wbr>Set<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcerecordsetresponse">Resource<wbr>Record<wbr>Set<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}All resource record sets for this selector, one per resource record type. The name must match the dns_name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_datas_python" style="color: inherit; text-decoration: inherit;">local_<wbr>datas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerecordsetresponse">Resource<wbr>Record<wbr>Set<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcerecordsetresponse">Resource<wbr>Record<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}All resource record sets for this selector, one per resource record type. The name must match the dns_name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

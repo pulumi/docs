@@ -11,12 +11,7 @@ Explore the resources and functions of the google-native.run/v1alpha1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="domainmapping" title="Domainmapping"><span class="symbol resource"></span>Domainmapping</a></li>
-    <li><a href="namespacedomainmapping" title="NamespaceDomainmapping"><span class="symbol resource"></span>NamespaceDomainmapping</a></li>
     <li><a href="namespacejob" title="NamespaceJob"><span class="symbol resource"></span>NamespaceJob</a></li>
-    <li><a href="namespaceservice" title="NamespaceService"><span class="symbol resource"></span>NamespaceService</a></li>
-    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +21,6 @@ Explore the resources and functions of the google-native.run/v1alpha1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.1.0</dd>
 </dl>
 

@@ -15,10 +15,12 @@ Explore the resources and functions of the google-native.apigee/v1 module.
     <li><a href="organizationanalyticdatastore" title="OrganizationAnalyticDatastore"><span class="symbol resource"></span>OrganizationAnalyticDatastore</a></li>
     <li><a href="organizationapi" title="OrganizationApi"><span class="symbol resource"></span>OrganizationApi</a></li>
     <li><a href="organizationapiproduct" title="OrganizationApiproduct"><span class="symbol resource"></span>OrganizationApiproduct</a></li>
+    <li><a href="organizationapiproductrateplan" title="OrganizationApiproductRateplan"><span class="symbol resource"></span>OrganizationApiproductRateplan</a></li>
     <li><a href="organizationdatacollector" title="OrganizationDatacollector"><span class="symbol resource"></span>OrganizationDatacollector</a></li>
     <li><a href="organizationdeveloper" title="OrganizationDeveloper"><span class="symbol resource"></span>OrganizationDeveloper</a></li>
     <li><a href="organizationdeveloperapp" title="OrganizationDeveloperApp"><span class="symbol resource"></span>OrganizationDeveloperApp</a></li>
     <li><a href="organizationdeveloperappkey" title="OrganizationDeveloperAppKey"><span class="symbol resource"></span>OrganizationDeveloperAppKey</a></li>
+    <li><a href="organizationdevelopersubscription" title="OrganizationDeveloperSubscription"><span class="symbol resource"></span>OrganizationDeveloperSubscription</a></li>
     <li><a href="organizationenvgroup" title="OrganizationEnvgroup"><span class="symbol resource"></span>OrganizationEnvgroup</a></li>
     <li><a href="organizationenvgroupattachment" title="OrganizationEnvgroupAttachment"><span class="symbol resource"></span>OrganizationEnvgroupAttachment</a></li>
     <li><a href="organizationenvironment" title="OrganizationEnvironment"><span class="symbol resource"></span>OrganizationEnvironment</a></li>
@@ -49,6 +51,6 @@ Explore the resources and functions of the google-native.apigee/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.1.0</dd>
 </dl>
 

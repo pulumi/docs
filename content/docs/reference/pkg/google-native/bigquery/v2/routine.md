@@ -20,19 +20,38 @@ Creates a new routine in the dataset.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arguments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_bigquery_v2.ArgumentArgs]]]]</span> = None<span class="p">, </span><span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">definition_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">determinism_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">imported_libraries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">return_table_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.StandardSqlTableTypeArgs]]</span> = None<span class="p">, </span><span class="nx">return_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.StandardSqlDataTypeArgs]]</span> = None<span class="p">, </span><span class="nx">routine_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_bigquery_v2.RoutineReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">routines_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">arguments</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigquery_v2.ArgumentArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">definition_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">determinism_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">imported_libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">return_table_type</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.StandardSqlTableTypeArgs]</span> = None<span class="p">,</span>
+            <span class="nx">return_type</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.StandardSqlDataTypeArgs]</span> = None<span class="p">,</span>
+            <span class="nx">routine_reference</span><span class="p">:</span> <span class="nx">Optional[_bigquery_v2.RoutineReferenceArgs]</span> = None<span class="p">,</span>
+            <span class="nx">routine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">routines_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoutine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Routine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoutine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Routine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Routine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RoutineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +86,32 @@ Creates a new routine in the dataset.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RoutineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -386,7 +415,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +423,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -402,7 +431,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinesid_nodejs" style="color: inherit; text-decoration: inherit;">routines<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +439,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">pulumi.<wbr>Input<pulumi.<wbr>Input<Argument<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#argument">Argument<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +447,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#definitionbody_nodejs" style="color: inherit; text-decoration: inherit;">definition<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +455,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +463,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinismlevel_nodejs" style="color: inherit; text-decoration: inherit;">determinism<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +471,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#importedlibraries_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +479,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +487,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#returntabletype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Table<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqltabletype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +495,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#returntype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +503,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinereference_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routinereference">pulumi.<wbr>Input<Routine<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Reference describing the ID of this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +511,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routinetype_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +523,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +531,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +539,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routines_id_python" style="color: inherit; text-decoration: inherit;">routines_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +547,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Argument<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#argument">Argument<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +555,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#definition_body_python" style="color: inherit; text-decoration: inherit;">definition_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The description of the routine if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +571,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#determinism_level_python" style="color: inherit; text-decoration: inherit;">determinism_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. [Experimental] The determinism level of the JavaScript UDF if defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#imported_libraries_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to "SQL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#return_table_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>table_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqltabletype">Standard<wbr>Sql<wbr>Table<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#return_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routine_reference_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routinereference">Routine<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Reference describing the ID of this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#routine_type_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of routine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argumentkind_nodejs" style="color: inherit; text-decoration: inherit;">argument<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required unless argument_kind = ANY_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argument_kind_python" style="color: inherit; text-decoration: inherit;">argument_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required unless argument_kind = ANY_TYPE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argumentkind_nodejs" style="color: inherit; text-decoration: inherit;">argument<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -991,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required unless argument_kind = ANY_TYPE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -999,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#argument_kind_python" style="color: inherit; text-decoration: inherit;">argument_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Defaults to FIXED_TYPE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1027,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required unless argument_kind = ANY_TYPE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1035,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies whether the argument is input or output. Can be set for procedures only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this argument. Can be absent for function return argument.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1141,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1235,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the dataset containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the project containing this routine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1341,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayelementtype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Element<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of the array's elements, if type_kind = "ARRAY".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtype_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlstructtype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqlstructtype">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields of this struct, in order, if type_kind = "STRUCT".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typekind_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1369,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_element_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>element_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of the array's elements, if type_kind = "ARRAY".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_type_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlstructtype">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqlstructtype">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields of this struct, in order, if type_kind = "STRUCT".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_kind_python" style="color: inherit; text-decoration: inherit;">type_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayelementtype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Element<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of the array's elements, if type_kind = "ARRAY".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structtype_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlstructtyperesponse">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqlstructtyperesponse">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields of this struct, in order, if type_kind = "STRUCT".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1471,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typekind_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1483,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_element_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>element_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The type of the array's elements, if type_kind = "ARRAY".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#struct_type_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlstructtyperesponse">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqlstructtyperesponse">Standard<wbr>Sql<wbr>Struct<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fields of this struct, in order, if type_kind = "STRUCT".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_kind_python" style="color: inherit; text-decoration: inherit;">type_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this field. Can be absent for struct fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1573,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this field. Can be absent for struct fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatype">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this field. Can be absent for struct fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1643,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1655,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of this field. Can be absent for struct fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardsqldatatyperesponse">Standard<wbr>Sql<wbr>Data<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfield">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Field<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1751,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfieldresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1763,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfield">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Field<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns in this table type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardsqlfield">Standard<wbr>Sql<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns in this table type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfieldresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns in this table type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1863,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardsqlfieldresponse">Standard<wbr>Sql<wbr>Field<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns in this table type{{% /md %}}</dd></dl>
 {{% /choosable %}}

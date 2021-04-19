@@ -20,19 +20,36 @@ Creates a device registry that contains devices.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudiot_v1.RegistryCredentialArgs]]]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudiot_v1.EventNotificationConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.HttpConfigArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.MqttConfigArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">registries_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudiot_v1.StateNotificationConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudiot_v1.RegistryCredentialArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudiot_v1.EventNotificationConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.HttpConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.MqttConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">registries_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[_cloudiot_v1.StateNotificationConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a device registry that contains devices.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegistryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +381,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +389,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -370,7 +397,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registriesid_nodejs" style="color: inherit; text-decoration: inherit;">registries<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +405,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Registry<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#registrycredential">Registry<wbr>Credential<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +413,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#eventnotificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventnotificationconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Notification<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventnotificationconfig">Event<wbr>Notification<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +421,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">pulumi.<wbr>Input<Http<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpconfig">Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DeviceService (HTTP) configuration for this device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +429,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of this device registry. For example, `myRegistry`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +437,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +445,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mqttconfig_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mqttconfig">pulumi.<wbr>Input<Mqtt<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#mqttconfig">Mqtt<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MQTT configuration for this device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +453,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +461,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#statenotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statenotificationconfig">pulumi.<wbr>Input<State<wbr>Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#statenotificationconfig">State<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +473,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -454,7 +481,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +489,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registries_id_python" style="color: inherit; text-decoration: inherit;">registries_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +497,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">Registry<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#registrycredential">Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +505,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventnotificationconfig">Event<wbr>Notification<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventnotificationconfig">Event<wbr>Notification<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +513,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">Http<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpconfig">Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DeviceService (HTTP) configuration for this device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +521,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of this device registry. For example, `myRegistry`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +529,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +537,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mqttconfig">Mqtt<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mqttconfig">Mqtt<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MQTT configuration for this device registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +545,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +553,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statenotificationconfig">State<wbr>Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statenotificationconfig">State<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfoldermatches_nodejs" style="color: inherit; text-decoration: inherit;">subfolder<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfolder_matches_python" style="color: inherit; text-decoration: inherit;">subfolder_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -735,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfoldermatches_nodejs" style="color: inherit; text-decoration: inherit;">subfolder<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfolder_matches_python" style="color: inherit; text-decoration: inherit;">subfolder_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_enabled_state_python" style="color: inherit; text-decoration: inherit;">http_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_enabled_state_python" style="color: inherit; text-decoration: inherit;">http_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqttenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqtt_enabled_state_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqttenabledstate_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Enabled<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mqtt_enabled_state_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>enabled_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1025,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509details_nodejs" style="color: inherit; text-decoration: inherit;">x509Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatedetails">pulumi.<wbr>Input<X509Certificate<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#x509certificatedetails">X509Certificate<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The certificate details. Used only for X.509 certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509_details_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatedetails">X509Certificate<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatedetails">X509Certificate<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The certificate details. Used only for X.509 certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509details_nodejs" style="color: inherit; text-decoration: inherit;">x509Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatedetailsresponse">pulumi.<wbr>Input<X509Certificate<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#x509certificatedetailsresponse">X509Certificate<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The certificate details. Used only for X.509 certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509_details_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatedetailsresponse">X509Certificate<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatedetailsresponse">X509Certificate<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output only] The certificate details. Used only for X.509 certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeycertificate_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycertificate">pulumi.<wbr>Input<Public<wbr>Key<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeycertificate">Public<wbr>Key<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate used to verify the device credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycertificate">Public<wbr>Key<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeycertificate">Public<wbr>Key<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate used to verify the device credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeycertificate_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycertificateresponse">pulumi.<wbr>Input<Public<wbr>Key<wbr>Certificate<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeycertificateresponse">Public<wbr>Key<wbr>Certificate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate used to verify the device credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeycertificateresponse">Public<wbr>Key<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeycertificateresponse">Public<wbr>Key<wbr>Certificate<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate used to verify the device credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1321,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1371,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1501,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity that signed the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeytype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of public key in the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to sign the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity the certificate and public key belong to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity that signed the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of public key in the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm used to sign the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity the certificate and public key belong to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes invalid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity that signed the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeytype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of public key in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1735,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to sign the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity the certificate and public key belong to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1763,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes invalid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity that signed the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of public key in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm used to sign the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the certificate becomes valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity the certificate and public key belong to.{{% /md %}}</dd></dl>
 {{% /choosable %}}

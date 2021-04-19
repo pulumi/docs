@@ -20,19 +20,33 @@ Create a new Certificate in a given Project, Location from a particular Certific
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authorities_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">certificates_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_privateca_v1beta1.CertificateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                    <span class="nx">certificate_authorities_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">certificates_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.CertificateConfigArgs]</span> = None<span class="p">,</span>
+                                    <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthorityCertificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthorityCertificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CertificateAuthorityCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Create a new Certificate in a given Project, Location from a particular Certific
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CertificateAuthorityCertificateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#certificateauthoritiesid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authorities<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#certificatesid_nodejs" style="color: inherit; text-decoration: inherit;">certificates<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -322,7 +346,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +354,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. A description of the certificate and key that does not require X.509 or ASN.1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Labels with user-defined metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#pemcsr_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#certificate_authorities_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authorities_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#certificates_id_python" style="color: inherit; text-decoration: inherit;">certificates_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +414,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -398,7 +422,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. A description of the certificate and key that does not require X.509 or ASN.1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Labels with user-defined metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The CertificateAuthorityCertificate resource accepts the following [input]({{< r
 <a href="#pem_csr_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isca_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxissuerpathlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Issuer<wbr>Path<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_ca_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_issuer_path_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>issuer_<wbr>path_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isca_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxissuerpathlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Issuer<wbr>Path<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_ca_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_issuer_path_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>issuer_<wbr>path_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickey">pulumi.<wbr>Input<Public<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickey">Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigwrapper">pulumi.<wbr>Input<Reusable<wbr>Config<wbr>Wrapper<wbr>Args></a></span>
+        <span class="property-type"><a href="#reusableconfigwrapper">Reusable<wbr>Config<wbr>Wrapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how some of the technical fields in a certificate should be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectconfig">pulumi.<wbr>Input<Subject<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectconfig">Subject<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies some of the values in a certificate that are related to the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -981,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickey">Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickey">Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigwrapper">Reusable<wbr>Config<wbr>Wrapper<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reusableconfigwrapper">Reusable<wbr>Config<wbr>Wrapper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how some of the technical fields in a certificate should be populated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectconfig">Subject<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectconfig">Subject<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies some of the values in a certificate that are related to the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeyresponse">pulumi.<wbr>Input<Public<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigwrapperresponse">pulumi.<wbr>Input<Reusable<wbr>Config<wbr>Wrapper<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reusableconfigwrapperresponse">Reusable<wbr>Config<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how some of the technical fields in a certificate should be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectconfigresponse">pulumi.<wbr>Input<Subject<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectconfigresponse">Subject<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies some of the values in a certificate that are related to the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigwrapperresponse">Reusable<wbr>Config<wbr>Wrapper<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reusableconfigwrapperresponse">Reusable<wbr>Config<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Describes how some of the technical fields in a certificate should be populated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectconfigresponse">Subject<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectconfigresponse">Subject<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies some of the values in a certificate that are related to the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aiaissuingcertificateurls_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Issuing<wbr>Certificate<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1269,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authoritykeyid_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyidresponse">pulumi.<wbr>Input<Key<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1277,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatefingerprintresponse">pulumi.<wbr>Input<Certificate<wbr>Fingerprint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatefingerprintresponse">Certificate<wbr>Fingerprint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hash of the x.509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1285,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configvalues_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvaluesresponse">pulumi.<wbr>Input<Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes some of the technical fields in a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1293,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1301,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeyresponse">pulumi.<wbr>Input<Public<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The public key that corresponds to an issued certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1309,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectdescription_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectdescriptionresponse">pulumi.<wbr>Input<Subject<wbr>Description<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectdescriptionresponse">Subject<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes some of the values in a certificate that are related to the subject and lifetime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1317,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyidresponse">pulumi.<wbr>Input<Key<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aia_issuing_certificate_urls_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>issuing_<wbr>certificate_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1337,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_key_id_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1345,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_fingerprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatefingerprintresponse">Certificate<wbr>Fingerprint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatefingerprintresponse">Certificate<wbr>Fingerprint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hash of the x.509 certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1353,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_values_python" style="color: inherit; text-decoration: inherit;">config_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes some of the technical fields in a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1361,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1369,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publickeyresponse">Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The public key that corresponds to an issued certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1377,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_description_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectdescriptionresponse">Subject<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectdescriptionresponse">Subject<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes some of the values in a certificate that are related to the subject and lifetime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1385,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_key_id_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyidresponse">Key<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha256hash_nodejs" style="color: inherit; text-decoration: inherit;">sha256Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha256_hash_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauth_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codesigning_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailprotection_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ocspsigning_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverauth_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamping_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1605,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_auth_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_signing_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_protection_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ocsp_signing_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_auth_python" style="color: inherit; text-decoration: inherit;">server_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_stamping_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1763,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauth_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codesigning_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailprotection_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ocspsigning_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverauth_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamping_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_auth_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_signing_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1831,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_protection_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1839,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ocsp_signing_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1847,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_auth_python" style="color: inherit; text-decoration: inherit;">server_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1855,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_stamping_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1905,7 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1975,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageoptions">pulumi.<wbr>Input<Key<wbr>Usage<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyusageoptions">Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes high-level ways in which a key may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedkeyusageoptions">pulumi.<wbr>Input<Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#extendedkeyusageoptions">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed scenarios in which a key may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageoptions">Key<wbr>Usage<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyusageoptions">Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes high-level ways in which a key may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedkeyusageoptions">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extendedkeyusageoptions">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed scenarios in which a key may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certsign_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to sign certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentcommitment_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crlsign_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used sign certificate revocation lists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataencipherment_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decipheronly_nodejs" style="color: inherit; text-decoration: inherit;">decipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to decipher only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digitalsignature_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used for digital signatures.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encipheronly_nodejs" style="color: inherit; text-decoration: inherit;">encipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyagreement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used in a key agreement protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2249,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencipherment_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher other keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2261,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_sign_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to sign certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_commitment_python" style="color: inherit; text-decoration: inherit;">content_<wbr>commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crl_sign_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used sign certificate revocation lists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_encipherment_python" style="color: inherit; text-decoration: inherit;">data_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decipher_only_python" style="color: inherit; text-decoration: inherit;">decipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to decipher only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digital_signature_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used for digital signatures.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encipher_only_python" style="color: inherit; text-decoration: inherit;">encipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_agreement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used in a key agreement protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encipherment_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher other keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2491,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certsign_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to sign certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2499,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentcommitment_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2507,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crlsign_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used sign certificate revocation lists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2515,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataencipherment_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decipheronly_nodejs" style="color: inherit; text-decoration: inherit;">decipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to decipher only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2531,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digitalsignature_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used for digital signatures.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2539,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encipheronly_nodejs" style="color: inherit; text-decoration: inherit;">encipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2547,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyagreement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used in a key agreement protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencipherment_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher other keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_sign_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to sign certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2575,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_commitment_python" style="color: inherit; text-decoration: inherit;">content_<wbr>commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2583,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crl_sign_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used sign certificate revocation lists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_encipherment_python" style="color: inherit; text-decoration: inherit;">data_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decipher_only_python" style="color: inherit; text-decoration: inherit;">decipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to decipher only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digital_signature_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used for digital signatures.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encipher_only_python" style="color: inherit; text-decoration: inherit;">encipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_agreement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used in a key agreement protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encipherment_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The key may be used to encipher other keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2701,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageoptionsresponse">pulumi.<wbr>Input<Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyusageoptionsresponse">Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes high-level ways in which a key may be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2709,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedkeyusageoptionsresponse">pulumi.<wbr>Input<Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#extendedkeyusageoptionsresponse">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed scenarios in which a key may be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2717,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Id<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2729,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageoptionsresponse">Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyusageoptionsresponse">Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes high-level ways in which a key may be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2737,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedkeyusageoptionsresponse">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extendedkeyusageoptionsresponse">Extended<wbr>Key<wbr>Usage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed scenarios in which a key may be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2745,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2783,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectidpath_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Required. The parts of an OID path. The most significant parts of the path come first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2795,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_path_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Required. The parts of an OID path. The most significant parts of the path come first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2833,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectidpath_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Required. The parts of an OID path. The most significant parts of the path come first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2845,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_path_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Required. The parts of an OID path. The most significant parts of the path come first.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2899,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing an algorithm identifier and a key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2919,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing an algorithm identifier and a key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2981,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing an algorithm identifier and a key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2989,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3001,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 [SubjectPublicKeyInfo](https://tools.ietf.org/html/rfc5280#section-4.1) structure containing an algorithm identifier and a key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3009,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of public key. If specified, it must match the public key used for the`key` field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3111,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalextensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extension">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Extension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes custom X.509 extensions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3119,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aiaocspservers_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Ocsp<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caoptions_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caoptions">pulumi.<wbr>Input<Ca<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#caoptions">Ca<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3135,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusage">pulumi.<wbr>Input<Key<wbr>Usage<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyusage">Key<wbr>Usage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates the intended use for keys that correspond to a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3143,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyids_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3155,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_extensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes custom X.509 extensions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3163,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aia_ocsp_servers_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>ocsp_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_options_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caoptions">Ca<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#caoptions">Ca<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusage">Key<wbr>Usage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyusage">Key<wbr>Usage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates the intended use for keys that correspond to a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_ids_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3289,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalextensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extensionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Extension<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes custom X.509 extensions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3297,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aiaocspservers_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Ocsp<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3305,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caoptions_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caoptionsresponse">pulumi.<wbr>Input<Ca<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#caoptionsresponse">Ca<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3313,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageresponse">pulumi.<wbr>Input<Key<wbr>Usage<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyusageresponse">Key<wbr>Usage<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates the intended use for keys that correspond to a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3321,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyids_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Id<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3333,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_extensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes custom X.509 extensions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3341,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aia_ocsp_servers_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>ocsp_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3349,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_options_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caoptionsresponse">Ca<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#caoptionsresponse">Ca<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3357,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyusageresponse">Key<wbr>Usage<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyusageresponse">Key<wbr>Usage<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Indicates the intended use for keys that correspond to a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3365,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_ids_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3419,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A resource path to a ReusableConfig in the format `projects/*/locations/*/reusableConfigs/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfigvalues_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvalues">pulumi.<wbr>Input<Reusable<wbr>Config<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#reusableconfigvalues">Reusable<wbr>Config<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A user-specified inline ReusableConfigValues.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3439,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A resource path to a ReusableConfig in the format `projects/*/locations/*/reusableConfigs/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_values_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvalues">Reusable<wbr>Config<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reusableconfigvalues">Reusable<wbr>Config<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A user-specified inline ReusableConfigValues.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3501,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A resource path to a ReusableConfig in the format `projects/*/locations/*/reusableConfigs/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3509,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusableconfigvalues_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvaluesresponse">pulumi.<wbr>Input<Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A user-specified inline ReusableConfigValues.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3521,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A resource path to a ReusableConfig in the format `projects/*/locations/*/reusableConfigs/*`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3529,7 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reusable_config_values_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reusableconfigvaluesresponse">Reusable<wbr>Config<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. A user-specified inline ReusableConfigValues.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3583,7 +3607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revocationstate_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates why a Certificate was revoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3591,7 +3615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revocationtime_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this Certificate was revoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3603,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revocation_state_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates why a Certificate was revoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3611,7 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revocation_time_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this Certificate was revoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3745,7 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational_unit of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3805,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3829,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organizational_unit of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3845,7 +3869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3955,7 +3979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extension">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Extension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional subject alternative name values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3963,7 +3987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3971,7 +3995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3979,7 +4003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3987,7 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3999,7 +4023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_sans_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#x509extension">X509Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional subject alternative name values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4007,7 +4031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4031,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4133,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extensionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Extension<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional subject alternative name values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4141,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4149,7 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4157,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4165,7 +4189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4177,7 +4201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_sans_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#x509extensionresponse">X509Extension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains additional subject alternative name values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4185,7 +4209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4193,7 +4217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4201,7 +4225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4209,7 +4233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4279,7 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4287,7 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subject">pulumi.<wbr>Input<Subject<wbr>Args></a></span>
+        <span class="property-type"><a href="#subject">Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4295,7 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnames">pulumi.<wbr>Input<Subject<wbr>Alt<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectaltnames">Subject<wbr>Alt<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4307,7 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4315,7 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subject">Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subject">Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4323,7 +4347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnames">Subject<wbr>Alt<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectaltnames">Subject<wbr>Alt<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4393,7 +4417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4401,7 +4425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectresponse">pulumi.<wbr>Input<Subject<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4409,7 +4433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnamesresponse">pulumi.<wbr>Input<Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4421,7 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4429,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4437,7 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4571,7 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4579,7 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hexserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">hex<wbr>Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number encoded in lowercase hexadecimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4587,7 +4611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4595,7 +4619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notaftertime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the certificate expires.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4603,7 +4627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notbeforetime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the certificate becomes valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4611,7 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectresponse">pulumi.<wbr>Input<Subject<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4619,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnamesresponse">pulumi.<wbr>Input<Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4631,7 +4655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "common name" of the distinguished name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4639,7 +4663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hex_serial_number_python" style="color: inherit; text-decoration: inherit;">hex_<wbr>serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial number encoded in lowercase hexadecimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4647,7 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4655,7 +4679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_after_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the certificate expires.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4663,7 +4687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_before_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the certificate becomes valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4671,7 +4695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectresponse">Subject<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4679,7 +4703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subjectaltnamesresponse">Subject<wbr>Alt<wbr>Names<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4813,7 +4837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4821,7 +4845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4829,7 +4853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4837,7 +4861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational_unit of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4845,7 +4869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4853,7 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4861,7 +4885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4873,7 +4897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4881,7 +4905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4889,7 +4913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4897,7 +4921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organizational_unit of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4905,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4913,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4921,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4991,7 +5015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4999,7 +5023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">pulumi.<wbr>Input<Object<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The OID for this X.509 extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5007,7 +5031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The value of this X.509 extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5019,7 +5043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5027,7 +5051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectid">Object<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The OID for this X.509 extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5035,7 +5059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The value of this X.509 extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5105,7 +5129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5113,7 +5137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">pulumi.<wbr>Input<Object<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The OID for this X.509 extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5121,7 +5145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The value of this X.509 extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5133,7 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5141,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectidresponse">Object<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The OID for this X.509 extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5149,7 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The value of this X.509 extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}

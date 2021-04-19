@@ -20,19 +20,32 @@ Create a service.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_run_v1.ObjectMetaArgs]]</span> = None<span class="p">, </span><span class="nx">namespaces_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_run_v1.ServiceSpecArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_run_v1.ServiceStatusArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_run_v1.ObjectMetaArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">namespaces_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_run_v1.ServiceSpecArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[_run_v1.ServiceStatusArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NamespaceServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Create a service.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NamespaceServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#namespacesid_nodejs" style="color: inherit; text-decoration: inherit;">namespaces<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +329,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API version for this call such as "serving.knative.dev/v1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of resource, in this case "Service".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">pulumi.<wbr>Input<Object<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicespec">pulumi.<wbr>Input<Service<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec holds the desired state of the Service (from the client).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">pulumi.<wbr>Input<Service<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status communicates the observed state of the Service (from the controller).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#namespaces_id_python" style="color: inherit; text-decoration: inherit;">namespaces_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +389,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API version for this call such as "serving.knative.dev/v1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of resource, in this case "Service".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicespec">Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec holds the desired state of the Service (from the client).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The NamespaceService resource accepts the following [input]({{< relref "/docs/in
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status communicates the observed state of the Service (from the controller).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -501,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -513,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -551,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -563,7 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,7 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -763,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -775,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -783,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -791,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -877,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -913,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1059,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1067,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>To<wbr>Path<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_mode_python" style="color: inherit; text-decoration: inherit;">default_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>To<wbr>Path<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_mode_python" style="color: inherit; text-decoration: inherit;">default_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1480,6 +1503,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startupprobe_csharp">
+<a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepath_csharp">
 <a href="#terminationmessagepath_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -1613,6 +1644,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="startupprobe_go">
+<a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="terminationmessagepath_go">
 <a href="#terminationmessagepath_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
 </span>
@@ -1653,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>Var<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>From<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: only supports containers from Google Container Registry Cloud Run for Anthos: supported URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">pulumi.<wbr>Input<Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">pulumi.<wbr>Input<Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">pulumi.<wbr>Input<Resource<wbr>Requirements<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,15 +1780,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">pulumi.<wbr>Input<Security<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startupprobe_nodejs">
+<a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepath_nodejs">
 <a href="#terminationmessagepath_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminationmessagepolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Mount<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: only supports containers from Google Container Registry Cloud Run for Anthos: supported URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,15 +1920,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startup_probe_python">
+<a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_message_path_python">
 <a href="#termination_message_path_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#termination_message_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1975,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2097,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2105,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2117,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2125,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2133,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2238,6 +2293,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#securitycontextresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startupprobe_csharp">
+<a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proberesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepath_csharp">
 <a href="#terminationmessagepath_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -2371,6 +2434,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="startupprobe_go">
+<a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="terminationmessagepath_go">
 <a href="#terminationmessagepath_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
 </span>
@@ -2411,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>Var<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envvarresponse">Env<wbr>Var<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>From<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envfromsourceresponse">Env<wbr>From<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: only supports containers from Google Container Registry Cloud Run for Anthos: supported URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proberesponse">pulumi.<wbr>Input<Probe<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Port<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerportresponse">Container<wbr>Port<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proberesponse">pulumi.<wbr>Input<Probe<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2491,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">pulumi.<wbr>Input<Resource<wbr>Requirements<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2499,15 +2570,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontextresponse">pulumi.<wbr>Input<Security<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startupprobe_nodejs">
+<a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepath_nodejs">
 <a href="#terminationmessagepath_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2515,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminationmessagepolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Mount<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumemountresponse">Volume<wbr>Mount<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2531,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2543,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2551,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2559,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarresponse">Env<wbr>Var<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envvarresponse">Env<wbr>Var<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2567,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsourceresponse">Env<wbr>From<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envfromsourceresponse">Env<wbr>From<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2575,7 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: only supports containers from Google Container Registry Cloud Run for Anthos: supported URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2583,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerportresponse">Container<wbr>Port<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerportresponse">Container<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,15 +2710,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startup_probe_python">
+<a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termination_message_path_python">
 <a href="#termination_message_path_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2647,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#termination_message_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2655,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemountresponse">Volume<wbr>Mount<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumemountresponse">Volume<wbr>Mount<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2663,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2733,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">pulumi.<wbr>Input<Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">pulumi.<wbr>Input<Secret<wbr>Env<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2761,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2847,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsourceresponse">pulumi.<wbr>Input<Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2855,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2863,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsourceresponse">pulumi.<wbr>Input<Secret<wbr>Env<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2875,7 +2962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2961,7 +3048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +3056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">pulumi.<wbr>Input<Env<wbr>Var<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3075,7 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3083,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3091,7 +3178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsourceresponse">pulumi.<wbr>Input<Env<wbr>Var<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3103,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3111,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3119,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3173,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">pulumi.<wbr>Input<Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">pulumi.<wbr>Input<Secret<wbr>Key<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3193,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3255,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselectorresponse">pulumi.<wbr>Input<Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3263,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselectorresponse">pulumi.<wbr>Input<Secret<wbr>Key<wbr>Selector<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3275,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3283,7 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3321,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3333,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3371,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3383,7 +3470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3501,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Last time the condition transitioned from one status to another.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3509,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Human readable message indicating details about the current status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. One-word CamelCase reason for the condition's last transition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. How to interpret failures of this condition, one of Error, Warning, Info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3553,7 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Last time the condition transitioned from one status to another.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3561,7 +3648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Human readable message indicating details about the current status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. One-word CamelCase reason for the condition's last transition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +3664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. How to interpret failures of this condition, one of Error, Warning, Info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3711,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Last time the condition transitioned from one status to another.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3719,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Human readable message indicating details about the current status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3727,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. One-word CamelCase reason for the condition's last transition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3735,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. How to interpret failures of this condition, one of Error, Warning, Info{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3743,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3751,7 +3838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3763,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Last time the condition transitioned from one status to another.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3771,7 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Human readable message indicating details about the current status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3779,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. One-word CamelCase reason for the condition's last transition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3787,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. How to interpret failures of this condition, one of Error, Warning, Info{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3795,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the condition, one of True, False, Unknown.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3803,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3889,7 +3976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3897,7 +3984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">pulumi.<wbr>Input<pulumi.<wbr>Input<HTTPHeader<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3905,7 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3925,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +4028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3949,7 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4035,7 +4122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4043,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<HTTPHeader<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4051,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4059,7 +4146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4071,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4079,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4087,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4095,7 +4182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4149,7 +4236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4169,7 +4256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4177,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4231,7 +4318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4239,7 +4326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4251,7 +4338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4259,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4329,7 +4416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4337,7 +4424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4345,7 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4357,7 +4444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4365,7 +4452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4373,7 +4460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4451,7 +4538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4459,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4471,7 +4558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4479,7 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4487,7 +4574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4525,7 +4612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4537,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4575,7 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4587,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4849,7 +4936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4857,7 +4944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4865,7 +4952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4873,7 +4960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4881,7 +4968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4889,7 +4976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4897,7 +4984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4905,7 +4992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4913,7 +5000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4921,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4929,7 +5016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique, within a Cloud Run region. In Cloud Run the namespace must be equal to either the project ID or project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4937,7 +5024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Owner<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4945,7 +5032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4953,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4961,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4973,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4981,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4989,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4997,7 +5084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5005,7 +5092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5013,7 +5100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5021,7 +5108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5037,7 +5124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5045,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique, within a Cloud Run region. In Cloud Run the namespace must be equal to either the project ID or project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5061,7 +5148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5069,7 +5156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5077,7 +5164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5085,7 +5172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5347,7 +5434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5355,7 +5442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5363,7 +5450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5371,7 +5458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5379,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5387,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5395,7 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5403,7 +5490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5411,7 +5498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5419,7 +5506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5427,7 +5514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique, within a Cloud Run region. In Cloud Run the namespace must be equal to either the project ID or project number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5435,7 +5522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Owner<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ownerreferenceresponse">Owner<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5443,7 +5530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5451,7 +5538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5459,7 +5546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5471,7 +5558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5479,7 +5566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5487,7 +5574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5495,7 +5582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5503,7 +5590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5511,7 +5598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5519,7 +5606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5527,7 +5614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5535,7 +5622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5543,7 +5630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5551,7 +5638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique, within a Cloud Run region. In Cloud Run the namespace must be equal to either the project ID or project number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5559,7 +5646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreferenceresponse">Owner<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ownerreferenceresponse">Owner<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5567,7 +5654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5575,7 +5662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5583,7 +5670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5701,7 +5788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5709,7 +5796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5717,7 +5804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5725,7 +5812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5733,7 +5820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5741,7 +5828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5753,7 +5840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5761,7 +5848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5769,7 +5856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5777,7 +5864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5785,7 +5872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5793,7 +5880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5911,7 +5998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5919,7 +6006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5927,7 +6014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5935,7 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5943,7 +6030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5951,7 +6038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5963,7 +6050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5971,7 +6058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5979,7 +6066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5987,7 +6074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5995,7 +6082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6003,7 +6090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6153,7 +6240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">pulumi.<wbr>Input<Exec<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6161,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6169,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">pulumi.<wbr>Input<HTTPGet<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6177,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6185,7 +6272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6193,7 +6280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6201,7 +6288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">pulumi.<wbr>Input<TCPSocket<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6209,7 +6296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6221,7 +6308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6229,7 +6316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6237,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6245,7 +6332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6253,7 +6340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6261,7 +6348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6269,7 +6356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6277,7 +6364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6427,7 +6514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">pulumi.<wbr>Input<Exec<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6435,7 +6522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6443,7 +6530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">pulumi.<wbr>Input<HTTPGet<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6451,7 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6459,7 +6546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6467,7 +6554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6475,7 +6562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">pulumi.<wbr>Input<TCPSocket<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6483,7 +6570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6495,7 +6582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6503,7 +6590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6511,7 +6598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6519,7 +6606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6527,7 +6614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6535,7 +6622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6543,7 +6630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6551,7 +6638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6605,7 +6692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run for Anthos: supported Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6613,7 +6700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6625,7 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run for Anthos: supported Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6633,7 +6720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6687,7 +6774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run for Anthos: supported Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6695,7 +6782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6707,7 +6794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run for Anthos: supported Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6715,7 +6802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6817,7 +6904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6825,7 +6912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#container">Container<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6833,7 +6920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6841,7 +6928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900 seconds (15 minutes). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6849,7 +6936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6861,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_concurrency_python" style="color: inherit; text-decoration: inherit;">container_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6869,7 +6956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">Container<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#container">Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6877,7 +6964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6885,7 +6972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900 seconds (15 minutes). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6893,7 +6980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volume">Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6995,7 +7082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7003,7 +7090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerresponse">Container<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7011,7 +7098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7019,7 +7106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900 seconds (15 minutes). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7027,7 +7114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7039,7 +7126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_concurrency_python" style="color: inherit; text-decoration: inherit;">container_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7047,7 +7134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresponse">Container<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerresponse">Container<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7055,7 +7142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7063,7 +7150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 900 seconds (15 minutes). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7071,7 +7158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumeresponse">Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7125,7 +7212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">pulumi.<wbr>Input<Object<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. The following annotation keys set properties of the created revision: * `autoscaling.knative.dev/minScale` sets the minimum number of instances. * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and `private-ranges-only`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7133,7 +7220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisionspec">pulumi.<wbr>Input<Revision<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#revisionspec">Revision<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7145,7 +7232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. The following annotation keys set properties of the created revision: * `autoscaling.knative.dev/minScale` sets the minimum number of instances. * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and `private-ranges-only`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7153,7 +7240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisionspec">Revision<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#revisionspec">Revision<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7207,7 +7294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetaresponse">pulumi.<wbr>Input<Object<wbr>Meta<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmetaresponse">Object<wbr>Meta<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. The following annotation keys set properties of the created revision: * `autoscaling.knative.dev/minScale` sets the minimum number of instances. * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and `private-ranges-only`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7215,7 +7302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisionspecresponse">pulumi.<wbr>Input<Revision<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#revisionspecresponse">Revision<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7227,7 +7314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetaresponse">Object<wbr>Meta<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmetaresponse">Object<wbr>Meta<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. The following annotation keys set properties of the created revision: * `autoscaling.knative.dev/minScale` sets the minimum number of instances. * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and `private-ranges-only`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7235,7 +7322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisionspecresponse">Revision<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#revisionspecresponse">Revision<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7305,7 +7392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7313,7 +7400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7321,7 +7408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7333,7 +7420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7341,7 +7428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7349,7 +7436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7419,7 +7506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7427,7 +7514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7435,7 +7522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7447,7 +7534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7455,7 +7542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7463,7 +7550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7549,7 +7636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7557,7 +7644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7565,7 +7652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7573,7 +7660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7585,7 +7672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7593,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7601,7 +7688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7609,7 +7696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7695,7 +7782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7703,7 +7790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">pulumi.<wbr>Input<Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7711,7 +7798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7719,7 +7806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7731,7 +7818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7739,7 +7826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7747,7 +7834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7755,7 +7842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7841,7 +7928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7849,7 +7936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>To<wbr>Path<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7857,7 +7944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7865,7 +7952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7877,7 +7964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_mode_python" style="color: inherit; text-decoration: inherit;">default_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7885,7 +7972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7893,7 +7980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7901,7 +7988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7987,7 +8074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7995,7 +8082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>To<wbr>Path<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8003,7 +8090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8011,7 +8098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8023,7 +8110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_mode_python" style="color: inherit; text-decoration: inherit;">default_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8031,7 +8118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8039,7 +8126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8047,7 +8134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8085,7 +8172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8097,7 +8184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8135,7 +8222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8147,7 +8234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8201,7 +8288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisiontemplate">pulumi.<wbr>Input<Revision<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#revisiontemplate">Revision<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template holds the latest specification for the Revision to be stamped out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8209,7 +8296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_nodejs" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8221,7 +8308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisiontemplate">Revision<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#revisiontemplate">Revision<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template holds the latest specification for the Revision to be stamped out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8229,7 +8316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_python" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8283,7 +8370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisiontemplateresponse">pulumi.<wbr>Input<Revision<wbr>Template<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#revisiontemplateresponse">Revision<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template holds the latest specification for the Revision to be stamped out.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8291,7 +8378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_nodejs" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictargetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Target<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8303,7 +8390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#revisiontemplateresponse">Revision<wbr>Template<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#revisiontemplateresponse">Revision<wbr>Template<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template holds the latest specification for the Revision to be stamped out.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8311,7 +8398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_python" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8445,7 +8532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressable">pulumi.<wbr>Input<Addressable<wbr>Args></a></span>
+        <span class="property-type"><a href="#addressable">Addressable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Similar to url, information on where the service is available on HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8453,7 +8540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrunv1condition">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudrunv1condition">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8461,7 +8548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestcreatedrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Created<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8469,7 +8556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestreadyrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Ready<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8477,7 +8564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8485,7 +8572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_nodejs" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Target<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8493,7 +8580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8505,7 +8592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressable">Addressable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#addressable">Addressable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Similar to url, information on where the service is available on HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8513,7 +8600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrunv1condition">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudrunv1condition">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8521,7 +8608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_created_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>created_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8529,7 +8616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_ready_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>ready_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8537,7 +8624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8545,7 +8632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_python" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#traffictarget">Traffic<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8553,7 +8640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8687,7 +8774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressableresponse">pulumi.<wbr>Input<Addressable<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#addressableresponse">Addressable<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Similar to url, information on where the service is available on HTTP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8695,7 +8782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrunv1conditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudrunv1conditionresponse">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8703,7 +8790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestcreatedrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Created<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8711,7 +8798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestreadyrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Ready<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8719,7 +8806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8727,7 +8814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_nodejs" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictargetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Target<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8735,7 +8822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8747,7 +8834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressableresponse">Addressable<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#addressableresponse">Addressable<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Similar to url, information on where the service is available on HTTP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8755,7 +8842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudrunv1conditionresponse">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudrunv1conditionresponse">Google<wbr>Cloud<wbr>Run<wbr>V1Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8763,7 +8850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_created_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>created_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8771,7 +8858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_ready_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>ready_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8779,7 +8866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8787,7 +8874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_python" style="color: inherit; text-decoration: inherit;">traffic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#traffictargetresponse">Traffic<wbr>Target<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8795,7 +8882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8849,7 +8936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8857,7 +8944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8869,7 +8956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8877,7 +8964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8931,7 +9018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8939,7 +9026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8951,7 +9038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8959,7 +9046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9077,7 +9164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9085,7 +9172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestrevision_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9093,7 +9180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9101,7 +9188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revisionname_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by Cloud Run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9109,7 +9196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9117,7 +9204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9129,7 +9216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9137,7 +9224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_revision_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9145,7 +9232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9153,7 +9240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_name_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by Cloud Run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9161,7 +9248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9169,7 +9256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9287,7 +9374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9295,7 +9382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestrevision_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9303,7 +9390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9311,7 +9398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revisionname_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by Cloud Run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9319,7 +9406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9327,7 +9414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9339,7 +9426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9347,7 +9434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_revision_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9355,7 +9442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified. Cloud Run currently requires 100 percent for a single ConfigurationName TrafficTarget entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9363,7 +9450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_name_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName. Providing RevisionName in spec is not currently supported by Cloud Run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9371,7 +9458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9379,7 +9466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9449,7 +9536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">pulumi.<wbr>Input<Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9457,7 +9544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9465,7 +9552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">pulumi.<wbr>Input<Secret<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9477,7 +9564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9485,7 +9572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9493,7 +9580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9579,7 +9666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9587,7 +9674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9595,7 +9682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9603,7 +9690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subpath_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9615,7 +9702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9623,7 +9710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9631,7 +9718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9639,7 +9726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_path_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9725,7 +9812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9733,7 +9820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9741,7 +9828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9749,7 +9836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subpath_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9761,7 +9848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9769,7 +9856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9777,7 +9864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9785,7 +9872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_path_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9855,7 +9942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesourceresponse">pulumi.<wbr>Input<Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapvolumesourceresponse">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9863,7 +9950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9871,7 +9958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesourceresponse">pulumi.<wbr>Input<Secret<wbr>Volume<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretvolumesourceresponse">Secret<wbr>Volume<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9883,7 +9970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesourceresponse">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapvolumesourceresponse">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9891,7 +9978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9899,7 +9986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesourceresponse">Secret<wbr>Volume<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretvolumesourceresponse">Secret<wbr>Volume<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,35 @@ Creates a new connection profile in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudsql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.CloudSqlConnectionProfileArgs]]</span> = None<span class="p">, </span><span class="nx">connection_profiles_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.MySqlConnectionProfileArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">cloudsql</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.CloudSqlConnectionProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">connection_profiles_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                      <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.MySqlConnectionProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectionProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectionProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectionProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectionProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a new connection profile in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectionProfileArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#connectionprofilesid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Profiles<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#cloudsql_nodejs" style="color: inherit; text-decoration: inherit;">cloudsql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlconnectionprofile">pulumi.<wbr>Input<Cloud<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudsqlconnectionprofile">Cloud<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudSQL database connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection profile display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectionprofile">pulumi.<wbr>Input<My<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#mysqlconnectionprofile">My<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A MySQL database connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this connection profile resource in the form of projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#connection_profiles_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>profiles_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#cloudsql_python" style="color: inherit; text-decoration: inherit;">cloudsql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlconnectionprofile">Cloud<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudsqlconnectionprofile">Cloud<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudSQL database connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection profile display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectionprofile">My<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlconnectionprofile">My<wbr>Sql<wbr>Connection<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A MySQL database connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this connection profile resource in the form of projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The ConnectionProfile resource accepts the following [input]({{< relref "/docs/i
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current connection profile state (e.g. DRAFT, READY, or FAILED).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlsettings">pulumi.<wbr>Input<Cloud<wbr>Sql<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudsqlsettings">Cloud<wbr>Sql<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Metadata used to create the destination Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlsettings">Cloud<wbr>Sql<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudsqlsettings">Cloud<wbr>Sql<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Metadata used to create the destination Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsqlid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL instance ID that this connection profile is associated with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL database instance's private IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -807,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL database instance's public IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlsettingsresponse">pulumi.<wbr>Input<Cloud<wbr>Sql<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudsqlsettingsresponse">Cloud<wbr>Sql<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Metadata used to create the destination Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_sql_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL instance ID that this connection profile is associated with.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL database instance's private IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud SQL database instance's public IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudsqlsettingsresponse">Cloud<wbr>Sql<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudsqlsettingsresponse">Cloud<wbr>Sql<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Metadata used to create the destination Cloud SQL database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1081,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autostorageincrease_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Increase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlipconfig">pulumi.<wbr>Input<Sql<wbr>Ip<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlipconfig">Sql<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. Initial root password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_storage_increase_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>increase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlipconfig">Sql<wbr>Ip<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlipconfig">Sql<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. Initial root password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_limit_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autostorageincrease_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Increase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlipconfigresponse">pulumi.<wbr>Input<Sql<wbr>Ip<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sqlipconfigresponse">Sql<wbr>Ip<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. Initial root password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootpasswordset_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates If this connection profile root password is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1603,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautoresizelimit_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Resize<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1635,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1647,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1655,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_storage_increase_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>increase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1671,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage: `PD_SSD` (default) or `PD_HDD`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1679,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine type and version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_config_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlipconfigresponse">Sql<wbr>Ip<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlipconfigresponse">Sql<wbr>Ip<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. Initial root password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_password_set_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates If this connection profile root password is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_auto_resize_limit_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>resize_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1735,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1869,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsqlid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The IP or hostname of the source MySQL database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The network port of the source MySQL database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfig">pulumi.<wbr>Input<Ssl<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslconfig">Ssl<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for the destination to connect to the source database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_sql_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The IP or hostname of the source MySQL database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The network port of the source MySQL database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfig">Ssl<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslconfig">Ssl<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for the destination to connect to the source database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2095,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsqlid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The IP or hostname of the source MySQL database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordset_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates If this connection profile password is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The network port of the source MySQL database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigresponse">pulumi.<wbr>Input<Ssl<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sslconfigresponse">Ssl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for the destination to connect to the source database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2155,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_sql_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The IP or hostname of the source MySQL database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_set_python" style="color: inherit; text-decoration: inherit;">password_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates If this connection profile password is stored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The network port of the source MySQL database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigresponse">Ssl<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sslconfigresponse">Ssl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration for the destination to connect to the source database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2289,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to identify this entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The time-to-leave of this access control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to identify this entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2341,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The time-to-leave of this access control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,7 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2435,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to identify this entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The time-to-leave of this access control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2471,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to identify this entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2487,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The time-to-leave of this access control entry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allowlisted value for the access control list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlaclentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Sql<wbr>Acl<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sqlaclentry">Sql<wbr>Acl<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableipv4_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance should be assigned an IPv4 address or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP should be enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2617,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlaclentry">Sql<wbr>Acl<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sqlaclentry">Sql<wbr>Acl<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_ipv4_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance should be assigned an IPv4 address or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2633,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP should be enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2727,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlaclentryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sql<wbr>Acl<wbr>Entry<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sqlaclentryresponse">Sql<wbr>Acl<wbr>Entry<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2735,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableipv4_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance should be assigned an IPv4 address or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2743,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2751,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP should be enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2763,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlaclentryresponse">Sql<wbr>Acl<wbr>Entry<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sqlaclentryresponse">Sql<wbr>Acl<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_ipv4_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance should be assigned an IPv4 address or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP should be enforced or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2857,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2865,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2885,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2987,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3003,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3011,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3023,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3031,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3039,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3125,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3133,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3145,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3153,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3161,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,32 @@ Creates a new channel in the specified site.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">channels_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">retained_release_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">sites_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">channels_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">retained_release_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">sites_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteChannel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteChannel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SiteChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Creates a new channel in the specified site.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SiteChannelArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#channelsid_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sitesid_nodejs" style="color: inherit; text-decoration: inherit;">sites<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +329,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Text labels used for extra metadata and/or filtering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#retainedreleasecount_nodejs" style="color: inherit; text-decoration: inherit;">retained<wbr>Release<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#channels_id_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sites_id_python" style="color: inherit; text-decoration: inherit;">sites_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +389,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Text labels used for extra metadata and/or filtering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#retained_release_count_python" style="color: inherit; text-decoration: inherit;">retained_<wbr>release_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The SiteChannel resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -645,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user when the user performed the action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -653,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -665,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the user when the user performed the action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -673,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -727,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -735,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. User-defined ID of the Cloud Run service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -755,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. User-defined ID of the Cloud Run service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_nodejs" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. The additional headers to add to the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -841,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -853,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_python" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. The additional headers to add to the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -869,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_nodejs" style="color: inherit; text-decoration: inherit;">root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The user-supplied path where country and language specific content will be looked for within the public directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The user-supplied path where country and language specific content will be looked for within the public directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, preview URLs are enabled for this version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the expiration time for previewing this version; preview URL requests received after this time will 404.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -993,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, preview URLs are enabled for this version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1001,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the expiration time for previewing this version; preview URL requests received after this time will 404.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1087,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_nodejs" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1111,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The status HTTP code to return in the response. It must be a valid 3xx status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_python" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The status HTTP code to return in the response. It must be a valid 3xx status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deploy description when the release was created. The value can be up to 512 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1273,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasetime_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the version is set to be public.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releaseuser_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">pulumi.<wbr>Input<Acting<wbr>User<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who created the release.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1297,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1305,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionresponse">pulumi.<wbr>Input<Version<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#versionresponse">Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration and content that was released.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deploy description when the release was created. The value can be up to 512 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_time_python" style="color: inherit; text-decoration: inherit;">release_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the version is set to be public.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_user_python" style="color: inherit; text-decoration: inherit;">release_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who created the release.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1357,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versionresponse">Version<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#versionresponse">Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration and content that was released.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamiclinks_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The request will be forwarded to Firebase Dynamic Links.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function to proxy requests to. Must match the exported function name exactly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_nodejs" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to rewrite the request to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_nodejs" style="color: inherit; text-decoration: inherit;">run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrunrewriteresponse">pulumi.<wbr>Input<Cloud<wbr>Run<wbr>Rewrite<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloudrunrewriteresponse">Cloud<wbr>Run<wbr>Rewrite<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request will be forwarded to Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dynamic_links_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The request will be forwarded to Firebase Dynamic Links.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function to proxy requests to. Must match the exported function name exactly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glob_python" style="color: inherit; text-decoration: inherit;">glob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path to rewrite the request to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied RE2 regular expression to match against the request URL path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_python" style="color: inherit; text-decoration: inherit;">run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudrunrewriteresponse">Cloud<wbr>Run<wbr>Rewrite<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudrunrewriteresponse">Cloud<wbr>Run<wbr>Rewrite<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request will be forwarded to Cloud Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appassociation_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Association</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle well known App Association files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1709,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleanurls_nodejs" style="color: inherit; text-decoration: inherit;">clean<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether to drop the file extension from uploaded files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1717,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#headerresponse">Header<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1725,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#i18n_nodejs" style="color: inherit; text-decoration: inherit;">i18n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#i18nconfigresponse">pulumi.<wbr>Input<I18n<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#i18nconfigresponse">I18n<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines i18n rewrite behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1733,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirects_nodejs" style="color: inherit; text-decoration: inherit;">redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redirectresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Redirect<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#redirectresponse">Redirect<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1741,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrites_nodejs" style="color: inherit; text-decoration: inherit;">rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rewriteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Rewrite<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rewriteresponse">Rewrite<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1749,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingslashbehavior_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Slash<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how to handle a trailing slash in the URL path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1761,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_association_python" style="color: inherit; text-decoration: inherit;">app_<wbr>association</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to handle well known App Association files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clean_urls_python" style="color: inherit; text-decoration: inherit;">clean_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether to drop the file extension from uploaded files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1777,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headerresponse">Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#headerresponse">Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#i18n_python" style="color: inherit; text-decoration: inherit;">i18n</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#i18nconfigresponse">I18n<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#i18nconfigresponse">I18n<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Defines i18n rewrite behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1793,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirects_python" style="color: inherit; text-decoration: inherit;">redirects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redirectresponse">Redirect<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#redirectresponse">Redirect<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1801,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrites_python" style="color: inherit; text-decoration: inherit;">rewrites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rewriteresponse">Rewrite<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rewriteresponse">Rewrite<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1809,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_slash_behavior_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>slash_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how to handle a trailing slash in the URL path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2039,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servingconfigresponse">pulumi.<wbr>Input<Serving<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#servingconfigresponse">Serving<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2047,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the version was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2055,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createuser_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">pulumi.<wbr>Input<Acting<wbr>User<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who created the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deletetime_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the version was `DELETED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deleteuser_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">pulumi.<wbr>Input<Acting<wbr>User<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who `DELETED` the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecount_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizetime_nodejs" style="color: inherit; text-decoration: inherit;">finalize<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the version was `FINALIZED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalizeuser_nodejs" style="color: inherit; text-decoration: inherit;">finalize<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">pulumi.<wbr>Input<Acting<wbr>User<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who `FINALIZED` the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels used for extra metadata and/or filtering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#previewconfigresponse">pulumi.<wbr>Input<Preview<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#previewconfigresponse">Preview<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of [site channels](sites.channels).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionbytes_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2147,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servingconfigresponse">Serving<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servingconfigresponse">Serving<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the version was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_user_python" style="color: inherit; text-decoration: inherit;">create_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who created the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_time_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the version was `DELETED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_user_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who `DELETED` the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_count_python" style="color: inherit; text-decoration: inherit;">file_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalize_time_python" style="color: inherit; text-decoration: inherit;">finalize_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the version was `FINALIZED`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finalize_user_python" style="color: inherit; text-decoration: inherit;">finalize_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actinguserresponse">Acting<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the user who `FINALIZED` the version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels used for extra metadata and/or filtering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2227,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#previewconfigresponse">Preview<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#previewconfigresponse">Preview<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of [site channels](sites.channels).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2235,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2243,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_bytes_python" style="color: inherit; text-decoration: inherit;">version_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -20,19 +20,40 @@ Creates an App Engine application for a Google Cloud Platform project. Required 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_cookie_expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_appengine_v1.UrlDispatchRuleArgs]]]]</span> = None<span class="p">, </span><span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_appengine_v1.FeatureSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">gcr_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_appengine_v1.IdentityAwareProxyArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">apps_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_cookie_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_appengine_v1.UrlDispatchRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1.FeatureSettingsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">gcr_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[_appengine_v1.IdentityAwareProxyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +88,32 @@ Creates an App Engine application for a Google Cloud Platform project. Required 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -418,7 +449,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#appsid_nodejs" style="color: inherit; text-decoration: inherit;">apps<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +457,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authdomain_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +465,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#codebucket_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +473,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +481,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#defaultbucket_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +489,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#defaultcookieexpiration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cookie expiration policy for this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +497,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#defaulthostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname used to reach this application, as resolved by App Engine.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +505,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#dispatchrules_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urldispatchrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Dispatch<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urldispatchrule">Url<wbr>Dispatch<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +513,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuresettings">pulumi.<wbr>Input<Feature<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuresettings">Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The feature specific settings to be used in the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +521,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#gcrdomain_nodejs" style="color: inherit; text-decoration: inherit;">gcr<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Container Registry domain used for storing managed build docker images for this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +529,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityawareproxy">pulumi.<wbr>Input<Identity<wbr>Aware<wbr>Proxy<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityawareproxy">Identity<wbr>Aware<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +537,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Application resource. This identifier is equivalent to the project ID of the Google Cloud Platform project where you want to deploy your application. Example: myapp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +545,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +553,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +561,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -542,7 +573,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apps_id_python" style="color: inherit; text-decoration: inherit;">apps_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +581,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#auth_domain_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +589,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#code_bucket_python" style="color: inherit; text-decoration: inherit;">code_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +597,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +605,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#default_bucket_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket that can be used by this application to store content.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +613,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#default_cookie_expiration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cookie_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cookie expiration policy for this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +621,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#default_hostname_python" style="color: inherit; text-decoration: inherit;">default_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname used to reach this application, as resolved by App Engine.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +629,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#dispatch_rules_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urldispatchrule">Url<wbr>Dispatch<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urldispatchrule">Url<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +637,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuresettings">Feature<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuresettings">Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The feature specific settings to be used in the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +645,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#gcr_domain_python" style="color: inherit; text-decoration: inherit;">gcr_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Container Registry domain used for storing managed build docker images for this application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +653,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityawareproxy">Identity<wbr>Aware<wbr>Proxy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityawareproxy">Identity<wbr>Aware<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +661,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the Application resource. This identifier is equivalent to the project ID of the Google Cloud Platform project where you want to deploy your application. Example: myapp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +669,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +677,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the Application resource in the API. Example: apps/myapp.@OutputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +685,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serving status of this application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#splithealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecontaineroptimizedos_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Container<wbr>Optimized<wbr>Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#split_health_checks_python" style="color: inherit; text-decoration: inherit;">split_<wbr>health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_container_optimized_os_python" style="color: inherit; text-decoration: inherit;">use_<wbr>container_<wbr>optimized_<wbr>os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#splithealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecontaineroptimizedos_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Container<wbr>Optimized<wbr>Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#split_health_checks_python" style="color: inherit; text-decoration: inherit;">split_<wbr>health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_container_optimized_os_python" style="color: inherit; text-decoration: inherit;">use_<wbr>container_<wbr>optimized_<wbr>os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1167,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.@OutputOnly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1395,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.{{% /md %}}</dd></dl>
 {{% /choosable %}}

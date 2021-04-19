@@ -20,19 +20,35 @@ Creates new workflow template.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dag_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">jobs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dataproc_v1.OrderedJobArgs]]]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dataproc_v1.TemplateParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataproc_v1.WorkflowTemplatePlacementArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">workflow_templates_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">dag_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">jobs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataproc_v1.OrderedJobArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataproc_v1.TemplateParameterArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[_dataproc_v1.WorkflowTemplatePlacementArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                     <span class="nx">workflow_templates_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflowTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkflowTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflowTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkflowTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkflowTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkflowTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates new workflow template.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkflowTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#workflowtemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Templates<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#dagtimeout_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Timeout duration for the DAG of jobs, expressed in seconds (see JSON representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the cluster is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#jobs_nodejs" style="color: inherit; text-decoration: inherit;">jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderedjob">pulumi.<wbr>Input<pulumi.<wbr>Input<Ordered<wbr>Job<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#orderedjob">Ordered<wbr>Job<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The Directed Acyclic Graph of Jobs to submit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this template. These labels will be propagated to all jobs and clusters created by the workflow instance.Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).No more than 32 labels can be associated with a template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templateparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Template<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#templateparameter">Template<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacement">pulumi.<wbr>Input<Workflow<wbr>Template<wbr>Placement<wbr>Args></a></span>
+        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. WorkflowTemplate scheduling information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write.This field should be left blank for a CreateWorkflowTemplate request. It is required for an UpdateWorkflowTemplate request, and must match the current server version. A typical update template flow would fetch the current template with a GetWorkflowTemplate request, which will return the current template with the version field filled in with the current server version. The user updates other fields in the template, then returns it as part of the UpdateWorkflowTemplate request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#workflow_templates_id_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>templates_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#dag_timeout_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Timeout duration for the DAG of jobs, expressed in seconds (see JSON representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the cluster is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#jobs_python" style="color: inherit; text-decoration: inherit;">jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderedjob">Ordered<wbr>Job<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#orderedjob">Ordered<wbr>Job<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The Directed Acyclic Graph of Jobs to submit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this template. These labels will be propagated to all jobs and clusters created by the workflow instance.Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).No more than 32 labels can be associated with a template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templateparameter">Template<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#templateparameter">Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. WorkflowTemplate scheduling information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Used to perform a consistent read-modify-write.This field should be left blank for a CreateWorkflowTemplate request. It is required for an UpdateWorkflowTemplate request, and must match the current server version. A typical update template flow would fetch the current template with a GetWorkflowTemplate request, which will return the current template with the version field filled in with the current server version. The user updates other fields in the template, then returns it as part of the UpdateWorkflowTemplate request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortypeuri_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_uri_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -799,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortypeuri_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_uri_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).Examples: https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingconfig">pulumi.<wbr>Input<Autoscaling<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingconfig">Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configbucket_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfig">pulumi.<wbr>Input<Endpoint<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointconfig">Endpoint<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gceclusterconfig">pulumi.<wbr>Input<Gce<wbr>Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#gceclusterconfig">Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkeclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterconfig">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkeclusterconfig">Gke<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinitializationaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Initialization<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodeinitializationaction">Node<wbr>Initialization<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleconfig">pulumi.<wbr>Input<Lifecycle<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#lifecycleconfig">Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreconfig">pulumi.<wbr>Input<Metastore<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#metastoreconfig">Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfig">pulumi.<wbr>Input<Security<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#securityconfig">Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfig">pulumi.<wbr>Input<Software<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempbucket_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingconfig">Autoscaling<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingconfig">Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_bucket_python" style="color: inherit; text-decoration: inherit;">config_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfig">Endpoint<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfig">Endpoint<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gceclusterconfig">Gce<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gceclusterconfig">Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_config_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterconfig">Gke<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkeclusterconfig">Gke<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinitializationaction">Node<wbr>Initialization<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodeinitializationaction">Node<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleconfig">Lifecycle<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecycleconfig">Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metastore_config_python" style="color: inherit; text-decoration: inherit;">metastore_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreconfig">Metastore<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metastoreconfig">Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfig">Security<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityconfig">Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_bucket_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfig">Instance<wbr>Group<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingconfigresponse">pulumi.<wbr>Input<Autoscaling<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingconfigresponse">Autoscaling<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configbucket_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigresponse">pulumi.<wbr>Input<Endpoint<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointconfigresponse">Endpoint<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gceclusterconfigresponse">pulumi.<wbr>Input<Gce<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gceclusterconfigresponse">Gce<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkeclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterconfigresponse">pulumi.<wbr>Input<Gke<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gkeclusterconfigresponse">Gke<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinitializationactionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Initialization<wbr>Action<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodeinitializationactionresponse">Node<wbr>Initialization<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1735,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleconfigresponse">pulumi.<wbr>Input<Lifecycle<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#lifecycleconfigresponse">Lifecycle<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreconfigresponse">pulumi.<wbr>Input<Metastore<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metastoreconfigresponse">Metastore<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigresponse">pulumi.<wbr>Input<Security<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#securityconfigresponse">Security<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfigresponse">pulumi.<wbr>Input<Software<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1783,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempbucket_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">pulumi.<wbr>Input<Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingconfigresponse">Autoscaling<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingconfigresponse">Autoscaling<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1811,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_bucket_python" style="color: inherit; text-decoration: inherit;">config_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigresponse">Endpoint<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfigresponse">Endpoint<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gceclusterconfigresponse">Gce<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gceclusterconfigresponse">Gce<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_config_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gkeclusterconfigresponse">Gke<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gkeclusterconfigresponse">Gke<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinitializationactionresponse">Node<wbr>Initialization<wbr>Action<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodeinitializationactionresponse">Node<wbr>Initialization<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleconfigresponse">Lifecycle<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecycleconfigresponse">Lifecycle<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1867,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for the master instance in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metastore_config_python" style="color: inherit; text-decoration: inherit;">metastore_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreconfigresponse">Metastore<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metastoreconfigresponse">Metastore<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1883,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1891,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityconfigresponse">Security<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securityconfigresponse">Security<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1899,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1907,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_bucket_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancegroupconfigresponse">Instance<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for worker instances in a cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterlabels_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. The cluster labels. Cluster must have all labels to match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_labels_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. The cluster labels. Cluster must have all labels to match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2051,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterlabels_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. The cluster labels. Cluster must have all labels to match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_labels_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. The cluster labels. Cluster must have all labels to match.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,9 +2105,109 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableconfidentialcompute_csharp">
+<a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableconfidentialcompute_go">
+<a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableconfidentialcompute_nodejs">
+<a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_confidential_compute_python">
+<a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="confidentialinstanceconfigresponse">Confidential<wbr>Instance<wbr>Config<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_csharp">
+<a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_go">
+<a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_nodejs">
+<a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_confidential_compute_python">
+<a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskconfig">Disk<wbr>Config</h4>
@@ -2149,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Size in GB of the boot disk (default is 500GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Size in GB of the boot disk (default is 500GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2263,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Size in GB of the boot disk (default is 500GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2271,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2291,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Size in GB of the boot disk (default is 500GB).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and the boot disk contains only basic config and installed binaries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcepdkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Pd<wbr>Kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gce_pd_kms_key_name_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>pd_<wbr>kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcepdkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Pd<wbr>Kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gce_pd_kms_key_name_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>pd_<wbr>kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2445,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehttpportaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_http_port_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http_<wbr>port_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2511,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehttpportaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2531,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_http_port_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http_<wbr>port_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2539,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2548,6 +2674,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="confidentialinstanceconfig_csharp">
+<a href="#confidentialinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internaliponly_csharp">
 <a href="#internaliponly_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
@@ -2649,6 +2783,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="confidentialinstanceconfig_go">
+<a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internaliponly_go">
 <a href="#internaliponly_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
 </span>
@@ -2749,11 +2891,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="confidentialinstanceconfig_nodejs">
+<a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internaliponly_nodejs">
 <a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroupaffinity_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupaffinity">pulumi.<wbr>Input<Node<wbr>Group<wbr>Affinity<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodegroupaffinity">Node<wbr>Group<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2793,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">pulumi.<wbr>Input<Reservation<wbr>Affinity<wbr>Args></a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2801,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2809,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2817,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetworkuri_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zoneuri_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2849,11 +2999,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="confidential_instance_config_python">
+<a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internal_ip_only_python">
 <a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2861,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2869,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2877,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupaffinity">Node<wbr>Group<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodegroupaffinity">Node<wbr>Group<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2885,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_uri_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_uri_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2950,6 +3108,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="confidentialinstanceconfig_csharp">
+<a href="#confidentialinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Dataproc.<wbr>V1.<wbr>Inputs.<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internaliponly_csharp">
 <a href="#internaliponly_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
@@ -3051,6 +3217,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="confidentialinstanceconfig_go">
+<a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfigresponse">Confidential<wbr>Instance<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="internaliponly_go">
 <a href="#internaliponly_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
 </span>
@@ -3151,11 +3325,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="confidentialinstanceconfig_nodejs">
+<a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfigresponse">Confidential<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="internaliponly_nodejs">
 <a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3163,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3171,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkuri_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3179,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroupaffinity_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupaffinityresponse">pulumi.<wbr>Input<Node<wbr>Group<wbr>Affinity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodegroupaffinityresponse">Node<wbr>Group<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinityresponse">pulumi.<wbr>Input<Reservation<wbr>Affinity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3203,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3219,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfigresponse">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3227,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetworkuri_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3235,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3243,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zoneuri_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3251,11 +3433,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="confidential_instance_config_python">
+<a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#confidentialinstanceconfigresponse">Confidential<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs){{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="internal_ip_only_python">
 <a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3263,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3271,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_uri_python" style="color: inherit; text-decoration: inherit;">network_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3279,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupaffinityresponse">Node<wbr>Group<wbr>Affinity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodegroupaffinityresponse">Node<wbr>Group<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3287,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of IPv6 access for a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3295,7 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3303,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3311,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3319,7 +3509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3327,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_uri_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3335,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3343,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_uri_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3381,7 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespacedgkedeploymenttarget_nodejs" style="color: inherit; text-decoration: inherit;">namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacedgkedeploymenttarget">pulumi.<wbr>Input<Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args></a></span>
+        <span class="property-type"><a href="#namespacedgkedeploymenttarget">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3393,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaced_gke_deployment_target_python" style="color: inherit; text-decoration: inherit;">namespaced_<wbr>gke_<wbr>deployment_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacedgkedeploymenttarget">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#namespacedgkedeploymenttarget">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3431,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespacedgkedeploymenttarget_nodejs" style="color: inherit; text-decoration: inherit;">namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacedgkedeploymenttargetresponse">pulumi.<wbr>Input<Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#namespacedgkedeploymenttargetresponse">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3443,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaced_gke_deployment_target_python" style="color: inherit; text-decoration: inherit;">namespaced_<wbr>gke_<wbr>deployment_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacedgkedeploymenttargetresponse">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#namespacedgkedeploymenttargetresponse">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3593,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3661,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3669,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3685,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3867,7 +4057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3875,7 +4065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3883,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3891,7 +4081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3899,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3907,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3915,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3923,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +4125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +4133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3951,7 +4141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3959,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3967,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3975,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3983,7 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3991,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4109,7 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains Hive queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4141,7 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">pulumi.<wbr>Input<Query<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4161,7 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4169,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4177,7 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4185,7 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains Hive queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4193,7 +4383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4201,7 +4391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4319,7 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4327,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4335,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4343,7 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains Hive queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4351,7 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">pulumi.<wbr>Input<Query<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4359,7 +4549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4371,7 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4379,7 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4387,7 +4577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4395,7 +4585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains Hive queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4411,7 +4601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4449,7 +4639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userserviceaccountmapping_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Service<wbr>Account<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Map of user to service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4461,7 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_service_account_mapping_python" style="color: inherit; text-decoration: inherit;">user_<wbr>service_<wbr>account_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Map of user to service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4499,7 +4689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userserviceaccountmapping_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Service<wbr>Account<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Map of user to service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4511,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_service_account_mapping_python" style="color: inherit; text-decoration: inherit;">user_<wbr>service_<wbr>account_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Map of user to service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4645,7 +4835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskconfig">pulumi.<wbr>Input<Disk<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskconfig">Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4661,7 +4851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4669,7 +4859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetypeuri_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4677,7 +4867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4685,7 +4875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_nodejs" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4705,7 +4895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4713,7 +4903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskconfig">Disk<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskconfig">Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4721,7 +4911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4729,7 +4919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_uri_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4737,7 +4927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_python" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4951,7 +5141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4959,7 +5149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskconfigresponse">pulumi.<wbr>Input<Disk<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#diskconfigresponse">Disk<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4967,7 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4975,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4983,7 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancereferences_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of references to Compute Engine instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4991,7 +5181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ispreemptible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that this instance group contains preemptible instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4999,7 +5189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetypeuri_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5007,7 +5197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedgroupconfig_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Group<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedgroupconfigresponse">pulumi.<wbr>Input<Managed<wbr>Group<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedgroupconfigresponse">Managed<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5015,7 +5205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5023,7 +5213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5031,7 +5221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_nodejs" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5043,7 +5233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfigresponse">Accelerator<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5051,7 +5241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskconfigresponse">Disk<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskconfigresponse">Disk<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5059,7 +5249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5067,7 +5257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance names. Dataproc derives the names from cluster_name, num_instances, and the instance group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5075,7 +5265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_references_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancereferenceresponse">Instance<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of references to Compute Engine instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5083,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_preemptible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that this instance group contains preemptible instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5091,7 +5281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_uri_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5099,7 +5289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_group_config_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>group_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedgroupconfigresponse">Managed<wbr>Group<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedgroupconfigresponse">Managed<wbr>Group<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5107,7 +5297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5115,7 +5305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5123,7 +5313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preemptibility_python" style="color: inherit; text-decoration: inherit;">preemptibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5193,7 +5383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5201,7 +5391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of the Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5209,7 +5399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key used for sharing data with this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5221,7 +5411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5229,7 +5419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of the Compute Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5237,7 +5427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key used for sharing data with this instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5291,7 +5481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailuresperhour_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5299,7 +5489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailurestotal_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5311,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5319,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failures_total_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5373,7 +5563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailuresperhour_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5381,7 +5571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfailurestotal_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5393,7 +5583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5401,7 +5591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_failures_total_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>total</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5663,7 +5853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustadminserver_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5671,7 +5861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustkdc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5679,7 +5869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustrealm_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5687,7 +5877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustsharedpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5695,7 +5885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablekerberos_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5703,7 +5893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdcdbkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5711,7 +5901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keypassworduri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5719,7 +5909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5727,7 +5917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystoreuri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5735,7 +5925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The uri of the KMS key used to encrypt various sensitive files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5743,7 +5933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5751,7 +5941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootprincipalpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5759,7 +5949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tgtlifetimehours_nodejs" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5767,7 +5957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5775,7 +5965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5787,7 +5977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_admin_server_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>admin_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5795,7 +5985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_kdc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>kdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5803,7 +5993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_realm_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5811,7 +6001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_shared_password_uri_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>shared_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5819,7 +6009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_kerberos_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5827,7 +6017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdc_db_key_uri_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>db_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5835,7 +6025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_password_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5843,7 +6033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_password_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5851,7 +6041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5859,7 +6049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_uri_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The uri of the KMS key used to encrypt various sensitive files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5867,7 +6057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5875,7 +6065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_principal_password_uri_python" style="color: inherit; text-decoration: inherit;">root_<wbr>principal_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5883,7 +6073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tgt_lifetime_hours_python" style="color: inherit; text-decoration: inherit;">tgt_<wbr>lifetime_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5891,7 +6081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_password_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5899,7 +6089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6161,7 +6351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustadminserver_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6169,7 +6359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustkdc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6177,7 +6367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustrealm_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6185,7 +6375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossrealmtrustsharedpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6193,7 +6383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablekerberos_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6201,7 +6391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdcdbkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6209,7 +6399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keypassworduri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6217,7 +6407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6225,7 +6415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystoreuri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6233,7 +6423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The uri of the KMS key used to encrypt various sensitive files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6241,7 +6431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6249,7 +6439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootprincipalpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6257,7 +6447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tgtlifetimehours_nodejs" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6265,7 +6455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6273,7 +6463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6285,7 +6475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_admin_server_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>admin_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6293,7 +6483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_kdc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>kdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6301,7 +6491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_realm_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6309,7 +6499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_realm_trust_shared_password_uri_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>shared_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster Kerberos realm and the remote trusted realm, in a cross realm trust relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6317,7 +6507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_kerberos_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Flag to indicate whether to Kerberize the cluster (default: false). Set this field to true to enable Kerberos on a cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6325,7 +6515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdc_db_key_uri_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>db_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6333,7 +6523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_password_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6341,7 +6531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_password_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided keystore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6349,7 +6539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6357,7 +6547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_uri_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The uri of the KMS key used to encrypt various sensitive files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6365,7 +6555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6373,7 +6563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_principal_password_uri_python" style="color: inherit; text-decoration: inherit;">root_<wbr>principal_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6381,7 +6571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tgt_lifetime_hours_python" style="color: inherit; text-decoration: inherit;">tgt_<wbr>lifetime_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime of the ticket granting ticket, in hours. If not specified, or user specifies 0, then default value 10 will be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6389,7 +6579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_password_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>password_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6397,7 +6587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6467,7 +6657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodeletetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6475,7 +6665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodeletettl_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6483,7 +6673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idledeletettl_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6495,7 +6685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_delete_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6503,7 +6693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_delete_ttl_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6511,7 +6701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_delete_ttl_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>delete_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6597,7 +6787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodeletetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6605,7 +6795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodeletettl_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6613,7 +6803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idledeletettl_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6621,7 +6811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idlestarttime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6633,7 +6823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_delete_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6641,7 +6831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_delete_ttl_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6649,7 +6839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_delete_ttl_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>delete_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6657,7 +6847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#idle_start_time_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6695,7 +6885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6707,7 +6897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6745,7 +6935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6757,7 +6947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6827,7 +7017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix.The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6835,7 +7025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfig">pulumi.<wbr>Input<Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterconfig">Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6843,7 +7033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster.Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6855,7 +7045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix.The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6863,7 +7053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfig">Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterconfig">Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6871,7 +7061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster.Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6941,7 +7131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix.The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6949,7 +7139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigresponse">pulumi.<wbr>Input<Cluster<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterconfigresponse">Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6957,7 +7147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster.Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6969,7 +7159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix.The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6977,7 +7167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigresponse">Cluster<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterconfigresponse">Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6985,7 +7175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this cluster.Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7039,7 +7229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancegroupmanagername_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Instance Group Manager for this group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7047,7 +7237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancetemplatename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Instance Template used for the Managed Instance Group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7059,7 +7249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_group_manager_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Instance Group Manager for this group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7067,7 +7257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_template_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Instance Template used for the Managed Instance Group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7105,7 +7295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataprocmetastoreservice_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Metastore<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7117,7 +7307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproc_metastore_service_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>metastore_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7155,7 +7345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataprocmetastoreservice_nodejs" style="color: inherit; text-decoration: inherit;">dataproc<wbr>Metastore<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7167,7 +7357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproc_metastore_service_python" style="color: inherit; text-decoration: inherit;">dataproc_<wbr>metastore_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7221,7 +7411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusternamespace_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A namespace within the GKE cluster to deploy into.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7229,7 +7419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetgkecluster_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7241,7 +7431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_namespace_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A namespace within the GKE cluster to deploy into.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7249,7 +7439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_gke_cluster_python" style="color: inherit; text-decoration: inherit;">target_<wbr>gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7303,7 +7493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusternamespace_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A namespace within the GKE cluster to deploy into.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7311,7 +7501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetgkecluster_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7323,7 +7513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_namespace_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A namespace within the GKE cluster to deploy into.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7331,7 +7521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_gke_cluster_python" style="color: inherit; text-decoration: inherit;">target_<wbr>gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7369,7 +7559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroupuri_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant node group resource (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on.A full URL, partial URI, or node group name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 node-group-1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7381,7 +7571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_uri_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant node group resource (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on.A full URL, partial URI, or node group name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 node-group-1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7419,7 +7609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodegroupuri_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant node group resource (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on.A full URL, partial URI, or node group name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 node-group-1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7431,7 +7621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_group_uri_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The URI of a sole-tenant node group resource (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on.A full URL, partial URI, or node group name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1 node-group-1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7485,7 +7675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executablefile_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage URI of executable file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7493,7 +7683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7505,7 +7695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_file_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage URI of executable file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7513,7 +7703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_timeout_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7567,7 +7757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executablefile_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage URI of executable file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7575,7 +7765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7587,7 +7777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_file_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Storage URI of executable file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7595,7 +7785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_timeout_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7809,7 +7999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hadoopjob_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopjob">pulumi.<wbr>Input<Hadoop<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#hadoopjob">Hadoop<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7817,7 +8007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hivejob_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivejob">pulumi.<wbr>Input<Hive<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#hivejob">Hive<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7825,7 +8015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7833,7 +8023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pigjob_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pigjob">pulumi.<wbr>Input<Pig<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#pigjob">Pig<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7841,7 +8031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisitestepids_nodejs" style="color: inherit; text-decoration: inherit;">prerequisite<wbr>Step<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7849,7 +8039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestojob_nodejs" style="color: inherit; text-decoration: inherit;">presto<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prestojob">pulumi.<wbr>Input<Presto<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#prestojob">Presto<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7857,7 +8047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pysparkjob_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pysparkjob">pulumi.<wbr>Input<Py<wbr>Spark<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#pysparkjob">Py<wbr>Spark<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7865,7 +8055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">pulumi.<wbr>Input<Job<wbr>Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7873,7 +8063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkjob">pulumi.<wbr>Input<Spark<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkjob">Spark<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7881,7 +8071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkrjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>RJob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkrjob">pulumi.<wbr>Input<Spark<wbr>RJob<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkrjob">Spark<wbr>RJob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7889,7 +8079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparksqljob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Sql<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparksqljob">pulumi.<wbr>Input<Spark<wbr>Sql<wbr>Job<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparksqljob">Spark<wbr>Sql<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7897,7 +8087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7909,7 +8099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hadoop_job_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopjob">Hadoop<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hadoopjob">Hadoop<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7917,7 +8107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hive_job_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivejob">Hive<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hivejob">Hive<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7925,7 +8115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7933,7 +8123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pig_job_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pigjob">Pig<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pigjob">Pig<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7941,7 +8131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisite_step_ids_python" style="color: inherit; text-decoration: inherit;">prerequisite_<wbr>step_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7949,7 +8139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presto_job_python" style="color: inherit; text-decoration: inherit;">presto_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prestojob">Presto<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prestojob">Presto<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7957,7 +8147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pyspark_job_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pysparkjob">Py<wbr>Spark<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pysparkjob">Py<wbr>Spark<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7965,7 +8155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7973,7 +8163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkjob">Spark<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkjob">Spark<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7981,7 +8171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_r_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>r_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkrjob">Spark<wbr>RJob<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkrjob">Spark<wbr>RJob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7989,7 +8179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_sql_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>sql_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparksqljob">Spark<wbr>Sql<wbr>Job<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparksqljob">Spark<wbr>Sql<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7997,7 +8187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8211,7 +8401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hadoopjob_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopjobresponse">pulumi.<wbr>Input<Hadoop<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#hadoopjobresponse">Hadoop<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8219,7 +8409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hivejob_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivejobresponse">pulumi.<wbr>Input<Hive<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#hivejobresponse">Hive<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8227,7 +8417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8235,7 +8425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pigjob_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pigjobresponse">pulumi.<wbr>Input<Pig<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pigjobresponse">Pig<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8243,7 +8433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisitestepids_nodejs" style="color: inherit; text-decoration: inherit;">prerequisite<wbr>Step<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8251,7 +8441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestojob_nodejs" style="color: inherit; text-decoration: inherit;">presto<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prestojobresponse">pulumi.<wbr>Input<Presto<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#prestojobresponse">Presto<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8259,7 +8449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pysparkjob_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pysparkjobresponse">pulumi.<wbr>Input<Py<wbr>Spark<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pysparkjobresponse">Py<wbr>Spark<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8267,7 +8457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobschedulingresponse">pulumi.<wbr>Input<Job<wbr>Scheduling<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobschedulingresponse">Job<wbr>Scheduling<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8275,7 +8465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkjobresponse">pulumi.<wbr>Input<Spark<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkjobresponse">Spark<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8283,7 +8473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparkrjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>RJob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkrjobresponse">pulumi.<wbr>Input<Spark<wbr>RJob<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparkrjobresponse">Spark<wbr>RJob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8291,7 +8481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sparksqljob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Sql<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparksqljobresponse">pulumi.<wbr>Input<Spark<wbr>Sql<wbr>Job<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sparksqljobresponse">Spark<wbr>Sql<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8299,7 +8489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8311,7 +8501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hadoop_job_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopjobresponse">Hadoop<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hadoopjobresponse">Hadoop<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8319,7 +8509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hive_job_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hivejobresponse">Hive<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hivejobresponse">Hive<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8327,7 +8517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8335,7 +8525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pig_job_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pigjobresponse">Pig<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pigjobresponse">Pig<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8343,7 +8533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisite_step_ids_python" style="color: inherit; text-decoration: inherit;">prerequisite_<wbr>step_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8351,7 +8541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presto_job_python" style="color: inherit; text-decoration: inherit;">presto_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prestojobresponse">Presto<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prestojobresponse">Presto<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8359,7 +8549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pyspark_job_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pysparkjobresponse">Py<wbr>Spark<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pysparkjobresponse">Py<wbr>Spark<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8367,7 +8557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobschedulingresponse">Job<wbr>Scheduling<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobschedulingresponse">Job<wbr>Scheduling<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8375,7 +8565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkjobresponse">Spark<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkjobresponse">Spark<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8383,7 +8573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_r_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>r_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkrjobresponse">Spark<wbr>RJob<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkrjobresponse">Spark<wbr>RJob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8391,7 +8581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spark_sql_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>sql_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparksqljobresponse">Spark<wbr>Sql<wbr>Job<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparksqljobresponse">Spark<wbr>Sql<wbr>Job<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8399,7 +8589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8453,7 +8643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexvalidation">pulumi.<wbr>Input<Regex<wbr>Validation<wbr>Args></a></span>
+        <span class="property-type"><a href="#regexvalidation">Regex<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8461,7 +8651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuevalidation">pulumi.<wbr>Input<Value<wbr>Validation<wbr>Args></a></span>
+        <span class="property-type"><a href="#valuevalidation">Value<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on a list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8473,7 +8663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexvalidation">Regex<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regexvalidation">Regex<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8481,7 +8671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuevalidation">Value<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#valuevalidation">Value<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on a list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8535,7 +8725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexvalidationresponse">pulumi.<wbr>Input<Regex<wbr>Validation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#regexvalidationresponse">Regex<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8543,7 +8733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuevalidationresponse">pulumi.<wbr>Input<Value<wbr>Validation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#valuevalidationresponse">Value<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on a list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8555,7 +8745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexvalidationresponse">Regex<wbr>Validation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regexvalidationresponse">Regex<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8563,7 +8753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuevalidationresponse">Value<wbr>Validation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#valuevalidationresponse">Value<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation based on a list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8697,7 +8887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8705,7 +8895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8713,7 +8903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8721,7 +8911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8729,7 +8919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains the Pig queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8737,7 +8927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">pulumi.<wbr>Input<Query<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8745,7 +8935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8757,7 +8947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8765,7 +8955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8773,7 +8963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8781,7 +8971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8789,7 +8979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains the Pig queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8797,7 +8987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8805,7 +8995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8939,7 +9129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8947,7 +9137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8955,7 +9145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8963,7 +9153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8971,7 +9161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains the Pig queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8979,7 +9169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">pulumi.<wbr>Input<Query<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8987,7 +9177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8999,7 +9189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9007,7 +9197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9015,7 +9205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9023,7 +9213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9031,7 +9221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains the Pig queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9039,7 +9229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9047,7 +9237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9181,7 +9371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clienttags_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Presto client tags to attach to this query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9189,7 +9379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9197,7 +9387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9205,7 +9395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9213,7 +9403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9221,7 +9411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9229,7 +9419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">pulumi.<wbr>Input<Query<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9241,7 +9431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_tags_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Presto client tags to attach to this query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9249,7 +9439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9257,7 +9447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9265,7 +9455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9273,7 +9463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9281,7 +9471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9289,7 +9479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9423,7 +9613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clienttags_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Presto client tags to attach to this query{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9431,7 +9621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9439,7 +9629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9447,7 +9637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9455,7 +9645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9463,7 +9653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9471,7 +9661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">pulumi.<wbr>Input<Query<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9483,7 +9673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_tags_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Presto client tags to attach to this query{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9491,7 +9681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9499,7 +9689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9507,7 +9697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9515,7 +9705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9523,7 +9713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9531,7 +9721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9681,7 +9871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9689,7 +9879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9697,7 +9887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9705,7 +9895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9713,7 +9903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9721,7 +9911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainpythonfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9729,7 +9919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9737,7 +9927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonfileuris_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9749,7 +9939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9757,7 +9947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9765,7 +9955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9773,7 +9963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9781,7 +9971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9789,7 +9979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_python_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>python_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9797,7 +9987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9805,7 +9995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_file_uris_python" style="color: inherit; text-decoration: inherit;">python_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9955,7 +10145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9963,7 +10153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9971,7 +10161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9979,7 +10169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9987,7 +10177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9995,7 +10185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainpythonfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10003,7 +10193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10011,7 +10201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonfileuris_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10023,7 +10213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10031,7 +10221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10039,7 +10229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10047,7 +10237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Python driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10055,7 +10245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10063,7 +10253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_python_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>python_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10071,7 +10261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10079,7 +10269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_file_uris_python" style="color: inherit; text-decoration: inherit;">python_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10117,7 +10307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } } {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10129,7 +10319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } } {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10167,7 +10357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } } {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10179,7 +10369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } } {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10217,7 +10407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_nodejs" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10229,7 +10419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_python" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10267,7 +10457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_nodejs" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10279,7 +10469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexes_python" style="color: inherit; text-decoration: inherit;">regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10349,7 +10539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10357,7 +10547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10365,7 +10555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10377,7 +10567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10385,7 +10575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10393,7 +10583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10463,7 +10653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10471,7 +10661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10479,7 +10669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10491,7 +10681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10499,7 +10689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10507,7 +10697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10561,7 +10751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityconfig_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityconfig">pulumi.<wbr>Input<Identity<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityconfig">Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10569,7 +10759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfig">pulumi.<wbr>Input<Kerberos<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Kerberos related configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10581,7 +10771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_config_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityconfig">Identity<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityconfig">Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10589,7 +10779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kerberosconfig">Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Kerberos related configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10643,7 +10833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityconfig_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityconfigresponse">pulumi.<wbr>Input<Identity<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#identityconfigresponse">Identity<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10651,7 +10841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfigresponse">pulumi.<wbr>Input<Kerberos<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Kerberos related configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10663,7 +10853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_config_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityconfigresponse">Identity<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identityconfigresponse">Identity<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10671,7 +10861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kerberosconfigresponse">Kerberos<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Kerberos related configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10741,7 +10931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have integrity monitoring enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10749,7 +10939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have Secure Boot enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10757,7 +10947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10769,7 +10959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have integrity monitoring enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10777,7 +10967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have Secure Boot enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10785,7 +10975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10855,7 +11045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have integrity monitoring enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10863,7 +11053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have Secure Boot enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10871,7 +11061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10883,7 +11073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have integrity monitoring enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10891,7 +11081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have Secure Boot enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10899,7 +11089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Defines whether instances have the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10969,7 +11159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10977,7 +11167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10985,7 +11175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10997,7 +11187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11005,7 +11195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11013,7 +11203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11083,7 +11273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11091,7 +11281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11099,7 +11289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11111,7 +11301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11119,7 +11309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of components to activate on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11127,7 +11317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11277,7 +11467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11285,7 +11475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11293,7 +11483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11301,7 +11491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11309,7 +11499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11317,7 +11507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11325,7 +11515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file that contains the main class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11333,7 +11523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11345,7 +11535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11353,7 +11543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11361,7 +11551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11369,7 +11559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11377,7 +11567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11385,7 +11575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11393,7 +11583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file that contains the main class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11401,7 +11591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11551,7 +11741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11559,7 +11749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11567,7 +11757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11575,7 +11765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11583,7 +11773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11591,7 +11781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11599,7 +11789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file that contains the main class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11607,7 +11797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11619,7 +11809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11627,7 +11817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11635,7 +11825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11643,7 +11833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11651,7 +11841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11659,7 +11849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11667,7 +11857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file that contains the main class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11675,7 +11865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11793,7 +11983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11801,7 +11991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11809,7 +11999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11817,7 +12007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11825,7 +12015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainrfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>RFile<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11833,7 +12023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11845,7 +12035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11853,7 +12043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11861,7 +12051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11869,7 +12059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11877,7 +12067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_r_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>r_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11885,7 +12075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12003,7 +12193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12011,7 +12201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12019,7 +12209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12027,7 +12217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12035,7 +12225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mainrfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>RFile<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12043,7 +12233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12055,7 +12245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12063,7 +12253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12071,7 +12261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12079,7 +12269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12087,7 +12277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#main_r_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>r_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12095,7 +12285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12213,7 +12403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12221,7 +12411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12229,7 +12419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12237,7 +12427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12245,7 +12435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">pulumi.<wbr>Input<Query<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12253,7 +12443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12265,7 +12455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12273,7 +12463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfig">Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12281,7 +12471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12289,7 +12479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12297,7 +12487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylist">Query<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12305,7 +12495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12423,7 +12613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12431,7 +12621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">pulumi.<wbr>Input<Logging<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12439,7 +12629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12447,7 +12637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12455,7 +12645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">pulumi.<wbr>Input<Query<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12463,7 +12653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12475,7 +12665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12483,7 +12673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingconfigresponse">Logging<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12491,7 +12681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12499,7 +12689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12507,7 +12697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querylistresponse">Query<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12515,7 +12705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12601,7 +12791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Brief description of the parameter. Must not exceed 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12609,7 +12799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths.A field path is similar in syntax to a google.protobuf.FieldMask. For example, a field path that references the zone field of a workflow template's cluster selector would be specified as placement.clusterSelector.zone.Also, field paths can reference fields using the following syntax: Values in maps can be referenced by key: labels'key' placement.clusterSelector.clusterLabels'key' placement.managedCluster.labels'key' placement.clusterSelector.clusterLabels'key' jobs'step-id'.labels'key' Jobs in the jobs list can be referenced by step-id: jobs'step-id'.hadoopJob.mainJarFileUri jobs'step-id'.hiveJob.queryFileUri jobs'step-id'.pySparkJob.mainPythonFileUri jobs'step-id'.hadoopJob.jarFileUris0 jobs'step-id'.hadoopJob.archiveUris0 jobs'step-id'.hadoopJob.fileUris0 jobs'step-id'.pySparkJob.pythonFileUris0 Items in repeated fields can be referenced by a zero-based index: jobs'step-id'.sparkJob.args0 Other examples: jobs'step-id'.hadoopJob.properties'key' jobs'step-id'.hadoopJob.args0 jobs'step-id'.hiveJob.scriptVariables'key' jobs'step-id'.hadoopJob.mainJarFileUri placement.clusterSelector.zoneIt may not be possible to parameterize maps and repeated fields in their entirety since only individual map values and individual items in repeated fields can be referenced. For example, the following field paths are invalid: placement.clusterSelector.clusterLabels jobs'step-id'.sparkJob.args{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12617,7 +12807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12625,7 +12815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametervalidation">pulumi.<wbr>Input<Parameter<wbr>Validation<wbr>Args></a></span>
+        <span class="property-type"><a href="#parametervalidation">Parameter<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12637,7 +12827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Brief description of the parameter. Must not exceed 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12645,7 +12835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths.A field path is similar in syntax to a google.protobuf.FieldMask. For example, a field path that references the zone field of a workflow template's cluster selector would be specified as placement.clusterSelector.zone.Also, field paths can reference fields using the following syntax: Values in maps can be referenced by key: labels'key' placement.clusterSelector.clusterLabels'key' placement.managedCluster.labels'key' placement.clusterSelector.clusterLabels'key' jobs'step-id'.labels'key' Jobs in the jobs list can be referenced by step-id: jobs'step-id'.hadoopJob.mainJarFileUri jobs'step-id'.hiveJob.queryFileUri jobs'step-id'.pySparkJob.mainPythonFileUri jobs'step-id'.hadoopJob.jarFileUris0 jobs'step-id'.hadoopJob.archiveUris0 jobs'step-id'.hadoopJob.fileUris0 jobs'step-id'.pySparkJob.pythonFileUris0 Items in repeated fields can be referenced by a zero-based index: jobs'step-id'.sparkJob.args0 Other examples: jobs'step-id'.hadoopJob.properties'key' jobs'step-id'.hadoopJob.args0 jobs'step-id'.hiveJob.scriptVariables'key' jobs'step-id'.hadoopJob.mainJarFileUri placement.clusterSelector.zoneIt may not be possible to parameterize maps and repeated fields in their entirety since only individual map values and individual items in repeated fields can be referenced. For example, the following field paths are invalid: placement.clusterSelector.clusterLabels jobs'step-id'.sparkJob.args{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12653,7 +12843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12661,7 +12851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametervalidation">Parameter<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametervalidation">Parameter<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12747,7 +12937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Brief description of the parameter. Must not exceed 1024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12755,7 +12945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths.A field path is similar in syntax to a google.protobuf.FieldMask. For example, a field path that references the zone field of a workflow template's cluster selector would be specified as placement.clusterSelector.zone.Also, field paths can reference fields using the following syntax: Values in maps can be referenced by key: labels'key' placement.clusterSelector.clusterLabels'key' placement.managedCluster.labels'key' placement.clusterSelector.clusterLabels'key' jobs'step-id'.labels'key' Jobs in the jobs list can be referenced by step-id: jobs'step-id'.hadoopJob.mainJarFileUri jobs'step-id'.hiveJob.queryFileUri jobs'step-id'.pySparkJob.mainPythonFileUri jobs'step-id'.hadoopJob.jarFileUris0 jobs'step-id'.hadoopJob.archiveUris0 jobs'step-id'.hadoopJob.fileUris0 jobs'step-id'.pySparkJob.pythonFileUris0 Items in repeated fields can be referenced by a zero-based index: jobs'step-id'.sparkJob.args0 Other examples: jobs'step-id'.hadoopJob.properties'key' jobs'step-id'.hadoopJob.args0 jobs'step-id'.hiveJob.scriptVariables'key' jobs'step-id'.hadoopJob.mainJarFileUri placement.clusterSelector.zoneIt may not be possible to parameterize maps and repeated fields in their entirety since only individual map values and individual items in repeated fields can be referenced. For example, the following field paths are invalid: placement.clusterSelector.clusterLabels jobs'step-id'.sparkJob.args{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12763,7 +12953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12771,7 +12961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametervalidationresponse">pulumi.<wbr>Input<Parameter<wbr>Validation<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#parametervalidationresponse">Parameter<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12783,7 +12973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Brief description of the parameter. Must not exceed 1024 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12791,7 +12981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Paths to all fields that the parameter replaces. A field is allowed to appear in at most one parameter's list of field paths.A field path is similar in syntax to a google.protobuf.FieldMask. For example, a field path that references the zone field of a workflow template's cluster selector would be specified as placement.clusterSelector.zone.Also, field paths can reference fields using the following syntax: Values in maps can be referenced by key: labels'key' placement.clusterSelector.clusterLabels'key' placement.managedCluster.labels'key' placement.clusterSelector.clusterLabels'key' jobs'step-id'.labels'key' Jobs in the jobs list can be referenced by step-id: jobs'step-id'.hadoopJob.mainJarFileUri jobs'step-id'.hiveJob.queryFileUri jobs'step-id'.pySparkJob.mainPythonFileUri jobs'step-id'.hadoopJob.jarFileUris0 jobs'step-id'.hadoopJob.archiveUris0 jobs'step-id'.hadoopJob.fileUris0 jobs'step-id'.pySparkJob.pythonFileUris0 Items in repeated fields can be referenced by a zero-based index: jobs'step-id'.sparkJob.args0 Other examples: jobs'step-id'.hadoopJob.properties'key' jobs'step-id'.hadoopJob.args0 jobs'step-id'.hiveJob.scriptVariables'key' jobs'step-id'.hadoopJob.mainJarFileUri placement.clusterSelector.zoneIt may not be possible to parameterize maps and repeated fields in their entirety since only individual map values and individual items in repeated fields can be referenced. For example, the following field paths are invalid: placement.clusterSelector.clusterLabels jobs'step-id'.sparkJob.args{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12799,7 +12989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12807,7 +12997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametervalidationresponse">Parameter<wbr>Validation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametervalidationresponse">Parameter<wbr>Validation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12845,7 +13035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of allowed values for the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12857,7 +13047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of allowed values for the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12895,7 +13085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of allowed values for the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12907,7 +13097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of allowed values for the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12961,7 +13151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterselector_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterselector">pulumi.<wbr>Input<Cluster<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterselector">Cluster<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12969,7 +13159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcluster_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedcluster">pulumi.<wbr>Input<Managed<wbr>Cluster<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedcluster">Managed<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12981,7 +13171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_selector_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterselector">Cluster<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterselector">Cluster<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12989,7 +13179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_cluster_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedcluster">Managed<wbr>Cluster<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedcluster">Managed<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13043,7 +13233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterselector_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterselectorresponse">pulumi.<wbr>Input<Cluster<wbr>Selector<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterselectorresponse">Cluster<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13051,7 +13241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcluster_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterresponse">pulumi.<wbr>Input<Managed<wbr>Cluster<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedclusterresponse">Managed<wbr>Cluster<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13063,7 +13253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_selector_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterselectorresponse">Cluster<wbr>Selector<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterselectorresponse">Cluster<wbr>Selector<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13071,7 +13261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_cluster_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterresponse">Managed<wbr>Cluster<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterresponse">Managed<wbr>Cluster<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}

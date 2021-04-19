@@ -20,19 +20,30 @@ Adds a new Feature.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">features_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">membership_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_gkehub_v1beta.CommonFeatureSpecArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">features_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">membership_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_gkehub_v1beta.CommonFeatureSpecArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feature</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feature</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +78,32 @@ Adds a new Feature.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FeatureArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +279,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#featuresid_nodejs" style="color: inherit; text-decoration: inherit;">features<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -266,7 +287,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -274,7 +295,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +303,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#membershipspecs_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +311,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonfeaturespec">pulumi.<wbr>Input<Common<wbr>Feature<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#commonfeaturespec">Common<wbr>Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +323,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#features_id_python" style="color: inherit; text-decoration: inherit;">features_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -310,7 +331,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -318,7 +339,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -326,7 +347,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#membership_specs_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +355,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonfeaturespec">Common<wbr>Feature<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#commonfeaturespec">Common<wbr>Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multiclusteringress_nodejs" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespec">pulumi.<wbr>Input<Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#multiclusteringressfeaturespec">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -673,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multiclusteringress_python" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespec">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusteringressfeaturespec">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multiclusteringress_nodejs" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecresponse">pulumi.<wbr>Input<Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#multiclusteringressfeaturespecresponse">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multiclusteringress_python" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecresponse">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusteringressfeaturespecresponse">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurestateresponse">pulumi.<wbr>Input<Feature<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#featurestateresponse">Feature<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The "running state" of the Feature in this Hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurestateresponse">Feature<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featurestateresponse">Feature<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The "running state" of the Feature in this Hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Feature resource in the Hub API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the Feature resource in the Hub API.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The high-level, machine-readable status of this Feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the current status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -909,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this status and any related Feature-specific details were updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The high-level, machine-readable status of this Feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the current status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -937,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this status and any related Feature-specific details were updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmembership_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_membership_python" style="color: inherit; text-decoration: inherit;">config_<wbr>membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1025,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmembership_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_membership_python" style="color: inherit; text-decoration: inherit;">config_<wbr>membership</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`{{% /md %}}</dd></dl>
 {{% /choosable %}}

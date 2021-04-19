@@ -20,19 +20,39 @@ Creates a new Uptime check configuration.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_monitoring_v3.ContentMatcherArgs]]]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.HttpCheckArgs]]</span> = None<span class="p">, </span><span class="nx">internal_checkers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_monitoring_v3.InternalCheckerArgs]]]]</span> = None<span class="p">, </span><span class="nx">is_internal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.MonitoredResourceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.ResourceGroupArgs]]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.TcpCheckArgs]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">uptime_check_configs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.ContentMatcherArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.HttpCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">internal_checkers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_monitoring_v3.InternalCheckerArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">is_internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.MonitoredResourceArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ResourceGroupArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.TcpCheckArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">uptime_check_configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUptimeCheckConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUptimeCheckConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a new Uptime check configuration.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UptimeCheckConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#uptimecheckconfigsid_nodejs" style="color: inherit; text-decoration: inherit;">uptime<wbr>Check<wbr>Configs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +448,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#contentmatchers_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentmatcher">Content<wbr>Matcher<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The content that is expected to appear in the data returned by the target server against which the check is run. Currently, only the first entry in the content_matchers list is supported, and additional entries will be ignored. This field is optional and should only be specified if a content match is required as part of the/ Uptime check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the Uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#httpcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpcheck">pulumi.<wbr>Input<Http<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpcheck">Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#internalcheckers_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Checkers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#internalchecker">pulumi.<wbr>Input<pulumi.<wbr>Input<Internal<wbr>Checker<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#internalchecker">Internal<wbr>Checker<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The internal checkers that this check will egress from. If is_internal is true and this list is empty, the check will egress from all the InternalCheckers configured for the project that owns this UptimeCheckConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#isinternal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this is true, then checks are made only from the 'internal_checkers'. If it is false, then checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions' when is_internal is true, or to provide 'internal_checkers' when is_internal is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#monitoredresource_nodejs" style="color: inherit; text-decoration: inherit;">monitored<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoredresource">pulumi.<wbr>Input<Monitored<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#monitoredresource">Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this Uptime check configuration. The format is: projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This field should be omitted when creating the Uptime check configuration; on create, the resource name is assigned by the server and included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the Uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 60s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroup">pulumi.<wbr>Input<Resource<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcegroup">Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#tcpcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpcheck">pulumi.<wbr>Input<Tcp<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcpcheck">Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#uptime_check_configs_id_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>configs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +564,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentmatcher">Content<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentmatcher">Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The content that is expected to appear in the data returned by the target server against which the check is run. Currently, only the first entry in the content_matchers list is supported, and additional entries will be ignored. This field is optional and should only be specified if a content match is required as part of the/ Uptime check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the Uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpcheck">Http<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpcheck">Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#internal_checkers_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>checkers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#internalchecker">Internal<wbr>Checker<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#internalchecker">Internal<wbr>Checker<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The internal checkers that this check will egress from. If is_internal is true and this list is empty, the check will egress from all the InternalCheckers configured for the project that owns this UptimeCheckConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#is_internal_python" style="color: inherit; text-decoration: inherit;">is_<wbr>internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this is true, then checks are made only from the 'internal_checkers'. If it is false, then checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions' when is_internal is true, or to provide 'internal_checkers' when is_internal is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoredresource">Monitored<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitoredresource">Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are valid for this field: uptime_url, gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this Uptime check configuration. The format is: projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This field should be omitted when creating the Uptime check configuration; on create, the resource name is assigned by the server and included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the Uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 60s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroup">Resource<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcegroup">Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions must be provided to include a minimum of 3 locations. Not specifying this field will result in Uptime checks running from all available regions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpcheck">Tcp<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcpcheck">Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the HTTP server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the HTTP server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the HTTP server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the HTTP server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -995,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authinfo_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthentication">pulumi.<wbr>Input<Basic<wbr>Authentication<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the request_method is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the Uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maskheaders_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to true then the headers will be obscured with ******.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to "/"). The path to the page against which to run the check. Will be combined with the host (specified within the monitored_resource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on the HTTP server against which to run the check. Will be combined with host (specified within the monitored_resource) and path to construct the full URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatessl_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false, setting validate_ssl to true has no effect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1281,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_info_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the request_method is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the Uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_headers_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to true then the headers will be obscured with ******.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to "/"). The path to the page against which to run the check. Will be combined with the host (specified within the monitored_resource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on the HTTP server against which to run the check. Will be combined with host (specified within the monitored_resource) and path to construct the full URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_ssl_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false, setting validate_ssl to true has no effect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authinfo_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">pulumi.<wbr>Input<Basic<wbr>Authentication<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the request_method is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the Uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maskheaders_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to true then the headers will be obscured with ******.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1575,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to "/"). The path to the page against which to run the check. Will be combined with the host (specified within the monitored_resource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1583,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on the HTTP server against which to run the check. Will be combined with host (specified within the monitored_resource) and path to construct the full URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1591,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatessl_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false, setting validate_ssl to true has no effect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1619,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_info_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the request_method is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1635,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type header to use for the check. The following configurations result in errors: 1. Content type is specified in both the headers field and the content_type field. 2. Request method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is provided via headers field. The content_type field should be used instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1643,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the Uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_headers_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to true then the headers will be obscured with ******.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1659,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to "/"). The path to the page against which to run the check. Will be combined with the host (specified within the monitored_resource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional (defaults to 80 when use_ssl is false, and 443 when use_ssl is true). The TCP port on the HTTP server against which to run the check. Will be combined with host (specified within the monitored_resource) and path to construct the full URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then request_method defaults to GET.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_ssl_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitored_resource is set to uptime_url. If use_ssl is false, setting validate_ssl to true has no effect.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1809,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcpzone_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerprojectid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcp_zone_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_project_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2019,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2027,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcpzone_nodejs" style="color: inherit; text-decoration: inherit;">gcp<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2035,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerprojectid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcp_zone_python" style="color: inherit; text-decoration: inherit;">gcp_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2103,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_project_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2111,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current operational state of the internal checker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2165,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types and Logging resource types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types and Logging resource types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2247,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2255,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types and Logging resource types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2267,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2275,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types and Logging resource types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2329,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2337,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2349,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2411,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2431,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2439,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2477,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2489,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2539,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.{{% /md %}}</dd></dl>
 {{% /choosable %}}

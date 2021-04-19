@@ -20,19 +20,44 @@ Creates a network endpoint group in the specified project using the parameters t
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">app_engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.NetworkEndpointGroupAppEngineArgs]]</span> = None<span class="p">, </span><span class="nx">cloud_function</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.NetworkEndpointGroupCloudFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">cloud_run</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_v1.NetworkEndpointGroupCloudRunArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">default_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network_endpoint_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                               <span class="nx">app_engine</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NetworkEndpointGroupAppEngineArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">cloud_function</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NetworkEndpointGroupCloudFunctionArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">cloud_run</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NetworkEndpointGroupCloudRunArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">default_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">network_endpoint_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                               <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionNetworkEndpointGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionNetworkEndpointGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionNetworkEndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +92,32 @@ Creates a network endpoint group in the specified project using the parameters t
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegionNetworkEndpointGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +517,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#networkendpointgroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +525,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +533,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the network endpoint group is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +541,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata defined as annotations on the network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +549,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupappengine">pulumi.<wbr>Input<Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkendpointgroupappengine">Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +557,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupcloudfunction">pulumi.<wbr>Input<Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkendpointgroupcloudfunction">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +565,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupcloudrun">pulumi.<wbr>Input<Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkendpointgroupcloudrun">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +573,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +581,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#defaultport_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +589,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +597,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +605,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +613,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +621,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +629,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +637,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +645,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output only] Number of network endpoints in the network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +653,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +661,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -638,7 +673,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#network_endpoint_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -646,7 +681,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -654,7 +689,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where the network endpoint group is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +697,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata defined as annotations on the network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +705,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupappengine">Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkendpointgroupappengine">Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +713,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupcloudfunction">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkendpointgroupcloudfunction">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +721,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkendpointgroupcloudrun">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkendpointgroupcloudrun">Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +729,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +737,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#default_port_python" style="color: inherit; text-decoration: inherit;">default_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default port used if the port number is not specified in the network endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +745,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +753,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +761,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +769,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +777,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +785,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +793,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +801,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output only] Number of network endpoints in the network endpoint group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +809,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +817,7 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the zone where the network endpoint group is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +972,7 @@ Example value: "v1", "v2".{{% /md %}}</dd></dl>
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 
@@ -949,7 +984,7 @@ Example value: "default", "my-service".{{% /md %}}</dd><dt class="property-optio
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services.
 
@@ -959,7 +994,7 @@ For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1-dot-ap
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 
@@ -975,7 +1010,7 @@ Example value: "v1", "v2".{{% /md %}}</dd></dl>
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 
@@ -987,7 +1022,7 @@ Example value: "default", "my-service".{{% /md %}}</dd><dt class="property-optio
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services.
 
@@ -997,7 +1032,7 @@ For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1-dot-ap
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 
@@ -1091,7 +1126,7 @@ Example value: "v1", "v2".{{% /md %}}</dd></dl>
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 
@@ -1103,7 +1138,7 @@ Example value: "default", "my-service".{{% /md %}}</dd><dt class="property-requi
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1113,7 +1148,7 @@ For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1-dot-ap
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 
@@ -1129,7 +1164,7 @@ Example value: "v1", "v2".{{% /md %}}</dd></dl>
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 
@@ -1141,7 +1176,7 @@ Example value: "default", "my-service".{{% /md %}}</dd><dt class="property-requi
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse service and version fields from a request URL. URL mask allows for routing to multiple App Engine services without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1151,7 +1186,7 @@ For example, the request URLs "foo1-dot-appname.appspot.com/v1" and "foo1-dot-ap
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 
@@ -1221,7 +1256,7 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2" 
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 
@@ -1233,7 +1268,7 @@ Example value: "func1".{{% /md %}}</dd><dt class="property-optional"
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1247,7 +1282,7 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2" 
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 
@@ -1259,7 +1294,7 @@ Example value: "func1".{{% /md %}}</dd><dt class="property-optional"
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1327,7 +1362,7 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2" 
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 
@@ -1339,7 +1374,7 @@ Example value: "func1".{{% /md %}}</dd><dt class="property-required"
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1353,7 +1388,7 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2" 
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 
@@ -1365,7 +1400,7 @@ Example value: "func1".{{% /md %}}</dd><dt class="property-required"
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.
 
@@ -1457,7 +1492,7 @@ For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can 
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run service is the main resource of Cloud Run.
 
@@ -1469,7 +1504,7 @@ Example value: "run-service".{{% /md %}}</dd><dt class="property-optional"
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information.
 
@@ -1481,7 +1516,7 @@ Example value: "revision-0010".{{% /md %}}</dd><dt class="property-optional"
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.
 
@@ -1495,7 +1530,7 @@ For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can 
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run service is the main resource of Cloud Run.
 
@@ -1507,7 +1542,7 @@ Example value: "run-service".{{% /md %}}</dd><dt class="property-optional"
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information.
 
@@ -1519,7 +1554,7 @@ Example value: "revision-0010".{{% /md %}}</dd><dt class="property-optional"
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.
 
@@ -1611,7 +1646,7 @@ For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can 
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run service is the main resource of Cloud Run.
 
@@ -1623,7 +1658,7 @@ Example value: "run-service".{{% /md %}}</dd><dt class="property-required"
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information.
 
@@ -1635,7 +1670,7 @@ Example value: "revision-0010".{{% /md %}}</dd><dt class="property-required"
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.
 
@@ -1649,7 +1684,7 @@ For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can 
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run service is the main resource of Cloud Run.
 
@@ -1661,7 +1696,7 @@ Example value: "run-service".{{% /md %}}</dd><dt class="property-required"
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information.
 
@@ -1673,7 +1708,7 @@ Example value: "revision-0010".{{% /md %}}</dd><dt class="property-required"
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services.
 

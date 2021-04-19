@@ -20,19 +20,50 @@ Creates a Cloud Dataflow job. To create a job, we recommend using `projects.loca
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_request_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">created_from_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">current_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">current_state_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataflow_v1b3.EnvironmentArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">job_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataflow_v1b3.JobMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pipeline_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dataflow_v1b3.PipelineDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replace_job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">replaced_by_job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">requested_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">stage_states</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dataflow_v1b3.ExecutionStageStateArgs]]]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dataflow_v1b3.StepArgs]]]]</span> = None<span class="p">, </span><span class="nx">steps_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">temp_files</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">client_request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">created_from_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">current_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">current_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.EnvironmentArgs]</span> = None<span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">job_metadata</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.JobMetadataArgs]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pipeline_description</span><span class="p">:</span> <span class="nx">Optional[_dataflow_v1b3.PipelineDescriptionArgs]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">replace_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">replaced_by_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">requested_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">stage_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataflow_v1b3.ExecutionStageStateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataflow_v1b3.StepArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">steps_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">temp_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">transform_name_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +98,32 @@ Creates a Cloud Dataflow job. To create a job, we recommend using `projects.loca
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +619,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -586,7 +627,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -594,7 +635,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Platform project that the job belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +643,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#clientrequestid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Request<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client's unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client's ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +651,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +659,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#createdfromsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>From<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this is specified, the job's initial state is populated from the given snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +667,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#currentstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +675,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#currentstatetime_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp associated with the current state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +683,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environment">pulumi.<wbr>Input<Environment<wbr>Args></a></span>
+        <span class="property-type"><a href="#environment">Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The environment for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +691,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is created, and is immutable for the life of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +699,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobmetadata_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmetadata">pulumi.<wbr>Input<Job<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobmetadata">Job<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +707,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +715,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +723,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#pipelinedescription_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinedescription">pulumi.<wbr>Input<Pipeline<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#pipelinedescription">Pipeline<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +731,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#replacejobid_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +739,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#replacedbyjobid_nodejs" style="color: inherit; text-decoration: inherit;">replaced<wbr>By<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +747,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requestedstate_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +755,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +763,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stagestates_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagestate">pulumi.<wbr>Input<pulumi.<wbr>Input<Execution<wbr>Stage<wbr>State<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#executionstagestate">Execution<wbr>Stage<wbr>State<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +771,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +779,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#step">pulumi.<wbr>Input<pulumi.<wbr>Input<Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#step">Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +787,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stepslocation_nodejs" style="color: inherit; text-decoration: inherit;">steps<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage location where the steps are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +795,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tempfiles_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +803,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transformnamemapping_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Name<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +811,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -782,7 +823,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -790,7 +831,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -798,7 +839,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Platform project that the job belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +847,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#client_request_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>request_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client's unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client's ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +855,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +863,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#created_from_snapshot_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>from_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this is specified, the job's initial state is populated from the given snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +871,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +879,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#current_state_time_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp associated with the current state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +887,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environment">Environment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environment">Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The environment for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +895,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is created, and is immutable for the life of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +903,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_metadata_python" style="color: inherit; text-decoration: inherit;">job_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmetadata">Job<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobmetadata">Job<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +911,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +919,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +927,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#pipeline_description_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinedescription">Pipeline<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinedescription">Pipeline<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +935,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#replace_job_id_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +943,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#replaced_by_job_id_python" style="color: inherit; text-decoration: inherit;">replaced_<wbr>by_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +951,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#requested_state_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +959,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +967,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stage_states_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagestate">Execution<wbr>Stage<wbr>State<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#executionstagestate">Execution<wbr>Stage<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +975,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +983,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#step">Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#step">Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +991,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#steps_location_python" style="color: inherit; text-decoration: inherit;">steps_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage location where the steps are stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +999,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#temp_files_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1007,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#transform_name_mapping_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>name_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1015,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Cloud Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers to cap scaling at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_num_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers to cap scaling at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers to cap scaling at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm to use for autoscaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_num_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of workers to cap scaling at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query used to access data in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Table accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query used to access data in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Table accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1443,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query used to access data in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Table accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1479,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query used to access data in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Table accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1565,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TableId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TableId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TableId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TableId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1793,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransformorcollection_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform<wbr>Or<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_or_collection_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform_<wbr>or_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1907,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransformorcollection_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform<wbr>Or<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1923,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1935,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_or_collection_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform_<wbr>or_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2021,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransform_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform with which this transform is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2049,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform with which this transform is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2135,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransform_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform with which this transform is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2163,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform with which this transform is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this transform; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2233,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace used in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace used in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2315,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace used in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2323,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace used in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2343,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2381,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehotkeylogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hot<wbr>Key<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, enables the logging of the literal hot key to the user's Cloud Logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_hot_key_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hot_<wbr>key_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, enables the logging of the literal hot key to the user's Cloud Logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2431,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablehotkeylogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hot<wbr>Key<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, enables the logging of the literal hot key to the user's Cloud Logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_hot_key_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hot_<wbr>key_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, enables the logging of the literal hot key to the user's Cloud Logging.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2513,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in "pd-standard". If SSD persistent disks are available, the resource name typically ends with "pd-ssd". The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory in a VM where disk is mounted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2541,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in "pd-standard". If SSD persistent disks are available, the resource name typically ends with "pd-ssd". The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory in a VM where disk is mounted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2627,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in "pd-standard". If SSD persistent disks are available, the resource name typically ends with "pd-ssd". The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2635,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory in a VM where disk is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2643,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2655,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Disk storage type, as defined by Google Compute Engine. This must be a disk type appropriate to the project and zone in which the workers will run. If unknown or unspecified, the service will attempt to choose a reasonable default. For example, the standard persistent disk type is a resource name typically ending in "pd-standard". If SSD persistent disks are available, the resource name typically ends with "pd-ssd". The actual valid values are defined the Google Compute Engine API, not by the Cloud Dataflow API; consult the Google Compute Engine documentation for more information about determining the set of available disk types for a particular project and zone. Google Compute Engine Disk types are local to a particular project in a particular zone, and so the resource name will typically look something like this: compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2663,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory in a VM where disk is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2671,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of disk in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2885,7 +2926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of a boolean type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#durationvalue_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of duration type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of float type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64value_nodejs" style="color: inherit; text-decoration: inherit;">int64Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of int64 type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#javaclassvalue_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Class<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of java class type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional label to display in a dax UI for the element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shortstrvalue_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Str<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strvalue_nodejs" style="color: inherit; text-decoration: inherit;">str<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of string type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of timestamp type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional full URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2985,7 +3026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of a boolean type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_value_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of duration type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3001,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of float type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64_value_python" style="color: inherit; text-decoration: inherit;">int64_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of int64 type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3017,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#java_class_value_python" style="color: inherit; text-decoration: inherit;">java_<wbr>class_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of java class type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3025,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3033,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional label to display in a dax UI for the element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3049,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#short_str_value_python" style="color: inherit; text-decoration: inherit;">short_<wbr>str_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3057,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#str_value_python" style="color: inherit; text-decoration: inherit;">str_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of string type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3065,7 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of timestamp type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional full URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3287,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of a boolean type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3295,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#durationvalue_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of duration type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3303,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of float type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3311,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64value_nodejs" style="color: inherit; text-decoration: inherit;">int64Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of int64 type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3319,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#javaclassvalue_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Class<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of java class type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3327,7 +3368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3335,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional label to display in a dax UI for the element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3343,7 +3384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3351,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shortstrvalue_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Str<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3359,7 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strvalue_nodejs" style="color: inherit; text-decoration: inherit;">str<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of string type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3367,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of timestamp type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3375,7 +3416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional full URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3387,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of a boolean type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3395,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_value_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of duration type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3403,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of float type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3411,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64_value_python" style="color: inherit; text-decoration: inherit;">int64_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of int64 type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3419,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#java_class_value_python" style="color: inherit; text-decoration: inherit;">java_<wbr>class_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of java class type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3427,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3435,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional label to display in a dax UI for the element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3443,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3451,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#short_str_value_python" style="color: inherit; text-decoration: inherit;">short_<wbr>str_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3459,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#str_value_python" style="color: inherit; text-decoration: inherit;">str_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of string type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3467,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains value if the data is of timestamp type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3475,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional full URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3753,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustermanagerapiservice_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Manager<wbr>Api<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugoptions_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugoptions">pulumi.<wbr>Input<Debug<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#debugoptions">Debug<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any debugging options to be supplied to the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options. For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flexresourceschedulinggoal_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internalexperiments_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Experimental settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkpipelineoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Pipeline<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to run virtual machines as. Defaults to the default account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3817,7 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicekmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3825,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceoptions_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on). For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3833,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3841,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A description of the process that generated the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3849,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A structure describing which components and their versions of the service are required in order to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerpools_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpool">pulumi.<wbr>Input<pulumi.<wbr>Input<Worker<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workerpool">Worker<wbr>Pool<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3865,7 +3906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerregion_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3873,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerzone_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3885,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_manager_api_service_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>manager_<wbr>api_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3893,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_options_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugoptions">Debug<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#debugoptions">Debug<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any debugging options to be supplied to the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experiments_python" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options. For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3917,7 +3958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flex_resource_scheduling_goal_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>resource_<wbr>scheduling_<wbr>goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +3966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_experiments_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Experimental settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_pipeline_options_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>pipeline_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity to run virtual machines as. Defaults to the default account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3949,7 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_kms_key_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3957,7 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_options_python" style="color: inherit; text-decoration: inherit;">service_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on). For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3965,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A description of the process that generated the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A structure describing which components and their versions of the service are required in order to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3989,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_pools_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpool">Worker<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workerpool">Worker<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3997,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_region_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4005,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_zone_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4299,7 +4340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustermanagerapiservice_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Manager<wbr>Api<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4307,7 +4348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4315,7 +4356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugoptions_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugoptionsresponse">pulumi.<wbr>Input<Debug<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#debugoptionsresponse">Debug<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any debugging options to be supplied to the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4323,7 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options. For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4331,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flexresourceschedulinggoal_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Resource<wbr>Scheduling<wbr>Goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4339,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internalexperiments_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Experimental settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4347,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkpipelineoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Pipeline<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4355,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to run virtual machines as. Defaults to the default account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4363,7 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicekmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4371,7 +4412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceoptions_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on). For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4379,7 +4420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shufflemode_nodejs" style="color: inherit; text-decoration: inherit;">shuffle<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shuffle mode used for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4387,7 +4428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4395,7 +4436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useragent_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A description of the process that generated the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4403,7 +4444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A structure describing which components and their versions of the service are required in order to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4411,7 +4452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerpools_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpoolresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Worker<wbr>Pool<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workerpoolresponse">Worker<wbr>Pool<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4419,7 +4460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerregion_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4427,7 +4468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerzone_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4439,7 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_manager_api_service_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>manager_<wbr>api_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4447,7 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4455,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debug_options_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugoptionsresponse">Debug<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#debugoptionsresponse">Debug<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any debugging options to be supplied to the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4463,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experiments_python" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options. For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4471,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flex_resource_scheduling_goal_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>resource_<wbr>scheduling_<wbr>goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which Flexible Resource Scheduling mode to run in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4479,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_experiments_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Experimental settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4487,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_pipeline_options_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>pipeline_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4495,7 +4536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity to run virtual machines as. Defaults to the default account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4503,7 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_kms_key_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4511,7 +4552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_options_python" style="color: inherit; text-decoration: inherit;">service_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on). For more details see the rationale at go/user-specified-service-options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4519,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shuffle_mode_python" style="color: inherit; text-decoration: inherit;">shuffle_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shuffle mode used for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4527,7 +4568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4535,7 +4576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_agent_python" style="color: inherit; text-decoration: inherit;">user_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A description of the process that generated the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4543,7 +4584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A structure describing which components and their versions of the service are required in order to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4551,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_pools_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerpoolresponse">Worker<wbr>Pool<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workerpoolresponse">Worker<wbr>Pool<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4559,7 +4600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_region_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4567,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_zone_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4637,7 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstatetime_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the stage transitioned to this state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4645,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagename_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the execution stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagestate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Stage<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4665,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_state_time_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the stage transitioned to this state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_stage_name_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>stage_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the execution stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4681,7 +4722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_stage_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>stage_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4751,7 +4792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstatetime_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the stage transitioned to this state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4759,7 +4800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagename_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Stage<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the execution stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4767,7 +4808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstagestate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Stage<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4779,7 +4820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_state_time_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the stage transitioned to this state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4787,7 +4828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_stage_name_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>stage_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the execution stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4795,7 +4836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_stage_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>stage_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Executions stage states allow the same set of values as JobState.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4945,7 +4986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentsource_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componentsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Component<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#componentsource">Component<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collections produced and consumed by component transforms of this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4953,7 +4994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componenttransform_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componenttransform">pulumi.<wbr>Input<pulumi.<wbr>Input<Component<wbr>Transform<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#componenttransform">Component<wbr>Transform<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Transforms that comprise this execution stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4961,7 +5002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated id for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4969,7 +5010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputsource_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesource">pulumi.<wbr>Input<pulumi.<wbr>Input<Stage<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Input sources for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4977,7 +5018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4985,7 +5026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4993,7 +5034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputsource_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesource">pulumi.<wbr>Input<pulumi.<wbr>Input<Stage<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Output sources for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5001,7 +5042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisitestage_nodejs" style="color: inherit; text-decoration: inherit;">prerequisite<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Other stages that must complete before this stage can run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5013,7 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_source_python" style="color: inherit; text-decoration: inherit;">component_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componentsource">Component<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#componentsource">Component<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collections produced and consumed by component transforms of this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5021,7 +5062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_transform_python" style="color: inherit; text-decoration: inherit;">component_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componenttransform">Component<wbr>Transform<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#componenttransform">Component<wbr>Transform<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Transforms that comprise this execution stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated id for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5037,7 +5078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_source_python" style="color: inherit; text-decoration: inherit;">input_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Input sources for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5045,7 +5086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5061,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_source_python" style="color: inherit; text-decoration: inherit;">output_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stagesource">Stage<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Output sources for this stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5069,7 +5110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisite_stage_python" style="color: inherit; text-decoration: inherit;">prerequisite_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other stages that must complete before this stage can run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5203,7 +5244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentsource_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componentsourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Component<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#componentsourceresponse">Component<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Collections produced and consumed by component transforms of this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5211,7 +5252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componenttransform_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componenttransformresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Component<wbr>Transform<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#componenttransformresponse">Component<wbr>Transform<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Transforms that comprise this execution stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5219,7 +5260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputsource_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Stage<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Input sources for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5227,7 +5268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5235,7 +5276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5243,7 +5284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputsource_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Stage<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Output sources for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5251,7 +5292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisitestage_nodejs" style="color: inherit; text-decoration: inherit;">prerequisite<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Other stages that must complete before this stage can run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5263,7 +5304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_source_python" style="color: inherit; text-decoration: inherit;">component_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componentsourceresponse">Component<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#componentsourceresponse">Component<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collections produced and consumed by component transforms of this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5271,7 +5312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_transform_python" style="color: inherit; text-decoration: inherit;">component_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componenttransformresponse">Component<wbr>Transform<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#componenttransformresponse">Component<wbr>Transform<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Transforms that comprise this execution stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5279,7 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_source_python" style="color: inherit; text-decoration: inherit;">input_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Input sources for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5287,7 +5328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of transform this stage is executing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5295,7 +5336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5303,7 +5344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_source_python" style="color: inherit; text-decoration: inherit;">output_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stagesourceresponse">Stage<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Output sources for this stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5311,7 +5352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prerequisite_stage_python" style="color: inherit; text-decoration: inherit;">prerequisite_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other stages that must complete before this stage can run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5349,7 +5390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Pattern used to access files by the connector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5361,7 +5402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Pattern used to access files by the connector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5399,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepattern_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Pattern used to access files by the connector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5411,7 +5452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_pattern_python" style="color: inherit; text-decoration: inherit;">file_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Pattern used to access files by the connector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5545,7 +5586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtabledetails_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Table<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableiodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Big<wbr>Table<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtableiodetails">Big<wbr>Table<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5553,7 +5594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerydetails_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigqueryiodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Big<wbr>Query<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigqueryiodetails">Big<wbr>Query<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a BigQuery source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5561,7 +5602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoredetails_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreiodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Datastore<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datastoreiodetails">Datastore<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Datastore source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5569,7 +5610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filedetails_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileiodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileiodetails">File<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a File source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5577,7 +5618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdetails_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubiodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Pub<wbr>Sub<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pubsubiodetails">Pub<wbr>Sub<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5585,7 +5626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkversion_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkversion">pulumi.<wbr>Input<Sdk<wbr>Version<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdkversion">Sdk<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SDK version used to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5593,7 +5634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spannerdetails_nodejs" style="color: inherit; text-decoration: inherit;">spanner<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spanneriodetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Spanner<wbr>IODetails<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spanneriodetails">Spanner<wbr>IODetails<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Spanner source used in the Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5605,7 +5646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_table_details_python" style="color: inherit; text-decoration: inherit;">big_<wbr>table_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableiodetails">Big<wbr>Table<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtableiodetails">Big<wbr>Table<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_details_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigqueryiodetails">Big<wbr>Query<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigqueryiodetails">Big<wbr>Query<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a BigQuery source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5621,7 +5662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_details_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreiodetails">Datastore<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datastoreiodetails">Datastore<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Datastore source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5629,7 +5670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_details_python" style="color: inherit; text-decoration: inherit;">file_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileiodetails">File<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileiodetails">File<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a File source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5637,7 +5678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_details_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubiodetails">Pub<wbr>Sub<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pubsubiodetails">Pub<wbr>Sub<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5645,7 +5686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_version_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkversion">Sdk<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdkversion">Sdk<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SDK version used to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5653,7 +5694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spanner_details_python" style="color: inherit; text-decoration: inherit;">spanner_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spanneriodetails">Spanner<wbr>IODetails<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spanneriodetails">Spanner<wbr>IODetails<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Spanner source used in the Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5787,7 +5828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigtabledetails_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Table<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableiodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Big<wbr>Table<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigtableiodetailsresponse">Big<wbr>Table<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5795,7 +5836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerydetails_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigqueryiodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Big<wbr>Query<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#bigqueryiodetailsresponse">Big<wbr>Query<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a BigQuery source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5803,7 +5844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoredetails_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreiodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Datastore<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datastoreiodetailsresponse">Datastore<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Datastore source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5811,7 +5852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filedetails_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileiodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileiodetailsresponse">File<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a File source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5819,7 +5860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubdetails_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubiodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Pub<wbr>Sub<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#pubsubiodetailsresponse">Pub<wbr>Sub<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5827,7 +5868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkversion_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkversionresponse">pulumi.<wbr>Input<Sdk<wbr>Version<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdkversionresponse">Sdk<wbr>Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SDK version used to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5835,7 +5876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spannerdetails_nodejs" style="color: inherit; text-decoration: inherit;">spanner<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spanneriodetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Spanner<wbr>IODetails<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spanneriodetailsresponse">Spanner<wbr>IODetails<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Spanner source used in the Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5847,7 +5888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_table_details_python" style="color: inherit; text-decoration: inherit;">big_<wbr>table_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigtableiodetailsresponse">Big<wbr>Table<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigtableiodetailsresponse">Big<wbr>Table<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Cloud BigTable source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5855,7 +5896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_details_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bigqueryiodetailsresponse">Big<wbr>Query<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#bigqueryiodetailsresponse">Big<wbr>Query<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a BigQuery source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5863,7 +5904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_details_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreiodetailsresponse">Datastore<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datastoreiodetailsresponse">Datastore<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Datastore source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5871,7 +5912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_details_python" style="color: inherit; text-decoration: inherit;">file_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileiodetailsresponse">File<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileiodetailsresponse">File<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a File source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5879,7 +5920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_details_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pubsubiodetailsresponse">Pub<wbr>Sub<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#pubsubiodetailsresponse">Pub<wbr>Sub<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a PubSub source used in the Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5887,7 +5928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_version_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkversionresponse">Sdk<wbr>Version<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdkversionresponse">Sdk<wbr>Version<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SDK version used to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5895,7 +5936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spanner_details_python" style="color: inherit; text-decoration: inherit;">spanner_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spanneriodetailsresponse">Spanner<wbr>IODetails<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spanneriodetailsresponse">Spanner<wbr>IODetails<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identification of a Spanner source used in the Dataflow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5949,7 +5990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5957,7 +5998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5969,7 +6010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5977,7 +6018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6031,7 +6072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6039,7 +6080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6051,7 +6092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6059,7 +6100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6129,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaydata_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydata">pulumi.<wbr>Input<pulumi.<wbr>Input<Display<wbr>Data<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pipeline level display data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6137,7 +6178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionpipelinestage_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Pipeline<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagesummary">pulumi.<wbr>Input<pulumi.<wbr>Input<Execution<wbr>Stage<wbr>Summary<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#executionstagesummary">Execution<wbr>Stage<wbr>Summary<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Description of each stage of execution of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6145,7 +6186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalpipelinetransform_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Pipeline<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformsummary">pulumi.<wbr>Input<pulumi.<wbr>Input<Transform<wbr>Summary<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#transformsummary">Transform<wbr>Summary<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Description of each transform in the pipeline and collections between them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6157,7 +6198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_data_python" style="color: inherit; text-decoration: inherit;">display_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipeline level display data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6165,7 +6206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_pipeline_stage_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>pipeline_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagesummary">Execution<wbr>Stage<wbr>Summary<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#executionstagesummary">Execution<wbr>Stage<wbr>Summary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of each stage of execution of the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6173,7 +6214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_pipeline_transform_python" style="color: inherit; text-decoration: inherit;">original_<wbr>pipeline_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformsummary">Transform<wbr>Summary<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#transformsummary">Transform<wbr>Summary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of each transform in the pipeline and collections between them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6243,7 +6284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaydata_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydataresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Display<wbr>Data<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pipeline level display data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6251,7 +6292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionpipelinestage_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Pipeline<wbr>Stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagesummaryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Execution<wbr>Stage<wbr>Summary<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#executionstagesummaryresponse">Execution<wbr>Stage<wbr>Summary<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Description of each stage of execution of the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6259,7 +6300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originalpipelinetransform_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Pipeline<wbr>Transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformsummaryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Transform<wbr>Summary<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#transformsummaryresponse">Transform<wbr>Summary<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Description of each transform in the pipeline and collections between them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6271,7 +6312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_data_python" style="color: inherit; text-decoration: inherit;">display_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pipeline level display data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6279,7 +6320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_pipeline_stage_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>pipeline_<wbr>stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstagesummaryresponse">Execution<wbr>Stage<wbr>Summary<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#executionstagesummaryresponse">Execution<wbr>Stage<wbr>Summary<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of each stage of execution of the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6287,7 +6328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_pipeline_transform_python" style="color: inherit; text-decoration: inherit;">original_<wbr>pipeline_<wbr>transform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformsummaryresponse">Transform<wbr>Summary<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#transformsummaryresponse">Transform<wbr>Summary<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of each transform in the pipeline and collections between them.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6341,7 +6382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription used in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6349,7 +6390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Topic accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6361,7 +6402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription used in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6369,7 +6410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Topic accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6423,7 +6464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription used in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6431,7 +6472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Topic accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6443,7 +6484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription used in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6451,7 +6492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Topic accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6521,7 +6562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A docker container image that resides in Google Container Registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6529,7 +6570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6537,7 +6578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usesinglecorepercontainer_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Single<wbr>Core<wbr>Per<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6549,7 +6590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A docker container image that resides in Google Container Registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6557,7 +6598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6565,7 +6606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_single_core_per_container_python" style="color: inherit; text-decoration: inherit;">use_<wbr>single_<wbr>core_<wbr>per_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6635,7 +6676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A docker container image that resides in Google Container Registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6643,7 +6684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6651,7 +6692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usesinglecorepercontainer_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Single<wbr>Core<wbr>Per<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6663,7 +6704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A docker container image that resides in Google Container Registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6671,7 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6679,7 +6720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_single_core_per_container_python" style="color: inherit; text-decoration: inherit;">use_<wbr>single_<wbr>core_<wbr>per_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6749,7 +6790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdksupportstatus_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Support<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6757,7 +6798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the SDK used to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6765,7 +6806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versiondisplayname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A readable string describing the version of the SDK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6777,7 +6818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_support_status_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>support_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6785,7 +6826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the SDK used to run the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6793,7 +6834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_display_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A readable string describing the version of the SDK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6863,7 +6904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdksupportstatus_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Support<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6871,7 +6912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the SDK used to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6879,7 +6920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versiondisplayname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A readable string describing the version of the SDK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6891,7 +6932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_support_status_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>support_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The support status for this SDK version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6899,7 +6940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the SDK used to run the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6907,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_display_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A readable string describing the version of the SDK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6977,7 +7018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatabaseId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6985,7 +7026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6993,7 +7034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7005,7 +7046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatabaseId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7013,7 +7054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7021,7 +7062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7091,7 +7132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatabaseId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7099,7 +7140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7107,7 +7148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7119,7 +7160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatabaseId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7127,7 +7168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}InstanceId accessed in the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7135,7 +7176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ProjectId accessed in the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7221,7 +7262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7229,7 +7270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransformorcollection_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform<wbr>Or<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7237,7 +7278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the source, if measurable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7245,7 +7286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this source; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7257,7 +7298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7265,7 +7306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_or_collection_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform_<wbr>or_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7273,7 +7314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the source, if measurable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7281,7 +7322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this source; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7367,7 +7408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7375,7 +7416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originaltransformorcollection_nodejs" style="color: inherit; text-decoration: inherit;">original<wbr>Transform<wbr>Or<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7383,7 +7424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the source, if measurable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7391,7 +7432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this source; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7403,7 +7444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataflow service generated name for this source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7411,7 +7452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#original_transform_or_collection_python" style="color: inherit; text-decoration: inherit;">original_<wbr>transform_<wbr>or_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for the original user transform or collection with which this source is most closely associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7419,7 +7460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the source, if measurable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7427,7 +7468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for this source; may be user or system generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7497,7 +7538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of step in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7505,7 +7546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7513,7 +7554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7525,7 +7566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of step in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7533,7 +7574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7541,7 +7582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7611,7 +7652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of step in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7619,7 +7660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7627,7 +7668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7639,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of step in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7647,7 +7688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7655,7 +7696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7981,7 +8022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alsologtostderr_nodejs" style="color: inherit; text-decoration: inherit;">alsologtostderr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to also send taskrunner log info to stderr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7989,7 +8030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basetaskdir_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Task<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location on the worker for task-specific subdirectories.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7997,7 +8038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8005,7 +8046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlinesfilename_nodejs" style="color: inherit; text-decoration: inherit;">commandlines<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file to store preprocessing commands in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8013,7 +8054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonexception_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to continue taskrunner if an exception is hit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8021,7 +8062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowapiversion_nodejs" style="color: inherit; text-decoration: inherit;">dataflow<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API version of endpoint, e.g. "v1b3"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8029,7 +8070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#harnesscommand_nodejs" style="color: inherit; text-decoration: inherit;">harness<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command to launch the worker harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8037,7 +8078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagehint_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suggested backend language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8045,7 +8086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logdir_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory on the VM to store logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8053,7 +8094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtoserialconsole_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>To<wbr>Serialconsole</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to send taskrunner log info to Google Compute Engine VM serial console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8061,7 +8102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loguploadlocation_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Upload<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8069,7 +8110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8077,7 +8118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parallelworkersettings_nodejs" style="color: inherit; text-decoration: inherit;">parallel<wbr>Worker<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workersettings">pulumi.<wbr>Input<Worker<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#workersettings">Worker<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to pass to the parallel worker harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8085,7 +8126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingworkermainclass_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Worker<wbr>Main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming worker main class name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8093,7 +8134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskgroup_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8101,7 +8142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskuser_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8109,7 +8150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8117,7 +8158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID string of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8125,7 +8166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflowfilename_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file to store the workflow in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8137,7 +8178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alsologtostderr_python" style="color: inherit; text-decoration: inherit;">alsologtostderr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also send taskrunner log info to stderr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8145,7 +8186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_task_dir_python" style="color: inherit; text-decoration: inherit;">base_<wbr>task_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location on the worker for task-specific subdirectories.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8153,7 +8194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8161,7 +8202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlines_file_name_python" style="color: inherit; text-decoration: inherit;">commandlines_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file to store preprocessing commands in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8169,7 +8210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_exception_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue taskrunner if an exception is hit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8177,7 +8218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflow_api_version_python" style="color: inherit; text-decoration: inherit;">dataflow_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API version of endpoint, e.g. "v1b3"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8185,7 +8226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#harness_command_python" style="color: inherit; text-decoration: inherit;">harness_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command to launch the worker harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8193,7 +8234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_hint_python" style="color: inherit; text-decoration: inherit;">language_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suggested backend language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8201,7 +8242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_dir_python" style="color: inherit; text-decoration: inherit;">log_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory on the VM to store logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8209,7 +8250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_to_serialconsole_python" style="color: inherit; text-decoration: inherit;">log_<wbr>to_<wbr>serialconsole</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to send taskrunner log info to Google Compute Engine VM serial console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8217,7 +8258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_upload_location_python" style="color: inherit; text-decoration: inherit;">log_<wbr>upload_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8225,7 +8266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8233,7 +8274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parallel_worker_settings_python" style="color: inherit; text-decoration: inherit;">parallel_<wbr>worker_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workersettings">Worker<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workersettings">Worker<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to pass to the parallel worker harness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8241,7 +8282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_worker_main_class_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>worker_<wbr>main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming worker main class name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8249,7 +8290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#task_group_python" style="color: inherit; text-decoration: inherit;">task_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8257,7 +8298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#task_user_python" style="color: inherit; text-decoration: inherit;">task_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8265,7 +8306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8273,7 +8314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID string of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8281,7 +8322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_file_name_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file to store the workflow in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8607,7 +8648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alsologtostderr_nodejs" style="color: inherit; text-decoration: inherit;">alsologtostderr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to also send taskrunner log info to stderr.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8615,7 +8656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basetaskdir_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Task<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location on the worker for task-specific subdirectories.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8623,7 +8664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8631,7 +8672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlinesfilename_nodejs" style="color: inherit; text-decoration: inherit;">commandlines<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file to store preprocessing commands in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8639,7 +8680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continueonexception_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to continue taskrunner if an exception is hit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8647,7 +8688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowapiversion_nodejs" style="color: inherit; text-decoration: inherit;">dataflow<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API version of endpoint, e.g. "v1b3"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8655,7 +8696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#harnesscommand_nodejs" style="color: inherit; text-decoration: inherit;">harness<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command to launch the worker harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8663,7 +8704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagehint_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suggested backend language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8671,7 +8712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logdir_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory on the VM to store logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8679,7 +8720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logtoserialconsole_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>To<wbr>Serialconsole</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to send taskrunner log info to Google Compute Engine VM serial console.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8687,7 +8728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loguploadlocation_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Upload<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8695,7 +8736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8703,7 +8744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parallelworkersettings_nodejs" style="color: inherit; text-decoration: inherit;">parallel<wbr>Worker<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workersettingsresponse">pulumi.<wbr>Input<Worker<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#workersettingsresponse">Worker<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to pass to the parallel worker harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8711,7 +8752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingworkermainclass_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Worker<wbr>Main<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming worker main class name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8719,7 +8760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskgroup_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8727,7 +8768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskuser_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8735,7 +8776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8743,7 +8784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID string of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8751,7 +8792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflowfilename_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file to store the workflow in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8763,7 +8804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alsologtostderr_python" style="color: inherit; text-decoration: inherit;">alsologtostderr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also send taskrunner log info to stderr.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8771,7 +8812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_task_dir_python" style="color: inherit; text-decoration: inherit;">base_<wbr>task_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location on the worker for task-specific subdirectories.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8779,7 +8820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8787,7 +8828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlines_file_name_python" style="color: inherit; text-decoration: inherit;">commandlines_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file to store preprocessing commands in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8795,7 +8836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#continue_on_exception_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue taskrunner if an exception is hit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8803,7 +8844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflow_api_version_python" style="color: inherit; text-decoration: inherit;">dataflow_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API version of endpoint, e.g. "v1b3"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8811,7 +8852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#harness_command_python" style="color: inherit; text-decoration: inherit;">harness_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command to launch the worker harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8819,7 +8860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_hint_python" style="color: inherit; text-decoration: inherit;">language_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suggested backend language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8827,7 +8868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_dir_python" style="color: inherit; text-decoration: inherit;">log_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory on the VM to store logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8835,7 +8876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_to_serialconsole_python" style="color: inherit; text-decoration: inherit;">log_<wbr>to_<wbr>serialconsole</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to send taskrunner log info to Google Compute Engine VM serial console.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8843,7 +8884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_upload_location_python" style="color: inherit; text-decoration: inherit;">log_<wbr>upload_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8851,7 +8892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8859,7 +8900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parallel_worker_settings_python" style="color: inherit; text-decoration: inherit;">parallel_<wbr>worker_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workersettingsresponse">Worker<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workersettingsresponse">Worker<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to pass to the parallel worker harness.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8867,7 +8908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_worker_main_class_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>worker_<wbr>main_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming worker main class name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8875,7 +8916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#task_group_python" style="color: inherit; text-decoration: inherit;">task_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8883,7 +8924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#task_user_python" style="color: inherit; text-decoration: inherit;">task_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8891,7 +8932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8899,7 +8940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID string of the VM.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8907,7 +8948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_file_name_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file to store the workflow in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9025,7 +9066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaydata_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydata">pulumi.<wbr>Input<pulumi.<wbr>Input<Display<wbr>Data<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Transform-specific display data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9033,7 +9074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SDK generated id of this transform instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9041,7 +9082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputcollectionname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Collection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User names for all collection inputs to this transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9049,7 +9090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9057,7 +9098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User provided name for this transform instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9065,7 +9106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputcollectionname_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Collection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User names for all collection outputs to this transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9077,7 +9118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_data_python" style="color: inherit; text-decoration: inherit;">display_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#displaydata">Display<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Transform-specific display data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9085,7 +9126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SDK generated id of this transform instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9093,7 +9134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_collection_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>collection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User names for all collection inputs to this transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9101,7 +9142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9109,7 +9150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User provided name for this transform instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9117,7 +9158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_collection_name_python" style="color: inherit; text-decoration: inherit;">output_<wbr>collection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User names for all collection outputs to this transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9219,7 +9260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaydata_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydataresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Display<wbr>Data<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Transform-specific display data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9227,7 +9268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputcollectionname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Collection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User names for all collection inputs to this transform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9235,7 +9276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9243,7 +9284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User provided name for this transform instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9251,7 +9292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputcollectionname_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Collection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User names for all collection outputs to this transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9263,7 +9304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_data_python" style="color: inherit; text-decoration: inherit;">display_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#displaydataresponse">Display<wbr>Data<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Transform-specific display data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9271,7 +9312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_collection_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>collection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User names for all collection inputs to this transform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9279,7 +9320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of transform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9287,7 +9328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User provided name for this transform instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9295,7 +9336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_collection_name_python" style="color: inherit; text-decoration: inherit;">output_<wbr>collection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User names for all collection outputs to this transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9669,7 +9710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingsettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingsettings">pulumi.<wbr>Input<Autoscaling<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingsettings">Autoscaling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for autoscaling of this WorkerPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9677,7 +9718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#disk">Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Data disks that are used by a VM in this workflow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9685,7 +9726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpackageset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Package<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9693,7 +9734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9701,7 +9742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksourceimage_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified source image for disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9709,7 +9750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9717,7 +9758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9725,7 +9766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the worker pool; currently only `harness` and `shuffle` are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9733,7 +9774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9741,7 +9782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata to set on the Google Compute Engine VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9749,7 +9790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9757,7 +9798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numthreadsperworker_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Threads<wbr>Per<wbr>Worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9765,7 +9806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numworkers_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9773,7 +9814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take on host maintenance, as defined by the Google Compute Engine API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9781,7 +9822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#package">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#package">Package<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Packages to be installed on workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9789,7 +9830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poolargs_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Extra arguments for this worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9797,7 +9838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkharnesscontainerimages_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Harness<wbr>Container<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkharnesscontainerimage">pulumi.<wbr>Input<pulumi.<wbr>Input<Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sdkharnesscontainerimage">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9805,7 +9846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9813,7 +9854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskrunnersettings_nodejs" style="color: inherit; text-decoration: inherit;">taskrunner<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskrunnersettings">pulumi.<wbr>Input<Task<wbr>Runner<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskrunnersettings">Task<wbr>Runner<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9821,7 +9862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardownpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teardown<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9829,7 +9870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerharnesscontainerimage_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Harness<wbr>Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9837,7 +9878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9849,7 +9890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaling_settings_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingsettings">Autoscaling<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingsettings">Autoscaling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for autoscaling of this WorkerPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9857,7 +9898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#disk">Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data disks that are used by a VM in this workflow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9865,7 +9906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_package_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>package_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9873,7 +9914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9881,7 +9922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_source_image_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified source image for disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9889,7 +9930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9897,7 +9938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9905,7 +9946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of the worker pool; currently only `harness` and `shuffle` are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9913,7 +9954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9921,7 +9962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata to set on the Google Compute Engine VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9929,7 +9970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9937,7 +9978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_threads_per_worker_python" style="color: inherit; text-decoration: inherit;">num_<wbr>threads_<wbr>per_<wbr>worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9945,7 +9986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_workers_python" style="color: inherit; text-decoration: inherit;">num_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9953,7 +9994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take on host maintenance, as defined by the Google Compute Engine API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9961,7 +10002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#package">Package<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#package">Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Packages to be installed on workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9969,7 +10010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pool_args_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra arguments for this worker pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9977,7 +10018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_harness_container_images_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>harness_<wbr>container_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkharnesscontainerimage">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sdkharnesscontainerimage">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9985,7 +10026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9993,7 +10034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskrunner_settings_python" style="color: inherit; text-decoration: inherit;">taskrunner_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskrunnersettings">Task<wbr>Runner<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskrunnersettings">Task<wbr>Runner<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10001,7 +10042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardown_policy_python" style="color: inherit; text-decoration: inherit;">teardown_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10009,7 +10050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_harness_container_image_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>harness_<wbr>container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10017,7 +10058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10391,7 +10432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingsettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingsettingsresponse">pulumi.<wbr>Input<Autoscaling<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingsettingsresponse">Autoscaling<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for autoscaling of this WorkerPool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10399,7 +10440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Data disks that are used by a VM in this workflow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10407,7 +10448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpackageset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Package<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10415,7 +10456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10423,7 +10464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksourceimage_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified source image for disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10431,7 +10472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10439,7 +10480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10447,7 +10488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the worker pool; currently only `harness` and `shuffle` are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10455,7 +10496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10463,7 +10504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata to set on the Google Compute Engine VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10471,7 +10512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10479,7 +10520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numthreadsperworker_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Threads<wbr>Per<wbr>Worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10487,7 +10528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numworkers_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10495,7 +10536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take on host maintenance, as defined by the Google Compute Engine API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10503,7 +10544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packageresponse">Package<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Packages to be installed on workers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10511,7 +10552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poolargs_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Extra arguments for this worker pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10519,7 +10560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdkharnesscontainerimages_nodejs" style="color: inherit; text-decoration: inherit;">sdk<wbr>Harness<wbr>Container<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkharnesscontainerimageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sdkharnesscontainerimageresponse">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10527,7 +10568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10535,7 +10576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskrunnersettings_nodejs" style="color: inherit; text-decoration: inherit;">taskrunner<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskrunnersettingsresponse">pulumi.<wbr>Input<Task<wbr>Runner<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#taskrunnersettingsresponse">Task<wbr>Runner<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10543,7 +10584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardownpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teardown<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10551,7 +10592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerharnesscontainerimage_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Harness<wbr>Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10559,7 +10600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10571,7 +10612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaling_settings_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingsettingsresponse">Autoscaling<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingsettingsresponse">Autoscaling<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for autoscaling of this WorkerPool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10579,7 +10620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data disks that are used by a VM in this workflow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10587,7 +10628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_package_set_python" style="color: inherit; text-decoration: inherit;">default_<wbr>package_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10595,7 +10636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10603,7 +10644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_source_image_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified source image for disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10611,7 +10652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10619,7 +10660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration for VM IPs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10627,7 +10668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of the worker pool; currently only `harness` and `shuffle` are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10635,7 +10676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10643,7 +10684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata to set on the Google Compute Engine VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10651,7 +10692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10659,7 +10700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_threads_per_worker_python" style="color: inherit; text-decoration: inherit;">num_<wbr>threads_<wbr>per_<wbr>worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10667,7 +10708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_workers_python" style="color: inherit; text-decoration: inherit;">num_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10675,7 +10716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take on host maintenance, as defined by the Google Compute Engine API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10683,7 +10724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageresponse">Package<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packageresponse">Package<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Packages to be installed on workers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10691,7 +10732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pool_args_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra arguments for this worker pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10699,7 +10740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sdk_harness_container_images_python" style="color: inherit; text-decoration: inherit;">sdk_<wbr>harness_<wbr>container_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdkharnesscontainerimageresponse">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sdkharnesscontainerimageresponse">Sdk<wbr>Harness<wbr>Container<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10707,7 +10748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10715,7 +10756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taskrunner_settings_python" style="color: inherit; text-decoration: inherit;">taskrunner_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskrunnersettingsresponse">Task<wbr>Runner<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taskrunnersettingsresponse">Task<wbr>Runner<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10723,7 +10764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teardown_policy_python" style="color: inherit; text-decoration: inherit;">teardown_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10731,7 +10772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_harness_container_image_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>harness_<wbr>container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Docker container image that executes the Cloud Dataflow worker harness, residing in Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10739,7 +10780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10857,7 +10898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10865,7 +10906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reportingenabled_nodejs" style="color: inherit; text-decoration: inherit;">reporting<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to send work progress updates to the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10873,7 +10914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicepath_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10881,7 +10922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shuffleservicepath_nodejs" style="color: inherit; text-decoration: inherit;">shuffle<wbr>Service<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10889,7 +10930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10897,7 +10938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the worker running this pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10909,7 +10950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10917,7 +10958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reporting_enabled_python" style="color: inherit; text-decoration: inherit;">reporting_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to send work progress updates to the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10925,7 +10966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_path_python" style="color: inherit; text-decoration: inherit;">service_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10933,7 +10974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shuffle_service_path_python" style="color: inherit; text-decoration: inherit;">shuffle_<wbr>service_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10941,7 +10982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10949,7 +10990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the worker running this pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11067,7 +11108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11075,7 +11116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reportingenabled_nodejs" style="color: inherit; text-decoration: inherit;">reporting<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to send work progress updates to the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11083,7 +11124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicepath_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11091,7 +11132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shuffleservicepath_nodejs" style="color: inherit; text-decoration: inherit;">shuffle<wbr>Service<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11099,7 +11140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tempstorageprefix_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Storage<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11107,7 +11148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workerid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the worker running this pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11119,7 +11160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11127,7 +11168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reporting_enabled_python" style="color: inherit; text-decoration: inherit;">reporting_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to send work progress updates to the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11135,7 +11176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_path_python" style="color: inherit; text-decoration: inherit;">service_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11143,7 +11184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shuffle_service_path_python" style="color: inherit; text-decoration: inherit;">shuffle_<wbr>service_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11151,7 +11192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temp_storage_prefix_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>storage_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11159,7 +11200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the worker running this pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}

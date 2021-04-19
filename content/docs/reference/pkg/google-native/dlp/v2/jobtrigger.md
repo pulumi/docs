@@ -20,19 +20,35 @@ Creates a job trigger to run DLP actions such as scanning storage for sensitive 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dlp_v2.GooglePrivacyDlpV2InspectJobConfigArgs]]</span> = None<span class="p">, </span><span class="nx">job_triggers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dlp_v2.GooglePrivacyDlpV2TriggerArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[_dlp_v2.GooglePrivacyDlpV2InspectJobConfigArgs]</span> = None<span class="p">,</span>
+               <span class="nx">job_triggers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dlp_v2.GooglePrivacyDlpV2TriggerArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTrigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTrigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a job trigger to run DLP actions such as scanning storage for sensitive 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobTriggerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jobtriggersid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Triggers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User provided description (max 256 chars){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name (max 100 chars){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#inspectjob_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectjobconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Job<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectjobconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For inspect jobs, a snapshot of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A status for this trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#triggerid_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2trigger">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Trigger<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2trigger">Google<wbr>Privacy<wbr>Dlp<wbr>V2Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#job_triggers_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>triggers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User provided description (max 256 chars){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name (max 100 chars){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#inspect_job_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectjobconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Job<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectjobconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For inspect jobs, a snapshot of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A status for this trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#trigger_id_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The JobTrigger resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2trigger">Google<wbr>Privacy<wbr>Dlp<wbr>V2Trigger<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2trigger">Google<wbr>Privacy<wbr>Dlp<wbr>V2Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobnotificationemails_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Notification<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemails">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemails">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable email notification for project owners and editors on job's completion/failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pub<wbr>Sub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsub">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsub">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish a notification to a pubsub topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishfindingstoclouddatacatalog_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalog">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalog">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish findings to Cloud Datahub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishsummarytocscc_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Summary<wbr>To<wbr>Cscc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocscc">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocscc">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish summary to Cloud Security Command Center (Alpha).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishtostackdriver_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>To<wbr>Stackdriver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriver">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriver">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Stackdriver metric dlp.googleapis.com/finding_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#savefindings_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2savefindings">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2savefindings">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Save resulting findings in a provided location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_notification_emails_python" style="color: inherit; text-decoration: inherit;">job_<wbr>notification_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemails">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemails">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable email notification for project owners and editors on job's completion/failure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pub_sub_python" style="color: inherit; text-decoration: inherit;">pub_<wbr>sub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsub">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsub">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish a notification to a pubsub topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_findings_to_cloud_data_catalog_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>findings_<wbr>to_<wbr>cloud_<wbr>data_<wbr>catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalog">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalog">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish findings to Cloud Datahub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_summary_to_cscc_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>summary_<wbr>to_<wbr>cscc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocscc">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocscc">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish summary to Cloud Security Command Center (Alpha).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_to_stackdriver_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>to_<wbr>stackdriver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriver">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriver">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Stackdriver metric dlp.googleapis.com/finding_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#save_findings_python" style="color: inherit; text-decoration: inherit;">save_<wbr>findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2savefindings">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2savefindings">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Save resulting findings in a provided location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1015,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobnotificationemails_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Notification<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemailsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemailsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable email notification for project owners and editors on job's completion/failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pub<wbr>Sub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsubresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsubresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish a notification to a pubsub topic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1031,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishfindingstoclouddatacatalog_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalogresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalogresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish findings to Cloud Datahub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishsummarytocscc_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Summary<wbr>To<wbr>Cscc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocsccresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocsccresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish summary to Cloud Security Command Center (Alpha).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishtostackdriver_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>To<wbr>Stackdriver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriverresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriverresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Stackdriver metric dlp.googleapis.com/finding_count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1055,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#savefindings_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2savefindingsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2savefindingsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Save resulting findings in a provided location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_notification_emails_python" style="color: inherit; text-decoration: inherit;">job_<wbr>notification_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemailsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2jobnotificationemailsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Job<wbr>Notification<wbr>Emails<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable email notification for project owners and editors on job's completion/failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pub_sub_python" style="color: inherit; text-decoration: inherit;">pub_<wbr>sub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsubresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtopubsubresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Pub<wbr>Sub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish a notification to a pubsub topic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_findings_to_cloud_data_catalog_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>findings_<wbr>to_<wbr>cloud_<wbr>data_<wbr>catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalogresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishfindingstoclouddatacatalogresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Findings<wbr>To<wbr>Cloud<wbr>Data<wbr>Catalog<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish findings to Cloud Datahub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1091,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_summary_to_cscc_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>summary_<wbr>to_<wbr>cscc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocsccresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishsummarytocsccresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>Summary<wbr>To<wbr>Cscc<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Publish summary to Cloud Security Command Center (Alpha).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publish_to_stackdriver_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>to_<wbr>stackdriver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriverresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2publishtostackdriverresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Publish<wbr>To<wbr>Stackdriver<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable Stackdriver metric dlp.googleapis.com/finding_count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#save_findings_python" style="color: inherit; text-decoration: inherit;">save_<wbr>findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2savefindingsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2savefindingsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Save<wbr>Findings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Save resulting findings in a provided location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedfields_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifyingfields_nodejs" style="color: inherit; text-decoration: inherit;">identifying<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowslimit_nodejs" style="color: inherit; text-decoration: inherit;">rows<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowslimitpercent_nodejs" style="color: inherit; text-decoration: inherit;">rows<wbr>Limit<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplemethod_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Complete BigQuery table reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_fields_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifying_fields_python" style="color: inherit; text-decoration: inherit;">identifying_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_limit_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_limit_percent_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>limit_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_method_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_reference_python" style="color: inherit; text-decoration: inherit;">table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Complete BigQuery table reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedfields_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1443,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifyingfields_nodejs" style="color: inherit; text-decoration: inherit;">identifying<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowslimit_nodejs" style="color: inherit; text-decoration: inherit;">rows<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowslimitpercent_nodejs" style="color: inherit; text-decoration: inherit;">rows<wbr>Limit<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1467,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplemethod_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1475,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Complete BigQuery table reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_fields_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifying_fields_python" style="color: inherit; text-decoration: inherit;">identifying_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_limit_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rows_limit_percent_python" style="color: inherit; text-decoration: inherit;">rows_<wbr>limit_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_method_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_reference_python" style="color: inherit; text-decoration: inherit;">table_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Complete BigQuery table reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1625,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1739,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1747,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1873,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#byteslimitperfile_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#byteslimitperfilepercent_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fileset">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of one or more files to scan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetypes_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileslimitpercent_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Limit<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplemethod_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1925,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_limit_per_file_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_limit_per_file_percent_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of one or more files to scan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_types_python" style="color: inherit; text-decoration: inherit;">file_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_limit_percent_python" style="color: inherit; text-decoration: inherit;">files_<wbr>limit_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_method_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#byteslimitperfile_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#byteslimitperfilepercent_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2filesetresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2filesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of one or more files to scan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetypes_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2115,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileslimitpercent_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Limit<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2123,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplemethod_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2135,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_limit_per_file_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_limit_per_file_percent_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2filesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2filesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of one or more files to scan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_types_python" style="color: inherit; text-decoration: inherit;">file_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_limit_percent_python" style="color: inherit; text-decoration: inherit;">files_<wbr>limit_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sample_method_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2263,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2275,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluderegex_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeregex_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_regex_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_regex_python" style="color: inherit; text-decoration: inherit;">include_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2459,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluderegex_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeregex_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2487,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_regex_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_regex_python" style="color: inherit; text-decoration: inherit;">include_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2653,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detectionrules_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2detectionrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2detectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of phrases to detect as a CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression based CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedtype">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#surrogatetype_nodejs" style="color: inherit; text-decoration: inherit;">surrogate<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2surrogatetype">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2surrogatetype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Message for detecting output from deidentification transformations that support reversing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2721,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detection_rules_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2detectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2detectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of phrases to detect as a CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression based CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedtype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#surrogate_type_python" style="color: inherit; text-decoration: inherit;">surrogate_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2surrogatetype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2surrogatetype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Message for detecting output from deidentification transformations that support reversing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2927,7 +2953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detectionrules_nodejs" style="color: inherit; text-decoration: inherit;">detection<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2detectionruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2detectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2935,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of phrases to detect as a CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2943,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2951,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2959,7 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2967,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression based CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2975,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedtyperesponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedtyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#surrogatetype_nodejs" style="color: inherit; text-decoration: inherit;">surrogate<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2surrogatetyperesponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2surrogatetyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Message for detecting output from deidentification transformations that support reversing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2995,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#detection_rules_python" style="color: inherit; text-decoration: inherit;">detection_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2detectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2detectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Detection<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3003,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of phrases to detect as a CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3011,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3019,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3027,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3035,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression based CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3043,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedtyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedtyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3051,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#surrogate_type_python" style="color: inherit; text-decoration: inherit;">surrogate_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2surrogatetyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2surrogatetyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Surrogate<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Message for detecting output from deidentification transformations that support reversing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3105,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2kindexpression">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2kindexpression">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionid_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2partitionid">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2partitionid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3125,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2kindexpression">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2kindexpression">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind to process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_id_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2partitionid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2partitionid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3187,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2kindexpressionresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2kindexpressionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind to process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionid_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2partitionidresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2partitionidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2kindexpressionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2kindexpressionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Kind<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind to process.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3215,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_id_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2partitionidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2partitionidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Partition<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3253,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3265,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3303,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3315,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3369,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlist">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3389,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3451,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3459,7 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3471,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3479,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3533,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error codes and messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3541,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamps_nodejs" style="color: inherit; text-decoration: inherit;">timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The times the error occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3553,7 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error codes and messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3561,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamps_python" style="color: inherit; text-decoration: inherit;">timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The times the error occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3599,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3649,7 +3675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3661,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3747,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3755,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypes">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypes">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchingtype_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3783,7 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypes">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypes">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matching_type_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3807,7 +3833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3893,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3901,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypesresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypesresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3909,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchingtype_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3917,7 +3943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3929,7 +3955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3937,7 +3963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypesresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2excludeinfotypesresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclude<wbr>Info<wbr>Types<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3945,7 +3971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matching_type_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the rule is applied, see MatchingType documentation for details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3953,7 +3979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3991,7 +4017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4003,7 +4029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4041,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4053,7 +4079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4107,7 +4133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexfileset_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfileset">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4115,7 +4141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4127,7 +4153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_file_set_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4135,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4189,7 +4215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regexfileset_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfilesetresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4197,7 +4223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4209,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_file_set_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageregexfilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Regex<wbr>File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4217,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4287,7 +4313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperinfotype_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotypelimit">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotypelimit">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4295,7 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperitem_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4303,7 +4329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4315,7 +4341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_info_type_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotypelimit">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotypelimit">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4323,7 +4349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_item_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4331,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4401,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperinfotype_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotypelimitresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotypelimitresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4409,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperitem_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4417,7 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindingsperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4429,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_info_type_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotypelimitresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotypelimitresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Limit<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4437,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_item_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4445,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4515,7 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4523,7 +4549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustment">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustment">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4531,7 +4557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2proximity">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2proximity">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4543,7 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_regex_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4551,7 +4577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_adjustment_python" style="color: inherit; text-decoration: inherit;">likelihood_<wbr>adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustment">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustment">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4559,7 +4585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proximity_python" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2proximity">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2proximity">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4629,7 +4655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4637,7 +4663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4645,7 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2proximityresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2proximityresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4657,7 +4683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_regex_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4665,7 +4691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#likelihood_adjustment_python" style="color: inherit; text-decoration: inherit;">likelihood_<wbr>adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2likelihoodadjustmentresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Likelihood<wbr>Adjustment<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4673,7 +4699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proximity_python" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2proximityresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2proximityresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Proximity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4759,7 +4785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of where the data is coming from. Will be stored once in the job. 256 max length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4767,7 +4793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" : "etl"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4775,7 +4801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredfindinglabelkeys_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Finding<wbr>Label<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}These are labels that each inspection request must include within their 'finding_labels' map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4783,7 +4809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableoptions_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2tableoptions">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2tableoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4795,7 +4821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short description of where the data is coming from. Will be stored once in the job. 256 max length.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4803,7 +4829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" : "etl"`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4811,7 +4837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_finding_label_keys_python" style="color: inherit; text-decoration: inherit;">required_<wbr>finding_<wbr>label_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}These are labels that each inspection request must include within their 'finding_labels' map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4819,7 +4845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_options_python" style="color: inherit; text-decoration: inherit;">table_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2tableoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2tableoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4905,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of where the data is coming from. Will be stored once in the job. 256 max length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4913,7 +4939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" : "etl"`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4921,7 +4947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredfindinglabelkeys_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Finding<wbr>Label<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}These are labels that each inspection request must include within their 'finding_labels' map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4929,7 +4955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableoptions_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2tableoptionsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2tableoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4941,7 +4967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short description of where the data is coming from. Will be stored once in the job. 256 max length.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4949,7 +4975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `"environment" : "production"` * `"pipeline" : "etl"`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4957,7 +4983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_finding_label_keys_python" style="color: inherit; text-decoration: inherit;">required_<wbr>finding_<wbr>label_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}These are labels that each inspection request must include within their 'finding_labels' map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4965,7 +4991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_options_python" style="color: inherit; text-decoration: inherit;">table_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2tableoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2tableoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Table<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5003,7 +5029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5015,7 +5041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5069,7 +5095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5077,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5089,7 +5115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5097,7 +5123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5151,7 +5177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5159,7 +5185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxfindings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5171,7 +5197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5179,7 +5205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_findings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5217,7 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5229,7 +5255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5379,7 +5405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentoptions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5387,7 +5413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2custominfotype">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5395,7 +5421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, excludes type information of the findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5403,7 +5429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includequote_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5411,7 +5437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5419,7 +5445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2findinglimits">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2findinglimits">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5427,7 +5453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5435,7 +5461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleset_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleset">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5447,7 +5473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5455,7 +5481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2custominfotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5463,7 +5489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, excludes type information of the findings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5471,7 +5497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_quote_python" style="color: inherit; text-decoration: inherit;">include_<wbr>quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5479,7 +5505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5487,7 +5513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2findinglimits">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2findinglimits">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5495,7 +5521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_likelihood_python" style="color: inherit; text-decoration: inherit;">min_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5503,7 +5529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_set_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5653,7 +5679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentoptions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5661,7 +5687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2custominfotyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5669,7 +5695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, excludes type information of the findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5677,7 +5703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includequote_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5685,7 +5711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5693,7 +5719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2findinglimitsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2findinglimitsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5701,7 +5727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5709,7 +5735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleset_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionrulesetresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionrulesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5721,7 +5747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5729,7 +5755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2custominfotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2custominfotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Custom<wbr>Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5737,7 +5763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, excludes type information of the findings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5745,7 +5771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_quote_python" style="color: inherit; text-decoration: inherit;">include_<wbr>quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5753,7 +5779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5761,7 +5787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2findinglimitsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2findinglimitsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Finding<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5769,7 +5795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_likelihood_python" style="color: inherit; text-decoration: inherit;">min_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5777,7 +5803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_set_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionrulesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionrulesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5863,7 +5889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2action">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2action">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to execute at the completion of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5871,7 +5897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How and what to scan for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5879,7 +5905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspecttemplatename_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5887,7 +5913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storageconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data to scan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5899,7 +5925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2action">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2action">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to execute at the completion of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5907,7 +5933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How and what to scan for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5915,7 +5941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspect_template_name_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5923,7 +5949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_config_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data to scan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6009,7 +6035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2actionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2actionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to execute at the completion of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6017,7 +6043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How and what to scan for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6025,7 +6051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspecttemplatename_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6033,7 +6059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storageconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data to scan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6045,7 +6071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2actionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2actionresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to execute at the completion of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6053,7 +6079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspect<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How and what to scan for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6061,7 +6087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inspect_template_name_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6069,7 +6095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_config_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Storage<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data to scan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6123,7 +6149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2exclusionrule">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Exclusion rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6131,7 +6157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6143,7 +6169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusion_rule_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2exclusionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Exclusion rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6151,7 +6177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6205,7 +6231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2exclusionruleresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Exclusion rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6213,7 +6239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6225,7 +6251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusion_rule_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2exclusionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2exclusionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Exclusion<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Exclusion rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6233,7 +6259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hotwordruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hotword<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6287,7 +6313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of infoTypes this rule set is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6295,7 +6321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6307,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotype">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of infoTypes this rule set is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6315,7 +6341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionrule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6369,7 +6395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of infoTypes this rule set is applied to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6377,7 +6403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6389,7 +6415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2infotyperesponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Info<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of infoTypes this rule set is applied to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6397,7 +6423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2inspectionruleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Inspection<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6435,7 +6461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kind.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6447,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the kind.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6485,7 +6511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kind.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6497,7 +6523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the kind.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6551,7 +6577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6559,7 +6585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativelikelihood_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6571,7 +6597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_likelihood_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6579,7 +6605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_likelihood_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6633,7 +6659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixedlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6641,7 +6667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativelikelihood_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6653,7 +6679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_likelihood_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6661,7 +6687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_likelihood_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>likelihood</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6715,7 +6741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputschema_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the `Finding` object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6723,7 +6749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6735,7 +6761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_schema_python" style="color: inherit; text-decoration: inherit;">output_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the `Finding` object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6743,7 +6769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6797,7 +6823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputschema_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the `Finding` object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6805,7 +6831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6817,7 +6843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_schema_python" style="color: inherit; text-decoration: inherit;">output_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the `Finding` object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6825,7 +6851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6879,7 +6905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6887,7 +6913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project to which the entities belong.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6899,7 +6925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6907,7 +6933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project to which the entities belong.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6961,7 +6987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6969,7 +6995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project to which the entities belong.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6981,7 +7007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6989,7 +7015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project to which the entities belong.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7043,7 +7069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowafter_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7051,7 +7077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowbefore_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7063,7 +7089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_after_python" style="color: inherit; text-decoration: inherit;">window_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7071,7 +7097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_before_python" style="color: inherit; text-decoration: inherit;">window_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7125,7 +7151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowafter_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7133,7 +7159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowbefore_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7145,7 +7171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_after_python" style="color: inherit; text-decoration: inherit;">window_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7153,7 +7179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_before_python" style="color: inherit; text-decoration: inherit;">window_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7191,7 +7217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7203,7 +7229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7241,7 +7267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7253,7 +7279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7307,7 +7333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7315,7 +7341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7327,7 +7353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7335,7 +7361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7389,7 +7415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7397,7 +7423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7409,7 +7435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7417,7 +7443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7455,7 +7481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store findings outside of DLP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7467,7 +7493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store findings outside of DLP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7505,7 +7531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store findings outside of DLP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7517,7 +7543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2outputstorageconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Output<wbr>Storage<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store findings outside of DLP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7555,7 +7581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiodduration_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7567,7 +7593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_duration_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7605,7 +7631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiodduration_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7617,7 +7643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_duration_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7719,7 +7745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptions">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BigQuery options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7727,7 +7753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstorageoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptions">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7735,7 +7761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreoptions_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptions">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Datastore options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7743,7 +7769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybridoptions_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hybridoptions">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hybridoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hybrid inspection options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7751,7 +7777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2timespanconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2timespanconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7763,7 +7789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_query_options_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BigQuery options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7771,7 +7797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7779,7 +7805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_options_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Datastore options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7787,7 +7813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybrid_options_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hybridoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hybridoptions">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hybrid inspection options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7795,7 +7821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timespan_config_python" style="color: inherit; text-decoration: inherit;">timespan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2timespanconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2timespanconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7897,7 +7923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptionsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BigQuery options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7905,7 +7931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstorageoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptionsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7913,7 +7939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreoptions_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptionsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Datastore options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7921,7 +7947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybridoptions_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hybridoptionsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hybridoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hybrid inspection options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7929,7 +7955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2timespanconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2timespanconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7941,7 +7967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_query_options_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BigQuery options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7949,7 +7975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstorageoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7957,7 +7983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_options_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2datastoreoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Datastore<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Cloud Datastore options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7965,7 +7991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybrid_options_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2hybridoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2hybridoptionsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Hybrid<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hybrid inspection options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7973,7 +7999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timespan_config_python" style="color: inherit; text-decoration: inherit;">timespan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2timespanconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2timespanconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Timespan<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8027,7 +8053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8035,7 +8061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8047,7 +8073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8055,7 +8081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8109,7 +8135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8117,7 +8143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8129,7 +8155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8137,7 +8163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8175,7 +8201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifyingfields_nodejs" style="color: inherit; text-decoration: inherit;">identifying<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8187,7 +8213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifying_fields_python" style="color: inherit; text-decoration: inherit;">identifying_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8225,7 +8251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifyingfields_nodejs" style="color: inherit; text-decoration: inherit;">identifying<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8237,7 +8263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifying_fields_python" style="color: inherit; text-decoration: inherit;">identifying_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8323,7 +8349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableautopopulationoftimespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Population<wbr>Of<wbr>Timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8331,7 +8357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8339,7 +8365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8347,7 +8373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampfield_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8359,7 +8385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_auto_population_of_timespan_config_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>population_<wbr>of_<wbr>timespan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8367,7 +8393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8375,7 +8401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8383,7 +8409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_field_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8469,7 +8495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableautopopulationoftimespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Population<wbr>Of<wbr>Timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8477,7 +8503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8485,7 +8511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8493,7 +8519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampfield_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8505,7 +8531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_auto_population_of_timespan_config_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>population_<wbr>of_<wbr>timespan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8513,7 +8539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8521,7 +8547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8529,7 +8555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_field_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8583,7 +8609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_nodejs" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2manual">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2manual">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For use with hybrid jobs. Jobs must be manually created and finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8591,7 +8617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2schedule">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2schedule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a job on a repeating basis based on the elapse of time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8603,7 +8629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_python" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2manual">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2manual">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For use with hybrid jobs. Jobs must be manually created and finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8611,7 +8637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2schedule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2schedule">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a job on a repeating basis based on the elapse of time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8665,7 +8691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_nodejs" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2manualresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2manualresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For use with hybrid jobs. Jobs must be manually created and finished.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8673,7 +8699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2scheduleresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2scheduleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a job on a repeating basis based on the elapse of time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8685,7 +8711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_python" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2manualresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2manualresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Manual<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For use with hybrid jobs. Jobs must be manually created and finished.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8693,7 +8719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2scheduleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2scheduleresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a job on a repeating basis based on the elapse of time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8731,7 +8757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8743,7 +8769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8781,7 +8807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8793,7 +8819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8863,7 +8889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8871,7 +8897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8879,7 +8905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8891,7 +8917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8899,7 +8925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8907,7 +8933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

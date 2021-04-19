@@ -20,19 +20,34 @@ Create an OS Config guest policy.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.AssignmentArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">guest_policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_osconfig_v1beta.PackageRepositoryArgs]]]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_osconfig_v1beta.PackageArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_osconfig_v1beta.SoftwareRecipeArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.AssignmentArgs]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">guest_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.PackageRepositoryArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.PackageArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[_osconfig_v1beta.SoftwareRecipeArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GuestPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Create an OS Config guest policy.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GuestPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#guestpoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +363,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignment">pulumi.<wbr>Input<Assignment<wbr>Args></a></span>
+        <span class="property-type"><a href="#assignment">Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagerepositories_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagerepository">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Repository<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packagerepository">Package<wbr>Repository<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#package">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#package">Package<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#recipes_nodejs" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipe">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipe">Software<wbr>Recipe<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#guest_policies_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +439,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignment">Assignment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assignment">Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagerepository">Package<wbr>Repository<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packagerepository">Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#package">Package<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#package">Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The GuestPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipe">Software<wbr>Recipe<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipe">Software<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivetype_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of components for this repository. Must contain at least one item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Distribution of this repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkey_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI for this repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -737,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_type_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of components for this repository. Must contain at least one item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Distribution of this repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_key_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI for this repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archivetype_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -879,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. List of components for this repository. Must contain at least one item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Distribution of this repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -895,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkey_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. URI for this repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_type_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -923,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. List of components for this repository. Must contain at least one item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Distribution of this repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -939,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_key_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. URI for this repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1049,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentgrouplabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Assignment<wbr>Group<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#assignmentgrouplabel">Assignment<wbr>Group<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostypes_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentostype">pulumi.<wbr>Input<pulumi.<wbr>Input<Assignment<wbr>Os<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#assignmentostype">Assignment<wbr>Os<wbr>Type<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentgrouplabel">Assignment<wbr>Group<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#assignmentgrouplabel">Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentostype">Assignment<wbr>Os<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#assignmentostype">Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osarchitecture_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osshortname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_architecture_python" style="color: inherit; text-decoration: inherit;">os_<wbr>architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_short_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osarchitecture_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1417,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osshortname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1425,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1437,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_architecture_python" style="color: inherit; text-decoration: inherit;">os_<wbr>architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1445,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_short_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1453,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentgrouplabelresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Assignment<wbr>Group<wbr>Label<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#assignmentgrouplabelresponse">Assignment<wbr>Group<wbr>Label<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostypes_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentostyperesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Assignment<wbr>Os<wbr>Type<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#assignmentostyperesponse">Assignment<wbr>Os<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1599,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentgrouplabelresponse">Assignment<wbr>Group<wbr>Label<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#assignmentgrouplabelresponse">Assignment<wbr>Group<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1615,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentostyperesponse">Assignment<wbr>Os<wbr>Type<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#assignmentostyperesponse">Assignment<wbr>Os<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1631,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The url of the repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1705,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The url of the repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The url of the repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The url of the repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptrepository">pulumi.<wbr>Input<Apt<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#aptrepository">Apt<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2003,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goorepository">pulumi.<wbr>Input<Goo<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#goorepository">Goo<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumrepository">pulumi.<wbr>Input<Yum<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#yumrepository">Yum<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zypperrepository">pulumi.<wbr>Input<Zypper<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#zypperrepository">Zypper<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2031,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptrepository">Apt<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aptrepository">Apt<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2039,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goorepository">Goo<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#goorepository">Goo<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumrepository">Yum<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yumrepository">Yum<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zypperrepository">Zypper<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zypperrepository">Zypper<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2141,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptrepositoryresponse">pulumi.<wbr>Input<Apt<wbr>Repository<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aptrepositoryresponse">Apt<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2149,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goorepositoryresponse">pulumi.<wbr>Input<Goo<wbr>Repository<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#goorepositoryresponse">Goo<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2157,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumrepositoryresponse">pulumi.<wbr>Input<Yum<wbr>Repository<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#yumrepositoryresponse">Yum<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2165,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zypperrepositoryresponse">pulumi.<wbr>Input<Zypper<wbr>Repository<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#zypperrepositoryresponse">Zypper<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptrepositoryresponse">Apt<wbr>Repository<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aptrepositoryresponse">Apt<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2185,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goorepositoryresponse">Goo<wbr>Repository<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#goorepositoryresponse">Goo<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2193,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumrepositoryresponse">Yum<wbr>Repository<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yumrepositoryresponse">Yum<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zypperrepositoryresponse">Zypper<wbr>Repository<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zypperrepositoryresponse">Zypper<wbr>Repository<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2271,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2287,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired_state the agent should maintain for this package. The default is to ensure the package is installed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2315,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2433,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifact">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifact">Software<wbr>Recipe<wbr>Artifact<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installsteps_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestep">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatesteps_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestep">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2485,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifact">Software<wbr>Recipe<wbr>Artifact<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifact">Software<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2493,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipestep">Software<wbr>Recipe<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactgcs">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactgcs">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2627,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2635,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_nodejs" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactremote">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactremote">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactgcs">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactgcs">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2671,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_python" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactremote">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactremote">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2741,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2769,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2855,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2863,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2871,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2883,7 +2908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2899,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2953,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2973,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3035,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3043,7 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3055,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3141,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactgcsresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactgcsresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3149,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_nodejs" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactremoteresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactremoteresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3161,7 +3186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3169,7 +3194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactgcsresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactgcsresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3177,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_python" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactremoteresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactremoteresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3295,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Artifact<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3303,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3311,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#installsteps_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3319,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3327,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatesteps_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3335,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3347,7 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipeartifactresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipeartifactresponse">Software<wbr>Recipe<wbr>Artifact<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3355,7 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3363,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3371,7 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3379,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepresponse">Software<wbr>Recipe<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3387,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3521,7 +3546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepextractarchive">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchive">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3529,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstalldpkg">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstalldpkg">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepcopyfile">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepcopyfile">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,7 +3570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepexecfile">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepexecfile">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3553,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallmsi">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallmsi">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3561,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallrpm">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallrpm">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipesteprunscript">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipesteprunscript">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3581,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepextractarchive">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchive">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstalldpkg">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstalldpkg">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepcopyfile">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepcopyfile">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3605,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepexecfile">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepexecfile">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3613,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallmsi">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallmsi">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3621,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallrpm">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallrpm">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3629,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipesteprunscript">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipesteprunscript">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3715,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3723,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The absolute path on the instance to put the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3731,7 +3756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files. If this is false and the file already exists the file is not overwritten and the step is considered a success. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3751,7 +3776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3759,7 +3784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The absolute path on the instance to put the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3767,7 +3792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files. If this is false and the file already exists the file is not overwritten and the step is considered a success. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3861,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3869,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The absolute path on the instance to put the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3877,7 +3902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files. If this is false and the file already exists the file is not overwritten and the step is considered a success. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3885,7 +3910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3897,7 +3922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3905,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The absolute path on the instance to put the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3913,7 +3938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files. If this is false and the file already exists the file is not overwritten and the step is considered a success. Defaults to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3921,7 +3946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4007,7 +4032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the program can return to indicate a success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,7 +4048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4031,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4043,7 +4068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the program can return to indicate a success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4051,7 +4076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4059,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4067,7 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4153,7 +4178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the program can return to indicate a success.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4161,7 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4169,7 +4194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4177,7 +4202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4189,7 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the program can return to indicate a success.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4197,7 +4222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4205,7 +4230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4213,7 +4238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4283,7 +4308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +4316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4299,7 +4324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4311,7 +4336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4319,7 +4344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4327,7 +4352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4397,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4405,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4413,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4425,7 +4450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4433,7 +4458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4441,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of the archive to extract.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4479,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4491,7 +4516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4529,7 +4554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4541,7 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4611,7 +4636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4619,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4627,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4639,7 +4664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4647,7 +4672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4655,7 +4680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4725,7 +4750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4733,7 +4758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4741,7 +4766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4753,7 +4778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4761,7 +4786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4769,7 +4794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4807,7 +4832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4819,7 +4844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4857,7 +4882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4869,7 +4894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The id of the relevant artifact in the recipe.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5003,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepextractarchiveresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchiveresponse">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5011,7 +5036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstalldpkgresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstalldpkgresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5019,7 +5044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepcopyfileresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepcopyfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5027,7 +5052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepexecfileresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepexecfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5035,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallmsiresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallmsiresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5043,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallrpmresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallrpmresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5051,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipesteprunscriptresponse">pulumi.<wbr>Input<Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptresponse">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5063,7 +5088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepextractarchiveresponse">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepextractarchiveresponse">Software<wbr>Recipe<wbr>Step<wbr>Extract<wbr>Archive<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5071,7 +5096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstalldpkgresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstalldpkgresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Dpkg<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5079,7 +5104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepcopyfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepcopyfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Copy<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5087,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepexecfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepexecfileresponse">Software<wbr>Recipe<wbr>Step<wbr>Exec<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5095,7 +5120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallmsiresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallmsiresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Msi<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5103,7 +5128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipestepinstallrpmresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipestepinstallrpmresponse">Software<wbr>Recipe<wbr>Step<wbr>Install<wbr>Rpm<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5111,7 +5136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwarerecipesteprunscriptresponse">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwarerecipesteprunscriptresponse">Software<wbr>Recipe<wbr>Step<wbr>Run<wbr>Script<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5181,7 +5206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5189,7 +5214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5197,7 +5222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The shell script to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5209,7 +5234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5217,7 +5242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5225,7 +5250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The shell script to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5295,7 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5303,7 +5328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5311,7 +5336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The shell script to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5323,7 +5348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5331,7 +5356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5339,7 +5364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The shell script to be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5425,7 +5450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5433,7 +5458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5441,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5449,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A one word, unique name for this repository. This is the `repo id` in the Yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for guest policy conflicts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5461,7 +5486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5469,7 +5494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5477,7 +5502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5485,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A one word, unique name for this repository. This is the `repo id` in the Yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for guest policy conflicts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5555,7 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5563,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5571,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5583,7 +5608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5591,7 +5616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5599,7 +5624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5685,7 +5710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5693,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5701,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5709,7 +5734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for guest policy conflicts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5721,7 +5746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5729,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5737,7 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for guest policy conflicts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5815,7 +5840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5823,7 +5848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5831,7 +5856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5843,7 +5868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The location of the repository directory.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5851,7 +5876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5859,7 +5884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}

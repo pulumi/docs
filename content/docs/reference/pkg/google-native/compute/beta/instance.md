@@ -20,19 +20,72 @@ Creates an instance resource in the specified project using the data included in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_machine_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.AdvancedMachineFeaturesArgs]]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ConfidentialInstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.AttachedDiskArgs]]]]</span> = None<span class="p">, </span><span class="nx">display_device</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.DisplayDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.AcceleratorConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">last_start_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_stop_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_suspended_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.MetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.NetworkInterfaceArgs]]]]</span> = None<span class="p">, </span><span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.NetworkPerformanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">post_key_revocation_action_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ReservationAffinityArgs]]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.SchedulingArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_beta.ServiceAccountArgs]]]]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ShieldedInstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">shielded_instance_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ShieldedInstanceIntegrityPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">shielded_vm_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ShieldedVmConfigArgs]]</span> = None<span class="p">, </span><span class="nx">shielded_vm_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.ShieldedVmIntegrityPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">source_machine_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_machine_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">start_restricted</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.TagsArgs]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">advanced_machine_features</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.AdvancedMachineFeaturesArgs]</span> = None<span class="p">,</span>
+             <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ConfidentialInstanceConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.AttachedDiskArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">display_device</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.DisplayDeviceArgs]</span> = None<span class="p">,</span>
+             <span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.AcceleratorConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">last_start_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">last_stop_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">last_suspended_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.MetadataArgs]</span> = None<span class="p">,</span>
+             <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.NetworkInterfaceArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">network_performance_config</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.NetworkPerformanceConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">post_key_revocation_action_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">reservation_affinity</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ReservationAffinityArgs]</span> = None<span class="p">,</span>
+             <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.SchedulingArgs]</span> = None<span class="p">,</span>
+             <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.ServiceAccountArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">shielded_instance_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedInstanceIntegrityPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">shielded_vm_config</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedVmConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">shielded_vm_integrity_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.ShieldedVmIntegrityPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">source_machine_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">source_machine_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">start_restricted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">status_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.TagsArgs]</span> = None<span class="p">,</span>
+             <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +120,32 @@ Creates an instance resource in the specified project using the data included in
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -962,7 +1025,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -970,7 +1033,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -978,7 +1041,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the instance resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1049,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedmachinefeatures">pulumi.<wbr>Input<Advanced<wbr>Machine<wbr>Features<wbr>Args></a></span>
+        <span class="property-type"><a href="#advancedmachinefeatures">Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls for advanced machine-related behavior features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1057,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1065,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialinstanceconfig">pulumi.<wbr>Input<Confidential<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1073,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#cpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The CPU platform used by this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +1081,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1089,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the resource should be protected against deletion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +1097,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1105,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Attached<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#attacheddisk">Attached<wbr>Disk<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of disks associated with this instance. Persistent disks must be created before you can assign them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1113,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#displaydevice_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydevice">pulumi.<wbr>Input<Display<wbr>Device<wbr>Args></a></span>
+        <span class="property-type"><a href="#displaydevice">Display<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables display device for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1121,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#erasewindowsvsssignature_nodejs" style="color: inherit; text-decoration: inherit;">erase<wbr>Windows<wbr>Vss<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disks restored from source snapshots or source machine image should erase Windows specific VSS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1129,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the instance's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update the instance. You must always provide an up-to-date fingerprint hash in order to update the instance.
 
@@ -1076,7 +1139,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Accelerator<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the type and count of accelerator cards attached to the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1147,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1155,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1163,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#instance for instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1171,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for this request, which is essentially a hash of the label's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels.
 
@@ -1118,7 +1181,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1189,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#laststarttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last start timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1197,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#laststoptimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Stop<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last stop timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1205,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#lastsuspendedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Suspended<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last suspended timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1213,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type:
 zones/us-central1-f/machineTypes/n1-standard-1
@@ -1168,7 +1231,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadata">pulumi.<wbr>Input<Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadata">Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1239,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1247,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1255,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1263,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#networkperformanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkperformanceconfig">pulumi.<wbr>Input<Network<wbr>Performance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkperformanceconfig">Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,7 +1271,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#postkeyrevocationactiontype_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Key<wbr>Revocation<wbr>Action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1279,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1287,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">pulumi.<wbr>Input<Reservation<wbr>Affinity<wbr>Args></a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1295,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1303,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1311,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduling">pulumi.<wbr>Input<Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#scheduling">Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1319,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1327,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Account<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceaccount">Service<wbr>Account<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported.
 
@@ -1274,7 +1337,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1345,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shieldedinstanceintegritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Integrity<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceintegritypolicy">pulumi.<wbr>Input<Shielded<wbr>Instance<wbr>Integrity<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedinstanceintegritypolicy">Shielded<wbr>Instance<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1353,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shieldedvmconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Vm<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedvmconfig">pulumi.<wbr>Input<Shielded<wbr>Vm<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedvmconfig">Shielded<wbr>Vm<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1361,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shieldedvmintegritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Vm<wbr>Integrity<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedvmintegritypolicy">pulumi.<wbr>Input<Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1369,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#sourcemachineimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source machine image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1377,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#sourcemachineimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source machine image encryption key when creating an instance from a machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1385,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#startrestricted_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Restricted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Whether a VM has been restricted for start because Compute Engine has detected suspicious activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1393,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see  Instance life cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1401,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1409,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tags">pulumi.<wbr>Input<Tags<wbr>Args></a></span>
+        <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1358,7 +1421,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1366,7 +1429,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1374,7 +1437,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the zone where the instance resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1445,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedmachinefeatures">Advanced<wbr>Machine<wbr>Features<wbr>Args]</a></span>
+        <span class="property-type"><a href="#advancedmachinefeatures">Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls for advanced machine-related behavior features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1453,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1461,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#confidentialinstanceconfig">Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1469,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#cpu_platform_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The CPU platform used by this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1477,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1485,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the resource should be protected against deletion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1493,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1501,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddisk">Attached<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#attacheddisk">Attached<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of disks associated with this instance. Persistent disks must be created before you can assign them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1509,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#display_device_python" style="color: inherit; text-decoration: inherit;">display_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#displaydevice">Display<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#displaydevice">Display<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables display device for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1517,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#erase_windows_vss_signature_python" style="color: inherit; text-decoration: inherit;">erase_<wbr>windows_<wbr>vss_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disks restored from source snapshots or source machine image should erase Windows specific VSS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1525,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this resource, which is essentially a hash of the instance's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update the instance. You must always provide an up-to-date fingerprint hash in order to update the instance.
 
@@ -1472,7 +1535,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#acceleratorconfig">Accelerator<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the type and count of accelerator cards attached to the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1543,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1551,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1559,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#instance for instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1567,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for this request, which is essentially a hash of the label's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels.
 
@@ -1514,7 +1577,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1585,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#last_start_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last start timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1593,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#last_stop_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>stop_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last stop timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,7 +1601,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#last_suspended_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>suspended_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Last suspended timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1609,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type:
 zones/us-central1-f/machineTypes/n1-standard-1
@@ -1564,7 +1627,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadata">Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadata">Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1635,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1643,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1651,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1659,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#network_performance_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>performance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkperformanceconfig">Network<wbr>Performance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkperformanceconfig">Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1667,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#post_key_revocation_action_type_python" style="color: inherit; text-decoration: inherit;">post_<wbr>key_<wbr>revocation_<wbr>action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostKeyRevocationActionType of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1675,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1683,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationaffinity">Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1691,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1636,7 +1699,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1644,7 +1707,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduling">Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduling">Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,7 +1715,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1723,7 @@ For a full list of restrictions, read the Specifications for custom machine type
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccount">Service<wbr>Account<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceaccount">Service<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported.
 
@@ -1670,7 +1733,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceconfig">Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1741,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shielded_instance_integrity_policy_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>integrity_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedinstanceintegritypolicy">Shielded<wbr>Instance<wbr>Integrity<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedinstanceintegritypolicy">Shielded<wbr>Instance<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1749,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shielded_vm_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>vm_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedvmconfig">Shielded<wbr>Vm<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedvmconfig">Shielded<wbr>Vm<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1757,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#shielded_vm_integrity_policy_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>vm_<wbr>integrity_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#shieldedvmintegritypolicy">Shielded<wbr>Vm<wbr>Integrity<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecating, please use shielded_instance_integrity_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1765,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#source_machine_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>machine_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source machine image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1710,7 +1773,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#source_machine_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>machine_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source machine image encryption key when creating an instance from a machine image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1781,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#start_restricted_python" style="color: inherit; text-decoration: inherit;">start_<wbr>restricted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Whether a VM has been restricted for start because Compute Engine has detected suspicious activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,7 +1789,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see  Instance life cycle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1797,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An optional, human-readable explanation of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1805,7 @@ Service accounts generate access tokens that can be accessed through the metadat
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tags">Tags<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1881,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1963,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2113,7 +2176,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#accessConfig for access configs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2184,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2192,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2200,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -2149,7 +2212,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2220,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#setpublicptr_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Public<wbr>Ptr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2228,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2240,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#accessConfig for access configs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2248,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2256,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2264,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -2213,7 +2276,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2284,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#set_public_ptr_python" style="color: inherit; text-decoration: inherit;">set_<wbr>public_<wbr>ptr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2292,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2371,7 +2434,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#accessConfig for access configs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2379,7 +2442,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2387,7 +2450,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2395,7 +2458,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -2407,7 +2470,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2415,7 +2478,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#setpublicptr_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Public<wbr>Ptr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2423,7 +2486,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2435,7 +2498,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#accessConfig for access configs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2506,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2514,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2522,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD.
 
@@ -2471,7 +2534,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2542,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#set_public_ptr_python" style="color: inherit; text-decoration: inherit;">set_<wbr>public_<wbr>ptr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2487,7 +2550,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of configuration. The default and only option is ONE_TO_ONE_NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2566,15 @@ If an AccessConfig with a valid external IP address is specified, it must match 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2515,7 +2586,15 @@ If an AccessConfig with a valid external IP address is specified, it must match 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2525,9 +2604,17 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#enablenestedvirtualization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Nested<wbr>Virtualization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2537,9 +2624,17 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#enable_nested_virtualization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nested_<wbr>virtualization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="advancedmachinefeaturesresponse">Advanced<wbr>Machine<wbr>Features<wbr>Response</h4>
@@ -2553,7 +2648,15 @@ If an AccessConfig with a valid external IP address is specified, it must match 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2565,7 +2668,15 @@ If an AccessConfig with a valid external IP address is specified, it must match 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2575,9 +2686,17 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#enablenestedvirtualization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Nested<wbr>Virtualization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2587,9 +2706,17 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#enable_nested_virtualization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nested_<wbr>virtualization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether to enable nested virtualization or not (default is false).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aliasiprange">Alias<wbr>Ip<wbr>Range</h4>
@@ -2641,7 +2768,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2649,7 +2776,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2661,7 +2788,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2796,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2723,7 +2850,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2731,7 +2858,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2743,7 +2870,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2751,7 +2878,7 @@ If an AccessConfig with a valid external IP address is specified, it must match 
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3045,7 +3172,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3180,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3188,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.
 
@@ -3071,7 +3198,7 @@ If not specified, the server chooses a default device name to apply to this disk
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 
@@ -3087,7 +3214,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the disk in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3222,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3230,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3111,7 +3238,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddiskinitializeparams">pulumi.<wbr>Input<Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args></a></span>
+        <span class="property-type"><a href="#attacheddiskinitializeparams">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
 
@@ -3121,7 +3248,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3129,7 +3256,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3137,7 +3264,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3145,7 +3272,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3153,7 +3280,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#shieldedinstanceinitialstate_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Initial<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfig">pulumi.<wbr>Input<Initial<wbr>State<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] shielded vm initial state stored on disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3288,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -3173,7 +3300,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3185,7 +3312,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3320,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3328,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.
 
@@ -3211,7 +3338,7 @@ If not specified, the server chooses a default device name to apply to this disk
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 
@@ -3227,7 +3354,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the disk in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3362,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3243,7 +3370,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3251,7 +3378,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddiskinitializeparams">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attacheddiskinitializeparams">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
 
@@ -3261,7 +3388,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3396,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3404,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3412,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3420,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#shielded_instance_initial_state_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>initial_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] shielded vm initial state stored on disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3428,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -3313,7 +3440,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3629,7 +3756,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3637,7 +3764,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3772,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3653,7 +3780,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
@@ -3668,7 +3795,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.
 
@@ -3678,7 +3805,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3686,7 +3813,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3694,7 +3821,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#onupdateaction_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Update<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3702,7 +3829,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#provisionediops_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3710,7 +3837,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3718,7 +3845,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -3744,7 +3871,7 @@ If the source image is deleted later, this field will not be set.{{% /md %}}</dd
 <a href="#sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
 
@@ -3754,7 +3881,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD.
 
@@ -3768,7 +3895,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3780,7 +3907,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3788,7 +3915,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3796,7 +3923,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3804,7 +3931,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
@@ -3819,7 +3946,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.
 
@@ -3829,7 +3956,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3964,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3845,7 +3972,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#on_update_action_python" style="color: inherit; text-decoration: inherit;">on_<wbr>update_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3980,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#provisioned_iops_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3861,7 +3988,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3869,7 +3996,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -3895,7 +4022,7 @@ If the source image is deleted later, this field will not be set.{{% /md %}}</dd
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
 
@@ -3905,7 +4032,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD.
 
@@ -3919,7 +4046,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4235,7 +4362,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4243,7 +4370,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4251,7 +4378,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4259,7 +4386,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
@@ -4274,7 +4401,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeatureresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.
 
@@ -4284,7 +4411,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4292,7 +4419,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4300,7 +4427,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#onupdateaction_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Update<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4308,7 +4435,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#provisionediops_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4316,7 +4443,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4324,7 +4451,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -4350,7 +4477,7 @@ If the source image is deleted later, this field will not be set.{{% /md %}}</dd
 <a href="#sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
 
@@ -4360,7 +4487,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD.
 
@@ -4374,7 +4501,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4386,7 +4513,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description. Provide this property when creating the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4394,7 +4521,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4402,7 +4529,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4410,7 +4537,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
@@ -4425,7 +4552,7 @@ Other values include pd-ssd and local-ssd. If you define this field, you can pro
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.
 
@@ -4435,7 +4562,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4443,7 +4570,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4451,7 +4578,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#on_update_action_python" style="color: inherit; text-decoration: inherit;">on_<wbr>update_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which action to take on instance update with this disk. Default is to use the existing disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4459,7 +4586,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#provisioned_iops_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how many IOPS must be provisioned for the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4467,7 +4594,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4475,7 +4602,7 @@ Guest OS features are applied by merging initializeParams.guestOsFeatures and di
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -4501,7 +4628,7 @@ If the source image is deleted later, this field will not be set.{{% /md %}}</dd
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
 
@@ -4511,7 +4638,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD.
 
@@ -4525,7 +4652,7 @@ If the source snapshot is deleted later, this field will not be set.{{% /md %}}<
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4819,7 +4946,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4827,7 +4954,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4835,7 +4962,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.
 
@@ -4845,7 +4972,7 @@ If not specified, the server chooses a default device name to apply to this disk
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 
@@ -4861,7 +4988,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the disk in GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4869,7 +4996,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeatureresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4877,7 +5004,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4885,7 +5012,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddiskinitializeparamsresponse">pulumi.<wbr>Input<Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsresponse">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
 
@@ -4895,7 +5022,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4903,7 +5030,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4911,7 +5038,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4919,7 +5046,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4927,7 +5054,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#shieldedinstanceinitialstate_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Initial<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfigresponse">pulumi.<wbr>Input<Initial<wbr>State<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#initialstateconfigresponse">Initial<wbr>State<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] shielded vm initial state stored on disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4935,7 +5062,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -4947,7 +5074,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4959,7 +5086,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4967,7 +5094,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4975,7 +5102,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.
 
@@ -4985,7 +5112,7 @@ If not specified, the server chooses a default device name to apply to this disk
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkeyresponse">Customer<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 
@@ -5001,7 +5128,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the disk in GB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5009,7 +5136,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeatureresponse">Guest<wbr>Os<wbr>Feature<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5017,7 +5144,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5025,7 +5152,7 @@ Instance templates do not store customer-supplied encryption keys, so you cannot
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attacheddiskinitializeparamsresponse">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attacheddiskinitializeparamsresponse">Attached<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
 
@@ -5035,7 +5162,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5043,7 +5170,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#attachedDisk for attached disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5051,7 +5178,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Any valid publicly visible licenses.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5059,7 +5186,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5067,7 +5194,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#shielded_instance_initial_state_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>initial_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfigresponse">Initial<wbr>State<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#initialstateconfigresponse">Initial<wbr>State<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] shielded vm initial state stored on disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5075,7 +5202,7 @@ This property is mutually exclusive with the source property; you can only defin
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD.
 
@@ -5087,7 +5214,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5125,7 +5252,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5137,7 +5264,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5175,7 +5302,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5187,7 +5314,7 @@ Note that for InstanceTemplate, specify the disk name, not the URL for the disk.
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5299,7 +5426,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5307,7 +5434,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5315,7 +5442,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5323,7 +5450,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -5336,7 +5463,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5348,7 +5475,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5356,7 +5483,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5364,7 +5491,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5372,7 +5499,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -5385,7 +5512,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5497,7 +5624,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5505,7 +5632,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5513,7 +5640,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5521,7 +5648,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -5534,7 +5661,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5546,7 +5673,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5554,7 +5681,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5562,7 +5689,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5570,7 +5697,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -5583,7 +5710,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5621,7 +5748,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Display enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5633,7 +5760,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Display enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5671,7 +5798,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Display enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5683,7 +5810,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Display enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5737,7 +5864,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5872,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5757,7 +5884,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5765,7 +5892,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5819,7 +5946,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5827,7 +5954,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5839,7 +5966,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5847,7 +5974,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5885,7 +6012,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5897,7 +6024,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5935,7 +6062,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5947,7 +6074,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6033,7 +6160,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_nodejs" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6041,7 +6168,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_nodejs" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6049,7 +6176,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_nodejs" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6057,7 +6184,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_nodejs" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6069,7 +6196,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_python" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6077,7 +6204,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_python" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6085,7 +6212,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_python" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6093,7 +6220,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_python" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6179,7 +6306,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_nodejs" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6187,7 +6314,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_nodejs" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6195,7 +6322,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_nodejs" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6203,7 +6330,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_nodejs" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6215,7 +6342,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_python" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6223,7 +6350,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_python" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6231,7 +6358,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_python" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6239,9 +6366,173 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_python" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be less than 128 bytes in length. This is reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the project.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadata">Metadata</h4>
@@ -6263,7 +6554,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#instancetemplateitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6293,7 +6584,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#instancetemplateitemsitem">[]Instance<wbr>Template<wbr>Items<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6313,7 +6604,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -6323,7 +6614,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6331,7 +6622,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#metadata for metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6343,7 +6634,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -6353,7 +6644,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6361,7 +6652,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#metadata for metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6385,7 +6676,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#instancetemplateitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6415,7 +6706,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#instancetemplateitemsitemresponse">[]Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6435,7 +6726,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -6445,7 +6736,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6453,7 +6744,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#metadata for metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6465,7 +6756,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -6475,7 +6766,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6483,7 +6774,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#metadata for metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6679,7 +6970,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessconfig">Access<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6687,7 +6978,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasiprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Alias<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aliasiprange">Alias<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6695,7 +6986,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface. The request will fail with error 400 Bad Request if the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6703,7 +6994,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An IPv6 internal network address for this network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6711,7 +7002,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkInterface for network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6719,7 +7010,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the network interface, which is generated by the server. For network devices, these are eth0, eth1, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6727,7 +7018,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used; if the network is not specified but the subnetwork is specified, the network is inferred.
 
@@ -6740,7 +7031,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6748,7 +7039,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6756,7 +7047,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs:  
 - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork 
@@ -6770,7 +7061,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessconfig">Access<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessconfig">Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6778,7 +7069,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasiprange">Alias<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aliasiprange">Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6786,7 +7077,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface. The request will fail with error 400 Bad Request if the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6794,7 +7085,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An IPv6 internal network address for this network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6802,7 +7093,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkInterface for network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6810,7 +7101,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the network interface, which is generated by the server. For network devices, these are eth0, eth1, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6818,7 +7109,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used; if the network is not specified but the subnetwork is specified, the network is inferred.
 
@@ -6831,7 +7122,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6839,7 +7130,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6847,7 +7138,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs:  
 - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork 
@@ -7045,7 +7336,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessconfigresponse">Access<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7053,7 +7344,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasiprangeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Alias<wbr>Ip<wbr>Range<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aliasiprangeresponse">Alias<wbr>Ip<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7061,7 +7352,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface. The request will fail with error 400 Bad Request if the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7069,7 +7360,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] An IPv6 internal network address for this network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7077,7 +7368,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkInterface for network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7085,7 +7376,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the network interface, which is generated by the server. For network devices, these are eth0, eth1, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7093,7 +7384,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used; if the network is not specified but the subnetwork is specified, the network is inferred.
 
@@ -7106,7 +7397,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7114,7 +7405,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7122,7 +7413,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs:  
 - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork 
@@ -7136,7 +7427,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessconfigresponse">Access<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessconfigresponse">Access<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7144,7 +7435,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasiprangeresponse">Alias<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aliasiprangeresponse">Alias<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7152,7 +7443,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface. The request will fail with error 400 Bad Request if the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7160,7 +7451,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] An IPv6 internal network address for this network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7168,7 +7459,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#networkInterface for network interfaces.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7176,7 +7467,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The name of the network interface, which is generated by the server. For network devices, these are eth0, eth1, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7184,7 +7475,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used; if the network is not specified but the subnetwork is specified, the network is inferred.
 
@@ -7197,7 +7488,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7205,7 +7496,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7213,7 +7504,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs:  
 - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork 
@@ -7253,7 +7544,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7265,7 +7556,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7303,7 +7594,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#totalegressbandwidthtier_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Egress<wbr>Bandwidth<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7315,7 +7606,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#total_egress_bandwidth_tier_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bandwidth_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7385,7 +7676,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7393,7 +7684,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7401,7 +7692,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of a reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7413,7 +7704,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7421,7 +7712,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7429,7 +7720,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of a reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7499,7 +7790,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7507,7 +7798,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7515,7 +7806,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of a reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7527,7 +7818,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved instances for examples.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7535,7 +7826,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7543,7 +7834,7 @@ If you specify this property, you can specify the network as a full or partial U
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of a reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7665,7 +7956,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted.
 
@@ -7675,7 +7966,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7683,7 +7974,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7691,7 +7982,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingnodeaffinity">pulumi.<wbr>Input<pulumi.<wbr>Input<Scheduling<wbr>Node<wbr>Affinity<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#schedulingnodeaffinity">Scheduling<wbr>Node<wbr>Affinity<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7699,7 +7990,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7707,7 +7998,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7719,7 +8010,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted.
 
@@ -7729,7 +8020,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7737,7 +8028,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7745,7 +8036,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingnodeaffinity">Scheduling<wbr>Node<wbr>Affinity<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#schedulingnodeaffinity">Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7753,7 +8044,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7761,7 +8052,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7831,7 +8122,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of Node resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7839,7 +8130,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7847,7 +8138,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7859,7 +8150,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of Node resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7867,7 +8158,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7875,7 +8166,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7945,7 +8236,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of Node resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7953,7 +8244,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7961,7 +8252,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7973,7 +8264,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label key of Node resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7981,7 +8272,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7989,7 +8280,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Corresponds to the label values of Node resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8111,7 +8402,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted.
 
@@ -8121,7 +8412,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#locationhint_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8129,7 +8420,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8137,7 +8428,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingnodeaffinityresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Scheduling<wbr>Node<wbr>Affinity<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#schedulingnodeaffinityresponse">Scheduling<wbr>Node<wbr>Affinity<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8145,7 +8436,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8153,7 +8444,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8165,7 +8456,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted.
 
@@ -8175,7 +8466,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#location_hint_python" style="color: inherit; text-decoration: inherit;">location_<wbr>hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8183,7 +8474,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8191,7 +8482,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulingnodeaffinityresponse">Scheduling<wbr>Node<wbr>Affinity<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#schedulingnodeaffinityresponse">Scheduling<wbr>Node<wbr>Affinity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8199,7 +8490,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8207,7 +8498,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8261,7 +8552,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8269,7 +8560,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of scopes to be made available for this service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8281,7 +8572,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8289,7 +8580,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of scopes to be made available for this service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8343,7 +8634,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the service account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8351,7 +8642,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of scopes to be made available for this service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8363,7 +8654,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the service account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8371,7 +8662,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of scopes to be made available for this service account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8441,7 +8732,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8449,7 +8740,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Disabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8457,7 +8748,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8469,7 +8760,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8477,7 +8768,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Disabled by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8485,7 +8776,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8555,7 +8846,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8563,7 +8854,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Disabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8571,7 +8862,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8583,7 +8874,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled. Enabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8591,7 +8882,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled. Disabled by default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8599,7 +8890,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled. Enabled by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8637,7 +8928,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#updateautolearnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Auto<wbr>Learn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8649,7 +8940,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#update_auto_learn_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>auto_<wbr>learn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8687,7 +8978,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#updateautolearnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Auto<wbr>Learn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8699,7 +8990,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#update_auto_learn_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>auto_<wbr>learn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8769,7 +9060,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8777,7 +9068,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8785,7 +9076,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8797,7 +9088,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8805,7 +9096,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8813,7 +9104,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8883,7 +9174,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8891,7 +9182,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8899,7 +9190,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8911,7 +9202,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has integrity monitoring enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8919,7 +9210,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has Secure Boot enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8927,7 +9218,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8965,7 +9256,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#updateautolearnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Auto<wbr>Learn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8977,7 +9268,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#update_auto_learn_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>auto_<wbr>learn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9015,7 +9306,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#updateautolearnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Auto<wbr>Learn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9027,7 +9318,7 @@ By default, this is set to true so an instance is automatically restarted if it 
 <a href="#update_auto_learn_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>auto_<wbr>learn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9085,7 +9376,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the tags' contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update tags. You must always provide an up-to-date fingerprint hash in order to update or change tags.
 
@@ -9095,7 +9386,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9107,7 +9398,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the tags' contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update tags. You must always provide an up-to-date fingerprint hash in order to update or change tags.
 
@@ -9117,7 +9408,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9175,7 +9466,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the tags' contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update tags. You must always provide an up-to-date fingerprint hash in order to update or change tags.
 
@@ -9185,7 +9476,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9197,7 +9488,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fingerprint for this request, which is essentially a hash of the tags' contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update tags. You must always provide an up-to-date fingerprint hash in order to update or change tags.
 
@@ -9207,7 +9498,7 @@ To see the latest fingerprint, make get() request to the instance.{{% /md %}}</d
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.{{% /md %}}</dd></dl>
 {{% /choosable %}}

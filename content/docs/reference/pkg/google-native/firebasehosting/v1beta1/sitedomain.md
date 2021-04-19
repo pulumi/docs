@@ -20,19 +20,33 @@ Creates a domain mapping on the specified site.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">domain_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_firebasehosting_v1beta1.DomainRedirectArgs]]</span> = None<span class="p">, </span><span class="nx">domains_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">provisioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_firebasehosting_v1beta1.DomainProvisioningArgs]]</span> = None<span class="p">, </span><span class="nx">site</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">sites_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">domain_redirect</span><span class="p">:</span> <span class="nx">Optional[_firebasehosting_v1beta1.DomainRedirectArgs]</span> = None<span class="p">,</span>
+               <span class="nx">domains_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">provisioning</span><span class="p">:</span> <span class="nx">Optional[_firebasehosting_v1beta1.DomainProvisioningArgs]</span> = None<span class="p">,</span>
+               <span class="nx">site</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">sites_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteDomain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteDomain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteDomain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SiteDomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a domain mapping on the specified site.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SiteDomainArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +330,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainsid_nodejs" style="color: inherit; text-decoration: inherit;">domains<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sitesid_nodejs" style="color: inherit; text-decoration: inherit;">sites<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +346,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The domain name of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainredirect_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainredirect">pulumi.<wbr>Input<Domain<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainredirect">Domain<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set, the domain should redirect with the provided parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +362,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#provisioning_nodejs" style="color: inherit; text-decoration: inherit;">provisioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainprovisioning">pulumi.<wbr>Input<Domain<wbr>Provisioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainprovisioning">Domain<wbr>Provisioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the provisioning of certificates and the health of the DNS resolution for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +370,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The site name of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the domain was last updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domains_id_python" style="color: inherit; text-decoration: inherit;">domains_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sites_id_python" style="color: inherit; text-decoration: inherit;">sites_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +414,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The domain name of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domain_redirect_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainredirect">Domain<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainredirect">Domain<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If set, the domain should redirect with the provided parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +430,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#provisioning_python" style="color: inherit; text-decoration: inherit;">provisioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainprovisioning">Domain<wbr>Provisioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainprovisioning">Domain<wbr>Provisioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the provisioning of certificates and the health of the DNS resolution for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +438,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The site name of the association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional status of the domain association.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The SiteDomain resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the domain was last updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -549,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name upon which the DNS challenge must be satisfied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that must be present as a TXT record on the domain name to satisfy the challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -569,7 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name upon which the DNS challenge must be satisfied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that must be present as a TXT record on the domain name to satisfy the challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -631,7 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name upon which the DNS challenge must be satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -639,7 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that must be present as a TXT record on the domain name to satisfy the challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -651,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name upon which the DNS challenge must be satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that must be present as a TXT record on the domain name to satisfy the challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -713,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path on which to serve the specified token to satisfy the certificate challenge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to serve at the specified URL path to satisfy the certificate challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -733,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path on which to serve the specified token to satisfy the certificate challenge.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token to serve at the specified URL path to satisfy the certificate challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path on which to serve the specified token to satisfy the certificate challenge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to serve at the specified URL path to satisfy the certificate challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -815,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path on which to serve the specified token to satisfy the certificate challenge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token to serve at the specified URL path to satisfy the certificate challenge.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengediscoveredtxt_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Discovered<wbr>Txt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The TXT records (for the certificate challenge) that were found at the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengedns_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certdnschallenge">pulumi.<wbr>Input<Cert<wbr>Dns<wbr>Challenge<wbr>Args></a></span>
+        <span class="property-type"><a href="#certdnschallenge">Cert<wbr>Dns<wbr>Challenge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS challenge for generating a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengehttp_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certhttpchallenge">pulumi.<wbr>Input<Cert<wbr>Http<wbr>Challenge<wbr>Args></a></span>
+        <span class="property-type"><a href="#certhttpchallenge">Cert<wbr>Http<wbr>Challenge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP challenge for generating a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certstatus_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoveredips_nodejs" style="color: inherit; text-decoration: inherit;">discovered<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IPs found at the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsfetchtime_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Fetch<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the last DNS fetch occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsstatus_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedips_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of IPs to which the domain is expected to resolve.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_discovered_txt_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>discovered_<wbr>txt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The TXT records (for the certificate challenge) that were found at the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_dns_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certdnschallenge">Cert<wbr>Dns<wbr>Challenge<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certdnschallenge">Cert<wbr>Dns<wbr>Challenge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS challenge for generating a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_http_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certhttpchallenge">Cert<wbr>Http<wbr>Challenge<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certhttpchallenge">Cert<wbr>Http<wbr>Challenge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP challenge for generating a certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_status_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovered_ips_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IPs found at the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_fetch_time_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>fetch_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the last DNS fetch occurred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_status_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_ips_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of IPs to which the domain is expected to resolve.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengediscoveredtxt_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Discovered<wbr>Txt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The TXT records (for the certificate challenge) that were found at the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengedns_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certdnschallengeresponse">pulumi.<wbr>Input<Cert<wbr>Dns<wbr>Challenge<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#certdnschallengeresponse">Cert<wbr>Dns<wbr>Challenge<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS challenge for generating a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certchallengehttp_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Challenge<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certhttpchallengeresponse">pulumi.<wbr>Input<Cert<wbr>Http<wbr>Challenge<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#certhttpchallengeresponse">Cert<wbr>Http<wbr>Challenge<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP challenge for generating a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certstatus_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoveredips_nodejs" style="color: inherit; text-decoration: inherit;">discovered<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IPs found at the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsfetchtime_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Fetch<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the last DNS fetch occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsstatus_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedips_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of IPs to which the domain is expected to resolve.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_discovered_txt_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>discovered_<wbr>txt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The TXT records (for the certificate challenge) that were found at the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_dns_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certdnschallengeresponse">Cert<wbr>Dns<wbr>Challenge<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certdnschallengeresponse">Cert<wbr>Dns<wbr>Challenge<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS challenge for generating a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_challenge_http_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>challenge_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certhttpchallengeresponse">Cert<wbr>Http<wbr>Challenge<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certhttpchallengeresponse">Cert<wbr>Http<wbr>Challenge<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP challenge for generating a certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_status_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovered_ips_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IPs found at the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_fetch_time_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>fetch_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the last DNS fetch occurred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_status_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS record match status as of the last DNS fetch.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_ips_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of IPs to which the domain is expected to resolve.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The domain name to redirect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The domain name to redirect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The domain name to redirect to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The domain name to redirect to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The redirect status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}

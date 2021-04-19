@@ -20,19 +20,64 @@ Creates a BackendService resource in the specified project using the data includ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.BackendArgs]]]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendServiceCdnPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CircuitBreakersArgs]]</span> = None<span class="p">, </span><span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.ConnectionDrainingArgs]]</span> = None<span class="p">, </span><span class="nx">connection_tracking_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendServiceConnectionTrackingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.ConsistentHashLoadBalancerSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">edge_security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendServiceFailoverPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendServiceIAPArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendServiceLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">max_stream_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.DurationArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.OutlierDetectionArgs]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.SecuritySettingsArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">subsetting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.SubsettingArgs]]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.BackendArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceCdnPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CircuitBreakersArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">connection_draining</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ConnectionDrainingArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">connection_tracking_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceConnectionTrackingPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ConsistentHashLoadBalancerSettingsArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">edge_security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceFailoverPolicyArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceIAPArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendServiceLogConfigArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">max_stream_duration</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.DurationArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.OutlierDetectionArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SecuritySettingsArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">subsetting</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SubsettingArgs]</span> = None<span class="p">,</span>
+                   <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +112,32 @@ Creates a BackendService resource in the specified project using the data includ
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BackendServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -922,7 +977,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -930,7 +985,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +993,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#affinitycookiettlsec_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL, INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
 
@@ -950,7 +1005,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backend">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backend">Backend<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of backends that serve this BackendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1013,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService. Only available for  external HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1021,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#circuitbreakers_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitbreakers">pulumi.<wbr>Input<Circuit<wbr>Breakers<wbr>Args></a></span>
+        <span class="property-type"><a href="#circuitbreakers">Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.
 
@@ -980,7 +1035,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#connectiondraining_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiondraining">pulumi.<wbr>Input<Connection<wbr>Draining<wbr>Args></a></span>
+        <span class="property-type"><a href="#connectiondraining">Connection<wbr>Draining<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +1043,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#connectiontrackingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Tracking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicy">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1051,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#consistenthash_nodejs" style="color: inherit; text-decoration: inherit;">consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettings">pulumi.<wbr>Input<Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettings">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH.
 
@@ -1010,7 +1065,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +1073,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#customrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1081,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +1089,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1097,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#edgesecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the edge security policy associated with this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1105,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>CDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme is EXTERNAL and the protocol is HTTP or HTTPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1113,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefailoverpolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicefailoverpolicy">Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. Requires at least one backend instance group to be defined as a backup (failover) backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1121,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-date fingerprint must be provided in order to update the BackendService, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1076,7 +1131,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See  Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1139,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">pulumi.<wbr>Input<Backend<wbr>Service<wbr>IAPArgs></a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>IAPArgs</a></span>
     </dt>
     <dd>{{% md %}}The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1147,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1155,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of resource. Always compute#backendService for backend services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1163,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1171,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -1138,7 +1193,7 @@ Only the default ROUND_ROBIN policy is supported when the backend service is ref
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1201,7 @@ Only the default ROUND_ROBIN policy is supported when the backend service is ref
 <a href="#maxstreamduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stream<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
@@ -1156,7 +1211,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1219,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1227,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outlierdetection">pulumi.<wbr>Input<Outlier<wbr>Detection<wbr>Args></a></span>
+        <span class="property-type"><a href="#outlierdetection">Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.
 
@@ -1186,7 +1241,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
 
@@ -1196,7 +1251,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for communication to the backend VMs in that group. Required when the loadBalancingScheme is EXTERNAL (except Network Load Balancing), INTERNAL_MANAGED, or  INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on each backend instance group. This parameter has no meaning if the backends are NEGs.
 
@@ -1208,7 +1263,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -1220,7 +1275,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional backend service resides. This field is not applicable to global backend services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1283,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the security policy associated with this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1291,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysettings">pulumi.<wbr>Input<Security<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitysettings">Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field specifies the security policy that applies to this backend service. This field is applicable to either:  
 - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. 
@@ -1246,7 +1301,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1309,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1317,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -1278,7 +1333,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#subsetting_nodejs" style="color: inherit; text-decoration: inherit;">subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subsetting">pulumi.<wbr>Input<Subsetting<wbr>Args></a></span>
+        <span class="property-type"><a href="#subsetting">Subsetting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1341,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The backend service timeout has a different meaning depending on the type of load balancer. For more information see,  Backend service settings The default is 30 seconds. The full range of timeout values allowed is 1 - 2,147,483,647 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1298,7 +1353,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1306,7 +1361,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1369,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL, INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
 
@@ -1326,7 +1381,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backend">Backend<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backend">Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of backends that serve this BackendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1334,7 +1389,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService. Only available for  external HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1397,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#circuitbreakers">Circuit<wbr>Breakers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#circuitbreakers">Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.
 
@@ -1356,7 +1411,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiondraining">Connection<wbr>Draining<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectiondraining">Connection<wbr>Draining<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1419,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#connection_tracking_policy_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>tracking_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicy">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceconnectiontrackingpolicy">Backend<wbr>Service<wbr>Connection<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1427,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettings">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettings">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH.
 
@@ -1386,7 +1441,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1449,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#custom_request_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1457,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1465,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1473,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#edge_security_policy_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the edge security policy associated with this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1481,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme is EXTERNAL and the protocol is HTTP or HTTPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1489,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefailoverpolicy">Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicefailoverpolicy">Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. Requires at least one backend instance group to be defined as a backup (failover) backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1497,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-date fingerprint must be provided in order to update the BackendService, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1452,7 +1507,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See  Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1460,7 +1515,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>IAPArgs]</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>IAPArgs</a></span>
     </dt>
     <dd>{{% md %}}The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1523,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1476,7 +1531,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of resource. Always compute#backendService for backend services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1539,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose  INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic Director. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1547,7 @@ To see the latest fingerprint, make a get() request to retrieve a BackendService
 <a href="#locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality. The possible values are:  
 - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. 
@@ -1514,7 +1569,7 @@ Only the default ROUND_ROBIN policy is supported when the backend service is ref
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1577,7 @@ Only the default ROUND_ROBIN policy is supported when the backend service is ref
 <a href="#max_stream_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stream_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed.
 If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
@@ -1532,7 +1587,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1595,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1603,7 @@ This field is only allowed when the loadBalancingScheme of the backend service i
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outlierdetection">Outlier<wbr>Detection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outlierdetection">Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.
 
@@ -1562,7 +1617,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
 
@@ -1572,7 +1627,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for communication to the backend VMs in that group. Required when the loadBalancingScheme is EXTERNAL (except Network Load Balancing), INTERNAL_MANAGED, or  INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on each backend instance group. This parameter has no meaning if the backends are NEGs.
 
@@ -1584,7 +1639,7 @@ Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing 
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 
@@ -1596,7 +1651,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional backend service resides. This field is not applicable to global backend services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1659,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the security policy associated with this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1667,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysettings">Security<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitysettings">Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field specifies the security policy that applies to this backend service. This field is applicable to either:  
 - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. 
@@ -1622,7 +1677,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1685,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1693,7 @@ Must be set to GRPC when the backend service is referenced by a URL map that is 
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE.
 
@@ -1654,7 +1709,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#subsetting_python" style="color: inherit; text-decoration: inherit;">subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subsetting">Subsetting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subsetting">Subsetting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,7 +1717,7 @@ Not supported when the backend service is referenced by a URL map that is bound 
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The backend service timeout has a different meaning depending on the type of load balancer. For more information see,  Backend service settings The default is 30 seconds. The full range of timeout values allowed is 1 - 2,147,483,647 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originauthenticationmethod">pulumi.<wbr>Input<pulumi.<wbr>Input<Origin<wbr>Authentication<wbr>Method<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#originauthenticationmethod">Origin<wbr>Authentication<wbr>Method<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for origin authentication. Similar to peers, these will be evaluated in order the first valid one will be used to set origin identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if origin authentication is not required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peers_nodejs" style="color: inherit; text-decoration: inherit;">peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peerauthenticationmethod">pulumi.<wbr>Input<pulumi.<wbr>Input<Peer<wbr>Authentication<wbr>Method<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#peerauthenticationmethod">Peer<wbr>Authentication<wbr>Method<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for peer authentication. They will be evaluated in order the first valid one will be used to set peer identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if peer authentication is not required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalbinding_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define whether peer or origin identity should be used for principal. Default value is USE_PEER. If peer (or origin) identity is not available, either because peer/origin authentication is not defined, or failed, principal will be left unset. In other words, binding rule does not affect the decision to accept or reject request. This field can be set to one of the following: USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal will be set to the identity from origin authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servertlscontext_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain server-side security certificates and identity information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1849,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originauthenticationmethod">Origin<wbr>Authentication<wbr>Method<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#originauthenticationmethod">Origin<wbr>Authentication<wbr>Method<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for origin authentication. Similar to peers, these will be evaluated in order the first valid one will be used to set origin identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if origin authentication is not required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peers_python" style="color: inherit; text-decoration: inherit;">peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peerauthenticationmethod">Peer<wbr>Authentication<wbr>Method<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#peerauthenticationmethod">Peer<wbr>Authentication<wbr>Method<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for peer authentication. They will be evaluated in order the first valid one will be used to set peer identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if peer authentication is not required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_binding_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define whether peer or origin identity should be used for principal. Default value is USE_PEER. If peer (or origin) identity is not available, either because peer/origin authentication is not defined, or failed, principal will be left unset. In other words, binding rule does not affect the decision to accept or reject request. This field can be set to one of the following: USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal will be set to the identity from origin authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_tls_context_python" style="color: inherit; text-decoration: inherit;">server_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain server-side security certificates and identity information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originauthenticationmethodresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Origin<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#originauthenticationmethodresponse">Origin<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for origin authentication. Similar to peers, these will be evaluated in order the first valid one will be used to set origin identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if origin authentication is not required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1967,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peers_nodejs" style="color: inherit; text-decoration: inherit;">peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peerauthenticationmethodresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Peer<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#peerauthenticationmethodresponse">Peer<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for peer authentication. They will be evaluated in order the first valid one will be used to set peer identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if peer authentication is not required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1975,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalbinding_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define whether peer or origin identity should be used for principal. Default value is USE_PEER. If peer (or origin) identity is not available, either because peer/origin authentication is not defined, or failed, principal will be left unset. In other words, binding rule does not affect the decision to accept or reject request. This field can be set to one of the following: USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal will be set to the identity from origin authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1983,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servertlscontext_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain server-side security certificates and identity information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originauthenticationmethodresponse">Origin<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#originauthenticationmethodresponse">Origin<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for origin authentication. Similar to peers, these will be evaluated in order the first valid one will be used to set origin identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if origin authentication is not required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2003,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peers_python" style="color: inherit; text-decoration: inherit;">peers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peerauthenticationmethodresponse">Peer<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#peerauthenticationmethodresponse">Peer<wbr>Authentication<wbr>Method<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of authentication methods that can be used for peer authentication. They will be evaluated in order the first valid one will be used to set peer identity. If none of these methods pass, the request will be rejected with authentication failed error (401). Leave the list empty if peer authentication is not required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2011,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_binding_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define whether peer or origin identity should be used for principal. Default value is USE_PEER. If peer (or origin) identity is not available, either because peer/origin authentication is not defined, or failed, principal will be left unset. In other words, binding rule does not affect the decision to accept or reject request. This field can be set to one of the following: USE_PEER: Principal will be set to the identity from peer authentication. USE_ORIGIN: Principal will be set to the identity from origin authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2019,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_tls_context_python" style="color: inherit; text-decoration: inherit;">server_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain server-side security certificates and identity information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2057,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbacpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Rbac<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rbacpolicy">Rbac<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of RbacPolicies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2069,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbacpolicy">Rbac<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rbacpolicy">Rbac<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of RbacPolicies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbacpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Rbac<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rbacpolicyresponse">Rbac<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of RbacPolicies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2119,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbacpolicyresponse">Rbac<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rbacpolicyresponse">Rbac<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of RbacPolicies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2448,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancingmode_nodejs" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2456,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
 
@@ -2413,7 +2468,7 @@ Not supported by:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2476,7 @@ Not supported by:
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2484,7 @@ Not supported by:
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type of backend that a backend service supports depends on the backend service's loadBalancingScheme.
 
@@ -2447,7 +2502,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE. Not supported by:
 
@@ -2457,7 +2512,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#maxconnectionsperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -2469,7 +2524,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#maxconnectionsperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -2481,7 +2536,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#maxrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2491,7 +2546,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxrateperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2501,7 +2556,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxrateperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2511,7 +2566,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxutilization_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2523,7 +2578,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2531,7 +2586,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
 
@@ -2543,7 +2598,7 @@ Not supported by:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,7 +2606,7 @@ Not supported by:
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2614,7 @@ Not supported by:
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type of backend that a backend service supports depends on the backend service's loadBalancingScheme.
 
@@ -2577,7 +2632,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE. Not supported by:
 
@@ -2587,7 +2642,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -2599,7 +2654,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -2611,7 +2666,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2621,7 +2676,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2631,7 +2686,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -2641,7 +2696,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2915,7 +2970,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancingmode_nodejs" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2923,7 +2978,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
 
@@ -2935,7 +2990,7 @@ Not supported by:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2943,7 +2998,7 @@ Not supported by:
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2951,7 +3006,7 @@ Not supported by:
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type of backend that a backend service supports depends on the backend service's loadBalancingScheme.
 
@@ -2969,7 +3024,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE. Not supported by:
 
@@ -2979,7 +3034,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#maxconnectionsperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -2991,7 +3046,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#maxconnectionsperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -3003,7 +3058,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#maxrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3013,7 +3068,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxrateperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3023,7 +3078,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxrateperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3033,7 +3088,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#maxutilization_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3045,7 +3100,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see  Connection balancing mode.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3053,7 +3108,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the backend's target capacity of its balancing mode. The default value is 1, which means the group serves up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one backend attached to the backend service.
 
@@ -3065,7 +3120,7 @@ Not supported by:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3073,7 +3128,7 @@ Not supported by:
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More than one failover backend can be configured for a given BackendService.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3081,7 +3136,7 @@ Not supported by:
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type of backend that a backend service supports depends on the backend service's loadBalancingScheme.
 
@@ -3099,7 +3154,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is RATE. Not supported by:
 
@@ -3109,7 +3164,7 @@ You must use the fully-qualified URL (starting with https://www.googleapis.com/)
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -3121,7 +3176,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a target maximum number of simultaneous connections. For usage guidelines, see Connection balancing mode and Utilization balancing mode.
 
@@ -3133,7 +3188,7 @@ Not available if the backend's balancingMode is RATE. Not supported by:
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3143,7 +3198,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3153,7 +3208,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate balancing mode and Utilization balancing mode.
 
@@ -3163,7 +3218,7 @@ Not available if the backend's balancingMode is CONNECTION.{{% /md %}}</dd><dt c
 <a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3389,7 +3444,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypasscacheonrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheader">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3452,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeypolicy">pulumi.<wbr>Input<Cache<wbr>Key<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachekeypolicy">Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3460,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -3419,7 +3474,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3482,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3435,7 +3490,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3443,7 +3498,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3451,7 +3506,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecachingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3514,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#requestcoalescing_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3522,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3530,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3538,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlkeynames_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Key<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3495,7 +3550,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypass_cache_on_request_headers_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheader">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheader">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3558,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeypolicy">Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachekeypolicy">Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3566,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -3525,7 +3580,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3588,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3596,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3604,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3557,7 +3612,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_policy_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3620,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#request_coalescing_python" style="color: inherit; text-decoration: inherit;">request_<wbr>coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3573,7 +3628,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3636,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3644,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_key_names_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>key_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3627,7 +3682,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3639,7 +3694,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3677,7 +3732,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3689,7 +3744,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3743,7 +3798,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3751,7 +3806,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3763,7 +3818,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3826,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3825,7 +3880,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3833,7 +3888,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3845,7 +3900,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3853,7 +3908,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4079,7 +4134,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypasscacheonrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4087,7 +4142,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeypolicyresponse">pulumi.<wbr>Input<Cache<wbr>Key<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachekeypolicyresponse">Cache<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4095,7 +4150,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -4109,7 +4164,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4117,7 +4172,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4125,7 +4180,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4133,7 +4188,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4141,7 +4196,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecachingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicyresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4149,7 +4204,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#requestcoalescing_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4157,7 +4212,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4165,7 +4220,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4173,7 +4228,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlkeynames_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Key<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4185,7 +4240,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypass_cache_on_request_headers_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4193,7 +4248,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeypolicyresponse">Cache<wbr>Key<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachekeypolicyresponse">Cache<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4201,7 +4256,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -4215,7 +4270,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4223,7 +4278,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4231,7 +4286,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4239,7 +4294,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4247,7 +4302,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_policy_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicyresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicyresponse">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4255,7 +4310,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#request_coalescing_python" style="color: inherit; text-decoration: inherit;">request_<wbr>coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4263,7 +4318,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4271,7 +4326,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4279,7 +4334,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_key_names_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>key_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4381,7 +4436,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connectionpersistenceonunhealthybackends_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4395,7 +4450,7 @@ If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backe
 <a href="#idletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds).
 
@@ -4409,7 +4464,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#trackingmode_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -4425,7 +4480,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connection_persistence_on_unhealthy_backends_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>persistence_<wbr>on_<wbr>unhealthy_<wbr>backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4439,7 +4494,7 @@ If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backe
 <a href="#idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds).
 
@@ -4453,7 +4508,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#tracking_mode_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -4559,7 +4614,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connectionpersistenceonunhealthybackends_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Persistence<wbr>On<wbr>Unhealthy<wbr>Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4573,7 +4628,7 @@ If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backe
 <a href="#idletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds).
 
@@ -4587,7 +4642,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#trackingmode_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -4603,7 +4658,7 @@ PER_SESSION: The Connection Tracking is performed as per the configured Session 
 <a href="#connection_persistence_on_unhealthy_backends_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>persistence_<wbr>on_<wbr>unhealthy_<wbr>backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL.
 
@@ -4617,7 +4672,7 @@ If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backe
 <a href="#idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds).
 
@@ -4631,7 +4686,7 @@ This field will be supported only if the Connection Tracking key is less than 5-
 <a href="#tracking_mode_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the key used for connection tracking. There are two options:
 
@@ -4709,7 +4764,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#disableconnectiondrainonfailover_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This can be set to true only if the protocol is TCP.
 
@@ -4719,7 +4774,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#droptrafficifunhealthy_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4727,7 +4782,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#failoverratio_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4739,7 +4794,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#disable_connection_drain_on_failover_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>connection_<wbr>drain_<wbr>on_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This can be set to true only if the protocol is TCP.
 
@@ -4749,7 +4804,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#drop_traffic_if_unhealthy_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>traffic_<wbr>if_<wbr>unhealthy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4757,7 +4812,7 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
 <a href="#failover_ratio_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4831,7 +4886,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#disableconnectiondrainonfailover_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This can be set to true only if the protocol is TCP.
 
@@ -4841,7 +4896,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#droptrafficifunhealthy_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. The default is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4849,7 +4904,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#failoverratio_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4861,7 +4916,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#disable_connection_drain_on_failover_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>connection_<wbr>drain_<wbr>on_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This can be set to true only if the protocol is TCP.
 
@@ -4871,7 +4926,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#drop_traffic_if_unhealthy_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>traffic_<wbr>if_<wbr>unhealthy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. The default is false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4879,7 +4934,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#failover_ratio_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4981,7 +5036,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4989,7 +5044,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4997,7 +5052,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientinfo_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiapoauth2clientinfo">pulumi.<wbr>Input<Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceiapoauth2clientinfo">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] OAuth client info required to generate client id to be used for IAP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5005,7 +5060,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5013,7 +5068,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] SHA256 hash value for the field oauth2_client_secret above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5025,7 +5080,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5033,7 +5088,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5041,7 +5096,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_info_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiapoauth2clientinfo">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceiapoauth2clientinfo">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] OAuth client info required to generate client id to be used for IAP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5049,7 +5104,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5057,7 +5112,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] SHA256 hash value for the field oauth2_client_secret above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5127,7 +5182,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name to be used in OAuth consent screen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5135,7 +5190,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#clientname_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the client to be generated. Optional - If not provided, the name will be autogenerated by the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5143,7 +5198,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#developeremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Developer's information to be used in OAuth consent screen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5155,7 +5210,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application name to be used in OAuth consent screen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5163,7 +5218,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#client_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the client to be generated. Optional - If not provided, the name will be autogenerated by the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5171,7 +5226,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#developer_email_address_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Developer's information to be used in OAuth consent screen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5241,7 +5296,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name to be used in OAuth consent screen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5249,7 +5304,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#clientname_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the client to be generated. Optional - If not provided, the name will be autogenerated by the backend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5257,7 +5312,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#developeremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Developer's information to be used in OAuth consent screen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5269,7 +5324,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application name to be used in OAuth consent screen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5277,7 +5332,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#client_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the client to be generated. Optional - If not provided, the name will be autogenerated by the backend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5285,7 +5340,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#developer_email_address_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Developer's information to be used in OAuth consent screen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5387,7 +5442,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5395,7 +5450,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5403,7 +5458,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientinfo_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiapoauth2clientinforesponse">pulumi.<wbr>Input<Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceiapoauth2clientinforesponse">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] OAuth client info required to generate client id to be used for IAP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5411,7 +5466,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5419,7 +5474,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] SHA256 hash value for the field oauth2_client_secret above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5431,7 +5486,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5439,7 +5494,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5447,7 +5502,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_info_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiapoauth2clientinforesponse">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceiapoauth2clientinforesponse">Backend<wbr>Service<wbr>IAPOAuth2Client<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Input Only] OAuth client info required to generate client id to be used for IAP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5455,7 +5510,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5463,7 +5518,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] SHA256 hash value for the field oauth2_client_secret above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5517,7 +5572,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for the load balancer traffic served by this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5525,7 +5580,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5537,7 +5592,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for the load balancer traffic served by this backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5545,7 +5600,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5599,7 +5654,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for the load balancer traffic served by this backend service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5607,7 +5662,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5619,7 +5674,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for the load balancer traffic served by this backend service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5627,7 +5682,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5729,7 +5784,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includehost_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, requests to different hosts will be cached separately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5737,7 +5792,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5800,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includequerystring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5753,7 +5808,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#querystringblacklist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5761,7 +5816,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#querystringwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5773,7 +5828,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, requests to different hosts will be cached separately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5781,7 +5836,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5789,7 +5844,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5797,7 +5852,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#query_string_blacklist_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5805,7 +5860,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#query_string_whitelist_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5907,7 +5962,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includehost_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, requests to different hosts will be cached separately.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5915,7 +5970,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5923,7 +5978,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#includequerystring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5931,7 +5986,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#querystringblacklist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5939,7 +5994,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#querystringwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5951,7 +6006,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, requests to different hosts will be cached separately.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5959,7 +6014,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5967,7 +6022,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5975,7 +6030,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#query_string_blacklist_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5983,7 +6038,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#query_string_whitelist_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6041,7 +6096,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#callcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -6051,7 +6106,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#fromplugin_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfromplugin">pulumi.<wbr>Input<Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6063,7 +6118,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#call_credential_type_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -6073,7 +6128,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#from_plugin_python" style="color: inherit; text-decoration: inherit;">from_<wbr>plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatacredentialsfromplugin">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6131,7 +6186,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#callcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -6141,7 +6196,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#fromplugin_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">pulumi.<wbr>Input<Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6153,7 +6208,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#call_credential_type_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following:  
 - GCE_VM: The local GCE VM service account credentials are used to access the SDS server.
@@ -6163,7 +6218,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#from_plugin_python" style="color: inherit; text-decoration: inherit;">from_<wbr>plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatacredentialsfrompluginresponse">Metadata<wbr>Credentials<wbr>From<wbr>Plugin<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6217,7 +6272,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6225,7 +6280,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channelcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6237,7 +6292,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6245,7 +6300,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channel_credential_type_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6299,7 +6354,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6307,7 +6362,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channelcredentialtype_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6319,7 +6374,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6327,7 +6382,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channel_credential_type_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6445,7 +6500,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6453,7 +6508,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6461,7 +6516,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6469,7 +6524,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6477,7 +6532,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxrequestsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6485,7 +6540,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6497,7 +6552,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6505,7 +6560,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6513,7 +6568,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6521,7 +6576,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6529,7 +6584,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6537,7 +6592,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6655,7 +6710,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6663,7 +6718,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6671,7 +6726,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6679,7 +6734,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6687,7 +6742,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxrequestsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6695,7 +6750,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6707,7 +6762,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6715,7 +6770,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6723,7 +6778,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6731,7 +6786,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6739,7 +6794,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6747,7 +6802,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6833,7 +6888,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#clienttlscontext_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain client-side security certificates and identity information. This field is only applicable when mode is set to MUTUAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6841,7 +6896,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections to this port should be secured using TLS. The value of this field determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends. MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6849,7 +6904,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sni_nodejs" style="color: inherit; text-decoration: inherit;">sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNI string to present to the server during TLS handshake. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6857,7 +6912,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate.If specified, the proxy will verify that the server certificate's subject alt name matches one of the specified values. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6869,7 +6924,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#client_tls_context_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontext">Tls<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain client-side security certificates and identity information. This field is only applicable when mode is set to MUTUAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6877,7 +6932,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections to this port should be secured using TLS. The value of this field determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends. MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6885,7 +6940,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sni_python" style="color: inherit; text-decoration: inherit;">sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNI string to present to the server during TLS handshake. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6893,7 +6948,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate.If specified, the proxy will verify that the server certificate's subject alt name matches one of the specified values. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6979,7 +7034,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#clienttlscontext_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">pulumi.<wbr>Input<Tls<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain client-side security certificates and identity information. This field is only applicable when mode is set to MUTUAL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6987,7 +7042,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections to this port should be secured using TLS. The value of this field determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends. MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates for authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6995,7 +7050,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sni_nodejs" style="color: inherit; text-decoration: inherit;">sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNI string to present to the server during TLS handshake. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7003,7 +7058,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate.If specified, the proxy will verify that the server certificate's subject alt name matches one of the specified values. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7015,7 +7070,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#client_tls_context_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscontextresponse">Tls<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the mechanism to obtain client-side security certificates and identity information. This field is only applicable when mode is set to MUTUAL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7023,7 +7078,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether connections to this port should be secured using TLS. The value of this field determines how TLS is enforced. This can be set to one of the following values: DISABLE: Do not setup a TLS connection to the backends. SIMPLE: Originate a TLS connection to the backends. MUTUAL: Secure connections to the backends using mutual TLS by presenting client certificates for authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7031,7 +7086,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#sni_python" style="color: inherit; text-decoration: inherit;">sni</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNI string to present to the server during TLS handshake. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7039,7 +7094,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternate names to verify the subject identity in the certificate.If specified, the proxy will verify that the server certificate's subject alt name matches one of the specified values. This field is applicable only when mode is SIMPLE or MUTUAL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7077,7 +7132,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#drainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7089,7 +7144,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7127,7 +7182,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#drainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7139,7 +7194,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7209,7 +7264,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookie">pulumi.<wbr>Input<Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Args></a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookie">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7217,7 +7272,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#httpheadername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7225,7 +7280,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#minimumringsize_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7237,7 +7292,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookie">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Args]</a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookie">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7245,7 +7300,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7253,7 +7308,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7323,7 +7378,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7331,7 +7386,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7339,7 +7394,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7351,7 +7406,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7359,7 +7414,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7367,7 +7422,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7437,7 +7492,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7445,7 +7500,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7453,7 +7508,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7465,7 +7520,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7473,7 +7528,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7481,7 +7536,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7551,7 +7606,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookieresponse">pulumi.<wbr>Input<Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookieresponse">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7559,7 +7614,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#httpheadername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7567,7 +7622,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#minimumringsize_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7579,7 +7634,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookieresponse">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#consistenthashloadbalancersettingshttpcookieresponse">Consistent<wbr>Hash<wbr>Load<wbr>Balancer<wbr>Settings<wbr>Http<wbr>Cookie<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7587,7 +7642,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7595,7 +7650,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7649,7 +7704,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7657,7 +7712,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7669,7 +7724,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7677,7 +7732,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7731,7 +7786,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7739,7 +7794,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7751,7 +7806,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7759,7 +7814,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7829,7 +7884,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#callcredentials_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentials">pulumi.<wbr>Input<Call<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7837,7 +7892,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channelcredentials_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentials">pulumi.<wbr>Input<Channel<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7845,7 +7900,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#targeturi_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7857,7 +7912,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#call_credentials_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#callcredentials">Call<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7865,7 +7920,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channel_credentials_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#channelcredentials">Channel<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7873,7 +7928,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#target_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7943,7 +7998,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#callcredentials_nodejs" style="color: inherit; text-decoration: inherit;">call<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentialsresponse">pulumi.<wbr>Input<Call<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7951,7 +8006,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channelcredentials_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentialsresponse">pulumi.<wbr>Input<Channel<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7959,7 +8014,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#targeturi_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7971,7 +8026,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#call_credentials_python" style="color: inherit; text-decoration: inherit;">call_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#callcredentialsresponse">Call<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The call credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7979,7 +8034,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#channel_credentials_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#channelcredentialsresponse">Channel<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The channel credentials to access the SDS server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7987,7 +8042,7 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 <a href="#target_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target URI of the SDS server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8109,7 +8164,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#audiences_nodejs" style="color: inherit; text-decoration: inherit;">audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A JWT containing any of these audiences will be accepted. The service name will be accepted if audiences is empty. Examples: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8117,7 +8172,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the issuer that issued the JWT, which is usually a URL or an email address. Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8125,7 +8180,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwkspublickeys_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider's public key set to validate the signature of the JWT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8133,7 +8188,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwtheaders_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Jwt<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jwtheader">Jwt<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit location is specified, the following default locations are tried in order:
 
@@ -8151,7 +8206,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwtparams_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This field is set if JWT is sent in a query parameter. This field specifies the query parameter name. For example, if jwt_params[0] is jwt_token, the JWT format in the query parameter is /path?jwt_token=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8163,7 +8218,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#audiences_python" style="color: inherit; text-decoration: inherit;">audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A JWT containing any of these audiences will be accepted. The service name will be accepted if audiences is empty. Examples: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8171,7 +8226,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the issuer that issued the JWT, which is usually a URL or an email address. Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8179,7 +8234,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwks_public_keys_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider's public key set to validate the signature of the JWT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8187,7 +8242,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_headers_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtheader">Jwt<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jwtheader">Jwt<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit location is specified, the following default locations are tried in order:
 
@@ -8205,7 +8260,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_params_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This field is set if JWT is sent in a query parameter. This field specifies the query parameter name. For example, if jwt_params[0] is jwt_token, the JWT format in the query parameter is /path?jwt_token=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8259,7 +8314,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8267,7 +8322,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value prefix. The value format is "value_prefix" For example, for "Authorization: Bearer ", value_prefix="Bearer " with a space at the end.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8279,7 +8334,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8287,7 +8342,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value prefix. The value format is "value_prefix" For example, for "Authorization: Bearer ", value_prefix="Bearer " with a space at the end.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8341,7 +8396,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP header name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8349,7 +8404,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value prefix. The value format is "value_prefix" For example, for "Authorization: Bearer ", value_prefix="Bearer " with a space at the end.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8361,7 +8416,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP header name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8369,7 +8424,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value prefix. The value format is "value_prefix" For example, for "Authorization: Bearer ", value_prefix="Bearer " with a space at the end.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8491,7 +8546,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#audiences_nodejs" style="color: inherit; text-decoration: inherit;">audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A JWT containing any of these audiences will be accepted. The service name will be accepted if audiences is empty. Examples: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8499,7 +8554,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the issuer that issued the JWT, which is usually a URL or an email address. Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8507,7 +8562,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwkspublickeys_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider's public key set to validate the signature of the JWT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8515,7 +8570,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwtheaders_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Jwt<wbr>Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jwtheaderresponse">Jwt<wbr>Header<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit location is specified, the following default locations are tried in order:
 
@@ -8533,7 +8588,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwtparams_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This field is set if JWT is sent in a query parameter. This field specifies the query parameter name. For example, if jwt_params[0] is jwt_token, the JWT format in the query parameter is /path?jwt_token=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8545,7 +8600,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#audiences_python" style="color: inherit; text-decoration: inherit;">audiences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A JWT containing any of these audiences will be accepted. The service name will be accepted if audiences is empty. Examples: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8553,7 +8608,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the issuer that issued the JWT, which is usually a URL or an email address. Examples: https://securetoken.google.com, 1234567-compute@developer.gserviceaccount.com{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8561,7 +8616,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwks_public_keys_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider's public key set to validate the signature of the JWT.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8569,7 +8624,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_headers_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtheaderresponse">Jwt<wbr>Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jwtheaderresponse">Jwt<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}jwt_headers and jwt_params define where to extract the JWT from an HTTP request. If no explicit location is specified, the following default locations are tried in order:
 
@@ -8587,7 +8642,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_params_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This field is set if JWT is sent in a query parameter. This field specifies the query parameter name. For example, if jwt_params[0] is jwt_token, the JWT format in the query parameter is /path?jwt_token=.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8641,7 +8696,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8649,7 +8704,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#structconfig_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8661,7 +8716,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8669,7 +8724,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#struct_config_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8723,7 +8778,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8731,7 +8786,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#structconfig_nodejs" style="color: inherit; text-decoration: inherit;">struct<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8743,7 +8798,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plugin name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8751,7 +8806,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#struct_config_python" style="color: inherit; text-decoration: inherit;">struct_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text proto that conforms to a Struct type definition interpreted by the plugin.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8789,7 +8844,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the server TLS is configured to be strict or permissive. This field can be set to one of the following: STRICT: Client certificate must be presented, connection is in TLS. PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8801,7 +8856,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the server TLS is configured to be strict or permissive. This field can be set to one of the following: STRICT: Client certificate must be presented, connection is in TLS. PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8839,7 +8894,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the server TLS is configured to be strict or permissive. This field can be set to one of the following: STRICT: Client certificate must be presented, connection is in TLS. PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8851,7 +8906,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the server TLS is configured to be strict or permissive. This field can be set to one of the following: STRICT: Client certificate must be presented, connection is in TLS. PERMISSIVE: Client certificate can be omitted, connection can be either plaintext or TLS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8889,7 +8944,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_nodejs" style="color: inherit; text-decoration: inherit;">jwt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwt">pulumi.<wbr>Input<Jwt<wbr>Args></a></span>
+        <span class="property-type"><a href="#jwt">Jwt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8901,7 +8956,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_python" style="color: inherit; text-decoration: inherit;">jwt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwt">Jwt<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jwt">Jwt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8939,7 +8994,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_nodejs" style="color: inherit; text-decoration: inherit;">jwt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtresponse">pulumi.<wbr>Input<Jwt<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jwtresponse">Jwt<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8951,7 +9006,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#jwt_python" style="color: inherit; text-decoration: inherit;">jwt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtresponse">Jwt<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jwtresponse">Jwt<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9149,7 +9204,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9157,7 +9212,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the backend host is accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9165,7 +9220,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9173,7 +9228,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingconsecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9181,7 +9236,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingconsecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9189,7 +9244,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingsuccessrate_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through success rate statistics. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9197,7 +9252,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9205,7 +9260,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#maxejectionpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9213,7 +9268,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successrateminimumhosts_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect success rate outliers. If the number of hosts is less than this setting, outlier detection via success rate statistics is not performed for any host in the cluster. Defaults to 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9221,7 +9276,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successraterequestvolume_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as defined by the interval duration above) to include this host in success rate based outlier detection. If the volume is lower than this setting, outlier detection via success rate statistics is not performed for that host. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9229,7 +9284,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successratestdevfactor_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9241,7 +9296,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9249,7 +9304,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the backend host is accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9257,7 +9312,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9265,7 +9320,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9273,7 +9328,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9281,7 +9336,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through success rate statistics. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9289,7 +9344,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9297,7 +9352,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9305,7 +9360,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect success rate outliers. If the number of hosts is less than this setting, outlier detection via success rate statistics is not performed for any host in the cluster. Defaults to 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9313,7 +9368,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as defined by the interval duration above) to include this host in success rate based outlier detection. If the volume is lower than this setting, outlier detection via success rate statistics is not performed for that host. Defaults to 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9321,7 +9376,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9519,7 +9574,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9527,7 +9582,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the backend host is accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9535,7 +9590,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9543,7 +9598,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingconsecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9551,7 +9606,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingconsecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9559,7 +9614,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcingsuccessrate_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through success rate statistics. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9567,7 +9622,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9575,7 +9630,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#maxejectionpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9583,7 +9638,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successrateminimumhosts_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect success rate outliers. If the number of hosts is less than this setting, outlier detection via success rate statistics is not performed for any host in the cluster. Defaults to 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9591,7 +9646,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successraterequestvolume_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as defined by the interval duration above) to include this host in success rate based outlier detection. If the volume is lower than this setting, outlier detection via success rate statistics is not performed for that host. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9599,7 +9654,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#successratestdevfactor_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9611,7 +9666,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9619,7 +9674,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the backend host is accessed over HTTP, a 5xx return code qualifies as an error. Defaults to 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9627,7 +9682,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection errors that are mapped to one of those status codes) before a consecutive gateway failure ejection occurs. Defaults to 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9635,7 +9690,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive 5xx. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9643,7 +9698,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through consecutive gateway failures. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9651,7 +9706,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier status is detected through success rate statistics. This setting can be used to disable ejection or to ramp it up slowly. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9659,7 +9714,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection analysis sweeps. This can result in both new ejections as well as hosts being returned to service. Defaults to 1 second.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9667,7 +9722,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service that can be ejected. Defaults to 50%.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9675,7 +9730,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect success rate outliers. If the number of hosts is less than this setting, outlier detection via success rate statistics is not performed for any host in the cluster. Defaults to 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9683,7 +9738,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as defined by the interval duration above) to include this host in success rate based outlier detection. If the volume is lower than this setting, outlier detection via success rate statistics is not performed for that host. Defaults to 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9691,7 +9746,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier ejection. The ejection threshold is the difference between the mean success rate, and the product of this factor and the standard deviation of the mean success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided by a thousand to get a double. That is, if the desired factor is 1.9, the runtime value should be 1900. Defaults to 1900.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9729,7 +9784,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mtls_nodejs" style="color: inherit; text-decoration: inherit;">mtls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutualtls">pulumi.<wbr>Input<Mutual<wbr>Tls<wbr>Args></a></span>
+        <span class="property-type"><a href="#mutualtls">Mutual<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set if mTLS is used for peer authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9741,7 +9796,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mtls_python" style="color: inherit; text-decoration: inherit;">mtls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutualtls">Mutual<wbr>Tls<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mutualtls">Mutual<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set if mTLS is used for peer authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9779,7 +9834,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mtls_nodejs" style="color: inherit; text-decoration: inherit;">mtls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutualtlsresponse">pulumi.<wbr>Input<Mutual<wbr>Tls<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#mutualtlsresponse">Mutual<wbr>Tls<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set if mTLS is used for peer authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9791,7 +9846,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#mtls_python" style="color: inherit; text-decoration: inherit;">mtls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutualtlsresponse">Mutual<wbr>Tls<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mutualtlsresponse">Mutual<wbr>Tls<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set if mTLS is used for peer authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9957,7 +10012,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionconstraint">pulumi.<wbr>Input<pulumi.<wbr>Input<Permission<wbr>Constraint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#permissionconstraint">Permission<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Extra custom constraints. The constraints are ANDed together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9965,7 +10020,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Used in Ingress or Egress Gateway cases to specify hosts that the policy applies to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9973,7 +10028,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HTTP method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9981,7 +10036,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#nothosts_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of hosts. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9989,7 +10044,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notmethods_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of methods. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9997,7 +10052,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notpaths_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of paths. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10005,7 +10060,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notports_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of ports. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10013,7 +10068,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HTTP request paths or gRPC methods. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10021,7 +10076,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Port names or numbers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10033,7 +10088,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionconstraint">Permission<wbr>Constraint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#permissionconstraint">Permission<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extra custom constraints. The constraints are ANDed together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10041,7 +10096,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Used in Ingress or Egress Gateway cases to specify hosts that the policy applies to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10049,7 +10104,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10057,7 +10112,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_hosts_python" style="color: inherit; text-decoration: inherit;">not_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of hosts. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10065,7 +10120,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_methods_python" style="color: inherit; text-decoration: inherit;">not_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of methods. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10073,7 +10128,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_paths_python" style="color: inherit; text-decoration: inherit;">not_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of paths. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10081,7 +10136,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_ports_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of ports. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10089,7 +10144,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HTTP request paths or gRPC methods. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10097,7 +10152,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Port names or numbers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10151,7 +10206,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the constraint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10159,7 +10214,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10171,7 +10226,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the constraint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10179,7 +10234,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10233,7 +10288,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the constraint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10241,7 +10296,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10253,7 +10308,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the constraint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10261,7 +10316,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of allowed values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10427,7 +10482,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionconstraintresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Permission<wbr>Constraint<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#permissionconstraintresponse">Permission<wbr>Constraint<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Extra custom constraints. The constraints are ANDed together.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10435,7 +10490,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Used in Ingress or Egress Gateway cases to specify hosts that the policy applies to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10443,7 +10498,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HTTP method.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10451,7 +10506,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#nothosts_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of hosts. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10459,7 +10514,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notmethods_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of methods. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10467,7 +10522,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notpaths_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of paths. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10475,7 +10530,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notports_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of ports. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10483,7 +10538,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HTTP request paths or gRPC methods. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10491,7 +10546,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Port names or numbers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10503,7 +10558,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionconstraintresponse">Permission<wbr>Constraint<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#permissionconstraintresponse">Permission<wbr>Constraint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extra custom constraints. The constraints are ANDed together.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10511,7 +10566,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Used in Ingress or Egress Gateway cases to specify hosts that the policy applies to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10519,7 +10574,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10527,7 +10582,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_hosts_python" style="color: inherit; text-decoration: inherit;">not_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of hosts. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10535,7 +10590,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_methods_python" style="color: inherit; text-decoration: inherit;">not_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of methods. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10543,7 +10598,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_paths_python" style="color: inherit; text-decoration: inherit;">not_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of paths. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10551,7 +10606,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_ports_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of ports. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10559,7 +10614,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HTTP request paths or gRPC methods. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10567,7 +10622,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Port names or numbers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10749,7 +10804,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An expression to specify custom condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10757,7 +10812,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The groups the principal belongs to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10765,7 +10820,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address or range (In CIDR format){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10773,7 +10828,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The namespaces. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10781,7 +10836,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notgroups_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of groups. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10789,7 +10844,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notips_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of IPs. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10797,7 +10852,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of namespaces. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10805,7 +10860,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notusers_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of users. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10813,7 +10868,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10821,7 +10876,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The user names/IDs or service accounts. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10833,7 +10888,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An expression to specify custom condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10841,7 +10896,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The groups the principal belongs to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10849,7 +10904,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address or range (In CIDR format){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10857,7 +10912,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The namespaces. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10865,7 +10920,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_groups_python" style="color: inherit; text-decoration: inherit;">not_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of groups. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10873,7 +10928,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_ips_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of IPs. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10881,7 +10936,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_namespaces_python" style="color: inherit; text-decoration: inherit;">not_<wbr>namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of namespaces. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10889,7 +10944,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_users_python" style="color: inherit; text-decoration: inherit;">not_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of users. Specifies exclusions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10897,7 +10952,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed together.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10905,7 +10960,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The user names/IDs or service accounts. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11087,7 +11142,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An expression to specify custom condition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11095,7 +11150,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The groups the principal belongs to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11103,7 +11158,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address or range (In CIDR format){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11111,7 +11166,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The namespaces. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11119,7 +11174,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notgroups_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of groups. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11127,7 +11182,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notips_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of IPs. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11135,7 +11190,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of namespaces. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11143,7 +11198,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#notusers_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Negate of users. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11151,7 +11206,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed together.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11159,7 +11214,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The user names/IDs or service accounts. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11171,7 +11226,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An expression to specify custom condition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11179,7 +11234,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The groups the principal belongs to. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11187,7 +11242,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address or range (In CIDR format){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11195,7 +11250,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The namespaces. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11203,7 +11258,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_groups_python" style="color: inherit; text-decoration: inherit;">not_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of groups. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11211,7 +11266,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_ips_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of IPs. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11219,7 +11274,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_namespaces_python" style="color: inherit; text-decoration: inherit;">not_<wbr>namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of namespaces. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11227,7 +11282,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#not_users_python" style="color: inherit; text-decoration: inherit;">not_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Negate of users. Specifies exclusions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11235,7 +11290,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Istio attribute to expected values. Exact match, prefix match, and suffix match are supported for values. For example, `request.headers[version]: "v1"`. The properties are ANDed together.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11243,7 +11298,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The user names/IDs or service accounts. Exact match, prefix match, and suffix match are supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11313,7 +11368,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RbacPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11321,7 +11376,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">pulumi.<wbr>Input<pulumi.<wbr>Input<Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#permission">Permission<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11329,7 +11384,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principal">pulumi.<wbr>Input<pulumi.<wbr>Input<Principal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#principal">Principal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11341,7 +11396,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the RbacPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11349,7 +11404,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#permission">Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11357,7 +11412,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principal">Principal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#principal">Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11427,7 +11482,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RbacPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11435,7 +11490,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Permission<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#permissionresponse">Permission<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of permissions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11443,7 +11498,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Principal<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11455,7 +11510,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the RbacPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11463,7 +11518,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionresponse">Permission<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#permissionresponse">Permission<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of permissions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11471,7 +11526,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11509,7 +11564,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#grpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfig">pulumi.<wbr>Input<Grpc<wbr>Service<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11521,7 +11576,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#grpc_service_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grpcserviceconfig">Grpc<wbr>Service<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11559,7 +11614,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#grpcserviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfigresponse">pulumi.<wbr>Input<Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11571,7 +11626,7 @@ This field is set if JWT is sent in a request header. This field specifies the h
 <a href="#grpc_service_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grpcserviceconfigresponse">Grpc<wbr>Service<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration to access the SDS server over GRPC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11701,7 +11756,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11709,7 +11764,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authenticationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationpolicy">pulumi.<wbr>Input<Authentication<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#authenticationpolicy">Authentication<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11717,7 +11772,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationconfig">pulumi.<wbr>Input<Authorization<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#authorizationconfig">Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11725,7 +11780,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.
 clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
@@ -11736,7 +11791,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
 <a href="#clienttlssettings_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clienttlssettings">pulumi.<wbr>Input<Client<wbr>Tls<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#clienttlssettings">Client<wbr>Tls<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] TLS Settings for the backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11744,7 +11799,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.
 Note that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.
@@ -11759,7 +11814,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11767,7 +11822,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_policy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationpolicy">Authentication<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authenticationpolicy">Authentication<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11775,7 +11830,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationconfig">Authorization<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationconfig">Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11783,7 +11838,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.
 clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
@@ -11794,7 +11849,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
 <a href="#client_tls_settings_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clienttlssettings">Client<wbr>Tls<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clienttlssettings">Client<wbr>Tls<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] TLS Settings for the backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11802,7 +11857,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.
 Note that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.
@@ -11935,7 +11990,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11943,7 +11998,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authenticationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationpolicyresponse">pulumi.<wbr>Input<Authentication<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#authenticationpolicyresponse">Authentication<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11951,7 +12006,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authorizationconfig_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationconfigresponse">pulumi.<wbr>Input<Authorization<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#authorizationconfigresponse">Authorization<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11959,7 +12014,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.
 clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
@@ -11970,7 +12025,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-req
 <a href="#clienttlssettings_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clienttlssettingsresponse">pulumi.<wbr>Input<Client<wbr>Tls<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#clienttlssettingsresponse">Client<wbr>Tls<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] TLS Settings for the backend service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11978,7 +12033,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-req
 <a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.
 Note that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.
@@ -11993,7 +12048,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12001,7 +12056,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authentication_policy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationpolicyresponse">Authentication<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authenticationpolicyresponse">Authentication<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authentication policy defines what authentication methods can be accepted on backends, and if authenticated, which method/certificate will set the request principal. request principal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12009,7 +12064,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationconfigresponse">Authorization<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationconfigresponse">Authorization<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] Authorization config defines the Role Based Access Control (RBAC) config. Authorization config defines the Role Based Access Control (RBAC) config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12017,7 +12072,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.
 clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
@@ -12028,7 +12083,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-req
 <a href="#client_tls_settings_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clienttlssettingsresponse">Client<wbr>Tls<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clienttlssettingsresponse">Client<wbr>Tls<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Deprecated] TLS Settings for the backend service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12036,7 +12091,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-req
 <a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.
 Note that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.
@@ -12077,7 +12132,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12089,7 +12144,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12127,7 +12182,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12139,7 +12194,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12209,7 +12264,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepaths_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12217,7 +12272,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12225,7 +12280,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12237,7 +12292,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_paths_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepaths">Tls<wbr>Certificate<wbr>Paths<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12245,7 +12300,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12253,7 +12308,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12323,7 +12378,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepaths_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12331,7 +12386,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12339,7 +12394,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12351,7 +12406,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_paths_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepathsresponse">Tls<wbr>Certificate<wbr>Paths<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12359,7 +12414,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12367,7 +12422,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12421,7 +12476,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12429,7 +12484,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#privatekeypath_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12441,7 +12496,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12449,7 +12504,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12503,7 +12558,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12511,7 +12566,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#privatekeypath_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12523,7 +12578,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server TLS certificate to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12531,7 +12586,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the client or server private key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12585,7 +12640,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatecontext_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontext">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12593,7 +12648,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validationcontext_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontext">pulumi.<wbr>Input<Tls<wbr>Validation<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12605,7 +12660,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_context_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatecontext">Tls<wbr>Certificate<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12613,7 +12668,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validation_context_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlsvalidationcontext">Tls<wbr>Validation<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12667,7 +12722,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatecontext_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontextresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12675,7 +12730,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validationcontext_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontextresponse">pulumi.<wbr>Input<Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12687,7 +12742,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_context_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatecontextresponse">Tls<wbr>Certificate<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12695,7 +12750,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validation_context_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlsvalidationcontextresponse">Tls<wbr>Validation<wbr>Context<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12765,7 +12820,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12773,7 +12828,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12781,7 +12836,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validationsource_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12793,7 +12848,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12801,7 +12856,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfig">Sds<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12809,7 +12864,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validation_source_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12879,7 +12934,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificatepath_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12887,7 +12942,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sdsconfig_nodejs" style="color: inherit; text-decoration: inherit;">sds<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">pulumi.<wbr>Input<Sds<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12895,7 +12950,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validationsource_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12907,7 +12962,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#certificate_path_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the file holding the CA certificate to validate the client or server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12915,7 +12970,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#sds_config_python" style="color: inherit; text-decoration: inherit;">sds_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sdsconfigresponse">Sds<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12923,7 +12978,7 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 <a href="#validation_source_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines how TLS certificates are obtained.{{% /md %}}</dd></dl>
 {{% /choosable %}}

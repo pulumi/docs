@@ -20,19 +20,34 @@ Creates a TargetServer in the specified environment.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">s_sl_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1TlsInfoArgs]]</span> = None<span class="p">, </span><span class="nx">targetservers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                        <span class="nx">s_sl_info</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1TlsInfoArgs]</span> = None<span class="p">,</span>
+                                        <span class="nx">targetservers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationEnvironmentTargetserver</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationEnvironmentTargetserver</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationEnvironmentTargetserver</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a TargetServer in the specified environment.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationEnvironmentTargetserverArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#environmentsid_nodejs" style="color: inherit; text-decoration: inherit;">environments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#targetserversid_nodejs" style="color: inherit; text-decoration: inherit;">targetservers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description of this TargetServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The host name this target connects to. Value must be a valid hostname as described by RFC-1123.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource id of this target server. Values must match the regular expression {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#sslinfo_nodejs" style="color: inherit; text-decoration: inherit;">s<wbr>SLInfo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfo">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfo">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#environments_id_python" style="color: inherit; text-decoration: inherit;">environments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#targetservers_id_python" style="color: inherit; text-decoration: inherit;">targetservers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description of this TargetServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The host name this target connects to. Value must be a valid hostname as described by RFC-1123.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource id of this target server. Values must match the regular expression {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The OrganizationEnvironmentTargetserver resource accepts the following [input]({
 <a href="#s_sl_info_python" style="color: inherit; text-decoration: inherit;">s_<wbr>sl_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfo">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfo">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -693,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Enables two-way TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonname">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonname">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS Common Name of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Enables TLS. If false, neither one-way nor two-way TLS will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorevalidationerrors_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyalias_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The TLS versioins to be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the truststore. References not yet supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_auth_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Enables two-way TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonname">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonname">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS Common Name of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Enables TLS. If false, neither one-way nor two-way TLS will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_validation_errors_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_alias_python" style="color: inherit; text-decoration: inherit;">key_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_store_python" style="color: inherit; text-decoration: inherit;">key_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The TLS versioins to be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_store_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the truststore. References not yet supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TLS Common Name string of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wildcardmatch_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the cert should be matched against as a wildcard cert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TLS Common Name string of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wildcard_match_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the cert should be matched against as a wildcard cert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TLS Common Name string of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -977,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wildcardmatch_nodejs" style="color: inherit; text-decoration: inherit;">wildcard<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the cert should be matched against as a wildcard cert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TLS Common Name string of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -997,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wildcard_match_python" style="color: inherit; text-decoration: inherit;">wildcard_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the cert should be matched against as a wildcard cert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Enables two-way TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonnameresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonnameresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS Common Name of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Enables TLS. If false, neither one-way nor two-way TLS will be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorevalidationerrors_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyalias_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keystore_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The TLS versioins to be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#truststore_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the truststore. References not yet supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1247,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_auth_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Enables two-way TLS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonnameresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1tlsinfocommonnameresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Tls<wbr>Info<wbr>Common<wbr>Name<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS Common Name of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Enables TLS. If false, neither one-way nor two-way TLS will be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_validation_errors_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_alias_python" style="color: inherit; text-decoration: inherit;">key_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_store_python" style="color: inherit; text-decoration: inherit;">key_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if `client_auth_enabled` is true. The resource ID of the keystore. References not yet supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The TLS versioins to be used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_store_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the truststore. References not yet supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}

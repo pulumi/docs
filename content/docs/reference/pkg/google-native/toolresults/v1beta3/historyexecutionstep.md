@@ -20,19 +20,43 @@ Creates a Step. The returned Step will have the id set. May return any of the fo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">completion_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.TimestampArgs]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.TimestampArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">device_usage_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.DurationArgs]]</span> = None<span class="p">, </span><span class="nx">dimension_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_toolresults_v1beta3.StepDimensionValueEntryArgs]]]]</span> = None<span class="p">, </span><span class="nx">execution_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">has_images</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">history_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_toolresults_v1beta3.StepLabelsEntryArgs]]]]</span> = None<span class="p">, </span><span class="nx">multi_step</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.MultiStepArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">outcome</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.OutcomeArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">run_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.DurationArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">test_execution_step</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.TestExecutionStepArgs]]</span> = None<span class="p">, </span><span class="nx">tool_execution_step</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_toolresults_v1beta3.ToolExecutionStepArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">completion_time</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.TimestampArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.TimestampArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">device_usage_duration</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.DurationArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">dimension_value</span><span class="p">:</span> <span class="nx">Optional[Sequence[_toolresults_v1beta3.StepDimensionValueEntryArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">execution_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">has_images</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                         <span class="nx">history_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[_toolresults_v1beta3.StepLabelsEntryArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">multi_step</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.MultiStepArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">outcome</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.OutcomeArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">run_duration</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.DurationArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">step_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">test_execution_step</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.TestExecutionStepArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">tool_execution_step</span><span class="p">:</span> <span class="nx">Optional[_toolresults_v1beta3.ToolExecutionStepArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHistoryExecutionStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HistoryExecutionStep</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHistoryExecutionStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HistoryExecutionStep</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HistoryExecutionStep</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HistoryExecutionStepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +91,32 @@ Creates a Step. The returned Step will have the id set. May return any of the fo
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HistoryExecutionStepArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +500,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#executionid_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +508,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#historyid_nodejs" style="color: inherit; text-decoration: inherit;">history<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -482,7 +516,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +524,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier within a Execution for this Step. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +532,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#completiontime_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">pulumi.<wbr>Input<Timestamp<wbr>Args></a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time when the step status was set to complete. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +540,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">pulumi.<wbr>Input<Timestamp<wbr>Args></a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time when the step was created. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +548,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this tool For example: mvn clean package -D skipTests=true - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +556,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#deviceusageduration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Usage<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How much the device resource is used to perform the test. This is the device usage used for billing purpose, which is different from the run_duration, for example, infrastructure failure won't be charged for device usage. PRECONDITION_FAILED will be returned if one attempts to set a device_usage on a step which already has this field set. - In response: present if previously set. - In create request: optional - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +564,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#dimensionvalue_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepdimensionvalueentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Step<wbr>Dimension<wbr>Value<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stepdimensionvalueentry">Step<wbr>Dimension<wbr>Value<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}If the execution containing this step has any dimension_definition set, then this field allows the child to specify the values of the dimensions. The keys must exactly match the dimension_definition of the execution. For example, if the execution has `dimension_definition = ['attempt', 'device']` then a step must define values for those dimensions, eg. `dimension_value = ['attempt': '1', 'device': 'Nexus 6']` If a step does not participate in one dimension of the matrix, the value for that dimension should be empty string. For example, if one of the tests is executed by a runner which does not support retries, the step could have `dimension_value = ['attempt': '', 'device': 'Nexus 6']` If the step does not participate in any dimensions of the matrix, it may leave dimension_value unset. A PRECONDITION_FAILED will be returned if any of the keys do not exist in the dimension_definition of the execution. A PRECONDITION_FAILED will be returned if another step in this execution already has the same name and dimension_value, but differs on other data fields, for example, step field is different. A PRECONDITION_FAILED will be returned if dimension_value is set, and there is a dimension_definition in the execution which is not specified as one of the keys. - In response: present if set by create - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +572,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#hasimages_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether any of the outputs of this step are images whose thumbnails can be fetched with ListThumbnails. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +580,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#steplabelsentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Step<wbr>Labels<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#steplabelsentry">Step<wbr>Labels<wbr>Entry<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Arbitrary user-supplied key/value pairs that are associated with the step. Users are responsible for managing the key namespace such that keys don't accidentally collide. An INVALID_ARGUMENT will be returned if the number of labels exceeds 100 or if the length of any of the keys or values exceeds 100 characters. - In response: always set - In create request: optional - In update request: optional; any new key/value pair will be added to the map, and any new value for an existing key will update that key's value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +588,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#multistep_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multistep">pulumi.<wbr>Input<Multi<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#multistep">Multi<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details when multiple steps are run with the same configuration as a group. These details can be used identify which group this step is part of. It also identifies the groups 'primary step' which indexes all the group members. - In response: present if previously set. - In create request: optional, set iff this step was performed more than once. - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +596,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short human-readable name to display in the UI. Maximum of 100 characters. For example: Clean build A PRECONDITION_FAILED will be returned upon creating a new step if it shares its name and dimension_value with an existing step. If two steps represent a similar action, but have different dimension values, they should share the same name. For instance, if the same set of tests is run on two different platforms, the two steps should have the same name. - In response: always set - In create request: always set - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +604,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#outcome_nodejs" style="color: inherit; text-decoration: inherit;">outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outcome">pulumi.<wbr>Input<Outcome<wbr>Args></a></span>
+        <span class="property-type"><a href="#outcome">Outcome<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Classification of the result, for example into SUCCESS or FAILURE - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +612,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#runduration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run. If unset, this is set to the difference between creation_time and completion_time when the step is set to the COMPLETE state. In some cases, it is appropriate to set this value separately: For instance, if a step is created, but the operation it represents is queued for a few minutes before it executes, it would be appropriate not to include the time spent queued in its run_duration. PRECONDITION_FAILED will be returned if one attempts to set a run_duration on a step which already has this field set. - In response: present if previously set; always present on COMPLETE step - In create request: optional - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +620,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +628,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#testexecutionstep_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Execution<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testexecutionstep">pulumi.<wbr>Input<Test<wbr>Execution<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#testexecutionstep">Test<wbr>Execution<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An execution of a test runner.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +636,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#toolexecutionstep_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Execution<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionstep">pulumi.<wbr>Input<Tool<wbr>Execution<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexecutionstep">Tool<wbr>Execution<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An execution of a tool (used for steps we don't explicitly support).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +648,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#execution_id_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +656,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#history_id_python" style="color: inherit; text-decoration: inherit;">history_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -630,7 +664,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -638,7 +672,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier within a Execution for this Step. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +680,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#completion_time_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time when the step status was set to complete. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +688,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time when the step was created. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +696,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this tool For example: mvn clean package -D skipTests=true - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +704,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#device_usage_duration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>usage_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How much the device resource is used to perform the test. This is the device usage used for billing purpose, which is different from the run_duration, for example, infrastructure failure won't be charged for device usage. PRECONDITION_FAILED will be returned if one attempts to set a device_usage on a step which already has this field set. - In response: present if previously set. - In create request: optional - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +712,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#dimension_value_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepdimensionvalueentry">Step<wbr>Dimension<wbr>Value<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stepdimensionvalueentry">Step<wbr>Dimension<wbr>Value<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the execution containing this step has any dimension_definition set, then this field allows the child to specify the values of the dimensions. The keys must exactly match the dimension_definition of the execution. For example, if the execution has `dimension_definition = ['attempt', 'device']` then a step must define values for those dimensions, eg. `dimension_value = ['attempt': '1', 'device': 'Nexus 6']` If a step does not participate in one dimension of the matrix, the value for that dimension should be empty string. For example, if one of the tests is executed by a runner which does not support retries, the step could have `dimension_value = ['attempt': '', 'device': 'Nexus 6']` If the step does not participate in any dimensions of the matrix, it may leave dimension_value unset. A PRECONDITION_FAILED will be returned if any of the keys do not exist in the dimension_definition of the execution. A PRECONDITION_FAILED will be returned if another step in this execution already has the same name and dimension_value, but differs on other data fields, for example, step field is different. A PRECONDITION_FAILED will be returned if dimension_value is set, and there is a dimension_definition in the execution which is not specified as one of the keys. - In response: present if set by create - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +720,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#has_images_python" style="color: inherit; text-decoration: inherit;">has_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether any of the outputs of this step are images whose thumbnails can be fetched with ListThumbnails. - In response: always set - In create/update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +728,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#steplabelsentry">Step<wbr>Labels<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#steplabelsentry">Step<wbr>Labels<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Arbitrary user-supplied key/value pairs that are associated with the step. Users are responsible for managing the key namespace such that keys don't accidentally collide. An INVALID_ARGUMENT will be returned if the number of labels exceeds 100 or if the length of any of the keys or values exceeds 100 characters. - In response: always set - In create request: optional - In update request: optional; any new key/value pair will be added to the map, and any new value for an existing key will update that key's value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +736,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#multi_step_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multistep">Multi<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multistep">Multi<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details when multiple steps are run with the same configuration as a group. These details can be used identify which group this step is part of. It also identifies the groups 'primary step' which indexes all the group members. - In response: present if previously set. - In create request: optional, set iff this step was performed more than once. - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +744,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short human-readable name to display in the UI. Maximum of 100 characters. For example: Clean build A PRECONDITION_FAILED will be returned upon creating a new step if it shares its name and dimension_value with an existing step. If two steps represent a similar action, but have different dimension values, they should share the same name. For instance, if the same set of tests is run on two different platforms, the two steps should have the same name. - In response: always set - In create request: always set - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +752,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#outcome_python" style="color: inherit; text-decoration: inherit;">outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outcome">Outcome<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outcome">Outcome<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Classification of the result, for example into SUCCESS or FAILURE - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +760,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#run_duration_python" style="color: inherit; text-decoration: inherit;">run_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run. If unset, this is set to the difference between creation_time and completion_time when the step is set to the COMPLETE state. In some cases, it is appropriate to set this value separately: For instance, if a step is created, but the operation it represents is queued for a few minutes before it executes, it would be appropriate not to include the time spent queued in its run_duration. PRECONDITION_FAILED will be returned if one attempts to set a run_duration on a step which already has this field set. - In response: present if previously set; always present on COMPLETE step - In create request: optional - In update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +768,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +776,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#test_execution_step_python" style="color: inherit; text-decoration: inherit;">test_<wbr>execution_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testexecutionstep">Test<wbr>Execution<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testexecutionstep">Test<wbr>Execution<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An execution of a test runner.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +784,7 @@ The HistoryExecutionStep resource accepts the following [input]({{< relref "/doc
 <a href="#tool_execution_step_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>execution_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionstep">Tool<wbr>Execution<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexecutionstep">Tool<wbr>Execution<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An execution of a tool (used for steps we don't explicitly support).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typeurl_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be a valid serialized protocol buffer of the above specified type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_url_python" style="color: inherit; text-decoration: inherit;">type_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be a valid serialized protocol buffer of the above specified type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typeurl_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be a valid serialized protocol buffer of the above specified type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_url_python" style="color: inherit; text-decoration: inherit;">type_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be a valid serialized protocol buffer of the above specified type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Signed fractions of a second at nanosecond resolution of the span of time. Durations less than one second are represented with a 0 `seconds` field and a positive or negative `nanos` field. For durations of one second or more, a non-zero value for the `nanos` field must be of the same sign as the `seconds` field. Must be from -999,999,999 to +999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Signed fractions of a second at nanosecond resolution of the span of time. Durations less than one second are represented with a 0 `seconds` field and a positive or negative `nanos` field. For durations of one second or more, a non-zero value for the `nanos` field must be of the same sign as the `seconds` field. Must be from -999,999,999 to +999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Signed fractions of a second at nanosecond resolution of the span of time. Durations less than one second are represented with a 0 `seconds` field and a positive or negative `nanos` field. For durations of one second or more, a non-zero value for the `nanos` field must be of the same sign as the `seconds` field. Must be from -999,999,999 to +999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Signed fractions of a second at nanosecond resolution of the span of time. Durations less than one second are represented with a 0 `seconds` field and a positive or negative `nanos` field. For durations of one second or more, a non-zero value for the `nanos` field must be of the same sign as the `seconds` field. Must be from -999,999,999 to +999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signed seconds of the span of time. Must be from -315,576,000,000 to +315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashed_nodejs" style="color: inherit; text-decoration: inherit;">crashed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the failure was severe because the system (app) under test crashed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deviceoutofmemory_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Out<wbr>Of<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the device ran out of memory during a test, causing the test to crash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failedroboscript_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Roboscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notinstalled_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Installed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#othernativecrash_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Native<wbr>Crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a native process (including any other than the app) crashed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timedout_nodejs" style="color: inherit; text-decoration: inherit;">timed<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the test overran some time limit, and that is why it failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unabletocrawl_nodejs" style="color: inherit; text-decoration: inherit;">unable<wbr>To<wbr>Crawl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the robo was unable to crawl the app; perhaps because the app did not start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1337,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashed_python" style="color: inherit; text-decoration: inherit;">crashed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the failure was severe because the system (app) under test crashed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_out_of_memory_python" style="color: inherit; text-decoration: inherit;">device_<wbr>out_<wbr>of_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the device ran out of memory during a test, causing the test to crash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_roboscript_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>roboscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_installed_python" style="color: inherit; text-decoration: inherit;">not_<wbr>installed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#other_native_crash_python" style="color: inherit; text-decoration: inherit;">other_<wbr>native_<wbr>crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a native process (including any other than the app) crashed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timed_out_python" style="color: inherit; text-decoration: inherit;">timed_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the test overran some time limit, and that is why it failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unable_to_crawl_python" style="color: inherit; text-decoration: inherit;">unable_<wbr>to_<wbr>crawl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the robo was unable to crawl the app; perhaps because the app did not start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashed_nodejs" style="color: inherit; text-decoration: inherit;">crashed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the failure was severe because the system (app) under test crashed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deviceoutofmemory_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Out<wbr>Of<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the device ran out of memory during a test, causing the test to crash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failedroboscript_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Roboscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notinstalled_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Installed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#othernativecrash_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Native<wbr>Crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a native process (including any other than the app) crashed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timedout_nodejs" style="color: inherit; text-decoration: inherit;">timed<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the test overran some time limit, and that is why it failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unabletocrawl_nodejs" style="color: inherit; text-decoration: inherit;">unable<wbr>To<wbr>Crawl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the robo was unable to crawl the app; perhaps because the app did not start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashed_python" style="color: inherit; text-decoration: inherit;">crashed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the failure was severe because the system (app) under test crashed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_out_of_memory_python" style="color: inherit; text-decoration: inherit;">device_<wbr>out_<wbr>of_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the device ran out of memory during a test, causing the test to crash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_roboscript_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>roboscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1603,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_installed_python" style="color: inherit; text-decoration: inherit;">not_<wbr>installed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#other_native_crash_python" style="color: inherit; text-decoration: inherit;">other_<wbr>native_<wbr>crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a native process (including any other than the app) crashed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timed_out_python" style="color: inherit; text-decoration: inherit;">timed_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the test overran some time limit, and that is why it failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unable_to_crawl_python" style="color: inherit; text-decoration: inherit;">unable_<wbr>to_<wbr>crawl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the robo was unable to crawl the app; perhaps because the app did not start.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuri_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1677,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uri_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1715,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileuri_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1727,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_uri_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of a file stored in Google Cloud Storage. For example: http://storage.googleapis.com/mybucket/path/to/test.xml or in gsutil format: gs://mybucket/path/to/test.xml with version-specific info, gs://mybucket/path/to/test.xml#1360383693690000 An INVALID_ARGUMENT error will be returned if the URI format is not supported. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#abortedbyuser_nodejs" style="color: inherit; text-decoration: inherit;">aborted<wbr>By<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#haserrorlogs_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Error<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If results are being provided to the user in certain cases of infrastructure failures{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructurefailure_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1825,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aborted_by_user_python" style="color: inherit; text-decoration: inherit;">aborted_<wbr>by_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_error_logs_python" style="color: inherit; text-decoration: inherit;">has_<wbr>error_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If results are being provided to the user in certain cases of infrastructure failures{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructure_failure_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1911,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#abortedbyuser_nodejs" style="color: inherit; text-decoration: inherit;">aborted<wbr>By<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#haserrorlogs_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Error<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If results are being provided to the user in certain cases of infrastructure failures{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructurefailure_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aborted_by_user_python" style="color: inherit; text-decoration: inherit;">aborted_<wbr>by_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1947,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_error_logs_python" style="color: inherit; text-decoration: inherit;">has_<wbr>error_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If results are being provided to the user in certain cases of infrastructure failures{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1955,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructure_failure_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistepnumber_nodejs" style="color: inherit; text-decoration: inherit;">multistep<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcomesummary_nodejs" style="color: inherit; text-decoration: inherit;">outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runduration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistep_number_python" style="color: inherit; text-decoration: inherit;">multistep_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcome_summary_python" style="color: inherit; text-decoration: inherit;">outcome_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_duration_python" style="color: inherit; text-decoration: inherit;">run_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistepnumber_nodejs" style="color: inherit; text-decoration: inherit;">multistep<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcomesummary_nodejs" style="color: inherit; text-decoration: inherit;">outcome<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runduration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistep_number_python" style="color: inherit; text-decoration: inherit;">multistep_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outcome_summary_python" style="color: inherit; text-decoration: inherit;">outcome_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_duration_python" style="color: inherit; text-decoration: inherit;">run_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took for this step to run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistepnumber_nodejs" style="color: inherit; text-decoration: inherit;">multistep<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarystep_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#primarystep">pulumi.<wbr>Input<Primary<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#primarystep">Primary<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Present if it is a primary (original) step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarystepid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Step Id of the primary (original) step, which might be this step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistep_number_python" style="color: inherit; text-decoration: inherit;">multistep_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_step_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#primarystep">Primary<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#primarystep">Primary<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Present if it is a primary (original) step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_step_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Step Id of the primary (original) step, which might be this step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2431,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistepnumber_nodejs" style="color: inherit; text-decoration: inherit;">multistep<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2439,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarystep_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#primarystepresponse">pulumi.<wbr>Input<Primary<wbr>Step<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#primarystepresponse">Primary<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Present if it is a primary (original) step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2447,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarystepid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Step<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Step Id of the primary (original) step, which might be this step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2459,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multistep_number_python" style="color: inherit; text-decoration: inherit;">multistep_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_step_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#primarystepresponse">Primary<wbr>Step<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#primarystepresponse">Primary<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Present if it is a primary (original) step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_step_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>step_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Step Id of the primary (original) step, which might be this step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2577,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failuredetail_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failuredetail">pulumi.<wbr>Input<Failure<wbr>Detail<wbr>Args></a></span>
+        <span class="property-type"><a href="#failuredetail">Failure<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inconclusivedetail_nodejs" style="color: inherit; text-decoration: inherit;">inconclusive<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inconclusivedetail">pulumi.<wbr>Input<Inconclusive<wbr>Detail<wbr>Args></a></span>
+        <span class="property-type"><a href="#inconclusivedetail">Inconclusive<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skippeddetail_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skippeddetail">pulumi.<wbr>Input<Skipped<wbr>Detail<wbr>Args></a></span>
+        <span class="property-type"><a href="#skippeddetail">Skipped<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successdetail_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#successdetail">pulumi.<wbr>Input<Success<wbr>Detail<wbr>Args></a></span>
+        <span class="property-type"><a href="#successdetail">Success<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2621,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_detail_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failuredetail">Failure<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#failuredetail">Failure<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inconclusive_detail_python" style="color: inherit; text-decoration: inherit;">inconclusive_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inconclusivedetail">Inconclusive<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inconclusivedetail">Inconclusive<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipped_detail_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skippeddetail">Skipped<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skippeddetail">Skipped<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_detail_python" style="color: inherit; text-decoration: inherit;">success_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#successdetail">Success<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#successdetail">Success<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2755,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failuredetail_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failuredetailresponse">pulumi.<wbr>Input<Failure<wbr>Detail<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#failuredetailresponse">Failure<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2763,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inconclusivedetail_nodejs" style="color: inherit; text-decoration: inherit;">inconclusive<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inconclusivedetailresponse">pulumi.<wbr>Input<Inconclusive<wbr>Detail<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#inconclusivedetailresponse">Inconclusive<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skippeddetail_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skippeddetailresponse">pulumi.<wbr>Input<Skipped<wbr>Detail<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#skippeddetailresponse">Skipped<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successdetail_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#successdetailresponse">pulumi.<wbr>Input<Success<wbr>Detail<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#successdetailresponse">Success<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2799,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_detail_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failuredetailresponse">Failure<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#failuredetailresponse">Failure<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2807,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inconclusive_detail_python" style="color: inherit; text-decoration: inherit;">inconclusive_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inconclusivedetailresponse">Inconclusive<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inconclusivedetailresponse">Inconclusive<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2815,7 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipped_detail_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skippeddetailresponse">Skipped<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skippeddetailresponse">Skipped<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2823,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_detail_python" style="color: inherit; text-decoration: inherit;">success_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#successdetailresponse">Success<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#successdetailresponse">Success<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2831,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The simplest way to interpret a result. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2885,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individualoutcome_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#individualoutcome">pulumi.<wbr>Input<pulumi.<wbr>Input<Individual<wbr>Outcome<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#individualoutcome">Individual<wbr>Outcome<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Step Id and outcome of each individual step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollup_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2905,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individual_outcome_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#individualoutcome">Individual<wbr>Outcome<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#individualoutcome">Individual<wbr>Outcome<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Step Id and outcome of each individual step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2913,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roll_up_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2967,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individualoutcome_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#individualoutcomeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Individual<wbr>Outcome<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#individualoutcomeresponse">Individual<wbr>Outcome<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Step Id and outcome of each individual step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2975,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollup_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2987,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#individual_outcome_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>outcome</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#individualoutcomeresponse">Individual<wbr>Outcome<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#individualoutcomeresponse">Individual<wbr>Outcome<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Step Id and outcome of each individual step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roll_up_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rollup test status of multiple steps that were run with the same configuration as a group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatibleappversion_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>App<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the App doesn't support the specific API level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatiblearchitecture_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the App doesn't run on the specific architecture, for example, x86.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatibledevice_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the requested OS version doesn't run on the specific device model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3093,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_app_version_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>app_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the App doesn't support the specific API level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3101,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_architecture_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the App doesn't run on the specific architecture, for example, x86.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3109,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_device_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the requested OS version doesn't run on the specific device model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3179,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatibleappversion_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>App<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the App doesn't support the specific API level.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatiblearchitecture_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the App doesn't run on the specific architecture, for example, x86.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatibledevice_nodejs" style="color: inherit; text-decoration: inherit;">incompatible<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the requested OS version doesn't run on the specific device model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_app_version_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>app_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the App doesn't support the specific API level.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3215,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_architecture_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the App doesn't run on the specific architecture, for example, x86.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3223,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#incompatible_device_python" style="color: inherit; text-decoration: inherit;">incompatible_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the requested OS version doesn't run on the specific device model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3261,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exception_nodejs" style="color: inherit; text-decoration: inherit;">exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack trace message. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3273,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exception_python" style="color: inherit; text-decoration: inherit;">exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The stack trace message. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3311,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exception_nodejs" style="color: inherit; text-decoration: inherit;">exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack trace message. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3323,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exception_python" style="color: inherit; text-decoration: inherit;">exception</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The stack trace message. Required{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3377,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3397,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3459,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3467,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3479,7 +3513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3487,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3541,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3623,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3631,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3643,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3651,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3689,7 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#othernativecrash_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Native<wbr>Crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a native process other than the app crashed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3701,7 +3735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#other_native_crash_python" style="color: inherit; text-decoration: inherit;">other_<wbr>native_<wbr>crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a native process other than the app crashed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3739,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#othernativecrash_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Native<wbr>Crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a native process other than the app crashed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3751,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#other_native_crash_python" style="color: inherit; text-decoration: inherit;">other_<wbr>native_<wbr>crash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a native process other than the app crashed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3821,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classname_nodejs" style="color: inherit; text-decoration: inherit;">class<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3829,7 +3863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test case. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3837,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testsuitename_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Suite<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test suite to which this test case belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3849,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#class_name_python" style="color: inherit; text-decoration: inherit;">class_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test case. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3865,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_suite_name_python" style="color: inherit; text-decoration: inherit;">test_<wbr>suite_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test suite to which this test case belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classname_nodejs" style="color: inherit; text-decoration: inherit;">class<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test case. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3951,7 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testsuitename_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Suite<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test suite to which this test case belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3963,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#class_name_python" style="color: inherit; text-decoration: inherit;">class_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the class.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3971,7 +4005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test case. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3979,7 +4013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_suite_name_python" style="color: inherit; text-decoration: inherit;">test_<wbr>suite_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test suite to which this test case belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4065,7 +4099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testissues_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testissue">pulumi.<wbr>Input<pulumi.<wbr>Input<Test<wbr>Issue<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#testissue">Test<wbr>Issue<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testsuiteoverviews_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Suite<wbr>Overviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testsuiteoverview">pulumi.<wbr>Input<pulumi.<wbr>Input<Test<wbr>Suite<wbr>Overview<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#testsuiteoverview">Test<wbr>Suite<wbr>Overview<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4081,7 +4115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testtiming_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testtiming">pulumi.<wbr>Input<Test<wbr>Timing<wbr>Args></a></span>
+        <span class="property-type"><a href="#testtiming">Test<wbr>Timing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toolexecution_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecution">pulumi.<wbr>Input<Tool<wbr>Execution<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4101,7 +4135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_issues_python" style="color: inherit; text-decoration: inherit;">test_<wbr>issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testissue">Test<wbr>Issue<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#testissue">Test<wbr>Issue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4109,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_suite_overviews_python" style="color: inherit; text-decoration: inherit;">test_<wbr>suite_<wbr>overviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testsuiteoverview">Test<wbr>Suite<wbr>Overview<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#testsuiteoverview">Test<wbr>Suite<wbr>Overview<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_timing_python" style="color: inherit; text-decoration: inherit;">test_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testtiming">Test<wbr>Timing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testtiming">Test<wbr>Timing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_execution_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4211,7 +4245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testissues_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testissueresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Test<wbr>Issue<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#testissueresponse">Test<wbr>Issue<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4219,7 +4253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testsuiteoverviews_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Suite<wbr>Overviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testsuiteoverviewresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Test<wbr>Suite<wbr>Overview<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#testsuiteoverviewresponse">Test<wbr>Suite<wbr>Overview<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4227,7 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testtiming_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testtimingresponse">pulumi.<wbr>Input<Test<wbr>Timing<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#testtimingresponse">Test<wbr>Timing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4235,7 +4269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toolexecution_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionresponse">pulumi.<wbr>Input<Tool<wbr>Execution<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4247,7 +4281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_issues_python" style="color: inherit; text-decoration: inherit;">test_<wbr>issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testissueresponse">Test<wbr>Issue<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#testissueresponse">Test<wbr>Issue<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4255,7 +4289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_suite_overviews_python" style="color: inherit; text-decoration: inherit;">test_<wbr>suite_<wbr>overviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testsuiteoverviewresponse">Test<wbr>Suite<wbr>Overview<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#testsuiteoverviewresponse">Test<wbr>Suite<wbr>Overview<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4263,7 +4297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_timing_python" style="color: inherit; text-decoration: inherit;">test_<wbr>timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testtimingresponse">Test<wbr>Timing<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testtimingresponse">Test<wbr>Timing<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4271,7 +4305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_execution_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4389,7 +4423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief human-readable message describing the issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4405,7 +4439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4413,7 +4447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stacktrace_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktrace">pulumi.<wbr>Input<Stack<wbr>Trace<wbr>Args></a></span>
+        <span class="property-type"><a href="#stacktrace">Stack<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of stack trace fields inside specific warnings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4421,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4429,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#any">pulumi.<wbr>Input<Any<wbr>Args></a></span>
+        <span class="property-type"><a href="#any">Any<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4441,7 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4449,7 +4483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief human-readable message describing the issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4457,7 +4491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stack_trace_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktrace">Stack<wbr>Trace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stacktrace">Stack<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of stack trace fields inside specific warnings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4473,7 +4507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4481,7 +4515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#any">Any<wbr>Args]</a></span>
+        <span class="property-type"><a href="#any">Any<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4599,7 +4633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4607,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief human-readable message describing the issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4615,7 +4649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4623,7 +4657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stacktrace_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceresponse">pulumi.<wbr>Input<Stack<wbr>Trace<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of stack trace fields inside specific warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4631,7 +4665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4639,7 +4673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anyresponse">pulumi.<wbr>Input<Any<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#anyresponse">Any<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4651,7 +4685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4659,7 +4693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief human-readable message describing the issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4667,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Severity of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4675,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stack_trace_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#stacktraceresponse">Stack<wbr>Trace<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of stack trace fields inside specific warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4683,7 +4717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of issue. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4691,7 +4725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#anyresponse">Any<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#anyresponse">Any<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4841,7 +4875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elapsed time of test suite.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4849,7 +4883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4857,7 +4891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurecount_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4865,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flakycount_nodejs" style="color: inherit; text-decoration: inherit;">flaky<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4873,7 +4907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test suite. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4881,7 +4915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skippedcount_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4889,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4897,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xmlsource_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">pulumi.<wbr>Input<File<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4909,7 +4943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elapsed time of test suite.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4917,7 +4951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4925,7 +4959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_count_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4933,7 +4967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flaky_count_python" style="color: inherit; text-decoration: inherit;">flaky_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4941,7 +4975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test suite. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4949,7 +4983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipped_count_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4957,7 +4991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4965,7 +4999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xml_source_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5115,7 +5149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsedtime_nodejs" style="color: inherit; text-decoration: inherit;">elapsed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elapsed time of test suite.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5123,7 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcount_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5131,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurecount_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5139,7 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flakycount_nodejs" style="color: inherit; text-decoration: inherit;">flaky<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5147,7 +5181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test suite. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5155,7 +5189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skippedcount_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5163,7 +5197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5171,7 +5205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xmlsource_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">pulumi.<wbr>Input<File<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5183,7 +5217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elapsed_time_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elapsed time of test suite.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5191,7 +5225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_count_python" style="color: inherit; text-decoration: inherit;">error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5199,7 +5233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_count_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5207,7 +5241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flaky_count_python" style="color: inherit; text-decoration: inherit;">flaky_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5215,7 +5249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test suite. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5223,7 +5257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skipped_count_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5231,7 +5265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5239,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xml_source_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5277,7 +5311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testprocessduration_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Process<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">pulumi.<wbr>Input<Duration<wbr>Args></a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took to run the test process. - In response: present if previously set. - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5289,7 +5323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_process_duration_python" style="color: inherit; text-decoration: inherit;">test_<wbr>process_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#duration">Duration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#duration">Duration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took to run the test process. - In response: present if previously set. - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5327,7 +5361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testprocessduration_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Process<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">pulumi.<wbr>Input<Duration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took to run the test process. - In response: present if previously set. - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5339,7 +5373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_process_duration_python" style="color: inherit; text-decoration: inherit;">test_<wbr>process_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#durationresponse">Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How long it took to run the test process. - In response: present if previously set. - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5393,7 +5427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5401,7 +5435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5413,7 +5447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5421,7 +5455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5475,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5483,7 +5517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5495,7 +5529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5503,7 +5537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5589,7 +5623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlinearguments_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5597,7 +5631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexitcode">pulumi.<wbr>Input<Tool<wbr>Exit<wbr>Code<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexitcode">Tool<wbr>Exit<wbr>Code<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5605,7 +5639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toollogs_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tooloutputs_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tooloutputreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Tool<wbr>Output<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tooloutputreference">Tool<wbr>Output<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5625,7 +5659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_arguments_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5633,7 +5667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexitcode">Tool<wbr>Exit<wbr>Code<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexitcode">Tool<wbr>Exit<wbr>Code<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5641,7 +5675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_logs_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5649,7 +5683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_outputs_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tooloutputreference">Tool<wbr>Output<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tooloutputreference">Tool<wbr>Output<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5735,7 +5769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlinearguments_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5743,7 +5777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexitcoderesponse">pulumi.<wbr>Input<Tool<wbr>Exit<wbr>Code<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexitcoderesponse">Tool<wbr>Exit<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5751,7 +5785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toollogs_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5759,7 +5793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tooloutputs_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tooloutputreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Tool<wbr>Output<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tooloutputreferenceresponse">Tool<wbr>Output<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5771,7 +5805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_arguments_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5779,7 +5813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexitcoderesponse">Tool<wbr>Exit<wbr>Code<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexitcoderesponse">Tool<wbr>Exit<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5787,7 +5821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_logs_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5795,7 +5829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_outputs_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tooloutputreferenceresponse">Tool<wbr>Output<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tooloutputreferenceresponse">Tool<wbr>Output<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5833,7 +5867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toolexecution_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecution">pulumi.<wbr>Input<Tool<wbr>Execution<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Tool execution. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5845,7 +5879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_execution_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexecution">Tool<wbr>Execution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Tool execution. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5883,7 +5917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#toolexecution_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionresponse">pulumi.<wbr>Input<Tool<wbr>Execution<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Tool execution. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5895,7 +5929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_execution_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toolexecutionresponse">Tool<wbr>Execution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Tool execution. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5933,7 +5967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5945,7 +5979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5983,7 +6017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5995,7 +6029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6065,7 +6099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">pulumi.<wbr>Input<Timestamp<wbr>Args></a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creation time of the file. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6073,7 +6107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">pulumi.<wbr>Input<File<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A FileReference to an output file. - In response: always set - In create/update request: always set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6081,7 +6115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testcase_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testcasereference">pulumi.<wbr>Input<Test<wbr>Case<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#testcasereference">Test<wbr>Case<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6093,7 +6127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timestamp">Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creation time of the file. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6101,7 +6135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filereference">File<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A FileReference to an output file. - In response: always set - In create/update request: always set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6109,7 +6143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_case_python" style="color: inherit; text-decoration: inherit;">test_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testcasereference">Test<wbr>Case<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testcasereference">Test<wbr>Case<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6179,7 +6213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestampresponse">pulumi.<wbr>Input<Timestamp<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timestampresponse">Timestamp<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creation time of the file. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6187,7 +6221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">pulumi.<wbr>Input<File<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A FileReference to an output file. - In response: always set - In create/update request: always set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6195,7 +6229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testcase_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testcasereferenceresponse">pulumi.<wbr>Input<Test<wbr>Case<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#testcasereferenceresponse">Test<wbr>Case<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6207,7 +6241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timestampresponse">Timestamp<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timestampresponse">Timestamp<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creation time of the file. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6215,7 +6249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filereferenceresponse">File<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A FileReference to an output file. - In response: always set - In create/update request: always set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6223,7 +6257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_case_python" style="color: inherit; text-decoration: inherit;">test_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testcasereferenceresponse">Test<wbr>Case<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testcasereferenceresponse">Test<wbr>Case<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional{{% /md %}}</dd></dl>
 {{% /choosable %}}

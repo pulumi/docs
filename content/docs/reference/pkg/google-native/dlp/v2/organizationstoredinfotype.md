@@ -20,19 +20,29 @@ Creates a pre-built stored infoType to be used for inspection. See https://cloud
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dlp_v2.GooglePrivacyDlpV2StoredInfoTypeConfigArgs]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">stored_info_type_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">stored_info_types_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_dlp_v2.GooglePrivacyDlpV2StoredInfoTypeConfigArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">stored_info_type_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">stored_info_types_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationStoredInfoType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationStoredInfoType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationStoredInfoType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationStoredInfoType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationStoredInfoType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Creates a pre-built stored infoType to be used for inspection. See https://cloud
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationStoredInfoTypeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#storedinfotypesid_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Info<wbr>Types<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -258,7 +278,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration of the storedInfoType to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#storedinfotypeid_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Info<wbr>Type<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#stored_info_types_id_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>info_<wbr>types_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +314,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration of the storedInfoType to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The OrganizationStoredInfoType resource accepts the following [input]({{< relref
 <a href="#stored_info_type_id_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>info_<wbr>type_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source table of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -537,7 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldid">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytable">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source table of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -599,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source table of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -619,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2fieldidresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Field<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigquerytableresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Table<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source table of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -827,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs:///`. Trailing wildcard in the path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs:///`. Trailing wildcard in the path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs:///`. Trailing wildcard in the path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs:///`. Trailing wildcard in the path is allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -993,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1043,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1055,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlist">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlist">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1199,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1211,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2wordlistresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Word<wbr>List<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error codes and messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamps_nodejs" style="color: inherit; text-decoration: inherit;">timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The times the error occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1293,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error codes and messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1301,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamps_python" style="color: inherit; text-decoration: inherit;">timestamps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The times the error occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1401,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryfield_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfield">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfield">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragefileset_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefileset">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_query_field_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfield">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfield">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1507,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_file_set_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefileset">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1515,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepath">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1585,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryfield_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfieldresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfieldresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1593,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudstoragefileset_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefilesetresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1601,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#big_query_field_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfieldresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2bigqueryfieldresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Big<wbr>Query<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1621,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_storage_file_set_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragefilesetresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1629,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2cloudstoragepathresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Cloud<wbr>Storage<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#approxnumphrases_nodejs" style="color: inherit; text-decoration: inherit;">approx<wbr>Num<wbr>Phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Approximate number of distinct phrases in the dictionary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#approx_num_phrases_python" style="color: inherit; text-decoration: inherit;">approx_<wbr>num_<wbr>phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Approximate number of distinct phrases in the dictionary.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1733,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1753,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1835,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store dictionary-based CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfig">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store regular expression-based StoredInfoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionary">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store dictionary-based CustomInfoType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfig">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regex">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store regular expression-based StoredInfoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store dictionary-based CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2155,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store regular expression-based StoredInfoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2167,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2dictionaryresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Dictionary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store dictionary-based CustomInfoType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the StoredInfoType (max 256 characters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionaryconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2regexresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Regex<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Store regular expression-based StoredInfoType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionarystatsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Stats<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionarystatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Stats<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2249,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionarystatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Stats<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2largecustomdictionarystatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Large<wbr>Custom<wbr>Dictionary<wbr>Stats<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType where findings are defined by a dictionary of phrases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2351,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfigresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2359,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create timestamp of the version. Read-only, determined by the system when the version is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2367,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2errorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2errorresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2375,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stored info type version state. Read-only, updated by the system during dictionary creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2383,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stats_nodejs" style="color: inherit; text-decoration: inherit;">stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypestatsresponse">pulumi.<wbr>Input<Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Stats<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypestatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Stats<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics about this storedInfoType version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypeconfigresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StoredInfoType configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create timestamp of the version. Read-only, determined by the system when the version is created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2errorresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2errorresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Stored info type version state. Read-only, updated by the system during dictionary creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stats_python" style="color: inherit; text-decoration: inherit;">stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypestatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Stats<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleprivacydlpv2storedinfotypestatsresponse">Google<wbr>Privacy<wbr>Dlp<wbr>V2Stored<wbr>Info<wbr>Type<wbr>Stats<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statistics about this storedInfoType version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2465,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2477,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2515,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2597,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2605,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2613,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2625,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2633,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2641,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

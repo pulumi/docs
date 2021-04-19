@@ -20,19 +20,34 @@ Creates an instance. When creating from a backup, the capacity of the new instan
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_file_v1beta1.FileShareConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_file_v1beta1.NetworkConfigArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">file_shares</span><span class="p">:</span> <span class="nx">Optional[Sequence[_file_v1beta1.FileShareConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">instances_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_file_v1beta1.NetworkConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates an instance. When creating from a backup, the capacity of the new instan
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancesid_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the instance (2048 characters or less).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#fileshares_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Share<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileshareconfig">File<wbr>Share<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconfig">Network<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instances_id_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the instance (2048 characters or less).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#file_shares_python" style="color: inherit; text-decoration: inherit;">file_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareconfig">File<wbr>Share<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileshareconfig">File<wbr>Share<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfig">Network<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconfig">Network<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -741,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacitygb_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsexportoptions">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Export<wbr>Options<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsexportoptions">Nfs<wbr>Export<wbr>Options<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcebackup_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the backup, in the format projects/{project_id}/locations/{location_id}/backups/{backup_id}, that this file share has been restored from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_gb_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsexportoptions">Nfs<wbr>Export<wbr>Options<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsexportoptions">Nfs<wbr>Export<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_backup_python" style="color: inherit; text-decoration: inherit;">source_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the backup, in the format projects/{project_id}/locations/{location_id}/backups/{backup_id}, that this file share has been restored from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacitygb_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -895,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -903,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsexportoptionsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Export<wbr>Options<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsexportoptionsresponse">Nfs<wbr>Export<wbr>Options<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcebackup_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the backup, in the format projects/{project_id}/locations/{location_id}/backups/{backup_id}, that this file share has been restored from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_gb_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -939,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsexportoptionsresponse">Nfs<wbr>Export<wbr>Options<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsexportoptionsresponse">Nfs<wbr>Export<wbr>Options<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_backup_python" style="color: inherit; text-decoration: inherit;">source_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the backup, in the format projects/{project_id}/locations/{location_id}/backups/{backup_id}, that this file share has been restored from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Google Compute Engine [VPC network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1045,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Google Compute Engine [VPC network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format {block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block 7}:{block 8}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Google Compute Engine [VPC network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format {block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block 7}:{block 8}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1191,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1199,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Google Compute Engine [VPC network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1207,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anongid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonuid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipranges_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squashmode_nodejs" style="color: inherit; text-decoration: inherit;">squash<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anon_gid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anon_uid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_ranges_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squash_mode_python" style="color: inherit; text-decoration: inherit;">squash_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anongid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonuid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipranges_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squashmode_nodejs" style="color: inherit; text-decoration: inherit;">squash<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anon_gid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anon_uid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_ranges_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#squash_mode_python" style="color: inherit; text-decoration: inherit;">squash_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.{{% /md %}}</dd></dl>
 {{% /choosable %}}

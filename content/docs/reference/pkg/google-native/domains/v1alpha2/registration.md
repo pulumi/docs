@@ -20,19 +20,37 @@ Registers a new domain name and creates a corresponding `Registration` resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_notices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">contact_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_domains_v1alpha2.ContactSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_domains_v1alpha2.DnsSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">domain_notices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">management_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_domains_v1alpha2.ManagementSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">registrations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">yearly_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_domains_v1alpha2.MoneyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">contact_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">contact_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1alpha2.ContactSettingsArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">dns_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1alpha2.DnsSettingsArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">domain_notices</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">management_settings</span><span class="p">:</span> <span class="nx">Optional[_domains_v1alpha2.ManagementSettingsArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">registrations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">yearly_price</span><span class="p">:</span> <span class="nx">Optional[_domains_v1alpha2.MoneyArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Registration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Registration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Registers a new domain name and creates a corresponding `Registration` resource.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegistrationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#registrationsid_nodejs" style="color: inherit; text-decoration: inherit;">registrations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contactnotices_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contactsettings_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactsettings">pulumi.<wbr>Input<Contact<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactsettings">Contact<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnssettings">pulumi.<wbr>Input<Dns<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The domain name. Unicode domain names must be expressed in Punycode format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domainnotices_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementsettings_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementsettings">pulumi.<wbr>Input<Management<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#managementsettings">Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#validateonly_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, only validation will be performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#yearlyprice_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">pulumi.<wbr>Input<Money<wbr>Args></a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#registrations_id_python" style="color: inherit; text-decoration: inherit;">registrations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contact_notices_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#contact_settings_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactsettings">Contact<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactsettings">Contact<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Immutable. The domain name. Unicode domain names must be expressed in Punycode format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#domain_notices_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>notices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#management_settings_python" style="color: inherit; text-decoration: inherit;">management_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementsettings">Management<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementsettings">Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#validate_only_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, only validation will be performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#yearly_price_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#money">Money<wbr>Args]</a></span>
+        <span class="property-type"><a href="#money">Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Email address of the contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#faxnumber_nodejs" style="color: inherit; text-decoration: inherit;">fax<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fax number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Phone number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdress">pulumi.<wbr>Input<Postal<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Postal address of the contact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Email address of the contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fax_number_python" style="color: inherit; text-decoration: inherit;">fax_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fax number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Phone number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postaladdress">Postal<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Postal address of the contact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Email address of the contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#faxnumber_nodejs" style="color: inherit; text-decoration: inherit;">fax<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fax number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Phone number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postaladdress_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdressresponse">pulumi.<wbr>Input<Postal<wbr>Address<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Postal address of the contact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Email address of the contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fax_number_python" style="color: inherit; text-decoration: inherit;">fax_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fax number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Phone number of the contact in international format. For example, `"+1-800-555-0123"`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_address_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postaladdressresponse">Postal<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Postal address of the contact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admincontact_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The administrative contact for the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrantcontact_nodejs" style="color: inherit; text-decoration: inherit;">registrant<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant will receive an email confirmation that they must complete within 15 days to avoid domain suspension.*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#technicalcontact_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The technical contact for the `Registration`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_contact_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The administrative contact for the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrant_contact_python" style="color: inherit; text-decoration: inherit;">registrant_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant will receive an email confirmation that they must complete within 15 days to avoid domain suspension.*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#technical_contact_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The technical contact for the `Registration`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1371,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admincontact_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">pulumi.<wbr>Input<Contact<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The administrative contact for the `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1379,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1387,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrantcontact_nodejs" style="color: inherit; text-decoration: inherit;">registrant<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">pulumi.<wbr>Input<Contact<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant will receive an email confirmation that they must complete within 15 days to avoid domain suspension.*{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1395,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#technicalcontact_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">pulumi.<wbr>Input<Contact<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The technical contact for the `Registration`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_contact_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The administrative contact for the `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1415,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Privacy setting for the contacts associated with the `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1423,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrant_contact_python" style="color: inherit; text-decoration: inherit;">registrant_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant will receive an email confirmation that they must complete within 15 days to avoid domain suspension.*{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#technical_contact_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contactresponse">Contact<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The technical contact for the `Registration`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1485,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecord">pulumi.<wbr>Input<pulumi.<wbr>Input<Ds<wbr>Record<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dsrecord">Ds<wbr>Record<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_records_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecord">Ds<wbr>Record<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dsrecord">Ds<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecordresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ds<wbr>Record<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1575,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1587,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_records_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdns_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdns">pulumi.<wbr>Input<Custom<wbr>Dns<wbr>Args></a></span>
+        <span class="property-type"><a href="#customdns">Custom<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An arbitrary DNS provider identified by its name servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gluerecords_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gluerecord">pulumi.<wbr>Input<pulumi.<wbr>Input<Glue<wbr>Record<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gluerecord">Glue<wbr>Record<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of glue records for this `Registration`. Commonly empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googledomainsdns_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Domains<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledomainsdns">pulumi.<wbr>Input<Google<wbr>Domains<wbr>Dns<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledomainsdns">Google<wbr>Domains<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The free DNS zone provided by [Google Domains](https://domains.google/).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_dns_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdns">Custom<wbr>Dns<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdns">Custom<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An arbitrary DNS provider identified by its name servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glue_records_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gluerecord">Glue<wbr>Record<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gluerecord">Glue<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of glue records for this `Registration`. Commonly empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_domains_dns_python" style="color: inherit; text-decoration: inherit;">google_<wbr>domains_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledomainsdns">Google<wbr>Domains<wbr>Dns<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledomainsdns">Google<wbr>Domains<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The free DNS zone provided by [Google Domains](https://domains.google/).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1779,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdns_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdnsresponse">pulumi.<wbr>Input<Custom<wbr>Dns<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#customdnsresponse">Custom<wbr>Dns<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An arbitrary DNS provider identified by its name servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gluerecords_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gluerecordresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Glue<wbr>Record<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gluerecordresponse">Glue<wbr>Record<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of glue records for this `Registration`. Commonly empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googledomainsdns_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Domains<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledomainsdnsresponse">pulumi.<wbr>Input<Google<wbr>Domains<wbr>Dns<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googledomainsdnsresponse">Google<wbr>Domains<wbr>Dns<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The free DNS zone provided by [Google Domains](https://domains.google/).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_dns_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdnsresponse">Custom<wbr>Dns<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customdnsresponse">Custom<wbr>Dns<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An arbitrary DNS provider identified by its name servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glue_records_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gluerecordresponse">Glue<wbr>Record<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gluerecordresponse">Glue<wbr>Record<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of glue records for this `Registration`. Commonly empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_domains_dns_python" style="color: inherit; text-decoration: inherit;">google_<wbr>domains_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googledomainsdnsresponse">Google<wbr>Domains<wbr>Dns<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googledomainsdnsresponse">Google<wbr>Domains<wbr>Dns<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The free DNS zone provided by [Google Domains](https://domains.google/).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1909,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The digest generated from the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digesttype_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytag_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key tag of the record. Must be set in range 0 -- 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The digest generated from the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_type_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag of the record. Must be set in range 0 -- 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2055,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The digest generated from the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digesttype_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytag_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key tag of the record. Must be set in range 0 -- 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm used to generate the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The digest generated from the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digest_type_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash function used to generate the digest of the referenced DNSKEY.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2115,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag of the record. Must be set in range 0 -- 65535.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Domain name of the host in Punycode format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Domain name of the host in Punycode format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Domain name of the host in Punycode format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2315,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2327,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Domain name of the host in Punycode format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2335,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2343,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2381,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsstate_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_state_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2463,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsrecords_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecordresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ds<wbr>Record<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2471,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dsstate_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2491,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_records_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#dsrecordresponse">Ds<wbr>Record<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2499,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ds_state_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The state of DS records for this domain. Used to enable or disable automatic DNSSEC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2507,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferlockstate_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Lock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_lock_state_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>lock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewalmethod_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The renewal method for this `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2619,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferlockstate_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Lock<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2631,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewal_method_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The renewal method for this `Registration`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2639,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_lock_state_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>lock_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls whether the domain can be transferred to another registrar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2709,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2737,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2951,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3007,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3015,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3023,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3031,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3043,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3059,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3075,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3083,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3099,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3107,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3115,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3123,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3321,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresslines_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3329,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrativearea_nodejs" style="color: inherit; text-decoration: inherit;">administrative<wbr>Area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3337,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3345,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3353,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3361,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3369,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3377,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regioncode_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3385,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3393,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortingcode_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3401,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_nodejs" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3413,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_lines_python" style="color: inherit; text-decoration: inherit;">address_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3421,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrative_area_python" style="color: inherit; text-decoration: inherit;">administrative_<wbr>area</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Highest administrative subdivision which is used for postal addresses of a country or region. For example, this can be a state, a province, an oblast, or a prefecture. Specifically, for Spain this is the province and not the autonomous community (e.g. "Barcelona" and not "Catalonia"). Many countries don't use an administrative area in postal addresses. E.g. in Switzerland this should be left unpopulated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3429,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. BCP-47 language code of the contents of this address (if known). This is often the UI language of the input form or is expected to match one of the languages used in the address' country/region, or their transliterated equivalents. This can affect formatting in certain countries, but is not critical to the correctness of the data and will never affect any validation or other non-formatting related operations. If this value is not known, it should be omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-Latn", "en".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3437,7 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use address_lines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3445,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the organization at the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3453,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Postal code of the address. Not all countries use or require postal codes to be present, but where they are used, they may trigger additional validation with other parts of the address (e.g. state/zip validation in the U.S.A.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The recipient at the address. This field may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3469,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_code_python" style="color: inherit; text-decoration: inherit;">region_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. CLDR region code of the country/region of the address. This is never inferred and it is up to the user to ensure the value is correct. See http://cldr.unicode.org/ and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details. Example: "CH" for Switzerland.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3477,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The schema revision of the `PostalAddress`. This must be set to 0, which is the latest revision. All new revisions **must** be backward compatible with old revisions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3485,7 +3513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sorting_code_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Additional, country-specific, sorting code. This is not used in most regions. Where it is used, the value is either a string like "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number alone, representing the "sector code" (Jamaica), "delivery area indicator" (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3493,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sublocality_python" style="color: inherit; text-decoration: inherit;">sublocality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Sublocality of the address. For example, this can be neighborhoods, boroughs, districts.{{% /md %}}</dd></dl>
 {{% /choosable %}}

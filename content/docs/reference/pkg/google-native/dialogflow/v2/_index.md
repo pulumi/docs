@@ -12,6 +12,7 @@ Explore the resources and functions of the google-native.dialogflow/v2 module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="agententitytype" title="AgentEntityType"><span class="symbol resource"></span>AgentEntityType</a></li>
+    <li><a href="agentenvironment" title="AgentEnvironment"><span class="symbol resource"></span>AgentEnvironment</a></li>
     <li><a href="agentenvironmentusersessioncontext" title="AgentEnvironmentUserSessionContext"><span class="symbol resource"></span>AgentEnvironmentUserSessionContext</a></li>
     <li><a href="agentenvironmentusersessionentitytype" title="AgentEnvironmentUserSessionEntityType"><span class="symbol resource"></span>AgentEnvironmentUserSessionEntityType</a></li>
     <li><a href="agentintent" title="AgentIntent"><span class="symbol resource"></span>AgentIntent</a></li>
@@ -19,6 +20,7 @@ Explore the resources and functions of the google-native.dialogflow/v2 module.
     <li><a href="agentknowledgebasedocument" title="AgentKnowledgeBaseDocument"><span class="symbol resource"></span>AgentKnowledgeBaseDocument</a></li>
     <li><a href="agentsessioncontext" title="AgentSessionContext"><span class="symbol resource"></span>AgentSessionContext</a></li>
     <li><a href="agentsessionentitytype" title="AgentSessionEntityType"><span class="symbol resource"></span>AgentSessionEntityType</a></li>
+    <li><a href="agentversion" title="AgentVersion"><span class="symbol resource"></span>AgentVersion</a></li>
     <li><a href="conversation" title="Conversation"><span class="symbol resource"></span>Conversation</a></li>
     <li><a href="conversationparticipant" title="ConversationParticipant"><span class="symbol resource"></span>ConversationParticipant</a></li>
     <li><a href="conversationprofile" title="ConversationProfile"><span class="symbol resource"></span>ConversationProfile</a></li>
@@ -33,6 +35,6 @@ Explore the resources and functions of the google-native.dialogflow/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.1.0</dd>
 </dl>
 

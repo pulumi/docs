@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.cloudtasks/v2beta3 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.1.0</dd>
 </dl>
 

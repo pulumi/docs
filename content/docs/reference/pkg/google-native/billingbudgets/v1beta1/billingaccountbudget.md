@@ -20,19 +20,33 @@ Creates a new budget. See Quotas and limits for more information on the limits o
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs]]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs]]</span> = None<span class="p">, </span><span class="nx">billing_accounts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1FilterArgs]]</span> = None<span class="p">, </span><span class="nx">budgets_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">billing_accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1FilterArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">budgets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_billingbudgets_v1beta1.GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBillingAccountBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BillingAccountBudget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBillingAccountBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BillingAccountBudget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BillingAccountBudget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BillingAccountBudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +81,32 @@ Creates a new budget. See Quotas and limits for more information on the limits o
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BillingAccountBudgetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,7 +228,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">Pulumi.<wbr>Google<wbr>Native.<wbr>Billingbudgets.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -272,7 +296,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -306,7 +330,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#billingaccountsid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Accounts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -314,7 +338,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#budgetsid_nodejs" style="color: inherit; text-decoration: inherit;">budgets<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +346,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1allupdatesrule">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1All<wbr>Updates<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1allupdatesrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rules to apply to notifications sent based on budget spend and thresholds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +354,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1budgetamount">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Budget<wbr>Amount<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1budgetamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Budgeted amount.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,15 +362,15 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Validation: <= 60 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +378,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +386,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1thresholdrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Threshold<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1thresholdrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Threshold<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +398,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#billing_accounts_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>accounts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -382,7 +406,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#budgets_id_python" style="color: inherit; text-decoration: inherit;">budgets_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +414,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1allupdatesrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1All<wbr>Updates<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1allupdatesrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rules to apply to notifications sent based on budget spend and thresholds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +422,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1budgetamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Budget<wbr>Amount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1budgetamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Budgeted amount.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,15 +430,15 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1filter">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Validation: <= 60 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +446,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +454,7 @@ The BillingAccountBudget resource accepts the following [input]({{< relref "/doc
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1thresholdrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Threshold<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1thresholdrule">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledefaultiamrecipients_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -649,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_default_iam_recipients_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>default_<wbr>iam_<wbr>recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disabledefaultiamrecipients_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -775,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -783,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_default_iam_recipients_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>default_<wbr>iam_<wbr>recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">Pulumi.<wbr>Google<wbr>Native.<wbr>Billingbudgets.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_csharp">
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -855,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_go">
 <a href="#specifiedamount_go" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -873,15 +897,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_nodejs">
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypemoney">pulumi.<wbr>Input<Google<wbr>Type<wbr>Money<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypemoney">Google<wbr>Type<wbr>Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,15 +917,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamount">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specified_amount_python">
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypemoney">Google<wbr>Type<wbr>Money<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypemoney">Google<wbr>Type<wbr>Money<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -917,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Billingbudgets.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifiedamount_csharp">
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -937,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifiedamount_go">
 <a href="#specifiedamount_go" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -955,15 +979,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifiedamount_nodejs">
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypemoneyresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Money<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypemoneyresponse">Google<wbr>Type<wbr>Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,15 +999,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1lastperiodamountresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Last<wbr>Period<wbr>Amount<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specified_amount_python">
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypemoneyresponse">Google<wbr>Type<wbr>Money<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypemoneyresponse">Google<wbr>Type<wbr>Money<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedate">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedate">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date must be after January 1, 2017.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedate">Google<wbr>Type<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date must be after January 1, 2017.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1127,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date must be after January 1, 2017.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypedateresponse">Google<wbr>Type<wbr>Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The start date must be after January 1, 2017.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypes_csharp">
 <a href="#credittypes_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -1171,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_csharp">
 <a href="#credittypestreatment_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -1187,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">Pulumi.<wbr>Google<wbr>Native.<wbr>Billingbudgets.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1231,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypes_go">
 <a href="#credittypes_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -1239,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_go">
 <a href="#credittypestreatment_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -1255,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1297,23 +1321,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypes_nodejs">
 <a href="#credittypes_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_nodejs">
 <a href="#credittypestreatment_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,15 +1345,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customperiod_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subaccounts_nodejs" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1365,23 +1389,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credit_types_python">
 <a href="#credit_types_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credit_types_treatment_python">
 <a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,15 +1413,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_period_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiod">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subaccounts_python" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1437,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypes_csharp">
 <a href="#credittypes_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -1445,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypestreatment_csharp">
 <a href="#credittypestreatment_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -1461,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Billingbudgets.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1505,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypes_go">
 <a href="#credittypes_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -1513,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypestreatment_go">
 <a href="#credittypestreatment_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -1529,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1571,23 +1595,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypes_nodejs">
 <a href="#credittypes_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credittypestreatment_nodejs">
 <a href="#credittypestreatment_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,15 +1619,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customperiod_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subaccounts_nodejs" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1639,23 +1663,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. E.g. Assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when current calendar month is July, August, September, and so on.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credit_types_python">
 <a href="#credit_types_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credit_types_treatment_python">
 <a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,15 +1687,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_period_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudbillingbudgetsv1beta1customperiodresponse">Google<wbr>Cloud<wbr>Billing<wbr>Budgets<wbr>V1beta1Custom<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1679,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subaccounts_python" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spendbasis_nodejs" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1769,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1831,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spendbasis_nodejs" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1839,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2043,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2271,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2279,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2287,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The three-letter currency code defined in ISO 4217.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2315,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.{{% /md %}}</dd></dl>
 {{% /choosable %}}

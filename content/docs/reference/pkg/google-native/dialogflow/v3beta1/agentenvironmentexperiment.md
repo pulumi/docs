@@ -20,19 +20,42 @@ Creates an Experiment in the specified Environment.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">experiment_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">experiments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">last_update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">result</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1ExperimentResultArgs]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">variants_history</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">experiment_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">experiments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">last_update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">result</span><span class="p">:</span> <span class="nx">Optional[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1ExperimentResultArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">variants_history</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentEnvironmentExperiment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentEnvironmentExperiment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentEnvironmentExperiment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates an Experiment in the specified Environment.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AgentEnvironmentExperimentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -450,7 +483,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#agentsid_nodejs" style="color: inherit; text-decoration: inherit;">agents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -458,7 +491,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#environmentsid_nodejs" style="color: inherit; text-decoration: inherit;">environments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -466,7 +499,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#experimentsid_nodejs" style="color: inherit; text-decoration: inherit;">experiments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +507,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -482,7 +515,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +523,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +531,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentdefinition">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Definition<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentdefinition">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +539,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +547,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the experiment (unique in an environment). Limit of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +555,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +563,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#experimentlength_nodejs" style="color: inherit; text-decoration: inherit;">experiment<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +571,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last update time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +579,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Format: projects//locations//agents//environments//experiments/..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +587,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresult">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +595,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +603,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +611,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#variantshistory_nodejs" style="color: inherit; text-decoration: inherit;">variants<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1variantshistory">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Variants<wbr>History<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1variantshistory">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Variants<wbr>History<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The history of updates to the experiment variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -590,7 +623,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#agents_id_python" style="color: inherit; text-decoration: inherit;">agents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -598,7 +631,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#environments_id_python" style="color: inherit; text-decoration: inherit;">environments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -606,7 +639,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#experiments_id_python" style="color: inherit; text-decoration: inherit;">experiments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -614,7 +647,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +655,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +663,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +671,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentdefinition">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentdefinition">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +679,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +687,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the experiment (unique in an environment). Limit of 64 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +695,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +703,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#experiment_length_python" style="color: inherit; text-decoration: inherit;">experiment_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +711,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last update time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +719,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Format: projects//locations//agents//environments//experiments/..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +727,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresult">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inference result of the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +735,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +743,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the experiment. Transition triggered by Expriments.StartExperiment: PENDING->RUNNING. Transition triggered by Expriments.CancelExperiment: PENDING->CANCELLED or RUNNING->CANCELLED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +751,7 @@ The AgentEnvironmentExperiment resource accepts the following [input]({{< relref
 <a href="#variants_history_python" style="color: inherit; text-decoration: inherit;">variants_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1variantshistory">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Variants<wbr>History<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1variantshistory">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Variants<wbr>History<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The history of updates to the experiment variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionvariants_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants of this experiment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_variants_python" style="color: inherit; text-decoration: inherit;">version_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants of this experiment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -927,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionvariants_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants of this experiment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_variants_python" style="color: inherit; text-decoration: inherit;">version_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants of this experiment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionmetrics_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetrics">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetrics">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Version variants and metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_metrics_python" style="color: inherit; text-decoration: inherit;">version_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetrics">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetrics">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Version variants and metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidencelevel_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerbound_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lower bound of the interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percent change between an experiment metric's value and the value for its control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper bound of the interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_level_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_bound_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Lower bound of the interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percent change between an experiment metric's value and the value for its control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Upper bound of the interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1261,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidencelevel_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1269,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerbound_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lower bound of the interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1277,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percent change between an experiment metric's value and the value for its control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1285,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper bound of the interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_level_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1305,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_bound_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Lower bound of the interval.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1313,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percent change between an experiment metric's value and the value for its control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1321,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Upper bound of the interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidenceinterval_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceinterval">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceinterval">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The probability that the treatment is better than all other treatments in the experiment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count value of a metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counttype_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Ratio value of a metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1467,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_interval_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceinterval">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceinterval">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The probability that the treatment is better than all other treatments in the experiment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count value of a metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_type_python" style="color: inherit; text-decoration: inherit;">count_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Ratio value of a metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidenceinterval_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceintervalresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceintervalresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The probability that the treatment is better than all other treatments in the experiment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1609,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count value of a metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1617,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counttype_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1625,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Ratio value of a metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1633,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1645,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_interval_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceintervalresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultconfidenceintervalresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Confidence<wbr>Interval<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The probability that the treatment is better than all other treatments in the experiment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1653,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Count value of a metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1661,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_type_python" style="color: inherit; text-decoration: inherit;">count_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Count-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1669,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Ratio value of a metric.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1677,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ratio-based metric type. Only one of type or count_type is specified in each Metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1731,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionmetrics_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetricsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetricsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Version variants and metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1751,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_update_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_metrics_python" style="color: inherit; text-decoration: inherit;">version_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetricsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultversionmetricsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Version<wbr>Metrics<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Version variants and metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetric">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetric">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The metrics and corresponding confidence intervals in the inference result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessioncount_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of sessions that were allocated to this version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetric">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetric">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The metrics and corresponding confidence intervals in the inference result.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_count_python" style="color: inherit; text-decoration: inherit;">session_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of sessions that were allocated to this version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetricresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetricresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The metrics and corresponding confidence intervals in the inference result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sessioncount_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of sessions that were allocated to this version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1959,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1971,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetricresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1experimentresultmetricresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Experiment<wbr>Result<wbr>Metric<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The metrics and corresponding confidence intervals in the inference result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1979,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#session_count_python" style="color: inherit; text-decoration: inherit;">session_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of sessions that were allocated to this version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update time of the variants.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionvariants_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2061,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Update time of the variants.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_variants_python" style="color: inherit; text-decoration: inherit;">version_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariants">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update time of the variants.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionvariants_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Update time of the variants.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_variants_python" style="color: inherit; text-decoration: inherit;">version_<wbr>variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The flow versions as the variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variants_nodejs" style="color: inherit; text-decoration: inherit;">variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariant">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of flow version variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2201,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variants_python" style="color: inherit; text-decoration: inherit;">variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariant">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of flow version variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variants_nodejs" style="color: inherit; text-decoration: inherit;">variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariantresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariantresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of flow version variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2251,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variants_python" style="color: inherit; text-decoration: inherit;">variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariantresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1versionvariantsvariantresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Version<wbr>Variants<wbr>Variant<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of flow version variants.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2321,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscontrolgroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Control<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the variant is for the control group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficallocation_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2337,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flow version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2349,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_control_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>control_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the variant is for the control group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_allocation_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flow version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2435,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscontrolgroup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Control<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the variant is for the control group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficallocation_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the flow version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2463,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_control_group_python" style="color: inherit; text-decoration: inherit;">is_<wbr>control_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the variant is for the control group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2471,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_allocation_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2479,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the flow version. Format: `projects//locations//agents//flows//versions/`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

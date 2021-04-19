@@ -20,19 +20,34 @@ Creates an entitlement for a customer. Possible error codes: * PERMISSION_DENIED
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">association_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudchannel_v1.GoogleCloudChannelV1AssociationInfoArgs]]</span> = None<span class="p">, </span><span class="nx">commitment_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudchannel_v1.GoogleCloudChannelV1CommitmentSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">customers_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entitlements_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">offer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudchannel_v1.GoogleCloudChannelV1ParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">purchase_order_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">association_info</span><span class="p">:</span> <span class="nx">Optional[_cloudchannel_v1.GoogleCloudChannelV1AssociationInfoArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">commitment_settings</span><span class="p">:</span> <span class="nx">Optional[_cloudchannel_v1.GoogleCloudChannelV1CommitmentSettingsArgs]</span> = None<span class="p">,</span>
+                               <span class="nx">customers_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">entitlements_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudchannel_v1.GoogleCloudChannelV1ParameterArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">purchase_order_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                               <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountCustomerEntitlement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountCustomerEntitlement</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountCustomerEntitlement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountCustomerEntitlement</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountCustomerEntitlement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountCustomerEntitlementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates an entitlement for a customer. Possible error codes: * PERMISSION_DENIED
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountCustomerEntitlementArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +347,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">accounts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -330,7 +355,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#customersid_nodejs" style="color: inherit; text-decoration: inherit;">customers<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -338,7 +363,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#entitlementsid_nodejs" style="color: inherit; text-decoration: inherit;">entitlements<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -346,7 +371,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#associationinfo_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1associationinfo">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Association<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1associationinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Association<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Association information to other entitlements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +379,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#commitmentsettings_nodejs" style="color: inherit; text-decoration: inherit;">commitment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1commitmentsettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Commitment<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1commitmentsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Commitment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Commitment settings for a commitment-based Offer. Required for commitment based offers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +387,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +395,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1parameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1parameter">Google<wbr>Cloud<wbr>Channel<wbr>V1Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Extended entitlement parameters. When creating an entitlement, valid parameters' names and values are defined in the offer's parameter definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +403,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#purchaseorderid_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Order<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +411,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it's complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -398,7 +423,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#accounts_id_python" style="color: inherit; text-decoration: inherit;">accounts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -406,7 +431,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#customers_id_python" style="color: inherit; text-decoration: inherit;">customers_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +439,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#entitlements_id_python" style="color: inherit; text-decoration: inherit;">entitlements_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +447,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#association_info_python" style="color: inherit; text-decoration: inherit;">association_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1associationinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Association<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1associationinfo">Google<wbr>Cloud<wbr>Channel<wbr>V1Association<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Association information to other entitlements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +455,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#commitment_settings_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1commitmentsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Commitment<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1commitmentsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Commitment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Commitment settings for a commitment-based Offer. Required for commitment based offers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +463,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +471,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1parameter">Google<wbr>Cloud<wbr>Channel<wbr>V1Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1parameter">Google<wbr>Cloud<wbr>Channel<wbr>V1Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended entitlement parameters. When creating an entitlement, valid parameters' names and values are defined in the offer's parameter definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +479,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#purchase_order_id_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>order_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +487,7 @@ The AccountCustomerEntitlement resource accepts the following [input]({{< relref
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it's complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -789,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseentitlement_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Entitlement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the base entitlement, for which this entitlement is an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_entitlement_python" style="color: inherit; text-decoration: inherit;">base_<wbr>entitlement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the base entitlement, for which this entitlement is an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseentitlement_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Entitlement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the base entitlement, for which this entitlement is an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -851,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_entitlement_python" style="color: inherit; text-decoration: inherit;">base_<wbr>entitlement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the base entitlement, for which this entitlement is an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewalsettings_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1renewalsettings">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Renewal settings applicable for a commitment-based Offer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -901,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewal_settings_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1renewalsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettings">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Renewal settings applicable for a commitment-based Offer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commitment end timestamp.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewalsettings_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingsresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Renewal settings applicable for a commitment-based Offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -987,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commitment start timestamp.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commitment end timestamp.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1007,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#renewal_settings_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingsresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1renewalsettingsresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Renewal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Renewal settings applicable for a commitment-based Offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commitment start timestamp.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1value">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1value">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1value">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1value">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#editable_nodejs" style="color: inherit; text-decoration: inherit;">editable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1valueresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1valueresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#editable_python" style="color: inherit; text-decoration: inherit;">editable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1valueresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1valueresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Value<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total duration of Period Type defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtype_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1285,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total duration of Period Type defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_type_python" style="color: inherit; text-decoration: inherit;">period_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total duration of Period Type defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodtype_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total duration of Period Type defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#period_type_python" style="color: inherit; text-decoration: inherit;">period_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Period Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productid_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product pertaining to the provisioning resource as specified in the Offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1453,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningid_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1461,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU pertaining to the provisioning resource as specified in the Offer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The product pertaining to the provisioning resource as specified in the Offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1481,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_id_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1489,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU pertaining to the provisioning resource as specified in the Offer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerenewal_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Renewal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, the plan will be completed at the end date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentcycle_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1period">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1period">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how frequently the reseller will be billed, such as once per month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentplan_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resizeunitcount_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Unit<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1611,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_renewal_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>renewal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, the plan will be completed at the end date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payment_cycle_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1period">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1period">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how frequently the reseller will be billed, such as once per month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payment_plan_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resize_unit_count_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>unit_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1721,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerenewal_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Renewal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, the plan will be completed at the end date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1729,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentcycle_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1periodresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how frequently the reseller will be billed, such as once per month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1737,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paymentplan_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1745,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resizeunitcount_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Unit<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_renewal_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>renewal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, the plan will be completed at the end date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payment_cycle_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1periodresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1periodresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how frequently the reseller will be billed, such as once per month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1773,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#payment_plan_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes how a reseller will be billed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1781,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resize_unit_count_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>unit_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1835,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trial_nodejs" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1855,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1863,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trial_python" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1965,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Represents a boolean value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents a double value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64value_nodejs" style="color: inherit; text-decoration: inherit;">int64Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents an int64 value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protovalue_nodejs" style="color: inherit; text-decoration: inherit;">proto<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Represents an 'Any' proto value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents a string value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2009,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Represents a boolean value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Represents a double value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64_value_python" style="color: inherit; text-decoration: inherit;">int64_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents an int64 value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proto_value_python" style="color: inherit; text-decoration: inherit;">proto_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Represents an 'Any' proto value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents a string value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Represents a boolean value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents a double value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64value_nodejs" style="color: inherit; text-decoration: inherit;">int64Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents an int64 value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protovalue_nodejs" style="color: inherit; text-decoration: inherit;">proto<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Represents an 'Any' proto value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents a string value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Represents a boolean value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Represents a double value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#int64_value_python" style="color: inherit; text-decoration: inherit;">int64_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents an int64 value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proto_value_python" style="color: inherit; text-decoration: inherit;">proto_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Represents an 'Any' proto value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents a string value.{{% /md %}}</dd></dl>
 {{% /choosable %}}

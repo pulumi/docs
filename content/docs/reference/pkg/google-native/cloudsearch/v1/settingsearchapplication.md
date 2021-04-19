@@ -20,19 +20,34 @@ Creates a search application. **Note:** This API requires an admin account to ex
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_source_restrictions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudsearch_v1.DataSourceRestrictionArgs]]]]</span> = None<span class="p">, </span><span class="nx">default_facet_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudsearch_v1.FacetOptionsArgs]]]]</span> = None<span class="p">, </span><span class="nx">default_sort_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudsearch_v1.SortOptionsArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scoring_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudsearch_v1.ScoringConfigArgs]]</span> = None<span class="p">, </span><span class="nx">searchapplications_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_cloudsearch_v1.SourceConfigArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">data_source_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudsearch_v1.DataSourceRestrictionArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">default_facet_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudsearch_v1.FacetOptionsArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">default_sort_options</span><span class="p">:</span> <span class="nx">Optional[_cloudsearch_v1.SortOptionsArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">enable_audit_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">scoring_config</span><span class="p">:</span> <span class="nx">Optional[_cloudsearch_v1.ScoringConfigArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">searchapplications_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">source_config</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudsearch_v1.SourceConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSettingSearchapplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SettingSearchapplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSettingSearchapplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SettingSearchapplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SettingSearchapplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SettingSearchapplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +82,32 @@ Creates a search application. **Note:** This API requires an admin account to ex
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SettingSearchapplicationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,6 +231,14 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}Display name of the Search Application. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableauditlog_csharp">
+<a href="#enableauditlog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Audit<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether audit logging is on/off for requests made for the search application in query APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -274,6 +307,14 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}Display name of the Search Application. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableauditlog_go">
+<a href="#enableauditlog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Audit<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether audit logging is on/off for requests made for the search application in query APIs.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -306,7 +347,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#searchapplicationsid_nodejs" style="color: inherit; text-decoration: inherit;">searchapplications<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +355,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#datasourcerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcerestriction">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Source<wbr>Restriction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datasourcerestriction">Data<wbr>Source<wbr>Restriction<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Retrictions applied to the configurations. The maximum number of elements is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +363,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#defaultfacetoptions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Facet<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facetoptions">pulumi.<wbr>Input<pulumi.<wbr>Input<Facet<wbr>Options<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#facetoptions">Facet<wbr>Options<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +371,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#defaultsortoptions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sort<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sortoptions">pulumi.<wbr>Input<Sort<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#sortoptions">Sort<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default options for sorting the search results{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,15 +379,23 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the Search Application. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableauditlog_nodejs">
+<a href="#enableauditlog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Audit<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether audit logging is on/off for requests made for the search application in query APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Search Application. Format: searchapplications/{application_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +403,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#scoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoringconfig">pulumi.<wbr>Input<Scoring<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scoringconfig">Scoring<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for ranking results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +411,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#sourceconfig_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Source<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sourceconfig">Source<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for a sources specified in data_source_restrictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -374,7 +423,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#searchapplications_id_python" style="color: inherit; text-decoration: inherit;">searchapplications_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +431,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#data_source_restrictions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcerestriction">Data<wbr>Source<wbr>Restriction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datasourcerestriction">Data<wbr>Source<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Retrictions applied to the configurations. The maximum number of elements is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +439,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#default_facet_options_python" style="color: inherit; text-decoration: inherit;">default_<wbr>facet_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facetoptions">Facet<wbr>Options<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#facetoptions">Facet<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +447,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#default_sort_options_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sort_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sortoptions">Sort<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sortoptions">Sort<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default options for sorting the search results{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,15 +455,23 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the Search Application. The maximum length is 300 characters.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_audit_log_python">
+<a href="#enable_audit_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>audit_<wbr>log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether audit logging is on/off for requests made for the search application in query APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Search Application. Format: searchapplications/{application_id}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +479,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#scoring_config_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoringconfig">Scoring<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scoringconfig">Scoring<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for ranking results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +487,7 @@ The SettingSearchapplication resource accepts the following [input]({{< relref "
 <a href="#source_config_python" style="color: inherit; text-decoration: inherit;">source_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceconfig">Source<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sourceconfig">Source<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for a sources specified in data_source_restrictions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -581,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicoperator_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfilters_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filter">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filter">Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sub filters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -601,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logic_operator_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_filters_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filter">Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filter">Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sub filters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -663,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicoperator_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -671,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subfilters_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sub filters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logic_operator_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logic operator of the sub filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_filters_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sub filters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroptions_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteroptions">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Options<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filteroptions">Filter<wbr>Options<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">pulumi.<wbr>Input<Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of restriction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_options_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteroptions">Filter<wbr>Options<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filteroptions">Filter<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of restriction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteroptions_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteroptionsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Filter<wbr>Options<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filteroptionsresponse">Filter<wbr>Options<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">pulumi.<wbr>Input<Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of restriction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_options_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteroptionsresponse">Filter<wbr>Options<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filteroptionsresponse">Filter<wbr>Options<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of restriction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of date. Must be from 1 to 12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of date. Must be from 1 to 12.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of date. Must be from 1 to 12.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1055,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1075,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of date. Must be from 1 to 12.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numfacetbuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Facet<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_facet_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>facet_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numfacetbuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Facet<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_facet_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>facet_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1429,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositefilter_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositefilter">pulumi.<wbr>Input<Composite<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#compositefilter">Composite<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefilter_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuefilter">pulumi.<wbr>Input<Value<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#valuefilter">Value<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_filter_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositefilter">Composite<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compositefilter">Composite<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_filter_python" style="color: inherit; text-decoration: inherit;">value_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuefilter">Value<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#valuefilter">Value<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filter">pulumi.<wbr>Input<Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#filter">Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic filter to restrict the search, such as `lang:en`, `site:xyz`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filter">Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filter">Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic filter to restrict the search, such as `lang:en`, `site:xyz`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterresponse">pulumi.<wbr>Input<Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic filter to restrict the search, such as `lang:en`, `site:xyz`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1601,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filterresponse">Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic filter to restrict the search, such as `lang:en`, `site:xyz`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1621,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1675,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositefilter_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositefilterresponse">pulumi.<wbr>Input<Composite<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#compositefilterresponse">Composite<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefilter_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuefilterresponse">pulumi.<wbr>Input<Value<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#valuefilterresponse">Value<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1695,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_filter_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositefilterresponse">Composite<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#compositefilterresponse">Composite<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_filter_python" style="color: inherit; text-decoration: inherit;">value_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valuefilterresponse">Value<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#valuefilterresponse">Value<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablefreshness_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Freshness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablepersonalization_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Personalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to personalize the results. By default, personal signals will be used to boost results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_freshness_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>freshness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_personalization_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>personalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to personalize the results. By default, personal signals will be used to boost results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1839,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablefreshness_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Freshness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1847,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablepersonalization_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Personalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to personalize the results. By default, personal signals will be used to boost results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_freshness_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>freshness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1867,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_personalization_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>personalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to personalize the results. By default, personal signals will be used to boost results.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2011,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2023,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ascending is the default sort order{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name for content indexed by the Indexing API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefinedsource_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2105,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name for content indexed by the Indexing API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefined_source_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2183,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crowdingconfig_nodejs" style="color: inherit; text-decoration: inherit;">crowding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecrowdingconfig">pulumi.<wbr>Input<Source<wbr>Crowding<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcecrowdingconfig">Source<wbr>Crowding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The crowding configuration for the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcescoringconfig">pulumi.<wbr>Input<Source<wbr>Scoring<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcescoringconfig">Source<wbr>Scoring<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scoring configuration for the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">pulumi.<wbr>Input<Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source for which this configuration is to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crowding_config_python" style="color: inherit; text-decoration: inherit;">crowding_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecrowdingconfig">Source<wbr>Crowding<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecrowdingconfig">Source<wbr>Crowding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The crowding configuration for the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scoring_config_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcescoringconfig">Source<wbr>Scoring<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcescoringconfig">Source<wbr>Scoring<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scoring configuration for the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source for which this configuration is to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crowdingconfig_nodejs" style="color: inherit; text-decoration: inherit;">crowding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecrowdingconfigresponse">pulumi.<wbr>Input<Source<wbr>Crowding<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcecrowdingconfigresponse">Source<wbr>Crowding<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The crowding configuration for the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2305,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcescoringconfigresponse">pulumi.<wbr>Input<Source<wbr>Scoring<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcescoringconfigresponse">Source<wbr>Scoring<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scoring configuration for the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2313,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">pulumi.<wbr>Input<Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source for which this configuration is to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crowding_config_python" style="color: inherit; text-decoration: inherit;">crowding_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecrowdingconfigresponse">Source<wbr>Crowding<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecrowdingconfigresponse">Source<wbr>Crowding<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The crowding configuration for the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2333,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scoring_config_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcescoringconfigresponse">Source<wbr>Scoring<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcescoringconfigresponse">Source<wbr>Scoring<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scoring configuration for the source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2341,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source for which this configuration is to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numresults_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of results allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numsuggestions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2415,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_results_python" style="color: inherit; text-decoration: inherit;">num_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of results allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2423,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_suggestions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2477,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numresults_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of results allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2485,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numsuggestions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2497,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_results_python" style="color: inherit; text-decoration: inherit;">num_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of results allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2505,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_suggestions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2559,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source name for content indexed by the Indexing API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2567,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefinedsource_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2579,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source name for content indexed by the Indexing API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2587,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predefined_source_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Predefined content source for Google Apps.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2625,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceimportance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_importance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2675,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceimportance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2687,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_importance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Importance of the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2805,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#booleanvalue_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datevalue_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">pulumi.<wbr>Input<Date<wbr>Args></a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integervalue_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2857,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolean_value_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2865,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_value_python" style="color: inherit; text-decoration: inherit;">date_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#date">Date<wbr>Args]</a></span>
+        <span class="property-type"><a href="#date">Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integer_value_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2951,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#value">pulumi.<wbr>Input<Value<wbr>Args></a></span>
+        <span class="property-type"><a href="#value">Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value to be compared with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2971,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2979,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#value">Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#value">Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value to be compared with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3033,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operatorname_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3041,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valueresponse">pulumi.<wbr>Input<Value<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#valueresponse">Value<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value to be compared with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3053,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3061,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#valueresponse">Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#valueresponse">Value<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The value to be compared with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3179,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#booleanvalue_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datevalue_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">pulumi.<wbr>Input<Date<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3203,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integervalue_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3219,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3231,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boolean_value_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3239,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_value_python" style="color: inherit; text-decoration: inherit;">date_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dateresponse">Date<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3247,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3255,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integer_value_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3263,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3271,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

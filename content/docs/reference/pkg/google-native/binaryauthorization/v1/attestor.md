@@ -20,19 +20,30 @@ Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestors_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">user_owned_grafeas_note</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_binaryauthorization_v1.UserOwnedGrafeasNoteArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">attestors_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">user_owned_grafeas_note</span><span class="p">:</span> <span class="nx">Optional[_binaryauthorization_v1.UserOwnedGrafeasNoteArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Attestor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Attestor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +78,32 @@ Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AttestorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +279,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#attestorsid_nodejs" style="color: inherit; text-decoration: inherit;">attestors<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -266,7 +287,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -274,7 +295,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +303,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name, in the format: `projects/*/attestors/*`. This field may not be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +311,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#userownedgrafeasnote_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Owned<wbr>Grafeas<wbr>Note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedgrafeasnote">pulumi.<wbr>Input<User<wbr>Owned<wbr>Grafeas<wbr>Note<wbr>Args></a></span>
+        <span class="property-type"><a href="#userownedgrafeasnote">User<wbr>Owned<wbr>Grafeas<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This specifies how an attestation will be read, and how it will be used during policy enforcement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -302,7 +323,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#attestors_id_python" style="color: inherit; text-decoration: inherit;">attestors_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -310,7 +331,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -318,7 +339,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -326,7 +347,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name, in the format: `projects/*/attestors/*`. This field may not be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -334,7 +355,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_owned_grafeas_note_python" style="color: inherit; text-decoration: inherit;">user_<wbr>owned_<wbr>grafeas_<wbr>note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedgrafeasnote">User<wbr>Owned<wbr>Grafeas<wbr>Note<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userownedgrafeasnote">User<wbr>Owned<wbr>Grafeas<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This specifies how an attestation will be read, and how it will be used during policy enforcement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asciiarmoredpgppublickey_nodejs" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz must include the ID of the public key that can be used to verify them, and that ID must match the contents of this field exactly. Additional restrictions on this field can be imposed based on which public key type is encapsulated. See the documentation on `public_key` cases below for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,7 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pkixpublickey">pulumi.<wbr>Input<Pkix<wbr>Public<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#pkixpublickey">Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -553,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ascii_armored_pgp_public_key_python" style="color: inherit; text-decoration: inherit;">ascii_<wbr>armored_<wbr>pgp_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz must include the ID of the public key that can be used to verify them, and that ID must match the contents of this field exactly. Additional restrictions on this field can be imposed based on which public key type is encapsulated. See the documentation on `public_key` cases below for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pkixpublickey">Pkix<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pkixpublickey">Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asciiarmoredpgppublickey_nodejs" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -655,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -663,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pkixpublickeyresponse">pulumi.<wbr>Input<Pkix<wbr>Public<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pkixpublickeyresponse">Pkix<wbr>Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -675,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ascii_armored_pgp_public_key_python" style="color: inherit; text-decoration: inherit;">ascii_<wbr>armored_<wbr>pgp_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -683,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A descriptive comment. This field may be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pkixpublickeyresponse">Pkix<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pkixpublickeyresponse">Pkix<wbr>Public<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -827,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notereference_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorpublickey">pulumi.<wbr>Input<pulumi.<wbr>Input<Attestor<wbr>Public<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#attestorpublickey">Attestor<wbr>Public<wbr>Key<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -929,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#note_reference_python" style="color: inherit; text-decoration: inherit;">note_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorpublickey">Attestor<wbr>Public<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#attestorpublickey">Attestor<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegationserviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notereference_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorpublickeyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Attestor<wbr>Public<wbr>Key<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#attestorpublickeyresponse">Attestor<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegation_service_account_email_python" style="color: inherit; text-decoration: inherit;">delegation_<wbr>service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#note_reference_python" style="color: inherit; text-decoration: inherit;">note_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation.Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1051,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorpublickeyresponse">Attestor<wbr>Public<wbr>Key<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#attestorpublickeyresponse">Attestor<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Public keys that verify attestations signed by this attestor. This field may be updated. If this field is non-empty, one of the specified public keys must verify that an attestation was signed by this attestor for the image specified in the admission request. If this field is empty, this attestor always returns that no valid attestations exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}

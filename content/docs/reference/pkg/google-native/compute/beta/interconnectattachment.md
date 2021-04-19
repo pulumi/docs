@@ -20,19 +20,57 @@ Creates an InterconnectAttachment in the specified project using the data includ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dataplane_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interconnect_attachment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">ipsec_internal_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">partner_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.InterconnectAttachmentPartnerMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">private_interconnect_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_beta.InterconnectAttachmentPrivateInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">dataplane_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">interconnect_attachment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">ipsec_internal_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                           <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">partner_metadata</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InterconnectAttachmentPartnerMetadataArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">private_interconnect_info</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.InterconnectAttachmentPrivateInfoArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +105,32 @@ Creates an InterconnectAttachment in the specified project using the data includ
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -754,7 +802,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#interconnectattachment_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -762,7 +810,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -770,7 +818,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional interconnect attachment resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +826,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether this Attachment will carry packets. Not present for PARTNER_PROVIDER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +834,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -806,7 +854,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#candidatesubnets_nodejs" style="color: inherit; text-decoration: inherit;">candidate<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. All prefixes must be within link-local address space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to select an unused /29 from the supplied candidate prefix(es). The request will fail if all possible /29s are in use on Google's edge. If not supplied, Google will randomly select an unused /29 from all of link-local space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +862,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#cloudrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Router<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +870,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +878,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#customerrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Router<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +886,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#dataplaneversion_nodejs" style="color: inherit; text-decoration: inherit;">dataplane<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Dataplane version for this InterconnectAttachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +894,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +902,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -865,7 +913,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -876,7 +924,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +932,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +940,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's traffic will traverse through.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +948,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#ipsecinternaladdresses_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Internal<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will be allocated from the IP address range specified here. For example, if the HA VPN gateway?s interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this interconnect attachment. If this field is not specified for interconnect attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +957,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect attachments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +965,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this InterconnectAttachment, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -927,7 +975,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +983,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +991,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +999,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#operationalstatus_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -961,7 +1009,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#pairingkey_nodejs" style="color: inherit; text-decoration: inherit;">pairing<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +1017,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#partnerasn_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional BGP ASN for the router supplied by a Layer 3 Partner if they configured BGP on behalf of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER, not available for DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1025,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#partnermetadata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentpartnermetadata">pulumi.<wbr>Input<Interconnect<wbr>Attachment<wbr>Partner<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#interconnectattachmentpartnermetadata">Interconnect<wbr>Attachment<wbr>Partner<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Informational metadata about Partner attachments from Partners to display to customers. Output only for for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1033,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#privateinterconnectinfo_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinfo">pulumi.<wbr>Input<Interconnect<wbr>Attachment<wbr>Private<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1041,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the Cloud Router to be used for dynamic routing. This router must be in the same region as this InterconnectAttachment. The InterconnectAttachment will automatically connect the Interconnect to the network & region within which the Cloud Router is configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1049,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1057,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -1023,7 +1071,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -1034,7 +1082,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1046,7 +1094,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#interconnect_attachment_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1054,7 +1102,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1062,7 +1110,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the region where the regional interconnect attachment resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1118,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this Attachment will carry packets. Not present for PARTNER_PROVIDER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1126,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: 
 - BPS_50M: 50 Mbit/s 
@@ -1098,7 +1146,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#candidate_subnets_python" style="color: inherit; text-decoration: inherit;">candidate_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. All prefixes must be within link-local address space (169.254.0.0/16) and must be /29 or shorter (/28, /27, etc). Google will attempt to select an unused /29 from the supplied candidate prefix(es). The request will fail if all possible /29s are in use on Google's edge. If not supplied, Google will randomly select an unused /29 from all of link-local space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1154,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#cloud_router_ip_address_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>router_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1162,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1170,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#customer_router_ip_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>router_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1178,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#dataplane_version_python" style="color: inherit; text-decoration: inherit;">dataplane_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Dataplane version for this InterconnectAttachment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1186,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1194,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: 
 - AVAILABILITY_DOMAIN_ANY 
@@ -1157,7 +1205,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the user-supplied encryption option of this interconnect attachment: 
 - NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. 
@@ -1168,7 +1216,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1224,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1232,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's traffic will traverse through.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1240,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#ipsec_internal_addresses_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>internal_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will be allocated from the IP address range specified here. For example, if the HA VPN gateway?s interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this interconnect attachment. If this field is not specified for interconnect attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA VPN gateway's IP address will be allocated from regional external IP address pool.
 Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class="property-optional"
@@ -1201,7 +1249,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect attachments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1257,7 @@ Not currently available in all Interconnect locations.{{% /md %}}</dd><dt class=
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this InterconnectAttachment, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1219,7 +1267,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1275,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1283,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1291,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#operational_status_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of whether or not this interconnect attachment is functional, which can take one of the following values: 
 - OS_ACTIVE: The attachment has been turned up and is ready to use. 
@@ -1253,7 +1301,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#pairing_key_python" style="color: inherit; text-decoration: inherit;">pairing_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1309,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#partner_asn_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional BGP ASN for the router supplied by a Layer 3 Partner if they configured BGP on behalf of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER, not available for DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1317,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#partner_metadata_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentpartnermetadata">Interconnect<wbr>Attachment<wbr>Partner<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentpartnermetadata">Interconnect<wbr>Attachment<wbr>Partner<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Informational metadata about Partner attachments from Partners to display to customers. Output only for for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1325,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1333,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the Cloud Router to be used for dynamic routing. This router must be in the same region as this InterconnectAttachment. The InterconnectAttachment will automatically connect the Interconnect to the network & region within which the Cloud Router is configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1341,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1349,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality. Enum values ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take one of the following values: 
 - ACTIVE: The attachment has been turned up and is ready to use. 
@@ -1315,7 +1363,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of interconnect attachment this is, which can take one of the following values: 
 - DEDICATED: an attachment to a Dedicated Interconnect. 
@@ -1326,7 +1374,7 @@ To see the latest fingerprint, make a get() request to retrieve an InterconnectA
 <a href="#vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interconnectname_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portalurl_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interconnect_name_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portal_url_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interconnectname_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1583,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1591,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portalurl_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1603,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interconnect_name_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portal_url_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag8021q_nodejs" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag8021q_python" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag8021q_nodejs" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag8021q_python" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.{{% /md %}}</dd></dl>
 {{% /choosable %}}

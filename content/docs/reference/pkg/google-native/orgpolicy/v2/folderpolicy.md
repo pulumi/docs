@@ -20,19 +20,29 @@ Creates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND`
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">folders_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">policies_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_orgpolicy_v2.GoogleCloudOrgpolicyV2PolicySpecArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">folders_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_orgpolicy_v2.GoogleCloudOrgpolicyV2PolicySpecArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFolderPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FolderPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFolderPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FolderPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FolderPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Creates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND`
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FolderPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#foldersid_nodejs" style="color: inherit; text-decoration: inherit;">folders<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#policiesid_nodejs" style="color: inherit; text-decoration: inherit;">policies<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -258,7 +278,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspec">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic information about the Organization Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#folders_id_python" style="color: inherit; text-decoration: inherit;">folders_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#policies_id_python" style="color: inherit; text-decoration: inherit;">policies_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +314,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspec">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspec">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic information about the Organization Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -453,7 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -461,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,7 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reset_nodejs" style="color: inherit; text-decoration: inherit;">reset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrule">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -489,7 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reset_python" style="color: inherit; text-decoration: inherit;">reset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrule">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrule">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowall_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypeexpr">pulumi.<wbr>Input<Google<wbr>Type<wbr>Expr<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypeexpr">Google<wbr>Type<wbr>Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denyall_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -639,7 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvalues">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvalues">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_all_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypeexpr">Google<wbr>Type<wbr>Expr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypeexpr">Google<wbr>Type<wbr>Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_all_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvalues">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvalues">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowall_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -801,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypeexprresponse">pulumi.<wbr>Input<Google<wbr>Type<wbr>Expr<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googletypeexprresponse">Google<wbr>Type<wbr>Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -809,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denyall_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -817,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -825,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvaluesresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvaluesresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_all_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -845,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googletypeexprresponse">Google<wbr>Type<wbr>Expr<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googletypeexprresponse">Google<wbr>Type<wbr>Expr<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -853,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deny_all_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -869,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvaluesresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyrulestringvaluesresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>String<wbr>Values<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values allowed at this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deniedvalues_nodejs" style="color: inherit; text-decoration: inherit;">denied<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values denied at this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values allowed at this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denied_values_python" style="color: inherit; text-decoration: inherit;">denied_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values denied at this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values allowed at this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1013,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deniedvalues_nodejs" style="color: inherit; text-decoration: inherit;">denied<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values denied at this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1025,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values allowed at this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1033,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denied_values_python" style="color: inherit; text-decoration: inherit;">denied_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values denied at this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1143,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reset_nodejs" style="color: inherit; text-decoration: inherit;">reset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyruleresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1167,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reset_python" style="color: inherit; text-decoration: inherit;">reset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyruleresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudorgpolicyv2policyspecpolicyruleresponse">Google<wbr>Cloud<wbr>Orgpolicy<wbr>V2Policy<wbr>Spec<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set `enforced` to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time stamp this was previously updated. This represents the last time a call to `CreatePolicy` or `UpdatePolicy` was made for that `Policy`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1467,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1479,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}

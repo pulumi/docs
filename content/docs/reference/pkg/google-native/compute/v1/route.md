@@ -20,19 +20,45 @@ Creates a Route resource in the specified project using the data included in the
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dest_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_ilb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_instance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_peering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">next_hop_vpn_tunnel</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">route</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">dest_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_ilb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_peering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">next_hop_vpn_tunnel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">route</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_v1.RouteWarningsItemArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +93,32 @@ Creates a Route resource in the specified project using the data included in the
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,7 +362,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
+        <span class="property-type"><a href="#routewarningsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Warnings<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +530,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]map[string]string</span>
+        <span class="property-type"><a href="#routewarningsitem">[]Route<wbr>Warnings<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -506,7 +542,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -514,7 +550,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +558,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +566,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +574,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +582,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +590,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of this resource. Always compute#routes for Route resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +598,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +606,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully-qualified URL of the network that this route applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +614,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-gateway{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +622,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs:  
 - 10.128.0.56 
@@ -597,7 +633,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +642,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network IP address of an instance that should handle matching packets. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +650,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the local network if it should handle matching packets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +658,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthoppeering_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +666,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a VpnTunnel that should handle matching packets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +674,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +682,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +690,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +698,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type"><a href="#routewarningsitem">Route<wbr>Warnings<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -674,7 +710,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -682,7 +718,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +726,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +734,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +742,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +750,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +758,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of this resource. Always compute#routes for Route resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +766,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +774,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully-qualified URL of the network that this route applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +782,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-gateway{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +790,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs:  
 - 10.128.0.56 
@@ -765,7 +801,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example:
 https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +810,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network IP address of an instance that should handle matching packets. Only IPv4 is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +818,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the local network if it should handle matching packets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +826,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_peering_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The network peering name that should handle matching packets, which should conform to RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +834,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to a VpnTunnel that should handle matching packets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +842,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +850,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +858,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +866,7 @@ https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/{{% 
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type"><a href="#routewarningsitem">Route<wbr>Warnings<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,6 +931,410 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="routedataitem">Route<wbr>Data<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning data value corresponding to the key.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routewarningsitem">Route<wbr>Warnings<wbr>Item</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Data<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitem">[]Route<wbr>Data<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitem">Route<wbr>Data<wbr>Item<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitem">Route<wbr>Data<wbr>Item<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routewarningsitemresponse">Route<wbr>Warnings<wbr>Item<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_csharp">
+<a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>V1.<wbr>Inputs.<wbr>Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_go">
+<a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitemresponse">[]Route<wbr>Data<wbr>Item<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_nodejs">
+<a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="data_python">
+<a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routedataitemresponse">Route<wbr>Data<wbr>Item<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}[Output Only] Metadata about this warning in key: value format. For example:
+"data": [ { "key": "scope", "value": "zones/us-east1-d" }{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Output Only] A human-readable description of the warning code.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

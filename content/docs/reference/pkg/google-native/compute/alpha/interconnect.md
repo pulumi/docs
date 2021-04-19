@@ -20,19 +20,52 @@ Creates a Interconnect in the specified project using the data included in the r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">circuit_infos</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.InterconnectCircuitInfoArgs]]]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">customer_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">expected_outages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.InterconnectOutageNotificationArgs]]]]</span> = None<span class="p">, </span><span class="nx">google_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">interconnect_attachments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">interconnect_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">link_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">noc_contact_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">peer_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">provisioned_link_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">requested_link_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">circuit_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.InterconnectCircuitInfoArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">customer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">expected_outages</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.InterconnectOutageNotificationArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">google_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">interconnect_attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">interconnect_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">link_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">noc_contact_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">operational_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">peer_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">provisioned_link_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">requested_link_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnect</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Interconnect</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnect</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Interconnect</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Interconnect</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InterconnectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +100,32 @@ Creates a Interconnect in the specified project using the data included in the r
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InterconnectArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +677,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,7 +685,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +693,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +701,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#circuitinfos_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectcircuitinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Interconnect<wbr>Circuit<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#interconnectcircuitinfo">Interconnect<wbr>Circuit<wbr>Info<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +709,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +717,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#customername_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +725,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +733,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#expectedoutages_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Outages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectoutagenotification">pulumi.<wbr>Input<pulumi.<wbr>Input<Interconnect<wbr>Outage<wbr>Notification<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#interconnectoutagenotification">Interconnect<wbr>Outage<wbr>Notification<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of outages expected for this Interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +741,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#googleipaddress_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] IP address configured on the Google side of the Interconnect link. This can be used only for ping tests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +749,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Google reference ID to be used when raising support tickets with Google or otherwise to debug backend connectivity issues.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +757,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +765,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnectattachments_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of the URLs of all InterconnectAttachments configured to use this Interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +773,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnecttype_nodejs" style="color: inherit; text-decoration: inherit;">interconnect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -740,7 +783,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#interconnect for interconnects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +791,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this Interconnect, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -758,7 +801,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +809,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -776,7 +819,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +827,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +835,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#noccontactemail_nodejs" style="color: inherit; text-decoration: inherit;">noc<wbr>Contact<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +843,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operationalstatus_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -811,7 +854,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#peeripaddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] IP address configured on the customer side of the Interconnect link. The customer should configure this IP address during turnup when prompted by Google NOC. This can be used only for ping tests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +862,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#provisionedlinkcount_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Link<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}[Output Only] Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -827,7 +870,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#requestedlinkcount_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Link<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target number of physical links in the link bundle, as requested by the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +878,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +886,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +894,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -866,7 +909,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -874,7 +917,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +925,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +933,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#circuit_infos_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectcircuitinfo">Interconnect<wbr>Circuit<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#interconnectcircuitinfo">Interconnect<wbr>Circuit<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +941,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +949,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#customer_name_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +957,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +965,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#expected_outages_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>outages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectoutagenotification">Interconnect<wbr>Outage<wbr>Notification<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#interconnectoutagenotification">Interconnect<wbr>Outage<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of outages expected for this Interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +973,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#google_ip_address_python" style="color: inherit; text-decoration: inherit;">google_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] IP address configured on the Google side of the Interconnect link. This can be used only for ping tests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +981,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Google reference ID to be used when raising support tickets with Google or otherwise to debug backend connectivity issues.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +989,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +997,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnect_attachments_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of the URLs of all InterconnectAttachments configured to use this Interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +1005,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#interconnect_type_python" style="color: inherit; text-decoration: inherit;">interconnect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of interconnect, which can take one of the following values: 
 - PARTNER: A partner-managed interconnection shared between customers though a partner. 
@@ -972,7 +1015,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#interconnect for interconnects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +1023,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this Interconnect, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -990,7 +1033,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1041,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of link requested, which can take one of the following values: 
 - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics 
@@ -1008,7 +1051,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1059,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +1067,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#noc_contact_email_python" style="color: inherit; text-decoration: inherit;">noc_<wbr>contact_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1075,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#operational_status_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current status of this Interconnect's functionality, which can take one of the following values: 
 - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to use. Attachments may be provisioned on this Interconnect. 
@@ -1043,7 +1086,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#peer_ip_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] IP address configured on the customer side of the Interconnect link. The customer should configure this IP address during turnup when prompted by Google NOC. This can be used only for ping tests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1094,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#provisioned_link_count_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>link_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}[Output Only] Number of links actually provisioned in this interconnect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1102,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#requested_link_count_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>link_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target number of physical links in the link bundle, as requested by the customer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1110,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1118,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1126,7 @@ To see the latest fingerprint, make a get() request to retrieve an Interconnect.
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of Interconnect functionality, which can take one of the following values: 
 - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments may be provisioned on this Interconnect. 
@@ -1221,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerdemarcid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Demarc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer-side demarc ID for this circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google-assigned unique ID for this circuit. Assigned at circuit turn-up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googledemarcid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Demarc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1249,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_demarc_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>demarc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customer-side demarc ID for this circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_circuit_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google-assigned unique ID for this circuit. Assigned at circuit turn-up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_demarc_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>demarc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerdemarcid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Demarc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer-side demarc ID for this circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googlecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google-assigned unique ID for this circuit. Assigned at circuit turn-up.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1351,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googledemarcid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Demarc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_demarc_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>demarc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customer-side demarc ID for this circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_circuit_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google-assigned unique ID for this circuit. Assigned at circuit turn-up.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1379,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_demarc_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>demarc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1539,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#affectedcircuits_nodejs" style="color: inherit; text-decoration: inherit;">affected<wbr>Circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If issue_type is IT_PARTIAL_OUTAGE, a list of the Google-side circuit IDs that will be affected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description about the purpose of the outage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled end time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuetype_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1573,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this outage notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled start time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1612,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#affected_circuits_python" style="color: inherit; text-decoration: inherit;">affected_<wbr>circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If issue_type is IT_PARTIAL_OUTAGE, a list of the Google-side circuit IDs that will be affected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description about the purpose of the outage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled end time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1636,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issue_type_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1646,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this outage notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled start time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1833,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#affectedcircuits_nodejs" style="color: inherit; text-decoration: inherit;">affected<wbr>Circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If issue_type is IT_PARTIAL_OUTAGE, a list of the Google-side circuit IDs that will be affected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1841,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description about the purpose of the outage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1849,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled end time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1857,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuetype_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1867,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this outage notification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-required"
@@ -1884,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheduled start time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1892,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 
@@ -1906,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#affected_circuits_python" style="color: inherit; text-decoration: inherit;">affected_<wbr>circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If issue_type is IT_PARTIAL_OUTAGE, a list of the Google-side circuit IDs that will be affected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1914,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description about the purpose of the outage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1922,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled end time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1930,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issue_type_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Form this outage is expected to take, which can take one of the following values: 
 - OUTAGE: The Interconnect may be completely out of service for some or all of the specified window. 
@@ -1940,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this outage notification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1948,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The party that generated this notification, which can take the following value: 
 - GOOGLE: this notification as generated by Google. Note that the value of NSRC_GOOGLE has been deprecated in favor of GOOGLE.{{% /md %}}</dd><dt class="property-required"
@@ -1957,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheduled start time for the outage (milliseconds since Unix epoch).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1965,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of this notification, which can take one of the following values: 
 - ACTIVE: This outage notification is active. The event could be in the past, present, or future. See start_time and end_time for scheduling. 

@@ -20,19 +20,39 @@ Creates a BackendBucket resource in the specified project using the data include
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.BackendBucketCdnPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">edge_security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">backend_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.BackendBucketCdnPolicyArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">edge_security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendBucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendBucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackendBucketArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +87,32 @@ Creates a BackendBucket resource in the specified project using the data include
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BackendBucketArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -402,7 +432,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backendbucket_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -410,7 +440,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +448,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +456,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">pulumi.<wbr>Input<Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendBucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +464,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +472,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +480,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the client when the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +488,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#edgesecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the edge security policy associated with this backend bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +496,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +504,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the resource; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +512,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +520,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +528,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +536,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +548,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backend_bucket_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -526,7 +556,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +564,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +572,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendBucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +580,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +588,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +596,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the client when the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +604,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#edge_security_policy_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The resource URL for the edge security policy associated with this backend bucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +612,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +620,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Unique identifier for the resource; defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +628,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +636,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +644,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +652,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -897,7 +927,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypasscacheonrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheader">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +935,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -919,7 +949,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +957,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +965,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +973,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +981,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecachingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +989,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#requestcoalescing_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +997,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +1005,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +1013,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlkeynames_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Key<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +1025,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypass_cache_on_request_headers_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheader">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheader">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +1033,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -1017,7 +1047,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1055,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1063,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1071,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1079,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_policy_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1087,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#request_coalescing_python" style="color: inherit; text-decoration: inherit;">request_<wbr>coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1095,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1103,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1111,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_key_names_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>key_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1149,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1131,7 +1161,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1199,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1211,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name to match on when bypassing cache. Values are case-insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1265,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1273,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1285,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1293,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1347,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1355,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1337,7 +1367,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1345,7 +1375,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1585,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypasscacheonrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1593,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -1577,7 +1607,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1585,7 +1615,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1593,7 +1623,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1601,7 +1631,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1609,7 +1639,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negativecachingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicyresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1617,7 +1647,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#requestcoalescing_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1625,7 +1655,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1633,7 +1663,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1641,7 +1671,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signedurlkeynames_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Key<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1683,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#bypass_cache_on_request_headers_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicybypasscacheonrequestheaderresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Bypass<wbr>Cache<wbr>On<wbr>Request<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1661,7 +1691,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend. The possible values are:
 
@@ -1675,7 +1705,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and default_ttl is used for the response max-age directive, along with a "public" directive. For cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if specified), or else sets the response max-age directive to the lesser of the client_ttl and default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1 day).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1713,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1721,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin. Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1699,7 +1729,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code, and override any caching headers. By default, Cloud CDN will apply the following default TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in negative_caching_policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1737,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#negative_caching_policy_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicyresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicyresponse">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled will use Cloud CDN's default cache TTLs. Note that when specifying an explicit negative_caching_policy, you should take care to specify a cache TTL for all response codes that you wish to cache. Cloud CDN will not apply any default negative caching when a policy exists.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1745,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#request_coalescing_python" style="color: inherit; text-decoration: inherit;">request_<wbr>coalescing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1753,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this to zero (0) to disable serve-while-stale.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1731,7 +1761,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1769,7 @@ CACHE_ALL_STATIC Automatically cache static content, including common image form
 <a href="#signed_url_key_names_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>key_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Names of the keys for signing request URLs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

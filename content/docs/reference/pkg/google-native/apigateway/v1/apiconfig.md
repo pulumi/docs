@@ -20,19 +20,35 @@ Creates a new ApiConfig in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apis_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">configs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">gateway_service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">grpc_services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigateway_v1.ApigatewayApiConfigGrpcServiceDefinitionArgs]]]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">managed_service_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigateway_v1.ApigatewayApiConfigFileArgs]]]]</span> = None<span class="p">, </span><span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigateway_v1.ApigatewayApiConfigOpenApiDocumentArgs]]]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">apis_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">configs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">gateway_service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">grpc_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigateway_v1.ApigatewayApiConfigGrpcServiceDefinitionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">managed_service_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigateway_v1.ApigatewayApiConfigFileArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigateway_v1.ApigatewayApiConfigOpenApiDocumentArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Creates a new ApiConfig in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApiConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#apisid_nodejs" style="color: inherit; text-decoration: inherit;">apis<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configsid_nodejs" style="color: inherit; text-decoration: inherit;">configs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +388,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#gatewayserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grpcservices_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfiggrpcservicedefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>Grpc<wbr>Service<wbr>Definition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfiggrpcservicedefinition">Apigateway<wbr>Api<wbr>Config<wbr>Grpc<wbr>Service<wbr>Definition<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. gRPC service definition files. If specified, openapi_documents must not be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managedserviceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#openapidocuments_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigopenapidocument">pulumi.<wbr>Input<pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>Open<wbr>Api<wbr>Document<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigopenapidocument">Apigateway<wbr>Api<wbr>Config<wbr>Open<wbr>Api<wbr>Document<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#apis_id_python" style="color: inherit; text-decoration: inherit;">apis_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configs_id_python" style="color: inherit; text-decoration: inherit;">configs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -446,7 +472,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#gateway_service_account_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grpc_services_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfiggrpcservicedefinition">Apigateway<wbr>Api<wbr>Config<wbr>Grpc<wbr>Service<wbr>Definition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfiggrpcservicedefinition">Apigateway<wbr>Api<wbr>Config<wbr>Grpc<wbr>Service<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. gRPC service definition files. If specified, openapi_documents must not be included.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managed_service_configs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#openapi_documents_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigopenapidocument">Apigateway<wbr>Api<wbr>Config<wbr>Open<wbr>Api<wbr>Document<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigopenapidocument">Apigateway<wbr>Api<wbr>Config<wbr>Open<wbr>Api<wbr>Document<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes that constitute the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -793,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes that constitute the file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes that constitute the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes that constitute the file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filedescriptorset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Descriptor<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. File descriptor set, generated by protoc. To generate, use protoc with imports and source info included. For an example test.proto file, the following command would put the value in a new file named out.pb. $ protoc --include_imports --include_source_info test.proto -o out.pb{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Uncompiled proto files associated with the descriptor set, used for display purposes (server-side compilation is not supported). These should match the inputs to 'protoc' command used to generate file_descriptor_set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -957,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_descriptor_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>descriptor_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. File descriptor set, generated by protoc. To generate, use protoc with imports and source info included. For an example test.proto file, the following command would put the value in a new file named out.pb. $ protoc --include_imports --include_source_info test.proto -o out.pb{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Uncompiled proto files associated with the descriptor set, used for display purposes (server-side compilation is not supported). These should match the inputs to 'protoc' command used to generate file_descriptor_set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filedescriptorset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Descriptor<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. File descriptor set, generated by protoc. To generate, use protoc with imports and source info included. For an example test.proto file, the following command would put the value in a new file named out.pb. $ protoc --include_imports --include_source_info test.proto -o out.pb{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1027,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Uncompiled proto files associated with the descriptor set, used for display purposes (server-side compilation is not supported). These should match the inputs to 'protoc' command used to generate file_descriptor_set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_descriptor_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>descriptor_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input only. File descriptor set, generated by protoc. To generate, use protoc with imports and source info included. For an example test.proto file, the following command would put the value in a new file named out.pb. $ protoc --include_imports --include_source_info test.proto -o out.pb{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Uncompiled proto files associated with the descriptor set, used for display purposes (server-side compilation is not supported). These should match the inputs to 'protoc' command used to generate file_descriptor_set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1097,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfile">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">pulumi.<wbr>Input<Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apigatewayapiconfigfileresponse">Apigateway<wbr>Api<wbr>Config<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.{{% /md %}}</dd></dl>
 {{% /choosable %}}

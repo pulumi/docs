@@ -20,19 +20,35 @@ Create a ServiceLevelObjective for the given Service.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">rolling_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_level_indicator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_monitoring_v3.ServiceLevelIndicatorArgs]]</span> = None<span class="p">, </span><span class="nx">service_level_objectives_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">v3_id1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+                                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">rolling_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">service_level_indicator</span><span class="p">:</span> <span class="nx">Optional[_monitoring_v3.ServiceLevelIndicatorArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">service_level_objectives_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">services_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">v3_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                 <span class="nx">v3_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceServiceLevelObjective</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceServiceLevelObjective</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceServiceLevelObjective</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Create a ServiceLevelObjective for the given Service.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceServiceLevelObjectiveArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#servicelevelobjectivesid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Objectives<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#servicesid_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#v3id_nodejs" style="color: inherit; text-decoration: inherit;">v3Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -362,7 +388,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#v3id1_nodejs" style="color: inherit; text-decoration: inherit;">v3Id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#rollingperiod_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#servicelevelindicator_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelindicator">pulumi.<wbr>Input<Service<wbr>Level<wbr>Indicator<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#service_level_objectives_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>objectives_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#services_id_python" style="color: inherit; text-decoration: inherit;">services_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#v3_id_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -446,7 +472,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#v3_id1_python" style="color: inherit; text-decoration: inherit;">v3_<wbr>id1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME] {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#rolling_period_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The ServiceServiceLevelObjective resource accepts the following [input]({{< relr
 <a href="#service_level_indicator_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicelevelindicator">Service<wbr>Level<wbr>Indicator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitycriteria">pulumi.<wbr>Input<Availability<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#availabilitycriteria">Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return successfully.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latencycriteria">pulumi.<wbr>Input<Latency<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#latencycriteria">Latency<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitycriteria">Availability<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#availabilitycriteria">Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return successfully.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latencycriteria">Latency<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#latencycriteria">Latency<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitycriteriaresponse">pulumi.<wbr>Input<Availability<wbr>Criteria<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#availabilitycriteriaresponse">Availability<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latencycriteriaresponse">pulumi.<wbr>Input<Latency<wbr>Criteria<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#latencycriteriaresponse">Latency<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -883,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitycriteriaresponse">Availability<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#availabilitycriteriaresponse">Availability<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -891,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#latencycriteriaresponse">Latency<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#latencycriteriaresponse">Latency<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -899,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -915,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3range">pulumi.<wbr>Input<Google<wbr>Monitoring<wbr>V3Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">pulumi.<wbr>Input<Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Range maximum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Range minimum.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Range maximum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Range minimum.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Range maximum.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Range minimum.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Range maximum.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Range minimum.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1281,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return in no more than threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1293,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return in no more than threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return in no more than threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Good service is defined to be the count of requests made to this service that return in no more than threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3range">pulumi.<wbr>Input<Google<wbr>Monitoring<wbr>V3Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlemonitoringv3range">Google<wbr>Monitoring<wbr>V3Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1479,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">pulumi.<wbr>Input<Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlemonitoringv3rangeresponse">Google<wbr>Monitoring<wbr>V3Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of values considered "good." For a one-sided range, set one bound to an infinite value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsli">pulumi.<wbr>Input<Basic<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BasicSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsli">pulumi.<wbr>Input<Request<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RequestBasedSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If window performance >= threshold, the window is counted as good.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1605,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BasicSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RequestBasedSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If window performance >= threshold, the window is counted as good.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsliresponse">pulumi.<wbr>Input<Basic<wbr>Sli<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BasicSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1699,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsliresponse">pulumi.<wbr>Input<Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RequestBasedSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If window performance >= threshold, the window is counted as good.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BasicSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RequestBasedSli to evaluate to judge window quality.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1735,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If window performance >= threshold, the window is counted as good.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1789,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncut">pulumi.<wbr>Input<Distribution<wbr>Cut<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributioncut">Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesratio">pulumi.<wbr>Input<Time<wbr>Series<wbr>Ratio<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesratio">Time<wbr>Series<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1809,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncut">Distribution<wbr>Cut<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributioncut">Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesratio">Time<wbr>Series<wbr>Ratio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesratio">Time<wbr>Series<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1871,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncutresponse">pulumi.<wbr>Input<Distribution<wbr>Cut<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributioncutresponse">Distribution<wbr>Cut<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1879,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesratioresponse">pulumi.<wbr>Input<Time<wbr>Series<wbr>Ratio<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeseriesratioresponse">Time<wbr>Series<wbr>Ratio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1891,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncutresponse">Distribution<wbr>Cut<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributioncutresponse">Distribution<wbr>Cut<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1899,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesratioresponse">Time<wbr>Series<wbr>Ratio<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeseriesratioresponse">Time<wbr>Series<wbr>Ratio<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsli">pulumi.<wbr>Input<Basic<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI on a well-known service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestbased_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsli">pulumi.<wbr>Input<Request<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsbased_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsbasedsli">pulumi.<wbr>Input<Windows<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#windowsbasedsli">Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows-based SLIs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicsli">Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI on a well-known service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_based_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbasedsli">Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_based_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsbasedsli">Windows<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowsbasedsli">Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows-based SLIs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsliresponse">pulumi.<wbr>Input<Basic<wbr>Sli<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI on a well-known service type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestbased_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsliresponse">pulumi.<wbr>Input<Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLIs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsbased_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsbasedsliresponse">pulumi.<wbr>Input<Windows<wbr>Based<wbr>Sli<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#windowsbasedsliresponse">Windows<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows-based SLIs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#basicsliresponse">Basic<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI on a well-known service type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_based_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbasedsliresponse">Request<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLIs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_based_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsbasedsliresponse">Windows<wbr>Based<wbr>Sli<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowsbasedsliresponse">Windows<wbr>Based<wbr>Sli<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows-based SLIs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2197,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2327,7 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2339,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2347,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2355,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodbadmetricfilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancethreshold">pulumi.<wbr>Input<Performance<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#performancethreshold">Performance<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if its performance is high enough.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrange">pulumi.<wbr>Input<Metric<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, averaged across returned streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrange">pulumi.<wbr>Input<Metric<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, summed across returned streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowperiod_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_bad_metric_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>bad_<wbr>metric_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancethreshold">Performance<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#performancethreshold">Performance<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if its performance is high enough.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, averaged across returned streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricrange">Metric<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, summed across returned streams.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_period_python" style="color: inherit; text-decoration: inherit;">window_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodbadmetricfilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2643,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancethresholdresponse">pulumi.<wbr>Input<Performance<wbr>Threshold<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#performancethresholdresponse">Performance<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if its performance is high enough.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2651,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrangeresponse">pulumi.<wbr>Input<Metric<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, averaged across returned streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2659,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrangeresponse">pulumi.<wbr>Input<Metric<wbr>Range<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, summed across returned streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2667,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowperiod_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2679,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_bad_metric_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>bad_<wbr>metric_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancethresholdresponse">Performance<wbr>Threshold<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#performancethresholdresponse">Performance<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if its performance is high enough.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, averaged across returned streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2703,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricrangeresponse">Metric<wbr>Range<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A window is good if the metric's value is in a good range, summed across returned streams.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2711,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#window_period_python" style="color: inherit; text-decoration: inherit;">window_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.{{% /md %}}</dd></dl>
 {{% /choosable %}}

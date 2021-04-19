@@ -20,19 +20,42 @@ Creates a network in the specified project using the data included in the reques
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Network</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Network</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Network</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">i_pv4_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">auto_create_subnetworks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">gateway_i_pv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">peerings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.NetworkPeeringArgs]]]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">routing_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.NetworkRoutingConfigArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Network</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">i_pv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">auto_create_subnetworks</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">firewall_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">gateway_i_pv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">peerings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.NetworkPeeringArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">routing_config</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.NetworkRoutingConfigArgs]</span> = None<span class="p">,</span>
+            <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Network</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetwork</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Network</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetwork</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Network</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Network</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Network</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +90,32 @@ Creates a network in the specified project using the data included in the reques
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NetworkArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -462,7 +495,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -470,7 +503,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +511,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#ipv4range_nodejs" style="color: inherit; text-decoration: inherit;">IPv4Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +519,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#autocreatesubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Must be set to create a VPC network. If not set, a legacy network is created.
 
@@ -500,7 +533,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -508,7 +541,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +549,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#firewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the firewall policy the network is associated with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +557,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#gatewayipv4_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>IPv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +565,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +573,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#network for networks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +581,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +589,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +597,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#peerings_nodejs" style="color: inherit; text-decoration: inherit;">peerings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpeering">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Peering<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkpeering">Network<wbr>Peering<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +605,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#routingconfig_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkroutingconfig">pulumi.<wbr>Input<Network<wbr>Routing<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkroutingconfig">Network<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +613,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -588,7 +621,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +629,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -608,7 +641,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -616,7 +649,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +657,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#auto_create_subnetworks_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Must be set to create a VPC network. If not set, a legacy network is created.
 
@@ -638,7 +671,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +679,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this field when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +687,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#firewall_policy_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] URL of the firewall policy the network is associated with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +695,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#gateway_i_pv4_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>i_<wbr>pv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +703,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#i_pv4_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>pv4_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +711,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +719,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#network for networks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +727,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +735,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +743,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#peerings_python" style="color: inherit; text-decoration: inherit;">peerings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpeering">Network<wbr>Peering<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkpeering">Network<wbr>Peering<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}[Output Only] A list of network peerings for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +751,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkroutingconfig">Network<wbr>Routing<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkroutingconfig">Network<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +759,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +767,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource with the resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +775,7 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisepeersubnetsviarouters_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Peer<wbr>Subnets<wbr>Via<wbr>Routers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Cloud Routers in this network can automatically advertise subnets from the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autocreateroutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchangesubnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">exchange<wbr>Subnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peermtu_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statedetails_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Details about the current state of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertise_peer_subnets_via_routers_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>peer_<wbr>subnets_<wbr>via_<wbr>routers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Cloud Routers in this network can automatically advertise subnets from the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_create_routes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_subnet_routes_python" style="color: inherit; text-decoration: inherit;">exchange_<wbr>subnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_mtu_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_details_python" style="color: inherit; text-decoration: inherit;">state_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Details about the current state of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisepeersubnetsviarouters_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Peer<wbr>Subnets<wbr>Via<wbr>Routers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Cloud Routers in this network can automatically advertise subnets from the peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autocreateroutes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1439,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchangesubnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">exchange<wbr>Subnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1447,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1455,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1471,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1479,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peermtu_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statedetails_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Details about the current state of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertise_peer_subnets_via_routers_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>peer_<wbr>subnets_<wbr>via_<wbr>routers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Cloud Routers in this network can automatically advertise subnets from the peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_create_routes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_subnet_routes_python" style="color: inherit; text-decoration: inherit;">exchange_<wbr>subnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_mtu_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1603,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1611,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_details_python" style="color: inherit; text-decoration: inherit;">state_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Details about the current state of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1649,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingmode_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1661,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_mode_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingmode_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_mode_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.{{% /md %}}</dd></dl>
 {{% /choosable %}}

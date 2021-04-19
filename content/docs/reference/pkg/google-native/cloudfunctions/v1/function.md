@@ -20,19 +20,50 @@ Creates a new function. If a function with the given name already exists in the 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">build_worker_pool</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudfunctions_v1.EventTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">functions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">https_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudfunctions_v1.HttpsTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_archive_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_cloudfunctions_v1.SourceRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">source_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_upload_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">build_worker_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.EventTriggerArgs]</span> = None<span class="p">,</span>
+             <span class="nx">functions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">https_trigger</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.HttpsTriggerArgs]</span> = None<span class="p">,</span>
+             <span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">source_archive_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[_cloudfunctions_v1.SourceRepositoryArgs]</span> = None<span class="p">,</span>
+             <span class="nx">source_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">source_upload_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +98,32 @@ Creates a new function. If a function with the given name already exists in the 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,7 +619,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functionsid_nodejs" style="color: inherit; text-decoration: inherit;">functions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -586,7 +627,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -594,7 +635,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +643,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory in MB available for a function. Defaults to 256MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +651,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Build environment variables that shall be available during build time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +659,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#buildworkerpool_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Worker<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where {project} and {region} are the project id and region respectively where the worker pool is defined and {workerPool} is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (service-@gcf-admin-robot.iam.gserviceaccount.com) must be granted the role Cloud Build Custom Workers Builder (roles/cloudbuild.customworkers.builder) in the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +667,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-provided description of a function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +675,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function". For Node.js this is name of a function exported by the module specified in `source_location`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +683,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables that shall be available during function execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +691,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#eventtrigger_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtrigger">pulumi.<wbr>Input<Event<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventtrigger">Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +699,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#httpstrigger_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpstrigger">pulumi.<wbr>Input<Https<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpstrigger">Https<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint type of source that can be triggered via URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +707,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +715,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels associated with this Cloud Function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +723,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +731,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally and match pattern `projects/*/locations/*/functions/*`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +739,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where {project} is a project id where the network is defined, and {network} is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +747,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](/sdk/gcloud/reference/functions/deploy#--runtime).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +755,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +763,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourcearchiveurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Storage URL, starting with gs://, pointing to the zip archive which contains the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +771,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcerepository">pulumi.<wbr>Input<Source<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#sourcerepository">Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The source repository where a function is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +779,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourcetoken_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +787,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sourceuploadurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Upload<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Storage signed URL used for source uploading, generated by google.cloud.functions.v1.GenerateUploadUrl{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +795,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +803,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*/locations/*/connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +811,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -782,7 +823,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#functions_id_python" style="color: inherit; text-decoration: inherit;">functions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -790,7 +831,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -798,7 +839,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +847,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory in MB available for a function. Defaults to 256MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +855,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Build environment variables that shall be available during build time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +863,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#build_worker_pool_python" style="color: inherit; text-decoration: inherit;">build_<wbr>worker_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where {project} and {region} are the project id and region respectively where the worker pool is defined and {workerPool} is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (service-@gcf-admin-robot.iam.gserviceaccount.com) must be granted the role Cloud Build Custom Workers Builder (roles/cloudbuild.customworkers.builder) in the project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +871,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-provided description of a function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +879,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function". For Node.js this is name of a function exported by the module specified in `source_location`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +887,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables that shall be available during function execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +895,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#event_trigger_python" style="color: inherit; text-decoration: inherit;">event_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventtrigger">Event<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventtrigger">Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +903,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#https_trigger_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpstrigger">Https<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpstrigger">Https<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint type of source that can be triggered via URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +911,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ingress settings for the function, controlling what traffic can reach it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +919,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels associated with this Cloud Function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +927,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +935,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally and match pattern `projects/*/locations/*/functions/*`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +943,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where {project} is a project id where the network is defined, and {network} is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +951,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](/sdk/gcloud/reference/functions/deploy#--runtime).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +959,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +967,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_archive_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Storage URL, starting with gs://, pointing to the zip archive which contains the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +975,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcerepository">Source<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcerepository">Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}**Beta Feature** The source repository where a function is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +983,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_token_python" style="color: inherit; text-decoration: inherit;">source_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +991,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_upload_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>upload_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Storage signed URL used for source uploading, generated by google.cloud.functions.v1.GenerateUploadUrl{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +999,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1007,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*/locations/*/connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1015,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*/eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is 'change'. These parts are lower case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failurepolicy">pulumi.<wbr>Input<Failure<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#failurepolicy">Failure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized "long" format. See each *service's* documentation for supported formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*/eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is 'change'. These parts are lower case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failurepolicy">Failure<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#failurepolicy">Failure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized "long" format. See each *service's* documentation for supported formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*/eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is 'change'. These parts are lower case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1407,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failurepolicyresponse">pulumi.<wbr>Input<Failure<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#failurepolicyresponse">Failure<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1415,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized "long" format. See each *service's* documentation for supported formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1423,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*/eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is 'change'. These parts are lower case.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1443,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failurepolicyresponse">Failure<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#failurepolicyresponse">Failure<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized "long" format. See each *service's* documentation for supported formats.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1497,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retry">pulumi.<wbr>Input<Retry<wbr>Args></a></span>
+        <span class="property-type"><a href="#retry">Retry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, then the function will be retried in case of a failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retry">Retry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retry">Retry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, then the function will be retried in case of a failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retryresponse">pulumi.<wbr>Input<Retry<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retryresponse">Retry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, then the function will be retried in case of a failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1559,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retryresponse">Retry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retryresponse">Retry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, then the function will be retried in case of a failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1609,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1671,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployed url for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1683,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security level for the function.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployed url for the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1729,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*` You may omit `paths/*` if you want to use the main directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1741,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*` You may omit `paths/*` if you want to use the main directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployedurl_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function were defined at the time of deployment. It always points to a specific commit in the format described above.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*` You may omit `paths/*` if you want to use the main directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployed_url_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function were defined at the time of deployment. It always points to a specific commit in the format described above.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*` You may omit `paths/*` if you want to use the main directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}

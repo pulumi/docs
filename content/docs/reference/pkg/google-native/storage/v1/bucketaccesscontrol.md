@@ -20,19 +20,36 @@ Creates a new ACL entry on the specified bucket.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project_team</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">entity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">entity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">project_team</span><span class="p">:</span> <span class="nx">Optional[_storage_v1.BucketAccessControlProjectTeamArgs]</span> = None<span class="p">,</span>
+                        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucketAccessControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BucketAccessControl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucketAccessControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BucketAccessControl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BucketAccessControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BucketAccessControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +84,32 @@ Creates a new ACL entry on the specified bucket.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BucketAccessControlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -245,7 +272,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#projectteam_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage.<wbr>V1.<wbr>Inputs.<wbr>Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -348,7 +375,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#projectteam_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -376,7 +403,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -384,7 +411,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -403,7 +430,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -411,7 +438,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -419,7 +446,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -427,7 +454,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +462,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -443,7 +470,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -451,7 +478,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#projectteam_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +486,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +494,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -479,7 +506,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -487,7 +514,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: 
 - user-userId 
@@ -506,7 +533,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +541,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +549,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +557,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP 1.1 Entity tag for the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +565,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the access-control entry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +573,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +581,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#project_team_python" style="color: inherit; text-decoration: inherit;">project_<wbr>team</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +589,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +597,7 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The link to this access-control entry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -635,6 +662,174 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="bucketaccesscontrolprojectteam">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="bucketaccesscontrolprojectteamresponse">Bucket<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_csharp">
+<a href="#projectnumber_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_csharp">
+<a href="#team_csharp" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_go">
+<a href="#projectnumber_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_go">
+<a href="#team_go" style="color: inherit; text-decoration: inherit;">Team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projectnumber_nodejs">
+<a href="#projectnumber_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_nodejs">
+<a href="#team_nodejs" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="project_number_python">
+<a href="#project_number_python" style="color: inherit; text-decoration: inherit;">project_<wbr>number</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project number.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="team_python">
+<a href="#team_python" style="color: inherit; text-decoration: inherit;">team</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The team.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

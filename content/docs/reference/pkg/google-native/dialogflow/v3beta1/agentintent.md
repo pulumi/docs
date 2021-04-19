@@ -20,19 +20,37 @@ Creates an intent in the specified agent.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">intents_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1IntentParameterArgs]]]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">training_phrases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">agents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">intents_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">is_fallback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1IntentParameterArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">training_phrases</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dialogflow_v3beta1.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentIntent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAgentIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AgentIntent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AgentIntent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AgentIntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates an intent in the specified agent.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AgentIntentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -204,7 +232,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -228,7 +256,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -304,7 +332,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -328,7 +356,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,7 +398,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#agentsid_nodejs" style="color: inherit; text-decoration: inherit;">agents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#intentsid_nodejs" style="color: inherit; text-decoration: inherit;">intents<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +414,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -394,7 +422,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,15 +430,15 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,15 +454,15 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Parameter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#trainingphrases_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrase">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#agents_id_python" style="color: inherit; text-decoration: inherit;">agents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#intents_id_python" style="color: inherit; text-decoration: inherit;">intents_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +514,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +522,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,15 +530,15 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The human-readable name of the intent, unique within the agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,15 +554,15 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intentparameter">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters associated with the intent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The AgentIntent resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#training_phrases_python" style="color: inherit; text-decoration: inherit;">training_<wbr>phrases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrase">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of training phrases the agent is trained on to identify the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the parameter. This field is used by training phrases to annotate their parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The unique identifier of the parameter. This field is used by training phrases to annotate their parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_nodejs" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter represents a list of values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redact_python" style="color: inherit; text-decoration: inherit;">redact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepart">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatcount_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -981,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepart">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_count_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterid_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_id_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterid_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1141,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_id_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1161,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The text for this part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepartresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeatcount_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1235,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddialogflowcxv3beta1intenttrainingphrasepartresponse">Google<wbr>Cloud<wbr>Dialogflow<wbr>Cx<wbr>V3beta1Intent<wbr>Training<wbr>Phrase<wbr>Part<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `parameter_id` field is set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1243,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repeat_count_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates how many times this example was added to the intent.{{% /md %}}</dd></dl>
 {{% /choosable %}}

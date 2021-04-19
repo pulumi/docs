@@ -20,19 +20,32 @@ Create a new environment.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_composer_v1beta1.EnvironmentConfigArgs]]</span> = None<span class="p">, </span><span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_composer_v1beta1.EnvironmentConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">environments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEnvironment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Environment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Environment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +80,32 @@ Create a new environment.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EnvironmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +313,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environmentsid_nodejs" style="color: inherit; text-decoration: inherit;">environments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -298,7 +321,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -306,7 +329,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +337,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">pulumi.<wbr>Input<Environment<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -350,7 +373,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environments_id_python" style="color: inherit; text-decoration: inherit;">environments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -358,7 +381,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -366,7 +389,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +397,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -382,7 +405,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +413,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +421,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -613,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description. It must contain at most 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to. Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,7 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description. It must contain at most 300 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to. Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -695,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description. It must contain at most 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to. Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. User-provided description. It must contain at most 300 characters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -723,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to. Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -811,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -873,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseconfig">pulumi.<wbr>Input<Database<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#databaseconfig">Database<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The encryption options for the Composer environment and its dependencies. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">pulumi.<wbr>Input<Maintenance<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">pulumi.<wbr>Input<Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateenvironmentconfig">pulumi.<wbr>Input<Private<wbr>Environment<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateenvironmentconfig">Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfig">pulumi.<wbr>Input<Software<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webserverconfig">pulumi.<wbr>Input<Web<wbr>Server<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#webserverconfig">Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for the Airflow web server App Engine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservernetworkaccesscontrol">pulumi.<wbr>Input<Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#webservernetworkaccesscontrol">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseconfig">Database<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseconfig">Database<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The encryption options for the Composer environment and its dependencies. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindow">Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeconfig">Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateenvironmentconfig">Private<wbr>Environment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateenvironmentconfig">Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwareconfig">Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webserverconfig">Web<wbr>Server<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webserverconfig">Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for the Airflow web server App Engine instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservernetworkaccesscontrol">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webservernetworkaccesscontrol">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1443,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflowuri_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1451,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daggcsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Gcs<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseconfigresponse">pulumi.<wbr>Input<Database<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#databaseconfigresponse">Database<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1467,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">pulumi.<wbr>Input<Encryption<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The encryption options for the Composer environment and its dependencies. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1475,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes Engine cluster used to run this environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowresponse">pulumi.<wbr>Input<Maintenance<wbr>Window<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigresponse">pulumi.<wbr>Input<Node<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodeconfigresponse">Node<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateenvironmentconfigresponse">pulumi.<wbr>Input<Private<wbr>Environment<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateenvironmentconfigresponse">Private<wbr>Environment<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfigresponse">pulumi.<wbr>Input<Software<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1523,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webserverconfigresponse">pulumi.<wbr>Input<Web<wbr>Server<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#webserverconfigresponse">Web<wbr>Server<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for the Airflow web server App Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservernetworkaccesscontrolresponse">pulumi.<wbr>Input<Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#webservernetworkaccesscontrolresponse">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1543,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflow_uri_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dag_gcs_prefix_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>gcs_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseconfigresponse">Database<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseconfigresponse">Database<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The encryption options for the Composer environment and its dependencies. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1575,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes Engine cluster used to run this environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1583,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#maintenancewindowresponse">Maintenance<wbr>Window<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1591,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigresponse">Node<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeconfigresponse">Node<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateenvironmentconfigresponse">Private<wbr>Environment<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateenvironmentconfigresponse">Private<wbr>Environment<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1615,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#softwareconfigresponse">Software<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webserverconfigresponse">Web<wbr>Server<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webserverconfigresponse">Web<wbr>Server<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The configuration settings for the Airflow web server App Engine instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1631,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webservernetworkaccesscontrolresponse">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webservernetworkaccesscontrolresponse">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1733,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range of the services IP addresses in this cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range of the services IP addresses in this cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1911,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range of the services IP addresses in this cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The IP address range of the services IP addresses in this cluster. This field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1979,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. This field is applicable only when `use_ip_aliases` is true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2057,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Start time of the first recurrence of the maintenance window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Start time of the first recurrence of the maintenance window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Start time of the first recurrence of the maintenance window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2207,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Start time of the first recurrence of the maintenance window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2397,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2405,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipallocationpolicy">pulumi.<wbr>Input<IPAllocation<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipallocationpolicy">IPAllocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The IPAllocationPolicy fields for the GKE cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs used to run the Apache Airflow software, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If only one field (`location` or `nodeConfig.machineType`) is specified, the location information from the specified field will be propagated to the unspecified field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster instances, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.location` are specified, this `machineType` must belong to the `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If exactly one of this field and `nodeConfig.location` is specified, the location information from the specified field will be propagated to the unspecified field. The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must be between 8 and 110 and it can be set only if the environment is VPC-native. The default value is 32. Values of this field will be propagated both to the `default-pool` node pool of the newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for newly created node pools if their value is not explicitly set during node pool creation. For more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the environment's project is used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see `nodeConfig.subnetwork`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes` is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the enclosing environment's project and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2481,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipallocationpolicy">IPAllocation<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipallocationpolicy">IPAllocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The IPAllocationPolicy fields for the GKE cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs used to run the Apache Airflow software, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If only one field (`location` or `nodeConfig.machineType`) is specified, the location information from the specified field will be propagated to the unspecified field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster instances, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.location` are specified, this `machineType` must belong to the `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If exactly one of this field and `nodeConfig.location` is specified, the location information from the specified field will be propagated to the unspecified field. The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must be between 8 and 110 and it can be set only if the environment is VPC-native. The default value is 32. Values of this field will be propagated both to the `default-pool` node pool of the newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for newly created node pools if their value is not explicitly set during node pool creation. For more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the environment's project is used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see `nodeConfig.subnetwork`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes` is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the enclosing environment's project and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2735,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2743,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipallocationpolicyresponse">pulumi.<wbr>Input<IPAllocation<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipallocationpolicyresponse">IPAllocation<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The IPAllocationPolicy fields for the GKE cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2751,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs used to run the Apache Airflow software, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If only one field (`location` or `nodeConfig.machineType`) is specified, the location information from the specified field will be propagated to the unspecified field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2759,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster instances, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.location` are specified, this `machineType` must belong to the `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If exactly one of this field and `nodeConfig.location` is specified, the location information from the specified field will be propagated to the unspecified field. The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2767,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must be between 8 and 110 and it can be set only if the environment is VPC-native. The default value is 32. Values of this field will be propagated both to the `default-pool` node pool of the newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for newly created node pools if their value is not explicitly set during node pool creation. For more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the environment's project is used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see `nodeConfig.subnetwork`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2783,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes` is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2799,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the enclosing environment's project and location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2807,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2819,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipallocationpolicyresponse">IPAllocation<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipallocationpolicyresponse">IPAllocation<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. The IPAllocationPolicy fields for the GKE cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs used to run the Apache Airflow software, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If only one field (`location` or `nodeConfig.machineType`) is specified, the location information from the specified field will be propagated to the unspecified field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster instances, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.location` are specified, this `machineType` must belong to the `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If exactly one of this field and `nodeConfig.location` is specified, the location information from the specified field will be propagated to the unspecified field. The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2851,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must be between 8 and 110 and it can be set only if the environment is VPC-native. The default value is 32. Values of this field will be propagated both to the `default-pool` node pool of the newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for newly created node pools if their value is not explicitly set during node pool creation. For more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine network to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the environment's project is used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see `nodeConfig.subnetwork`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes` is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2875,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Google Cloud Platform Service Account to be used by the node VMs. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine subnetwork to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the enclosing environment's project and location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2945,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, access to the public endpoint of the GKE cluster is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2965,7 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, access to the public endpoint of the GKE cluster is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3043,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, access to the public endpoint of the GKE cluster is denied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3051,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3059,7 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masteripv4reservedrange_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Reserved<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3071,7 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, access to the public endpoint of the GKE cluster is denied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3087,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_ipv4_reserved_range_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>reserved_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3173,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableprivateenvironment_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3189,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateclusterconfig">pulumi.<wbr>Input<Private<wbr>Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateclusterconfig">Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3209,7 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_private_environment_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3225,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_cluster_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateclusterconfig">Private<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateclusterconfig">Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3233,7 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3335,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3343,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableprivateenvironment_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3351,7 +3374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateclusterconfigresponse">pulumi.<wbr>Input<Private<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateclusterconfigresponse">Private<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3359,7 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3367,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webserveripv4reservedrange_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Reserved<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range reserved for the tenant project's App Engine VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3379,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3387,7 +3410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_private_environment_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3395,7 +3418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_cluster_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateclusterconfigresponse">Private<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateclusterconfigresponse">Private<wbr>Cluster<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3403,7 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3411,7 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_server_ipv4_reserved_range_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>reserved_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range reserved for the tenant project's App Engine VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3459,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3503,7 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3513,7 +3536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and must not contain an equals sign ("=") or semicolon (";"). Section and property names must not contain a period ("."). Apache Airflow configuration property names must be written in [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are [blocked](/composer/docs/concepts/airflow-configurations), and cannot be overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3521,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3529,7 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as input, the server also checks if the provided version is supported and denies the request for an unsupported version. The Cloud Composer portion of the version is a [semantic version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud Composer patch version is selected. When `latest` is provided instead of an explicit version number, the server replaces `latest` with the current Cloud Composer version and stores that version number in the same field. The portion of the image version that follows *airflow-* is an official Apache Airflow repository [release name](https://github.com/apache/incubator-airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-versions).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pypipackages_nodejs" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To specify a package without pinning it to a version specifier, use the empty string as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,9 +3568,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3557,7 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and must not contain an equals sign ("=") or semicolon (";"). Section and property names must not contain a period ("."). Apache Airflow configuration property names must be written in [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are [blocked](/composer/docs/concepts/airflow-configurations), and cannot be overridden.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3573,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as input, the server also checks if the provided version is supported and denies the request for an unsupported version. The Cloud Composer portion of the version is a [semantic version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud Composer patch version is selected. When `latest` is provided instead of an explicit version number, the server replaces `latest` with the current Cloud Composer version and stores that version number in the same field. The portion of the image version that follows *airflow-* is an official Apache Airflow repository [release name](https://github.com/apache/incubator-airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-versions).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pypi_packages_python" style="color: inherit; text-decoration: inherit;">pypi_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To specify a package without pinning it to a version specifier, use the empty string as the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,9 +3612,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="softwareconfigresponse">Software<wbr>Config<wbr>Response</h4>
@@ -3637,7 +3660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3681,7 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3691,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and must not contain an equals sign ("=") or semicolon (";"). Section and property names must not contain a period ("."). Apache Airflow configuration property names must be written in [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are [blocked](/composer/docs/concepts/airflow-configurations), and cannot be overridden.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3699,7 +3722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3707,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as input, the server also checks if the provided version is supported and denies the request for an unsupported version. The Cloud Composer portion of the version is a [semantic version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud Composer patch version is selected. When `latest` is provided instead of an explicit version number, the server replaces `latest` with the current Cloud Composer version and stores that version number in the same field. The portion of the image version that follows *airflow-* is an official Apache Airflow repository [release name](https://github.com/apache/incubator-airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-versions).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3715,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pypipackages_nodejs" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To specify a package without pinning it to a version specifier, use the empty string as the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3723,9 +3746,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3735,7 +3758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and must not contain an equals sign ("=") or semicolon (";"). Section and property names must not contain a period ("."). Apache Airflow configuration property names must be written in [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are [blocked](/composer/docs/concepts/airflow-configurations), and cannot be overridden.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3743,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3751,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as input, the server also checks if the provided version is supported and denies the request for an unsupported version. The Cloud Composer portion of the version is a [semantic version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud Composer patch version is selected. When `latest` is provided instead of an explicit version number, the server replaces `latest` with the current Cloud Composer version and stores that version number in the same field. The portion of the image version that follows *airflow-* is an official Apache Airflow repository [release name](https://github.com/apache/incubator-airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-versions).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3759,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pypi_packages_python" style="color: inherit; text-decoration: inherit;">pypi_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To specify a package without pinning it to a version specifier, use the empty string as the value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3767,9 +3790,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webserverconfig">Web<wbr>Server<wbr>Config</h4>
@@ -3805,7 +3828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3817,7 +3840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3855,7 +3878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3867,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3905,7 +3928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedipranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowediprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowed<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allowediprange">Allowed<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of allowed IP ranges with descriptions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3917,7 +3940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowediprange">Allowed<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allowediprange">Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of allowed IP ranges with descriptions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3955,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedipranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowediprangeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowed<wbr>Ip<wbr>Range<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allowediprangeresponse">Allowed<wbr>Ip<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of allowed IP ranges with descriptions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3967,7 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowediprangeresponse">Allowed<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allowediprangeresponse">Allowed<wbr>Ip<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of allowed IP ranges with descriptions.{{% /md %}}</dd></dl>
 {{% /choosable %}}

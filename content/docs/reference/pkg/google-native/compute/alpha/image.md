@@ -20,19 +20,60 @@ Creates an image in the specified project using the data included in the request
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_size_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">deprecated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.DeprecationStatusArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_compute_alpha.GuestOsFeatureArgs]]]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">license_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">raw_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">rollout_override</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.RolloutPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">shielded_instance_initial_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.InitialStateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_compute_alpha.CustomerEncryptionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">archive_size_bytes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">deprecated</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.DeprecationStatusArgs]</span> = None<span class="p">,</span>
+          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">license_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">raw_disk</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ImageRawDiskArgs]</span> = None<span class="p">,</span>
+          <span class="nx">rollout_override</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.RolloutPolicyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">shielded_instance_initial_state</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.InitialStateConfigArgs]</span> = None<span class="p">,</span>
+          <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">source_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
+          <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +108,32 @@ Creates an image in the specified project using the data included in the request
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +365,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+        <span class="property-type"><a href="#imagerawdisk">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +673,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +837,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -794,7 +845,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +853,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +861,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +869,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deprecationstatus">pulumi.<wbr>Input<Deprecation<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#deprecationstatus">Deprecation<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deprecation status associated with this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +877,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +885,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +893,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +901,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Os<wbr>Feature<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +909,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +917,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#imageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the image using a customer-supplied encryption key.
 
@@ -880,7 +931,7 @@ If you do not provide an encryption key when creating the image, then the disk w
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#image for images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +939,7 @@ If you do not provide an encryption key when creating the image, then the disk w
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image, which is essentially a hash of the labels used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -898,7 +949,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this image. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +957,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#licensecodes_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Integer license codes indicating which licenses are attached to this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +965,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +973,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +981,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +989,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#rolloutoverride_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicy">pulumi.<wbr>Input<Rollout<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +997,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +1005,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +1013,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#selflinkwithid_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link<wbr>With<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource's resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +1021,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#shieldedinstanceinitialstate_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Initial<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfig">pulumi.<wbr>Input<Initial<wbr>State<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set the secure boot keys of shielded instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1029,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the source disk used to create this image. This can be a full or valid partial URL. You must provide either this property or the rawDisk.source property but not both to create an image. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk 
@@ -989,7 +1040,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#sourcediskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1048,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#sourcediskid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the disk used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given disk name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1056,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the source image used to create this image.
 
@@ -1019,7 +1070,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1078,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1086,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the source snapshot used to create this image.
 
@@ -1050,7 +1101,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">pulumi.<wbr>Input<Customer<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1109,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the snapshot used to create this image. This value may be used to determine whether the snapshot was taken from the current or a previous instance of a given snapshot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1117,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1125,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1133,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1094,7 +1145,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1153,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1161,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1169,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Creation timestamp in RFC3339 text format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1177,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deprecationstatus">Deprecation<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deprecationstatus">Deprecation<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deprecation status associated with this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1185,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1193,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1201,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1209,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestosfeature">Guest<wbr>Os<wbr>Feature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system. Applicable only for bootable images. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1217,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The unique identifier for the resource. This identifier is defined by the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1225,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#image_encryption_key_python" style="color: inherit; text-decoration: inherit;">image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the image using a customer-supplied encryption key.
 
@@ -1188,7 +1239,7 @@ If you do not provide an encryption key when creating the image, then the disk w
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Type of the resource. Always compute#image for images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1247,7 @@ If you do not provide an encryption key when creating the image, then the disk w
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image, which is essentially a hash of the labels used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.
 
@@ -1206,7 +1257,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this image. These can be later modified by the setLabels method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1265,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#license_codes_python" style="color: inherit; text-decoration: inherit;">license_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Integer license codes indicating which licenses are attached to this image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1273,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1281,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1289,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1297,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#rollout_override_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1305,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[Output Only] Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1313,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1321,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#self_link_with_id_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link_<wbr>with_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] Server-defined URL for this resource's resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1329,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#shielded_instance_initial_state_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>initial_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#initialstateconfig">Initial<wbr>State<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set the secure boot keys of shielded instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1337,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the source disk used to create this image. This can be a full or valid partial URL. You must provide either this property or the rawDisk.source property but not both to create an image. For example, the following are valid values:  
 - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk 
@@ -1297,7 +1348,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#source_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1356,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#source_disk_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the disk used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given disk name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1364,7 @@ To see the latest fingerprint, make a get() request to retrieve an image.{{% /md
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the source image used to create this image.
 
@@ -1327,7 +1378,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1335,7 +1386,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1394,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the source snapshot used to create this image.
 
@@ -1358,7 +1409,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customerencryptionkey">Customer<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1417,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the snapshot used to create this image. This value may be used to determine whether the snapshot was taken from the current or a previous instance of a given snapshot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1425,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the image used to create this disk. The default and only value is RAW{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1433,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1441,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1567,7 +1618,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1626,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1634,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1642,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -1604,7 +1655,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1616,7 +1667,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1624,7 +1675,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1683,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1691,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -1653,7 +1704,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1765,7 +1816,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1773,7 +1824,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1781,7 +1832,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1789,7 +1840,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsaencryptedkey_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Encrypted<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -1802,7 +1853,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1814,7 +1865,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1822,7 +1873,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1830,7 +1881,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1838,7 +1889,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#rsa_encrypted_key_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>encrypted_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource.
 
@@ -1851,7 +1902,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +2020,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2028,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2036,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#obsolete_nodejs" style="color: inherit; text-decoration: inherit;">obsolete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +2044,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#replacement_nodejs" style="color: inherit; text-decoration: inherit;">replacement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2052,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2060,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#stateoverride_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicy">pulumi.<wbr>Input<Rollout<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2021,7 +2072,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2080,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2088,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#obsolete_python" style="color: inherit; text-decoration: inherit;">obsolete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2045,7 +2096,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#replacement_python" style="color: inherit; text-decoration: inherit;">replacement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2104,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2112,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_override_python" style="color: inherit; text-decoration: inherit;">state_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2179,7 +2230,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2238,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2246,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#obsolete_nodejs" style="color: inherit; text-decoration: inherit;">obsolete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2203,7 +2254,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#replacement_nodejs" style="color: inherit; text-decoration: inherit;">replacement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2211,7 +2262,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2270,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#stateoverride_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicyresponse">pulumi.<wbr>Input<Rollout<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2282,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2239,7 +2290,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2298,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#obsolete_python" style="color: inherit; text-decoration: inherit;">obsolete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2255,7 +2306,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#replacement_python" style="color: inherit; text-decoration: inherit;">replacement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2263,7 +2314,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2271,7 +2322,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#state_override_python" style="color: inherit; text-decoration: inherit;">state_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2376,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2384,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2396,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2404,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2458,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2415,7 +2466,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,7 +2478,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw content in the secure keys file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2486,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file type of source file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2473,7 +2524,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2485,7 +2536,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2523,7 +2574,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2535,9 +2586,237 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="imagerawdisk">Image<wbr>Raw<wbr>Disk</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertype_csharp">
+<a href="#containertype_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sha1checksum_csharp">
+<a href="#sha1checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertype_go">
+<a href="#containertype_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sha1checksum_go">
+<a href="#sha1checksum_go" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="containertype_nodejs">
+<a href="#containertype_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sha1checksum_nodejs">
+<a href="#sha1checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="container_type_python">
+<a href="#container_type_python" style="color: inherit; text-decoration: inherit;">container_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sha1_checksum_python">
+<a href="#sha1_checksum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="imagerawdiskresponse">Image<wbr>Raw<wbr>Disk<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="containertype_csharp">
+<a href="#containertype_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sha1checksum_csharp">
+<a href="#sha1checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="containertype_go">
+<a href="#containertype_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sha1checksum_go">
+<a href="#sha1checksum_go" style="color: inherit; text-decoration: inherit;">Sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="containertype_nodejs">
+<a href="#containertype_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sha1checksum_nodejs">
+<a href="#sha1checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="container_type_python">
+<a href="#container_type_python" style="color: inherit; text-decoration: inherit;">container_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sha1_checksum_python">
+<a href="#sha1_checksum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>checksum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}[Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full Google Cloud Storage URL where the disk image is stored. You must provide either this property or the sourceDisk property but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="initialstateconfig">Initial<wbr>State<wbr>Config</h4>
@@ -2621,7 +2900,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_nodejs" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2908,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_nodejs" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2916,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_nodejs" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2924,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_nodejs" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Args></a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2657,7 +2936,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_python" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2944,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_python" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2952,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_python" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2960,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_python" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filecontentbuffer">File<wbr>Content<wbr>Buffer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +3046,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_nodejs" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +3054,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_nodejs" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2783,7 +3062,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_nodejs" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +3070,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_nodejs" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">pulumi.<wbr>Input<File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2803,7 +3082,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbs_python" style="color: inherit; text-decoration: inherit;">dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Database (db).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +3090,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#dbxs_python" style="color: inherit; text-decoration: inherit;">dbxs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The forbidden key database (dbx).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2819,7 +3098,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#keks_python" style="color: inherit; text-decoration: inherit;">keks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Exchange Key (KEK).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +3106,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
 <a href="#pk_python" style="color: inherit; text-decoration: inherit;">pk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2889,7 +3168,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#defaultrollouttime_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rollout<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +3176,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#locationrolloutpolicies_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Rollout<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Location based rollout policies to apply to the resource.
 
@@ -2913,7 +3192,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#default_rollout_time_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rollout_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2921,7 +3200,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#location_rollout_policies_python" style="color: inherit; text-decoration: inherit;">location_<wbr>rollout_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Location based rollout policies to apply to the resource.
 
@@ -2987,7 +3266,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#defaultrollouttime_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rollout<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3274,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#locationrolloutpolicies_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Rollout<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Location based rollout policies to apply to the resource.
 
@@ -3011,7 +3290,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#default_rollout_time_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rollout_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3019,7 +3298,7 @@ The value expects an RFC3339 timestamp on or after which the update is considere
 <a href="#location_rollout_policies_python" style="color: inherit; text-decoration: inherit;">location_<wbr>rollout_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Location based rollout policies to apply to the resource.
 

@@ -20,19 +20,52 @@ Creates a new version of a model from a trained TensorFlow model. If the version
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__AcceleratorConfigArgs]]</span> = None<span class="p">, </span><span class="nx">auto_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__AutoScalingArgs]]</span> = None<span class="p">, </span><span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__ContainerSpecArgs]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">deployment_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">explanation_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__ExplanationConfigArgs]]</span> = None<span class="p">, </span><span class="nx">framework</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">last_use_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__ManualScalingArgs]]</span> = None<span class="p">, </span><span class="nx">models_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">package_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">prediction_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">python_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">request_logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__RequestLoggingConfigArgs]]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_ml_v1.GoogleCloudMlV1__RouteMapArgs]]</span> = None<span class="p">, </span><span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">versions_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__AcceleratorConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">auto_scaling</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__AutoScalingArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__ContainerSpecArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">deployment_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">explanation_config</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__ExplanationConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">framework</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">is_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">last_use_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__ManualScalingArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">models_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">package_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">prediction_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">python_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">request_logging_config</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__RequestLoggingConfigArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[_ml_v1.GoogleCloudMlV1__RouteMapArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">versions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewModelVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ModelVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewModelVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ModelVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ModelVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ModelVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +100,32 @@ Creates a new version of a model from a trained TensorFlow model. If the version
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ModelVersionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +653,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#modelsid_nodejs" style="color: inherit; text-decoration: inherit;">models<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -618,7 +661,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -626,7 +669,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#versionsid_nodejs" style="color: inherit; text-decoration: inherit;">versions<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +677,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Accelerator config for using GPUs for online prediction (beta). Only specify this field if you have specified a Compute Engine (N1) machine type in the `machineType` field. Learn more about [using GPUs for online prediction](/ml-engine/docs/machine-types-online-prediction#gpus).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +685,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__autoscaling">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__autoscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatically scale the number of nodes used to serve the model in response to increases and decreases in traffic. Care should be taken to ramp up traffic according to the model's ability to scale or you will start seeing increases in latency and 429 response codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +693,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerspec">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies a custom container to use for serving predictions. If you specify this field, then `machineType` is required. If you specify this field, then `deploymentUri` is optional. If you specify this field, then you must not specify `runtimeVersion`, `packageUris`, `framework`, `pythonVersion`, or `predictionClass`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +701,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the version was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +709,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#deploymenturi_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a directory containing trained model artifacts to be used to create the model version. See the [guide to deploying models](/ai-platform/prediction/docs/deploying-models) for more information. The total number of files under this directory must not exceed 1000. During projects.models.versions.create, AI Platform Prediction copies all files from the specified directory to a location managed by the service. From then on, AI Platform Prediction uses these copies of the model artifacts to serve predictions, not the original files in Cloud Storage, so this location is useful only as a historical record. If you specify container, then this field is optional. Otherwise, it is required. Learn [how to use this field with a custom container](/ai-platform/prediction/docs/custom-container-requirements#artifacts).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +717,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The description specified for the version when it was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +725,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +733,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a model from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform model updates in order to avoid race conditions: An `etag` is returned in the response to `GetVersion`, and systems are expected to put that etag in the request to `UpdateVersion` to ensure that their change will be applied to the model as intended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +741,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#explanationconfig_nodejs" style="color: inherit; text-decoration: inherit;">explanation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__explanationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Explanation<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__explanationconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Explanation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configures explainability features on the model's version. Some explanation features require additional metadata to be loaded as part of the model payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +749,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#framework_nodejs" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +757,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this version will be used to handle prediction requests that do not specify a version. You can change the default version by calling projects.methods.versions.setDefault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +765,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional. One or more labels that you can add, to organize your model versions. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +773,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#lastusetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Use<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the version was last used for prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +781,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of machine on which to serve the model. Currently only applies to online prediction service. To learn about valid values for this field, read [Choosing a machine type for online prediction](/ai-platform/prediction/docs/machine-types-online-prediction). If this field is not specified and you are using a [regional endpoint](/ai-platform/prediction/docs/regional-endpoints), then the machine type defaults to `n1-standard-2`. If this field is not specified and you are using the global endpoint (`ml.googleapis.com`), then the machine type defaults to `mls1-c1-m2`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +789,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#manualscaling_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__manualscaling">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Manual<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__manualscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manually select the number of nodes to use for serving the model. You should generally use `auto_scaling` with an appropriate `min_nodes` instead, but this option is available if you want more predictable billing. Beware that latency and error rates will increase if the traffic exceeds that capability of the system to serve it based on the selected number of nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +797,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name specified for the version when it was created. The version name must be unique within the model it is created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +805,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#packageuris_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom prediction routine, one of these packages must contain your Predictor class (see [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies used by your Predictor or scikit-learn pipeline uses that are not already included in your selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list). If you specify this field, you must also set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +813,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#predictionclass_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The fully qualified name (module_name.class_name) of a class that implements the Predictor interface described in this reference field. The module containing this class should be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris). Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction). The following code sample provides the Predictor interface: class Predictor(object): """Interface for constructing custom predictors.""" def predict(self, instances, **kwargs): """Performs custom prediction. Instances are the decoded values from the request. They have already been deserialized from JSON. Args: instances: A list of prediction input instances. **kwargs: A dictionary of keyword args provided as additional fields on the predict request body. Returns: A list of outputs containing the prediction results. This list must be JSON serializable. """ raise NotImplementedError() @classmethod def from_path(cls, model_dir): """Creates an instance of Predictor using the given path. Loading of the predictor should be done in this method. Args: model_dir: The local directory that contains the exported model file along with any additional files uploaded when creating the version resource. Returns: An instance implementing this Predictor class. """ raise NotImplementedError() Learn more about [the Predictor interface and custom prediction routines](/ml-engine/docs/tensorflow/custom-prediction-routines).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +821,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The version of Python used in prediction. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +829,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requestloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__requestloggingconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Request<wbr>Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__requestloggingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Request<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it in a projects.models.versions.create request has no effect. Configures the request-response pair logging on predictions from this Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +837,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__routemap">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Route<wbr>Map<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__routemap">Google<wbr>Cloud<wbr>Ml<wbr>V1__Route<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies paths on a custom container's HTTP server where AI Platform Prediction sends certain requests. If you specify this field, then you must also specify the `container` field. If you specify the `container` field and do not specify this field, it defaults to the following: ```json { "predict": "/v1/models/MODEL/versions/VERSION:predict", "health": "/v1/models/MODEL/versions/VERSION" } ``` See RouteMap for more details about these default values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +845,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The AI Platform runtime version to use for this deployment. For more information, see the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-engine/docs/versioning).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +853,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the service account for resource access control. If you specify this field, then you must also specify either the `containerSpec` or the `predictionClass` field. Learn more about [using a custom service account](/ai-platform/prediction/docs/custom-service-account).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +861,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -830,7 +873,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#models_id_python" style="color: inherit; text-decoration: inherit;">models_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -838,7 +881,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -846,7 +889,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#versions_id_python" style="color: inherit; text-decoration: inherit;">versions_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +897,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__acceleratorconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Accelerator config for using GPUs for online prediction (beta). Only specify this field if you have specified a Compute Engine (N1) machine type in the `machineType` field. Learn more about [using GPUs for online prediction](/ml-engine/docs/machine-types-online-prediction#gpus).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +905,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auto_scaling_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__autoscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__autoscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Auto<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatically scale the number of nodes used to serve the model in response to increases and decreases in traffic. Care should be taken to ramp up traffic according to the model's ability to scale or you will start seeing increases in latency and 429 response codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +913,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies a custom container to use for serving predictions. If you specify this field, then `machineType` is required. If you specify this field, then `deploymentUri` is optional. If you specify this field, then you must not specify `runtimeVersion`, `packageUris`, `framework`, `pythonVersion`, or `predictionClass`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +921,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the version was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +929,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#deployment_uri_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a directory containing trained model artifacts to be used to create the model version. See the [guide to deploying models](/ai-platform/prediction/docs/deploying-models) for more information. The total number of files under this directory must not exceed 1000. During projects.models.versions.create, AI Platform Prediction copies all files from the specified directory to a location managed by the service. From then on, AI Platform Prediction uses these copies of the model artifacts to serve predictions, not the original files in Cloud Storage, so this location is useful only as a historical record. If you specify container, then this field is optional. Otherwise, it is required. Learn [how to use this field with a custom container](/ai-platform/prediction/docs/custom-container-requirements#artifacts).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +937,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The description specified for the version when it was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +945,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The details of a failure or a cancellation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +953,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a model from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform model updates in order to avoid race conditions: An `etag` is returned in the response to `GetVersion`, and systems are expected to put that etag in the request to `UpdateVersion` to ensure that their change will be applied to the model as intended.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +961,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#explanation_config_python" style="color: inherit; text-decoration: inherit;">explanation_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__explanationconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Explanation<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__explanationconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Explanation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configures explainability features on the model's version. Some explanation features require additional metadata to be loaded as part of the model payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +969,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#framework_python" style="color: inherit; text-decoration: inherit;">framework</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The machine learning framework AI Platform uses to train this version of the model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI Platform will analyze files in the deployment_uri to determine a framework. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container](/ai-platform/prediction/docs/use-custom-container).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +977,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this version will be used to handle prediction requests that do not specify a version. You can change the default version by calling projects.methods.versions.setDefault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +985,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. One or more labels that you can add, to organize your model versions. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +993,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#last_use_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>use_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the version was last used for prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1001,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of machine on which to serve the model. Currently only applies to online prediction service. To learn about valid values for this field, read [Choosing a machine type for online prediction](/ai-platform/prediction/docs/machine-types-online-prediction). If this field is not specified and you are using a [regional endpoint](/ai-platform/prediction/docs/regional-endpoints), then the machine type defaults to `n1-standard-2`. If this field is not specified and you are using the global endpoint (`ml.googleapis.com`), then the machine type defaults to `mls1-c1-m2`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1009,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__manualscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Manual<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__manualscaling">Google<wbr>Cloud<wbr>Ml<wbr>V1__Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manually select the number of nodes to use for serving the model. You should generally use `auto_scaling` with an appropriate `min_nodes` instead, but this option is available if you want more predictable billing. Beware that latency and error rates will increase if the traffic exceeds that capability of the system to serve it based on the selected number of nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1017,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name specified for the version when it was created. The version name must be unique within the model it is created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1025,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#package_uris_python" style="color: inherit; text-decoration: inherit;">package_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom prediction routine, one of these packages must contain your Predictor class (see [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies used by your Predictor or scikit-learn pipeline uses that are not already included in your selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list). If you specify this field, you must also set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1033,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#prediction_class_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The fully qualified name (module_name.class_name) of a class that implements the Predictor interface described in this reference field. The module containing this class should be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris). Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction). The following code sample provides the Predictor interface: class Predictor(object): """Interface for constructing custom predictors.""" def predict(self, instances, **kwargs): """Performs custom prediction. Instances are the decoded values from the request. They have already been deserialized from JSON. Args: instances: A list of prediction input instances. **kwargs: A dictionary of keyword args provided as additional fields on the predict request body. Returns: A list of outputs containing the prediction results. This list must be JSON serializable. """ raise NotImplementedError() @classmethod def from_path(cls, model_dir): """Creates an instance of Predictor using the given path. Loading of the predictor should be done in this method. Args: model_dir: The local directory that contains the exported model file along with any additional files uploaded when creating the version resource. Returns: An instance implementing this Predictor class. """ raise NotImplementedError() Learn more about [the Predictor interface and custom prediction routines](/ml-engine/docs/tensorflow/custom-prediction-routines).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1041,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The version of Python used in prediction. The following Python versions are available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1049,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_logging_config_python" style="color: inherit; text-decoration: inherit;">request_<wbr>logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__requestloggingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Request<wbr>Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__requestloggingconfig">Google<wbr>Cloud<wbr>Ml<wbr>V1__Request<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it in a projects.models.versions.create request has no effect. Configures the request-response pair logging on predictions from this Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1057,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__routemap">Google<wbr>Cloud<wbr>Ml<wbr>V1__Route<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__routemap">Google<wbr>Cloud<wbr>Ml<wbr>V1__Route<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specifies paths on a custom container's HTTP server where AI Platform Prediction sends certain requests. If you specify this field, then you must also specify the `container` field. If you specify the `container` field and do not specify this field, it defaults to the following: ```json { "predict": "/v1/models/MODEL/versions/VERSION:predict", "health": "/v1/models/MODEL/versions/VERSION" } ``` See RouteMap for more details about these default values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1065,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The AI Platform runtime version to use for this deployment. For more information, see the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-engine/docs/versioning).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1073,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Specifies the service account for resource access control. If you specify this field, then you must also specify either the `containerSpec` or the `predictionClass` field. Learn more about [using a custom service account](/ai-platform/prediction/docs/custom-service-account).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1081,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of a version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of accelerators to attach to each machine running the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of accelerator to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1401,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__metricspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}MetricSpec contains the specifications to use to calculate the desired nodes count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*/models/*/versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1429,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspec">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}MetricSpec contains the specifications to use to calculate the desired nodes count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*/models/*/versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1515,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1523,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__metricspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}MetricSpec contains the specifications to use to calculate the desired nodes count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*/models/*/versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1543,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__metricspecresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Metric<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}MetricSpec contains the specifications to use to calculate the desired nodes count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. The minimum number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed. Therefore, the cost of operating this model will be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is the cost per node-hour as documented in the [pricing guide](/ml-engine/docs/pricing), even if no predictions are performed. There is additional cost for each prediction performed. Unlike manual scaling, if the load gets too heavy for the nodes that are up, the service will automatically add nodes to handle the increased load as well as scale back as traffic drops, always maintaining at least `min_nodes`. You will be charged for the time in which additional nodes are used. If `min_nodes` is not specified and AutoScaling is used with a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in which case, when traffic to a model stops (and after a cool-down period), nodes will be shut down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the model version, and you can also update `min_nodes` for an existing version: update_body.json: { 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH https://ml.googleapis.com/v1/{name=projects/*/models/*/versions/*}?update_mask=autoScaling.minNodes -d @./update_body.json {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1609,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1647,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1761,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies arguments for the command that runs when the container starts. This overrides the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify this field as an array of executable and arguments, similar to a Docker `CMD`'s "default parameters" form. If you don't specify this field but do specify the command field, then the command from the `command` field runs without any additional arguments. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). If you don't specify this field and don't specify the `commmand` field, then the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#cmd) and `CMD` determine what runs based on their default behavior. See the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `args` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies the command that runs when the container starts. This overrides the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint). Specify this field as an array of executable and arguments, similar to a Docker `ENTRYPOINT`'s "exec" form, not its "shell" form. If you do not specify this field, then the container's `ENTRYPOINT` runs, in conjunction with the args field or the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd), if either exists. If this field is not specified and the container does not have an `ENTRYPOINT`, then refer to the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). If you specify this field, then you can also specify the `args` field to provide additional arguments for this command. However, if you specify this field, then the container's `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `command` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__envvar">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__envvar">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of environment variables to set in the container. After the container starts running, code running in the container can read these environment variables. Additionally, the command and args fields can reference these variables. Later entries in this list can also reference earlier entries. For example, the following example sets the variable `VAR_2` to have the value `foo bar`: ```json [ { "name": "VAR_1", "value": "foo" }, { "name": "VAR_2", "value": "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the expansion does not occur. This field corresponds to the `env` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the Docker image to be used as the custom container for serving predictions. This URI must identify [an image in Artifact Registry](/artifact-registry/docs/overview) and begin with the hostname `{REGION}-docker.pkg.dev`, where `{REGION}` is replaced by the region that matches AI Platform Prediction [regional endpoint](/ai-platform/prediction/docs/regional-endpoints) that you are using. For example, if you are using the `us-central1-ml.googleapis.com` endpoint, then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-account#default) must have permission to pull (read) the Docker image at this URI. The AI Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google Cloud project number. By default, this service account has necessary permissions to pull an Artifact Registry image in the same Google Cloud project where you are using AI Platform Prediction. In this case, no configuration is necessary. If you want to use an image from a different Google Cloud project, learn how to [grant the Artifact Registry Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about the requirements for the Docker image itself, read [Custom container requirements](/ai-platform/prediction/docs/custom-container-requirements).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerport">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of ports to expose from the container. AI Platform Prediction sends any prediction requests that it receives to the first port on this list. AI Platform Prediction also sends [liveness and health checks](/ai-platform/prediction/docs/custom-container-requirements#health) to this port. If you do not specify this field, it defaults to following value: ```json [ { "containerPort": 8080 } ] ``` AI Platform Prediction does not use ports other than the first one listed. This field corresponds to the `ports` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1805,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies arguments for the command that runs when the container starts. This overrides the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify this field as an array of executable and arguments, similar to a Docker `CMD`'s "default parameters" form. If you don't specify this field but do specify the command field, then the command from the `command` field runs without any additional arguments. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). If you don't specify this field and don't specify the `commmand` field, then the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#cmd) and `CMD` determine what runs based on their default behavior. See the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `args` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies the command that runs when the container starts. This overrides the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint). Specify this field as an array of executable and arguments, similar to a Docker `ENTRYPOINT`'s "exec" form, not its "shell" form. If you do not specify this field, then the container's `ENTRYPOINT` runs, in conjunction with the args field or the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd), if either exists. If this field is not specified and the container does not have an `ENTRYPOINT`, then refer to the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). If you specify this field, then you can also specify the `args` field to provide additional arguments for this command. However, if you specify this field, then the container's `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `command` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__envvar">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__envvar">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of environment variables to set in the container. After the container starts running, code running in the container can read these environment variables. Additionally, the command and args fields can reference these variables. Later entries in this list can also reference earlier entries. For example, the following example sets the variable `VAR_2` to have the value `foo bar`: ```json [ { "name": "VAR_1", "value": "foo" }, { "name": "VAR_2", "value": "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the expansion does not occur. This field corresponds to the `env` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the Docker image to be used as the custom container for serving predictions. This URI must identify [an image in Artifact Registry](/artifact-registry/docs/overview) and begin with the hostname `{REGION}-docker.pkg.dev`, where `{REGION}` is replaced by the region that matches AI Platform Prediction [regional endpoint](/ai-platform/prediction/docs/regional-endpoints) that you are using. For example, if you are using the `us-central1-ml.googleapis.com` endpoint, then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-account#default) must have permission to pull (read) the Docker image at this URI. The AI Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google Cloud project number. By default, this service account has necessary permissions to pull an Artifact Registry image in the same Google Cloud project where you are using AI Platform Prediction. In this case, no configuration is necessary. If you want to use an image from a different Google Cloud project, learn how to [grant the Artifact Registry Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about the requirements for the Docker image itself, read [Custom container requirements](/ai-platform/prediction/docs/custom-container-requirements).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerport">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerport">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of ports to expose from the container. AI Platform Prediction sends any prediction requests that it receives to the first port on this list. AI Platform Prediction also sends [liveness and health checks](/ai-platform/prediction/docs/custom-container-requirements#health) to this port. If you do not specify this field, it defaults to following value: ```json [ { "containerPort": 8080 } ] ``` AI Platform Prediction does not use ports other than the first one listed. This field corresponds to the `ports` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies arguments for the command that runs when the container starts. This overrides the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify this field as an array of executable and arguments, similar to a Docker `CMD`'s "default parameters" form. If you don't specify this field but do specify the command field, then the command from the `command` field runs without any additional arguments. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). If you don't specify this field and don't specify the `commmand` field, then the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#cmd) and `CMD` determine what runs based on their default behavior. See the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `args` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1947,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies the command that runs when the container starts. This overrides the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint). Specify this field as an array of executable and arguments, similar to a Docker `ENTRYPOINT`'s "exec" form, not its "shell" form. If you do not specify this field, then the container's `ENTRYPOINT` runs, in conjunction with the args field or the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd), if either exists. If this field is not specified and the container does not have an `ENTRYPOINT`, then refer to the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). If you specify this field, then you can also specify the `args` field to provide additional arguments for this command. However, if you specify this field, then the container's `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `command` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1955,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__envvarresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__envvarresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of environment variables to set in the container. After the container starts running, code running in the container can read these environment variables. Additionally, the command and args fields can reference these variables. Later entries in this list can also reference earlier entries. For example, the following example sets the variable `VAR_2` to have the value `foo bar`: ```json [ { "name": "VAR_1", "value": "foo" }, { "name": "VAR_2", "value": "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the expansion does not occur. This field corresponds to the `env` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the Docker image to be used as the custom container for serving predictions. This URI must identify [an image in Artifact Registry](/artifact-registry/docs/overview) and begin with the hostname `{REGION}-docker.pkg.dev`, where `{REGION}` is replaced by the region that matches AI Platform Prediction [regional endpoint](/ai-platform/prediction/docs/regional-endpoints) that you are using. For example, if you are using the `us-central1-ml.googleapis.com` endpoint, then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-account#default) must have permission to pull (read) the Docker image at this URI. The AI Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google Cloud project number. By default, this service account has necessary permissions to pull an Artifact Registry image in the same Google Cloud project where you are using AI Platform Prediction. In this case, no configuration is necessary. If you want to use an image from a different Google Cloud project, learn how to [grant the Artifact Registry Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about the requirements for the Docker image itself, read [Custom container requirements](/ai-platform/prediction/docs/custom-container-requirements).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerportresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerportresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of ports to expose from the container. AI Platform Prediction sends any prediction requests that it receives to the first port on this list. AI Platform Prediction also sends [liveness and health checks](/ai-platform/prediction/docs/custom-container-requirements#health) to this port. If you do not specify this field, it defaults to following value: ```json [ { "containerPort": 8080 } ] ``` AI Platform Prediction does not use ports other than the first one listed. This field corresponds to the `ports` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies arguments for the command that runs when the container starts. This overrides the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify this field as an array of executable and arguments, similar to a Docker `CMD`'s "default parameters" form. If you don't specify this field but do specify the command field, then the command from the `command` field runs without any additional arguments. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). If you don't specify this field and don't specify the `commmand` field, then the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#cmd) and `CMD` determine what runs based on their default behavior. See the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `args` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1991,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. Specifies the command that runs when the container starts. This overrides the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint). Specify this field as an array of executable and arguments, similar to a Docker `ENTRYPOINT`'s "exec" form, not its "shell" form. If you do not specify this field, then the container's `ENTRYPOINT` runs, in conjunction with the args field or the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd), if either exists. If this field is not specified and the container does not have an `ENTRYPOINT`, then refer to the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). If you specify this field, then you can also specify the `args` field to provide additional arguments for this command. However, if you specify this field, then the container's `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `command` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1999,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__envvarresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__envvarresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Env<wbr>Var<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of environment variables to set in the container. After the container starts running, code running in the container can read these environment variables. Additionally, the command and args fields can reference these variables. Later entries in this list can also reference earlier entries. For example, the following example sets the variable `VAR_2` to have the value `foo bar`: ```json [ { "name": "VAR_1", "value": "foo" }, { "name": "VAR_2", "value": "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the expansion does not occur. This field corresponds to the `env` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2007,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the Docker image to be used as the custom container for serving predictions. This URI must identify [an image in Artifact Registry](/artifact-registry/docs/overview) and begin with the hostname `{REGION}-docker.pkg.dev`, where `{REGION}` is replaced by the region that matches AI Platform Prediction [regional endpoint](/ai-platform/prediction/docs/regional-endpoints) that you are using. For example, if you are using the `us-central1-ml.googleapis.com` endpoint, then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-account#default) must have permission to pull (read) the Docker image at this URI. The AI Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google Cloud project number. By default, this service account has necessary permissions to pull an Artifact Registry image in the same Google Cloud project where you are using AI Platform Prediction. In this case, no configuration is necessary. If you want to use an image from a different Google Cloud project, learn how to [grant the Artifact Registry Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about the requirements for the Docker image itself, read [Custom container requirements](/ai-platform/prediction/docs/custom-container-requirements).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2015,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__containerportresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__containerportresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Container<wbr>Port<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. List of ports to expose from the container. AI Platform Prediction sends any prediction requests that it receives to the first port on this list. AI Platform Prediction also sends [liveness and health checks](/ai-platform/prediction/docs/custom-container-requirements#health) to this port. If you do not specify this field, it defaults to following value: ```json [ { "containerPort": 8080 } ] ``` AI Platform Prediction does not use ports other than the first one listed. This field corresponds to the `ports` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2069,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258) and must not begin with the prefix `AIP_`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2077,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the environment variable. Defaults to an empty string. In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set earlier in the same env field as where this message occurs. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258) and must not begin with the prefix `AIP_`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the environment variable. Defaults to an empty string. In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set earlier in the same env field as where this message occurs. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2151,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258) and must not begin with the prefix `AIP_`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the environment variable. Defaults to an empty string. In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set earlier in the same env field as where this message occurs. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258) and must not begin with the prefix `AIP_`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the environment variable. Defaults to an empty string. In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set earlier in the same env field as where this message occurs. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2249,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integratedgradientsattribution_nodejs" style="color: inherit; text-decoration: inherit;">integrated<wbr>Gradients<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattribution">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2257,7 +2300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampledshapleyattribution_nodejs" style="color: inherit; text-decoration: inherit;">sampled<wbr>Shapley<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattribution">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2265,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xraiattribution_nodejs" style="color: inherit; text-decoration: inherit;">xrai<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__xraiattribution">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__xraiattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2277,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrated_gradients_attribution_python" style="color: inherit; text-decoration: inherit;">integrated_<wbr>gradients_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampled_shapley_attribution_python" style="color: inherit; text-decoration: inherit;">sampled_<wbr>shapley_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xrai_attribution_python" style="color: inherit; text-decoration: inherit;">xrai_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__xraiattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__xraiattribution">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2363,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integratedgradientsattribution_nodejs" style="color: inherit; text-decoration: inherit;">integrated<wbr>Gradients<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattributionresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2371,7 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampledshapleyattribution_nodejs" style="color: inherit; text-decoration: inherit;">sampled<wbr>Shapley<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattributionresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2379,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xraiattribution_nodejs" style="color: inherit; text-decoration: inherit;">xrai<wbr>Attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__xraiattributionresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__xraiattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrated_gradients_attribution_python" style="color: inherit; text-decoration: inherit;">integrated_<wbr>gradients_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__integratedgradientsattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Integrated<wbr>Gradients<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2399,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampled_shapley_attribution_python" style="color: inherit; text-decoration: inherit;">sampled_<wbr>shapley_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__sampledshapleyattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Sampled<wbr>Shapley<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2407,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#xrai_attribution_python" style="color: inherit; text-decoration: inherit;">xrai_<wbr>attribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudmlv1__xraiattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudmlv1__xraiattributionresponse">Google<wbr>Cloud<wbr>Ml<wbr>V1__Xrai<wbr>Attribution<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2445,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numintegralsteps_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Integral<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_integral_steps_python" style="color: inherit; text-decoration: inherit;">num_<wbr>integral_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2495,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numintegralsteps_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Integral<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_integral_steps_python" style="color: inherit; text-decoration: inherit;">num_<wbr>integral_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2595,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2607,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2661,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2681,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2743,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2751,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2763,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}metric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2825,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerytablename_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Fully qualified BigQuery table name in the following format: " project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML Service Agent" for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2845,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_table_name_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Fully qualified BigQuery table name in the following format: " project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML Service Agent" for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2907,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerytablename_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Fully qualified BigQuery table name in the following format: " project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML Service Agent" for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2915,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2927,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_table_name_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Fully qualified BigQuery table name in the following format: " project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML Service Agent" for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2935,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2989,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send health checkss to. AI Platform Prediction intermittently sends GET requests to this path on the container's IP address and port to check that the container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform Prediction intermittently sends a GET request to the `/bar` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/ MODEL/versions/VERSION The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID /models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +3040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predict_nodejs" style="color: inherit; text-decoration: inherit;">predict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send prediction requests to. AI Platform Prediction forwards requests sent using projects.predict to this path on the container's IP address and port. AI Platform Prediction then returns the container's response in the API response. For example, if you set this field to `/foo`, then when AI Platform Prediction receives a prediction request, it forwards the request body in a POST request to the `/foo` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3009,7 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send health checkss to. AI Platform Prediction intermittently sends GET requests to this path on the container's IP address and port to check that the container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform Prediction intermittently sends a GET request to the `/bar` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/ MODEL/versions/VERSION The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID /models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3017,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predict_python" style="color: inherit; text-decoration: inherit;">predict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send prediction requests to. AI Platform Prediction forwards requests sent using projects.predict to this path on the container's IP address and port. AI Platform Prediction then returns the container's response in the API response. For example, if you set this field to `/foo`, then when AI Platform Prediction receives a prediction request, it forwards the request body in a POST request to the `/foo` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3071,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send health checkss to. AI Platform Prediction intermittently sends GET requests to this path on the container's IP address and port to check that the container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform Prediction intermittently sends a GET request to the `/bar` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/ MODEL/versions/VERSION The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID /models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predict_nodejs" style="color: inherit; text-decoration: inherit;">predict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send prediction requests to. AI Platform Prediction forwards requests sent using projects.predict to this path on the container's IP address and port. AI Platform Prediction then returns the container's response in the API response. For example, if you set this field to `/foo`, then when AI Platform Prediction receives a prediction request, it forwards the request body in a POST request to the `/foo` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3091,7 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send health checkss to. AI Platform Prediction intermittently sends GET requests to this path on the container's IP address and port to check that the container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform Prediction intermittently sends a GET request to the `/bar` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/ MODEL/versions/VERSION The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID /models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3099,7 +3142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predict_python" style="color: inherit; text-decoration: inherit;">predict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP path on the container to send prediction requests to. AI Platform Prediction forwards requests sent using projects.predict to this path on the container's IP address and port. AI Platform Prediction then returns the container's response in the API response. For example, if you set this field to `/foo`, then when AI Platform Prediction receives a prediction request, it forwards the request body in a POST request to the `/foo` path on the port of your container specified by the first value of Version.container.ports. If you don't specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name, as provided to projects.models.create. * VERSION: The name of the model version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output; it is the bare version name, as provided to projects.models.versions.create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3137,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numpaths_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of feature permutations to consider when approximating the Shapley values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3149,7 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_paths_python" style="color: inherit; text-decoration: inherit;">num_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of feature permutations to consider when approximating the Shapley values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3187,7 +3230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numpaths_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of feature permutations to consider when approximating the Shapley values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3199,7 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_paths_python" style="color: inherit; text-decoration: inherit;">num_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of feature permutations to consider when approximating the Shapley values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3237,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numintegralsteps_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Integral<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3249,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_integral_steps_python" style="color: inherit; text-decoration: inherit;">num_<wbr>integral_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3287,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numintegralsteps_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Integral<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3299,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#num_integral_steps_python" style="color: inherit; text-decoration: inherit;">num_<wbr>integral_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.{{% /md %}}</dd></dl>
 {{% /choosable %}}

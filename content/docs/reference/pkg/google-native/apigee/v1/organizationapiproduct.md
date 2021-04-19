@@ -20,19 +20,43 @@ Creates an API product in an organization. You create API products after you hav
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">apiproducts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">approval_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1AttributeArgs]]]]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">environments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">graphql_operation_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1GraphQLOperationGroupArgs]]</span> = None<span class="p">, </span><span class="nx">last_modified_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">operation_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_apigee_v1.GoogleCloudApigeeV1OperationGroupArgs]]</span> = None<span class="p">, </span><span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">quota_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">quota_time_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">api_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">apiproducts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">approval_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apigee_v1.GoogleCloudApigeeV1AttributeArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">environments</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">graphql_operation_group</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1GraphQLOperationGroupArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">last_modified_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">operation_group</span><span class="p">:</span> <span class="nx">Optional[_apigee_v1.GoogleCloudApigeeV1OperationGroupArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">organizations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">proxies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">quota</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">quota_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">quota_time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationApiproduct</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationApiproduct</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationApiproduct</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationApiproduct</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationApiproduct</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationApiproductArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +91,32 @@ Creates an API product in an organization. You create API products after you hav
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationApiproductArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -466,7 +500,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#apiproductsid_nodejs" style="color: inherit; text-decoration: inherit;">apiproducts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +508,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#organizationsid_nodejs" style="color: inherit; text-decoration: inherit;">organizations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +516,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#apiresources_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +524,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#approvaltype_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in "pending" state. In this case, the API keys won't work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in "approved" state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +532,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of attributes that may be used to extend the default API product profile with customer-specific metadata. You can specify a maximum of 18 attributes. Use this property to specify the access level of the API product as either `public`, `private`, or `internal`. Only products marked `public` are available to developers in the Apigee developer portal. For example, you can set a product to `internal` while it is in development and then change access to `public` when it is ready to release on the portal. API products marked as `private` do not appear on the portal, but can be accessed by external developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +540,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response only. Creation time of this environment as milliseconds since epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +548,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the API product. Include key information about the API product that is not captured by other fields. Comma-separated list of API resources to be bundled in the API product. By default, the resource paths are mapped from the `proxy.pathsuffix` variable. The proxy path suffix is defined as the URI fragment following the ProxyEndpoint base path. For example, if the `apiResources` element is defined to be `/forecastrss` and the base path defined for the API proxy is `/weather`, then only requests to `/weather/forecastrss` are permitted by the API product. You can select a specific path, or you can select all subpaths with the following wildcard: - `/**`: Indicates that all sub-URIs are included. - `/*` : Indicates that only URIs one level down are included. By default, / supports the same resources as /** as well as the base path defined by the API proxy. For example, if the base path of the API proxy is `/v1/weatherapikey`, then the API product supports requests to `/v1/weatherapikey` and to any sub-URIs, such as `/v1/weatherapikey/forecastrss`, `/v1/weatherapikey/region/CA`, and so on. For more information, see Managing API products.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +556,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name displayed in the UI or developer portal to developers registering for API access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +564,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#environments_nodejs" style="color: inherit; text-decoration: inherit;">environments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of environment names to which the API product is bound. Requests to environments that are not listed are rejected. By specifying one or more environments, you can bind the resources listed in the API product to a specific environment, preventing developers from accessing those resources through API proxies deployed in another environment. This setting is used, for example, to prevent resources associated with API proxies in `prod` from being accessed by API proxies deployed in `test`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +572,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#graphqloperationgroup_nodejs" style="color: inherit; text-decoration: inherit;">graphql<wbr>Operation<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationgroup">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to group Apigee proxies or remote services with graphQL operation name, graphQL operation type and quotas. This grouping allows us to precisely set quota for a particular combination of graphQL name and operation type for a particular proxy request. If graphQL name is not set, this would imply quota will be applied on all graphQL requests matching the operation type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +580,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response only. Modified time of this environment as milliseconds since epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +588,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal name of the API product. Characters you can use in the name are restricted to: `A-Z0-9._\-$ %`. **Note:** The internal name cannot be edited when updating the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +596,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#operationgroup_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationgroup">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to group Apigee proxies or remote services with resources, method types, and quotas. The resource refers to the resource URI (excluding the base path). With this grouping, the API product creator is able to fine-tune and give precise control over which REST methods have access to specific resources and how many calls can be made (using the `quota` setting). **Note:** The `api_resources` setting cannot be specified for both the API product and operation group; otherwise the call will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +604,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of API proxy names to which this API product is bound. By specifying API proxies, you can associate resources in the API product with specific API proxies, preventing developers from accessing those resources through other API proxies. Apigee rejects requests to API proxies that are not listed. **Note:** The API proxy names must already exist in the specified environment as they will be validated upon creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +612,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of request messages permitted per app by this API product for the specified `quotaInterval` and `quotaTimeUnit`. For example, a `quota` of 50, for a `quotaInterval` of 12 and a `quotaTimeUnit` of hours means 50 requests are allowed every 12 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +620,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quotainterval_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +628,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quotatimeunit_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `quotaInterval`. Valid values include `minute`, `hour`, `day`, or `month`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +636,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of OAuth scopes that are validated at runtime. Apigee validates that the scopes in any access token presented match the scopes defined in the OAuth policy associated with the API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +648,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#apiproducts_id_python" style="color: inherit; text-decoration: inherit;">apiproducts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +656,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#organizations_id_python" style="color: inherit; text-decoration: inherit;">organizations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +664,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#api_resources_python" style="color: inherit; text-decoration: inherit;">api_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +672,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#approval_type_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in "pending" state. In this case, the API keys won't work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in "approved" state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +680,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of attributes that may be used to extend the default API product profile with customer-specific metadata. You can specify a maximum of 18 attributes. Use this property to specify the access level of the API product as either `public`, `private`, or `internal`. Only products marked `public` are available to developers in the Apigee developer portal. For example, you can set a product to `internal` while it is in development and then change access to `public` when it is ready to release on the portal. API products marked as `private` do not appear on the portal, but can be accessed by external developers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +688,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Response only. Creation time of this environment as milliseconds since epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +696,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the API product. Include key information about the API product that is not captured by other fields. Comma-separated list of API resources to be bundled in the API product. By default, the resource paths are mapped from the `proxy.pathsuffix` variable. The proxy path suffix is defined as the URI fragment following the ProxyEndpoint base path. For example, if the `apiResources` element is defined to be `/forecastrss` and the base path defined for the API proxy is `/weather`, then only requests to `/weather/forecastrss` are permitted by the API product. You can select a specific path, or you can select all subpaths with the following wildcard: - `/**`: Indicates that all sub-URIs are included. - `/*` : Indicates that only URIs one level down are included. By default, / supports the same resources as /** as well as the base path defined by the API proxy. For example, if the base path of the API proxy is `/v1/weatherapikey`, then the API product supports requests to `/v1/weatherapikey` and to any sub-URIs, such as `/v1/weatherapikey/forecastrss`, `/v1/weatherapikey/region/CA`, and so on. For more information, see Managing API products.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +704,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name displayed in the UI or developer portal to developers registering for API access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +712,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of environment names to which the API product is bound. Requests to environments that are not listed are rejected. By specifying one or more environments, you can bind the resources listed in the API product to a specific environment, preventing developers from accessing those resources through API proxies deployed in another environment. This setting is used, for example, to prevent resources associated with API proxies in `prod` from being accessed by API proxies deployed in `test`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +720,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#graphql_operation_group_python" style="color: inherit; text-decoration: inherit;">graphql_<wbr>operation_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to group Apigee proxies or remote services with graphQL operation name, graphQL operation type and quotas. This grouping allows us to precisely set quota for a particular combination of graphQL name and operation type for a particular proxy request. If graphQL name is not set, this would imply quota will be applied on all graphQL requests matching the operation type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +728,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Response only. Modified time of this environment as milliseconds since epoch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +736,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal name of the API product. Characters you can use in the name are restricted to: `A-Z0-9._\-$ %`. **Note:** The internal name cannot be edited when updating the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +744,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#operation_group_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationgroup">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to group Apigee proxies or remote services with resources, method types, and quotas. The resource refers to the resource URI (excluding the base path). With this grouping, the API product creator is able to fine-tune and give precise control over which REST methods have access to specific resources and how many calls can be made (using the `quota` setting). **Note:** The `api_resources` setting cannot be specified for both the API product and operation group; otherwise the call will fail.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +752,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of API proxy names to which this API product is bound. By specifying API proxies, you can associate resources in the API product with specific API proxies, preventing developers from accessing those resources through other API proxies. Apigee rejects requests to API proxies that are not listed. **Note:** The API proxy names must already exist in the specified environment as they will be validated upon creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +760,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of request messages permitted per app by this API product for the specified `quotaInterval` and `quotaTimeUnit`. For example, a `quota` of 50, for a `quotaInterval` of 12 and a `quotaTimeUnit` of hours means 50 requests are allowed every 12 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +768,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quota_interval_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +776,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#quota_time_unit_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `quotaInterval`. Valid values include `minute`, `hour`, `day`, or `month`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +784,7 @@ The OrganizationApiproduct resource accepts the following [input]({{< relref "/d
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of OAuth scopes that are validated at runtime. Apigee validates that the scopes in any access token presented match the scopes defined in the OAuth policy associated with the API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -889,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key of the attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -979,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the attribute.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL operation name, along with operation type which will be used to associate quotas with. If no name is specified, the quota will be applied to all graphQL operations irrespective of their operation names in the payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtypes_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. `query`, `mutation` and `subscription` are the three operation types offered by graphQL. Currently we support only `query` and `mutation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1053,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GraphQL operation name, along with operation type which will be used to associate quotas with. If no name is specified, the quota will be applied to all graphQL operations irrespective of their operation names in the payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_types_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. `query`, `mutation` and `subscription` are the three operation types offered by graphQL. Currently we support only `query` and `mutation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apisource_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. API proxy endpoint or remote service name with which the graphQL operation, and quota are associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of graphQL name/Operation type pairs for the proxy/remote service, upon which quota will applied. If GraphQLOperation operation has only the operation type(s), that would imply that quota will be applied on all graphQL requests irrespective of the graphQL name. **Note**: Currently, we can specify only a single GraphQLOperation. Specifying more than one will result in failure of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quota">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_source_python" style="color: inherit; text-decoration: inherit;">api_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. API proxy endpoint or remote service name with which the graphQL operation, and quota are associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of graphQL name/Operation type pairs for the proxy/remote service, upon which quota will applied. If GraphQLOperation operation has only the operation type(s), that would imply that quota will be applied on all graphQL requests irrespective of the graphQL name. **Note**: Currently, we can specify only a single GraphQLOperation. Specifying more than one will result in failure of the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1293,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apisource_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. API proxy endpoint or remote service name with which the graphQL operation, and quota are associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1301,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1309,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of graphQL name/Operation type pairs for the proxy/remote service, upon which quota will applied. If GraphQLOperation operation has only the operation type(s), that would imply that quota will be applied on all graphQL requests irrespective of the graphQL name. **Note**: Currently, we can specify only a single GraphQLOperation. Specifying more than one will result in failure of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1317,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1329,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_source_python" style="color: inherit; text-decoration: inherit;">api_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. API proxy endpoint or remote service name with which the graphQL operation, and quota are associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1337,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1345,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of graphQL name/Operation type pairs for the proxy/remote service, upon which quota will applied. If GraphQLOperation operation has only the operation type(s), that would imply that quota will be applied on all graphQL requests irrespective of the graphQL name. **Note**: Currently, we can specify only a single GraphQLOperation. Specifying more than one will result in failure of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1353,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Config<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1427,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_config_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>config_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_configs_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Config<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1497,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_config_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>config_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_configs_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1graphqloperationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Graph<wbr>QLOperation<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GraphQL operation name, along with operation type which will be used to associate quotas with. If no name is specified, the quota will be applied to all graphQL operations irrespective of their operation names in the payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtypes_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. `query`, `mutation` and `subscription` are the three operation types offered by graphQL. Currently we support only `query` and `mutation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1591,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GraphQL operation name, along with operation type which will be used to associate quotas with. If no name is specified, the quota will be applied to all graphQL operations irrespective of their operation names in the payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_types_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. `query`, `mutation` and `subscription` are the three operation types offered by graphQL. Currently we support only `query` and `mutation`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. resource represents REST resource path associated with the proxy/remote service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. resource represents REST resource path associated with the proxy/remote service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apisource_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. API proxy or remote service name with which the resources, methods, and quota are associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operation">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of resource/method pairs for the proxy/remote service, upon which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quota">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_source_python" style="color: inherit; text-decoration: inherit;">api_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. API proxy or remote service name with which the resources, methods, and quota are associated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attribute">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operation">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of resource/method pairs for the proxy/remote service, upon which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quota">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1913,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apisource_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. API proxy or remote service name with which the resources, methods, and quota are associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1921,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1929,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of resource/method pairs for the proxy/remote service, upon which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1937,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1949,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_source_python" style="color: inherit; text-decoration: inherit;">api_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. API proxy or remote service name with which the resources, methods, and quota are associated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1957,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1attributeresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Attribute<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom attributes associated with the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1965,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of resource/method pairs for the proxy/remote service, upon which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1973,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1quotaresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Quota<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quota parameters to be enforced for the resources, methods, api_source combination. If none are specified, quota enforcement will not be done.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2027,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Config<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2035,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2047,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_config_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>config_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_configs_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationconfig">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Config<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2117,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_config_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>config_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values are `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_configs_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudapigeev1operationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlecloudapigeev1operationconfigresponse">Google<wbr>Cloud<wbr>Apigee<wbr>V1Operation<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2191,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. resource represents REST resource path associated with the proxy/remote service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2219,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. resource represents REST resource path associated with the proxy/remote service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2289,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2419,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2431,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Time interval over which the number of request messages is calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2439,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2447,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}

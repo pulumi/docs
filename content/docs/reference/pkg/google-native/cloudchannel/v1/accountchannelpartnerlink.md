@@ -20,19 +20,29 @@ Initiates a channel partner link between a distributor and a reseller, or betwee
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">channel_partner_links_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">link_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reseller_cloud_identity_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">channel_partner_links_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">link_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">reseller_cloud_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountChannelPartnerLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountChannelPartnerLink</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountChannelPartnerLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountChannelPartnerLink</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountChannelPartnerLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +77,32 @@ Initiates a channel partner link between a distributor and a reseller, or betwee
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountChannelPartnerLinkArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +262,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">accounts<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -250,7 +270,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#channelpartnerlinksid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Partner<wbr>Links<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -258,7 +278,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#linkstate_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -266,7 +286,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#resellercloudidentityid_nodejs" style="color: inherit; text-decoration: inherit;">reseller<wbr>Cloud<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Identity ID of the linked reseller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -278,7 +298,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#accounts_id_python" style="color: inherit; text-decoration: inherit;">accounts_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -286,7 +306,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#channel_partner_links_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>partner_<wbr>links_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -294,7 +314,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#link_state_python" style="color: inherit; text-decoration: inherit;">link_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. State of the channel partner link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -302,7 +322,7 @@ The AccountChannelPartnerLink resource accepts the following [input]({{< relref 
 <a href="#reseller_cloud_identity_id_python" style="color: inherit; text-decoration: inherit;">reseller_<wbr>cloud_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Cloud Identity ID of the linked reseller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -709,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adminconsoleuri_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Console<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of Customer's Admin console dashboard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -717,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateemail_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -725,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customertype_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CustomerType indicates verification type needed for using services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -733,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edudata_nodejs" style="color: inherit; text-decoration: inherit;">edu<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edu information about the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -741,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdomainverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Domain<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -749,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Language code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -757,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number associated with the Cloud Identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -765,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydomain_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -777,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#admin_console_uri_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>console_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of Customer's Admin console dashboard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -785,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternate_email_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alternate email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -793,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_type_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CustomerType indicates verification type needed for using services.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -801,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edu_data_python" style="color: inherit; text-decoration: inherit;">edu_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googlecloudchannelv1edudataresponse">Google<wbr>Cloud<wbr>Channel<wbr>V1Edu<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Edu information about the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -809,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_domain_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>domain_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -817,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Language code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -825,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number associated with the Cloud Identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_domain_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institutesize_nodejs" style="color: inherit; text-decoration: inherit;">institute<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the institute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institutetype_nodejs" style="color: inherit; text-decoration: inherit;">institute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Designated institute type of customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web address for the edu customer's institution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institute_size_python" style="color: inherit; text-decoration: inherit;">institute_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the institute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -939,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#institute_type_python" style="color: inherit; text-decoration: inherit;">institute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Designated institute type of customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Web address for the edu customer's institution.{{% /md %}}</dd></dl>
 {{% /choosable %}}

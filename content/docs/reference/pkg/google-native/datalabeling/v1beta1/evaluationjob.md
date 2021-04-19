@@ -20,19 +20,37 @@ Creates an evaluation job.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotation_spec_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">attempts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1AttemptArgs]]]]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">evaluation_job_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs]]</span> = None<span class="p">, </span><span class="nx">evaluation_jobs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">label_missing_ground_truth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">, </span><span class="nx">model_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">annotation_spec_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">attempts</span><span class="p">:</span> <span class="nx">Optional[Sequence[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1AttemptArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">evaluation_job_config</span><span class="p">:</span> <span class="nx">Optional[_datalabeling_v1beta1.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs]</span> = None<span class="p">,</span>
+                  <span class="nx">evaluation_jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">label_missing_ground_truth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">model_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEvaluationJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EvaluationJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEvaluationJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EvaluationJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EvaluationJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EvaluationJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +85,32 @@ Creates an evaluation job.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EvaluationJobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +398,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#evaluationjobsid_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Jobs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +406,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +414,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +422,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#attempts_nodejs" style="color: inherit; text-decoration: inherit;">attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1attempt">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Attempt<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1attempt">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Attempt<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +430,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of when this evaluation job was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +438,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Description of the job. The description can be up to 25,000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +446,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#evaluationjobconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Job<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration details for the evaluation job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +454,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#labelmissinggroundtruth_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Missing<wbr>Ground<wbr>Truth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required. Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +462,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#modelversion_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +470,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +478,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +486,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -470,7 +498,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#evaluation_jobs_id_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>jobs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +506,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +514,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +522,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#attempts_python" style="color: inherit; text-decoration: inherit;">attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1attempt">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Attempt<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1attempt">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Attempt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +530,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of when this evaluation job was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +538,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Description of the job. The description can be up to 25,000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +546,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#evaluation_job_config_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>job_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Configuration details for the evaluation job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +554,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#label_missing_ground_truth_python" style="color: inherit; text-decoration: inherit;">label_<wbr>missing_<wbr>ground_<wbr>truth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required. Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +562,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#model_version_python" style="color: inherit; text-decoration: inherit;">model_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +570,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +578,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +586,7 @@ The EvaluationJob resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the current state of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -677,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempttime_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partialfailures_nodejs" style="color: inherit; text-decoration: inherit;">partial<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Details of errors that occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -697,7 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_time_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partial_failures_python" style="color: inherit; text-decoration: inherit;">partial_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlerpcstatus">Google<wbr>Rpc<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of errors that occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempttime_nodejs" style="color: inherit; text-decoration: inherit;">attempt<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partialfailures_nodejs" style="color: inherit; text-decoration: inherit;">partial<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Details of errors that occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attempt_time_python" style="color: inherit; text-decoration: inherit;">attempt_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partial_failures_python" style="color: inherit; text-decoration: inherit;">partial_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#googlerpcstatusresponse">Google<wbr>Rpc<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of errors that occurred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/ {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iouthreshold_nodejs" style="color: inherit; text-decoration: inherit;">iou<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iou_threshold_python" style="color: inherit; text-decoration: inherit;">iou_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iouthreshold_nodejs" style="color: inherit; text-decoration: inherit;">iou<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iou_threshold_python" style="color: inherit; text-decoration: inherit;">iou_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instructionmessage_nodejs" style="color: inherit; text-decoration: inherit;">instruction<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Instruction message showed on contributors UI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_message_python" style="color: inherit; text-decoration: inherit;">instruction_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Instruction message showed on contributors UI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instructionmessage_nodejs" style="color: inherit; text-decoration: inherit;">instruction<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Instruction message showed on contributors UI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_message_python" style="color: inherit; text-decoration: inherit;">instruction_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Instruction message showed on contributors UI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismultilabel_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_multi_label_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismultilabel_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_multi_label_python" style="color: inherit; text-decoration: inherit;">is_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the classification task is multi-label or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingboxevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Box<wbr>Evaluation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptions">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptions">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_box_evaluation_options_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>box_<wbr>evaluation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptions">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptions">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingboxevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Box<wbr>Evaluation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptionsresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptionsresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_box_evaluation_options_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>box_<wbr>evaluation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptionsresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingboxevaluationoptionsresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Box<wbr>Evaluation<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. An email address to send alerts to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minacceptablemeanaverageprecision_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Acceptable<wbr>Mean<wbr>Average<wbr>Precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. An email address to send alerts to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_acceptable_mean_average_precision_python" style="color: inherit; text-decoration: inherit;">min_<wbr>acceptable_<wbr>mean_<wbr>average_<wbr>precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. An email address to send alerts to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1495,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minacceptablemeanaverageprecision_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Acceptable<wbr>Mean<wbr>Average<wbr>Precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. An email address to send alerts to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_acceptable_mean_average_precision_python" style="color: inherit; text-decoration: inherit;">min_<wbr>acceptable_<wbr>mean_<wbr>average_<wbr>precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1697,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryimportkeys_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Import<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingpolyconfig_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Poly<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluationconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluationjobalertconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Job<wbr>Alert<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1729,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#examplecount_nodejs" style="color: inherit; text-decoration: inherit;">example<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#examplesamplepercentage_nodejs" style="color: inherit; text-decoration: inherit;">example<wbr>Sample<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#humanannotationconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Annotation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageclassificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Classification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputconfig_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textclassificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Classification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1781,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_import_keys_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>import_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1789,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_poly_config_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>poly_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluation_config_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluation_job_alert_config_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>job_<wbr>alert_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_count_python" style="color: inherit; text-decoration: inherit;">example_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_sample_percentage_python" style="color: inherit; text-decoration: inherit;">example_<wbr>sample_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#human_annotation_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>annotation_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_classification_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>classification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_config_python" style="color: inherit; text-decoration: inherit;">input_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_classification_config_python" style="color: inherit; text-decoration: inherit;">text_<wbr>classification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2035,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigqueryimportkeys_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Import<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Required. Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boundingpolyconfig_nodejs" style="color: inherit; text-decoration: inherit;">bounding<wbr>Poly<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluationconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluationjobalertconfig_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Job<wbr>Alert<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2067,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#examplecount_nodejs" style="color: inherit; text-decoration: inherit;">example<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2075,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#examplesamplepercentage_nodejs" style="color: inherit; text-decoration: inherit;">example<wbr>Sample<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2083,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#humanannotationconfig_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Annotation<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2091,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageclassificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Classification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputconfig_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textclassificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Classification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2119,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_import_keys_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>import_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Required. Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounding_poly_config_python" style="color: inherit; text-decoration: inherit;">bounding_<wbr>poly_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1boundingpolyconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Bounding<wbr>Poly<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluation_config_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2143,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#evaluation_job_alert_config_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>job_<wbr>alert_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1evaluationjobalertconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Evaluation<wbr>Job<wbr>Alert<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_count_python" style="color: inherit; text-decoration: inherit;">example_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2159,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#example_sample_percentage_python" style="color: inherit; text-decoration: inherit;">example_<wbr>sample_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Required. Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#human_annotation_config_python" style="color: inherit; text-decoration: inherit;">human_<wbr>annotation_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1humanannotationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Human<wbr>Annotation<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_classification_config_python" style="color: inherit; text-decoration: inherit;">image_<wbr>classification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1imageclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Image<wbr>Classification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2183,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_config_python" style="color: inherit; text-decoration: inherit;">input_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1inputconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Input<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2191,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_classification_config_python" style="color: inherit; text-decoration: inherit;">text_<wbr>classification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textclassificationconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Classification<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2265,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2273,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2327,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputuri_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2335,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2347,7 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_uri_python" style="color: inherit; text-decoration: inherit;">input_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The input URI of source file. This must be a Cloud Storage path (`gs://...`).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2355,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The format of the source file. Only "text/csv" is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2521,7 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotateddatasetdescription_nodejs" style="color: inherit; text-decoration: inherit;">annotated<wbr>Dataset<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotateddatasetdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">annotated<wbr>Dataset<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contributoremails_nodejs" style="color: inherit; text-decoration: inherit;">contributor<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_nodejs" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Instruction resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelgroup_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#questionduration_nodejs" style="color: inherit; text-decoration: inherit;">question<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2597,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotated_dataset_description_python" style="color: inherit; text-decoration: inherit;">annotated_<wbr>dataset_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotated_dataset_display_name_python" style="color: inherit; text-decoration: inherit;">annotated_<wbr>dataset_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contributor_emails_python" style="color: inherit; text-decoration: inherit;">contributor_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_python" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Instruction resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_group_python" style="color: inherit; text-decoration: inherit;">label_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#question_duration_python" style="color: inherit; text-decoration: inherit;">question_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_email_address_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotateddatasetdescription_nodejs" style="color: inherit; text-decoration: inherit;">annotated<wbr>Dataset<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotateddatasetdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">annotated<wbr>Dataset<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contributoremails_nodejs" style="color: inherit; text-decoration: inherit;">contributor<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2851,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_nodejs" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Instruction resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelgroup_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2875,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#questionduration_nodejs" style="color: inherit; text-decoration: inherit;">question<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2903,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotated_dataset_description_python" style="color: inherit; text-decoration: inherit;">annotated_<wbr>dataset_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2911,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotated_dataset_display_name_python" style="color: inherit; text-decoration: inherit;">annotated_<wbr>dataset_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2919,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contributor_emails_python" style="color: inherit; text-decoration: inherit;">contributor_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2927,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instruction_python" style="color: inherit; text-decoration: inherit;">instruction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Instruction resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2935,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_group_python" style="color: inherit; text-decoration: inherit;">label_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2943,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2951,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#question_duration_python" style="color: inherit; text-decoration: inherit;">question_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2959,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2967,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_email_address_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3037,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultilabel_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3045,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answeraggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">answer<wbr>Aggregation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_label_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answer_aggregation_type_python" style="color: inherit; text-decoration: inherit;">answer_<wbr>aggregation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3151,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultilabel_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3159,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3167,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answeraggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">answer<wbr>Aggregation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3179,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_label_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3187,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#answer_aggregation_type_python" style="color: inherit; text-decoration: inherit;">answer_<wbr>aggregation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of how to aggregate answers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3313,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerysource_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationmetadata_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textmetadata_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3365,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_source_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_metadata_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssource">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_metadata_python" style="color: inherit; text-decoration: inherit;">text_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadata">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3523,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3531,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquerysource_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3539,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationmetadata_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3547,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3555,7 +3583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcssource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3563,7 +3591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#textmetadata_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3575,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3583,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bigquery_source_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1bigquerysourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3591,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_metadata_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1classificationmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Classification<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3599,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Data type must be specifed when user tries to import data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3607,7 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1gcssourceresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Gcs<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source located in Cloud Storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3615,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#text_metadata_python" style="color: inherit; text-decoration: inherit;">text_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1textmetadataresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Text<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for text import, as language code must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3653,7 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablelabelsentimentselection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Label<wbr>Sentiment<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3665,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_label_sentiment_selection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>label_<wbr>sentiment_<wbr>selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3703,7 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablelabelsentimentselection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Label<wbr>Sentiment<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3715,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_label_sentiment_selection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>label_<wbr>sentiment_<wbr>selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3785,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultilabel_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sentimentconfig_nodejs" style="color: inherit; text-decoration: inherit;">sentiment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfig">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3813,7 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_label_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3829,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sentiment_config_python" style="color: inherit; text-decoration: inherit;">sentiment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfig">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3899,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowmultilabel_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3907,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotationspecset_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Spec<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3915,7 +3943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sentimentconfig_nodejs" style="color: inherit; text-decoration: inherit;">sentiment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfigresponse">pulumi.<wbr>Input<Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3927,7 +3955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_multi_label_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3935,7 +3963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#annotation_spec_set_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>spec_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Annotation spec set resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +3971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sentiment_config_python" style="color: inherit; text-decoration: inherit;">sentiment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#googleclouddatalabelingv1beta1sentimentconfigresponse">Google<wbr>Cloud<wbr>Datalabeling<wbr>V1beta1Sentiment<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3981,7 +4009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3993,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4031,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagecode_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4043,7 +4071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_code_python" style="color: inherit; text-decoration: inherit;">language_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4113,7 +4141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4121,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4129,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4141,7 +4169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4227,7 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4235,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4243,7 +4271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4255,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4263,7 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4271,7 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}

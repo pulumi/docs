@@ -20,19 +20,41 @@ Creates a new migration job in a given project and location.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">destination_database</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.DatabaseTypeArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">dump_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">, </span><span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">migration_jobs_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">reverse_ssh_connectivity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.ReverseSshConnectivityArgs]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">source_database</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.DatabaseTypeArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">static_ip_connectivity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.StaticIpConnectivityArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connectivity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_datamigration_v1beta1.VpcPeeringConnectivityArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">destination_database</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.DatabaseTypeArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">dump_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">migration_jobs_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">reverse_ssh_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.ReverseSshConnectivityArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">source_database</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.DatabaseTypeArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">static_ip_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.StaticIpConnectivityArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">vpc_peering_connectivity</span><span class="p">:</span> <span class="nx">Optional[_datamigration_v1beta1.VpcPeeringConnectivityArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMigrationJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MigrationJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMigrationJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MigrationJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MigrationJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MigrationJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +89,32 @@ Creates a new migration job in a given project and location.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MigrationJobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,7 +466,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -442,7 +474,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#migrationjobsid_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Jobs<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -450,7 +482,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +490,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name (URI) of the destination connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +498,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destinationdatabase_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetype">pulumi.<wbr>Input<Database<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and provider of the destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +506,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The migration job display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +514,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#dumppath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +522,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +530,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +538,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#reversesshconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Ssh<wbr>Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reversesshconnectivity">pulumi.<wbr>Input<Reverse<wbr>Ssh<wbr>Connectivity<wbr>Args></a></span>
+        <span class="property-type"><a href="#reversesshconnectivity">Reverse<wbr>Ssh<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details needed to communicate to the source over Reverse SSH tunnel connectivity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +546,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The resource name (URI) of the source connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +554,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourcedatabase_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetype">pulumi.<wbr>Input<Database<wbr>Type<wbr>Args></a></span>
+        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and provider of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +562,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +570,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#staticipconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Ip<wbr>Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticipconnectivity">pulumi.<wbr>Input<Static<wbr>Ip<wbr>Connectivity<wbr>Args></a></span>
+        <span class="property-type"><a href="#staticipconnectivity">Static<wbr>Ip<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}static ip connectivity data (default, no additional details needed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +578,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +586,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vpcpeeringconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Peering<wbr>Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectivity">pulumi.<wbr>Input<Vpc<wbr>Peering<wbr>Connectivity<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectivity">Vpc<wbr>Peering<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the VPC network that the source database is located in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -566,7 +598,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -574,7 +606,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#migration_jobs_id_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>jobs_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -582,7 +614,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +622,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name (URI) of the destination connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +630,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destination_database_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and provider of the destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +638,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The migration job display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +646,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#dump_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +654,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +662,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/instances/{instance}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +670,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#reverse_ssh_connectivity_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>ssh_<wbr>connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reversesshconnectivity">Reverse<wbr>Ssh<wbr>Connectivity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reversesshconnectivity">Reverse<wbr>Ssh<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details needed to communicate to the source over Reverse SSH tunnel connectivity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +678,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The resource name (URI) of the source connection profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +686,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_database_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databasetype">Database<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The database engine type and provider of the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +694,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current migration job state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +702,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#static_ip_connectivity_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ip_<wbr>connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticipconnectivity">Static<wbr>Ip<wbr>Connectivity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticipconnectivity">Static<wbr>Ip<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}static ip connectivity data (default, no additional details needed).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +710,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The migration job type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +718,7 @@ The MigrationJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vpc_peering_connectivity_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>peering_<wbr>connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectivity">Vpc<wbr>Peering<wbr>Connectivity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectivity">Vpc<wbr>Peering<wbr>Connectivity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the VPC network that the source database is located in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmip_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmport_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPC to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1229,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_ip_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_port_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPC to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmip_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmport_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPC to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_ip_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_port_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPC to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1477,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>[]></span>
+        <span class="property-type">{[key: string]: string}[]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1485,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1497,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code, which should be an enum value of google.rpc.Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1505,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}A list of messages that carry the error details. There is a common set of message types for APIs to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1513,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1551,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPC network to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPC network to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPC network to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPC network to peer with the Cloud SQL private network.{{% /md %}}</dd></dl>
 {{% /choosable %}}

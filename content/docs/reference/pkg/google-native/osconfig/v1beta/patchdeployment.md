@@ -20,19 +20,35 @@ Create an OS Config patch deployment.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.PatchInstanceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.OneTimeScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.PatchConfigArgs]]</span> = None<span class="p">, </span><span class="nx">patch_deployments_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.RecurringScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_osconfig_v1beta.PatchRolloutArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.PatchInstanceFilterArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.OneTimeScheduleArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.PatchConfigArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">patch_deployments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.RecurringScheduleArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.PatchRolloutArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -67,22 +83,32 @@ Create an OS Config patch deployment.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -338,7 +364,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#patchdeploymentsid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployments<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -346,7 +372,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -354,7 +380,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. Duration of the patch. After the duration ends, the patch times out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefilter">pulumi.<wbr>Input<Patch<wbr>Instance<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchinstancefilter">Patch<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. VM instances to patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onetimeschedule">pulumi.<wbr>Input<One<wbr>Time<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#onetimeschedule">One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule a one-time execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchconfig">pulumi.<wbr>Input<Patch<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchconfig">Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Patch configuration that is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurringschedule">pulumi.<wbr>Input<Recurring<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#recurringschedule">Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule recurring executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchrollout">pulumi.<wbr>Input<Patch<wbr>Rollout<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchrollout">Patch<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rollout strategy of the patch job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -422,7 +448,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#patch_deployments_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployments_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +456,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +464,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Duration of the patch. After the duration ends, the patch times out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefilter">Patch<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchinstancefilter">Patch<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. VM instances to patch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onetimeschedule">One<wbr>Time<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#onetimeschedule">One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule a one-time execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchconfig">Patch<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchconfig">Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Patch configuration that is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurringschedule">Recurring<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurringschedule">Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule recurring executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchrollout">Patch<wbr>Rollout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchrollout">Patch<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Rollout strategy of the patch job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages will be excluded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -753,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages will be excluded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages will be excluded{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages will be excluded{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfig">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfig">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -957,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepconfig">Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsobject">pulumi.<wbr>Input<Gcs<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsobject">Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage object containing the executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1087,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsobject">Gcs<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsobject">Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage object containing the executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1205,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsobjectresponse">pulumi.<wbr>Input<Gcs<wbr>Object<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcsobjectresponse">Gcs<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage object containing the executable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1221,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1241,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcsobjectresponse">Gcs<wbr>Object<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcsobjectresponse">Gcs<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage object containing the executable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1249,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1257,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfigresponse">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1319,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfigresponse">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepconfigresponse">Exec<wbr>Step<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1483,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1503,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1573,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Bucket of the Google Cloud Storage object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the Google Cloud Storage object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Bucket of the Google Cloud Storage object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the Google Cloud Storage object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1687,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Bucket of the Google Cloud Storage object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Name of the Google Cloud Storage object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1715,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Bucket of the Google Cloud Storage object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1731,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Name of the Google Cloud Storage object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthday_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdayofmonth">pulumi.<wbr>Input<Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args></a></span>
+        <span class="property-type"><a href="#weekdayofmonth">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Week day in a month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1805,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdayofmonth">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weekdayofmonth">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Week day in a month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthday_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdayofmonthresponse">pulumi.<wbr>Input<Week<wbr>Day<wbr>Of<wbr>Month<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#weekdayofmonthresponse">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Week day in a month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1887,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1895,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdayofmonthresponse">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weekdayofmonthresponse">Week<wbr>Day<wbr>Of<wbr>Month<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Week day in a month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1933,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executetime_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The desired patch job execution time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execute_time_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The desired patch job execution time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executetime_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The desired patch job execution time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execute_time_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The desired patch job execution time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2145,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptsettings">pulumi.<wbr>Input<Apt<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#aptsettings">Apt<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default `apt` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goosettings">pulumi.<wbr>Input<Goo<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#goosettings">Goo<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Goo update settings. Use this setting to override the default `goo` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstep">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run after the patch update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstep">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run before the patch update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsupdatesettings">pulumi.<wbr>Input<Windows<wbr>Update<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#windowsupdatesettings">Windows<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this override the default windows patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumsettings">pulumi.<wbr>Input<Yum<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#yumsettings">Yum<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default `yum` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zyppersettings">pulumi.<wbr>Input<Zypper<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#zyppersettings">Zypper<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zypper update settings. Use this setting to override the default `zypper` patch rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptsettings">Apt<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aptsettings">Apt<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default `apt` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goosettings">Goo<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#goosettings">Goo<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Goo update settings. Use this setting to override the default `goo` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run after the patch update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2237,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstep">Exec<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run before the patch update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsupdatesettings">Windows<wbr>Update<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowsupdatesettings">Windows<wbr>Update<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this override the default windows patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumsettings">Yum<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yumsettings">Yum<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default `yum` patch rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zyppersettings">Zypper<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zyppersettings">Zypper<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zypper update settings. Use this setting to override the default `zypper` patch rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2419,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptsettingsresponse">pulumi.<wbr>Input<Apt<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#aptsettingsresponse">Apt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default `apt` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goosettingsresponse">pulumi.<wbr>Input<Goo<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#goosettingsresponse">Goo<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Goo update settings. Use this setting to override the default `goo` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepresponse">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run after the patch update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2443,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepresponse">pulumi.<wbr>Input<Exec<wbr>Step<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run before the patch update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsupdatesettingsresponse">pulumi.<wbr>Input<Windows<wbr>Update<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#windowsupdatesettingsresponse">Windows<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this override the default windows patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2467,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumsettingsresponse">pulumi.<wbr>Input<Yum<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#yumsettingsresponse">Yum<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default `yum` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2475,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zyppersettingsresponse">pulumi.<wbr>Input<Zypper<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#zyppersettingsresponse">Zypper<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zypper update settings. Use this setting to override the default `zypper` patch rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2487,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aptsettingsresponse">Apt<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aptsettingsresponse">Apt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default `apt` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2495,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#goosettingsresponse">Goo<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#goosettingsresponse">Goo<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Goo update settings. Use this setting to override the default `goo` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2503,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run after the patch update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execstepresponse">Exec<wbr>Step<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `ExecStep` to run before the patch update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsupdatesettingsresponse">Windows<wbr>Update<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowsupdatesettingsresponse">Windows<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this override the default windows patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yumsettingsresponse">Yum<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#yumsettingsresponse">Yum<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default `yum` patch rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zyppersettingsresponse">Zypper<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#zyppersettingsresponse">Zypper<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zypper update settings. Use this setting to override the default `zypper` patch rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2645,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefiltergrouplabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchinstancefiltergrouplabel">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2689,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefiltergrouplabel">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchinstancefiltergrouplabel">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2809,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2821,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2923,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2931,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefiltergrouplabelresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchinstancefiltergrouplabelresponse">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2939,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2947,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2955,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2967,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2975,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchinstancefiltergrouplabelresponse">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchinstancefiltergrouplabelresponse">Patch<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2991,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2999,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3053,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3073,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercent">Fixed<wbr>Or<wbr>Percent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3135,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">pulumi.<wbr>Input<Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3143,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3155,7 +3181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fixedorpercentresponse">Fixed<wbr>Or<wbr>Percent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3163,7 +3189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The end time at which a recurring patch deployment schedule is no longer active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyschedule">pulumi.<wbr>Input<Monthly<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with monthly executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Time of the day to run a recurring deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timezone">pulumi.<wbr>Input<Time<wbr>Zone<wbr>Args></a></span>
+        <span class="property-type"><a href="#timezone">Time<wbr>Zone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyschedule">pulumi.<wbr>Input<Weekly<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with weekly executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The end time at which a recurring patch deployment schedule is no longer active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with monthly executions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofday">Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Time of the day to run a recurring deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timezone">Time<wbr>Zone<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timezone">Time<wbr>Zone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with weekly executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3571,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The end time at which a recurring patch deployment schedule is no longer active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3579,7 +3605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3587,7 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the last patch job ran successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3595,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyscheduleresponse">pulumi.<wbr>Input<Monthly<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with monthly executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3603,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nextexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the next patch job is scheduled to run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3611,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3619,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">pulumi.<wbr>Input<Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Time of the day to run a recurring deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3627,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timezoneresponse">pulumi.<wbr>Input<Time<wbr>Zone<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#timezoneresponse">Time<wbr>Zone<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3635,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyscheduleresponse">pulumi.<wbr>Input<Weekly<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with weekly executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3647,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The end time at which a recurring patch deployment schedule is no longer active.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3655,7 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The frequency unit of this recurring schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3663,7 +3689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the last patch job ran successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3671,7 +3697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monthlyscheduleresponse">Monthly<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with monthly executions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3679,7 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_execute_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the next patch job is scheduled to run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3687,7 +3713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3695,7 +3721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timeofdayresponse">Time<wbr>Of<wbr>Day<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Time of the day to run a recurring deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3703,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timezoneresponse">Time<wbr>Zone<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timezoneresponse">Time<wbr>Zone<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3711,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weeklyscheduleresponse">Weekly<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Schedule with weekly executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3797,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3833,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3841,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3849,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3943,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3951,7 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3959,7 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3967,7 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3979,7 +4005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3987,7 +4013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3995,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4003,7 +4029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4057,7 +4083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. IANA Time Zone Database version number, e.g. "2019a".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4077,7 +4103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4085,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. IANA Time Zone Database version number, e.g. "2019a".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4123,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. IANA Time Zone Database version number, e.g. "2019a".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4135,7 +4161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. IANA Time Zone Database version number, e.g. "2019a".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4189,7 +4215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4197,7 +4223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekordinal_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4209,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4217,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4271,7 +4297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4279,7 +4305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekordinal_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4291,7 +4317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A day of the week.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4299,7 +4325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4337,7 +4363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4349,7 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4387,7 +4413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4399,7 +4425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Day of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4469,7 +4495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4477,7 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4497,7 +4523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4505,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4513,7 +4539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4583,7 +4609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4591,7 +4617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4599,7 +4625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4611,7 +4637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4619,7 +4645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4627,7 +4653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4713,7 +4739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4721,7 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4729,7 +4755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_nodejs" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run `yum update-minimal` instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4737,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--security` flag to `yum update`. Not supported on all platforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4757,7 +4783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4765,7 +4791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_python" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run `yum update-minimal` instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4773,7 +4799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--security` flag to `yum update`. Not supported on all platforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4859,7 +4885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4867,7 +4893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4875,7 +4901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_nodejs" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run `yum update-minimal` instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4883,7 +4909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--security` flag to `yum update`. Not supported on all platforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4895,7 +4921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4903,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4911,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_python" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run `yum update-minimal` instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4919,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--security` flag to `yum update`. Not supported on all platforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5037,7 +5063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5045,7 +5071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of patches to exclude from update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5053,7 +5079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5061,7 +5087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5069,7 +5095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#withoptional_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-optional` flag to `zypper patch`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5077,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#withupdate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-update` flag, to `zypper patch`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5089,7 +5115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5097,7 +5123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of patches to exclude from update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5105,7 +5131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5113,7 +5139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5121,7 +5147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#with_optional_python" style="color: inherit; text-decoration: inherit;">with_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-optional` flag to `zypper patch`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5129,7 +5155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#with_update_python" style="color: inherit; text-decoration: inherit;">with_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-update` flag, to `zypper patch`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5247,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5255,7 +5281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of patches to exclude from update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5263,7 +5289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5271,7 +5297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5279,7 +5305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#withoptional_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-optional` flag to `zypper patch`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5287,7 +5313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#withupdate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-update` flag, to `zypper patch`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5299,7 +5325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5307,7 +5333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of patches to exclude from update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5315,7 +5341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5323,7 +5349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5331,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#with_optional_python" style="color: inherit; text-decoration: inherit;">with_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-optional` flag to `zypper patch`.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5339,7 +5365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#with_update_python" style="color: inherit; text-decoration: inherit;">with_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the `--with-update` flag, to `zypper patch`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
